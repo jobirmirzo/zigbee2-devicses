@@ -1,0 +1,111 @@
+{
+  "model": "TS004F_1",
+  "file": "TS004F_1.md",
+  "vendor": "Moes",
+  "description": "Wireless switch with 4 buttons",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS004F_1.png",
+  "added_at": "2026-04-30T19:55:31",
+  "exposes_summary": "operation_mode, battery, voltage, identify, action",
+  "exposes": [
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode",
+      "base": "operation_mode",
+      "endpoint": null,
+      "description": "Operation mode: \"command\" - for group control, \"event\" - for clicks.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "command",
+        "event"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_move_up",
+        "brightness_move_down",
+        "color_temperature_step_up",
+        "color_temperature_step_down",
+        "brightness_stop",
+        "1_single",
+        "1_double",
+        "1_hold",
+        "2_single",
+        "2_double",
+        "2_hold",
+        "3_single",
+        "3_double",
+        "3_hold",
+        "4_single",
+        "4_double",
+        "4_hold"
+      ]
+    }
+  ],
+  "warnings": []
+}

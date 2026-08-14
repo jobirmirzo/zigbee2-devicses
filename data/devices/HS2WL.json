@@ -1,0 +1,72 @@
+{
+  "model": "HS2WL",
+  "file": "HS2WL.md",
+  "vendor": "Heiman",
+  "description": "Water leakage sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS2WL.png",
+  "added_at": "2026-01-01T13:27:46",
+  "exposes_summary": "water_leak, temperature, battery, battery_low",
+  "exposes": [
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

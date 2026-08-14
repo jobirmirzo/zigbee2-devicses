@@ -1,0 +1,11 @@
+{
+  "model": "Dongle-LMG21",
+  "file": "Dongle-LMG21.md",
+  "vendor": "SONOFF",
+  "description": "Dongle Lite Zigbee MG21 (EFR32MG21) with router firmware",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Dongle-LMG21.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

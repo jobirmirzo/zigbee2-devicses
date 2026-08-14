@@ -1,0 +1,153 @@
+{
+  "model": "872WZ",
+  "file": "872WZ.md",
+  "vendor": "Tuya",
+  "description": "Water level sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/872WZ.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "liquid_state, liquid_level_percent, liquid_depth, max_set, min_set, liquid_depth_max, installation_height, silent_mode, alarm_duration",
+  "exposes": [
+    {
+      "name": "Liquid state",
+      "type": "enum",
+      "property": "liquid_state",
+      "base": "liquid_state",
+      "endpoint": null,
+      "description": "Liquid level status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "normal",
+        "high"
+      ]
+    },
+    {
+      "name": "Liquid level percent",
+      "type": "numeric",
+      "property": "liquid_level_percent",
+      "base": "liquid_level_percent",
+      "endpoint": null,
+      "description": "Liquid level ratio.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Liquid depth",
+      "type": "numeric",
+      "property": "liquid_depth",
+      "base": "liquid_depth",
+      "endpoint": null,
+      "description": "Liquid depth.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Max set",
+      "type": "numeric",
+      "property": "max_set",
+      "base": "max_set",
+      "endpoint": null,
+      "description": "Liquid maximum percentage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Min set",
+      "type": "numeric",
+      "property": "min_set",
+      "base": "min_set",
+      "endpoint": null,
+      "description": "Liquid minimum percentage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Liquid depth max",
+      "type": "numeric",
+      "property": "liquid_depth_max",
+      "base": "liquid_depth_max",
+      "endpoint": null,
+      "description": "Distance from sensor to liquid surface.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5,
+      "unit": "m"
+    },
+    {
+      "name": "Installation height",
+      "type": "numeric",
+      "property": "installation_height",
+      "base": "installation_height",
+      "endpoint": null,
+      "description": "Distance from sensor to bottom of the tank.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5,
+      "unit": "m"
+    },
+    {
+      "name": "Silent mode",
+      "type": "binary",
+      "property": "silent_mode",
+      "base": "silent_mode",
+      "endpoint": null,
+      "description": "Mute the buzzer for all alarms.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Alarm duration",
+      "type": "numeric",
+      "property": "alarm_duration",
+      "base": "alarm_duration",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 60,
+      "unit": "min"
+    }
+  ],
+  "warnings": []
+}

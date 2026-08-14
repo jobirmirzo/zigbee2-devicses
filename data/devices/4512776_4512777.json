@@ -1,0 +1,283 @@
+{
+  "model": "4512776/4512777",
+  "file": "4512776_4512777.md",
+  "vendor": "Namron",
+  "description": "Zigbee thermostat for panel heater PRO (white 4512776 / black 4512777)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/4512776-4512777.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "climate (local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode, running_state), state, frost_mode, child_lock, hysteresis, window_open_detection, window_open, control_method, adaptive_function, pid_kp, pid_ki, pid_kd, display_brightness, display_auto_off, power, energy",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "auto"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Virtual on/off (maps to systemMode).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Frost mode",
+      "type": "binary",
+      "property": "frost_mode",
+      "base": "frost_mode",
+      "endpoint": null,
+      "description": "Frost protection: HEAT + 7°C, restores previous mode/setpoint when disabled.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Hysteresis",
+      "type": "numeric",
+      "property": "hysteresis",
+      "base": "hysteresis",
+      "endpoint": null,
+      "description": "Hysteresis (0.5–5.0°C) for on/off control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 5,
+      "unit": "°C"
+    },
+    {
+      "name": "Window open detection",
+      "type": "binary",
+      "property": "window_open_detection",
+      "base": "window_open_detection",
+      "endpoint": null,
+      "description": "Window open detection.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Window open",
+      "type": "binary",
+      "property": "window_open",
+      "base": "window_open",
+      "endpoint": null,
+      "description": "Whether the heater thinks window is open.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Control method",
+      "type": "enum",
+      "property": "control_method",
+      "base": "control_method",
+      "endpoint": null,
+      "description": "System control method (PID or hysteresis).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "pid",
+        "hysteresis"
+      ]
+    },
+    {
+      "name": "Adaptive function",
+      "type": "binary",
+      "property": "adaptive_function",
+      "base": "adaptive_function",
+      "endpoint": null,
+      "description": "Adaptive preheat function (on/off).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Pid kp",
+      "type": "numeric",
+      "property": "pid_kp",
+      "base": "pid_kp",
+      "endpoint": null,
+      "description": "PID Kp.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1
+    },
+    {
+      "name": "Pid ki",
+      "type": "numeric",
+      "property": "pid_ki",
+      "base": "pid_ki",
+      "endpoint": null,
+      "description": "PID Ki.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1
+    },
+    {
+      "name": "Pid kd",
+      "type": "numeric",
+      "property": "pid_kd",
+      "base": "pid_kd",
+      "endpoint": null,
+      "description": "PID Kd.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1
+    },
+    {
+      "name": "Display brightness",
+      "type": "numeric",
+      "property": "display_brightness",
+      "base": "display_brightness",
+      "endpoint": null,
+      "description": "Display brightness (read-only, set on the heater).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 1,
+      "value_max": 7
+    },
+    {
+      "name": "Display auto off",
+      "type": "binary",
+      "property": "display_auto_off",
+      "base": "display_auto_off",
+      "endpoint": null,
+      "description": "Display auto off after 30s without interaction.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    }
+  ],
+  "warnings": []
+}

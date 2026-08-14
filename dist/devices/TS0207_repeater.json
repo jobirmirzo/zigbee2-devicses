@@ -1,0 +1,11 @@
+{
+  "model": "TS0207_repeater",
+  "file": "TS0207_repeater.md",
+  "vendor": "Tuya",
+  "description": "Repeater",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0207_repeater.png",
+  "added_at": "2020-09-30T20:52:56Z",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

@@ -1,0 +1,88 @@
+{
+  "model": "SR-ZG9050C-WS",
+  "file": "SR-ZG9050C-WS.md",
+  "vendor": "Sunricher",
+  "description": "Smart water leakage sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SR-ZG9050C-WS.png",
+  "added_at": "2025-02-01T20:02:57",
+  "exposes_summary": "battery, water_leak_alarm_1, water_leak_alarm_2, tamper, battery_low",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Water leak alarm 1",
+      "type": "binary",
+      "property": "water_leak_alarm_1",
+      "base": "water_leak_alarm_1",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak (alarm_1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Water leak alarm 2",
+      "type": "binary",
+      "property": "water_leak_alarm_2",
+      "base": "water_leak_alarm_2",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak (alarm_2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

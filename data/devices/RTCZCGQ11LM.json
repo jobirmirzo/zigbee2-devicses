@@ -1,0 +1,212 @@
+{
+  "model": "RTCZCGQ11LM",
+  "file": "RTCZCGQ11LM.md",
+  "vendor": "Aqara",
+  "description": "Presence sensor FP1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/RTCZCGQ11LM.png",
+  "added_at": "2022-01-31T17:42:44",
+  "exposes_summary": "presence, device_temperature, power_outage_count, presence_event, monitoring_mode, approach_distance, motion_sensitivity, reset_nopresence_status, configured_regions, region_upsert, region_delete, action",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages (since last pairing).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Presence event",
+      "type": "enum",
+      "property": "presence_event",
+      "base": "presence_event",
+      "endpoint": null,
+      "description": "Presence events: \"enter\", \"leave\", \"left_enter\", \"right_leave\", \"right_enter\", \"left_leave\", \"approach\", \"away\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "enter",
+        "leave",
+        "left_enter",
+        "right_leave",
+        "right_enter",
+        "left_leave",
+        "approach",
+        "away"
+      ]
+    },
+    {
+      "name": "Monitoring mode",
+      "type": "enum",
+      "property": "monitoring_mode",
+      "base": "monitoring_mode",
+      "endpoint": null,
+      "description": "Monitoring mode with or without considering right and left sides.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "undirected",
+        "left_right"
+      ]
+    },
+    {
+      "name": "Approach distance",
+      "type": "enum",
+      "property": "approach_distance",
+      "base": "approach_distance",
+      "endpoint": null,
+      "description": "The distance at which the sensor detects approaching.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "far",
+        "medium",
+        "near"
+      ]
+    },
+    {
+      "name": "Motion sensitivity",
+      "type": "enum",
+      "property": "motion_sensitivity",
+      "base": "motion_sensitivity",
+      "endpoint": null,
+      "description": "Different sensitivities means different static human body recognition rate and response speed of occupied.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Reset nopresence status",
+      "type": "enum",
+      "property": "reset_nopresence_status",
+      "base": "reset_nopresence_status",
+      "endpoint": null,
+      "description": "Reset the status of no presence.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        ""
+      ]
+    },
+    {
+      "name": "Configured regions",
+      "type": "text",
+      "property": "configured_regions",
+      "base": "configured_regions",
+      "endpoint": null,
+      "description": "Region definitions written through Zigbee2MQTT. This is a Zigbee2MQTT-side cache and may not include regions configured by another gateway..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Region upsert",
+      "type": "composite",
+      "property": "region_upsert",
+      "base": "region_upsert",
+      "endpoint": null,
+      "description": "Definition of a new region to be added (or replace existing one). Creating or modifying a region requires you to define which zones of a 7x4 detection grid should be active for that zone. Regions can overlap, meaning that a zone can be defined in more than one region (eg. \"zone x = 1 & y = 1\" can be added to region 1 & 2). \"Zone x = 1 & y = 1\" is the nearest zone on the right (from sensor's perspective, along the detection path)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "zones",
+          "type": "list",
+          "description": "list of dictionaries in the format {\"x\": 1, \"y\": 1}, {\"x\": 2, \"y\": 1}"
+        }
+      ]
+    },
+    {
+      "name": "Region delete",
+      "type": "composite",
+      "property": "region_delete",
+      "base": "region_delete",
+      "endpoint": null,
+      "description": "Region definition to be deleted from the device..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": []
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "region_*_enter",
+        "region_*_leave",
+        "region_*_occupied",
+        "region_*_unoccupied"
+      ]
+    }
+  ],
+  "warnings": []
+}

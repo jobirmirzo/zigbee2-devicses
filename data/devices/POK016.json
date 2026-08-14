@@ -1,0 +1,111 @@
+{
+  "model": "POK016",
+  "file": "POK016.md",
+  "vendor": "PushOk Hardware",
+  "description": "Battery powered window opener",
+  "image": "https://www.zigbee2mqtt.io/images/devices/POK016.png",
+  "added_at": "2025-03-01T20:31:41",
+  "exposes_summary": "cover (state, position), battery, voltage, force_level, status",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Force level",
+      "type": "enum",
+      "property": "force_level",
+      "base": "force_level",
+      "endpoint": null,
+      "description": "Force level at which the window stops.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "mid",
+        "high"
+      ]
+    },
+    {
+      "name": "Status",
+      "type": "enum",
+      "property": "status",
+      "base": "status",
+      "endpoint": null,
+      "description": "Actual window status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "off",
+        "on",
+        "moving",
+        "stuck",
+        "middle"
+      ]
+    }
+  ],
+  "warnings": []
+}

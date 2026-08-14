@@ -1,0 +1,27 @@
+{
+  "model": "M415-5C",
+  "file": "M415-5C.md",
+  "vendor": "BYUN",
+  "description": "Gas sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/M415-5C.png",
+  "added_at": "2021-02-28T13:58:01Z",
+  "exposes_summary": "gas",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "binary",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

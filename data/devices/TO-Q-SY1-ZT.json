@@ -1,0 +1,70 @@
+{
+  "model": "TO-Q-SY1-ZT",
+  "file": "TO-Q-SY1-ZT.md",
+  "vendor": "Tongou",
+  "description": "Din smart relay (without power monitoring)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TO-Q-SY1-ZT.png",
+  "added_at": "2025-06-01T17:54:42",
+  "exposes_summary": "switch (state), power_outage_memory, indicator_mode",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power outage memory",
+      "type": "enum",
+      "property": "power_outage_memory",
+      "base": "power_outage_memory",
+      "endpoint": null,
+      "description": "Recover state after power outage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off",
+        "restore"
+      ]
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode",
+      "base": "indicator_mode",
+      "endpoint": null,
+      "description": "Relay LED indicator mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on_off",
+        "off_on"
+      ]
+    }
+  ],
+  "warnings": []
+}

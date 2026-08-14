@@ -1,0 +1,69 @@
+{
+  "model": "E160x/E170x/E190x",
+  "file": "E160x_E170x_E190x.md",
+  "vendor": "IKEA",
+  "description": "TRADFRI control outlet",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E160x-E170x-E190x.png",
+  "added_at": "2025-02-18T14:54:46",
+  "exposes_summary": "switch (state), power_on_behavior, identify",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    }
+  ],
+  "warnings": []
+}

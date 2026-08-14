@@ -1,0 +1,146 @@
+{
+  "model": "W599501",
+  "file": "W599501.md",
+  "vendor": "Schneider Electric",
+  "description": "Wiser smoke alarm",
+  "image": "https://www.zigbee2mqtt.io/images/devices/W599501.png",
+  "added_at": "2023-09-28T10:54:36",
+  "exposes_summary": "battery, voltage, temperature, smoke, tamper, battery_low, test, heat, hush",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Test",
+      "type": "binary",
+      "property": "test",
+      "base": "test",
+      "endpoint": null,
+      "description": "Indicates whether the device is currently performing a test.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Heat",
+      "type": "binary",
+      "property": "heat",
+      "base": "heat",
+      "endpoint": null,
+      "description": "Indicates whether the device has detected high temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Hush",
+      "type": "binary",
+      "property": "hush",
+      "base": "hush",
+      "endpoint": null,
+      "description": "Indicates whether the device is in hush mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,84 @@
+{
+  "model": "4052899930377",
+  "file": "4052899930377.md",
+  "vendor": "OSRAM",
+  "description": "Lightify pro push button controller (PBC)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/4052899930377.png",
+  "added_at": "2023-01-01T09:10:19",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action_l1",
+      "base": "action",
+      "endpoint": "l1",
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "hold",
+        "release",
+        "toggle"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action_l2",
+      "base": "action",
+      "endpoint": "l2",
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "hold",
+        "release",
+        "toggle"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action_l3",
+      "base": "action",
+      "endpoint": "l3",
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "hold",
+        "release",
+        "toggle"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action_l4",
+      "base": "action",
+      "endpoint": "l4",
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "hold",
+        "release",
+        "toggle"
+      ]
+    }
+  ],
+  "warnings": []
+}

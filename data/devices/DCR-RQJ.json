@@ -1,0 +1,70 @@
+{
+  "model": "DCR-RQJ",
+  "file": "DCR-RQJ.md",
+  "vendor": "Tuya",
+  "description": "Carbon monoxide sensor gas leak detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DCR-RQJ.png",
+  "added_at": "2023-11-30T19:41:12",
+  "exposes_summary": "gas, gas_value, carbon_monoxide, co",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "binary",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Gas value",
+      "type": "numeric",
+      "property": "gas_value",
+      "base": "gas_value",
+      "endpoint": null,
+      "description": "Measured gas concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "LEL %"
+    },
+    {
+      "name": "Carbon monoxide",
+      "type": "binary",
+      "property": "carbon_monoxide",
+      "base": "carbon_monoxide",
+      "endpoint": null,
+      "description": "Indicates if CO (carbon monoxide) is detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "CO",
+      "type": "numeric",
+      "property": "co",
+      "base": "co",
+      "endpoint": null,
+      "description": "The measured CO (carbon monoxide) value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    }
+  ],
+  "warnings": []
+}

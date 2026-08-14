@@ -1,0 +1,50 @@
+{
+  "model": "VC-X01D",
+  "file": "VC-X01D.md",
+  "vendor": "Aqara",
+  "description": "Valve controller T1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/VC-X01D.png",
+  "added_at": "2024-09-01T12:36:44",
+  "exposes_summary": "switch (state), battery",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

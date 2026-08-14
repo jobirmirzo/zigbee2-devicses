@@ -1,0 +1,123 @@
+{
+  "model": "SPM01-U02",
+  "file": "SPM01-U02.md",
+  "vendor": "BITUO TECHNIK",
+  "description": "Smart energy monitor for 1P+N system",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SPM01-U02.png",
+  "added_at": "2025-04-01T18:30:52",
+  "exposes_summary": "power_apparent, power, voltage, ac_frequency, power_factor, current, energy, produced_energy",
+  "exposes": [
+    {
+      "name": "Power apparent",
+      "type": "numeric",
+      "property": "power_apparent",
+      "base": "power_apparent",
+      "endpoint": null,
+      "description": "Instantaneous measured apparent power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "AC frequency",
+      "type": "numeric",
+      "property": "ac_frequency",
+      "base": "ac_frequency",
+      "endpoint": null,
+      "description": "Measured electrical AC frequency.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Power factor",
+      "type": "numeric",
+      "property": "power_factor",
+      "base": "power_factor",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Produced energy",
+      "type": "numeric",
+      "property": "produced_energy",
+      "base": "produced_energy",
+      "endpoint": null,
+      "description": "Sum of produced energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    }
+  ],
+  "warnings": []
+}

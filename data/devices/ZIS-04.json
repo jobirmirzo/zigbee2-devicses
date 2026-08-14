@@ -1,0 +1,198 @@
+{
+  "model": "ZIS-04",
+  "file": "ZIS-04.md",
+  "vendor": "Novato",
+  "description": "24 GHz radar human presence sensor with relay output",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZIS-04.png",
+  "added_at": "2026-05-07T17:39:17",
+  "exposes_summary": "presence, illuminance, radar, detection_range, sensitivity, detection_area, fading_time, indicator, presence_switch, compensation_coefficient, state_reversal",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Detection distance",
+      "type": "numeric",
+      "property": "detection_distance",
+      "base": "detection_distance",
+      "endpoint": null,
+      "description": "Live distance to detected person.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Radar",
+      "type": "binary",
+      "property": "radar",
+      "base": "radar",
+      "endpoint": null,
+      "description": "Enable/disable radar detection.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Detection range",
+      "type": "numeric",
+      "property": "detection_range",
+      "base": "detection_range",
+      "endpoint": null,
+      "description": "Detection range level (1=closest, 7=furthest).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 7
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Radar sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "name": "Detection area",
+      "type": "enum",
+      "property": "detection_area",
+      "base": "detection_area",
+      "endpoint": null,
+      "description": "Active detection zone.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "all",
+        "left",
+        "right"
+      ]
+    },
+    {
+      "name": "Fading time",
+      "type": "numeric",
+      "property": "fading_time",
+      "base": "fading_time",
+      "endpoint": null,
+      "description": "Delay before reporting absence (s).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Indicator",
+      "type": "binary",
+      "property": "indicator",
+      "base": "indicator",
+      "endpoint": null,
+      "description": "LED status indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Presence switch",
+      "type": "binary",
+      "property": "presence_switch",
+      "base": "presence_switch",
+      "endpoint": null,
+      "description": "Presence relay output (relay variants only).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Compensation coefficient",
+      "type": "numeric",
+      "property": "compensation_coefficient",
+      "base": "compensation_coefficient",
+      "endpoint": null,
+      "description": "Illuminance compensation multiplier (1x-10x).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10
+    },
+    {
+      "name": "State reversal",
+      "type": "binary",
+      "property": "state_reversal",
+      "base": "state_reversal",
+      "endpoint": null,
+      "description": "Invert the presence output signal.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

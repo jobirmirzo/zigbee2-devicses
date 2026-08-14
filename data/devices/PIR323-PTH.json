@@ -1,0 +1,70 @@
+{
+  "model": "PIR323-PTH",
+  "file": "PIR323-PTH.md",
+  "vendor": "OWON",
+  "description": "Multi-sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/PIR323-PTH.png",
+  "added_at": "2022-12-01T15:07:19",
+  "exposes_summary": "occupancy, battery_low, temperature, humidity",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

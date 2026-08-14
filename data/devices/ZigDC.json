@@ -1,0 +1,548 @@
+{
+  "model": "ZigDC",
+  "file": "ZigDC.md",
+  "vendor": "xyzroe",
+  "description": "ZigDC",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZigDC.png",
+  "added_at": "2024-06-30T19:12:33",
+  "exposes_summary": "current, voltage, power, temperature, humidity, action, cpu_temperature, switch_type, switch_actions, bind_command, uptime, interval",
+  "exposes": [
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current_ch1",
+      "base": "current",
+      "endpoint": "ch1",
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage_ch1",
+      "base": "voltage",
+      "endpoint": "ch1",
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power_ch1",
+      "base": "power",
+      "endpoint": "ch1",
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current_ch2",
+      "base": "current",
+      "endpoint": "ch2",
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage_ch2",
+      "base": "voltage",
+      "endpoint": "ch2",
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power_ch2",
+      "base": "power",
+      "endpoint": "ch2",
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current_ch3",
+      "base": "current",
+      "endpoint": "ch3",
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage_ch3",
+      "base": "voltage",
+      "endpoint": "ch3",
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power_ch3",
+      "base": "power",
+      "endpoint": "ch3",
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current_ch4",
+      "base": "current",
+      "endpoint": "ch4",
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage_ch4",
+      "base": "voltage",
+      "endpoint": "ch4",
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power_ch4",
+      "base": "power",
+      "endpoint": "ch4",
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current_ch5",
+      "base": "current",
+      "endpoint": "ch5",
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage_ch5",
+      "base": "voltage",
+      "endpoint": "ch5",
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power_ch5",
+      "base": "power",
+      "endpoint": "ch5",
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current_ch6",
+      "base": "current",
+      "endpoint": "ch6",
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage_ch6",
+      "base": "voltage",
+      "endpoint": "ch6",
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power_ch6",
+      "base": "power",
+      "endpoint": "ch6",
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l6",
+      "base": "temperature",
+      "endpoint": "l6",
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_l6",
+      "base": "humidity",
+      "endpoint": "l6",
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single",
+        "double",
+        "triple",
+        "hold",
+        "release"
+      ]
+    },
+    {
+      "name": "CPU temperature",
+      "type": "numeric",
+      "property": "temperature_l2",
+      "base": "temperature",
+      "endpoint": "l2",
+      "description": "Temperature of the CPU.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type_l7",
+      "base": "switch_type",
+      "endpoint": "l7",
+      "description": "IN1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "switch",
+        "single_click",
+        "multi_click",
+        "reset_to_defaults"
+      ]
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions_l7",
+      "base": "switch_actions",
+      "endpoint": "l7",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off",
+        "toggle"
+      ]
+    },
+    {
+      "name": "Bind command",
+      "type": "enum",
+      "property": "bind_command_l7",
+      "base": "bind_command",
+      "endpoint": "l7",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on/off",
+        "toggle",
+        "change_level_up",
+        "change_level_down",
+        "change_level_up_with_off",
+        "change_level_down_with_off",
+        "recall_scene_0",
+        "recall_scene_1",
+        "recall_scene_2",
+        "recall_scene_3",
+        "recall_scene_4",
+        "recall_scene_5"
+      ]
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type_l8",
+      "base": "switch_type",
+      "endpoint": "l8",
+      "description": "IN2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "switch",
+        "single_click",
+        "multi_click",
+        "reset_to_defaults"
+      ]
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions_l8",
+      "base": "switch_actions",
+      "endpoint": "l8",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off",
+        "toggle"
+      ]
+    },
+    {
+      "name": "Bind command",
+      "type": "enum",
+      "property": "bind_command_l8",
+      "base": "bind_command",
+      "endpoint": "l8",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on/off",
+        "toggle",
+        "change_level_up",
+        "change_level_down",
+        "change_level_up_with_off",
+        "change_level_down_with_off",
+        "recall_scene_0",
+        "recall_scene_1",
+        "recall_scene_2",
+        "recall_scene_3",
+        "recall_scene_4",
+        "recall_scene_5"
+      ]
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type_l1",
+      "base": "switch_type",
+      "endpoint": "l1",
+      "description": "BTN.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "switch",
+        "single_click",
+        "multi_click",
+        "reset_to_defaults"
+      ]
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions_l1",
+      "base": "switch_actions",
+      "endpoint": "l1",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off",
+        "toggle"
+      ]
+    },
+    {
+      "name": "Bind command",
+      "type": "enum",
+      "property": "bind_command_l1",
+      "base": "bind_command",
+      "endpoint": "l1",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on/off",
+        "toggle",
+        "change_level_up",
+        "change_level_down",
+        "change_level_up_with_off",
+        "change_level_down_with_off",
+        "recall_scene_0",
+        "recall_scene_1",
+        "recall_scene_2",
+        "recall_scene_3",
+        "recall_scene_4",
+        "recall_scene_5"
+      ]
+    },
+    {
+      "name": "Uptime",
+      "type": "numeric",
+      "property": "uptime",
+      "base": "uptime",
+      "endpoint": null,
+      "description": "Uptime.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "sec"
+    },
+    {
+      "name": "Interval",
+      "type": "numeric",
+      "property": "interval",
+      "base": "interval",
+      "endpoint": null,
+      "description": "Reporting interval.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 600,
+      "unit": "sec"
+    }
+  ],
+  "warnings": []
+}

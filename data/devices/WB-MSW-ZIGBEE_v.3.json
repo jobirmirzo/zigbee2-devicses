@@ -1,0 +1,320 @@
+{
+  "model": "WB-MSW-ZIGBEE v.3",
+  "file": "WB-MSW-ZIGBEE_v.3.md",
+  "vendor": "Wirenboard",
+  "description": "Wall-mounted multi sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WB-MSW-ZIGBEE-v.3.png",
+  "added_at": "2021-12-31T16:51:16",
+  "exposes_summary": "temperature, humidity, occupancy, occupancy_level, co2, voc, noise, noise_detected, switch (state), noise_timeout, occupancy_timeout, temperature_offset, occupancy_sensitivity, noise_detect_level, co2_autocalibration, co2_manual_calibration, th_heater, illuminance",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy level",
+      "type": "numeric",
+      "property": "occupancy_level",
+      "base": "occupancy_level",
+      "endpoint": null,
+      "description": "The measured occupancy value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "The measured CO2 (carbon dioxide) value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "VOC",
+      "type": "numeric",
+      "property": "voc",
+      "base": "voc",
+      "endpoint": null,
+      "description": "Measured VOC value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Noise",
+      "type": "numeric",
+      "property": "noise",
+      "base": "noise",
+      "endpoint": null,
+      "description": "The measured noise value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "dBA"
+    },
+    {
+      "name": "Noise detected",
+      "type": "binary",
+      "property": "noise_detected",
+      "base": "noise_detected",
+      "endpoint": null,
+      "description": "Indicates whether the device detected noise.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l3",
+      "features": [
+        {
+          "property": "state_l3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Noise timeout",
+      "type": "numeric",
+      "property": "noise_timeout",
+      "base": "noise_timeout",
+      "endpoint": null,
+      "description": "Time in seconds after which noise is cleared after detecting it (default: 60).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 2000,
+      "unit": "s"
+    },
+    {
+      "name": "Occupancy timeout",
+      "type": "numeric",
+      "property": "occupancy_timeout",
+      "base": "occupancy_timeout",
+      "endpoint": null,
+      "description": "Time in seconds after which occupancy is cleared after detecting it (default: 60).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 2000,
+      "unit": "s"
+    },
+    {
+      "name": "Temperature offset",
+      "type": "numeric",
+      "property": "temperature_offset",
+      "base": "temperature_offset",
+      "endpoint": null,
+      "description": "Self-heating compensation. The compensation value is subtracted from the measured temperature.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -10,
+      "value_max": 10,
+      "unit": "°C"
+    },
+    {
+      "name": "Occupancy sensitivity",
+      "type": "numeric",
+      "property": "occupancy_sensitivity",
+      "base": "occupancy_sensitivity",
+      "endpoint": null,
+      "description": "If the sensor is triggered by the slightest movement, reduce the sensitivity, otherwise increase it (default: 50).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 2000
+    },
+    {
+      "name": "Noise detect level",
+      "type": "numeric",
+      "property": "noise_detect_level",
+      "base": "noise_detect_level",
+      "endpoint": null,
+      "description": "The minimum noise level at which the detector will work (default: 50).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 150,
+      "unit": "dBA"
+    },
+    {
+      "name": "Co2 autocalibration",
+      "type": "enum",
+      "property": "co2_autocalibration",
+      "base": "co2_autocalibration",
+      "endpoint": null,
+      "description": "Automatic calibration of the CO2 sensor. If ON, the CO2 sensor will automatically calibrate every 7 days. (MH-Z19B sensor).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "OFF",
+        "ON"
+      ]
+    },
+    {
+      "name": "Co2 manual calibration",
+      "type": "enum",
+      "property": "co2_manual_calibration",
+      "base": "co2_manual_calibration",
+      "endpoint": null,
+      "description": "Ventilate the room for 20 minutes, turn on manual calibration, and turn it off after one second. After about 5 minutes the CO2 sensor will show 400ppm. Calibration completed. (MH-Z19B sensor).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "OFF",
+        "ON"
+      ]
+    },
+    {
+      "name": "Th heater",
+      "type": "enum",
+      "property": "th_heater",
+      "base": "th_heater",
+      "endpoint": null,
+      "description": "Turn on when working in conditions of high humidity (more than 70 %, RH) or condensation, if the sensor shows 0 or 100 %..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "OFF",
+        "ON"
+      ]
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

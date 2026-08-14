@@ -1,0 +1,57 @@
+{
+  "model": "OS600",
+  "file": "OS600.md",
+  "vendor": "Salus Controls",
+  "description": "Door or window contact sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/OS600.png",
+  "added_at": "2020-12-01T19:02:25Z",
+  "exposes_summary": "contact, battery_low, tamper",
+  "exposes": [
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates if the contact is closed (= true) or open (= false).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

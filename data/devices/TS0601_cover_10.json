@@ -1,0 +1,60 @@
+{
+  "model": "TS0601_cover_10",
+  "file": "TS0601_cover_10.md",
+  "vendor": "Tuya",
+  "description": "Cover motor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_cover_10.png",
+  "added_at": "2024-08-01T18:23:40",
+  "exposes_summary": "cover (state, position), motor_direction",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Motor direction",
+      "type": "enum",
+      "property": "motor_direction",
+      "base": "motor_direction",
+      "endpoint": null,
+      "description": "Set the motor direction.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "normal",
+        "reversed"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,120 @@
+{
+  "model": "ECW-100-A03",
+  "file": "ECW-100-A03.md",
+  "vendor": "eZEX",
+  "description": "Zigbee switch 3 gang",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ECW-100-A03.png",
+  "added_at": "2020-05-19T20:48:40Z",
+  "exposes_summary": "switch (state), power_on_behavior",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "top",
+      "features": [
+        {
+          "property": "state_top",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "center",
+      "features": [
+        {
+          "property": "state_center",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "bottom",
+      "features": [
+        {
+          "property": "state_bottom",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_top",
+      "base": "power_on_behavior",
+      "endpoint": "top",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_center",
+      "base": "power_on_behavior",
+      "endpoint": "center",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_bottom",
+      "base": "power_on_behavior",
+      "endpoint": "bottom",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,91 @@
+{
+  "model": "F00MB00-04-1",
+  "file": "F00MB00-04-1.md",
+  "vendor": "FORIA",
+  "description": "4 scenes switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/F00MB00-04-1.png",
+  "added_at": "2024-04-29T19:24:38",
+  "exposes_summary": "vibration, approach, illumination, backlight, action",
+  "exposes": [
+    {
+      "name": "Vibration",
+      "type": "binary",
+      "property": "vibration",
+      "base": "vibration",
+      "endpoint": null,
+      "description": "Enable vibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Approach",
+      "type": "binary",
+      "property": "approach",
+      "base": "approach",
+      "endpoint": null,
+      "description": "Enable approach detection.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Illumination",
+      "type": "binary",
+      "property": "illumination",
+      "base": "illumination",
+      "endpoint": null,
+      "description": "Enable illumination detection.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Backlight",
+      "type": "binary",
+      "property": "backlight",
+      "base": "backlight",
+      "endpoint": null,
+      "description": "Enable backlight.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "scene_1",
+        "scene_2",
+        "scene_3",
+        "scene_4"
+      ]
+    }
+  ],
+  "warnings": []
+}

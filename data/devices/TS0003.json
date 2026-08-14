@@ -1,0 +1,63 @@
+{
+  "model": "TS0003",
+  "file": "TS0003.md",
+  "vendor": "Tuya",
+  "description": "3 gang switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0003.png",
+  "added_at": "2023-11-01T18:54:40",
+  "exposes_summary": "switch (state)",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "left",
+      "features": [
+        {
+          "property": "state_left",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "center",
+      "features": [
+        {
+          "property": "state_center",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "right",
+      "features": [
+        {
+          "property": "state_right",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

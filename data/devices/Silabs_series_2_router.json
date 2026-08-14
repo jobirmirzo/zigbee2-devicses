@@ -1,0 +1,28 @@
+{
+  "model": "Silabs series 2 router",
+  "file": "Silabs_series_2_router.md",
+  "vendor": "Silabs",
+  "description": "Silabs series 2 adapter with router firmware",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Silabs-series-2-router.png",
+  "added_at": "2025-01-03T20:11:48",
+  "exposes_summary": "reset",
+  "exposes": [
+    {
+      "name": "Reset",
+      "type": "enum",
+      "property": "reset",
+      "base": "reset",
+      "endpoint": null,
+      "description": "Resets and launches the bootloader for flashing. If USB, ensure the device is already connected to the machine where you intend to flash it before triggering this..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "reset"
+      ]
+    }
+  ],
+  "warnings": []
+}

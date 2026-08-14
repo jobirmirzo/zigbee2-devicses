@@ -1,0 +1,172 @@
+{
+  "model": "R7051",
+  "file": "R7051.md",
+  "vendor": "Woox",
+  "description": "Smart siren",
+  "image": "https://www.zigbee2mqtt.io/images/devices/R7051.png",
+  "added_at": "2021-06-08T15:36:48Z",
+  "exposes_summary": "battery, voltage, warning, alarm, ac_connected, volume, duration",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Warning",
+      "type": "composite",
+      "property": "warning",
+      "base": "warning",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "mode",
+          "type": "enum",
+          "description": "Mode of the warning (sound effect)",
+          "values": [
+            "stop",
+            "burglar",
+            "fire",
+            "emergency",
+            "police_panic",
+            "fire_panic",
+            "emergency_panic"
+          ]
+        },
+        {
+          "property": "level",
+          "type": "enum",
+          "description": "Sound level",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "property": "strobe_level",
+          "type": "enum",
+          "description": "Intensity of the strobe",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "property": "strobe",
+          "type": "binary",
+          "description": "Turn on/off the strobe (light) during warning",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "strobe_duty_cycle",
+          "type": "numeric",
+          "description": "Length of the flash cycle max value is 10"
+        },
+        {
+          "property": "duration",
+          "type": "numeric",
+          "description": "Duration in seconds of the alarm unit is s"
+        }
+      ]
+    },
+    {
+      "name": "Alarm",
+      "type": "binary",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Ac connected",
+      "type": "binary",
+      "property": "ac_connected",
+      "base": "ac_connected",
+      "endpoint": null,
+      "description": "Is the device plugged in.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Volume",
+      "type": "numeric",
+      "property": "volume",
+      "base": "volume",
+      "endpoint": null,
+      "description": "Volume of siren.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Duration",
+      "type": "numeric",
+      "property": "duration",
+      "base": "duration",
+      "endpoint": null,
+      "description": "Duration of siren.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600
+    }
+  ],
+  "warnings": []
+}

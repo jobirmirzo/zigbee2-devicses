@@ -1,0 +1,452 @@
+{
+  "model": "ZG-IR01",
+  "file": "ZG-IR01.md",
+  "vendor": "HOBEIAN",
+  "description": "Smart IR remote switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-IR01.png",
+  "added_at": "2026-05-01T17:24:59",
+  "exposes_summary": "switch1, switch2, switch3, switch4, switch5, switch6, temperature, humidity, learn_ir_code, learned_ir_code, ir_code_to_send, switch1_on, switch1_off, switch2_on, switch2_off, switch3_on, switch3_off, switch4_on, switch4_off, switch5_on, switch5_off, switch6_on, switch6_off, temperature_unit, temperature_calibration, humidity_calibration, battery",
+  "exposes": [
+    {
+      "name": "Switch1",
+      "type": "binary",
+      "property": "switch1",
+      "base": "switch1",
+      "endpoint": null,
+      "description": "IR Switch1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch2",
+      "type": "binary",
+      "property": "switch2",
+      "base": "switch2",
+      "endpoint": null,
+      "description": "IR Switch2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch3",
+      "type": "binary",
+      "property": "switch3",
+      "base": "switch3",
+      "endpoint": null,
+      "description": "IR Switch3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch4",
+      "type": "binary",
+      "property": "switch4",
+      "base": "switch4",
+      "endpoint": null,
+      "description": "IR Switch4.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch5",
+      "type": "binary",
+      "property": "switch5",
+      "base": "switch5",
+      "endpoint": null,
+      "description": "IR Switch5.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch6",
+      "type": "binary",
+      "property": "switch6",
+      "base": "switch6",
+      "endpoint": null,
+      "description": "IR Switch6.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Learn ir code",
+      "type": "binary",
+      "property": "learn_ir_code",
+      "base": "learn_ir_code",
+      "endpoint": null,
+      "description": "Turn on to learn new IR code .",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Learned ir code",
+      "type": "text",
+      "property": "learned_ir_code",
+      "base": "learned_ir_code",
+      "endpoint": null,
+      "description": "The IR code learned by device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Ir code to send",
+      "type": "text",
+      "property": "ir_code_to_send",
+      "base": "ir_code_to_send",
+      "endpoint": null,
+      "description": "The IR code to send by device (Support SmartIR IR code library. IR remote Firmware ID must be Firmware ID>01062026).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Switch1 on",
+      "type": "enum",
+      "property": "switch1_on",
+      "base": "switch1_on",
+      "endpoint": null,
+      "description": "Switch 1 on IR code Study and Study status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "study",
+        "registered",
+        "unregistered"
+      ]
+    },
+    {
+      "name": "Switch1 off",
+      "type": "enum",
+      "property": "switch1_off",
+      "base": "switch1_off",
+      "endpoint": null,
+      "description": "Switch 1 off IR code Study and Study status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "study",
+        "registered",
+        "unregistered"
+      ]
+    },
+    {
+      "name": "Switch2 on",
+      "type": "enum",
+      "property": "switch2_on",
+      "base": "switch2_on",
+      "endpoint": null,
+      "description": "Switch 2 on IR code Study and Study status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "study",
+        "registered",
+        "unregistered"
+      ]
+    },
+    {
+      "name": "Switch2 off",
+      "type": "enum",
+      "property": "switch2_off",
+      "base": "switch2_off",
+      "endpoint": null,
+      "description": "Switch 2 off IR code Study and Study status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "study",
+        "registered",
+        "unregistered"
+      ]
+    },
+    {
+      "name": "Switch3 on",
+      "type": "enum",
+      "property": "switch3_on",
+      "base": "switch3_on",
+      "endpoint": null,
+      "description": "Switch 3 on IR code Study and Study status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "study",
+        "registered",
+        "unregistered"
+      ]
+    },
+    {
+      "name": "Switch3 off",
+      "type": "enum",
+      "property": "switch3_off",
+      "base": "switch3_off",
+      "endpoint": null,
+      "description": "Switch 3 off IR code Study and Study status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "study",
+        "registered",
+        "unregistered"
+      ]
+    },
+    {
+      "name": "Switch4 on",
+      "type": "enum",
+      "property": "switch4_on",
+      "base": "switch4_on",
+      "endpoint": null,
+      "description": "Switch 4 on IR code Study and Study status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "study",
+        "registered",
+        "unregistered"
+      ]
+    },
+    {
+      "name": "Switch4 off",
+      "type": "enum",
+      "property": "switch4_off",
+      "base": "switch4_off",
+      "endpoint": null,
+      "description": "Switch 4 off IR code Study and Study status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "study",
+        "registered",
+        "unregistered"
+      ]
+    },
+    {
+      "name": "Switch5 on",
+      "type": "enum",
+      "property": "switch5_on",
+      "base": "switch5_on",
+      "endpoint": null,
+      "description": "Switch 5 on IR code Study and Study status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "study",
+        "registered",
+        "unregistered"
+      ]
+    },
+    {
+      "name": "Switch5 off",
+      "type": "enum",
+      "property": "switch5_off",
+      "base": "switch5_off",
+      "endpoint": null,
+      "description": "Switch 5 off IR code Study and Study status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "study",
+        "registered",
+        "unregistered"
+      ]
+    },
+    {
+      "name": "Switch6 on",
+      "type": "enum",
+      "property": "switch6_on",
+      "base": "switch6_on",
+      "endpoint": null,
+      "description": "Switch 6 on IR code Study and Study status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "study",
+        "registered",
+        "unregistered"
+      ]
+    },
+    {
+      "name": "Switch6 off",
+      "type": "enum",
+      "property": "switch6_off",
+      "base": "switch6_off",
+      "endpoint": null,
+      "description": "Switch 6 off IR code Study and Study status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "study",
+        "registered",
+        "unregistered"
+      ]
+    },
+    {
+      "name": "Temperature unit",
+      "type": "enum",
+      "property": "temperature_unit",
+      "base": "temperature_unit",
+      "endpoint": null,
+      "description": "Temperature unit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Temperature calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -2,
+      "value_max": 2,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Humidity calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -30,
+      "value_max": 30,
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

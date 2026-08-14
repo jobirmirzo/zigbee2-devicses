@@ -1,0 +1,42 @@
+{
+  "model": "ZSS-QT-LS-C",
+  "file": "ZSS-QT-LS-C.md",
+  "vendor": "Moes",
+  "description": "Light sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZSS-QT-LS-C.png",
+  "added_at": "2024-11-30T20:27:20",
+  "exposes_summary": "battery, illuminance",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

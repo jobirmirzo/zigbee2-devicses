@@ -1,0 +1,88 @@
+{
+  "model": "CS-T2C",
+  "file": "CS-T2C.md",
+  "vendor": "EZVIZ",
+  "description": "Open/close sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CS-T2C.png",
+  "added_at": "2026-01-01T13:27:46",
+  "exposes_summary": "battery, contact_alarm_1, contact_alarm_2, tamper, battery_low",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Contact alarm 1",
+      "type": "binary",
+      "property": "contact_alarm_1",
+      "base": "contact_alarm_1",
+      "endpoint": null,
+      "description": "Indicates whether the device is opened or closed (alarm_1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Contact alarm 2",
+      "type": "binary",
+      "property": "contact_alarm_2",
+      "base": "contact_alarm_2",
+      "endpoint": null,
+      "description": "Indicates whether the device is opened or closed (alarm_2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

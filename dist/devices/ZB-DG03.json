@@ -1,0 +1,78 @@
+{
+  "model": "ZB-DG03",
+  "file": "ZB-DG03.md",
+  "vendor": "Spacetronik",
+  "description": "LPG gas sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZB-DG03.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "gas, preheat, fault, lifecycle",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "binary",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Preheat",
+      "type": "binary",
+      "property": "preheat",
+      "base": "preheat",
+      "endpoint": null,
+      "description": "Sensor preheat active.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Fault",
+      "type": "enum",
+      "property": "fault",
+      "base": "fault",
+      "endpoint": null,
+      "description": "Fault status of the device (none = no fault).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "fault",
+        "serious_fault",
+        "sensor_fault",
+        "probe_fault",
+        "power_fault"
+      ]
+    },
+    {
+      "name": "Lifecycle",
+      "type": "binary",
+      "property": "lifecycle",
+      "base": "lifecycle",
+      "endpoint": null,
+      "description": "Sensor lifetime limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

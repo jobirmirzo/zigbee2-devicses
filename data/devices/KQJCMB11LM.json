@@ -1,0 +1,68 @@
+{
+  "model": "KQJCMB11LM",
+  "file": "KQJCMB11LM.md",
+  "vendor": "Aqara",
+  "description": "Air monitoring panel S1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/KQJCMB11LM.png",
+  "added_at": "2023-01-01T08:59:10",
+  "exposes_summary": "temperature, humidity, pm25, co2",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "PM25",
+      "type": "numeric",
+      "property": "pm25",
+      "base": "pm25",
+      "endpoint": null,
+      "description": "Measured PM2.5 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "The measured CO2 (carbon dioxide) value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    }
+  ],
+  "warnings": []
+}

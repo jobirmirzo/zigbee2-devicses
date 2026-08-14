@@ -1,0 +1,301 @@
+{
+  "model": "Netuya_CO2_Smart_Box",
+  "file": "Netuya_CO2_Smart_Box.md",
+  "vendor": "EFEKTA",
+  "description": "CO2 Smart Monitor, rgb indicator, alarm, can control the relay",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Netuya_CO2_Smart_Box.png",
+  "added_at": "2026-01-31T13:10:41",
+  "exposes_summary": "identify, co2, lifetime, light (state, brightness), night_onoff_backlight, night_on_backlight, night_off_backlight, alarm, alarm_volume, alarm_level, calibration_mode, forced_recalibration, factory_reset_co2, manual_forced_recalibration, invert_logic_onoff, enable_co2_gas, high_co2_gas, low_co2_gas",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "Measured value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Lifetime",
+      "type": "numeric",
+      "property": "lifetime",
+      "base": "lifetime",
+      "endpoint": null,
+      "description": "Uptime.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hours"
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Night onoff backlight",
+      "type": "binary",
+      "property": "night_onoff_backlight",
+      "base": "night_onoff_backlight",
+      "endpoint": null,
+      "description": "Complete shutdown of the backlight at night mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Night on backlight",
+      "type": "numeric",
+      "property": "night_on_backlight",
+      "base": "night_on_backlight",
+      "endpoint": null,
+      "description": "Night mode activation time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23,
+      "unit": "Hr"
+    },
+    {
+      "name": "Night off backlight",
+      "type": "numeric",
+      "property": "night_off_backlight",
+      "base": "night_off_backlight",
+      "endpoint": null,
+      "description": "Night mode deactivation time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23,
+      "unit": "Hr"
+    },
+    {
+      "name": "Alarm",
+      "type": "binary",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Enable alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Alarm volume",
+      "type": "numeric",
+      "property": "alarm_volume",
+      "base": "alarm_volume",
+      "endpoint": null,
+      "description": "Set alarm volume.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Alarm level",
+      "type": "numeric",
+      "property": "alarm_level",
+      "base": "alarm_level",
+      "endpoint": null,
+      "description": "Set alarm level.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 400,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Calibration mode",
+      "type": "binary",
+      "property": "calibration_mode",
+      "base": "calibration_mode",
+      "endpoint": null,
+      "description": "Set calibration mode of the CO2 sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "Auto",
+      "value_off": "Manual"
+    },
+    {
+      "name": "Forced recalibration",
+      "type": "binary",
+      "property": "forced_recalibration",
+      "base": "forced_recalibration",
+      "endpoint": null,
+      "description": "Start FRC (Perform Forced Recalibration of the CO2 Sensor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Factory reset co2",
+      "type": "binary",
+      "property": "factory_reset_co2",
+      "base": "factory_reset_co2",
+      "endpoint": null,
+      "description": "Factory Reset CO2 sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Manual forced recalibration",
+      "type": "numeric",
+      "property": "manual_forced_recalibration",
+      "base": "manual_forced_recalibration",
+      "endpoint": null,
+      "description": "Start Manual FRC (Perform Forced Recalibration of the CO2 Sensor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Invert logic onoff",
+      "type": "binary",
+      "property": "invert_logic_onoff",
+      "base": "invert_logic_onoff",
+      "endpoint": null,
+      "description": "Enable invert logic onoff.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Enable co2 gas",
+      "type": "binary",
+      "property": "enable_co2_gas",
+      "base": "enable_co2_gas",
+      "endpoint": null,
+      "description": "Enable CO2 Gas Control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "High co2 gas",
+      "type": "numeric",
+      "property": "high_co2_gas",
+      "base": "high_co2_gas",
+      "endpoint": null,
+      "description": "Setting High CO2 Gas Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 400,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Low co2 gas",
+      "type": "numeric",
+      "property": "low_co2_gas",
+      "base": "low_co2_gas",
+      "endpoint": null,
+      "description": "Setting Low CO2 Gas Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 400,
+      "value_max": 5000,
+      "unit": "ppm"
+    }
+  ],
+  "warnings": []
+}

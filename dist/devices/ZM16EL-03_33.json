@@ -1,0 +1,128 @@
+{
+  "model": "ZM16EL-03/33",
+  "file": "ZM16EL-03_33.md",
+  "vendor": "Zemismart",
+  "description": "Cover motor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZM16EL-03-33.png",
+  "added_at": "2023-09-28T10:54:36",
+  "exposes_summary": "battery, cover (state, position), reverse_direction, border, click_control, motor_fault",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Reverse direction",
+      "type": "enum",
+      "property": "reverse_direction",
+      "base": "reverse_direction",
+      "endpoint": null,
+      "description": "Reverse the motor direction.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "forward",
+        "back"
+      ]
+    },
+    {
+      "name": "Border",
+      "type": "enum",
+      "property": "border",
+      "base": "border",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "up",
+        "down",
+        "up_delete",
+        "down_delete",
+        "remove_top_bottom"
+      ]
+    },
+    {
+      "name": "Click control",
+      "type": "enum",
+      "property": "click_control",
+      "base": "click_control",
+      "endpoint": null,
+      "description": "Single motor steps.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "up",
+        "down"
+      ]
+    },
+    {
+      "name": "Motor fault",
+      "type": "binary",
+      "property": "motor_fault",
+      "base": "motor_fault",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,57 @@
+{
+  "model": "TS0601_pir",
+  "file": "TS0601_pir.md",
+  "vendor": "Tuya",
+  "description": "Haozee PIR sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_pir.png",
+  "added_at": "2023-09-28T10:54:36",
+  "exposes_summary": "occupancy, illuminance, battery",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

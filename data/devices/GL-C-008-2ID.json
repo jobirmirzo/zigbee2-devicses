@@ -1,0 +1,195 @@
+{
+  "model": "GL-C-008-2ID",
+  "file": "GL-C-008-2ID.md",
+  "vendor": "Gledopto",
+  "description": "Zigbee LED Controller RGB+CCT (2 ID)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GL-C-008-2ID.png",
+  "added_at": "2020-05-19T20:48:40Z",
+  "exposes_summary": "light (state, brightness, color_xy), light (state, brightness, color_temp, color_temp_startup), light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "rgb",
+      "features": [
+        {
+          "property": "state_rgb",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_rgb",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_xy_rgb",
+          "base": "color_xy",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": false,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "cct",
+      "features": [
+        {
+          "property": "state_cct",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_cct",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp_cct",
+          "base": "color_temp",
+          "value_min": 158,
+          "value_max": 495,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup_cct",
+          "base": "color_temp_startup",
+          "value_min": 158,
+          "value_max": 495,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": false,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 150,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup",
+          "base": "color_temp_startup",
+          "value_min": 150,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_xy",
+          "base": "color_xy",
+          "readable": true
+        },
+        {
+          "property": "color_hs",
+          "base": "color_hs",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": false,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect",
+        "colorloop",
+        "stop_colorloop"
+      ]
+    }
+  ],
+  "warnings": []
+}

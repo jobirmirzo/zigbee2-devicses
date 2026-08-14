@@ -1,0 +1,13 @@
+{
+  "model": "E2491",
+  "file": "E2491.md",
+  "vendor": null,
+  "description": null,
+  "image": null,
+  "added_at": null,
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": [
+    "no-exposes-section"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "model": "ZW-EU-4C",
+  "file": "ZW-EU-4C.md",
+  "vendor": "Nue / 3A",
+  "description": "Zigbee smart curtain switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZW-EU-4C.png",
+  "added_at": "2022-08-01T15:06:58",
+  "exposes_summary": "cover (state, position), moving",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Moving",
+      "type": "enum",
+      "property": "moving",
+      "base": "moving",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "UP",
+        "STOP",
+        "DOWN"
+      ]
+    }
+  ],
+  "warnings": []
+}

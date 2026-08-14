@@ -1,0 +1,43 @@
+{
+  "model": "SDC-4-1-00",
+  "file": "SDC-4-1-00.md",
+  "vendor": "NodOn",
+  "description": "Dry contact sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SDC-4-1-00.png",
+  "added_at": "2024-10-31T20:34:53",
+  "exposes_summary": "battery, dry_contact",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Dry contact",
+      "type": "binary",
+      "property": "dry_contact",
+      "base": "dry_contact",
+      "endpoint": null,
+      "description": "State of the dry contact, closed or open..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "contact_closed",
+      "value_off": "contact_open"
+    }
+  ],
+  "warnings": []
+}

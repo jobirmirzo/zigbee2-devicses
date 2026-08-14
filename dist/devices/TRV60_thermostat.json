@@ -1,0 +1,266 @@
+{
+  "model": "TRV60_thermostat",
+  "file": "TRV60_thermostat.md",
+  "vendor": "AVATTO",
+  "description": "Screen thermostatic radiator valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TRV60_thermostat.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "mode, work_state, child_lock, battery, window_detection, climate (current_heating_setpoint, local_temperature, local_temperature_calibration), fault, frost_protection, scale_protection, valve_volume, humidity, out_door_sensor1, out_door_sensor2, out_door_sensor3, out_temperature, screen_orientation",
+  "exposes": [
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "auto",
+        "manual"
+      ]
+    },
+    {
+      "name": "Work state",
+      "type": "enum",
+      "property": "work_state",
+      "base": "work_state",
+      "endpoint": null,
+      "description": "Work state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "opened",
+        "closed"
+      ]
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Window detection",
+      "type": "binary",
+      "property": "window_detection",
+      "base": "window_detection",
+      "endpoint": null,
+      "description": "Enables/disables window detection on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Fault",
+      "type": "numeric",
+      "property": "fault",
+      "base": "fault",
+      "endpoint": null,
+      "description": "Raw fault code.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Frost protection",
+      "type": "binary",
+      "property": "frost_protection",
+      "base": "frost_protection",
+      "endpoint": null,
+      "description": "When the room temperature is lower than 5 ℃, the valve opens; when the temperature rises to 8 ℃, the valve closes..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Scale protection",
+      "type": "binary",
+      "property": "scale_protection",
+      "base": "scale_protection",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Valve volume",
+      "type": "numeric",
+      "property": "valve_volume",
+      "base": "valve_volume",
+      "endpoint": null,
+      "description": "The current percentage of valve flow rate..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "The percentage of humidity collected after adding an external temperature and humidity sensor..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Out door sensor1",
+      "type": "binary",
+      "property": "out_door_sensor1",
+      "base": "out_door_sensor1",
+      "endpoint": null,
+      "description": "The on-off status of the door magnet after adding the first external door magnet sensor..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Out door sensor2",
+      "type": "binary",
+      "property": "out_door_sensor2",
+      "base": "out_door_sensor2",
+      "endpoint": null,
+      "description": "The on-off status of the door magnet after adding the second external door magnet sensor..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Out door sensor3",
+      "type": "binary",
+      "property": "out_door_sensor3",
+      "base": "out_door_sensor3",
+      "endpoint": null,
+      "description": "The on-off status of the door magnet after adding the third external door magnet sensor..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Out temperature",
+      "type": "numeric",
+      "property": "out_temperature",
+      "base": "out_temperature",
+      "endpoint": null,
+      "description": "The percentage of temperature collected after adding an external temperature and humidity sensor..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Screen orientation",
+      "type": "enum",
+      "property": "screen_orientation",
+      "base": "screen_orientation",
+      "endpoint": null,
+      "description": "Screen orientation.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "normal",
+        "inverted"
+      ]
+    }
+  ],
+  "warnings": []
+}

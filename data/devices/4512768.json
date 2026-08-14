@@ -1,0 +1,196 @@
+{
+  "model": "4512768",
+  "file": "4512768.md",
+  "vendor": "Namron",
+  "description": "Zigbee 2 channel switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/4512768.png",
+  "added_at": "2023-11-23T21:15:57",
+  "exposes_summary": "switch (state), power_on_behavior, power, voltage, current, energy",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_l1",
+      "base": "power_on_behavior",
+      "endpoint": "l1",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_l2",
+      "base": "power_on_behavior",
+      "endpoint": "l2",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power_l1",
+      "base": "power",
+      "endpoint": "l1",
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power_l2",
+      "base": "power",
+      "endpoint": "l2",
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage_l1",
+      "base": "voltage",
+      "endpoint": "l1",
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage_l2",
+      "base": "voltage",
+      "endpoint": "l2",
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current_l1",
+      "base": "current",
+      "endpoint": "l1",
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current_l2",
+      "base": "current",
+      "endpoint": "l2",
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy_l1",
+      "base": "energy",
+      "endpoint": "l1",
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy_l2",
+      "base": "energy",
+      "endpoint": "l2",
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    }
+  ],
+  "warnings": []
+}

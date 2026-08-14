@@ -1,0 +1,209 @@
+{
+  "model": "TS0601_multifunction_switch",
+  "file": "TS0601_multifunction_switch.md",
+  "vendor": "Tuya",
+  "description": "1 gang touch panel switch with backlight color modes, child lock, timer, and brightness",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_multifunction_switch.png",
+  "added_at": "2026-05-07T17:39:17",
+  "exposes_summary": "switch (state), power_on_behavior, countdown, indicator_mode, backlight_mode, inching, on_color, off_color, backlight_brightness, child_lock",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "previous",
+        "on"
+      ]
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown",
+      "base": "countdown",
+      "endpoint": null,
+      "description": "Countdown to turn off.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400,
+      "unit": "s"
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode",
+      "base": "indicator_mode",
+      "endpoint": null,
+      "description": "Mode of the indicator light.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "none",
+        "relay",
+        "pos"
+      ]
+    },
+    {
+      "name": "Backlight mode",
+      "type": "binary",
+      "property": "backlight_mode",
+      "base": "backlight_mode",
+      "endpoint": null,
+      "description": "Backlight.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Inching",
+      "type": "composite",
+      "property": "inching",
+      "base": "inching",
+      "endpoint": null,
+      "description": "Inching configuration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "state",
+          "type": "binary",
+          "description": "Whenever the device is switched ON, switch it OFF automatically after the configured delay",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "minutes",
+          "type": "numeric",
+          "description": "Minutes component of the delay duration max value is 1440, unit is m"
+        },
+        {
+          "property": "seconds",
+          "type": "numeric",
+          "description": "Seconds component of the delay duration max value is 59, unit is s"
+        }
+      ]
+    },
+    {
+      "name": "On color",
+      "type": "enum",
+      "property": "on_color",
+      "base": "on_color",
+      "endpoint": null,
+      "description": "ON Color.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "red",
+        "blue",
+        "green",
+        "white",
+        "yellow",
+        "magenta",
+        "cyan"
+      ]
+    },
+    {
+      "name": "Off color",
+      "type": "enum",
+      "property": "off_color",
+      "base": "off_color",
+      "endpoint": null,
+      "description": "OFF Color.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "red",
+        "blue",
+        "green",
+        "white",
+        "yellow",
+        "magenta",
+        "cyan"
+      ]
+    },
+    {
+      "name": "Backlight brightness",
+      "type": "numeric",
+      "property": "backlight_brightness",
+      "base": "backlight_brightness",
+      "endpoint": null,
+      "description": "Backlight Brightness.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Child Lock.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

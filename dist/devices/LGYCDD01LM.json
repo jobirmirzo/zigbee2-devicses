@@ -1,0 +1,329 @@
+{
+  "model": "LGYCDD01LM",
+  "file": "LGYCDD01LM.md",
+  "vendor": "Aqara",
+  "description": "LED Strip T1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/LGYCDD01LM.png",
+  "added_at": "2023-09-01T13:40:11",
+  "exposes_summary": "light (state, brightness, color_temp, color_xy), power_outage_count, device_temperature, identify, power_on_behavior, dimming_range_minimum, dimming_range_maximum, on_off_duration, off_on_duration, length, audio, audio_sensitivity, audio_effect, effect, effect_speed, effect_segments, effect_colors, segment_colors",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 153,
+          "value_max": 370,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_xy",
+          "base": "color_xy",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages (since last pairing).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Power on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "previous",
+        "off"
+      ]
+    },
+    {
+      "name": "Dimming range minimum",
+      "type": "numeric",
+      "property": "dimming_range_minimum",
+      "base": "dimming_range_minimum",
+      "endpoint": null,
+      "description": "Minimum allowed dimming value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 99,
+      "unit": "%"
+    },
+    {
+      "name": "Dimming range maximum",
+      "type": "numeric",
+      "property": "dimming_range_maximum",
+      "base": "dimming_range_maximum",
+      "endpoint": null,
+      "description": "Maximum allowed dimming value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "On off duration",
+      "type": "numeric",
+      "property": "on_off_duration",
+      "base": "on_off_duration",
+      "endpoint": null,
+      "description": "Duration for light to gradually dim when turning off.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "s"
+    },
+    {
+      "name": "Off on duration",
+      "type": "numeric",
+      "property": "off_on_duration",
+      "base": "off_on_duration",
+      "endpoint": null,
+      "description": "Duration for light to gradually brighten when turning on.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "s"
+    },
+    {
+      "name": "Length",
+      "type": "numeric",
+      "property": "length",
+      "base": "length",
+      "endpoint": null,
+      "description": "LED strip length (5 x 20cm segments per meter).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10,
+      "unit": "m"
+    },
+    {
+      "name": "Audio",
+      "type": "binary",
+      "property": "audio",
+      "base": "audio",
+      "endpoint": null,
+      "description": "Audio sync mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Audio sensitivity",
+      "type": "enum",
+      "property": "audio_sensitivity",
+      "base": "audio_sensitivity",
+      "endpoint": null,
+      "description": "Audio sync sensitivity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "Audio effect",
+      "type": "enum",
+      "property": "audio_effect",
+      "base": "audio_effect",
+      "endpoint": null,
+      "description": "Audio effect.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "random",
+        "blink",
+        "rainbow",
+        "wave"
+      ]
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "RGB dynamic effect type.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "breathing",
+        "rainbow1",
+        "chasing",
+        "flash",
+        "hopping",
+        "rainbow2",
+        "flicker",
+        "dash"
+      ]
+    },
+    {
+      "name": "Effect speed",
+      "type": "numeric",
+      "property": "effect_speed",
+      "base": "effect_speed",
+      "endpoint": null,
+      "description": "RGB dynamic effect speed (1-100%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Effect segments",
+      "type": "text",
+      "property": "effect_segments",
+      "base": "effect_segments",
+      "endpoint": null,
+      "description": "Segment selection for effects. Formats: '1,2,5' (list), '1-10' (range), '1-5,10-15' (multiple ranges), '1,3,5-8,10' (mixed), 'odd/even/first-half/last-half/first-third/middle-third/last-third' (patterns). Empty = all segments. Each meter = 5 segments (20cm each)..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Effect colors",
+      "type": "list",
+      "property": "effect_colors",
+      "base": "effect_colors",
+      "endpoint": null,
+      "description": "Array of RGB color objects for dynamic effects (1-8 colors)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Segment colors",
+      "type": "list",
+      "property": "segment_colors",
+      "base": "segment_colors",
+      "endpoint": null,
+      "description": "Set individual segment colors..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    }
+  ],
+  "warnings": []
+}

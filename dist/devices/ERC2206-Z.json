@@ -1,0 +1,81 @@
+{
+  "model": "ERC2206-Z",
+  "file": "ERC2206-Z.md",
+  "vendor": "BOX",
+  "description": "Roller shutter controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ERC2206-Z.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "state, direction, record_rf, clear_rf",
+  "exposes": [
+    {
+      "name": "State",
+      "type": "enum",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Shutter state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "open",
+        "stop",
+        "close"
+      ]
+    },
+    {
+      "name": "Direction",
+      "type": "enum",
+      "property": "direction",
+      "base": "direction",
+      "endpoint": null,
+      "description": "Motor direction.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "forward",
+        "back"
+      ]
+    },
+    {
+      "name": "Record rf",
+      "type": "enum",
+      "property": "record_rf",
+      "base": "record_rf",
+      "endpoint": null,
+      "description": "Record RF control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "record",
+        "stop"
+      ]
+    },
+    {
+      "name": "Clear rf",
+      "type": "enum",
+      "property": "clear_rf",
+      "base": "clear_rf",
+      "endpoint": null,
+      "description": "Clear RF control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "clear",
+        "stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

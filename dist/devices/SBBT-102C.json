@@ -1,0 +1,65 @@
+{
+  "model": "SBBT-102C",
+  "file": "SBBT-102C.md",
+  "vendor": "Shelly",
+  "description": "BLU Button Tough 1 ZB",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SBBT-102C.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "battery, identify, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single",
+        "double",
+        "triple",
+        "single_long",
+        "double_long",
+        "triple_long"
+      ]
+    }
+  ],
+  "warnings": []
+}

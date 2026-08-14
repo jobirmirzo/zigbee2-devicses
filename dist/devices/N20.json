@@ -1,0 +1,43 @@
+{
+  "model": "N20",
+  "file": "N20.md",
+  "vendor": "KAMI",
+  "description": "Contact sensor or motion sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/N20.png",
+  "added_at": "2021-03-30T20:29:35Z",
+  "exposes_summary": "contact, action",
+  "exposes": [
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates if the contact is closed (= true) or open (= false).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "motion"
+      ]
+    }
+  ],
+  "warnings": []
+}

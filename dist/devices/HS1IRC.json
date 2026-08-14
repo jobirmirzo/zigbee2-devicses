@@ -1,0 +1,28 @@
+{
+  "model": "HS1IRC",
+  "file": "HS1IRC.md",
+  "vendor": "Heiman",
+  "description": "Smart IR Control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS1IRC.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "battery",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

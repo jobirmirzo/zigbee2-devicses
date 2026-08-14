@@ -1,0 +1,74 @@
+{
+  "model": "TERNCY-PP01",
+  "file": "TERNCY-PP01.md",
+  "vendor": "TERNCY",
+  "description": "Awareness switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TERNCY-PP01.png",
+  "added_at": "2019-11-09T18:37:38Z",
+  "exposes_summary": "occupancy, temperature, illuminance, action",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single",
+        "double",
+        "triple",
+        "quadruple"
+      ]
+    }
+  ],
+  "warnings": []
+}

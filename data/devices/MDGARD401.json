@@ -1,0 +1,80 @@
+{
+  "model": "MDGARD401",
+  "file": "MDGARD401.md",
+  "vendor": "Müller Licht",
+  "description": "tint Flores Gen2 garden light",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MDGARD401.png",
+  "added_at": "2026-01-01T13:27:46",
+  "exposes_summary": "light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs)",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 153,
+          "value_max": 555,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup",
+          "base": "color_temp_startup",
+          "value_min": 153,
+          "value_max": 555,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_xy",
+          "base": "color_xy",
+          "readable": true
+        },
+        {
+          "property": "color_hs",
+          "base": "color_hs",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    }
+  ],
+  "warnings": []
+}

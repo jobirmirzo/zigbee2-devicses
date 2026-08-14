@@ -1,0 +1,154 @@
+{
+  "model": "ZBN-JT-63",
+  "file": "ZBN-JT-63.md",
+  "vendor": "Tuya",
+  "description": "Din rail switch with power monitoring",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZBN-JT-63.png",
+  "added_at": "2025-05-01T17:56:32",
+  "exposes_summary": "switch (state), power, current, voltage, energy, power_outage_memory, fault, meter_id",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Power outage memory",
+      "type": "enum",
+      "property": "power_outage_memory",
+      "base": "power_outage_memory",
+      "endpoint": null,
+      "description": "Recover state after power outage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off",
+        "restore"
+      ]
+    },
+    {
+      "name": "Fault",
+      "type": "enum",
+      "property": "fault",
+      "base": "fault",
+      "endpoint": null,
+      "description": "Fault status of the device (clear = nothing).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "clear",
+        "short_circuit_alarm",
+        "surge_alarm",
+        "overload_alarm",
+        "leakagecurr_alarm",
+        "temp_dif_fault",
+        "fire_alarm",
+        "high_power_alarm",
+        "self_test_alarm",
+        "ov_cr",
+        "unbalance_alarm",
+        "ov_vol",
+        "undervoltage_alarm",
+        "miss_phase_alarm",
+        "outage_alarm",
+        "magnetism_alarm",
+        "credit_alarm",
+        "no_balance_alarm"
+      ]
+    },
+    {
+      "name": "Meter id",
+      "type": "text",
+      "property": "meter_id",
+      "base": "meter_id",
+      "endpoint": null,
+      "description": "Meter ID (ID of device).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

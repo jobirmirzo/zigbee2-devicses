@@ -1,0 +1,106 @@
+{
+  "model": "RD24G01",
+  "file": "RD24G01.md",
+  "vendor": "Tuya",
+  "description": "24GHz human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/RD24G01.png",
+  "added_at": "2025-06-01T17:54:42",
+  "exposes_summary": "presence_state, target_distance_closest, near_detection, far_detection, static_sensitivity, motion_sensitivity",
+  "exposes": [
+    {
+      "name": "Presence state",
+      "type": "enum",
+      "property": "presence_state",
+      "base": "presence_state",
+      "endpoint": null,
+      "description": "Presence state: none, motion, or stationary.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "motion",
+        "stationary"
+      ]
+    },
+    {
+      "name": "Target distance closest",
+      "type": "numeric",
+      "property": "target_distance_closest",
+      "base": "target_distance_closest",
+      "endpoint": null,
+      "description": "Closest target distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Near detection",
+      "type": "numeric",
+      "property": "near_detection",
+      "base": "near_detection",
+      "endpoint": null,
+      "description": "Minimum detection range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 6,
+      "unit": "m"
+    },
+    {
+      "name": "Far detection",
+      "type": "numeric",
+      "property": "far_detection",
+      "base": "far_detection",
+      "endpoint": null,
+      "description": "Maximum detection range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 6,
+      "unit": "m"
+    },
+    {
+      "name": "Static sensitivity",
+      "type": "numeric",
+      "property": "static_sensitivity",
+      "base": "static_sensitivity",
+      "endpoint": null,
+      "description": "Static presence sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Motion sensitivity",
+      "type": "numeric",
+      "property": "motion_sensitivity",
+      "base": "motion_sensitivity",
+      "endpoint": null,
+      "description": "Motion sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    }
+  ],
+  "warnings": []
+}

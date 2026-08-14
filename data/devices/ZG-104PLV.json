@@ -1,0 +1,185 @@
+{
+  "model": "ZG-104PLV",
+  "file": "ZG-104PLV.md",
+  "vendor": "Excellux",
+  "description": "PIR motion sensor, vibration sensor, and light sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-104PLV.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "occupancy, vibration, illuminance_warning, battery, illuminance, vibration_count, sampling_interval, vibration_sensitivity, illuminance_v0, illuminance_v1, illuminance_calibration",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Presence state, true: motion detected, false: no motion.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Vibration",
+      "type": "binary",
+      "property": "vibration",
+      "base": "vibration",
+      "endpoint": null,
+      "description": "Vibration state, true: vibration detected, false: no vibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance warning",
+      "type": "enum",
+      "property": "illuminance_warning",
+      "base": "illuminance_warning",
+      "endpoint": null,
+      "description": "Illuminance warning level.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Vibration count",
+      "type": "numeric",
+      "property": "vibration_count",
+      "base": "vibration_count",
+      "endpoint": null,
+      "description": "Vibration count detected by the vibration sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 500,
+      "unit": "times"
+    },
+    {
+      "name": "Sampling interval",
+      "type": "numeric",
+      "property": "sampling_interval",
+      "base": "sampling_interval",
+      "endpoint": null,
+      "description": "Sampling illuminance interval.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 1200,
+      "unit": "s"
+    },
+    {
+      "name": "Vibration sensitivity",
+      "type": "numeric",
+      "property": "vibration_sensitivity",
+      "base": "vibration_sensitivity",
+      "endpoint": null,
+      "description": "Vibration sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 50
+    },
+    {
+      "name": "Illuminance v0",
+      "type": "numeric",
+      "property": "illuminance_v0",
+      "base": "illuminance_v0",
+      "endpoint": null,
+      "description": "Illuminance v0 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10000,
+      "unit": "lux"
+    },
+    {
+      "name": "Illuminance v1",
+      "type": "numeric",
+      "property": "illuminance_v1",
+      "base": "illuminance_v1",
+      "endpoint": null,
+      "description": "Illuminance v1 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10000,
+      "unit": "lux"
+    },
+    {
+      "name": "Illuminance calibration",
+      "type": "numeric",
+      "property": "illuminance_calibration",
+      "base": "illuminance_calibration",
+      "endpoint": null,
+      "description": "Illuminance calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -1000,
+      "value_max": 1000,
+      "unit": "lux"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,216 @@
+{
+  "model": "ZNQBKG38LM",
+  "file": "ZNQBKG38LM.md",
+  "vendor": "Aqara",
+  "description": "Smart wall switch Z1 (single rocker)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZNQBKG38LM.png",
+  "added_at": "2024-01-31T20:08:00",
+  "exposes_summary": "switch (state), device_temperature, power_outage_count, power_on_behavior, operation_mode, lock_relay, energy, voltage, current, power, led_disabled_night, click_mode, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages (since last pairing).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Power on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "previous",
+        "off",
+        "inverted"
+      ]
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode",
+      "base": "operation_mode",
+      "endpoint": null,
+      "description": "Decoupled mode for a button.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "decoupled",
+        "control_relay"
+      ]
+    },
+    {
+      "name": "Lock relay",
+      "type": "binary",
+      "property": "lock_relay",
+      "base": "lock_relay",
+      "endpoint": null,
+      "description": "Locks relay and prevents it from operating.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Led disabled night",
+      "type": "binary",
+      "property": "led_disabled_night",
+      "base": "led_disabled_night",
+      "endpoint": null,
+      "description": "Enables/disables LED indicator at night.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Click mode",
+      "type": "enum",
+      "property": "click_mode",
+      "base": "click_mode",
+      "endpoint": null,
+      "description": "Click mode for wireless button. fast: only supports single click but allows faster response time.multi: supports multiple types of clicks but is slower, because it awaits multiple clicks..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "fast",
+        "multi"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single"
+      ]
+    }
+  ],
+  "warnings": []
+}

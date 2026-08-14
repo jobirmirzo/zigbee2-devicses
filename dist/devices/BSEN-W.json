@@ -1,0 +1,134 @@
+{
+  "model": "BSEN-W",
+  "file": "BSEN-W.md",
+  "vendor": "Bosch",
+  "description": "Water alarm (formerly known as BWA-1)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BSEN-W.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "water_leak, tamper, water_leak_alarm_control, alarm_on_motion, test_mode, test_mode_timeout, battery, battery_low",
+  "exposes": [
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Mute water leak alarm",
+      "type": "binary",
+      "property": "water_leak_alarm_control",
+      "base": "water_leak_alarm_control",
+      "endpoint": null,
+      "description": "In case of an water leak, you can mute and unmute the audible alarm here.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "MUTED",
+      "value_off": "UNMUTED"
+    },
+    {
+      "name": "Alarm on motion",
+      "type": "binary",
+      "property": "alarm_on_motion",
+      "base": "alarm_on_motion",
+      "endpoint": null,
+      "description": "If your water alarm is moved, an acoustic signal sounds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Test mode",
+      "type": "binary",
+      "property": "test_mode",
+      "base": "test_mode",
+      "endpoint": null,
+      "description": "Activates the test mode. In this mode, the device acts like it would when detecting any water to verify the installation. Please keep in mind that it can take up to 10 seconds for the test mode to be activated..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Test mode timeout",
+      "type": "numeric",
+      "property": "test_mode_timeout",
+      "base": "test_mode_timeout",
+      "endpoint": null,
+      "description": "Determines how long the test mode should be activated. The default length is 3 seconds..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 255,
+      "unit": "seconds"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

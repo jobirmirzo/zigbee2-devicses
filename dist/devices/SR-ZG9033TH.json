@@ -1,0 +1,105 @@
+{
+  "model": "SR-ZG9033TH",
+  "file": "SR-ZG9033TH.md",
+  "vendor": "Sunricher",
+  "description": "Zigbee temperature and humidity sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SR-ZG9033TH.png",
+  "added_at": "2025-01-03T20:11:47",
+  "exposes_summary": "battery, temperature, humidity, temperature_sensor_compensation, temperature_display_unit, humidity_sensor_compensation",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_2",
+      "base": "humidity",
+      "endpoint": "2",
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature sensor compensation",
+      "type": "numeric",
+      "property": "temperature_sensor_compensation_1",
+      "base": "temperature_sensor_compensation",
+      "endpoint": "1",
+      "description": "Temperature sensor compensation (-5~+5°C).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -5,
+      "value_max": 5,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature display unit",
+      "type": "enum",
+      "property": "temperature_display_unit_1",
+      "base": "temperature_display_unit",
+      "endpoint": "1",
+      "description": "Temperature display unit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Humidity sensor compensation",
+      "type": "numeric",
+      "property": "humidity_sensor_compensation_2",
+      "base": "humidity_sensor_compensation",
+      "endpoint": "2",
+      "description": "Humidity sensor compensation (-5~+5%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -5,
+      "value_max": 5,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,435 @@
+{
+  "model": "TOWSMR1-40A-AC",
+  "file": "TOWSMR1-40A-AC.md",
+  "vendor": "Tongou",
+  "description": "Single-phase multifunction RCBO (DIN Module)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TOWSMR1-40A-AC.png",
+  "added_at": "2025-11-30T20:32:44",
+  "exposes_summary": "switch (state), temperature, current, power, voltage, energy, event, over_voltage_setting, over_voltage_threshold, under_voltage_setting, under_voltage_threshold, temperature_setting, temperature_threshold, over_power_setting, over_power_threshold, auto_reclosing, restore_default, overcurrent_recloser, leakage_recloser, overpower_recloser",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Event",
+      "type": "enum",
+      "property": "event",
+      "base": "event",
+      "endpoint": null,
+      "description": "Last event of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "normal",
+        "over_current_trip",
+        "over_power_trip",
+        "high_temp_trip",
+        "over_voltage_trip",
+        "under_voltage_trip",
+        "over_current_alarm",
+        "over_power_alarm",
+        "high_temp_alarm",
+        "over_voltage_alarm",
+        "under_voltage_alarm",
+        "remote_on",
+        "remote_off",
+        "manual_on",
+        "manual_off",
+        "leakage_trip",
+        "leakage_alarm",
+        "restore_default",
+        "automatic_closing",
+        "electricity_shortage",
+        "electricity_shortage_alarm",
+        "timing_switch_On",
+        "timing_switch_off"
+      ]
+    },
+    {
+      "name": "Over voltage setting",
+      "type": "enum",
+      "property": "over_voltage_setting",
+      "base": "over_voltage_setting",
+      "endpoint": null,
+      "description": "Over voltage setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Ignore",
+        "Alarm",
+        "Trip"
+      ]
+    },
+    {
+      "name": "Over voltage threshold",
+      "type": "numeric",
+      "property": "over_voltage_threshold",
+      "base": "over_voltage_threshold",
+      "endpoint": null,
+      "description": "Setup value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 240,
+      "value_max": 295,
+      "unit": "V"
+    },
+    {
+      "name": "Under voltage setting",
+      "type": "enum",
+      "property": "under_voltage_setting",
+      "base": "under_voltage_setting",
+      "endpoint": null,
+      "description": "Under voltage setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Ignore",
+        "Alarm",
+        "Trip"
+      ]
+    },
+    {
+      "name": "Under voltage threshold",
+      "type": "numeric",
+      "property": "under_voltage_threshold",
+      "base": "under_voltage_threshold",
+      "endpoint": null,
+      "description": "Setup value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 145,
+      "value_max": 220,
+      "unit": "V"
+    },
+    {
+      "name": "Temperature setting",
+      "type": "enum",
+      "property": "temperature_setting",
+      "base": "temperature_setting",
+      "endpoint": null,
+      "description": "Temperature setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Ignore",
+        "Alarm",
+        "Trip"
+      ]
+    },
+    {
+      "name": "Temperature threshold",
+      "type": "numeric",
+      "property": "temperature_threshold",
+      "base": "temperature_threshold",
+      "endpoint": null,
+      "description": "Setup value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -25,
+      "value_max": 100,
+      "unit": "°C"
+    },
+    {
+      "name": "Over power setting",
+      "type": "enum",
+      "property": "over_power_setting",
+      "base": "over_power_setting",
+      "endpoint": null,
+      "description": "Over power setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Ignore",
+        "Alarm",
+        "Trip"
+      ]
+    },
+    {
+      "name": "Over power threshold",
+      "type": "numeric",
+      "property": "over_power_threshold",
+      "base": "over_power_threshold",
+      "endpoint": null,
+      "description": "Setup value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 25000,
+      "unit": "W"
+    },
+    {
+      "name": "Auto reclosing",
+      "type": "binary",
+      "property": "auto_reclosing",
+      "base": "auto_reclosing",
+      "endpoint": null,
+      "description": "When the circuit breaker trips due to voltage protection, it will automatically close when the circuit voltage returns to normal.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Restore default",
+      "type": "binary",
+      "property": "restore_default",
+      "base": "restore_default",
+      "endpoint": null,
+      "description": "Turn ON to restore default settings.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Overcurrent Recloser",
+      "type": "binary",
+      "property": "overcurrent_recloser",
+      "base": "overcurrent_recloser",
+      "endpoint": null,
+      "description": "When the circuit breaker trips due to overcurrent protection, it will automatically close when the circuit voltage returns to normal.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Leakage Recloser",
+      "type": "binary",
+      "property": "leakage_recloser",
+      "base": "leakage_recloser",
+      "endpoint": null,
+      "description": "When the circuit breaker trips due to leakage protection, it will automatically close when the circuit voltage returns to normal.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Overpower Recloser",
+      "type": "binary",
+      "property": "overpower_recloser",
+      "base": "overpower_recloser",
+      "endpoint": null,
+      "description": "When the circuit breaker trips due to overpower protection, it will automatically close when the circuit voltage returns to normal.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Leakage current",
+      "type": "numeric",
+      "property": "leakage_current",
+      "base": "leakage_current",
+      "endpoint": null,
+      "description": "Measured current difference between live and neutral wires.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mA"
+    },
+    {
+      "name": "Over current setting",
+      "type": "enum",
+      "property": "over_current_setting",
+      "base": "over_current_setting",
+      "endpoint": null,
+      "description": "Over current setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Ignore",
+        "Alarm",
+        "Trip"
+      ]
+    },
+    {
+      "name": "Over current threshold",
+      "type": "numeric",
+      "property": "over_current_threshold",
+      "base": "over_current_threshold",
+      "endpoint": null,
+      "description": "Setup the value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 40,
+      "unit": "A"
+    },
+    {
+      "name": "Leakage setting",
+      "type": "enum",
+      "property": "leakage_setting",
+      "base": "leakage_setting",
+      "endpoint": null,
+      "description": "Leakage setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Ignore",
+        "Alarm",
+        "Trip"
+      ]
+    },
+    {
+      "name": "Leakage threshold",
+      "type": "numeric",
+      "property": "leakage_threshold",
+      "base": "leakage_threshold",
+      "endpoint": null,
+      "description": "Setup value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 30,
+      "value_max": 100,
+      "unit": "mA"
+    }
+  ],
+  "warnings": []
+}

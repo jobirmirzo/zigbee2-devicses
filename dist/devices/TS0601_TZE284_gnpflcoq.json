@@ -1,0 +1,116 @@
+{
+  "model": "TS0601_TZE284_gnpflcoq",
+  "file": "TS0601_TZE284_gnpflcoq.md",
+  "vendor": "Tuya",
+  "description": "4-in-1 mmWave presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_TZE284_gnpflcoq.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "presence, illuminance, temperature, humidity, battery, sensitivity, fading_time",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Sensitivity",
+      "type": "numeric",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Radar sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Fading time",
+      "type": "numeric",
+      "property": "fading_time",
+      "base": "fading_time",
+      "endpoint": null,
+      "description": "Delay before vacant.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

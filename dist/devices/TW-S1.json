@@ -1,0 +1,42 @@
+{
+  "model": "TW-S1",
+  "file": "TW-S1.md",
+  "vendor": "Konke",
+  "description": "Photoelectric smoke detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TW-S1.png",
+  "added_at": "2021-01-31T22:24:43Z",
+  "exposes_summary": "smoke, battery_low",
+  "exposes": [
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

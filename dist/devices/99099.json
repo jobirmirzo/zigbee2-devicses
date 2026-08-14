@@ -1,0 +1,88 @@
+{
+  "model": "99099",
+  "file": "99099.md",
+  "vendor": "EGLO",
+  "description": "3 groups remote controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/99099.png",
+  "added_at": "2023-06-27T19:46:17",
+  "exposes_summary": "action, action_group, action_level, action_color_temperature",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "red",
+        "red_long",
+        "refresh",
+        "refresh_long",
+        "refresh_colored",
+        "refresh_colored_long",
+        "blue",
+        "blue_long",
+        "green",
+        "green_long",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_move_to_level",
+        "color_temperature_step_up",
+        "color_temperature_step_down",
+        "color_temperature_move",
+        "recall_1",
+        "recall_1_long",
+        "recall_2",
+        "recall_2_long"
+      ]
+    },
+    {
+      "name": "Action group",
+      "type": "numeric",
+      "property": "action_group",
+      "base": "action_group",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action level",
+      "type": "numeric",
+      "property": "action_level",
+      "base": "action_level",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action color temperature",
+      "type": "numeric",
+      "property": "action_color_temperature",
+      "base": "action_color_temperature",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

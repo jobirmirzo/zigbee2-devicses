@@ -1,0 +1,199 @@
+{
+  "model": "3RSPE01044BZ",
+  "file": "3RSPE01044BZ.md",
+  "vendor": "Third Reality",
+  "description": "Zigbee / BLE smart plug with power",
+  "image": "https://www.zigbee2mqtt.io/images/devices/3RSPE01044BZ.png",
+  "added_at": "2023-08-01T15:13:29",
+  "exposes_summary": "switch (state), power_on_behavior, ac_frequency, power, power_factor, energy, current, voltage, led_brightness, reset_total_energy, countdown_to_turn_off, countdown_to_turn_on",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "previous",
+        "on"
+      ]
+    },
+    {
+      "name": "AC frequency",
+      "type": "numeric",
+      "property": "ac_frequency",
+      "base": "ac_frequency",
+      "endpoint": null,
+      "description": "Measured electrical AC frequency.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power factor",
+      "type": "numeric",
+      "property": "power_factor",
+      "base": "power_factor",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Led brightness",
+      "type": "numeric",
+      "property": "led_brightness",
+      "base": "led_brightness",
+      "endpoint": null,
+      "description": "Set the brightness of LED.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Reset total energy",
+      "type": "enum",
+      "property": "reset_total_energy",
+      "base": "reset_total_energy",
+      "endpoint": null,
+      "description": "Reset the sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Reset"
+      ]
+    },
+    {
+      "name": "Countdown to turn off",
+      "type": "numeric",
+      "property": "countdown_to_turn_off",
+      "base": "countdown_to_turn_off",
+      "endpoint": null,
+      "description": "(ON-OFF).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown to turn on",
+      "type": "numeric",
+      "property": "countdown_to_turn_on",
+      "base": "countdown_to_turn_on",
+      "endpoint": null,
+      "description": "(OFF-ON).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

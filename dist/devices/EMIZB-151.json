@@ -1,0 +1,222 @@
+{
+  "model": "EMIZB-151",
+  "file": "EMIZB-151.md",
+  "vendor": "Frient",
+  "description": "Electricity Meter Interface 2 P1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EMIZB-151.png",
+  "added_at": "2024-10-31T20:32:44",
+  "exposes_summary": "power, voltage, current, energy, produced_energy, energy_tier_1, energy_tier_2, produced_energy_tier_1, produced_energy_tier_2, power_phase_b, power_phase_c, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c",
+  "exposes": [
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Produced energy",
+      "type": "numeric",
+      "property": "produced_energy",
+      "base": "produced_energy",
+      "endpoint": null,
+      "description": "Sum of produced energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy tier 1",
+      "type": "numeric",
+      "property": "energy_tier_1",
+      "base": "energy_tier_1",
+      "endpoint": null,
+      "description": "Energy consumed in tariff 1 (peak/high) - OBIS 1.8.1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy tier 2",
+      "type": "numeric",
+      "property": "energy_tier_2",
+      "base": "energy_tier_2",
+      "endpoint": null,
+      "description": "Energy consumed in tariff 2 (off-peak/low) - OBIS 1.8.2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Produced energy tier 1",
+      "type": "numeric",
+      "property": "produced_energy_tier_1",
+      "base": "produced_energy_tier_1",
+      "endpoint": null,
+      "description": "Energy produced in tariff 1 (peak/high) - OBIS 2.8.1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Produced energy tier 2",
+      "type": "numeric",
+      "property": "produced_energy_tier_2",
+      "base": "produced_energy_tier_2",
+      "endpoint": null,
+      "description": "Energy produced in tariff 2 (off-peak/low) - OBIS 2.8.2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Power phase b",
+      "type": "numeric",
+      "property": "power_phase_b",
+      "base": "power_phase_b",
+      "endpoint": null,
+      "description": "Instantaneous measured power on phase B.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power phase c",
+      "type": "numeric",
+      "property": "power_phase_c",
+      "base": "power_phase_c",
+      "endpoint": null,
+      "description": "Instantaneous measured power on phase C.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage phase B",
+      "type": "numeric",
+      "property": "voltage_phase_b",
+      "base": "voltage_phase_b",
+      "endpoint": null,
+      "description": "Measured electrical potential value on phase B.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage phase C",
+      "type": "numeric",
+      "property": "voltage_phase_c",
+      "base": "voltage_phase_c",
+      "endpoint": null,
+      "description": "Measured electrical potential value on phase C.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current phase B",
+      "type": "numeric",
+      "property": "current_phase_b",
+      "base": "current_phase_b",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current on phase B.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current phase C",
+      "type": "numeric",
+      "property": "current_phase_c",
+      "base": "current_phase_c",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current on phase C.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    }
+  ],
+  "warnings": []
+}

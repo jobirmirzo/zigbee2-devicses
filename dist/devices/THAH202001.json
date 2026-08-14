@@ -1,0 +1,247 @@
+{
+  "model": "THAH202001",
+  "file": "THAH202001.md",
+  "vendor": "THALEOS",
+  "description": "Thermostatic radiator valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/THAH202001.png",
+  "added_at": "2026-06-09T18:58:47",
+  "exposes_summary": "battery, battery_low, climate (current_heating_setpoint, local_temperature, preset, system_mode, running_state, local_temperature_calibration), window_detection, window_open, frost_protection, scale_protection, eco_temperature, away_temperature, holiday_temperature, operating_time, scale_protection_remaining_time, error",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "manual",
+            "eco",
+            "away",
+            "holiday"
+          ],
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": false
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Window detection",
+      "type": "binary",
+      "property": "window_detection",
+      "base": "window_detection",
+      "endpoint": null,
+      "description": "Enable open window detection.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Window open",
+      "type": "binary",
+      "property": "window_open",
+      "base": "window_open",
+      "endpoint": null,
+      "description": "Open window detected (heating paused).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "OPEN",
+      "value_off": "CLOSE"
+    },
+    {
+      "name": "Frost protection",
+      "type": "binary",
+      "property": "frost_protection",
+      "base": "frost_protection",
+      "endpoint": null,
+      "description": "Anti-freeze protection.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Scale protection",
+      "type": "binary",
+      "property": "scale_protection",
+      "base": "scale_protection",
+      "endpoint": null,
+      "description": "Anti-scale protection: periodically opens the valve fully to prevent it seizing up.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Eco temperature",
+      "type": "numeric",
+      "property": "eco_temperature",
+      "base": "eco_temperature",
+      "endpoint": null,
+      "description": "Eco temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Away temperature",
+      "type": "numeric",
+      "property": "away_temperature",
+      "base": "away_temperature",
+      "endpoint": null,
+      "description": "Temperature used in away preset.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Holiday temperature",
+      "type": "numeric",
+      "property": "holiday_temperature",
+      "base": "holiday_temperature",
+      "endpoint": null,
+      "description": "Holiday temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Operating time",
+      "type": "numeric",
+      "property": "operating_time",
+      "base": "operating_time",
+      "endpoint": null,
+      "description": "Total operating time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "h"
+    },
+    {
+      "name": "Scale protection remaining time",
+      "type": "numeric",
+      "property": "scale_protection_remaining_time",
+      "base": "scale_protection_remaining_time",
+      "endpoint": null,
+      "description": "Time remaining before the next anti-scale cycle.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "h"
+    },
+    {
+      "name": "Error",
+      "type": "numeric",
+      "property": "error",
+      "base": "error",
+      "endpoint": null,
+      "description": "Device error code.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

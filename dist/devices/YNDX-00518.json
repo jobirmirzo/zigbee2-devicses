@@ -1,0 +1,199 @@
+{
+  "model": "YNDX-00518",
+  "file": "YNDX-00518.md",
+  "vendor": "Yandex",
+  "description": "Thermostatic radiator valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/YNDX-00518.png",
+  "added_at": "2025-11-30T20:32:44",
+  "exposes_summary": "switch (state), climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint), display_flip, child_lock, frost_protection, window_detection, scale_protection, auto_calibration, calibrated, battery, voltage",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Display flip",
+      "type": "binary",
+      "property": "display_flip",
+      "base": "display_flip",
+      "endpoint": null,
+      "description": "Flip display orientation.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Frost protection",
+      "type": "binary",
+      "property": "frost_protection",
+      "base": "frost_protection",
+      "endpoint": null,
+      "description": "Enables/disables antifreeze function.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Window detection",
+      "type": "binary",
+      "property": "window_detection",
+      "base": "window_detection",
+      "endpoint": null,
+      "description": "Enables/disables window detection on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Scale protection",
+      "type": "binary",
+      "property": "scale_protection",
+      "base": "scale_protection",
+      "endpoint": null,
+      "description": "Enables/disables anti-scale protection.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Auto calibration",
+      "type": "binary",
+      "property": "auto_calibration",
+      "base": "auto_calibration",
+      "endpoint": null,
+      "description": "Enables/disables auto calibration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Calibrated",
+      "type": "binary",
+      "property": "calibrated",
+      "base": "calibrated",
+      "endpoint": null,
+      "description": "OFF if calibration needs to be performed.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

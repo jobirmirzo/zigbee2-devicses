@@ -1,0 +1,61 @@
+{
+  "model": "ZM-RM02",
+  "file": "ZM-RM02.md",
+  "vendor": "Zemismart",
+  "description": "Smart 6 key scene switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZM-RM02.png",
+  "added_at": "2024-09-01T12:36:27",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "button_1_hold",
+        "button_1_single",
+        "button_1_double",
+        "button_2_hold",
+        "button_2_single",
+        "button_2_double",
+        "button_3_hold",
+        "button_3_single",
+        "button_3_double",
+        "button_4_hold",
+        "button_4_single",
+        "button_4_double",
+        "button_5_hold",
+        "button_5_single",
+        "button_5_double",
+        "button_6_hold",
+        "button_6_single",
+        "button_6_double"
+      ]
+    }
+  ],
+  "warnings": []
+}

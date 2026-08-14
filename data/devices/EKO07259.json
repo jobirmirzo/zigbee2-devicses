@@ -1,0 +1,375 @@
+{
+  "model": "EKO07259",
+  "file": "EKO07259.md",
+  "vendor": "Schneider Electric",
+  "description": "Smart thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EKO07259.png",
+  "added_at": "2023-04-27T17:39:26",
+  "exposes_summary": "climate (local_temperature, occupied_heating_setpoint, system_mode, running_state, pi_heating_demand, control_sequence_of_operation), max_heat_setpoint_limit, min_heat_setpoint_limit, power, energy, fixed_load_demand, display_brightness_active, display_brightness_inactive, display_active_timeout, local_temperature_source_select, control_type, control_status, thermostat_application, heating_emitter, heating_output_mode, temperature_sensor_correction, temperature_sensor_type, temperature_display_mode, child_lock",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 4,
+          "value_max": 40,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        },
+        {
+          "property": "pi_heating_demand",
+          "base": "pi_heating_demand",
+          "readable": false
+        },
+        {
+          "property": "control_sequence_of_operation",
+          "base": "control_sequence_of_operation",
+          "value_min": 4,
+          "value_max": 40,
+          "values": [
+            "off",
+            "heat"
+          ],
+          "unit": "°C",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": null,
+      "description": "Maximum Heating set point limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 40,
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": null,
+      "description": "Minimum Heating set point limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 40,
+      "unit": "°C"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Fixed load demand",
+      "type": "numeric",
+      "property": "fixed_load_demand",
+      "base": "fixed_load_demand",
+      "endpoint": null,
+      "description": "Load in W when heating is on (between 0-3600 W). The thermostat reports this value as power (instantaneousDemand) when heating is on. The load has to be defined if the device should report running state ('heat' or 'idle')..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 3600,
+      "unit": "W"
+    },
+    {
+      "name": "Display brightness active",
+      "type": "numeric",
+      "property": "display_brightness_active",
+      "base": "display_brightness_active",
+      "endpoint": null,
+      "description": "Sets brightness of the temperature display during active state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Display brightness inactive",
+      "type": "numeric",
+      "property": "display_brightness_inactive",
+      "base": "display_brightness_inactive",
+      "endpoint": null,
+      "description": "Sets brightness of the temperature display during inactive state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Display active timeout",
+      "type": "numeric",
+      "property": "display_active_timeout",
+      "base": "display_active_timeout",
+      "endpoint": null,
+      "description": "Sets timeout of the temperature display active state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 600,
+      "unit": "seconds"
+    },
+    {
+      "name": "Local temperature source select",
+      "type": "enum",
+      "property": "local_temperature_source_select",
+      "base": "local_temperature_source_select",
+      "endpoint": null,
+      "description": "On devices with more than one temperature input, this selects which should be used for LocalTemperature..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Ambient",
+        "External"
+      ]
+    },
+    {
+      "name": "Control type",
+      "type": "enum",
+      "property": "control_type",
+      "base": "control_type",
+      "endpoint": null,
+      "description": "'On/Off', 'PI' and 'None' supported. This specifies the type of control algorithm to be used to regulate temperature..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "On/Off",
+        "PI",
+        "None"
+      ]
+    },
+    {
+      "name": "Control status",
+      "type": "enum",
+      "property": "control_status",
+      "base": "control_status",
+      "endpoint": null,
+      "description": "This indicates the status of the thermostat and allows reporting of abnormal and fault conditions..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "Normal Operation",
+        "No Temperature",
+        "Remote Demand Override",
+        "Window Open",
+        "Local Force On",
+        "Maintenance",
+        "Output Temporal Limit",
+        "Sensor Fault"
+      ]
+    },
+    {
+      "name": "Thermostat application",
+      "type": "enum",
+      "property": "thermostat_application",
+      "base": "thermostat_application",
+      "endpoint": null,
+      "description": "This is used to specify what the Thermostat is regulating. 'Occupied Space' - heating where the room temperature is used as the control value, 'Floor' - Floor warming applications where the temperature of the floor itself is regulated..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Occupied Space",
+        "Floor",
+        "Not known"
+      ]
+    },
+    {
+      "name": "Heating emitter",
+      "type": "enum",
+      "property": "heating_emitter",
+      "base": "heating_emitter",
+      "endpoint": null,
+      "description": "This is used to specify the heat emitter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "None",
+        "Radiator",
+        "Fan Assisted Radiator",
+        "Radiant Panel",
+        "Floor",
+        "Not specified"
+      ]
+    },
+    {
+      "name": "Heating output mode",
+      "type": "enum",
+      "property": "heating_output_mode",
+      "base": "heating_output_mode",
+      "endpoint": null,
+      "description": "On devices with alternate heating output types, this selects which should be used to control the heating unit. This attribute is (mistakenly) also called pilot_mode on some devices..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disabled",
+        "Relay"
+      ]
+    },
+    {
+      "name": "Temperature sensor correction",
+      "type": "numeric",
+      "property": "temperature_sensor_correction_floor",
+      "base": "temperature_sensor_correction",
+      "endpoint": "floor",
+      "description": "This is a user correction, possibly negative, to be added to the temperature measured by the sensor..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -9,
+      "value_max": 9,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature sensor type",
+      "type": "enum",
+      "property": "temperature_sensor_type_floor",
+      "base": "temperature_sensor_type",
+      "endpoint": "floor",
+      "description": "This is used to specify the type of temperature sensor connected to this input.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "2kΩ sensor from HRT/Alre",
+        "10kΩ sensor from B+J",
+        "12kΩ sensor from OJ",
+        "15kΩ sensor from DEVI",
+        "33kΩ sensor from EBERLE",
+        "47kΩ sensor from CTM",
+        "No sensor"
+      ]
+    },
+    {
+      "name": "Temperature display mode",
+      "type": "enum",
+      "property": "temperature_display_mode",
+      "base": "temperature_display_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "celsius"
+      ]
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    }
+  ],
+  "warnings": []
+}

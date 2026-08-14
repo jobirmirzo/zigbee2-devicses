@@ -1,0 +1,147 @@
+{
+  "model": "ZB08",
+  "file": "ZB08.md",
+  "vendor": "Girier",
+  "description": "3 Channel Switch Module-L - (No Neutral Wire)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZB08.png",
+  "added_at": "2024-08-01T18:23:41",
+  "exposes_summary": "switch (state), countdown, power_on_behavior, switch_type",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "left",
+      "features": [
+        {
+          "property": "state_left",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "center",
+      "features": [
+        {
+          "property": "state_center",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "right",
+      "features": [
+        {
+          "property": "state_right",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_left",
+      "base": "countdown",
+      "endpoint": "left",
+      "description": "Toggle the device after a set duration (one time action).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_center",
+      "base": "countdown",
+      "endpoint": "center",
+      "description": "Toggle the device after a set duration (one time action).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_right",
+      "base": "countdown",
+      "endpoint": "right",
+      "description": "Toggle the device after a set duration (one time action).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "previous",
+        "on"
+      ]
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type",
+      "base": "switch_type",
+      "endpoint": null,
+      "description": "Type of the switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "toggle",
+        "state",
+        "momentary"
+      ]
+    }
+  ],
+  "warnings": []
+}

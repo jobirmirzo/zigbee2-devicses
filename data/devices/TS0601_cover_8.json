@@ -1,0 +1,143 @@
+{
+  "model": "TS0601_cover_8",
+  "file": "TS0601_cover_8.md",
+  "vendor": "Tuya",
+  "description": "Cover motor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_cover_8.png",
+  "added_at": "2023-06-01T08:16:21",
+  "exposes_summary": "cover (state, position), reverse_direction, motor_fault, upper_stroke_limit, middle_stroke_limit, lower_stroke_limit, motor_working_mode",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Reverse direction",
+      "type": "enum",
+      "property": "reverse_direction",
+      "base": "reverse_direction",
+      "endpoint": null,
+      "description": "Reverse the motor direction.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "forward",
+        "back"
+      ]
+    },
+    {
+      "name": "Motor fault",
+      "type": "binary",
+      "property": "motor_fault",
+      "base": "motor_fault",
+      "endpoint": null,
+      "description": "Motor Fault.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Upper stroke limit",
+      "type": "enum",
+      "property": "upper_stroke_limit",
+      "base": "upper_stroke_limit",
+      "endpoint": null,
+      "description": "Set or Reset the upper stroke limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SET",
+        "RESET"
+      ]
+    },
+    {
+      "name": "Middle stroke limit",
+      "type": "enum",
+      "property": "middle_stroke_limit",
+      "base": "middle_stroke_limit",
+      "endpoint": null,
+      "description": "Set or Reset the middle stroke limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SET",
+        "RESET"
+      ]
+    },
+    {
+      "name": "Lower stroke limit",
+      "type": "enum",
+      "property": "lower_stroke_limit",
+      "base": "lower_stroke_limit",
+      "endpoint": null,
+      "description": "Set or Reset the lower stroke limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SET",
+        "RESET"
+      ]
+    },
+    {
+      "name": "Motor working mode",
+      "type": "enum",
+      "property": "motor_working_mode",
+      "base": "motor_working_mode",
+      "endpoint": null,
+      "description": "Motor operating mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "continuous",
+        "intermittently"
+      ]
+    }
+  ],
+  "warnings": []
+}

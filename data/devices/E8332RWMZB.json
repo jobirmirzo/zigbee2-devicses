@@ -1,0 +1,67 @@
+{
+  "model": "E8332RWMZB",
+  "file": "E8332RWMZB.md",
+  "vendor": "Schneider Electric",
+  "description": "Wiser AvatarOn 2K Freelocate",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E8332RWMZB.png",
+  "added_at": "2025-09-30T19:37:28",
+  "exposes_summary": "indicator_luminance_level, indicator_color, action",
+  "exposes": [
+    {
+      "name": "Indicator luminance level",
+      "type": "enum",
+      "property": "indicator_luminance_level",
+      "base": "indicator_luminance_level",
+      "endpoint": null,
+      "description": "Set indicator luminance Level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "100"
+      ]
+    },
+    {
+      "name": "Indicator color",
+      "type": "enum",
+      "property": "indicator_color",
+      "base": "indicator_color",
+      "endpoint": null,
+      "description": "Set indicator color.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "key1",
+        "key2"
+      ]
+    }
+  ],
+  "warnings": []
+}

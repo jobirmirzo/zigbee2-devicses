@@ -1,0 +1,54 @@
+{
+  "model": "41E10PBSWMZ-VW",
+  "file": "41E10PBSWMZ-VW.md",
+  "vendor": "Schneider Electric",
+  "description": "Wiser 40/300-Series module switch 10AX with ControlLink",
+  "image": "https://www.zigbee2mqtt.io/images/devices/41E10PBSWMZ-VW.png",
+  "added_at": "2022-08-01T15:06:58",
+  "exposes_summary": "switch (state), indicator_mode",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode_smart",
+      "base": "indicator_mode",
+      "endpoint": "smart",
+      "description": "Set Indicator Mode for smart switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "reverse_with_load",
+        "consistent_with_load",
+        "always_off",
+        "always_on",
+        "flash_on_click"
+      ]
+    }
+  ],
+  "warnings": []
+}

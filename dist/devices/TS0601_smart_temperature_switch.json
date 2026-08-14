@@ -1,0 +1,234 @@
+{
+  "model": "TS0601_smart_temperature_switch",
+  "file": "TS0601_smart_temperature_switch.md",
+  "vendor": "Tuya",
+  "description": "Smart temperature switch with manual and automatic modes: heating & cooling",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_smart_temperature_switch.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "temperature_c, temperature_f, switch (state), autowork, work_mode, temperature_unit, temperature_c_setpoint, temperature_f_setpoint, temperature_range, temperature_calibration, cooling_delay_switch, cooling_delay, countdown, schedules",
+  "exposes": [
+    {
+      "name": "Temperature c",
+      "type": "numeric",
+      "property": "temperature_c",
+      "base": "temperature_c",
+      "endpoint": null,
+      "description": "Measured temperature in ℃. Device reports it only when it set ℃ unit..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "℃"
+    },
+    {
+      "name": "Temperature f",
+      "type": "numeric",
+      "property": "temperature_f",
+      "base": "temperature_f",
+      "endpoint": null,
+      "description": "Measured temperature in ℉.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "℉"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Autowork",
+      "type": "binary",
+      "property": "autowork",
+      "base": "autowork",
+      "endpoint": null,
+      "description": "Turn on automatic mode to control constant temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Work mode",
+      "type": "enum",
+      "property": "work_mode",
+      "base": "work_mode",
+      "endpoint": null,
+      "description": "Heating: switch is turned ON until temperature will increase to setpoint (then will turn OFF). When temperature will go down below set temperature range, switch will turn ON again. Cooling: switch is turned ON until temperature will decrease to setpoint (then will turn OFF). When temperature will go up above set temperature range, switch will turn ON again. .",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "heating",
+        "cooling"
+      ]
+    },
+    {
+      "name": "Temperature unit",
+      "type": "enum",
+      "property": "temperature_unit",
+      "base": "temperature_unit",
+      "endpoint": null,
+      "description": "Temperature unit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Temperature c setpoint",
+      "type": "numeric",
+      "property": "temperature_c_setpoint",
+      "base": "temperature_c_setpoint",
+      "endpoint": null,
+      "description": "Temperature ℃ set point.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -20,
+      "value_max": 102,
+      "unit": "℃"
+    },
+    {
+      "name": "Temperature f setpoint",
+      "type": "numeric",
+      "property": "temperature_f_setpoint",
+      "base": "temperature_f_setpoint",
+      "endpoint": null,
+      "description": "Temperature ℉ set point.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -4,
+      "value_max": 221,
+      "unit": "℉"
+    },
+    {
+      "name": "Temperature range",
+      "type": "numeric",
+      "property": "temperature_range",
+      "base": "temperature_range",
+      "endpoint": null,
+      "description": "The delta between temperature setpoint and measured temperature to trigger heating or cooling.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 9
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Temperature calibration always in ℉.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -9,
+      "value_max": 9,
+      "unit": "℉"
+    },
+    {
+      "name": "Cooling delay switch",
+      "type": "binary",
+      "property": "cooling_delay_switch",
+      "base": "cooling_delay_switch",
+      "endpoint": null,
+      "description": "Turn on cooling mode delay.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Cooling delay",
+      "type": "numeric",
+      "property": "cooling_delay",
+      "base": "cooling_delay",
+      "endpoint": null,
+      "description": "Delay to turn on - only for cooling mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "m"
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown",
+      "base": "countdown",
+      "endpoint": null,
+      "description": "Countdown to turn device on/off after a certain time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400,
+      "unit": "s"
+    },
+    {
+      "name": "Schedules",
+      "type": "list",
+      "property": "schedules",
+      "base": "schedules",
+      "endpoint": null,
+      "description": "Schedules for automatic mode work at certain week day and time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    }
+  ],
+  "warnings": []
+}

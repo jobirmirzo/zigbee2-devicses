@@ -1,0 +1,136 @@
+{
+  "model": "rtsc11r",
+  "file": "rtsc11r.md",
+  "vendor": "Tuya",
+  "description": "5.8G human presence sensor with relay",
+  "image": "https://www.zigbee2mqtt.io/images/devices/rtsc11r.png",
+  "added_at": "2023-09-28T10:54:36",
+  "exposes_summary": "presence, illuminance, detection_delay, detection_distance, sensitivity, keep_time, minimum_range, maximum_range",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Detection delay",
+      "type": "numeric",
+      "property": "detection_delay",
+      "base": "detection_delay",
+      "endpoint": null,
+      "description": "Detection delay.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "s"
+    },
+    {
+      "name": "Detection distance",
+      "type": "numeric",
+      "property": "detection_distance",
+      "base": "detection_distance",
+      "endpoint": null,
+      "description": "Distance of detected person.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "cm"
+    },
+    {
+      "name": "Sensitivity",
+      "type": "numeric",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Keep time",
+      "type": "numeric",
+      "property": "keep_time",
+      "base": "keep_time",
+      "endpoint": null,
+      "description": "Detection keep time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Minimum range",
+      "type": "numeric",
+      "property": "minimum_range",
+      "base": "minimum_range",
+      "endpoint": null,
+      "description": "Minimum detection range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "m"
+    },
+    {
+      "name": "Maximum range",
+      "type": "numeric",
+      "property": "maximum_range",
+      "base": "maximum_range",
+      "endpoint": null,
+      "description": "Maximum detection range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 50,
+      "value_max": 1000,
+      "unit": "m"
+    }
+  ],
+  "warnings": []
+}

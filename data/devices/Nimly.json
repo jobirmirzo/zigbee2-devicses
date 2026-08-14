@@ -1,0 +1,276 @@
+{
+  "model": "Nimly",
+  "file": "Nimly.md",
+  "vendor": "Onesti Products AS",
+  "description": "Zigbee module for Nimly Doorlock series",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Nimly.png",
+  "added_at": "2024-03-31T18:43:56",
+  "exposes_summary": "lock (state, lock_state), battery, sound_volume, voltage, last_unlock_source, last_unlock_user, last_lock_source, last_lock_user, last_used_pin_code, auto_relock, auto_relock_time, max_pin_users, min_pin_length, max_pin_length, pin_code",
+  "exposes": [
+    {
+      "name": "Lock",
+      "type": "lock",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "LOCK",
+            "UNLOCK"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Sound volume",
+      "type": "enum",
+      "property": "sound_volume",
+      "base": "sound_volume",
+      "endpoint": null,
+      "description": "Sound volume of the lock.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "silent_mode",
+        "low_volume",
+        "high_volume"
+      ]
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Last unlock source",
+      "type": "enum",
+      "property": "last_unlock_source",
+      "base": "last_unlock_source",
+      "endpoint": null,
+      "description": "Last unlock source.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "zigbee",
+        "keypad",
+        "fingerprintsensor",
+        "rfid",
+        "self",
+        "unknown"
+      ]
+    },
+    {
+      "name": "Last unlock user",
+      "type": "text",
+      "property": "last_unlock_user",
+      "base": "last_unlock_user",
+      "endpoint": null,
+      "description": "Last unlock user (slot number).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Last lock source",
+      "type": "enum",
+      "property": "last_lock_source",
+      "base": "last_lock_source",
+      "endpoint": null,
+      "description": "Last lock source.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "zigbee",
+        "keypad",
+        "fingerprintsensor",
+        "rfid",
+        "self",
+        "unknown"
+      ]
+    },
+    {
+      "name": "Last lock user",
+      "type": "text",
+      "property": "last_lock_user",
+      "base": "last_lock_user",
+      "endpoint": null,
+      "description": "Last lock user (slot number).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Last used pin code",
+      "type": "text",
+      "property": "last_used_pin_code",
+      "base": "last_used_pin_code",
+      "endpoint": null,
+      "description": "Last used pin code (actual digits).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Auto relock",
+      "type": "binary",
+      "property": "auto_relock",
+      "base": "auto_relock",
+      "endpoint": null,
+      "description": "Auto relock after 7 seconds..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Auto relock time",
+      "type": "numeric",
+      "property": "auto_relock_time",
+      "base": "auto_relock_time",
+      "endpoint": null,
+      "description": "Auto relock delay in seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Max pin users",
+      "type": "numeric",
+      "property": "max_pin_users",
+      "base": "max_pin_users",
+      "endpoint": null,
+      "description": "Maximum number of PIN users supported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Min pin length",
+      "type": "numeric",
+      "property": "min_pin_length",
+      "base": "min_pin_length",
+      "endpoint": null,
+      "description": "Minimum PIN code length.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Max pin length",
+      "type": "numeric",
+      "property": "max_pin_length",
+      "base": "max_pin_length",
+      "endpoint": null,
+      "description": "Maximum PIN code length.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Pin code",
+      "type": "composite",
+      "property": "pin_code",
+      "base": "pin_code",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "user",
+          "type": "numeric",
+          "description": "User ID to set or clear the pincode for"
+        },
+        {
+          "property": "user_type",
+          "type": "enum",
+          "description": "Type of user, unrestricted: owner (default), (year|week)_day_schedule: user has ability to open lock based on specific time period, master: user has ability to both program and operate the door lock, non_access: user is recognized by the lock but does not have the ability to open the lock",
+          "values": [
+            "unrestricted",
+            "year_day_schedule",
+            "week_day_schedule",
+            "master",
+            "non_access"
+          ]
+        },
+        {
+          "property": "user_enabled",
+          "type": "binary",
+          "description": "Whether the user is enabled/disabled",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "pin_code",
+          "type": "numeric",
+          "description": "Pincode to set, set pincode to null to clear"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

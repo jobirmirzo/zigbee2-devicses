@@ -1,0 +1,319 @@
+{
+  "model": "ZHT-PT01-M-MS",
+  "file": "ZHT-PT01-M-MS.md",
+  "vendor": "Moes",
+  "description": "Smart thermostat for pilot wire heating radiator",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZHT-PT01-M-MS.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "climate (current_heating_setpoint, local_temperature, preset, system_mode, local_temperature_calibration), mode, window_open, fault, switch (state), child_lock, temp_unit_convert, lower_temp, upper_temp, electricity_statistics, boost_duration, elec_statistics_day, elec_statistics_month, elec_statistics_year, window_keep_time, fault_alarm, running_mode",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "off",
+            "comfort",
+            "comfort_1",
+            "comfort_2",
+            "eco",
+            "antifrost",
+            "program",
+            "thermostat"
+          ],
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Working mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "standby",
+        "comfort",
+        "comfort_1",
+        "comfort_2",
+        "eco",
+        "antifrost",
+        "program",
+        "thermostat"
+      ]
+    },
+    {
+      "name": "Window open",
+      "type": "binary",
+      "property": "window_open",
+      "base": "window_open",
+      "endpoint": null,
+      "description": "Indicates if window is open.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Fault",
+      "type": "binary",
+      "property": "fault",
+      "base": "fault",
+      "endpoint": null,
+      "description": "Fault status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "DETECTED",
+      "value_off": "NOT_DETECTED"
+    },
+    {
+      "name": "Window detection",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "window_detection",
+          "base": "window_detection",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Temp unit convert",
+      "type": "enum",
+      "property": "temp_unit_convert",
+      "base": "temp_unit_convert",
+      "endpoint": null,
+      "description": "Temperature unit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "c",
+        "f"
+      ]
+    },
+    {
+      "name": "Lower temp",
+      "type": "numeric",
+      "property": "lower_temp",
+      "base": "lower_temp",
+      "endpoint": null,
+      "description": "Set min temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Upper temp",
+      "type": "numeric",
+      "property": "upper_temp",
+      "base": "upper_temp",
+      "endpoint": null,
+      "description": "Set max temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Electricity statistics",
+      "type": "numeric",
+      "property": "electricity_statistics",
+      "base": "electricity_statistics",
+      "endpoint": null,
+      "description": "Electricity usage statistics.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Boost duration",
+      "type": "numeric",
+      "property": "boost_duration",
+      "base": "boost_duration",
+      "endpoint": null,
+      "description": "Boost mode duration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 120,
+      "unit": "min"
+    },
+    {
+      "name": "Elec statistics day",
+      "type": "numeric",
+      "property": "elec_statistics_day",
+      "base": "elec_statistics_day",
+      "endpoint": null,
+      "description": "Daily energy usage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Elec statistics month",
+      "type": "numeric",
+      "property": "elec_statistics_month",
+      "base": "elec_statistics_month",
+      "endpoint": null,
+      "description": "Monthly energy usage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Elec statistics year",
+      "type": "numeric",
+      "property": "elec_statistics_year",
+      "base": "elec_statistics_year",
+      "endpoint": null,
+      "description": "Annual energy usage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Window keep time",
+      "type": "numeric",
+      "property": "window_keep_time",
+      "base": "window_keep_time",
+      "endpoint": null,
+      "description": "Time window should be kept open.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 120,
+      "unit": "min"
+    },
+    {
+      "name": "Fault alarm",
+      "type": "enum",
+      "property": "fault_alarm",
+      "base": "fault_alarm",
+      "endpoint": null,
+      "description": "Fault alarm (e1, e2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "e1",
+        "e2"
+      ]
+    },
+    {
+      "name": "Running mode",
+      "type": "enum",
+      "property": "running_mode",
+      "base": "running_mode",
+      "endpoint": null,
+      "description": "Current running mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "standby",
+        "comfort",
+        "comfort_1",
+        "comfort_2",
+        "eco",
+        "antifrost"
+      ]
+    }
+  ],
+  "warnings": []
+}

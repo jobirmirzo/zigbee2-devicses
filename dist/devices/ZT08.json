@@ -1,0 +1,89 @@
+{
+  "model": "ZT08",
+  "file": "ZT08.md",
+  "vendor": "TuYa",
+  "description": "Weather station with clock, internal/external temperature and humidity",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZT08.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "temperature, humidity, external_temperature, battery_state, time_format",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "External temperature",
+      "type": "numeric",
+      "property": "external_temperature",
+      "base": "external_temperature",
+      "endpoint": null,
+      "description": "External probe temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "State of the battery.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Time format",
+      "type": "enum",
+      "property": "time_format",
+      "base": "time_format",
+      "endpoint": null,
+      "description": "Clock time format on LCD.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "12h",
+        "24h"
+      ]
+    }
+  ],
+  "warnings": []
+}

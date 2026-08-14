@@ -1,0 +1,445 @@
+{
+  "model": "SR-ZG9032A-MW",
+  "file": "SR-ZG9032A-MW.md",
+  "vendor": "Sunricher",
+  "description": "Zigbee compatible fixture with integrated occupancy sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SR-ZG9032A-MW.png",
+  "added_at": "2025-07-01T17:54:38",
+  "exposes_summary": "identify, light (state, brightness), effect, power_on_behavior, occupancy, illuminance, network_join_search_count, light_pwm_frequency, dimming_brightness_curve, start_up_on_off, motion_sensor_lux_threshold, motion_sensor_operation_mode, motion_sensor_sensitivity, motion_sensor_microwave_detection, touchlink_onoff_broadcast, brightness_module_enable, light_on_time, pwm_brightness_value, pwm_output_percentage, light_status_after_first_delay, second_delay_time, light_status_after_second_delay, linearity_error_ratio_lux, fixed_deviation_lux, action",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "1",
+      "features": [
+        {
+          "property": "state_1",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_1",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect_1",
+      "base": "effect",
+      "endpoint": "1",
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_1",
+      "base": "power_on_behavior",
+      "endpoint": "1",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy_2",
+      "base": "occupancy",
+      "endpoint": "2",
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance_3",
+      "base": "illuminance",
+      "endpoint": "3",
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Network join search count",
+      "type": "numeric",
+      "property": "network_join_search_count",
+      "base": "network_join_search_count",
+      "endpoint": null,
+      "description": "How many times will the device search and join a Zigbee network, searching every 15 seconds. Default: 2 (1~255, 255 means always searching).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 255
+    },
+    {
+      "name": "Light pwm frequency",
+      "type": "numeric",
+      "property": "light_pwm_frequency",
+      "base": "light_pwm_frequency",
+      "endpoint": null,
+      "description": "Light PWM Frequency. Works after reset power of the device. DO NOT set the PWM frequency too high which will affect the dimming resolution. Default: 3300.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535
+    },
+    {
+      "name": "Dimming brightness curve",
+      "type": "enum",
+      "property": "dimming_brightness_curve",
+      "base": "dimming_brightness_curve",
+      "endpoint": null,
+      "description": "Dimming brightness curve. Options: linear, gamma 1.5, gamma 1.8. Default: linear..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "linear",
+        "gamma_1_5",
+        "gamma_1_8"
+      ]
+    },
+    {
+      "name": "Start up on off",
+      "type": "enum",
+      "property": "start_up_on_off",
+      "base": "start_up_on_off",
+      "endpoint": null,
+      "description": "Device power-on state. Options: off, on, restore previous state. Default: restore previous state..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "last_state"
+      ]
+    },
+    {
+      "name": "Motion sensor lux threshold",
+      "type": "numeric",
+      "property": "motion_sensor_lux_threshold",
+      "base": "motion_sensor_lux_threshold",
+      "endpoint": null,
+      "description": "Daylight sensor lux threshold. When the measured lux is below this value, the light is allowed to turn on. Set to minimum value to disable this function. Default: disabled..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535
+    },
+    {
+      "name": "Motion sensor operation mode",
+      "type": "enum",
+      "property": "motion_sensor_operation_mode",
+      "base": "motion_sensor_operation_mode",
+      "endpoint": null,
+      "description": "Motion sensor operation mode. Options: auto (PWM output on motion), manual (PWM controlled by gateway or switch). Default: auto..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "auto",
+        "manual"
+      ]
+    },
+    {
+      "name": "Motion sensor sensitivity",
+      "type": "numeric",
+      "property": "motion_sensor_sensitivity",
+      "base": "motion_sensor_sensitivity",
+      "endpoint": null,
+      "description": "Motion sensor sensitivity. 0 is highest sensitivity, 15 is lowest. Default: 1..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 15
+    },
+    {
+      "name": "Motion sensor microwave detection",
+      "type": "enum",
+      "property": "motion_sensor_microwave_detection",
+      "base": "motion_sensor_microwave_detection",
+      "endpoint": null,
+      "description": "Enable or disable microwave detection. Options: enabled, disabled. Default: enabled..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "disabled",
+        "enabled"
+      ]
+    },
+    {
+      "name": "Touchlink onoff broadcast",
+      "type": "enum",
+      "property": "touchlink_onoff_broadcast",
+      "base": "touchlink_onoff_broadcast",
+      "endpoint": null,
+      "description": "Send ON/OFF command to touchlink or binding devices. Options: send, do not send. Default: send..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "do_not_send",
+        "send"
+      ]
+    },
+    {
+      "name": "Brightness module enable",
+      "type": "enum",
+      "property": "brightness_module_enable",
+      "base": "brightness_module_enable",
+      "endpoint": null,
+      "description": "Enable or disable the brightness module. Options: enabled, disabled. Default: enabled..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "disabled",
+        "enabled"
+      ]
+    },
+    {
+      "name": "Light on time",
+      "type": "numeric",
+      "property": "light_on_time",
+      "base": "light_on_time",
+      "endpoint": null,
+      "description": "Light on time (first delay). When motion is detected and then the area is vacated, this is the time the light stays on. Unit: seconds. Default: 60 seconds..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535,
+      "unit": "s"
+    },
+    {
+      "name": "Pwm brightness value",
+      "type": "numeric",
+      "property": "pwm_brightness_value",
+      "base": "pwm_brightness_value",
+      "endpoint": null,
+      "description": "Brightness value for PWM output when motion is detected. 0 disables this function. Default: disabled..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "lux"
+    },
+    {
+      "name": "Pwm output percentage",
+      "type": "numeric",
+      "property": "pwm_output_percentage",
+      "base": "pwm_output_percentage",
+      "endpoint": null,
+      "description": "PWM output percentage when motion is detected. Range: 0-100%. Default: 100%..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254,
+      "unit": "%"
+    },
+    {
+      "name": "Light status after first delay",
+      "type": "numeric",
+      "property": "light_status_after_first_delay",
+      "base": "light_status_after_first_delay",
+      "endpoint": null,
+      "description": "Light status after the first delay expires, during the second delay. Range: 0-100%. Default: 0% (off)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254,
+      "unit": "%"
+    },
+    {
+      "name": "Second delay time",
+      "type": "numeric",
+      "property": "second_delay_time",
+      "base": "second_delay_time",
+      "endpoint": null,
+      "description": "Duration of the second delay after the first delay expires. Unit: seconds. Default: 60 seconds..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535,
+      "unit": "s"
+    },
+    {
+      "name": "Light status after second delay",
+      "type": "numeric",
+      "property": "light_status_after_second_delay",
+      "base": "light_status_after_second_delay",
+      "endpoint": null,
+      "description": "Light status after the second delay expires. Range: 0-100%. Default: 0% (off)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254,
+      "unit": "%"
+    },
+    {
+      "name": "Linearity error ratio lux",
+      "type": "numeric",
+      "property": "linearity_error_ratio_lux",
+      "base": "linearity_error_ratio_lux",
+      "endpoint": null,
+      "description": "Linearity error ratio coefficient for LUX measurement. 1000 means 1000‰ (default). Increasing this value magnifies the LUX measurement linearly, decreasing minifies it. For example, 1001 means 1.001x, 500 means 0.5x..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 100,
+      "value_max": 10000
+    },
+    {
+      "name": "Fixed deviation lux",
+      "type": "numeric",
+      "property": "fixed_deviation_lux",
+      "base": "fixed_deviation_lux",
+      "endpoint": null,
+      "description": "Fixed deviation of LUX measurement. Signed 2-byte integer. Positive value increases, negative value decreases the measured LUX. For example, 100 means +100 LUX, -100 means -100 LUX..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -100,
+      "value_max": 100
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "recall_1",
+        "store_1",
+        "add_1",
+        "remove_1",
+        "remove_all_1",
+        "on",
+        "off",
+        "toggle",
+        "brightness_move_to_level",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,41 @@
+{
+  "model": "511.524",
+  "file": "511.524.md",
+  "vendor": "Iluminize",
+  "description": "Zigbee 3.0 wall dimmer CCT 4 zones",
+  "image": "https://www.zigbee2mqtt.io/images/devices/511.524.png",
+  "added_at": "2022-05-28T23:00:00",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "recall_*",
+        "on",
+        "off",
+        "brightness_step_down",
+        "brightness_step_up",
+        "brightness_move_down",
+        "brightness_move_up",
+        "brightness_stop",
+        "color_move",
+        "color_temperature_move",
+        "hue_move",
+        "color_loop_set",
+        "enhanced_move_to_hue_and_saturation",
+        "hue_stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

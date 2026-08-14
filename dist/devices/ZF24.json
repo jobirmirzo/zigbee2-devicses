@@ -1,0 +1,207 @@
+{
+  "model": "ZF24",
+  "file": "ZF24.md",
+  "vendor": "Tuya",
+  "description": "Human presence sensor (millimeter wave radar)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZF24.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "presence, distance, illuminance, move_sensitivity, presence_sensitivity, presence_timeout, detection_distance_max, state, living_room, bedroom, bathroom, sleep, radar_switch",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Distance",
+      "type": "numeric",
+      "property": "distance",
+      "base": "distance",
+      "endpoint": null,
+      "description": "Object distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Move sensitivity",
+      "type": "numeric",
+      "property": "move_sensitivity",
+      "base": "move_sensitivity",
+      "endpoint": null,
+      "description": "Mobility sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10
+    },
+    {
+      "name": "Presence sensitivity",
+      "type": "numeric",
+      "property": "presence_sensitivity",
+      "base": "presence_sensitivity",
+      "endpoint": null,
+      "description": "Presence sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10
+    },
+    {
+      "name": "Presence timeout",
+      "type": "numeric",
+      "property": "presence_timeout",
+      "base": "presence_timeout",
+      "endpoint": null,
+      "description": "Presence state timeout time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 600,
+      "unit": "s"
+    },
+    {
+      "name": "Detection distance max",
+      "type": "numeric",
+      "property": "detection_distance_max",
+      "base": "detection_distance_max",
+      "endpoint": null,
+      "description": "Maximum detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.75,
+      "value_max": 9,
+      "unit": "m"
+    },
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Function.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Living room",
+      "type": "binary",
+      "property": "living_room",
+      "base": "living_room",
+      "endpoint": null,
+      "description": "Living room.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Bedroom",
+      "type": "binary",
+      "property": "bedroom",
+      "base": "bedroom",
+      "endpoint": null,
+      "description": "Bedroom.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Bathroom",
+      "type": "binary",
+      "property": "bathroom",
+      "base": "bathroom",
+      "endpoint": null,
+      "description": "Bathroom.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Sleep",
+      "type": "binary",
+      "property": "sleep",
+      "base": "sleep",
+      "endpoint": null,
+      "description": "Sleep.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Radar switch",
+      "type": "binary",
+      "property": "radar_switch",
+      "base": "radar_switch",
+      "endpoint": null,
+      "description": "Radar switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

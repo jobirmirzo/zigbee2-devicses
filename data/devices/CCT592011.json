@@ -1,0 +1,57 @@
+{
+  "model": "CCT592011",
+  "file": "CCT592011.md",
+  "vendor": "Schneider Electric",
+  "description": "Wiser water leakage sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CCT592011.png",
+  "added_at": "2022-04-06T23:16:10",
+  "exposes_summary": "battery_low, water_leak, tamper",
+  "exposes": [
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,106 @@
+{
+  "model": "XZ-AKT101",
+  "file": "XZ-AKT101.md",
+  "vendor": "Tuya",
+  "description": "Intelligent air conditioning wall switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/XZ-AKT101.png",
+  "added_at": "2025-05-01T17:59:09",
+  "exposes_summary": "air_switch, child_lock, climate (local_temperature, current_heating_setpoint, system_mode, fan_mode), boost_time",
+  "exposes": [
+    {
+      "name": "Air switch",
+      "type": "binary",
+      "property": "air_switch",
+      "base": "air_switch",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 20,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "cool",
+            "heat",
+            "fan_only"
+          ],
+          "readable": false
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "value_min": 20,
+          "value_max": 30,
+          "values": [
+            "cool",
+            "heat",
+            "fan_only"
+          ],
+          "unit": "°C",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Boost time",
+      "type": "numeric",
+      "property": "boost_time",
+      "base": "boost_time",
+      "endpoint": null,
+      "description": "Boost running time. Minimum 0 - maximum 24 hours.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 24,
+      "unit": "H"
+    }
+  ],
+  "warnings": []
+}

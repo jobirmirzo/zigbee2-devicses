@@ -1,0 +1,11 @@
+{
+  "model": "CK-BL702-ROUTER-01(7018)",
+  "file": "CK-BL702-ROUTER-01(7018).md",
+  "vendor": "eWeLink",
+  "description": "USB router",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CK-BL702-ROUTER-01(7018",
+  "added_at": "2024-03-31T18:43:56",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

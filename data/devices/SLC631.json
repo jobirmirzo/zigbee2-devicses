@@ -1,0 +1,78 @@
+{
+  "model": "SLC631",
+  "file": "SLC631.md",
+  "vendor": "OWON",
+  "description": "Smart plug with doorbell press indicator",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SLC631.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "switch (state), contact",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l3",
+      "features": [
+        {
+          "property": "state_l3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates whether the device is opened or closed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    }
+  ],
+  "warnings": []
+}

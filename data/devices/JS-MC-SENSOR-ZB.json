@@ -1,0 +1,113 @@
+{
+  "model": "JS-MC-SENSOR-ZB",
+  "file": "JS-MC-SENSOR-ZB.md",
+  "vendor": "JAVIS",
+  "description": "Microwave sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/JS-MC-SENSOR-ZB.png",
+  "added_at": "2021-11-30T20:10:17",
+  "exposes_summary": "occupancy, illuminance, led_enable, keep_time, sensitivity, illuminance_calibration",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Led enable",
+      "type": "binary",
+      "property": "led_enable",
+      "base": "led_enable",
+      "endpoint": null,
+      "description": "Enabled LED.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Keep time",
+      "type": "enum",
+      "property": "keep_time",
+      "base": "keep_time",
+      "endpoint": null,
+      "description": "PIR keep time 0:5s|1:30s|2:60s|3:180s|4:300s|5:600s|6:1200s|7:1800s.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "25",
+        "50",
+        "75",
+        "100"
+      ]
+    },
+    {
+      "name": "Illuminance calibration",
+      "type": "numeric",
+      "property": "illuminance_calibration",
+      "base": "illuminance_calibration",
+      "endpoint": null,
+      "description": "Illuminance calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -10000,
+      "value_max": 10000
+    }
+  ],
+  "warnings": []
+}

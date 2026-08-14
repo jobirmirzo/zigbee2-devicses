@@ -1,0 +1,112 @@
+{
+  "model": "99140-139",
+  "file": "99140-139.md",
+  "vendor": "Kwikset",
+  "description": "Home connect smart lock conversion kit",
+  "image": "https://www.zigbee2mqtt.io/images/devices/99140-139.png",
+  "added_at": "2022-06-01T15:08:55",
+  "exposes_summary": "lock (state, lock_state), battery, action, action_source_name, action_user",
+  "exposes": [
+    {
+      "name": "Lock",
+      "type": "lock",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "LOCK",
+            "UNLOCK"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action on the lock.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "unknown",
+        "lock",
+        "unlock",
+        "lock_failure_invalid_pin_or_id",
+        "lock_failure_invalid_schedule",
+        "unlock_failure_invalid_pin_or_id",
+        "unlock_failure_invalid_schedule",
+        "one_touch_lock",
+        "key_lock",
+        "key_unlock",
+        "auto_lock",
+        "schedule_lock",
+        "schedule_unlock",
+        "manual_lock",
+        "manual_unlock",
+        "non_access_user_operational_event"
+      ]
+    },
+    {
+      "name": "Action source name",
+      "type": "enum",
+      "property": "action_source_name",
+      "base": "action_source_name",
+      "endpoint": null,
+      "description": "Source of the triggered action on the lock.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "keypad",
+        "rfid",
+        "manual",
+        "rf"
+      ]
+    },
+    {
+      "name": "Action user",
+      "type": "numeric",
+      "property": "action_user",
+      "base": "action_user",
+      "endpoint": null,
+      "description": "ID of user that triggered the action on the lock.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

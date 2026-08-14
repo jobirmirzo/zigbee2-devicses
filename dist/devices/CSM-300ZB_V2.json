@@ -1,0 +1,203 @@
+{
+  "model": "CSM-300ZB_V2",
+  "file": "CSM-300ZB_V2.md",
+  "vendor": "ShinaSystem",
+  "description": "SiHAS multipurpose ToF sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CSM-300ZB_V2.png",
+  "added_at": "2022-08-31T11:26:27",
+  "exposes_summary": "battery, voltage, status, people, rf_pairing_on, counting_freeze, tof_init, led_state, rf_state, transaction, fast_in, fast_out",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Status",
+      "type": "enum",
+      "property": "status",
+      "base": "status",
+      "endpoint": null,
+      "description": "Currently status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "idle",
+        "in",
+        "out"
+      ]
+    },
+    {
+      "name": "People",
+      "type": "numeric",
+      "property": "people",
+      "base": "people",
+      "endpoint": null,
+      "description": "People count.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Rf pairing on",
+      "type": "enum",
+      "property": "rf_pairing_on",
+      "base": "rf_pairing_on",
+      "endpoint": null,
+      "description": "Run RF pairing mode.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "run"
+      ]
+    },
+    {
+      "name": "Counting freeze",
+      "type": "binary",
+      "property": "counting_freeze",
+      "base": "counting_freeze",
+      "endpoint": null,
+      "description": "Counting Freeze ON/OFF, not reporting people value when is ON.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Tof init",
+      "type": "enum",
+      "property": "tof_init",
+      "base": "tof_init",
+      "endpoint": null,
+      "description": "ToF sensor initial.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "initial"
+      ]
+    },
+    {
+      "name": "Led state",
+      "type": "binary",
+      "property": "led_state",
+      "base": "led_state",
+      "endpoint": null,
+      "description": "Indicate LED enable/disable, default : enable.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "enable",
+      "value_off": "disable"
+    },
+    {
+      "name": "Rf state",
+      "type": "binary",
+      "property": "rf_state",
+      "base": "rf_state",
+      "endpoint": null,
+      "description": "RF function enable/disable, default : disable.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "enable",
+      "value_off": "disable"
+    },
+    {
+      "name": "Transaction",
+      "type": "enum",
+      "property": "transaction",
+      "base": "transaction",
+      "endpoint": null,
+      "description": "Transaction interval, default : 400ms.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "0ms",
+        "200ms",
+        "400ms",
+        "600ms",
+        "800ms",
+        "1,000ms"
+      ]
+    },
+    {
+      "name": "Fast in",
+      "type": "binary",
+      "property": "fast_in",
+      "base": "fast_in",
+      "endpoint": null,
+      "description": "Fast process enable/disable when people 0 to 1. default : enable.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "enable",
+      "value_off": "disable"
+    },
+    {
+      "name": "Fast out",
+      "type": "binary",
+      "property": "fast_out",
+      "base": "fast_out",
+      "endpoint": null,
+      "description": "Fast process enable/disable when people 1 to 0. default : enable.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "enable",
+      "value_off": "disable"
+    }
+  ],
+  "warnings": []
+}

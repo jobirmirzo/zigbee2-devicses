@@ -1,0 +1,70 @@
+{
+  "model": "ZeeFlora",
+  "file": "ZeeFlora.md",
+  "vendor": "Custom devices (DiY)",
+  "description": "Flower sensor with rechargeable battery",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZeeFlora.png",
+  "added_at": "2021-08-01T20:41:55Z",
+  "exposes_summary": "soil_moisture, battery, temperature, illuminance",
+  "exposes": [
+    {
+      "name": "Soil moisture",
+      "type": "numeric",
+      "property": "soil_moisture",
+      "base": "soil_moisture",
+      "endpoint": null,
+      "description": "Measured soil moisture value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

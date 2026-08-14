@@ -1,0 +1,493 @@
+{
+  "model": "EFEKTA_Smart_AQ_Box_R3",
+  "file": "EFEKTA_Smart_AQ_Box_R3.md",
+  "vendor": "EFEKTA",
+  "description": "EFEKTA Smart Air Quality Box, can control the relay, binding on some other devices",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_Smart_AQ_Box_R3.png",
+  "added_at": "2025-03-01T20:31:41",
+  "exposes_summary": "co2, pm1, pm25, pm4, pm10, pm_size, aqi_25_index, voc_index, pressure, temperature, humidity, reading_delay, alarm, light_indicator, light_indicator_level, temperature_offset, humidity_offset, auto_clean_interval, manual_clean, forced_recalibration, manual_forced_recalibration, automatic_self_calibration, factory_reset_co2, enable_pm25, high_pm25, low_pm25, enable_co2_gas, high_co2_gas, low_co2_gas, enable_voc, high_voc, low_voc",
+  "exposes": [
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "Measured value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Pm1",
+      "type": "numeric",
+      "property": "pm1",
+      "base": "pm1",
+      "endpoint": null,
+      "description": "Measured PM1.0 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Pm25",
+      "type": "numeric",
+      "property": "pm25",
+      "base": "pm25",
+      "endpoint": null,
+      "description": "Measured PM2.5 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Pm4",
+      "type": "numeric",
+      "property": "pm4",
+      "base": "pm4",
+      "endpoint": null,
+      "description": "Measured PM4.0 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Pm10",
+      "type": "numeric",
+      "property": "pm10",
+      "base": "pm10",
+      "endpoint": null,
+      "description": "Measured PM10.0 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Pm size",
+      "type": "numeric",
+      "property": "pm_size",
+      "base": "pm_size",
+      "endpoint": null,
+      "description": "Typical Particle Size.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µm"
+    },
+    {
+      "name": "Aqi 25 index",
+      "type": "numeric",
+      "property": "aqi_25_index",
+      "base": "aqi_25_index",
+      "endpoint": null,
+      "description": "PM 2.5 INDEX.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "PM2.5 Index"
+    },
+    {
+      "name": "Voc index",
+      "type": "numeric",
+      "property": "voc_index",
+      "base": "voc_index",
+      "endpoint": null,
+      "description": "VOC index.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VOC Index points"
+    },
+    {
+      "name": "Pressure",
+      "type": "numeric",
+      "property": "pressure",
+      "base": "pressure",
+      "endpoint": null,
+      "description": "The measured atmospheric pressure.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kPa"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Reading delay",
+      "type": "numeric",
+      "property": "reading_delay",
+      "base": "reading_delay",
+      "endpoint": null,
+      "description": "Setting the sensor reading delay..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 6,
+      "value_max": 600,
+      "unit": "sec"
+    },
+    {
+      "name": "Alarm",
+      "type": "binary",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Light indicator",
+      "type": "binary",
+      "property": "light_indicator",
+      "base": "light_indicator",
+      "endpoint": null,
+      "description": "Enable or Disable light indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Light indicator level",
+      "type": "numeric",
+      "property": "light_indicator_level",
+      "base": "light_indicator_level",
+      "endpoint": null,
+      "description": "Light indicator level.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature offset",
+      "type": "numeric",
+      "property": "temperature_offset",
+      "base": "temperature_offset",
+      "endpoint": null,
+      "description": "Adjust temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity offset",
+      "type": "numeric",
+      "property": "humidity_offset",
+      "base": "humidity_offset",
+      "endpoint": null,
+      "description": "Adjust humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "%"
+    },
+    {
+      "name": "Auto clean interval",
+      "type": "numeric",
+      "property": "auto_clean_interval",
+      "base": "auto_clean_interval",
+      "endpoint": null,
+      "description": "Auto clean interval PM2.5 sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "day"
+    },
+    {
+      "name": "Manual clean",
+      "type": "binary",
+      "property": "manual_clean",
+      "base": "manual_clean",
+      "endpoint": null,
+      "description": "Manual clean PM2.5 sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Forced recalibration",
+      "type": "binary",
+      "property": "forced_recalibration",
+      "base": "forced_recalibration",
+      "endpoint": null,
+      "description": "Start FRC (Perform Forced Recalibration of the CO2 Sensor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Manual forced recalibration",
+      "type": "numeric",
+      "property": "manual_forced_recalibration",
+      "base": "manual_forced_recalibration",
+      "endpoint": null,
+      "description": "Start Manual FRC (Perform Forced Recalibration of the CO2 Sensor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Automatic self calibration",
+      "type": "binary",
+      "property": "automatic_self_calibration",
+      "base": "automatic_self_calibration",
+      "endpoint": null,
+      "description": "Automatic self calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Factory reset co2",
+      "type": "binary",
+      "property": "factory_reset_co2",
+      "base": "factory_reset_co2",
+      "endpoint": null,
+      "description": "Factory Reset CO2 sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Enable pm25",
+      "type": "binary",
+      "property": "enable_pm25",
+      "base": "enable_pm25",
+      "endpoint": null,
+      "description": "Enable PM2.5 Control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "High pm25",
+      "type": "numeric",
+      "property": "high_pm25",
+      "base": "high_pm25",
+      "endpoint": null,
+      "description": "Setting High PM2.5 Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Low pm25",
+      "type": "numeric",
+      "property": "low_pm25",
+      "base": "low_pm25",
+      "endpoint": null,
+      "description": "Setting Low PM2.5 Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Enable co2 gas",
+      "type": "binary",
+      "property": "enable_co2_gas",
+      "base": "enable_co2_gas",
+      "endpoint": null,
+      "description": "Enable CO2 Gas Control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "High co2 gas",
+      "type": "numeric",
+      "property": "high_co2_gas",
+      "base": "high_co2_gas",
+      "endpoint": null,
+      "description": "Setting High CO2 Gas Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 400,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Low co2 gas",
+      "type": "numeric",
+      "property": "low_co2_gas",
+      "base": "low_co2_gas",
+      "endpoint": null,
+      "description": "Setting Low CO2 Gas Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 400,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Enable voc",
+      "type": "binary",
+      "property": "enable_voc",
+      "base": "enable_voc",
+      "endpoint": null,
+      "description": "Enable VOC Control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "High voc",
+      "type": "numeric",
+      "property": "high_voc",
+      "base": "high_voc",
+      "endpoint": null,
+      "description": "Setting High VOC Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 500,
+      "unit": "VOC Index points"
+    },
+    {
+      "name": "Low voc",
+      "type": "numeric",
+      "property": "low_voc",
+      "base": "low_voc",
+      "endpoint": null,
+      "description": "Setting Low VOC Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 500,
+      "unit": "VOC Index points"
+    }
+  ],
+  "warnings": []
+}

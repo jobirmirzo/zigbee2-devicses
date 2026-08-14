@@ -1,0 +1,73 @@
+{
+  "model": "ZB-DoorSensor-D0007",
+  "file": "ZB-DoorSensor-D0007.md",
+  "vendor": "ADEO",
+  "description": "ENKI LEXMAN wireless smart door window sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZB-DoorSensor-D0007.png",
+  "added_at": "2024-11-30T20:27:20",
+  "exposes_summary": "battery, contact, tamper, battery_low",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates whether the device is opened or closed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

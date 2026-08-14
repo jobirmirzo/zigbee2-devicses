@@ -1,0 +1,58 @@
+{
+  "model": "ZBDS10WT",
+  "file": "ZBDS10WT.md",
+  "vendor": "Nedis",
+  "description": "Smoke sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZBDS10WT.png",
+  "added_at": "2025-01-03T20:11:48",
+  "exposes_summary": "battery, smoke, tamper",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

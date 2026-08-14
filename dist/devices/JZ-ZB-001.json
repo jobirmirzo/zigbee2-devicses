@@ -1,0 +1,52 @@
+{
+  "model": "JZ-ZB-001",
+  "file": "JZ-ZB-001.md",
+  "vendor": "LELLKI",
+  "description": "Smart plug (without power monitoring)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/JZ-ZB-001.png",
+  "added_at": "2024-04-29T19:24:39",
+  "exposes_summary": "switch (state), power_outage_memory",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power outage memory",
+      "type": "enum",
+      "property": "power_outage_memory",
+      "base": "power_outage_memory",
+      "endpoint": null,
+      "description": "Recover state after power outage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off",
+        "restore"
+      ]
+    }
+  ],
+  "warnings": []
+}

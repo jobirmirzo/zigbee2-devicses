@@ -1,0 +1,270 @@
+{
+  "model": "YK-S03",
+  "file": "YK-S03.md",
+  "vendor": "Tuya",
+  "description": "Smart pH and Chlorine Tester for Swimming Pool",
+  "image": "https://www.zigbee2mqtt.io/images/devices/YK-S03.png",
+  "added_at": "2024-06-08T00",
+  "exposes_summary": "tds, temperature, battery, ph, ec, orp, free_chlorine, ph_max, ph_min, ec_max, ec_min, orp_max, orp_min, free_chlorine_max, free_chlorine_min, salinity, backlightvalue",
+  "exposes": [
+    {
+      "name": "Tds",
+      "type": "numeric",
+      "property": "tds",
+      "base": "tds",
+      "endpoint": null,
+      "description": "Total Dissolved Solids.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Ph",
+      "type": "numeric",
+      "property": "ph",
+      "base": "ph",
+      "endpoint": null,
+      "description": "pH value, if the pH value is lower than 6.5, it means that the water quality is too acidic and has impurities, and it is necessary to add disinfectant water for disinfection.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "pH"
+    },
+    {
+      "name": "Ec",
+      "type": "numeric",
+      "property": "ec",
+      "base": "ec",
+      "endpoint": null,
+      "description": "Electrical conductivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µS/cm"
+    },
+    {
+      "name": "Orp",
+      "type": "numeric",
+      "property": "orp",
+      "base": "orp",
+      "endpoint": null,
+      "description": "Oxidation Reduction Potential value. If the ORP value is above 850mv, it means that the disinfectant has been added too much, and it is necessary to add water or change the water for neutralization. If the ORP value is below 487mv, it means that too little disinfectant has been added and the pool needs to be disinfected again.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Free chlorine",
+      "type": "numeric",
+      "property": "free_chlorine",
+      "base": "free_chlorine",
+      "endpoint": null,
+      "description": "Free chlorine value. The water in the swimming pool should be between 6.5-8ph and ORP should be between 487-840mv, and the chlorine value will be displayed normally. Chlorine will not be displayed if either value is out of range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mg/L"
+    },
+    {
+      "name": "Ph max",
+      "type": "numeric",
+      "property": "ph_max",
+      "base": "ph_max",
+      "endpoint": null,
+      "description": "pH maximal value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 140,
+      "unit": "pH"
+    },
+    {
+      "name": "Ph min",
+      "type": "numeric",
+      "property": "ph_min",
+      "base": "ph_min",
+      "endpoint": null,
+      "description": "pH minimal value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 140,
+      "unit": "pH"
+    },
+    {
+      "name": "Ec max",
+      "type": "numeric",
+      "property": "ec_max",
+      "base": "ec_max",
+      "endpoint": null,
+      "description": "Electrical Conductivity maximal value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 20000,
+      "unit": "µS/cm"
+    },
+    {
+      "name": "Ec min",
+      "type": "numeric",
+      "property": "ec_min",
+      "base": "ec_min",
+      "endpoint": null,
+      "description": "Electrical Conductivity minimal value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 20000,
+      "unit": "µS/cm"
+    },
+    {
+      "name": "Orp max",
+      "type": "numeric",
+      "property": "orp_max",
+      "base": "orp_max",
+      "endpoint": null,
+      "description": "Oxidation Reduction Potential maximal value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1200,
+      "unit": "mV"
+    },
+    {
+      "name": "Orp min",
+      "type": "numeric",
+      "property": "orp_min",
+      "base": "orp_min",
+      "endpoint": null,
+      "description": "Oxidation Reduction Potential minimal value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1200,
+      "unit": "mV"
+    },
+    {
+      "name": "Free chlorine max",
+      "type": "numeric",
+      "property": "free_chlorine_max",
+      "base": "free_chlorine_max",
+      "endpoint": null,
+      "description": "Free Chlorine maximal value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 40,
+      "unit": "mg/L"
+    },
+    {
+      "name": "Free chlorine min",
+      "type": "numeric",
+      "property": "free_chlorine_min",
+      "base": "free_chlorine_min",
+      "endpoint": null,
+      "description": "Free Chlorine minimal value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 40,
+      "unit": "mg/L"
+    },
+    {
+      "name": "Salinity",
+      "type": "numeric",
+      "property": "salinity",
+      "base": "salinity",
+      "endpoint": null,
+      "description": "Salt value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Backlightvalue",
+      "type": "numeric",
+      "property": "backlightvalue",
+      "base": "backlightvalue",
+      "endpoint": null,
+      "description": "Backlight Value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1,
+      "unit": "gg"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,285 @@
+{
+  "model": "4512752/4512753",
+  "file": "4512752_4512753.md",
+  "vendor": "Namron",
+  "description": "Touch thermostat 16A 2.0",
+  "image": "https://www.zigbee2mqtt.io/images/devices/4512752-4512753.png",
+  "added_at": "2024-01-31T19:37:45",
+  "exposes_summary": "mode, regulator_period, regulator_set_point, climate (system_mode, preset, local_temperature, local_temperature_calibration, running_state, current_heating_setpoint), current, power, energy, voltage, sensor, local_temperature, local_temperature_floor, child_lock, switch (state), hysteresis, max_temperature_protection",
+  "exposes": [
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Controls how the operating mode of the device. Possible values: regulator (open-loop controller), thermostat (control with target temperature).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "regulator",
+        "thermostat"
+      ]
+    },
+    {
+      "name": "Regulator cycle duration",
+      "type": "enum",
+      "property": "regulator_period",
+      "base": "regulator_period",
+      "endpoint": null,
+      "description": "Regulator cycle duration. Not applicable when in thermostat mode..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "15min",
+        "30min",
+        "45min",
+        "60min",
+        "90min"
+      ]
+    },
+    {
+      "name": "Regulator set point",
+      "type": "numeric",
+      "property": "regulator_set_point",
+      "base": "regulator_set_point",
+      "endpoint": null,
+      "description": "Desired heating set point (%) when in regulator mode..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 95,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": false
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "manual",
+            "home",
+            "away"
+          ],
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor",
+      "base": "sensor",
+      "endpoint": null,
+      "description": "Select temperature sensor to use.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "air_sensor",
+        "floor_sensor",
+        "both"
+      ]
+    },
+    {
+      "name": "Local temperature",
+      "type": "numeric",
+      "property": "local_temperature",
+      "base": "local_temperature",
+      "endpoint": null,
+      "description": "Current temperature measured with internal sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Local temperature floor",
+      "type": "numeric",
+      "property": "local_temperature_floor",
+      "base": "local_temperature_floor",
+      "endpoint": null,
+      "description": "Current temperature measured on the external sensor (floor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Open window detection",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "window_detection",
+          "base": "window_detection",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Hysteresis",
+      "type": "numeric",
+      "property": "hysteresis",
+      "base": "hysteresis",
+      "endpoint": null,
+      "description": "The offset from the target temperature in which the temperature has to change for the heating state to change. This is to prevent erratically turning on/off when the temperature is close to the target..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 9,
+      "unit": "°C"
+    },
+    {
+      "name": "Max temperature protection",
+      "type": "numeric",
+      "property": "max_temperature_protection",
+      "base": "max_temperature_protection",
+      "endpoint": null,
+      "description": "Max guarding temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 20,
+      "value_max": 95,
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

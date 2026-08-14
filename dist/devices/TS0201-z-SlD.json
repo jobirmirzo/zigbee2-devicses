@@ -1,0 +1,261 @@
+{
+  "model": "TS0201-z-SlD",
+  "file": "TS0201-z-SlD.md",
+  "vendor": "Slacky-DIY",
+  "description": "Tuya temperature and humidity sensor with custom Firmware",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0201-z-SlD.png",
+  "added_at": "2025-07-01T17:53:44",
+  "exposes_summary": "battery, voltage, temperature, humidity, temperature_offset, humidity_offset, read_interval, enabling_repeat_command, enabling_temperature_control, low_temperature, high_temperature, temperature_actions, enabling_humidity_control, low_humidity, high_humidity, humidity_actions",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature offset",
+      "type": "numeric",
+      "property": "temperature_offset",
+      "base": "temperature_offset",
+      "endpoint": null,
+      "description": "Offset to add/subtract to the inside temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -5,
+      "value_max": 5,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity offset",
+      "type": "numeric",
+      "property": "humidity_offset",
+      "base": "humidity_offset",
+      "endpoint": null,
+      "description": "Offset to add/subtract to the inside humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -10,
+      "value_max": 10,
+      "unit": "%"
+    },
+    {
+      "name": "Read interval",
+      "type": "numeric",
+      "property": "read_interval",
+      "base": "read_interval",
+      "endpoint": null,
+      "description": "Sensors reading period.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 600,
+      "unit": "Sec"
+    },
+    {
+      "name": "Enabling repeat command",
+      "type": "binary",
+      "property": "enabling_repeat_command",
+      "base": "enabling_repeat_command",
+      "endpoint": null,
+      "description": "Enables/disables repeat command.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Enabling temperature control",
+      "type": "binary",
+      "property": "enabling_temperature_control",
+      "base": "enabling_temperature_control",
+      "endpoint": null,
+      "description": "Enables/disables Tempearure control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Low temperature",
+      "type": "numeric",
+      "property": "low_temperature",
+      "base": "low_temperature",
+      "endpoint": null,
+      "description": "Temperature low turn-off limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -40,
+      "value_max": 125,
+      "unit": "°C"
+    },
+    {
+      "name": "High temperature",
+      "type": "numeric",
+      "property": "high_temperature",
+      "base": "high_temperature",
+      "endpoint": null,
+      "description": "Temperature high turn-on limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -40,
+      "value_max": 125,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature actions",
+      "type": "enum",
+      "property": "temperature_actions_1",
+      "base": "temperature_actions",
+      "endpoint": "1",
+      "description": "Heat or cool.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "heat",
+        "cool"
+      ]
+    },
+    {
+      "name": "Enabling humidity control",
+      "type": "binary",
+      "property": "enabling_humidity_control",
+      "base": "enabling_humidity_control",
+      "endpoint": null,
+      "description": "Enables/disables Humidity control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Low humidity",
+      "type": "numeric",
+      "property": "low_humidity",
+      "base": "low_humidity",
+      "endpoint": null,
+      "description": "Humidity low turn-off limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "High humidity",
+      "type": "numeric",
+      "property": "high_humidity",
+      "base": "high_humidity",
+      "endpoint": null,
+      "description": "Humidity high turn-on limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Humidity actions",
+      "type": "enum",
+      "property": "humidity_actions_2",
+      "base": "humidity_actions",
+      "endpoint": "2",
+      "description": "Wet or dry.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "wet",
+        "dry"
+      ]
+    }
+  ],
+  "warnings": []
+}

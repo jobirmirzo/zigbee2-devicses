@@ -1,0 +1,72 @@
+{
+  "model": "WL4200",
+  "file": "WL4200.md",
+  "vendor": "Sinopé",
+  "description": "Zigbee smart water leak detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WL4200.png",
+  "added_at": "2020-07-20T23:08:11Z",
+  "exposes_summary": "water_leak, battery_low, temperature, battery",
+  "exposes": [
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,99 @@
+{
+  "model": "TS0601_bidirectional_energy meter",
+  "file": "TS0601_bidirectional_energy_meter.md",
+  "vendor": "Tuya",
+  "description": "Bidirectional energy meter with 150A Current Clamp",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_bidirectional_energy-meter.png",
+  "added_at": "2023-06-27T19:46:16",
+  "exposes_summary": "energy, produced_energy, power, voltage, current, energy_flow",
+  "exposes": [
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Produced energy",
+      "type": "numeric",
+      "property": "produced_energy",
+      "base": "produced_energy",
+      "endpoint": null,
+      "description": "Sum of produced energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy flow",
+      "type": "enum",
+      "property": "energy_flow",
+      "base": "energy_flow",
+      "endpoint": null,
+      "description": "Direction of energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "consuming",
+        "producing"
+      ]
+    }
+  ],
+  "warnings": []
+}

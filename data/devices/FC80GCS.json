@@ -1,0 +1,70 @@
+{
+  "model": "FC80GCS",
+  "file": "FC80GCS.md",
+  "vendor": "BTicino",
+  "description": "DIN power consumption module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/FC80GCS.png",
+  "added_at": "2024-05-01T19:17:56",
+  "exposes_summary": "power, power_apparent, power_alarm_active, power_alarm",
+  "exposes": [
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power apparent",
+      "type": "numeric",
+      "property": "power_apparent",
+      "base": "power_apparent",
+      "endpoint": null,
+      "description": "Instantaneous measured apparent power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "Power alarm active",
+      "type": "binary",
+      "property": "power_alarm_active",
+      "base": "power_alarm_active",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Power alarm",
+      "type": "binary",
+      "property": "power_alarm",
+      "base": "power_alarm",
+      "endpoint": null,
+      "description": "Enable/disable the power alarm.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

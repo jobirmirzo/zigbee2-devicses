@@ -1,0 +1,74 @@
+{
+  "model": "BMCT-SLZ",
+  "file": "BMCT-SLZ.md",
+  "vendor": "Bosch",
+  "description": "Light/shutter control unit II",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BMCT-SLZ.png",
+  "added_at": "2023-04-27T17:34:39",
+  "exposes_summary": "device_mode, power, energy, reset_energy_meters",
+  "exposes": [
+    {
+      "name": "Device mode",
+      "type": "enum",
+      "property": "device_mode",
+      "base": "device_mode",
+      "endpoint": null,
+      "description": "Device mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "light",
+        "shutter",
+        "disabled"
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Reset energy meters",
+      "type": "enum",
+      "property": "reset_energy_meters",
+      "base": "reset_energy_meters",
+      "endpoint": null,
+      "description": "Triggers the reset of all energy meters on the device to 0 kWh.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "reset"
+      ]
+    }
+  ],
+  "warnings": []
+}

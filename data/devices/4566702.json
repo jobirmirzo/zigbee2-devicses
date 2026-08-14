@@ -1,0 +1,466 @@
+{
+  "model": "4566702",
+  "file": "4566702.md",
+  "vendor": "Namron",
+  "description": "Zigbee Edge Thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/4566702.png",
+  "added_at": "2025-11-30T20:32:43",
+  "exposes_summary": "climate (local_temperature, occupied_heating_setpoint, system_mode, running_state, local_temperature_calibration), max_heat_temp, thermostat_mode, thermostat_mode_extra, frost, temperature_display_mode, regulator_percentage, regulator_cycle, vacation_mode, vacation_start, vacation_end, holiday_temp_set, boost_time_set, boost_time_remaining, window_open_check, window_state, keypad_lockout, screen_on_time, panel_brightness, auto_time, time_sync_value, sync_time, firmware_version, firmware_date, energy, current, power, humidity",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Max heat temperature",
+      "type": "numeric",
+      "property": "max_heat_temp",
+      "base": "max_heat_temp",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 15,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Thermostat mode",
+      "type": "enum",
+      "property": "thermostat_mode",
+      "base": "thermostat_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "regulator"
+      ]
+    },
+    {
+      "name": "Special mode",
+      "type": "enum",
+      "property": "thermostat_mode_extra",
+      "base": "thermostat_mode_extra",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "eco",
+        "frost",
+        "holiday"
+      ]
+    },
+    {
+      "name": "Frost Mode",
+      "type": "binary",
+      "property": "frost",
+      "base": "frost",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Temperature unit",
+      "type": "enum",
+      "property": "temperature_display_mode",
+      "base": "temperature_display_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Regulator set point",
+      "type": "numeric",
+      "property": "regulator_percentage",
+      "base": "regulator_percentage",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Regulator cycle duration",
+      "type": "numeric",
+      "property": "regulator_cycle",
+      "base": "regulator_cycle",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 30,
+      "unit": "min"
+    },
+    {
+      "name": "Vacation active",
+      "type": "binary",
+      "property": "vacation_mode",
+      "base": "vacation_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Vacation start (YYYY-MM-DD)",
+      "type": "text",
+      "property": "vacation_start",
+      "base": "vacation_start",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Vacation end (YYYY-MM-DD)",
+      "type": "text",
+      "property": "vacation_end",
+      "base": "vacation_end",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Holiday temperature",
+      "type": "numeric",
+      "property": "holiday_temp_set",
+      "base": "holiday_temp_set",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Boost time set",
+      "type": "numeric",
+      "property": "boost_time_set",
+      "base": "boost_time_set",
+      "endpoint": null,
+      "description": "Set hours for boost heating. Setting a value > 0 activates boost mode immediately. Set to 0 to stop boost..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 24,
+      "unit": "h"
+    },
+    {
+      "name": "Boost time remaining",
+      "type": "numeric",
+      "property": "boost_time_remaining",
+      "base": "boost_time_remaining",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "min"
+    },
+    {
+      "name": "Window detection",
+      "type": "binary",
+      "property": "window_open_check",
+      "base": "window_open_check",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Window state",
+      "type": "enum",
+      "property": "window_state",
+      "base": "window_state",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "open",
+        "closed"
+      ]
+    },
+    {
+      "name": "Child Lock",
+      "type": "binary",
+      "property": "keypad_lockout",
+      "base": "keypad_lockout",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "lock",
+      "value_off": "unlock"
+    },
+    {
+      "name": "Screen on time",
+      "type": "enum",
+      "property": "screen_on_time",
+      "base": "screen_on_time",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "always_on",
+        "10s",
+        "30s",
+        "60s"
+      ]
+    },
+    {
+      "name": "Panel brightness",
+      "type": "numeric",
+      "property": "panel_brightness",
+      "base": "panel_brightness",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Auto time sync",
+      "type": "binary",
+      "property": "auto_time",
+      "base": "auto_time",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Thermostat time (UTC)",
+      "type": "text",
+      "property": "time_sync_value",
+      "base": "time_sync_value",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Sync time",
+      "type": "enum",
+      "property": "sync_time",
+      "base": "sync_time",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "sync"
+      ]
+    },
+    {
+      "name": "Firmware version",
+      "type": "text",
+      "property": "firmware_version",
+      "base": "firmware_version",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Firmware date",
+      "type": "text",
+      "property": "firmware_date",
+      "base": "firmware_date",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

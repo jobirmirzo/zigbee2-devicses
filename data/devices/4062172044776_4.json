@@ -1,0 +1,181 @@
+{
+  "model": "4062172044776_4",
+  "file": "4062172044776_4.md",
+  "vendor": "OSRAM",
+  "description": "Zigbee 3.0 DALI CONV LI dimmer for DALI-based luminaires (with two devices and pushbutton)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/4062172044776_4.png",
+  "added_at": "2026-01-31T13:12:45",
+  "exposes_summary": "light (state, brightness), effect, action",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_l1",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_l2",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "s1",
+      "features": [
+        {
+          "property": "state_s1",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_s1",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect_l1",
+      "base": "effect",
+      "endpoint": "l1",
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect_l2",
+      "base": "effect",
+      "endpoint": "l2",
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect_s1",
+      "base": "effect",
+      "endpoint": "s1",
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "toggle_s1",
+        "brightness_move_up_s1",
+        "brightness_move_down_s1",
+        "brightness_stop_s1"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,66 @@
+{
+  "model": "HZ-WT02",
+  "file": "HZ-WT02.md",
+  "vendor": "Haozee",
+  "description": "Water valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HZ-WT02.png",
+  "added_at": "2025-10-04T18:43:56",
+  "exposes_summary": "water_countdown, battery, switch (state)",
+  "exposes": [
+    {
+      "name": "Water countdown",
+      "type": "numeric",
+      "property": "water_countdown",
+      "base": "water_countdown",
+      "endpoint": null,
+      "description": "Watering countdown to turn device off after a certain time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 1440,
+      "unit": "minute"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

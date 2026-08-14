@@ -1,0 +1,341 @@
+{
+  "model": "MVR500E-UP",
+  "file": "MVR500E-UP.md",
+  "vendor": "YOKIS",
+  "description": "Roller shutter module 500W",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MVR500E-UP.png",
+  "added_at": "2024-12-29T16:26:41",
+  "exposes_summary": "identify, cover (state, position), power_failure_mode, reset_to_factory_settings, relaunch_ble_advert, input_mode, contact_mode, last_local_command_state, last_bp_connect_state, send_press, send_release, select_input_mode, enable_short_press, enable_long_press, long_press_duration, time_between_press, enable_R12M_long_press, enable_local_config_lock, action",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power failure mode",
+      "type": "enum",
+      "property": "power_failure_mode",
+      "base": "power_failure_mode",
+      "endpoint": null,
+      "description": "Define the device behavior after power failure.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "last_state",
+        "off",
+        "on",
+        "blink"
+      ]
+    },
+    {
+      "name": "Reset to factory settings",
+      "type": "enum",
+      "property": "reset_to_factory_settings",
+      "base": "reset_to_factory_settings",
+      "endpoint": null,
+      "description": "Reset setting depending on RESET ACTION value.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "factory_reset",
+        "configuration_reset",
+        "network_reset"
+      ]
+    },
+    {
+      "name": "Relaunch ble advert",
+      "type": "enum",
+      "property": "relaunch_ble_advert",
+      "base": "relaunch_ble_advert",
+      "endpoint": null,
+      "description": "Relaunch BLE advertising for 15 minutes.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "relaunch_ble_advert"
+      ]
+    },
+    {
+      "name": "Input mode",
+      "type": "enum",
+      "property": "input_mode",
+      "base": "input_mode",
+      "endpoint": null,
+      "description": "Indicate how the input should be handled.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "unknown",
+        "push_button",
+        "switch",
+        "relay",
+        "fp_in"
+      ]
+    },
+    {
+      "name": "Contact mode",
+      "type": "enum",
+      "property": "contact_mode",
+      "base": "contact_mode",
+      "endpoint": null,
+      "description": "Indicate the contact nature of the entry.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "nc",
+        "no"
+      ]
+    },
+    {
+      "name": "Last local command state",
+      "type": "binary",
+      "property": "last_local_command_state",
+      "base": "last_local_command_state",
+      "endpoint": null,
+      "description": "Indicate the last known state of the local BP.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "PRESSED",
+      "value_off": "RELEASED"
+    },
+    {
+      "name": "Last bp connect state",
+      "type": "binary",
+      "property": "last_bp_connect_state",
+      "base": "last_bp_connect_state",
+      "endpoint": null,
+      "description": "Indicate the last known state of the Bp connect.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "PRESSED",
+      "value_off": "RELEASED"
+    },
+    {
+      "name": "Send press",
+      "type": "enum",
+      "property": "send_press",
+      "base": "send_press",
+      "endpoint": null,
+      "description": "Send to the server cluster a button press.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SendPress"
+      ]
+    },
+    {
+      "name": "Send release",
+      "type": "enum",
+      "property": "send_release",
+      "base": "send_release",
+      "endpoint": null,
+      "description": "Send to the server cluster a button release.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SendRelease"
+      ]
+    },
+    {
+      "name": "Select input mode",
+      "type": "enum",
+      "property": "select_input_mode",
+      "base": "select_input_mode",
+      "endpoint": null,
+      "description": "Change the Input mode to use switch input, wired relay or simple push button.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "unknown",
+        "push_button",
+        "switch",
+        "relay",
+        "fp_in"
+      ]
+    },
+    {
+      "name": "Enable short press",
+      "type": "binary",
+      "property": "enable_short_press",
+      "base": "enable_short_press",
+      "endpoint": null,
+      "description": "Use to enable short press action.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Enable long press",
+      "type": "binary",
+      "property": "enable_long_press",
+      "base": "enable_long_press",
+      "endpoint": null,
+      "description": "Use to enable long press action.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Long press duration",
+      "type": "numeric",
+      "property": "long_press_duration",
+      "base": "long_press_duration",
+      "endpoint": null,
+      "description": "Define long Press duration in milliseconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "ms"
+    },
+    {
+      "name": "Time between press",
+      "type": "numeric",
+      "property": "time_between_press",
+      "base": "time_between_press",
+      "endpoint": null,
+      "description": "Define the maximum time between 2 press to keep in a sequence (In milliseconds).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 100,
+      "value_max": 600,
+      "unit": "ms"
+    },
+    {
+      "name": "Enable R12M long press",
+      "type": "binary",
+      "property": "enable_R12M_long_press",
+      "base": "enable_R12M_long_press",
+      "endpoint": null,
+      "description": "Enable R12M Long Press action.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Enable local config lock",
+      "type": "binary",
+      "property": "enable_local_config_lock",
+      "base": "enable_local_config_lock",
+      "endpoint": null,
+      "description": "Disable local configuration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "open",
+        "close",
+        "stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

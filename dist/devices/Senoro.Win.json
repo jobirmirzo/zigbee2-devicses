@@ -1,0 +1,61 @@
+{
+  "model": "Senoro.Win",
+  "file": "Senoro.Win.md",
+  "vendor": "Senoro",
+  "description": "Senoro window alarm",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Senoro.Win.png",
+  "added_at": "2025-06-01T17:54:42",
+  "exposes_summary": "opening_state, alarm, battery",
+  "exposes": [
+    {
+      "name": "Opening state",
+      "type": "enum",
+      "property": "opening_state",
+      "base": "opening_state",
+      "endpoint": null,
+      "description": "Opening state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "open",
+        "closed",
+        "tilted"
+      ]
+    },
+    {
+      "name": "Alarm",
+      "type": "binary",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Alarm state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

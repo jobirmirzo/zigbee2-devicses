@@ -1,0 +1,155 @@
+{
+  "model": "552-721X1",
+  "file": "552-721X1.md",
+  "vendor": "Niko",
+  "description": "Single connectable switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/552-721X1.png",
+  "added_at": "2022-03-31T18:50:25",
+  "exposes_summary": "switch (state), operation_mode, action_reporting, led_enable, led_color, led_state, led_sync_mode, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode",
+      "base": "operation_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "control_relay",
+        "decoupled"
+      ]
+    },
+    {
+      "name": "Action reporting",
+      "type": "binary",
+      "property": "action_reporting",
+      "base": "action_reporting",
+      "endpoint": null,
+      "description": "Enable Action Reporting.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Led enable",
+      "type": "binary",
+      "property": "led_enable",
+      "base": "led_enable",
+      "endpoint": null,
+      "description": "Enable LED.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Led color",
+      "type": "enum",
+      "property": "led_color",
+      "base": "led_color",
+      "endpoint": null,
+      "description": "LED ambient color.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "ON",
+        "OFF",
+        "Blue",
+        "Red",
+        "Purple"
+      ]
+    },
+    {
+      "name": "Led state",
+      "type": "binary",
+      "property": "led_state",
+      "base": "led_state",
+      "endpoint": null,
+      "description": "LED state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Led sync mode",
+      "type": "enum",
+      "property": "led_sync_mode",
+      "base": "led_sync_mode",
+      "endpoint": null,
+      "description": "Sync LED with relay state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Off",
+        "On",
+        "Inverted"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single",
+        "hold",
+        "release",
+        "single_ext",
+        "hold_ext",
+        "release_ext"
+      ]
+    }
+  ],
+  "warnings": []
+}

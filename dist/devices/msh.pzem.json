@@ -1,0 +1,123 @@
+{
+  "model": "msh.pzem",
+  "file": "msh.pzem.md",
+  "vendor": "MySmartHouse",
+  "description": "MSH 100A AC DIN Power Meter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/msh.pzem.png",
+  "added_at": "2026-06-30T19:08:02",
+  "exposes_summary": "power, voltage, ac_frequency, power_factor, current, energy, temperature, l3",
+  "exposes": [
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power_l2",
+      "base": "power",
+      "endpoint": "l2",
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage_l2",
+      "base": "voltage",
+      "endpoint": "l2",
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "AC frequency",
+      "type": "numeric",
+      "property": "ac_frequency_l2",
+      "base": "ac_frequency",
+      "endpoint": "l2",
+      "description": "Measured electrical AC frequency.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Power factor",
+      "type": "numeric",
+      "property": "power_factor_l2",
+      "base": "power_factor",
+      "endpoint": "l2",
+      "description": "Instantaneous measured power factor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current_l2",
+      "base": "current",
+      "endpoint": "l2",
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy_l2",
+      "base": "energy",
+      "endpoint": "l2",
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "CPU Temperature",
+      "type": "numeric",
+      "property": "temperature_l1",
+      "base": "temperature",
+      "endpoint": "l1",
+      "description": "Temperature of the CPU.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Uptime",
+      "type": "numeric",
+      "property": "l3_l3",
+      "base": "l3",
+      "endpoint": "l3",
+      "description": "Uptime (seconds).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,287 @@
+{
+  "model": "C200",
+  "file": "C200.md",
+  "vendor": "Aqara",
+  "description": "Curtain motor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/C200.png",
+  "added_at": "2026-06-30T19:08:31",
+  "exposes_summary": "limits_calibration, automatic_calibration, cover (state, position), curtain_speed, manual_open_close, adaptive_pulling_speed, manual_stop, reverse_direction, status, last_manual_operation, curtain_position, traverse_time, calibration_status, calibrated, identify_beep, identify",
+  "exposes": [
+    {
+      "name": "Limits calibration",
+      "type": "enum",
+      "property": "limits_calibration",
+      "base": "limits_calibration",
+      "endpoint": null,
+      "description": "Calibrate the position limits.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "start",
+        "end",
+        "reset"
+      ]
+    },
+    {
+      "name": "Automatic calibration",
+      "type": "enum",
+      "property": "automatic_calibration",
+      "base": "automatic_calibration",
+      "endpoint": null,
+      "description": "Performs an automatic calibration process similar to Aqara’s method to set curtain limits..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "calibrate"
+      ]
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Curtain speed",
+      "type": "numeric",
+      "property": "curtain_speed",
+      "base": "curtain_speed",
+      "endpoint": null,
+      "description": "Speed of curtain movement.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Manual open close",
+      "type": "binary",
+      "property": "manual_open_close",
+      "base": "manual_open_close",
+      "endpoint": null,
+      "description": "Gently pull to open/close the curtain automatically.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Adaptive pulling speed",
+      "type": "binary",
+      "property": "adaptive_pulling_speed",
+      "base": "adaptive_pulling_speed",
+      "endpoint": null,
+      "description": "The faster/slower the curtain is pulled manually, the faster/slower the curtain will move.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Manual stop",
+      "type": "binary",
+      "property": "manual_stop",
+      "base": "manual_stop",
+      "endpoint": null,
+      "description": "Manually pulling the curtain during operation stops the motor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Reverse direction",
+      "type": "binary",
+      "property": "reverse_direction",
+      "base": "reverse_direction",
+      "endpoint": null,
+      "description": "Whether the curtain direction is inverted.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Status",
+      "type": "enum",
+      "property": "status",
+      "base": "status",
+      "endpoint": null,
+      "description": "Current status of the curtain (Opening, Closing, Stopped, Blocked).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "closing",
+        "opening",
+        "stopped",
+        "blocked"
+      ]
+    },
+    {
+      "name": "Last manual operation",
+      "type": "enum",
+      "property": "last_manual_operation",
+      "base": "last_manual_operation",
+      "endpoint": null,
+      "description": "Last triggered manual operation.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "open",
+        "close",
+        "stop"
+      ]
+    },
+    {
+      "name": "Curtain position",
+      "type": "numeric",
+      "property": "curtain_position",
+      "base": "curtain_position",
+      "endpoint": null,
+      "description": "Current position of the curtain.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Traverse time",
+      "type": "numeric",
+      "property": "traverse_time",
+      "base": "traverse_time",
+      "endpoint": null,
+      "description": "Time in seconds to get from one end to another.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "sec"
+    },
+    {
+      "name": "Calibration status",
+      "type": "enum",
+      "property": "calibration_status",
+      "base": "calibration_status",
+      "endpoint": null,
+      "description": "Calibration status of the curtain (Not calibrated, Half calibrated, Fully calibrated).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "not_calibrated",
+        "half_calibrated",
+        "fully_calibrated"
+      ]
+    },
+    {
+      "name": "Calibrated",
+      "type": "binary",
+      "property": "calibrated",
+      "base": "calibrated",
+      "endpoint": null,
+      "description": "Indicates if this device is calibrated.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Identify beep",
+      "type": "enum",
+      "property": "identify_beep",
+      "base": "identify_beep",
+      "endpoint": null,
+      "description": "Device will beep for chosen time duration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "short",
+        "1_sec",
+        "2_sec"
+      ]
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    }
+  ],
+  "warnings": []
+}

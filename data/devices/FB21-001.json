@@ -1,0 +1,35 @@
+{
+  "model": "FB21-001",
+  "file": "FB21-001.md",
+  "vendor": "Lidl",
+  "description": "Livarno Lux switch and dimming light remote control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/FB21-001.png",
+  "added_at": "2022-04-30T08:00:58",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_stop",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_move_up",
+        "brightness_move_down",
+        "switch_scene"
+      ]
+    }
+  ],
+  "warnings": []
+}

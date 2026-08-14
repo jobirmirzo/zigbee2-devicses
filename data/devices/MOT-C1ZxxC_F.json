@@ -1,0 +1,50 @@
+{
+  "model": "MOT-C1ZxxC/F",
+  "file": "MOT-C1ZxxC_F.md",
+  "vendor": "Profalux",
+  "description": "Cover",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MOT-C1ZxxC-F.png",
+  "added_at": "2023-10-03T08:44:52",
+  "exposes_summary": "cover (state, position, tilt)",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "tilt",
+          "base": "tilt",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

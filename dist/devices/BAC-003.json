@@ -1,0 +1,136 @@
+{
+  "model": "BAC-003",
+  "file": "BAC-003.md",
+  "vendor": "Tuya",
+  "description": "FCU thermostat temperature controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BAC-003.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "climate (local_temperature, system_mode, fan_mode, current_heating_setpoint, preset, local_temperature_calibration), child_lock, max_temperature, deadzone_temperature, schedule_text",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "cool",
+            "heat",
+            "fan_only"
+          ],
+          "readable": false
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "value_min": 5,
+          "value_max": 35,
+          "values": [
+            "off",
+            "cool",
+            "heat",
+            "fan_only"
+          ],
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "auto",
+            "manual"
+          ],
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Max temperature",
+      "type": "numeric",
+      "property": "max_temperature",
+      "base": "max_temperature",
+      "endpoint": null,
+      "description": "Maximum temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 35,
+      "value_max": 45,
+      "unit": "°C"
+    },
+    {
+      "name": "Deadzone temperature",
+      "type": "numeric",
+      "property": "deadzone_temperature",
+      "base": "deadzone_temperature",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule text",
+      "type": "text",
+      "property": "schedule_text",
+      "base": "schedule_text",
+      "endpoint": null,
+      "description": "Weekly schedule in the format \"HH:MM/TT HH:MM/TT ...\". Example for 12 segments: \"06:00/20 11:30/21 13:30/22 17:30/23 06:00/24 12:00/23 14:30/22 17:30/21 06:00/19 12:30/20 14:30/21 18:30/20\". Each segment contains: - HH:MM: Time in 24-hour format. - TT: Temperature in °C. Ensure all 12 segments are defined and separated by spaces..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    }
+  ],
+  "warnings": []
+}

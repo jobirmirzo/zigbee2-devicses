@@ -1,0 +1,156 @@
+{
+  "model": "TS130F",
+  "file": "TS130F.md",
+  "vendor": "Tuya",
+  "description": "Curtain/blind switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS130F.png",
+  "added_at": "2020-11-01T12:47:02Z",
+  "exposes_summary": "cover (state, position), moving, motor_reversal, calibration, calibration_time, indicator_mode, backlight_mode, switch_type",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Moving",
+      "type": "enum",
+      "property": "moving",
+      "base": "moving",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "UP",
+        "STOP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Motor reversal",
+      "type": "binary",
+      "property": "motor_reversal",
+      "base": "motor_reversal",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Calibration",
+      "type": "binary",
+      "property": "calibration",
+      "base": "calibration",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Calibration time",
+      "type": "numeric",
+      "property": "calibration_time",
+      "base": "calibration_time",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode",
+      "base": "indicator_mode",
+      "endpoint": null,
+      "description": "LED indicator mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "off/on",
+        "on/off",
+        "on"
+      ]
+    },
+    {
+      "name": "Backlight mode",
+      "type": "binary",
+      "property": "backlight_mode",
+      "base": "backlight_mode",
+      "endpoint": null,
+      "description": "Mode of the backlight.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type",
+      "base": "switch_type",
+      "endpoint": null,
+      "description": "Type of the installed switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "momentary",
+        "toggle"
+      ]
+    }
+  ],
+  "warnings": []
+}

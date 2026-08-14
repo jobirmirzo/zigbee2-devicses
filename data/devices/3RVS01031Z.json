@@ -1,0 +1,98 @@
+{
+  "model": "3RVS01031Z",
+  "file": "3RVS01031Z.md",
+  "vendor": "Third Reality",
+  "description": "Zigbee vibration sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/3RVS01031Z.png",
+  "added_at": "2023-06-01T08:16:21",
+  "exposes_summary": "battery, alarm_1, cool_down_time, x_axis, y_axis, z_axis",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Alarm 1",
+      "type": "binary",
+      "property": "alarm_1",
+      "base": "alarm_1",
+      "endpoint": null,
+      "description": "Being in vibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Cool down time",
+      "type": "numeric",
+      "property": "cool_down_time",
+      "base": "cool_down_time",
+      "endpoint": null,
+      "description": "coolDownTime.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 7200,
+      "unit": "s"
+    },
+    {
+      "name": "X axis",
+      "type": "numeric",
+      "property": "x_axis",
+      "base": "x_axis",
+      "endpoint": null,
+      "description": "X axis acceleration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Y axis",
+      "type": "numeric",
+      "property": "y_axis",
+      "base": "y_axis",
+      "endpoint": null,
+      "description": "Y axis acceleration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Z axis",
+      "type": "numeric",
+      "property": "z_axis",
+      "base": "z_axis",
+      "endpoint": null,
+      "description": "Z axis acceleration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

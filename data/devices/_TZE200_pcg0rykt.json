@@ -1,0 +1,131 @@
+{
+  "model": "_TZE200_pcg0rykt",
+  "file": "_TZE200_pcg0rykt.md",
+  "vendor": "Orztech",
+  "description": "3 gang touch wall switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/_TZE200_pcg0rykt.png",
+  "added_at": "2025-05-01T17:59:09",
+  "exposes_summary": "switch (state)",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "t1",
+      "features": [
+        {
+          "property": "state_t1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "t2",
+      "features": [
+        {
+          "property": "state_t2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "t3",
+      "features": [
+        {
+          "property": "state_t3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "c1",
+      "features": [
+        {
+          "property": "state_c1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "c2",
+      "features": [
+        {
+          "property": "state_c2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "c3",
+      "features": [
+        {
+          "property": "state_c3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "c4",
+      "features": [
+        {
+          "property": "state_c4",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,53 @@
+{
+  "model": "C-RFZB-SM1",
+  "file": "C-RFZB-SM1.md",
+  "vendor": "Candeo",
+  "description": "Zigbee & RF Switch Module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/C-RFZB-SM1.png",
+  "added_at": "2024-11-30T20:27:20",
+  "exposes_summary": "switch (state), power_on_behavior",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    }
+  ],
+  "warnings": []
+}

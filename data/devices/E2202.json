@@ -1,0 +1,73 @@
+{
+  "model": "E2202",
+  "file": "E2202.md",
+  "vendor": "IKEA",
+  "description": "BADRING water leakage sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E2202.png",
+  "added_at": "2025-02-01T20:11:19",
+  "exposes_summary": "water_leak, identify, battery, voltage",
+  "exposes": [
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

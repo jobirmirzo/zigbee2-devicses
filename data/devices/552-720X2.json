@@ -1,0 +1,53 @@
+{
+  "model": "552-720X2",
+  "file": "552-720X2.md",
+  "vendor": "Niko",
+  "description": "Battery switch with 2 buttons",
+  "image": "https://www.zigbee2mqtt.io/images/devices/552-720X2.png",
+  "added_at": "2023-10-03T08:44:52",
+  "exposes_summary": "action, battery",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_left",
+        "off_left",
+        "on_right",
+        "off_right",
+        "brightness_move_up_left",
+        "brightness_move_up_right",
+        "brightness_move_down_left",
+        "brightness_move_down_right",
+        "brightness_stop_left",
+        "brightness_stop_right"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

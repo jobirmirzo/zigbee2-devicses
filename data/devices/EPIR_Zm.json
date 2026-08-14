@@ -1,0 +1,67 @@
+{
+  "model": "EPIR_Zm",
+  "file": "EPIR_Zm.md",
+  "vendor": "AwoX",
+  "description": "Connect-Z motion (PIR) sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EPIR_Zm.png",
+  "added_at": "2025-06-01T17:54:42",
+  "exposes_summary": "battery, occupancy, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "toggle",
+        "brightness_move_to_level",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

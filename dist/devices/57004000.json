@@ -1,0 +1,42 @@
+{
+  "model": "57004000",
+  "file": "57004000.md",
+  "vendor": "Insta",
+  "description": "Pushbutton Interface 2-gang 230V",
+  "image": "https://www.zigbee2mqtt.io/images/devices/57004000.png",
+  "added_at": "2022-02-28T10:33:51",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_e1",
+        "off_e1",
+        "toggle_e1",
+        "recall_*_e1",
+        "brightness_stop_e1",
+        "brightness_move_*_e1",
+        "on_e2",
+        "off_e2",
+        "toggle_e2",
+        "recall_*_e2",
+        "brightness_stop_e2",
+        "brightness_move_*_e2",
+        "close_cover",
+        "open_cover",
+        "stop_cover"
+      ]
+    }
+  ],
+  "warnings": []
+}

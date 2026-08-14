@@ -1,0 +1,46 @@
+{
+  "model": "DTB190502A1",
+  "file": "DTB190502A1.md",
+  "vendor": "databyte.ch",
+  "description": "CC2530 based IO Board",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DTB190502A1.png",
+  "added_at": "2019-09-08T21:16:00Z",
+  "exposes_summary": "led_state, key_state",
+  "exposes": [
+    {
+      "name": "Led state",
+      "type": "binary",
+      "property": "led_state",
+      "base": "led_state",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Key state",
+      "type": "enum",
+      "property": "key_state",
+      "base": "key_state",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "KEY_SYS",
+        "KEY_UP",
+        "KEY_DOWN",
+        "KEY_NONE"
+      ]
+    }
+  ],
+  "warnings": []
+}

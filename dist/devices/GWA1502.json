@@ -1,0 +1,42 @@
+{
+  "model": "GWA1502",
+  "file": "GWA1502.md",
+  "vendor": "Gewiss",
+  "description": "Contact interface - 2 channels - 230V",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GWA1502.png",
+  "added_at": "2025-04-01T18:29:09",
+  "exposes_summary": "input",
+  "exposes": [
+    {
+      "name": "Input",
+      "type": "binary",
+      "property": "input_1",
+      "base": "input",
+      "endpoint": "1",
+      "description": "State of input I1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Input",
+      "type": "binary",
+      "property": "input_2",
+      "base": "input",
+      "endpoint": "2",
+      "description": "State of input I2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,311 @@
+{
+  "model": "SR-ZG9095B",
+  "file": "SR-ZG9095B.md",
+  "vendor": "Sunricher",
+  "description": "Touch thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SR-ZG9095B.png",
+  "added_at": "2025-06-01T17:54:42",
+  "exposes_summary": "outdoor_temperature, climate (occupied_heating_setpoint, unoccupied_heating_setpoint, occupied_cooling_setpoint, unoccupied_cooling_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state, fan_mode, control_sequence_of_operation), away_mode, child_lock, lcd_brightness, button_vibration_level, floor_sensor_type, sensor, powerup_status, floor_sensor_calibration, temperature_display, min_setpoint_deadband",
+  "exposes": [
+    {
+      "name": "Outdoor temperature",
+      "type": "numeric",
+      "property": "outdoor_temperature",
+      "base": "outdoor_temperature",
+      "endpoint": null,
+      "description": "Current temperature measured from the floor sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 32,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "unoccupied_heating_setpoint",
+          "base": "unoccupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 32,
+          "values": [
+            "off",
+            "auto",
+            "cool",
+            "heat",
+            "fan_only"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "occupied_cooling_setpoint",
+          "base": "occupied_cooling_setpoint",
+          "value_min": 5,
+          "value_max": 32,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "unoccupied_cooling_setpoint",
+          "base": "unoccupied_cooling_setpoint",
+          "value_min": 5,
+          "value_max": 32,
+          "values": [
+            "off",
+            "auto",
+            "cool",
+            "heat",
+            "fan_only"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "auto",
+            "cool",
+            "heat",
+            "fan_only"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "value_min": 5,
+          "value_max": 32,
+          "values": [
+            "off",
+            "auto",
+            "cool",
+            "heat",
+            "fan_only"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "control_sequence_of_operation",
+          "base": "control_sequence_of_operation",
+          "value_min": 5,
+          "value_max": 32,
+          "values": [
+            "off",
+            "auto",
+            "cool",
+            "heat",
+            "fan_only"
+          ],
+          "unit": "°C",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Away mode",
+      "type": "binary",
+      "property": "away_mode",
+      "base": "away_mode",
+      "endpoint": null,
+      "description": "Enable/disable away mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "UNLOCK",
+      "value_off": "LOCK"
+    },
+    {
+      "name": "Lcd brightness",
+      "type": "enum",
+      "property": "lcd_brightness",
+      "base": "lcd_brightness",
+      "endpoint": null,
+      "description": "OLED brightness when operating the buttons.  Default: Medium..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "mid",
+        "high"
+      ]
+    },
+    {
+      "name": "Button vibration level",
+      "type": "enum",
+      "property": "button_vibration_level",
+      "base": "button_vibration_level",
+      "endpoint": null,
+      "description": "Key beep volume and vibration level.  Default: Low..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "Floor sensor type",
+      "type": "enum",
+      "property": "floor_sensor_type",
+      "base": "floor_sensor_type",
+      "endpoint": null,
+      "description": "Type of the external floor sensor.  Default: NTC 10K/25..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "10k",
+        "15k",
+        "50k",
+        "100k",
+        "12k"
+      ]
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor",
+      "base": "sensor",
+      "endpoint": null,
+      "description": "The sensor used for heat control.  Default: Room Sensor..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "room",
+        "floor"
+      ]
+    },
+    {
+      "name": "Powerup status",
+      "type": "enum",
+      "property": "powerup_status",
+      "base": "powerup_status",
+      "endpoint": null,
+      "description": "The mode after a power reset.  Default: Previous Mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "default",
+        "last_status"
+      ]
+    },
+    {
+      "name": "Floor sensor calibration",
+      "type": "numeric",
+      "property": "floor_sensor_calibration",
+      "base": "floor_sensor_calibration",
+      "endpoint": null,
+      "description": "The tempearatue calibration for the external floor sensor, between -3 and 3 in 0.1°C.  Default: 0..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -2.5,
+      "value_max": 2.5,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature display",
+      "type": "enum",
+      "property": "temperature_display",
+      "base": "temperature_display",
+      "endpoint": null,
+      "description": "The temperature on the display. room: shows the temperature recorded by the sensor embedded in the thermostat. set: shows the set (target) temperature. floor: shows the temperature recorded by the external floor sensor  Default: Room Temperature..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "room",
+        "set",
+        "floor"
+      ]
+    },
+    {
+      "name": "Min setpoint deadband",
+      "type": "numeric",
+      "property": "min_setpoint_deadband",
+      "base": "min_setpoint_deadband",
+      "endpoint": null,
+      "description": "This parameter refers to the minimum difference between cooling and heating temperatures. between 1 and 1.5 in 0.1 °C  Default: 1 °C. The hysteresis used by this device = MinSetpointDeadBand /2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 1.5,
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,162 @@
+{
+  "model": "DIYRuZ_Zintercom",
+  "file": "DIYRuZ_Zintercom.md",
+  "vendor": "DIYRuZ",
+  "description": "Matrix intercom auto opener",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DIYRuZ_Zintercom.png",
+  "added_at": "2021-08-01T20:41:55Z",
+  "exposes_summary": "state, mode, sound, time_ring, time_talk, time_open, time_bell, time_report, battery",
+  "exposes": [
+    {
+      "name": "State",
+      "type": "enum",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Current state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "idle",
+        "ring",
+        "talk",
+        "open",
+        "drop"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Select open mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "never",
+        "once",
+        "always",
+        "drop"
+      ]
+    },
+    {
+      "name": "Sound",
+      "type": "binary",
+      "property": "sound",
+      "base": "sound",
+      "endpoint": null,
+      "description": "Enable or disable sound.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Time ring",
+      "type": "numeric",
+      "property": "time_ring",
+      "base": "time_ring",
+      "endpoint": null,
+      "description": "Time to ring before answer.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "sec"
+    },
+    {
+      "name": "Time talk",
+      "type": "numeric",
+      "property": "time_talk",
+      "base": "time_talk",
+      "endpoint": null,
+      "description": "Time to hold before open.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "sec"
+    },
+    {
+      "name": "Time open",
+      "type": "numeric",
+      "property": "time_open",
+      "base": "time_open",
+      "endpoint": null,
+      "description": "Time to open before end.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "sec"
+    },
+    {
+      "name": "Time bell",
+      "type": "numeric",
+      "property": "time_bell",
+      "base": "time_bell",
+      "endpoint": null,
+      "description": "Time after last bell to finish ring.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "sec"
+    },
+    {
+      "name": "Time report",
+      "type": "numeric",
+      "property": "time_report",
+      "base": "time_report",
+      "endpoint": null,
+      "description": "Reporting interval.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1440,
+      "unit": "min"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

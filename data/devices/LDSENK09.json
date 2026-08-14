@@ -1,0 +1,31 @@
+{
+  "model": "LDSENK09",
+  "file": "LDSENK09.md",
+  "vendor": "ADEO",
+  "description": "Security system key fob",
+  "image": "https://www.zigbee2mqtt.io/images/devices/LDSENK09.png",
+  "added_at": "2022-07-01T08:15:09",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "panic",
+        "disarm",
+        "arm_partial_zones",
+        "arm_all_zones"
+      ]
+    }
+  ],
+  "warnings": []
+}

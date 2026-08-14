@@ -1,0 +1,94 @@
+{
+  "model": "WXCJKG12LM",
+  "file": "WXCJKG12LM.md",
+  "vendor": "Aqara",
+  "description": "Opple wireless switch (double band)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WXCJKG12LM.png",
+  "added_at": "2019-12-15T17:27:48Z",
+  "exposes_summary": "battery, voltage, operation_mode, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode",
+      "base": "operation_mode",
+      "endpoint": null,
+      "description": "Operation mode, select \"command\" to enable bindings (wake up the device before changing modes!).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "command",
+        "event"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "button_1_hold",
+        "button_1_release",
+        "button_1_single",
+        "button_1_double",
+        "button_1_triple",
+        "button_2_hold",
+        "button_2_release",
+        "button_2_single",
+        "button_2_double",
+        "button_2_triple",
+        "button_3_hold",
+        "button_3_release",
+        "button_3_single",
+        "button_3_double",
+        "button_3_triple",
+        "button_4_hold",
+        "button_4_release",
+        "button_4_single",
+        "button_4_double",
+        "button_4_triple"
+      ]
+    }
+  ],
+  "warnings": []
+}

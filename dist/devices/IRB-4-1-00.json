@@ -1,0 +1,104 @@
+{
+  "model": "IRB-4-1-00",
+  "file": "IRB-4-1-00.md",
+  "vendor": "NodOn",
+  "description": "IR Blaster",
+  "image": "https://www.zigbee2mqtt.io/images/devices/IRB-4-1-00.png",
+  "added_at": "2025-05-01T17:59:09",
+  "exposes_summary": "climate (local_temperature, occupied_cooling_setpoint, occupied_heating_setpoint, system_mode, fan_mode, ac_louver_position), humidity",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "occupied_cooling_setpoint",
+          "base": "occupied_cooling_setpoint",
+          "value_min": 18,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 16,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "auto",
+            "dry",
+            "fan_only"
+          ],
+          "readable": true
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "value_min": 18,
+          "value_max": 30,
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "auto",
+            "dry",
+            "fan_only"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "ac_louver_position",
+          "base": "ac_louver_position",
+          "value_min": 18,
+          "value_max": 30,
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "auto",
+            "dry",
+            "fan_only"
+          ],
+          "unit": "°C",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

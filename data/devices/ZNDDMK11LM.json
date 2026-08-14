@@ -1,0 +1,189 @@
+{
+  "model": "ZNDDMK11LM",
+  "file": "ZNDDMK11LM.md",
+  "vendor": "Aqara",
+  "description": "Smart lightstrip driver",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZNDDMK11LM.png",
+  "added_at": "2021-09-30T16:40:20Z",
+  "exposes_summary": "power, energy, voltage, device_temperature, power_outage_memory, light (state, brightness, color_temp, color_xy), light (state, brightness, color_temp), dimmer_mode",
+  "exposes": [
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Power outage memory",
+      "type": "binary",
+      "property": "power_outage_memory",
+      "base": "power_outage_memory",
+      "endpoint": null,
+      "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_l1",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp_l1",
+          "base": "color_temp",
+          "value_min": 153,
+          "value_max": 370,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_xy_l1",
+          "base": "color_xy",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_l2",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp_l2",
+          "base": "color_temp",
+          "value_min": 153,
+          "value_max": 370,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warmest"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Dimmer mode",
+      "type": "enum",
+      "property": "dimmer_mode",
+      "base": "dimmer_mode",
+      "endpoint": null,
+      "description": "Switch between rgbw mode or dual color temperature mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "rgbw",
+        "dual_ct"
+      ]
+    }
+  ],
+  "warnings": []
+}

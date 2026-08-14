@@ -1,0 +1,170 @@
+{
+  "model": "MFKZQ01LM",
+  "file": "MFKZQ01LM.md",
+  "vendor": "Aqara",
+  "description": "Cube",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MFKZQ01LM.png",
+  "added_at": "2023-02-01T14:45:54",
+  "exposes_summary": "battery, voltage, action_angle, device_temperature, power_outage_count, action_from_side, action_side, action_to_side, side, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Action angle",
+      "type": "numeric",
+      "property": "action_angle",
+      "base": "action_angle",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": -360,
+      "value_max": 360,
+      "unit": "°"
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action from side",
+      "type": "numeric",
+      "property": "action_from_side",
+      "base": "action_from_side",
+      "endpoint": null,
+      "description": "Side of the cube.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 6
+    },
+    {
+      "name": "Action side",
+      "type": "numeric",
+      "property": "action_side",
+      "base": "action_side",
+      "endpoint": null,
+      "description": "Side of the cube.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 6
+    },
+    {
+      "name": "Action to side",
+      "type": "numeric",
+      "property": "action_to_side",
+      "base": "action_to_side",
+      "endpoint": null,
+      "description": "Side of the cube.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 6
+    },
+    {
+      "name": "Side",
+      "type": "numeric",
+      "property": "side",
+      "base": "side",
+      "endpoint": null,
+      "description": "Side of the cube.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 6
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "shake",
+        "throw",
+        "wakeup",
+        "fall",
+        "tap",
+        "slide",
+        "flip180",
+        "flip90",
+        "rotate_left",
+        "rotate_right"
+      ]
+    }
+  ],
+  "warnings": []
+}

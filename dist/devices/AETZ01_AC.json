@@ -1,0 +1,161 @@
+{
+  "model": "AETZ01_AC",
+  "file": "AETZ01_AC.md",
+  "vendor": "Tuya",
+  "description": "Smart air conditioner",
+  "image": "https://www.zigbee2mqtt.io/images/devices/AETZ01_AC.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "state, climate (local_temperature, current_heating_setpoint, system_mode, fan_mode, swing_mode), sleep, turbo, quiet, power, energy",
+  "exposes": [
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Turn AC ON/OFF.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 16,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "cool",
+            "dry",
+            "fan_only"
+          ],
+          "readable": false
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "value_min": 16,
+          "value_max": 30,
+          "values": [
+            "cool",
+            "dry",
+            "fan_only"
+          ],
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "swing_mode",
+          "base": "swing_mode",
+          "value_min": 16,
+          "value_max": 30,
+          "values": [
+            "cool",
+            "dry",
+            "fan_only"
+          ],
+          "unit": "°C",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Sleep",
+      "type": "binary",
+      "property": "sleep",
+      "base": "sleep",
+      "endpoint": null,
+      "description": "Sleep Mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Turbo",
+      "type": "binary",
+      "property": "turbo",
+      "base": "turbo",
+      "endpoint": null,
+      "description": "Turbo Mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Quiet",
+      "type": "binary",
+      "property": "quiet",
+      "base": "quiet",
+      "endpoint": null,
+      "description": "Quiet Mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    }
+  ],
+  "warnings": []
+}

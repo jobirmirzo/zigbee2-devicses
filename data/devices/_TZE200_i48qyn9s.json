@@ -1,0 +1,229 @@
+{
+  "model": "_TZE200_i48qyn9s",
+  "file": "_TZE200_i48qyn9s.md",
+  "vendor": "Essentials",
+  "description": "Thermostat Zigbee smart home",
+  "image": "https://www.zigbee2mqtt.io/images/devices/_TZE200_i48qyn9s.png",
+  "added_at": "2025-01-03T20:11:48",
+  "exposes_summary": "battery, battery_low, child_lock, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode), comfort_temperature, eco_temperature, open_window_temperature, window_open, detect_window_time_minute, away_setting",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 0.5,
+          "value_max": 29.5,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "auto",
+            "heat",
+            "off"
+          ],
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Comfort temperature",
+      "type": "numeric",
+      "property": "comfort_temperature",
+      "base": "comfort_temperature",
+      "endpoint": null,
+      "description": "Comfort temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Eco temperature",
+      "type": "numeric",
+      "property": "eco_temperature",
+      "base": "eco_temperature",
+      "endpoint": null,
+      "description": "Eco temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Open window temperature",
+      "type": "numeric",
+      "property": "open_window_temperature",
+      "base": "open_window_temperature",
+      "endpoint": null,
+      "description": "open winow detection temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Window open",
+      "type": "binary",
+      "property": "window_open",
+      "base": "window_open",
+      "endpoint": null,
+      "description": "Open window detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "YES",
+      "value_off": "NO"
+    },
+    {
+      "name": "Detect window time minute",
+      "type": "numeric",
+      "property": "detect_window_time_minute",
+      "base": "detect_window_time_minute",
+      "endpoint": null,
+      "description": "Open window time in minutes.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "min"
+    },
+    {
+      "name": "Away setting",
+      "type": "composite",
+      "property": null,
+      "base": null,
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "features": [
+        {
+          "property": "away_preset_days",
+          "type": "numeric",
+          "description": "Away preset days max value is 100"
+        },
+        {
+          "property": "away_preset_temperature",
+          "type": "numeric",
+          "description": "Away preset temperature min value is -10, max value is 35, unit is °C"
+        },
+        {
+          "property": "year",
+          "type": "numeric",
+          "description": "Start away year 20xx unit is year"
+        },
+        {
+          "property": "month",
+          "type": "numeric",
+          "description": "Start away month unit is month"
+        },
+        {
+          "property": "day",
+          "type": "numeric",
+          "description": "Start away day unit is day"
+        },
+        {
+          "property": "hour",
+          "type": "numeric",
+          "description": "Start away hours unit is hour"
+        },
+        {
+          "property": "minute",
+          "type": "numeric",
+          "description": "Start away minutes unit is min"
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "no-property:Away setting"
+  ]
+}

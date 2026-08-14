@@ -1,0 +1,164 @@
+{
+  "model": "HOMA1001_RGBW",
+  "file": "HOMA1001_RGBW.md",
+  "vendor": "Shenzhen Homa",
+  "description": "Smart LED driver RGBW",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HOMA1001_RGBW.png",
+  "added_at": "2023-06-01T08:16:21",
+  "exposes_summary": "light (state, brightness, color_xy), effect, power_on_behavior",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "white",
+      "features": [
+        {
+          "property": "state_white",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_white",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_xy_white",
+          "base": "color_xy",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "rgb",
+      "features": [
+        {
+          "property": "state_rgb",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_rgb",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_xy_rgb",
+          "base": "color_xy",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect_white",
+      "base": "effect",
+      "endpoint": "white",
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect",
+        "colorloop",
+        "stop_colorloop"
+      ]
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect_rgb",
+      "base": "effect",
+      "endpoint": "rgb",
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect",
+        "colorloop",
+        "stop_colorloop"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_white",
+      "base": "power_on_behavior",
+      "endpoint": "white",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_rgb",
+      "base": "power_on_behavior",
+      "endpoint": "rgb",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    }
+  ],
+  "warnings": []
+}

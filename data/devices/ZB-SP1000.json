@@ -1,0 +1,55 @@
+{
+  "model": "ZB-SP1000",
+  "file": "ZB-SP1000.md",
+  "vendor": "easyiot",
+  "description": "ZB-SP1000 is an MP3 player that can support 1,000 voices.",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZB-SP1000.png",
+  "added_at": "2024-10-01T19:01:34",
+  "exposes_summary": "play_voice, set_volume, last_received_status",
+  "exposes": [
+    {
+      "name": "Play voice",
+      "type": "numeric",
+      "property": "play_voice",
+      "base": "play_voice",
+      "endpoint": null,
+      "description": "Please enter ID(1-999).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 999
+    },
+    {
+      "name": "Set volume",
+      "type": "numeric",
+      "property": "set_volume",
+      "base": "set_volume",
+      "endpoint": null,
+      "description": "Please enter volume(1-30).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 30
+    },
+    {
+      "name": "Last received status",
+      "type": "text",
+      "property": "last_received_status",
+      "base": "last_received_status",
+      "endpoint": null,
+      "description": "status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

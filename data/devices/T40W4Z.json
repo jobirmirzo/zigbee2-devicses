@@ -1,0 +1,134 @@
+{
+  "model": "T40W4Z",
+  "file": "T40W4Z.md",
+  "vendor": "ORVIBO",
+  "description": "MixSwitch 4 gangs",
+  "image": "https://www.zigbee2mqtt.io/images/devices/T40W4Z.png",
+  "added_at": "2022-03-01T09:06:16",
+  "exposes_summary": "switch (state), action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "left_up",
+      "features": [
+        {
+          "property": "state_left_up",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "left_down",
+      "features": [
+        {
+          "property": "state_left_down",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "center_up",
+      "features": [
+        {
+          "property": "state_center_up",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "center_down",
+      "features": [
+        {
+          "property": "state_center_down",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "right_up",
+      "features": [
+        {
+          "property": "state_right_up",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "right_down",
+      "features": [
+        {
+          "property": "state_right_down",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "recall",
+        "store",
+        "add",
+        "remove",
+        "remove_all"
+      ]
+    }
+  ],
+  "warnings": []
+}

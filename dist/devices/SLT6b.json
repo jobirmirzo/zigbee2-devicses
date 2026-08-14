@@ -1,0 +1,42 @@
+{
+  "model": "SLT6b",
+  "file": "SLT6b.md",
+  "vendor": "Hive",
+  "description": "Heating thermostat remote control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SLT6b.png",
+  "added_at": "2025-11-30T20:32:43",
+  "exposes_summary": "battery, temperature",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

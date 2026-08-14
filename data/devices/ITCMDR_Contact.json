@@ -1,0 +1,57 @@
+{
+  "model": "ITCMDR_Contact",
+  "file": "ITCMDR_Contact.md",
+  "vendor": "IT Commander",
+  "description": "Contact Sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ITCMDR_Contact.png",
+  "added_at": "2021-06-10T18:52:13Z",
+  "exposes_summary": "contact, battery, voltage",
+  "exposes": [
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates if the contact is closed (= true) or open (= false).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    }
+  ],
+  "warnings": []
+}

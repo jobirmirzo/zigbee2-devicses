@@ -1,0 +1,64 @@
+{
+  "model": "ZIGBEE-B09-UK",
+  "file": "ZIGBEE-B09-UK.md",
+  "vendor": "Zemismart",
+  "description": "Zigbee smart outlet universal socket with USB port",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZIGBEE-B09-UK.png",
+  "added_at": "2024-09-01T12:36:27",
+  "exposes_summary": "switch (state), power_outage_memory",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power outage memory",
+      "type": "enum",
+      "property": "power_outage_memory",
+      "base": "power_outage_memory",
+      "endpoint": null,
+      "description": "Recover state after power outage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off",
+        "restore"
+      ]
+    }
+  ],
+  "warnings": []
+}

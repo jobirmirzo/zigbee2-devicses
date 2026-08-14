@@ -1,0 +1,57 @@
+{
+  "model": "Z3-1BRL",
+  "file": "Z3-1BRL.md",
+  "vendor": "Lutron",
+  "description": "Aurora smart bulb dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Z3-1BRL.png",
+  "added_at": "2019-09-08T21:16:00Z",
+  "exposes_summary": "brightness, battery, action",
+  "exposes": [
+    {
+      "name": "Brightness",
+      "type": "numeric",
+      "property": "brightness",
+      "base": "brightness",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "brightness"
+      ]
+    }
+  ],
+  "warnings": []
+}

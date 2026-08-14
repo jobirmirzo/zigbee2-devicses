@@ -1,0 +1,161 @@
+{
+  "model": "ZG-228Z",
+  "file": "ZG-228Z.md",
+  "vendor": "HOBEIAN",
+  "description": "Vibration alarm",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-228Z.png",
+  "added_at": "2025-05-01T08:16:21",
+  "exposes_summary": "vibration, vibration_siren, alarm, muffling, alarm_time, alarm_volume, alarm_ring, sensitivity, battery",
+  "exposes": [
+    {
+      "name": "Vibration",
+      "type": "binary",
+      "property": "vibration",
+      "base": "vibration",
+      "endpoint": null,
+      "description": "Indicates whether the device detected vibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Vibration siren",
+      "type": "enum",
+      "property": "vibration_siren",
+      "base": "vibration_siren",
+      "endpoint": null,
+      "description": "Vibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "OFF",
+        "ON"
+      ]
+    },
+    {
+      "name": "Alarm",
+      "type": "enum",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Initiatively trigger an alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "beep",
+        "ring",
+        "stop"
+      ]
+    },
+    {
+      "name": "Muffling",
+      "type": "binary",
+      "property": "muffling",
+      "base": "muffling",
+      "endpoint": null,
+      "description": "Stop alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Alarm time",
+      "type": "numeric",
+      "property": "alarm_time",
+      "base": "alarm_time",
+      "endpoint": null,
+      "description": "Alarm sounding time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1800,
+      "unit": "s"
+    },
+    {
+      "name": "Alarm volume",
+      "type": "enum",
+      "property": "alarm_volume",
+      "base": "alarm_volume",
+      "endpoint": null,
+      "description": "Alarm volume.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "middle",
+        "high",
+        "mute"
+      ]
+    },
+    {
+      "name": "Alarm ring",
+      "type": "enum",
+      "property": "alarm_ring",
+      "base": "alarm_ring",
+      "endpoint": null,
+      "description": "Alarm ring.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "mute",
+        "beep",
+        "music"
+      ]
+    },
+    {
+      "name": "Sensitivity",
+      "type": "numeric",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "The larger the value, the more sensitive it is (refresh and update only while active).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 50
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

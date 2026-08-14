@@ -1,0 +1,108 @@
+{
+  "model": "S32052",
+  "file": "S32052.md",
+  "vendor": "SLC",
+  "description": "SLC SmartOne Driver CC LED dimmable driver 2CH TW 350-1500mA 50W",
+  "image": "https://www.zigbee2mqtt.io/images/devices/S32052.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "light (state, brightness, color_temp, color_temp_startup), effect, power_on_behavior",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 160,
+          "value_max": 450,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup",
+          "base": "color_temp_startup",
+          "value_min": 160,
+          "value_max": 450,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    }
+  ],
+  "warnings": []
+}

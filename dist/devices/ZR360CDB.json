@@ -1,0 +1,123 @@
+{
+  "model": "ZR360CDB",
+  "file": "ZR360CDB.md",
+  "vendor": "Zorro Alert",
+  "description": "Multifunctional CO2 detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZR360CDB.png",
+  "added_at": "2024-04-29T19:24:38",
+  "exposes_summary": "humidity, temperature, co2, alarm_ringtone, backlight_mode, battery_state, air_quality",
+  "exposes": [
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "The measured CO2 (carbon dioxide) value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Alarm ringtone",
+      "type": "enum",
+      "property": "alarm_ringtone",
+      "base": "alarm_ringtone",
+      "endpoint": null,
+      "description": "Ringtone of the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "melody_1",
+        "melody_2",
+        "OFF"
+      ]
+    },
+    {
+      "name": "Backlight mode",
+      "type": "numeric",
+      "property": "backlight_mode",
+      "base": "backlight_mode",
+      "endpoint": null,
+      "description": "Backlight.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 3
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "State of the battery.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Air quality",
+      "type": "enum",
+      "property": "air_quality",
+      "base": "air_quality",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "excellent",
+        "moderate",
+        "poor"
+      ]
+    }
+  ],
+  "warnings": []
+}

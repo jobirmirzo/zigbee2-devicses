@@ -1,0 +1,122 @@
+{
+  "model": "3RTHS0324Z",
+  "file": "3RTHS0324Z.md",
+  "vendor": "Third Reality",
+  "description": "Temperature and Humidity Sensor Lite Gen2",
+  "image": "https://www.zigbee2mqtt.io/images/devices/3RTHS0324Z.png",
+  "added_at": "2026-03-31T19:04:39",
+  "exposes_summary": "battery, temperature, humidity, celsius_degree_calibration, humidity_calibration, fahrenheit_degree_calibration, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Celsius degree calibration",
+      "type": "numeric",
+      "property": "celsius_degree_calibration",
+      "base": "celsius_degree_calibration",
+      "endpoint": null,
+      "description": "Celsius degree calibration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -200,
+      "value_max": 200,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Humidity calibration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -100,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Fahrenheit degree calibration",
+      "type": "numeric",
+      "property": "fahrenheit_degree_calibration",
+      "base": "fahrenheit_degree_calibration",
+      "endpoint": null,
+      "description": "Fahrenheit degree calibration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -200,
+      "value_max": 200,
+      "unit": "°F"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "toggle"
+      ]
+    }
+  ],
+  "warnings": []
+}

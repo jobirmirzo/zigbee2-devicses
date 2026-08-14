@@ -1,0 +1,48 @@
+{
+  "model": "S24019",
+  "file": "S24019.md",
+  "vendor": "The Light Group",
+  "description": "SLC SmartOne led dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/S24019.png",
+  "added_at": "2022-06-01T15:08:55",
+  "exposes_summary": "light (state, brightness, level_config)",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "level_config",
+          "base": "level_config",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,64 @@
+{
+  "model": "W10-Z10T",
+  "file": "W10-Z10T.md",
+  "vendor": "Lincukoo",
+  "description": "Smart water leakage alarm sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/W10-Z10T.png",
+  "added_at": "2026-01-31T13:10:42",
+  "exposes_summary": "alarm_status, alarm_switch, alarm_ringtone, battery",
+  "exposes": [
+    {
+      "name": "Alarm status",
+      "type": "enum",
+      "property": "alarm_status",
+      "base": "alarm_status",
+      "endpoint": null,
+      "description": "device alarm status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "normal",
+        "alarm"
+      ]
+    },
+    {
+      "name": "Alarm switch",
+      "type": "enum",
+      "property": "alarm_switch",
+      "base": "alarm_switch",
+      "endpoint": null,
+      "description": "switch of the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "mute",
+        "alarm"
+      ]
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "battery state of the sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "middle",
+        "high"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,319 @@
+{
+  "model": "MFP-UP",
+  "file": "MFP-UP.md",
+  "vendor": "YOKIS",
+  "description": "Remote module for pilot wire heating system",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MFP-UP.png",
+  "added_at": "2025-09-30T19:35:14",
+  "exposes_summary": "identify, power, current, energy, power_failure_mode, actual_order, order_timer, pre_order_timer, timer_unit, led_mode, pilot_wire_relay_mode, order_scrolling_mode, order_number_supported, fallback_order, pilotwire_set_order, pilotwire_toggle_order, reset_to_factory_settings, relaunch_ble_advert",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Power failure mode",
+      "type": "enum",
+      "property": "power_failure_mode",
+      "base": "power_failure_mode",
+      "endpoint": null,
+      "description": "Define the device behavior after power failure.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "last_state",
+        "off",
+        "on",
+        "blink"
+      ]
+    },
+    {
+      "name": "Actual order",
+      "type": "enum",
+      "property": "actual_order",
+      "base": "actual_order",
+      "endpoint": null,
+      "description": "Represent the actual order used by the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "stop",
+        "frost_off",
+        "eco",
+        "confort_2",
+        "confort_1",
+        "confort",
+        "shortcut_error",
+        "temperature_error"
+      ]
+    },
+    {
+      "name": "Order timer",
+      "type": "numeric",
+      "property": "order_timer",
+      "base": "order_timer",
+      "endpoint": null,
+      "description": "Define the “Order” embedded timer duration. This timer is set when the device changes its order (in second). After that duration, the device is set back to its fallback order..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 4294967295
+    },
+    {
+      "name": "Pre order timer",
+      "type": "numeric",
+      "property": "pre_order_timer",
+      "base": "pre_order_timer",
+      "endpoint": null,
+      "description": "Define the duration before an order is set. This timer is used when a new order is asked, it corresponds to the time before this order is applied. The duration is set in second..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 4294967295
+    },
+    {
+      "name": "Timer unit",
+      "type": "enum",
+      "property": "timer_unit",
+      "base": "timer_unit",
+      "endpoint": null,
+      "description": "Represent the actual unit used for local command configuration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "second",
+        "minutes"
+      ]
+    },
+    {
+      "name": "Led mode",
+      "type": "enum",
+      "property": "led_mode",
+      "base": "led_mode",
+      "endpoint": null,
+      "description": "Define the product’s LED behavior: - 0x00 -> LED is always ON and blink during radio activity (default) - 0x01 -> LED is only OFF during few seconds after a mode transition.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "led_on",
+        "led_off"
+      ]
+    },
+    {
+      "name": "Pilot wire relay mode",
+      "type": "enum",
+      "property": "pilot_wire_relay_mode",
+      "base": "pilot_wire_relay_mode",
+      "endpoint": null,
+      "description": "Define if the product must be set into pilot wire relay mode: - 0x00 -> Relay mode is deactivated (default) - 0x01 -> Relay mode is activated.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "relay_on",
+        "relay_off"
+      ]
+    },
+    {
+      "name": "Order scrolling mode",
+      "type": "enum",
+      "property": "order_scrolling_mode",
+      "base": "order_scrolling_mode",
+      "endpoint": null,
+      "description": "Define the order scrolling sense: - 0x00 -> Forward : Confort -> Confort – 1 -> Confort – 2 -> Eco -> Hors-Gel -> Arrêt (default) - 0x01 -> Backward : Arrêt -> Hors-Gel -> Eco -> Confort – 2 -> Confort – 1 -> Confort.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "forward",
+        "backward"
+      ]
+    },
+    {
+      "name": "Order number supported",
+      "type": "enum",
+      "property": "order_number_supported",
+      "base": "order_number_supported",
+      "endpoint": null,
+      "description": "Define the number of orders supported by the device: - 0x00 -> 4 orders (Confort, Eco, Hors-Gel, Arrêt) - 0x01 -> 6 orders (Confort, Confort – 1, Confort – 2, Eco, Hors-Gel, Arrêt) - (default).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "four_orders",
+        "six_orders"
+      ]
+    },
+    {
+      "name": "Fallback order",
+      "type": "enum",
+      "property": "fallback_order",
+      "base": "fallback_order",
+      "endpoint": null,
+      "description": "Represent the fallback order used by the device after the end of an order timer is reached.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "stop",
+        "frost_off",
+        "eco",
+        "confort_2",
+        "confort_1",
+        "confort"
+      ]
+    },
+    {
+      "name": "Pilotwire set order",
+      "type": "enum",
+      "property": "pilotwire_set_order",
+      "base": "pilotwire_set_order",
+      "endpoint": null,
+      "description": "Set the device in the specified order..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "stop",
+        "frost_off",
+        "eco",
+        "confort_2",
+        "confort_1",
+        "confort"
+      ]
+    },
+    {
+      "name": "Pilotwire toggle order",
+      "type": "enum",
+      "property": "pilotwire_toggle_order",
+      "base": "pilotwire_toggle_order",
+      "endpoint": null,
+      "description": "Toggle between order by respecting the scrolling order.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "pilotwire_toggle_order"
+      ]
+    },
+    {
+      "name": "Reset to factory settings",
+      "type": "enum",
+      "property": "reset_to_factory_settings",
+      "base": "reset_to_factory_settings",
+      "endpoint": null,
+      "description": "Reset setting depending on RESET ACTION value.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "factory_reset",
+        "configuration_reset",
+        "network_reset"
+      ]
+    },
+    {
+      "name": "Relaunch ble advert",
+      "type": "enum",
+      "property": "relaunch_ble_advert",
+      "base": "relaunch_ble_advert",
+      "endpoint": null,
+      "description": "Relaunch BLE advertising for 15 minutes.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "relaunch_ble_advert"
+      ]
+    }
+  ],
+  "warnings": []
+}

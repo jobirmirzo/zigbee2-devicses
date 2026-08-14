@@ -1,0 +1,95 @@
+{
+  "model": "NH3516A",
+  "file": "NH3516A.md",
+  "vendor": "Schneider Electric",
+  "description": "Rotary dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/NH3516A.png",
+  "added_at": "2022-12-13T19:23:01Z",
+  "exposes_summary": "light (state, brightness, level_config), ballast_minimum_level, ballast_maximum_level, dimmer_mode",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "level_config",
+          "base": "level_config",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Ballast minimum level",
+      "type": "numeric",
+      "property": "ballast_minimum_level",
+      "base": "ballast_minimum_level",
+      "endpoint": null,
+      "description": "Specifies the minimum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Ballast maximum level",
+      "type": "numeric",
+      "property": "ballast_maximum_level",
+      "base": "ballast_maximum_level",
+      "endpoint": null,
+      "description": "Specifies the maximum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Dimmer mode",
+      "type": "enum",
+      "property": "dimmer_mode",
+      "base": "dimmer_mode",
+      "endpoint": null,
+      "description": "Auto detects the correct mode for the ballast. RL-LED may have improved dimming quality for LEDs..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Auto",
+        "RL-LED"
+      ]
+    }
+  ],
+  "warnings": []
+}

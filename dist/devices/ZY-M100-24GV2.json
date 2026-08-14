@@ -1,0 +1,151 @@
+{
+  "model": "ZY-M100-24GV2",
+  "file": "ZY-M100-24GV2.md",
+  "vendor": "Tuya",
+  "description": "24G MmWave radar human presence motion sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZY-M100-24GV2.png",
+  "added_at": "2024-09-01T12:36:44",
+  "exposes_summary": "state, presence, distance, illuminance, move_sensitivity, presence_sensitivity, detection_distance_min, detection_distance_max, presence_timeout",
+  "exposes": [
+    {
+      "name": "State",
+      "type": "enum",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Presence state sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "presence",
+        "move"
+      ]
+    },
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Distance",
+      "type": "numeric",
+      "property": "distance",
+      "base": "distance",
+      "endpoint": null,
+      "description": "Target distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Illuminance sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Move sensitivity",
+      "type": "numeric",
+      "property": "move_sensitivity",
+      "base": "move_sensitivity",
+      "endpoint": null,
+      "description": "Motion Sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Presence sensitivity",
+      "type": "numeric",
+      "property": "presence_sensitivity",
+      "base": "presence_sensitivity",
+      "endpoint": null,
+      "description": "Presence Sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Detection distance min",
+      "type": "numeric",
+      "property": "detection_distance_min",
+      "base": "detection_distance_min",
+      "endpoint": null,
+      "description": "Minimum range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 8.25,
+      "unit": "m"
+    },
+    {
+      "name": "Detection distance max",
+      "type": "numeric",
+      "property": "detection_distance_max",
+      "base": "detection_distance_max",
+      "endpoint": null,
+      "description": "Maximum range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.75,
+      "value_max": 9,
+      "unit": "m"
+    },
+    {
+      "name": "Presence timeout",
+      "type": "numeric",
+      "property": "presence_timeout",
+      "base": "presence_timeout",
+      "endpoint": null,
+      "description": "Fade time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 1500,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

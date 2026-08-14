@@ -1,0 +1,396 @@
+{
+  "model": "_TZE284_6kijc7nd",
+  "file": "_TZE284_6kijc7nd.md",
+  "vendor": "Tervix",
+  "description": "Tervix Zigbee thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/_TZE284_6kijc7nd.png",
+  "added_at": "2025-09-30T19:37:28",
+  "exposes_summary": "climate (current_heating_setpoint, local_temperature, system_mode, running_state), local_temperature, mode, run_mode, week_program_periods, factory_reset, child_lock, window_state, working_status, window_check, frost_protection, sensor_choose, humidity_control, humidity, week_schedule, window_open_detection_time, window_open_detection_temp, window_open_delay_time, upper_temp, temperature_correction, switch_sensitivity, floor_temp_protection, floor_low_protection",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": false
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Local temperature",
+      "type": "numeric",
+      "property": "local_temperature",
+      "base": "local_temperature",
+      "endpoint": null,
+      "description": "Current temperature measured by the thermostat..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "manual",
+        "program"
+      ]
+    },
+    {
+      "name": "Run mode",
+      "type": "enum",
+      "property": "run_mode",
+      "base": "run_mode",
+      "endpoint": null,
+      "description": "Operation mode of the thermostat (heat or cool)..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "heat_mode",
+        "cool_mode"
+      ]
+    },
+    {
+      "name": "Week program periods",
+      "type": "enum",
+      "property": "week_program_periods",
+      "base": "week_program_periods",
+      "endpoint": null,
+      "description": "Number of program periods per week (read-only)..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "periods_4"
+      ]
+    },
+    {
+      "name": "Factory reset",
+      "type": "binary",
+      "property": "factory_reset",
+      "base": "factory_reset",
+      "endpoint": null,
+      "description": "WARNING: Restores the device to factory settings. All configurations will be lost..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables or disables the child lock feature..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Window state",
+      "type": "enum",
+      "property": "window_state",
+      "base": "window_state",
+      "endpoint": null,
+      "description": "Indicates whether the window is open or closed..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "open",
+        "close"
+      ]
+    },
+    {
+      "name": "Working status",
+      "type": "enum",
+      "property": "working_status",
+      "base": "working_status",
+      "endpoint": null,
+      "description": "Current working status of the thermostat..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "Keeping Warm",
+        "Working"
+      ]
+    },
+    {
+      "name": "Window check",
+      "type": "binary",
+      "property": "window_check",
+      "base": "window_check",
+      "endpoint": null,
+      "description": "Checks whether the window is open or closed..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Frost protection",
+      "type": "binary",
+      "property": "frost_protection",
+      "base": "frost_protection",
+      "endpoint": null,
+      "description": "Enables frost protection mode..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Sensor choose",
+      "type": "enum",
+      "property": "sensor_choose",
+      "base": "sensor_choose",
+      "endpoint": null,
+      "description": "Selects between internal or external temperature sensors..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "in",
+        "out"
+      ]
+    },
+    {
+      "name": "Humidity control",
+      "type": "binary",
+      "property": "humidity_control",
+      "base": "humidity_control",
+      "endpoint": null,
+      "description": "Controls the humidity protection feature..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Displays the current relative humidity level in percentage..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Week schedule",
+      "type": "text",
+      "property": "week_schedule",
+      "base": "week_schedule",
+      "endpoint": null,
+      "description": "Weekly schedule: structured format like - Monday: [{\"time\":\"06:30\",\"temp\":20.0},...]..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Window open detection time",
+      "type": "numeric",
+      "property": "window_open_detection_time",
+      "base": "window_open_detection_time",
+      "endpoint": null,
+      "description": "Window open detection threshold in minutes..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 30,
+      "unit": "min"
+    },
+    {
+      "name": "Window open detection temp",
+      "type": "numeric",
+      "property": "window_open_detection_temp",
+      "base": "window_open_detection_temp",
+      "endpoint": null,
+      "description": "Temperature threshold for window open detection..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 4,
+      "unit": "°C"
+    },
+    {
+      "name": "Window open delay time",
+      "type": "numeric",
+      "property": "window_open_delay_time",
+      "base": "window_open_delay_time",
+      "endpoint": null,
+      "description": "Delay time for triggering window open detection (minutes)..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 60,
+      "unit": "min"
+    },
+    {
+      "name": "Upper temp",
+      "type": "numeric",
+      "property": "upper_temp",
+      "base": "upper_temp",
+      "endpoint": null,
+      "description": "Set the upper temperature limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 35,
+      "value_max": 95,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature correction",
+      "type": "numeric",
+      "property": "temperature_correction",
+      "base": "temperature_correction",
+      "endpoint": null,
+      "description": "Temperature calibration adjustment..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -9,
+      "value_max": 9,
+      "unit": "°C"
+    },
+    {
+      "name": "Switch sensitivity",
+      "type": "numeric",
+      "property": "switch_sensitivity",
+      "base": "switch_sensitivity",
+      "endpoint": null,
+      "description": "Temperature difference threshold to trigger switching..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 5,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor temp protection",
+      "type": "numeric",
+      "property": "floor_temp_protection",
+      "base": "floor_temp_protection",
+      "endpoint": null,
+      "description": "Maximum allowed floor temperature for protection..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 60,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor low protection",
+      "type": "numeric",
+      "property": "floor_low_protection",
+      "base": "floor_low_protection",
+      "endpoint": null,
+      "description": "Minimum allowed floor temperature for protection..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 30,
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

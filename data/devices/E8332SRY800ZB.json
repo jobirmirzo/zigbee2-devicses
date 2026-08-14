@@ -1,0 +1,103 @@
+{
+  "model": "E8332SRY800ZB",
+  "file": "E8332SRY800ZB.md",
+  "vendor": "Schneider Electric",
+  "description": "Wiser AvatarOn 2G onoff switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E8332SRY800ZB.png",
+  "added_at": "2024-06-01T08:47:20",
+  "exposes_summary": "switch (state), indicator_luminance_level, indicator_color, indicator_mode",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Indicator luminance level",
+      "type": "enum",
+      "property": "indicator_luminance_level",
+      "base": "indicator_luminance_level",
+      "endpoint": null,
+      "description": "Set indicator luminance Level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "100"
+      ]
+    },
+    {
+      "name": "Indicator color",
+      "type": "enum",
+      "property": "indicator_color",
+      "base": "indicator_color",
+      "endpoint": null,
+      "description": "Set indicator color.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode",
+      "base": "indicator_mode",
+      "endpoint": null,
+      "description": "Set indicator mode for switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "reverse_with_load",
+        "consistent_with_load",
+        "always_off",
+        "always_on"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,169 @@
+{
+  "model": "HS2FD-EF1-3.0",
+  "file": "HS2FD-EF1-3.0.md",
+  "vendor": "Heiman",
+  "description": "Fall Detection Sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS2FD-EF1-3.0.png",
+  "added_at": "2025-07-01T17:54:38",
+  "exposes_summary": "enable_indicator, enable_sub_region_isolation, occupancy, sensor_status, fall_status, cell_mounted_table, wall_mounted_table, sub_region_isolation_table, sensitivity, installation_method",
+  "exposes": [
+    {
+      "name": "Enable indicator",
+      "type": "binary",
+      "property": "enable_indicator",
+      "base": "enable_indicator",
+      "endpoint": null,
+      "description": "active green indicator.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Enable sub region isolation",
+      "type": "binary",
+      "property": "enable_sub_region_isolation",
+      "base": "enable_sub_region_isolation",
+      "endpoint": null,
+      "description": "active green indicator.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates if someone is present.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Sensor status",
+      "type": "enum",
+      "property": "sensor_status",
+      "base": "sensor_status",
+      "endpoint": null,
+      "description": "Sensor activity status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "activity",
+        "unknown"
+      ]
+    },
+    {
+      "name": "Fall status",
+      "type": "enum",
+      "property": "fall_status",
+      "base": "fall_status",
+      "endpoint": null,
+      "description": "Fall detection status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "normal",
+        "fall_warning",
+        "fall_alarm",
+        "unknown"
+      ]
+    },
+    {
+      "name": "Cell mounted table",
+      "type": "text",
+      "property": "cell_mounted_table",
+      "base": "cell_mounted_table",
+      "endpoint": null,
+      "description": "Ceiling installation area coordinate table. Format: 'X1,X2,Y1,Y2,height'. Value range: -2000≤X1≤0, 0≤X2≤2000 -2500≤Y1≤0, 0≤Y2≤2500 2300≤height≤3000 Unit:mm.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Wall mounted table",
+      "type": "text",
+      "property": "wall_mounted_table",
+      "base": "wall_mounted_table",
+      "endpoint": null,
+      "description": "Wall-mounted installation area coordinate table. Format: 'X1,X2,Y2,height' Value range: -2000≤X1≤0, 0≤X2≤2000 200≤Y2≤4000 1500≤height≤1600  Unit:mm..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Sub region isolation table",
+      "type": "text",
+      "property": "sub_region_isolation_table",
+      "base": "sub_region_isolation_table",
+      "endpoint": null,
+      "description": "Undetectable area coordinate table. Format: 'x1,x2,y1,y2,z1,z2'. Ranges: X1≤x1≤x2≤X2 When wall-mounted:  200≤y1≤y2≤Y2 0≤z1≤z2≤2300 Ceiling installation: Y1≤y1≤y2≤Y2 0≤z1≤z2≤height Unit:mm.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "0: Off, 1: Low sensitivity, 2: High sensitivity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Off",
+        "LowSensitivity",
+        "HighSensitivity"
+      ]
+    },
+    {
+      "name": "Installation method",
+      "type": "enum",
+      "property": "installation_method",
+      "base": "installation_method",
+      "endpoint": null,
+      "description": "0: Wall-mounted, 1: Ceiling, 2: Rotate ceiling 45°.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "WallMounted",
+        "Ceiling",
+        "RotateCeiling45"
+      ]
+    }
+  ],
+  "warnings": []
+}

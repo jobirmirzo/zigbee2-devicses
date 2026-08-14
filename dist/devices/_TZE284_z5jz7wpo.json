@@ -1,0 +1,86 @@
+{
+  "model": "_TZE284_z5jz7wpo",
+  "file": "_TZE284_z5jz7wpo.md",
+  "vendor": "Tuya",
+  "description": "Ceiling fan control module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/_TZE284_z5jz7wpo.png",
+  "added_at": "2025-09-01T18:20:17",
+  "exposes_summary": "fan (state, speed), power_on_behavior, countdown_hours, light_mode",
+  "exposes": [
+    {
+      "name": "Fan",
+      "type": "fan",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "restore"
+      ]
+    },
+    {
+      "name": "Countdown hours",
+      "type": "numeric",
+      "property": "countdown_hours",
+      "base": "countdown_hours",
+      "endpoint": null,
+      "description": "Fan ON time in hours (15 min increments).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.25,
+      "value_max": 12,
+      "unit": "h"
+    },
+    {
+      "name": "Light mode",
+      "type": "enum",
+      "property": "light_mode",
+      "base": "light_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "none",
+        "relay",
+        "pos"
+      ]
+    }
+  ],
+  "warnings": []
+}

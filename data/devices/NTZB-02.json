@@ -1,0 +1,131 @@
+{
+  "model": "NTZB-02",
+  "file": "NTZB-02.md",
+  "vendor": "Nova Digital",
+  "description": "2 switches and 1 socket with backlight",
+  "image": "https://www.zigbee2mqtt.io/images/devices/NTZB-02.png",
+  "added_at": "2026-04-30T19:57:28",
+  "exposes_summary": "switch (state), countdown, backlight_mode, indicator_mode, inching_control_set",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l3",
+      "features": [
+        {
+          "property": "state_l3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown",
+      "base": "countdown",
+      "endpoint": null,
+      "description": "Toggle the device after a set duration (one time action).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Power outage memory",
+      "type": "enum",
+      "property": "power_outage_memory",
+      "base": "power_outage_memory",
+      "endpoint": null,
+      "description": "Recover state after power outage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off",
+        "restore"
+      ]
+    },
+    {
+      "name": "Backlight mode",
+      "type": "binary",
+      "property": "backlight_mode",
+      "base": "backlight_mode",
+      "endpoint": null,
+      "description": "Mode of the backlight.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode",
+      "base": "indicator_mode",
+      "endpoint": null,
+      "description": "LED indicator mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "off/on",
+        "on/off",
+        "on"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,102 @@
+{
+  "model": "412171",
+  "file": "412171.md",
+  "vendor": "Legrand",
+  "description": "DIN contactor module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/412171.png",
+  "added_at": "2020-12-30T11:31:00Z",
+  "exposes_summary": "device_mode, auto_mode, switch (state), power_on_behavior, power",
+  "exposes": [
+    {
+      "name": "Device mode",
+      "type": "enum",
+      "property": "device_mode",
+      "base": "device_mode",
+      "endpoint": null,
+      "description": "Switch: allow manual on/off, auto uses contact's C1/C2 wired actions for Peak/Off-Peak electricity rates.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "switch",
+        "auto"
+      ]
+    },
+    {
+      "name": "Auto mode",
+      "type": "enum",
+      "property": "auto_mode",
+      "base": "auto_mode",
+      "endpoint": null,
+      "description": "Off/auto/on (override) (works only if device is set to \"auto\" mode).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "auto",
+        "on_override"
+      ]
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    }
+  ],
+  "warnings": []
+}

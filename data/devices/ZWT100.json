@@ -1,0 +1,392 @@
+{
+  "model": "ZWT100",
+  "file": "ZWT100.md",
+  "vendor": "AVATTO",
+  "description": "Zigbee Thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZWT100.png",
+  "added_at": "2026-06-09T18:58:47",
+  "exposes_summary": "state, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, running_state), mode, child_lock, fault, upper_temperature_limit, frost_protection, work_days, sound, sensor_selection, temperature_variation, sensor_temperature_limit, weekly_schedule, backlight, direction_mode",
+  "exposes": [
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "On/off state of the device..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 95,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "manual",
+        "program",
+        "temporary"
+      ]
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Fault",
+      "type": "text",
+      "property": "fault",
+      "base": "fault",
+      "endpoint": null,
+      "description": "Fault status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Upper temperature limit",
+      "type": "numeric",
+      "property": "upper_temperature_limit",
+      "base": "upper_temperature_limit",
+      "endpoint": null,
+      "description": "Upper temperature limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 15,
+      "value_max": 95,
+      "unit": "°C"
+    },
+    {
+      "name": "Frost protection",
+      "type": "binary",
+      "property": "frost_protection",
+      "base": "frost_protection",
+      "endpoint": null,
+      "description": "When the room temperature is lower than 5 ℃, the valve opens; when the temperature rises to 8 ℃, the valve closes..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Work days",
+      "type": "enum",
+      "property": "work_days",
+      "base": "work_days",
+      "endpoint": null,
+      "description": "Holiday option and turn off weekly programming..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "two-day weekend",
+        "single day off",
+        "no rest",
+        "turn off programming"
+      ]
+    },
+    {
+      "name": "Sound",
+      "type": "binary",
+      "property": "sound",
+      "base": "sound",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Sensor selection",
+      "type": "enum",
+      "property": "sensor_selection",
+      "base": "sensor_selection",
+      "endpoint": null,
+      "description": "Select sensors for temperature measurement..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "in",
+        "out",
+        "all"
+      ]
+    },
+    {
+      "name": "Temperature variation",
+      "type": "numeric",
+      "property": "temperature_variation",
+      "base": "temperature_variation",
+      "endpoint": null,
+      "description": "Temperature difference setting for heating activation.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 10,
+      "unit": "°C"
+    },
+    {
+      "name": "Sensor temperature limit",
+      "type": "numeric",
+      "property": "sensor_temperature_limit",
+      "base": "sensor_temperature_limit",
+      "endpoint": null,
+      "description": "Temperature limit for sensors.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 25,
+      "value_max": 95,
+      "unit": "°C"
+    },
+    {
+      "name": "Weekly schedule",
+      "type": "composite",
+      "property": "weekly_schedule",
+      "base": "weekly_schedule",
+      "endpoint": null,
+      "description": "Time-temperature schedule: 6 workday periods + 2 weekend periods.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "workday_hour_1",
+          "type": "numeric",
+          "description": "Hour of workday period 1 max value is 23"
+        },
+        {
+          "property": "workday_minute_1",
+          "type": "numeric",
+          "description": "Minute of workday period 1 max value is 59"
+        },
+        {
+          "property": "workday_temp_1",
+          "type": "numeric",
+          "description": "Target temperature of workday period 1 min value is 5, max value is 95, unit is °C"
+        },
+        {
+          "property": "workday_hour_2",
+          "type": "numeric",
+          "description": "Hour of workday period 2 max value is 23"
+        },
+        {
+          "property": "workday_minute_2",
+          "type": "numeric",
+          "description": "Minute of workday period 2 max value is 59"
+        },
+        {
+          "property": "workday_temp_2",
+          "type": "numeric",
+          "description": "Target temperature of workday period 2 min value is 5, max value is 95, unit is °C"
+        },
+        {
+          "property": "workday_hour_3",
+          "type": "numeric",
+          "description": "Hour of workday period 3 max value is 23"
+        },
+        {
+          "property": "workday_minute_3",
+          "type": "numeric",
+          "description": "Minute of workday period 3 max value is 59"
+        },
+        {
+          "property": "workday_temp_3",
+          "type": "numeric",
+          "description": "Target temperature of workday period 3 min value is 5, max value is 95, unit is °C"
+        },
+        {
+          "property": "workday_hour_4",
+          "type": "numeric",
+          "description": "Hour of workday period 4 max value is 23"
+        },
+        {
+          "property": "workday_minute_4",
+          "type": "numeric",
+          "description": "Minute of workday period 4 max value is 59"
+        },
+        {
+          "property": "workday_temp_4",
+          "type": "numeric",
+          "description": "Target temperature of workday period 4 min value is 5, max value is 95, unit is °C"
+        },
+        {
+          "property": "workday_hour_5",
+          "type": "numeric",
+          "description": "Hour of workday period 5 max value is 23"
+        },
+        {
+          "property": "workday_minute_5",
+          "type": "numeric",
+          "description": "Minute of workday period 5 max value is 59"
+        },
+        {
+          "property": "workday_temp_5",
+          "type": "numeric",
+          "description": "Target temperature of workday period 5 min value is 5, max value is 95, unit is °C"
+        },
+        {
+          "property": "workday_hour_6",
+          "type": "numeric",
+          "description": "Hour of workday period 6 max value is 23"
+        },
+        {
+          "property": "workday_minute_6",
+          "type": "numeric",
+          "description": "Minute of workday period 6 max value is 59"
+        },
+        {
+          "property": "workday_temp_6",
+          "type": "numeric",
+          "description": "Target temperature of workday period 6 min value is 5, max value is 95, unit is °C"
+        },
+        {
+          "property": "weekend_hour_1",
+          "type": "numeric",
+          "description": "Hour of weekend period 1 max value is 23"
+        },
+        {
+          "property": "weekend_minute_1",
+          "type": "numeric",
+          "description": "Minute of weekend period 1 max value is 59"
+        },
+        {
+          "property": "weekend_temp_1",
+          "type": "numeric",
+          "description": "Target temperature of weekend period 1 min value is 5, max value is 95, unit is °C"
+        },
+        {
+          "property": "weekend_hour_2",
+          "type": "numeric",
+          "description": "Hour of weekend period 2 max value is 23"
+        },
+        {
+          "property": "weekend_minute_2",
+          "type": "numeric",
+          "description": "Minute of weekend period 2 max value is 59"
+        },
+        {
+          "property": "weekend_temp_2",
+          "type": "numeric",
+          "description": "Target temperature of weekend period 2 min value is 5, max value is 95, unit is °C"
+        }
+      ]
+    },
+    {
+      "name": "Backlight",
+      "type": "enum",
+      "property": "backlight",
+      "base": "backlight",
+      "endpoint": null,
+      "description": "The backlight brightness..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "micro light",
+        "medium light",
+        "high light"
+      ]
+    },
+    {
+      "name": "Direction mode",
+      "type": "binary",
+      "property": "direction_mode",
+      "base": "direction_mode",
+      "endpoint": null,
+      "description": "ON: secondary_reversal, OFF: primary_reversal.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

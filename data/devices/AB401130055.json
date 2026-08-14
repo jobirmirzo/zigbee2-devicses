@@ -1,0 +1,75 @@
+{
+  "model": "AB401130055",
+  "file": "AB401130055.md",
+  "vendor": "OSRAM",
+  "description": "LIGHTIFY Surface Light LED Tunable White",
+  "image": "https://www.zigbee2mqtt.io/images/devices/AB401130055.png",
+  "added_at": "2019-07-22T20:08:17Z",
+  "exposes_summary": "light (state, brightness, color_temp), effect",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 153,
+          "value_max": 370,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warmest"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    }
+  ],
+  "warnings": []
+}

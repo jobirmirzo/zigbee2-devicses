@@ -1,0 +1,143 @@
+{
+  "model": "YNDX_00530",
+  "file": "YNDX_00530.md",
+  "vendor": "Yandex",
+  "description": "Dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/YNDX_00530.png",
+  "added_at": "2025-04-01T18:30:52",
+  "exposes_summary": "light (state, brightness), effect, power_on_behavior, ballast_minimum_level, ballast_maximum_level, led_indicator, button_mode",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Ballast minimum level",
+      "type": "numeric",
+      "property": "ballast_minimum_level",
+      "base": "ballast_minimum_level",
+      "endpoint": null,
+      "description": "Specifies the minimum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Ballast maximum level",
+      "type": "numeric",
+      "property": "ballast_maximum_level",
+      "base": "ballast_maximum_level",
+      "endpoint": null,
+      "description": "Specifies the maximum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Led indicator",
+      "type": "binary",
+      "property": "led_indicator",
+      "base": "led_indicator",
+      "endpoint": null,
+      "description": "Led indicator.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Button mode",
+      "type": "enum",
+      "property": "button_mode",
+      "base": "button_mode",
+      "endpoint": null,
+      "description": "Dimmer button mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "general",
+        "alternative"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,180 @@
+{
+  "model": "Water_Station",
+  "file": "Water_Station.md",
+  "vendor": "Bacchus",
+  "description": "Water_Station",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Water_Station.png",
+  "added_at": "2025-05-01T17:56:31",
+  "exposes_summary": "pump_1, pump_1_duration, pump_2, pump_3_duration, pump_3, pump_all, beeper, beeper_on_leak, water_leak, full",
+  "exposes": [
+    {
+      "name": "Pump 1",
+      "type": "binary",
+      "property": "pump_1_1",
+      "base": "pump_1",
+      "endpoint": "1",
+      "description": "Enable first pump.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Pump 1 duration",
+      "type": "numeric",
+      "property": "pump_1_duration_1",
+      "base": "pump_1_duration",
+      "endpoint": "1",
+      "description": "Duration of pump 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "sec"
+    },
+    {
+      "name": "Pump 2",
+      "type": "binary",
+      "property": "pump_2_2",
+      "base": "pump_2",
+      "endpoint": "2",
+      "description": "Enable second pump.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Pump 3 duration",
+      "type": "numeric",
+      "property": "pump_3_duration_2",
+      "base": "pump_3_duration",
+      "endpoint": "2",
+      "description": "Duration of pump 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "sec"
+    },
+    {
+      "name": "Pump 3",
+      "type": "binary",
+      "property": "pump_3_3",
+      "base": "pump_3",
+      "endpoint": "3",
+      "description": "Enable third pump.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Pump 3 duration",
+      "type": "numeric",
+      "property": "pump_3_duration_3",
+      "base": "pump_3_duration",
+      "endpoint": "3",
+      "description": "Duration of pump 3.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "sec"
+    },
+    {
+      "name": "Pump all",
+      "type": "binary",
+      "property": "pump_all_4",
+      "base": "pump_all",
+      "endpoint": "4",
+      "description": "Enable all pumps.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Beeper",
+      "type": "binary",
+      "property": "beeper_5",
+      "base": "beeper",
+      "endpoint": "5",
+      "description": "Beeper.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Beeper on leak",
+      "type": "binary",
+      "property": "beeper_on_leak_1",
+      "base": "beeper_on_leak",
+      "endpoint": "1",
+      "description": "Beeper.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Full",
+      "type": "binary",
+      "property": "full",
+      "base": "full",
+      "endpoint": null,
+      "description": "Indicates whether the water tank is full.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

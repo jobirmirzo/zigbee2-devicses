@@ -1,0 +1,131 @@
+{
+  "model": "ZG-229Z",
+  "file": "ZG-229Z.md",
+  "vendor": "HOBEIAN",
+  "description": "Smart light & sound siren",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-229Z.png",
+  "added_at": "2026-03-27T12:37:03",
+  "exposes_summary": "alarm, doorbell, muffling, alarm_time, alarm_volume, doorbell_volume, battery",
+  "exposes": [
+    {
+      "name": "Alarm",
+      "type": "enum",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Initiatively trigger an alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "alarm_sound",
+        "alarm_light",
+        "alarm_sound_light",
+        "normal"
+      ]
+    },
+    {
+      "name": "Doorbell",
+      "type": "binary",
+      "property": "doorbell",
+      "base": "doorbell",
+      "endpoint": null,
+      "description": "Doorbell.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Muffling",
+      "type": "binary",
+      "property": "muffling",
+      "base": "muffling",
+      "endpoint": null,
+      "description": "Stop alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Alarm time",
+      "type": "numeric",
+      "property": "alarm_time",
+      "base": "alarm_time",
+      "endpoint": null,
+      "description": "Alarm sounding time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1800,
+      "unit": "s"
+    },
+    {
+      "name": "Alarm volume",
+      "type": "enum",
+      "property": "alarm_volume",
+      "base": "alarm_volume",
+      "endpoint": null,
+      "description": "Alarm volume.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "middle",
+        "high",
+        "mute"
+      ]
+    },
+    {
+      "name": "Doorbell volume",
+      "type": "enum",
+      "property": "doorbell_volume",
+      "base": "doorbell_volume",
+      "endpoint": null,
+      "description": "Doorbell volume.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "middle",
+        "high",
+        "mute"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

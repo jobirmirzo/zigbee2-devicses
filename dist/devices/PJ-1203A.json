@@ -1,0 +1,272 @@
+{
+  "model": "PJ-1203A",
+  "file": "PJ-1203A.md",
+  "vendor": "Tuya",
+  "description": "Bidirectional energy meter with 80A current clamp",
+  "image": "https://www.zigbee2mqtt.io/images/devices/PJ-1203A.png",
+  "added_at": "2023-09-01T13:40:11",
+  "exposes_summary": "ac_frequency, voltage, power_a, power_b, power_ab, current_a, current_b, power_factor_a, power_factor_b, energy_flow_a, energy_flow_b, energy_a, energy_b, energy_produced_a, energy_produced_b, update_frequency, timestamp_a, timestamp_b",
+  "exposes": [
+    {
+      "name": "AC frequency",
+      "type": "numeric",
+      "property": "ac_frequency",
+      "base": "ac_frequency",
+      "endpoint": null,
+      "description": "Measured electrical AC frequency.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power a",
+      "type": "numeric",
+      "property": "power_a",
+      "base": "power_a",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power b",
+      "type": "numeric",
+      "property": "power_b",
+      "base": "power_b",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power ab",
+      "type": "numeric",
+      "property": "power_ab",
+      "base": "power_ab",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase AB).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current a",
+      "type": "numeric",
+      "property": "current_a",
+      "base": "current_a",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current b",
+      "type": "numeric",
+      "property": "current_b",
+      "base": "current_b",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power factor a",
+      "type": "numeric",
+      "property": "power_factor_a",
+      "base": "power_factor_a",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Power factor b",
+      "type": "numeric",
+      "property": "power_factor_b",
+      "base": "power_factor_b",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Energy flow a",
+      "type": "enum",
+      "property": "energy_flow_a",
+      "base": "energy_flow_a",
+      "endpoint": null,
+      "description": "Direction of energy (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "consuming",
+        "producing",
+        "sign"
+      ]
+    },
+    {
+      "name": "Energy flow b",
+      "type": "enum",
+      "property": "energy_flow_b",
+      "base": "energy_flow_b",
+      "endpoint": null,
+      "description": "Direction of energy (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "consuming",
+        "producing",
+        "sign"
+      ]
+    },
+    {
+      "name": "Energy a",
+      "type": "numeric",
+      "property": "energy_a",
+      "base": "energy_a",
+      "endpoint": null,
+      "description": "Sum of consumed energy (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy b",
+      "type": "numeric",
+      "property": "energy_b",
+      "base": "energy_b",
+      "endpoint": null,
+      "description": "Sum of consumed energy (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy produced a",
+      "type": "numeric",
+      "property": "energy_produced_a",
+      "base": "energy_produced_a",
+      "endpoint": null,
+      "description": "Sum of produced energy (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy produced b",
+      "type": "numeric",
+      "property": "energy_produced_b",
+      "base": "energy_produced_b",
+      "endpoint": null,
+      "description": "Sum of produced energy (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Update frequency",
+      "type": "numeric",
+      "property": "update_frequency",
+      "base": "update_frequency",
+      "endpoint": null,
+      "description": "Update frequency.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 3,
+      "value_max": 60,
+      "unit": "s"
+    },
+    {
+      "name": "Timestamp a",
+      "type": "text",
+      "property": "timestamp_a",
+      "base": "timestamp_a",
+      "endpoint": null,
+      "description": "Timestamp at power measure (phase a).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Timestamp b",
+      "type": "text",
+      "property": "timestamp_b",
+      "base": "timestamp_b",
+      "endpoint": null,
+      "description": "Timestamp at power measure (phase b).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

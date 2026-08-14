@@ -1,0 +1,59 @@
+{
+  "model": "ROB_200-016-0",
+  "file": "ROB_200-016-0.md",
+  "vendor": "ROBB",
+  "description": "RGB CCT DIM 3 in 1 Zigbee Remote",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ROB_200-016-0.png",
+  "added_at": "2021-12-31T16:51:16",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "color_move",
+        "color_temperature_move",
+        "hue_move",
+        "brightness_step_up",
+        "brightness_step_down",
+        "recall_*",
+        "on",
+        "off",
+        "toggle",
+        "brightness_stop",
+        "brightness_move_up",
+        "brightness_move_down",
+        "color_loop_set",
+        "enhanced_move_to_hue_and_saturation",
+        "move_to_hue_and_saturation",
+        "hue_stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

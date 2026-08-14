@@ -1,0 +1,238 @@
+{
+  "model": "PO-THCO-EAU",
+  "file": "PO-THCO-EAU.md",
+  "vendor": "Powernity",
+  "description": "Thermostat radiator valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/PO-THCO-EAU.png",
+  "added_at": "2025-02-06T19:24:12",
+  "exposes_summary": "battery, child_lock, comfort_temperature, eco_temperature, holiday_temperature, auto_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint), boost_heating, boost_time, window_open, open_window_temperature, open_window_time, error_status",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Comfort temperature",
+      "type": "numeric",
+      "property": "comfort_temperature",
+      "base": "comfort_temperature",
+      "endpoint": null,
+      "description": "Comfort temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 29.5,
+      "unit": "°C"
+    },
+    {
+      "name": "Eco temperature",
+      "type": "numeric",
+      "property": "eco_temperature",
+      "base": "eco_temperature",
+      "endpoint": null,
+      "description": "Eco temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 29.5,
+      "unit": "°C"
+    },
+    {
+      "name": "Holiday temperature",
+      "type": "numeric",
+      "property": "holiday_temperature",
+      "base": "holiday_temperature",
+      "endpoint": null,
+      "description": "Holiday temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 29.5,
+      "unit": "°C"
+    },
+    {
+      "name": "Auto temperature",
+      "type": "numeric",
+      "property": "auto_temperature",
+      "base": "auto_temperature",
+      "endpoint": null,
+      "description": "Auto settings temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 29.5,
+      "unit": "°C"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "auto",
+            "manual",
+            "holiday"
+          ],
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 0.5,
+          "value_max": 29.5,
+          "unit": "°C",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Boost heating",
+      "type": "binary",
+      "property": "boost_heating",
+      "base": "boost_heating",
+      "endpoint": null,
+      "description": "Boost Heating: the device will enter the boost heating mode..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Boost time",
+      "type": "numeric",
+      "property": "boost_time",
+      "base": "boost_time",
+      "endpoint": null,
+      "description": "Setting minimum 0 - maximum 900 seconds boost time. The boost function is activated. The remaining time for the function will be counted down in seconds ( 900 to 0 )..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 900,
+      "unit": "s"
+    },
+    {
+      "name": "Window open",
+      "type": "binary",
+      "property": "window_open",
+      "base": "window_open",
+      "endpoint": null,
+      "description": "Window status CLOSE or OPEN .",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "OPEN",
+      "value_off": "CLOSE"
+    },
+    {
+      "name": "Open window temperature",
+      "type": "numeric",
+      "property": "open_window_temperature",
+      "base": "open_window_temperature",
+      "endpoint": null,
+      "description": "Open window temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 25,
+      "unit": "°C"
+    },
+    {
+      "name": "Open window time",
+      "type": "numeric",
+      "property": "open_window_time",
+      "base": "open_window_time",
+      "endpoint": null,
+      "description": "In the setting time, when the range of indoor temperature changes reaches the set range, the window opening reminder will be displayed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 60,
+      "unit": "minutes"
+    },
+    {
+      "name": "Error status",
+      "type": "numeric",
+      "property": "error_status",
+      "base": "error_status",
+      "endpoint": null,
+      "description": "Error status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

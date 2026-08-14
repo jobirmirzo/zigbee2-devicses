@@ -1,0 +1,145 @@
+{
+  "model": "CTP-R01",
+  "file": "CTP-R01.md",
+  "vendor": "Aqara",
+  "description": "Cube T1 Pro",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CTP-R01.png",
+  "added_at": "2023-02-01T14:45:22",
+  "exposes_summary": "battery, voltage, power_outage_count, operation_mode, side, action_from_side, action_angle, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode",
+      "base": "operation_mode",
+      "endpoint": null,
+      "description": "[Soft Switch]: There is a configuration window, opens once an hour on itself, only during which the cube will respond to mode switch. Mode switch will be scheduled to take effect when the window becomes available. You can also give it a throw action (no backward motion) to force a respond! Otherwise, you may open lid and click LINK once to make the cube respond immediately. [Hard Switch]: Open lid and click LINK button 5 times..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "action_mode",
+        "scene_mode"
+      ]
+    },
+    {
+      "name": "Side",
+      "type": "numeric",
+      "property": "side",
+      "base": "side",
+      "endpoint": null,
+      "description": "Side of the cube.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 6
+    },
+    {
+      "name": "Action from side",
+      "type": "numeric",
+      "property": "action_from_side",
+      "base": "action_from_side",
+      "endpoint": null,
+      "description": "Side of the cube.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 6
+    },
+    {
+      "name": "Action angle",
+      "type": "numeric",
+      "property": "action_angle",
+      "base": "action_angle",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": -360,
+      "value_max": 360,
+      "unit": "°"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "shake",
+        "throw",
+        "tap",
+        "slide",
+        "flip180",
+        "flip90",
+        "hold",
+        "side_up",
+        "rotate_left",
+        "rotate_right",
+        "1_min_inactivity",
+        "flip_to_side"
+      ]
+    }
+  ],
+  "warnings": []
+}

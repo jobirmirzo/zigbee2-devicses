@@ -1,0 +1,63 @@
+{
+  "model": "ITCMDR_Click",
+  "file": "ITCMDR_Click.md",
+  "vendor": "IT Commander",
+  "description": "Button",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ITCMDR_Click.png",
+  "added_at": "2021-06-10T18:52:13Z",
+  "exposes_summary": "action, battery, voltage",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single",
+        "double",
+        "triple",
+        "hold",
+        "release",
+        "many"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    }
+  ],
+  "warnings": []
+}

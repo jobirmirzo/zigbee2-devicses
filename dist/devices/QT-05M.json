@@ -1,0 +1,118 @@
+{
+  "model": "QT-05M",
+  "file": "QT-05M.md",
+  "vendor": "QOTO",
+  "description": "Solar powered garden watering timer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/QT-05M.png",
+  "added_at": "2022-08-31T11:26:27",
+  "exposes_summary": "water_flow, last_watering_duration, remaining_watering_time, valve_state, valve_state_auto_shutdown, shutdown_timer, battery",
+  "exposes": [
+    {
+      "name": "Water flow",
+      "type": "numeric",
+      "property": "water_flow",
+      "base": "water_flow",
+      "endpoint": null,
+      "description": "Current water flow in %..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Last watering duration",
+      "type": "numeric",
+      "property": "last_watering_duration",
+      "base": "last_watering_duration",
+      "endpoint": null,
+      "description": "Last watering duration in seconds..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "sec"
+    },
+    {
+      "name": "Remaining watering time",
+      "type": "numeric",
+      "property": "remaining_watering_time",
+      "base": "remaining_watering_time",
+      "endpoint": null,
+      "description": "Remaining watering time (for auto shutdown). Updates every minute, and every 10s in the last minute..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "sec"
+    },
+    {
+      "name": "Valve state",
+      "type": "numeric",
+      "property": "valve_state",
+      "base": "valve_state",
+      "endpoint": null,
+      "description": "Set valve to %..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Valve state auto shutdown",
+      "type": "numeric",
+      "property": "valve_state_auto_shutdown",
+      "base": "valve_state_auto_shutdown",
+      "endpoint": null,
+      "description": "Set valve to % with auto shutdown. Must be set before setting the shutdown timer..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Shutdown timer",
+      "type": "numeric",
+      "property": "shutdown_timer",
+      "base": "shutdown_timer",
+      "endpoint": null,
+      "description": "Auto shutdown in seconds. Must be set after setting valve state auto shutdown..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 14400,
+      "unit": "sec"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

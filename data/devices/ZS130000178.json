@@ -1,0 +1,31 @@
+{
+  "model": "ZS130000178",
+  "file": "ZS130000178.md",
+  "vendor": "Linkind",
+  "description": "Security system key fob",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZS130000178.png",
+  "added_at": "2021-03-30T20:29:35Z",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "panic",
+        "disarm",
+        "arm_partial_zones",
+        "arm_all_zones"
+      ]
+    }
+  ],
+  "warnings": []
+}

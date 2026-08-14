@@ -1,0 +1,98 @@
+{
+  "model": "SRHMP-I1",
+  "file": "SRHMP-I1.md",
+  "vendor": "GS",
+  "description": "Siren",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SRHMP-I1.png",
+  "added_at": "2024-03-31T18:43:56",
+  "exposes_summary": "warning, battery",
+  "exposes": [
+    {
+      "name": "Warning",
+      "type": "composite",
+      "property": "warning",
+      "base": "warning",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "mode",
+          "type": "enum",
+          "description": "Mode of the warning (sound effect)",
+          "values": [
+            "stop",
+            "burglar",
+            "fire",
+            "emergency",
+            "police_panic",
+            "fire_panic",
+            "emergency_panic"
+          ]
+        },
+        {
+          "property": "level",
+          "type": "enum",
+          "description": "Sound level",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "property": "strobe_level",
+          "type": "enum",
+          "description": "Intensity of the strobe",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "property": "strobe",
+          "type": "binary",
+          "description": "Turn on/off the strobe (light) during warning",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "strobe_duty_cycle",
+          "type": "numeric",
+          "description": "Length of the flash cycle max value is 10"
+        },
+        {
+          "property": "duration",
+          "type": "numeric",
+          "description": "Duration in seconds of the alarm unit is s"
+        }
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

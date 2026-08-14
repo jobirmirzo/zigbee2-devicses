@@ -1,0 +1,252 @@
+{
+  "model": "ptvo.switch",
+  "file": "ptvo.switch.md",
+  "vendor": "Custom devices (DiY)",
+  "description": "Multi-functional device",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ptvo.switch.png",
+  "added_at": "2019-09-08T21:16:00Z",
+  "exposes_summary": "l1, switch (state), l2, l3, l4, l5, l6, l7, l8",
+  "exposes": [
+    {
+      "name": "L1",
+      "type": "text",
+      "property": "l1",
+      "base": "l1",
+      "endpoint": "l1",
+      "description": "State or sensor value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "L2",
+      "type": "text",
+      "property": "l2",
+      "base": "l2",
+      "endpoint": "l2",
+      "description": "State or sensor value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "L3",
+      "type": "text",
+      "property": "l3",
+      "base": "l3",
+      "endpoint": "l3",
+      "description": "State or sensor value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l3",
+      "features": [
+        {
+          "property": "state_l3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "L4",
+      "type": "text",
+      "property": "l4",
+      "base": "l4",
+      "endpoint": "l4",
+      "description": "State or sensor value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l4",
+      "features": [
+        {
+          "property": "state_l4",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "L5",
+      "type": "text",
+      "property": "l5",
+      "base": "l5",
+      "endpoint": "l5",
+      "description": "State or sensor value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l5",
+      "features": [
+        {
+          "property": "state_l5",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "L6",
+      "type": "text",
+      "property": "l6",
+      "base": "l6",
+      "endpoint": "l6",
+      "description": "State or sensor value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l6",
+      "features": [
+        {
+          "property": "state_l6",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "L7",
+      "type": "text",
+      "property": "l7",
+      "base": "l7",
+      "endpoint": "l7",
+      "description": "State or sensor value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l7",
+      "features": [
+        {
+          "property": "state_l7",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "L8",
+      "type": "text",
+      "property": "l8",
+      "base": "l8",
+      "endpoint": "l8",
+      "description": "State or sensor value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l8",
+      "features": [
+        {
+          "property": "state_l8",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

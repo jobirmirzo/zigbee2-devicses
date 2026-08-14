@@ -1,0 +1,75 @@
+{
+  "model": "MG1_5RZ",
+  "file": "MG1_5RZ.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee human presence radar (5.8 GHz)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MG1_5RZ.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "occupancy, occupied_to_unoccupied_delay, unoccupied_to_occupied_delay, occupancy_sensitivity",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupied to unoccupied delay",
+      "type": "numeric",
+      "property": "occupied_to_unoccupied_delay",
+      "base": "occupied_to_unoccupied_delay",
+      "endpoint": null,
+      "description": "Ultrasonic occupied → unoccupied delay (seconds).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 60,
+      "value_max": 65535
+    },
+    {
+      "name": "Unoccupied to occupied delay",
+      "type": "numeric",
+      "property": "unoccupied_to_occupied_delay",
+      "base": "unoccupied_to_occupied_delay",
+      "endpoint": null,
+      "description": "Ultrasonic unoccupied → occupied delay (seconds).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535
+    },
+    {
+      "name": "Occupancy sensitivity",
+      "type": "enum",
+      "property": "occupancy_sensitivity",
+      "base": "occupancy_sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity of human presence detection.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,180 @@
+{
+  "model": "CK-MG22-JLDJ-01(7015)",
+  "file": "CK-MG22-JLDJ-01(7015).md",
+  "vendor": "eWeLink",
+  "description": "Dooya Curtain",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CK-MG22-JLDJ-01(7015",
+  "added_at": "2025-01-03T20:04:59",
+  "exposes_summary": "battery, voltage, cover (state, position), motor_direction, motor_mode, motor_clb_position, motor_clb_position_result, motor_info, motor_speed, supported_max_motor_speed",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Motor direction",
+      "type": "enum",
+      "property": "motor_direction",
+      "base": "motor_direction",
+      "endpoint": null,
+      "description": "Set the motor direction.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "forward",
+        "reverse"
+      ]
+    },
+    {
+      "name": "Motor mode",
+      "type": "enum",
+      "property": "motor_mode",
+      "base": "motor_mode",
+      "endpoint": null,
+      "description": "Motor Mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "inching",
+        "continuou"
+      ]
+    },
+    {
+      "name": "Motor clb position",
+      "type": "enum",
+      "property": "motor_clb_position",
+      "base": "motor_clb_position",
+      "endpoint": null,
+      "description": "Motor Calibration By Position.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "open",
+        "close",
+        "other",
+        "clear"
+      ]
+    },
+    {
+      "name": "Motor clb position result",
+      "type": "text",
+      "property": "motor_clb_position_result",
+      "base": "motor_clb_position_result",
+      "endpoint": null,
+      "description": "Motor Calibration Result.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Motor info",
+      "type": "text",
+      "property": "motor_info",
+      "base": "motor_info",
+      "endpoint": null,
+      "description": "Motor Updated Info.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Motor speed",
+      "type": "numeric",
+      "property": "motor_speed",
+      "base": "motor_speed",
+      "endpoint": null,
+      "description": "Set the motor speed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 14
+    },
+    {
+      "name": "Supported max motor speed",
+      "type": "numeric",
+      "property": "supported_max_motor_speed",
+      "base": "supported_max_motor_speed",
+      "endpoint": null,
+      "description": "Supported max motor speed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

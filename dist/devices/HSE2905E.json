@@ -1,0 +1,152 @@
+{
+  "model": "HSE2905E",
+  "file": "HSE2905E.md",
+  "vendor": "Datek",
+  "description": "Datek Eva AMS HAN power-meter sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HSE2905E.png",
+  "added_at": "2021-03-31T17:47:18Z",
+  "exposes_summary": "power, energy, produced_energy, voltage, current, voltage_phase_b, voltage_phase_c, current_phase_b, current_phase_c, temperature",
+  "exposes": [
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Produced energy",
+      "type": "numeric",
+      "property": "produced_energy",
+      "base": "produced_energy",
+      "endpoint": null,
+      "description": "Sum of produced energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage phase B",
+      "type": "numeric",
+      "property": "voltage_phase_b",
+      "base": "voltage_phase_b",
+      "endpoint": null,
+      "description": "Measured electrical potential value on phase B.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage phase C",
+      "type": "numeric",
+      "property": "voltage_phase_c",
+      "base": "voltage_phase_c",
+      "endpoint": null,
+      "description": "Measured electrical potential value on phase C.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current phase B",
+      "type": "numeric",
+      "property": "current_phase_b",
+      "base": "current_phase_b",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current on phase B.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current phase C",
+      "type": "numeric",
+      "property": "current_phase_c",
+      "base": "current_phase_c",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current on phase C.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

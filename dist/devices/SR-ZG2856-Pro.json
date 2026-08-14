@@ -1,0 +1,47 @@
+{
+  "model": "SR-ZG2856-Pro",
+  "file": "SR-ZG2856-Pro.md",
+  "vendor": "Sunricher",
+  "description": "Zigbee smart remote",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SR-ZG2856-Pro.png",
+  "added_at": "2025-03-01T20:26:05",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "short_press",
+        "double_press",
+        "hold",
+        "hold_released"
+      ]
+    }
+  ],
+  "warnings": []
+}

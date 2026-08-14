@@ -1,0 +1,170 @@
+{
+  "model": "SC500ZB-v4",
+  "file": "SC500ZB-v4.md",
+  "vendor": "LoraTap",
+  "description": "Smart curtain/shutter switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SC500ZB-v4.png",
+  "added_at": "2025-07-01T17:54:38",
+  "exposes_summary": "cover (state, position), moving, motor_reversal, calibration, calibration_time, indicator_mode, backlight_mode, switch_type",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Moving",
+      "type": "enum",
+      "property": "moving",
+      "base": "moving",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "UP",
+        "STOP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Motor reversal",
+      "type": "binary",
+      "property": "motor_reversal",
+      "base": "motor_reversal",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Calibration to open",
+      "type": "binary",
+      "property": "calibration_to_open",
+      "base": "calibration_to_open",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Calibration to close",
+      "type": "binary",
+      "property": "calibration_to_close",
+      "base": "calibration_to_close",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Calibration time to open",
+      "type": "numeric",
+      "property": "calibration_time_to_open",
+      "base": "calibration_time_to_open",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Calibration time to close",
+      "type": "numeric",
+      "property": "calibration_time_to_close",
+      "base": "calibration_time_to_close",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Switch type curtain",
+      "type": "enum",
+      "property": "switch_type_curtain",
+      "base": "switch_type_curtain",
+      "endpoint": null,
+      "description": "External switch type.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "flip-switch",
+        "sync-switch",
+        "button-switch",
+        "button2-switch"
+      ]
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type",
+      "base": "switch_type",
+      "endpoint": null,
+      "description": "Type of the installed switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "momentary",
+        "toggle"
+      ]
+    }
+  ],
+  "warnings": []
+}

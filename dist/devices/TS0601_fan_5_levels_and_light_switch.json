@@ -1,0 +1,81 @@
+{
+  "model": "TS0601_fan_5_levels_and_light_switch",
+  "file": "TS0601_fan_5_levels_and_light_switch.md",
+  "vendor": "Tuya",
+  "description": "Fan with 5 levels & light switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_fan_5_levels_and_light_switch.png",
+  "added_at": "2024-04-29T19:24:38",
+  "exposes_summary": "status_indication, switch (state), power_on_behavior, fan_speed",
+  "exposes": [
+    {
+      "name": "Status indication",
+      "type": "binary",
+      "property": "status_indication",
+      "base": "status_indication",
+      "endpoint": null,
+      "description": "Light switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Fan On Off.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "OFF",
+        "ON"
+      ]
+    },
+    {
+      "name": "Fan speed",
+      "type": "numeric",
+      "property": "fan_speed",
+      "base": "fan_speed",
+      "endpoint": null,
+      "description": "Speed off the fan.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 5
+    }
+  ],
+  "warnings": []
+}

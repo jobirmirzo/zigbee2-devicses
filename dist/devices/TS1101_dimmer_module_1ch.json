@@ -1,0 +1,84 @@
+{
+  "model": "TS1101_dimmer_module_1ch",
+  "file": "TS1101_dimmer_module_1ch.md",
+  "vendor": "Tuya",
+  "description": "Zigbee dimmer module 1 channel",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS1101_dimmer_module_1ch.png",
+  "added_at": "2021-12-31T16:51:16",
+  "exposes_summary": "light (state, brightness, min_brightness), effect, do_not_disturb",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "min_brightness",
+          "base": "min_brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Do not disturb",
+      "type": "binary",
+      "property": "do_not_disturb",
+      "base": "do_not_disturb",
+      "endpoint": null,
+      "description": "Controls state after power outage: false = on, true = restore previous state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

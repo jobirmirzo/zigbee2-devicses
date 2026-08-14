@@ -1,0 +1,231 @@
+{
+  "model": "ZHT-002",
+  "file": "ZHT-002.md",
+  "vendor": "Moes",
+  "description": "ZHT series thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZHT-002.png",
+  "added_at": "2025-05-01T17:59:09",
+  "exposes_summary": "state, child_lock, system_mode, eco_mode, sensor, valve_state, workdays_schedule, min_temperature, max_temperature, climate (local_temperature, current_heating_setpoint, local_temperature_calibration), max_temperature_limit, deadzone_temperature, working_day",
+  "exposes": [
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Turn the thermostat ON/OFF.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "System mode",
+      "type": "binary",
+      "property": "system_mode",
+      "base": "system_mode",
+      "endpoint": null,
+      "description": "Manual = Manual or Schedule = Auto.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "Auto",
+      "value_off": "Manual"
+    },
+    {
+      "name": "Eco mode",
+      "type": "binary",
+      "property": "eco_mode",
+      "base": "eco_mode",
+      "endpoint": null,
+      "description": "ECO mode (energy saving mode).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor",
+      "base": "sensor",
+      "endpoint": null,
+      "description": "Choose which sensor to use. Default: AL.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "IN",
+        "AL",
+        "OU"
+      ]
+    },
+    {
+      "name": "Valve state",
+      "type": "enum",
+      "property": "valve_state",
+      "base": "valve_state",
+      "endpoint": null,
+      "description": "State of the valve.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "close",
+        "open"
+      ]
+    },
+    {
+      "name": "Workdays schedule",
+      "type": "text",
+      "property": "workdays_schedule",
+      "base": "workdays_schedule",
+      "endpoint": null,
+      "description": "Workdays schedule, 4 entries max, example: \"06:00/20°C 11:20/22°C 16:59/15°C 22:00/25°C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Min temperature",
+      "type": "numeric",
+      "property": "min_temperature",
+      "base": "min_temperature",
+      "endpoint": null,
+      "description": "Minimum temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 20,
+      "unit": "°C"
+    },
+    {
+      "name": "Max temperature",
+      "type": "numeric",
+      "property": "max_temperature",
+      "base": "max_temperature",
+      "endpoint": null,
+      "description": "Maximum temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 20,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 0,
+          "value_max": 50,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Max temperature limit",
+      "type": "numeric",
+      "property": "max_temperature_limit",
+      "base": "max_temperature_limit",
+      "endpoint": null,
+      "description": "Max temperature limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 25,
+      "value_max": 70
+    },
+    {
+      "name": "Deadzone temperature",
+      "type": "numeric",
+      "property": "deadzone_temperature",
+      "base": "deadzone_temperature",
+      "endpoint": null,
+      "description": "The difference between the local temperature that triggers heating and the set temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 5
+    },
+    {
+      "name": "Working day",
+      "type": "enum",
+      "property": "working_day",
+      "base": "working_day",
+      "endpoint": null,
+      "description": "Workday setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disabled",
+        "5-2",
+        "6-1",
+        "7"
+      ]
+    }
+  ],
+  "warnings": []
+}

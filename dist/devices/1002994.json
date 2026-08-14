@@ -1,0 +1,11 @@
+{
+  "model": "1002994",
+  "file": "1002994.md",
+  "vendor": "SLV",
+  "description": "VALETO remote (binds to device)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/1002994.png",
+  "added_at": "2022-03-01T09:06:16",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

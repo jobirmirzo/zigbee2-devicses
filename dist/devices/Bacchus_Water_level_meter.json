@@ -1,0 +1,178 @@
+{
+  "model": "Bacchus Water level meter",
+  "file": "Bacchus_Water_level_meter.md",
+  "vendor": "Bacchus",
+  "description": "Bacchus tank water level sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Bacchus-Water-level-meter.png",
+  "added_at": "2025-05-01T17:59:08",
+  "exposes_summary": "water_level, out_of_service, filling, temperature, tank_height, alarm_min_threshold, alarm_max_threshold, invert_threshold, measurment_period, battery, voltage",
+  "exposes": [
+    {
+      "name": "Water level",
+      "type": "numeric",
+      "property": "water_level",
+      "base": "water_level",
+      "endpoint": null,
+      "description": "Current water level in cm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "cm"
+    },
+    {
+      "name": "Out of service",
+      "type": "binary",
+      "property": "out_of_service",
+      "base": "out_of_service",
+      "endpoint": null,
+      "description": "Level is out if service.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "True",
+      "value_off": "False"
+    },
+    {
+      "name": "Filling",
+      "type": "numeric",
+      "property": "filling",
+      "base": "filling",
+      "endpoint": null,
+      "description": "Tank filling.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Tank height",
+      "type": "numeric",
+      "property": "tank_height",
+      "base": "tank_height",
+      "endpoint": null,
+      "description": "Water tank height in cm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 450,
+      "unit": "cm"
+    },
+    {
+      "name": "Alarm min threshold",
+      "type": "numeric",
+      "property": "alarm_min_threshold",
+      "base": "alarm_min_threshold",
+      "endpoint": null,
+      "description": "Min threshold for alarm binding.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Alarm max threshold",
+      "type": "numeric",
+      "property": "alarm_max_threshold",
+      "base": "alarm_max_threshold",
+      "endpoint": null,
+      "description": "Max threshold for alarm binding.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Invert threshold",
+      "type": "binary",
+      "property": "invert_threshold",
+      "base": "invert_threshold",
+      "endpoint": null,
+      "description": "Invert thresholds for on and off commands.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "True",
+      "value_off": "False"
+    },
+    {
+      "name": "Measurment period",
+      "type": "numeric",
+      "property": "measurment_period",
+      "base": "measurment_period",
+      "endpoint": null,
+      "description": "Max threshold for alarm binding.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "min"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

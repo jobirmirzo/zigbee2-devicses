@@ -1,0 +1,88 @@
+{
+  "model": "SNZB-02P",
+  "file": "SNZB-02P.md",
+  "vendor": "SONOFF",
+  "description": "Temperature and humidity sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SNZB-02P.png",
+  "added_at": "2023-06-01T08:16:21",
+  "exposes_summary": "battery, temperature, humidity, temperature_calibration, humidity_calibration",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Offset to add/subtract to the reported temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Offset to add/subtract to the reported relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,243 @@
+{
+  "model": "07502L",
+  "file": "07502L.md",
+  "vendor": "Immax",
+  "description": "4 in 1 multi sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/07502L.png",
+  "added_at": "2021-11-30T20:10:17",
+  "exposes_summary": "occupancy, tamper, battery, temperature, humidity, reporting_time, temperature_calibration, humidity_calibration, illuminance_calibration, pir_enable, led_enable, reporting_enable, sensitivity, keep_time, illuminance",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Reporting time",
+      "type": "numeric",
+      "property": "reporting_time",
+      "base": "reporting_time",
+      "endpoint": null,
+      "description": "Reporting interval in minutes.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1440
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Temperature calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -20,
+      "value_max": 20
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Humidity calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50
+    },
+    {
+      "name": "Illuminance calibration",
+      "type": "numeric",
+      "property": "illuminance_calibration",
+      "base": "illuminance_calibration",
+      "endpoint": null,
+      "description": "Illuminance calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -10000,
+      "value_max": 10000
+    },
+    {
+      "name": "Pir enable",
+      "type": "binary",
+      "property": "pir_enable",
+      "base": "pir_enable",
+      "endpoint": null,
+      "description": "Enable PIR sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Led enable",
+      "type": "binary",
+      "property": "led_enable",
+      "base": "led_enable",
+      "endpoint": null,
+      "description": "Enabled LED.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Reporting enable",
+      "type": "binary",
+      "property": "reporting_enable",
+      "base": "reporting_enable",
+      "endpoint": null,
+      "description": "Enabled reporting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "PIR sensor sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Keep time",
+      "type": "enum",
+      "property": "keep_time",
+      "base": "keep_time",
+      "endpoint": null,
+      "description": "PIR keep time in seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "0",
+        "30",
+        "60",
+        "120",
+        "240"
+      ]
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

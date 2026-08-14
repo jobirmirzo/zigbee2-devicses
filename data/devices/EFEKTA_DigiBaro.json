@@ -1,0 +1,167 @@
+{
+  "model": "EFEKTA_DigiBaro",
+  "file": "EFEKTA_DigiBaro.md",
+  "vendor": "EFEKTA",
+  "description": "Smart digital barometer with e-ink display.",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_DigiBaro.png",
+  "added_at": "2026-01-31T13:10:41",
+  "exposes_summary": "pressure, temperature, humidity, battery, battery_low, basic_data, invert_color, pressure_offset, temperature_offset, humidity_offset",
+  "exposes": [
+    {
+      "name": "Pressure",
+      "type": "numeric",
+      "property": "pressure",
+      "base": "pressure",
+      "endpoint": null,
+      "description": "Pressure in kPa.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kPa"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Basic data",
+      "type": "enum",
+      "property": "basic_data",
+      "base": "basic_data",
+      "endpoint": null,
+      "description": "Set data output on the display.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Barometer",
+        "T&H"
+      ]
+    },
+    {
+      "name": "Invert color",
+      "type": "enum",
+      "property": "invert_color",
+      "base": "invert_color",
+      "endpoint": null,
+      "description": "Set color mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "BW",
+        "WB"
+      ]
+    },
+    {
+      "name": "Pressure offset",
+      "type": "numeric",
+      "property": "pressure_offset",
+      "base": "pressure_offset",
+      "endpoint": null,
+      "description": "Adjust pressure.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "hPa"
+    },
+    {
+      "name": "Temperature offset",
+      "type": "numeric",
+      "property": "temperature_offset",
+      "base": "temperature_offset",
+      "endpoint": null,
+      "description": "Adjust temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity offset",
+      "type": "numeric",
+      "property": "humidity_offset",
+      "base": "humidity_offset",
+      "endpoint": null,
+      "description": "Adjust humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

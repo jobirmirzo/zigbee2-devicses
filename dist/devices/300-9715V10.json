@@ -1,0 +1,62 @@
+{
+  "model": "300-9715V10",
+  "file": "300-9715V10.md",
+  "vendor": "Sikom",
+  "description": "Thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/300-9715V10.png",
+  "added_at": "2023-12-26T18:38:16",
+  "exposes_summary": "climate (local_temperature, occupied_heating_setpoint, system_mode), state",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 40,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "auto",
+            "heat"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Turn on or off..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

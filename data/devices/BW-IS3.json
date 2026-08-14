@@ -1,0 +1,27 @@
+{
+  "model": "BW-IS3",
+  "file": "BW-IS3.md",
+  "vendor": "BlitzWolf",
+  "description": "Rechargeable Zigbee PIR motion sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BW-IS3.png",
+  "added_at": "2020-02-04T20:38:05Z",
+  "exposes_summary": "occupancy",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

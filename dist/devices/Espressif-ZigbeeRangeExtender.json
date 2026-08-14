@@ -1,0 +1,11 @@
+{
+  "model": "Espressif-ZigbeeRangeExtender",
+  "file": "Espressif-ZigbeeRangeExtender.md",
+  "vendor": "Espressif",
+  "description": "ESP32-C6/H2 router",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Espressif-ZigbeeRangeExtender.png",
+  "added_at": "2025-09-08T20:08:17Z",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

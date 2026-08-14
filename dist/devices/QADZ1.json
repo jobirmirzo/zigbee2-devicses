@@ -1,0 +1,77 @@
+{
+  "model": "QADZ1",
+  "file": "QADZ1.md",
+  "vendor": "QA",
+  "description": "Dimmer 1 channel",
+  "image": "https://www.zigbee2mqtt.io/images/devices/QADZ1.png",
+  "added_at": "2024-06-30T19:12:33",
+  "exposes_summary": "power_on_behavior, switch_type, light (state, brightness)",
+  "exposes": [
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "previous",
+        "on"
+      ]
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type",
+      "base": "switch_type",
+      "endpoint": null,
+      "description": "Type of the switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "toggle",
+        "state",
+        "momentary"
+      ]
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    }
+  ],
+  "warnings": []
+}

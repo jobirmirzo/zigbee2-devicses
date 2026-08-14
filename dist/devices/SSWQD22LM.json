@@ -1,0 +1,81 @@
+{
+  "model": "SSWQD22LM",
+  "file": "SSWQD22LM.md",
+  "vendor": "Aqara",
+  "description": "Spotlight T2 Pro",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SSWQD22LM.png",
+  "added_at": "2026-06-30T19:08:31",
+  "exposes_summary": "light (state, brightness, color_temp), power_outage_count, device_temperature",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 166,
+          "value_max": 370,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warmest"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages (since last pairing).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

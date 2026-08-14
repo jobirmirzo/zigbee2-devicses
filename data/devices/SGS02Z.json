@@ -1,0 +1,93 @@
+{
+  "model": "SGS02Z",
+  "file": "SGS02Z.md",
+  "vendor": "Tuya",
+  "description": "Soil sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SGS02Z.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "temperature, soil_moisture, temperature_unit, illuminance_level, battery",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Soil moisture",
+      "type": "numeric",
+      "property": "soil_moisture",
+      "base": "soil_moisture",
+      "endpoint": null,
+      "description": "Measured soil moisture value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature unit",
+      "type": "enum",
+      "property": "temperature_unit",
+      "base": "temperature_unit",
+      "endpoint": null,
+      "description": "Temperature unit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Illuminance level",
+      "type": "enum",
+      "property": "illuminance_level",
+      "base": "illuminance_level",
+      "endpoint": null,
+      "description": "Illuminance level.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low-",
+        "low",
+        "nor",
+        "high",
+        "high+"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

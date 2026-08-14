@@ -1,0 +1,122 @@
+{
+  "model": "ZK03840",
+  "file": "ZK03840.md",
+  "vendor": "Viessmann",
+  "description": "ViCare radiator thermostat valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZK03840.png",
+  "added_at": "2020-04-29T17:11:59Z",
+  "exposes_summary": "climate (occupied_heating_setpoint, local_temperature, system_mode, schedule), window_open, window_open_force, keypad_lockout, battery",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 7,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "heat",
+            "sleep"
+          ],
+          "readable": true
+        },
+        {
+          "property": "schedule",
+          "base": "schedule",
+          "value_min": 7,
+          "value_max": 30,
+          "values": [
+            "heat",
+            "sleep"
+          ],
+          "unit": "°C",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Window open",
+      "type": "binary",
+      "property": "window_open",
+      "base": "window_open",
+      "endpoint": null,
+      "description": "Detected by sudden temperature drop or set manually..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Window open force",
+      "type": "binary",
+      "property": "window_open_force",
+      "base": "window_open_force",
+      "endpoint": null,
+      "description": "Manually set window_open, ~1 minute to take affect..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Keypad lockout",
+      "type": "enum",
+      "property": "keypad_lockout",
+      "base": "keypad_lockout",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "unlock",
+        "lock1",
+        "lock2"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

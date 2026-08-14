@@ -1,0 +1,271 @@
+{
+  "model": "PCT504",
+  "file": "PCT504.md",
+  "vendor": "OWON",
+  "description": "HVAC fan coil",
+  "image": "https://www.zigbee2mqtt.io/images/devices/PCT504.png",
+  "added_at": "2022-09-30T20:52:51",
+  "exposes_summary": "humidity, occupancy, climate (system_mode, local_temperature, running_mode, running_state, occupied_heating_setpoint, unoccupied_heating_setpoint, occupied_cooling_setpoint, unoccupied_cooling_setpoint), fan (state, mode), programming_operation_mode, keypad_lockout, max_heat_setpoint_limit, min_heat_setpoint_limit, max_cool_setpoint_limit, min_cool_setpoint_limit",
+  "exposes": [
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "fan_only",
+            "sleep"
+          ],
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "running_mode",
+          "base": "running_mode",
+          "value_min": 5,
+          "value_max": 30,
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "fan_only",
+            "sleep"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "unoccupied_heating_setpoint",
+          "base": "unoccupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "fan_only",
+            "sleep"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "occupied_cooling_setpoint",
+          "base": "occupied_cooling_setpoint",
+          "value_min": 7,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "unoccupied_cooling_setpoint",
+          "base": "unoccupied_cooling_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "fan_only",
+            "sleep"
+          ],
+          "unit": "°C",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Fan",
+      "type": "fan",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "fan_state",
+          "base": "fan_state",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "on",
+            "auto"
+          ],
+          "readable": true
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "on",
+            "auto"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Programming operation mode",
+      "type": "enum",
+      "property": "programming_operation_mode",
+      "base": "programming_operation_mode",
+      "endpoint": null,
+      "description": "Controls how programming affects the thermostat. Possible values: setpoint (only use specified setpoint), schedule (follow programmed setpoint schedule), schedule_with_preheat (follow programmed setpoint schedule with pre-heating). Changing this value does not clear programmed schedules..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "setpoint",
+        "eco"
+      ]
+    },
+    {
+      "name": "Keypad lockout",
+      "type": "enum",
+      "property": "keypad_lockout",
+      "base": "keypad_lockout",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "unlock",
+        "lock1",
+        "lock2"
+      ]
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": null,
+      "description": "Maximum Heating set point limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": null,
+      "description": "Minimum Heating set point limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Max cool setpoint limit",
+      "type": "numeric",
+      "property": "max_cool_setpoint_limit",
+      "base": "max_cool_setpoint_limit",
+      "endpoint": null,
+      "description": "Maximum Cooling set point limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 7,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Min cool setpoint limit",
+      "type": "numeric",
+      "property": "min_cool_setpoint_limit",
+      "base": "min_cool_setpoint_limit",
+      "endpoint": null,
+      "description": "Minimum Cooling point limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 7,
+      "value_max": 35,
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,102 @@
+{
+  "model": "S-PC86ZEUSK1B",
+  "file": "S-PC86ZEUSK1B.md",
+  "vendor": "BSEED",
+  "description": "Wall-mounted electrical EU socket",
+  "image": "https://www.zigbee2mqtt.io/images/devices/S-PC86ZEUSK1B.png",
+  "added_at": "2026-03-31T19:04:39",
+  "exposes_summary": "switch (state), countdown, power_outage_memory, indicator_mode, child_lock",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown",
+      "base": "countdown",
+      "endpoint": null,
+      "description": "Toggle the device after a set duration (one time action).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Power outage memory",
+      "type": "enum",
+      "property": "power_outage_memory",
+      "base": "power_outage_memory",
+      "endpoint": null,
+      "description": "Recover state after power outage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off",
+        "restore"
+      ]
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode",
+      "base": "indicator_mode",
+      "endpoint": null,
+      "description": "LED indicator mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "off/on",
+        "on/off",
+        "on"
+      ]
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    }
+  ],
+  "warnings": []
+}

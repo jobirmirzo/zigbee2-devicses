@@ -1,0 +1,57 @@
+{
+  "model": "R7047",
+  "file": "R7047.md",
+  "vendor": "Woox",
+  "description": "Smart Door & Window Sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/R7047.png",
+  "added_at": "2024-10-31T20:36:06",
+  "exposes_summary": "contact, battery, voltage, tamper, battery_low",
+  "exposes": [
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates if the contact is closed (= true) or open (= false).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

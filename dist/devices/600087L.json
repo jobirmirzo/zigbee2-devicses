@@ -1,0 +1,30 @@
+{
+  "model": "600087L",
+  "file": "600087L.md",
+  "vendor": "Legrand",
+  "description": "Wireless and batteryless blind control switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/600087L.png",
+  "added_at": "2023-08-26T06:45:18",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "stop",
+        "up",
+        "down"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,60 @@
+{
+  "model": "HS2SW2A/HS2SW2A-N",
+  "file": "HS2SW2A_HS2SW2A-N.md",
+  "vendor": "Heiman",
+  "description": "Smart switch - 2 gang with neutral wire",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS2SW2A-HS2SW2A-N.png",
+  "added_at": "2020-09-30T20:52:56Z",
+  "exposes_summary": "switch (state), device_temperature",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "left",
+      "features": [
+        {
+          "property": "state_left",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "right",
+      "features": [
+        {
+          "property": "state_right",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

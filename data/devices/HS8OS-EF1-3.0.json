@@ -1,0 +1,87 @@
+{
+  "model": "HS8OS-EF1-3.0",
+  "file": "HS8OS-EF1-3.0.md",
+  "vendor": "Heiman",
+  "description": "Human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS8OS-EF1-3.0.png",
+  "added_at": "2026-01-01T13:27:46",
+  "exposes_summary": "occupancy, enable_indicator, sensitivity, ambient_light, radar_delay_time",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Enable indicator",
+      "type": "binary",
+      "property": "enable_indicator",
+      "base": "enable_indicator",
+      "endpoint": null,
+      "description": "active green indicator.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Sensitivity",
+      "type": "numeric",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity of the radar sensor in range of 0 ~ 100%.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Ambient light",
+      "type": "numeric",
+      "property": "ambient_light",
+      "base": "ambient_light",
+      "endpoint": null,
+      "description": "ambient illuminance in lux.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "Lx"
+    },
+    {
+      "name": "Radar delay time",
+      "type": "numeric",
+      "property": "radar_delay_time",
+      "base": "radar_delay_time",
+      "endpoint": null,
+      "description": "Occupied to unoccupied delay.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 60,
+      "value_max": 3600
+    }
+  ],
+  "warnings": []
+}

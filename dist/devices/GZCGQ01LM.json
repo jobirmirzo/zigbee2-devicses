@@ -1,0 +1,56 @@
+{
+  "model": "GZCGQ01LM",
+  "file": "GZCGQ01LM.md",
+  "vendor": "Xiaomi",
+  "description": "Mi light sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GZCGQ01LM.png",
+  "added_at": "2020-01-14T19:34:25Z",
+  "exposes_summary": "battery, voltage, illuminance",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

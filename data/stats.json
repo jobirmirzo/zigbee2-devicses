@@ -1,0 +1,27 @@
+{
+  "files": 5120,
+  "exposes": 31905,
+  "warnings": 22,
+  "byType": {
+    "light": 1948,
+    "enum": 8935,
+    "text": 1578,
+    "climate": 306,
+    "numeric": 11943,
+    "binary": 4223,
+    "switch": 2263,
+    "cover": 223,
+    "lock": 50,
+    "composite": 333,
+    "list": 90,
+    "fan": 13
+  },
+  "byGrouped": {
+    "light": 1948,
+    "climate": 306,
+    "switch": 2263,
+    "cover": 223,
+    "lock": 50,
+    "fan": 13
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "model": "KN-Z-WH1-B04",
+  "file": "KN-Z-WH1-B04.md",
+  "vendor": "LUX",
+  "description": "KONOz thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/KN-Z-WH1-B04.png",
+  "added_at": "2021-09-01T18:11:17Z",
+  "exposes_summary": "climate (occupied_heating_setpoint, occupied_cooling_setpoint, local_temperature, system_mode, running_state, fan_mode)",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 10,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "occupied_cooling_setpoint",
+          "base": "occupied_cooling_setpoint",
+          "value_min": 10,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "cool"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "value_min": 10,
+          "value_max": 30,
+          "values": [
+            "off",
+            "heat",
+            "cool"
+          ],
+          "unit": "°C",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,45 @@
+{
+  "model": "XFY-CGQ-ZIGB",
+  "file": "XFY-CGQ-ZIGB.md",
+  "vendor": "Tuya",
+  "description": "Illuminance sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/XFY-CGQ-ZIGB.png",
+  "added_at": "2022-01-31T17:42:44",
+  "exposes_summary": "illuminance, brightness_state",
+  "exposes": [
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Brightness state",
+      "type": "enum",
+      "property": "brightness_state",
+      "base": "brightness_state",
+      "endpoint": null,
+      "description": "Brightness state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "middle",
+        "high",
+        "strong"
+      ]
+    }
+  ],
+  "warnings": []
+}

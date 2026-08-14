@@ -1,0 +1,72 @@
+{
+  "model": "C3007",
+  "file": "C3007.md",
+  "vendor": "Tuya",
+  "description": "Pressure pad sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/C3007.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "pressure, battery_low, battery, voltage",
+  "exposes": [
+    {
+      "name": "Pressure",
+      "type": "binary",
+      "property": "pressure",
+      "base": "pressure",
+      "endpoint": null,
+      "description": "Indicates whether the device detected pressure.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

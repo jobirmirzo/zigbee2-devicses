@@ -1,0 +1,190 @@
+{
+  "model": "L2-T-F-MF",
+  "file": "L2-T-F-MF.md",
+  "vendor": "Tuya",
+  "description": "Smart Zigbee fan coil thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/L2-T-F-MF.png",
+  "added_at": "2026-03-31T19:04:39",
+  "exposes_summary": "climate (local_temperature, system_mode, fan_mode, current_heating_setpoint), local_temperature_calibration, screen_brightness, deadzone_temperature, min_temperature_limit, max_temperature_limit, child_lock, eco_temperature_heating, eco_temperature_cooling",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "cool",
+            "heat",
+            "fan_only"
+          ],
+          "readable": false
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "value_min": 5,
+          "value_max": 45,
+          "values": [
+            "off",
+            "cool",
+            "heat",
+            "fan_only"
+          ],
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 45,
+          "unit": "°C",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Local temperature calibration",
+      "type": "numeric",
+      "property": "local_temperature_calibration",
+      "base": "local_temperature_calibration",
+      "endpoint": null,
+      "description": "Temperature compensation setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -9,
+      "value_max": 9,
+      "unit": "°C"
+    },
+    {
+      "name": "Screen brightness",
+      "type": "numeric",
+      "property": "screen_brightness",
+      "base": "screen_brightness",
+      "endpoint": null,
+      "description": "Display brightness level.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 9
+    },
+    {
+      "name": "Deadzone temperature",
+      "type": "numeric",
+      "property": "deadzone_temperature",
+      "base": "deadzone_temperature",
+      "endpoint": null,
+      "description": "Temperature deadzone.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 5,
+      "unit": "°C"
+    },
+    {
+      "name": "Min temperature limit",
+      "type": "numeric",
+      "property": "min_temperature_limit",
+      "base": "min_temperature_limit",
+      "endpoint": null,
+      "description": "Minimum temperature limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 15,
+      "unit": "°C"
+    },
+    {
+      "name": "Max temperature limit",
+      "type": "numeric",
+      "property": "max_temperature_limit",
+      "base": "max_temperature_limit",
+      "endpoint": null,
+      "description": "Maximun temperature limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 16,
+      "value_max": 45,
+      "unit": "°C"
+    },
+    {
+      "name": "Child lock",
+      "type": "enum",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Child lock.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "locked",
+        "unlocked"
+      ]
+    },
+    {
+      "name": "Eco temperature heating",
+      "type": "numeric",
+      "property": "eco_temperature_heating",
+      "base": "eco_temperature_heating",
+      "endpoint": null,
+      "description": "Eco heating temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 20,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Eco temperature cooling",
+      "type": "numeric",
+      "property": "eco_temperature_cooling",
+      "base": "eco_temperature_cooling",
+      "endpoint": null,
+      "description": "Eco cooling temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 20,
+      "value_max": 30,
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

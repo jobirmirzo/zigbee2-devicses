@@ -1,0 +1,90 @@
+{
+  "model": "MCCGQ13LM",
+  "file": "MCCGQ13LM.md",
+  "vendor": "Aqara",
+  "description": "Door and window sensor P1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MCCGQ13LM.png",
+  "added_at": "2021-12-31T16:51:16",
+  "exposes_summary": "contact, battery, voltage, tamper, detection_distance",
+  "exposes": [
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates if the contact is closed (= true) or open (= false).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Detection distance",
+      "type": "enum",
+      "property": "detection_distance",
+      "base": "detection_distance",
+      "endpoint": null,
+      "description": "The sensor will be considered \"off\" within the set distance. Please press the device button before setting.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "10mm",
+        "20mm",
+        "30mm"
+      ]
+    }
+  ],
+  "warnings": []
+}

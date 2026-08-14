@@ -1,0 +1,396 @@
+{
+  "model": "4512737/4512738",
+  "file": "4512737_4512738.md",
+  "vendor": "Namron",
+  "description": "Touch thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/4512737-4512738.png",
+  "added_at": "2022-04-30T08:00:58",
+  "exposes_summary": "local_temperature, outdoor_temperature, climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), away_mode, child_lock, power, current, voltage, energy, lcd_brightness, button_vibration_level, floor_sensor_type, sensor, powerup_status, floor_sensor_calibration, dry_time, mode_after_dry, temperature_display, window_open_check, hysterersis, display_auto_off_enabled, alarm_airtemp_overvalue",
+  "exposes": [
+    {
+      "name": "Local temperature",
+      "type": "numeric",
+      "property": "local_temperature",
+      "base": "local_temperature",
+      "endpoint": null,
+      "description": "Current temperature measured on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Outdoor temperature",
+      "type": "numeric",
+      "property": "outdoor_temperature",
+      "base": "outdoor_temperature",
+      "endpoint": null,
+      "description": "Current temperature measured from the floor sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 0,
+          "value_max": 40,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "auto",
+            "dry",
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Away mode",
+      "type": "binary",
+      "property": "away_mode",
+      "base": "away_mode",
+      "endpoint": null,
+      "description": "Enable/disable away mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Lcd brightness",
+      "type": "enum",
+      "property": "lcd_brightness",
+      "base": "lcd_brightness",
+      "endpoint": null,
+      "description": "OLED brightness when operating the buttons.  Default: Medium..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "mid",
+        "high"
+      ]
+    },
+    {
+      "name": "Button vibration level",
+      "type": "enum",
+      "property": "button_vibration_level",
+      "base": "button_vibration_level",
+      "endpoint": null,
+      "description": "Key beep volume and vibration level.  Default: Low..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "Floor sensor type",
+      "type": "enum",
+      "property": "floor_sensor_type",
+      "base": "floor_sensor_type",
+      "endpoint": null,
+      "description": "Type of the external floor sensor.  Default: NTC 10K/25..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "10k",
+        "15k",
+        "50k",
+        "100k",
+        "12k"
+      ]
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor",
+      "base": "sensor",
+      "endpoint": null,
+      "description": "The sensor used for heat control.  Default: Room Sensor..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "air",
+        "floor",
+        "both"
+      ]
+    },
+    {
+      "name": "Powerup status",
+      "type": "enum",
+      "property": "powerup_status",
+      "base": "powerup_status",
+      "endpoint": null,
+      "description": "The mode after a power reset.  Default: Previous Mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "default",
+        "last_status"
+      ]
+    },
+    {
+      "name": "Floor sensor calibration",
+      "type": "numeric",
+      "property": "floor_sensor_calibration",
+      "base": "floor_sensor_calibration",
+      "endpoint": null,
+      "description": "The tempearatue calibration for the external floor sensor, between -3 and 3 in 0.1°C.  Default: 0..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -3,
+      "value_max": 3,
+      "unit": "°C"
+    },
+    {
+      "name": "Dry time",
+      "type": "numeric",
+      "property": "dry_time",
+      "base": "dry_time",
+      "endpoint": null,
+      "description": "The duration of Dry Mode, between 5 and 100 minutes.  Default: 5..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 100,
+      "unit": "min"
+    },
+    {
+      "name": "Mode after dry",
+      "type": "enum",
+      "property": "mode_after_dry",
+      "base": "mode_after_dry",
+      "endpoint": null,
+      "description": "The mode after Dry Mode.  Default: Auto..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "manual",
+        "auto",
+        "away"
+      ]
+    },
+    {
+      "name": "Temperature display",
+      "type": "enum",
+      "property": "temperature_display",
+      "base": "temperature_display",
+      "endpoint": null,
+      "description": "The temperature on the display.  Default: Room Temperature..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "room",
+        "floor"
+      ]
+    },
+    {
+      "name": "Window open check",
+      "type": "numeric",
+      "property": "window_open_check",
+      "base": "window_open_check",
+      "endpoint": null,
+      "description": "The threshold to detect window open, between 1.5 and 4 in 0.5 °C.  Default: 0 (disabled)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 4,
+      "unit": "°C"
+    },
+    {
+      "name": "Hysterersis",
+      "type": "numeric",
+      "property": "hysterersis",
+      "base": "hysterersis",
+      "endpoint": null,
+      "description": "Hysteresis setting, between 0.5 and 5 in 0.1 °C.  Default: 0.5..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 5,
+      "unit": "°C"
+    },
+    {
+      "name": "Display auto off enabled",
+      "type": "enum",
+      "property": "display_auto_off_enabled",
+      "base": "display_auto_off_enabled",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "enabled",
+        "disabled"
+      ]
+    },
+    {
+      "name": "Alarm airtemp overvalue",
+      "type": "numeric",
+      "property": "alarm_airtemp_overvalue",
+      "base": "alarm_airtemp_overvalue",
+      "endpoint": null,
+      "description": "Floor temperature over heating threshold, range is 0-35, unit is 1ºC, 0 means this function is disabled, default value is 27..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 35,
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

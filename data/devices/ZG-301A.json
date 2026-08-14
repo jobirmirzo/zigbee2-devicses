@@ -1,0 +1,157 @@
+{
+  "model": "ZG-301A",
+  "file": "ZG-301A.md",
+  "vendor": "Excellux",
+  "description": "PIR Motion Sensor Light with Night Light Function",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-301A.png",
+  "added_at": "2026-03-31T19:04:39",
+  "exposes_summary": "switch (state), presence_state, battery_value, illuminance, bright_value, presence_time, presence_delay, illuminance_trig, detection_cycle",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Presence state",
+      "type": "enum",
+      "property": "presence_state",
+      "base": "presence_state",
+      "endpoint": null,
+      "description": "NONE: no presence, PRESENCE: presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "NONE",
+        "PRESENCE"
+      ]
+    },
+    {
+      "name": "Battery value",
+      "type": "numeric",
+      "property": "battery_value",
+      "base": "battery_value",
+      "endpoint": null,
+      "description": "Battery value in %.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Bright value",
+      "type": "numeric",
+      "property": "bright_value",
+      "base": "bright_value",
+      "endpoint": null,
+      "description": "When the light brightness is activated after the lights are turned on.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 100
+    },
+    {
+      "name": "Presence time",
+      "type": "numeric",
+      "property": "presence_time",
+      "base": "presence_time",
+      "endpoint": null,
+      "description": "How long to wait before turning on the lights after detecting a person and meeting the light conditions.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 60,
+      "unit": "s"
+    },
+    {
+      "name": "Presence delay",
+      "type": "numeric",
+      "property": "presence_delay",
+      "base": "presence_delay",
+      "endpoint": null,
+      "description": "How long after no one is detected will the lights turn off.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 1800,
+      "unit": "s"
+    },
+    {
+      "name": "Illuminance trig",
+      "type": "numeric",
+      "property": "illuminance_trig",
+      "base": "illuminance_trig",
+      "endpoint": null,
+      "description": "Detection is only allowed when the illuminance is less than the current value..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10000,
+      "unit": "lx"
+    },
+    {
+      "name": "Detection cycle",
+      "type": "numeric",
+      "property": "detection_cycle",
+      "base": "detection_cycle",
+      "endpoint": null,
+      "description": "How often is the battery level and illuminance detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 1200,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

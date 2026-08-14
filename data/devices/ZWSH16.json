@@ -1,0 +1,73 @@
+{
+  "model": "ZWSH16",
+  "file": "ZWSH16.md",
+  "vendor": "AVATTO",
+  "description": "Smart temperature and humidity detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZWSH16.png",
+  "added_at": "2024-09-01T12:39:25",
+  "exposes_summary": "battery, temperature, humidity, temperature_unit",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature unit",
+      "type": "enum",
+      "property": "temperature_unit",
+      "base": "temperature_unit",
+      "endpoint": null,
+      "description": "Temperature unit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,281 @@
+{
+  "model": "BRT-100-TRV",
+  "file": "BRT-100-TRV.md",
+  "vendor": "Moes",
+  "description": "Thermostatic radiator valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BRT-100-TRV.png",
+  "added_at": "2021-07-01T18:17:29Z",
+  "exposes_summary": "battery, child_lock, eco_mode, eco_temperature, max_temperature, min_temperature, valve_state, position, switch (state), window, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, system_mode, running_state, preset), programming_mode, boost_heating, boost_heating_countdown, boost_heating_countdown_time_set",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Eco mode",
+      "type": "binary",
+      "property": "eco_mode",
+      "base": "eco_mode",
+      "endpoint": null,
+      "description": "ECO mode (energy saving mode).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Eco temperature",
+      "type": "numeric",
+      "property": "eco_temperature",
+      "base": "eco_temperature",
+      "endpoint": null,
+      "description": "Eco temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max temperature",
+      "type": "numeric",
+      "property": "max_temperature",
+      "base": "max_temperature",
+      "endpoint": null,
+      "description": "Maximum temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 15,
+      "value_max": 45,
+      "unit": "°C"
+    },
+    {
+      "name": "Min temperature",
+      "type": "numeric",
+      "property": "min_temperature",
+      "base": "min_temperature",
+      "endpoint": null,
+      "description": "Minimum temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 15,
+      "unit": "°C"
+    },
+    {
+      "name": "Valve state",
+      "type": "binary",
+      "property": "valve_state",
+      "base": "valve_state",
+      "endpoint": null,
+      "description": "Valve state if open or closed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "OPEN",
+      "value_off": "CLOSED"
+    },
+    {
+      "name": "Position",
+      "type": "numeric",
+      "property": "position",
+      "base": "position",
+      "endpoint": null,
+      "description": "Position.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Window detection",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "window_detection",
+          "base": "window_detection",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Window",
+      "type": "binary",
+      "property": "window",
+      "base": "window",
+      "endpoint": null,
+      "description": "Window status closed or open .",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "OPEN",
+      "value_off": "CLOSED"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 0,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": false
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "programming",
+            "manual",
+            "temporary_manual",
+            "holiday"
+          ],
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Programming mode",
+      "type": "text",
+      "property": "programming_mode",
+      "base": "programming_mode",
+      "endpoint": null,
+      "description": "PROGRAMMING MODE ⏱ - In this mode, the device executes a preset week programming temperature time and temperature. You can set up to 4 stages of temperature every for WEEKDAY ➀➁➂➃➄,  SATURDAY ➅ and SUNDAY ➆..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Boost heating",
+      "type": "binary",
+      "property": "boost_heating",
+      "base": "boost_heating",
+      "endpoint": null,
+      "description": "Boost Heating: press and hold \"+\" for 3 seconds, the device will enter the boost heating mode, and the ▷╵◁ will flash. The countdown will be displayed in the APP.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Boost heating countdown",
+      "type": "numeric",
+      "property": "boost_heating_countdown",
+      "base": "boost_heating_countdown",
+      "endpoint": null,
+      "description": "Countdown in minutes.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 15,
+      "unit": "min"
+    },
+    {
+      "name": "Boost heating countdown time set",
+      "type": "numeric",
+      "property": "boost_heating_countdown_time_set",
+      "base": "boost_heating_countdown_time_set",
+      "endpoint": null,
+      "description": "Boost Time Setting 0 sec - 900 sec, (default = 300 sec).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 900,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

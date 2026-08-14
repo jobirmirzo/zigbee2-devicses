@@ -1,0 +1,53 @@
+{
+  "model": "5120.1200",
+  "file": "5120.1200.md",
+  "vendor": "Iluminize",
+  "description": "Zigbee 3.0 switch mini 1x230V with neutral, 200W/400W",
+  "image": "https://www.zigbee2mqtt.io/images/devices/5120.1200.png",
+  "added_at": "2021-05-01T14:47:09Z",
+  "exposes_summary": "switch (state), power_on_behavior",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    }
+  ],
+  "warnings": []
+}

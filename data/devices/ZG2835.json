@@ -1,0 +1,30 @@
+{
+  "model": "ZG2835",
+  "file": "ZG2835.md",
+  "vendor": "Sunricher",
+  "description": "Zigbee knob smart dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG2835.png",
+  "added_at": "2020-09-30T20:52:56Z",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_move_to_level"
+      ]
+    }
+  ],
+  "warnings": []
+}

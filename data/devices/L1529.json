@@ -1,0 +1,164 @@
+{
+  "model": "L1529",
+  "file": "L1529.md",
+  "vendor": "IKEA",
+  "description": "FLOALT light panel, white spectrum, 60x60 cm",
+  "image": "https://www.zigbee2mqtt.io/images/devices/L1529.png",
+  "added_at": "2019-07-22T20:08:17Z",
+  "exposes_summary": "light (state, brightness, color_temp, color_temp_startup, level_config), effect, power_on_behavior, color_options, identify",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 250,
+          "value_max": 454,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup",
+          "base": "color_temp_startup",
+          "value_min": 250,
+          "value_max": 454,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        },
+        {
+          "property": "level_config",
+          "base": "level_config",
+          "value_min": 0,
+          "value_max": 254,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Color options",
+      "type": "composite",
+      "property": "color_options",
+      "base": "color_options",
+      "endpoint": null,
+      "description": "Advanced color behavior.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "execute_if_off",
+          "type": "binary",
+          "description": "Controls whether color and color temperature can be set while light is off",
+          "values": [
+            "true",
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    }
+  ],
+  "warnings": []
+}

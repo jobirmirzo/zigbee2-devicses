@@ -1,0 +1,514 @@
+{
+  "model": "TO-6 W/B",
+  "file": "TO-6_W_B.md",
+  "vendor": "Nova Digital",
+  "description": "Topazio 6 gang Zigbee wall switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TO-6-W-B.png",
+  "added_at": "2026-06-30T19:08:32",
+  "exposes_summary": "switch (state), backlight_mode, indicator_status, power_on_behavior, induction, vibration_gear, mode_1, mode_2, mode_3, mode_4, mode_5, mode_6, countdown_l1, countdown_l2, countdown_l3, countdown_l4, countdown_l5, countdown_l6, inching_l1, inching_l2, inching_l3, inching_l4, inching_l5, inching_l6, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l3",
+      "features": [
+        {
+          "property": "state_l3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l4",
+      "features": [
+        {
+          "property": "state_l4",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l5",
+      "features": [
+        {
+          "property": "state_l5",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l6",
+      "features": [
+        {
+          "property": "state_l6",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Backlight mode",
+      "type": "binary",
+      "property": "backlight_mode",
+      "base": "backlight_mode",
+      "endpoint": null,
+      "description": "Enables/disables the button backlight.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Indicator status",
+      "type": "enum",
+      "property": "indicator_status",
+      "base": "indicator_status",
+      "endpoint": null,
+      "description": "Controls the LED indicator mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "relay",
+        "invert"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "previous"
+      ]
+    },
+    {
+      "name": "Induction",
+      "type": "binary",
+      "property": "induction",
+      "base": "induction",
+      "endpoint": null,
+      "description": "Enables/disables capacitive induction for the buttons.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Vibration gear",
+      "type": "enum",
+      "property": "vibration_gear",
+      "base": "vibration_gear",
+      "endpoint": null,
+      "description": "Controls the vibration feedback intensity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Mode 1",
+      "type": "enum",
+      "property": "mode_1",
+      "base": "mode_1",
+      "endpoint": null,
+      "description": "Button 1 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch_1",
+        "scene_1"
+      ]
+    },
+    {
+      "name": "Mode 2",
+      "type": "enum",
+      "property": "mode_2",
+      "base": "mode_2",
+      "endpoint": null,
+      "description": "Button 2 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch_2",
+        "scene_2"
+      ]
+    },
+    {
+      "name": "Mode 3",
+      "type": "enum",
+      "property": "mode_3",
+      "base": "mode_3",
+      "endpoint": null,
+      "description": "Button 3 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch_3",
+        "scene_3"
+      ]
+    },
+    {
+      "name": "Mode 4",
+      "type": "enum",
+      "property": "mode_4",
+      "base": "mode_4",
+      "endpoint": null,
+      "description": "Button 4 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch_4",
+        "scene_4"
+      ]
+    },
+    {
+      "name": "Mode 5",
+      "type": "enum",
+      "property": "mode_5",
+      "base": "mode_5",
+      "endpoint": null,
+      "description": "Button 5 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch_5",
+        "scene_5"
+      ]
+    },
+    {
+      "name": "Mode 6",
+      "type": "enum",
+      "property": "mode_6",
+      "base": "mode_6",
+      "endpoint": null,
+      "description": "Button 6 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch_6",
+        "scene_6"
+      ]
+    },
+    {
+      "name": "Countdown l1",
+      "type": "numeric",
+      "property": "countdown_l1",
+      "base": "countdown_l1",
+      "endpoint": null,
+      "description": "Countdown timer for channel 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown l2",
+      "type": "numeric",
+      "property": "countdown_l2",
+      "base": "countdown_l2",
+      "endpoint": null,
+      "description": "Countdown timer for channel 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown l3",
+      "type": "numeric",
+      "property": "countdown_l3",
+      "base": "countdown_l3",
+      "endpoint": null,
+      "description": "Countdown timer for channel 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown l4",
+      "type": "numeric",
+      "property": "countdown_l4",
+      "base": "countdown_l4",
+      "endpoint": null,
+      "description": "Countdown timer for channel 4.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown l5",
+      "type": "numeric",
+      "property": "countdown_l5",
+      "base": "countdown_l5",
+      "endpoint": null,
+      "description": "Countdown timer for channel 5.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown l6",
+      "type": "numeric",
+      "property": "countdown_l6",
+      "base": "countdown_l6",
+      "endpoint": null,
+      "description": "Countdown timer for channel 6.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Inching l1",
+      "type": "numeric",
+      "property": "inching_l1",
+      "base": "inching_l1",
+      "endpoint": null,
+      "description": "Inching/pulse duration for channel 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Inching l2",
+      "type": "numeric",
+      "property": "inching_l2",
+      "base": "inching_l2",
+      "endpoint": null,
+      "description": "Inching/pulse duration for channel 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Inching l3",
+      "type": "numeric",
+      "property": "inching_l3",
+      "base": "inching_l3",
+      "endpoint": null,
+      "description": "Inching/pulse duration for channel 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Inching l4",
+      "type": "numeric",
+      "property": "inching_l4",
+      "base": "inching_l4",
+      "endpoint": null,
+      "description": "Inching/pulse duration for channel 4.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Inching l5",
+      "type": "numeric",
+      "property": "inching_l5",
+      "base": "inching_l5",
+      "endpoint": null,
+      "description": "Inching/pulse duration for channel 5.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Inching l6",
+      "type": "numeric",
+      "property": "inching_l6",
+      "base": "inching_l6",
+      "endpoint": null,
+      "description": "Inching/pulse duration for channel 6.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "scene_1",
+        "scene_2",
+        "scene_3",
+        "scene_4",
+        "scene_5",
+        "scene_6"
+      ]
+    }
+  ],
+  "warnings": []
+}

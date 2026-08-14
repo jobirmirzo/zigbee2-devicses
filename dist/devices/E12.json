@@ -1,0 +1,135 @@
+{
+  "model": "E12",
+  "file": "E12.md",
+  "vendor": "Nous",
+  "description": "Carbon monoxide alarm",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E12.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "carbon_monoxide, carbon_monoxide_value, warming_up, test, testing, fault, end_of_life, battery_state",
+  "exposes": [
+    {
+      "name": "Carbon monoxide",
+      "type": "binary",
+      "property": "carbon_monoxide",
+      "base": "carbon_monoxide",
+      "endpoint": null,
+      "description": "Indicates if CO level and exposure time are above safety limits, triggering the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Carbon monoxide value",
+      "type": "numeric",
+      "property": "carbon_monoxide_value",
+      "base": "carbon_monoxide_value",
+      "endpoint": null,
+      "description": "Current CO concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Warming up",
+      "type": "binary",
+      "property": "warming_up",
+      "base": "warming_up",
+      "endpoint": null,
+      "description": "Sensor preheating status: Takes 120 to complete after power on.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Test device",
+      "type": "enum",
+      "property": "test",
+      "base": "test",
+      "endpoint": null,
+      "description": "Triggers the self-checking process: Beeps 4 times and takes 20 seconds to complete.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "test"
+      ]
+    },
+    {
+      "name": "Testing",
+      "type": "binary",
+      "property": "testing",
+      "base": "testing",
+      "endpoint": null,
+      "description": "Indicates if self-checking is currently running.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Fault",
+      "type": "binary",
+      "property": "fault",
+      "base": "fault",
+      "endpoint": null,
+      "description": "Sensor fault indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "End of life",
+      "type": "binary",
+      "property": "end_of_life",
+      "base": "end_of_life",
+      "endpoint": null,
+      "description": "Indicates whether the sensor is past its certified service life (10 years) and should be replaced.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "State of the battery.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "warnings": []
+}

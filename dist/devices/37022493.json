@@ -1,0 +1,124 @@
+{
+  "model": "37022493",
+  "file": "37022493.md",
+  "vendor": "Homeetec",
+  "description": "Curtain/blind switch with 1 Gang switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/37022493.png",
+  "added_at": "2023-06-01T08:16:21",
+  "exposes_summary": "cover (state, position), switch (state), calibration, backlight_mode, motor_steering, child_lock",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Calibration",
+      "type": "enum",
+      "property": "calibration",
+      "base": "calibration",
+      "endpoint": null,
+      "description": "Calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "START",
+        "END"
+      ]
+    },
+    {
+      "name": "Backlight mode",
+      "type": "binary",
+      "property": "backlight_mode",
+      "base": "backlight_mode",
+      "endpoint": null,
+      "description": "Backlight.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Motor steering",
+      "type": "enum",
+      "property": "motor_steering",
+      "base": "motor_steering",
+      "endpoint": null,
+      "description": "Motor Steering.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "FORWARD",
+        "BACKWARD"
+      ]
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Child Lock.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

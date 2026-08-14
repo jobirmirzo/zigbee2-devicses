@@ -1,0 +1,98 @@
+{
+  "model": "TS0601_smart_air_house_keeper",
+  "file": "TS0601_smart_air_house_keeper.md",
+  "vendor": "Tuya",
+  "description": "Smart air house keeper",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_smart_air_house_keeper.png",
+  "added_at": "2021-10-30T12:58:50",
+  "exposes_summary": "temperature, humidity, co2, voc, formaldehyd, pm25",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "The measured CO2 (carbon dioxide) value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "VOC",
+      "type": "numeric",
+      "property": "voc",
+      "base": "voc",
+      "endpoint": null,
+      "description": "Measured VOC value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppb"
+    },
+    {
+      "name": "Formaldehyd",
+      "type": "numeric",
+      "property": "formaldehyd",
+      "base": "formaldehyd",
+      "endpoint": null,
+      "description": "The measured formaldehyd value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "PM25",
+      "type": "numeric",
+      "property": "pm25",
+      "base": "pm25",
+      "endpoint": null,
+      "description": "Measured PM2.5 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 999,
+      "unit": "µg/m³"
+    }
+  ],
+  "warnings": []
+}

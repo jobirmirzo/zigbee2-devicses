@@ -1,0 +1,62 @@
+{
+  "model": "4512726",
+  "file": "4512726.md",
+  "vendor": "Namron",
+  "description": "Zigbee 4 in 1 dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/4512726.png",
+  "added_at": "2021-07-01T18:17:29Z",
+  "exposes_summary": "battery, voltage, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_move_to_level",
+        "color_temperature_move",
+        "move_to_hue"
+      ]
+    }
+  ],
+  "warnings": []
+}

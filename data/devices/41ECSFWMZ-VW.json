@@ -1,0 +1,85 @@
+{
+  "model": "41ECSFWMZ-VW",
+  "file": "41ECSFWMZ-VW.md",
+  "vendor": "Schneider Electric",
+  "description": "Wiser 40/300-Series Module AC Fan Controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/41ECSFWMZ-VW.png",
+  "added_at": "2024-01-31T20:08:01",
+  "exposes_summary": "fan (state, mode), indicator_mode, indicator_orientation",
+  "exposes": [
+    {
+      "name": "Fan",
+      "type": "fan",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "fan_state",
+          "base": "fan_state",
+          "values": [
+            "off",
+            "low",
+            "medium",
+            "high",
+            "on"
+          ],
+          "readable": true
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "values": [
+            "off",
+            "low",
+            "medium",
+            "high",
+            "on"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode",
+      "base": "indicator_mode",
+      "endpoint": null,
+      "description": "Set Indicator Mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "always_on",
+        "on_with_timeout_but_as_locator",
+        "on_with_timeout"
+      ]
+    },
+    {
+      "name": "Indicator orientation",
+      "type": "enum",
+      "property": "indicator_orientation",
+      "base": "indicator_orientation",
+      "endpoint": null,
+      "description": "Set Indicator Orientation..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "horizontal_left",
+        "horizontal_right",
+        "vertical_top",
+        "vertical_bottom"
+      ]
+    }
+  ],
+  "warnings": []
+}

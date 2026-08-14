@@ -1,0 +1,59 @@
+{
+  "model": "1245943",
+  "file": "1245943.md",
+  "vendor": "SOMFY",
+  "description": "Sonesse2 28 WF Li-Ion roller shades",
+  "image": "https://www.zigbee2mqtt.io/images/devices/1245943.png",
+  "added_at": "2025-09-30T19:37:28",
+  "exposes_summary": "battery, cover (state, position)",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

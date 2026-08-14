@@ -1,0 +1,113 @@
+{
+  "model": "mTouch_Astro",
+  "file": "mTouch_Astro.md",
+  "vendor": "CTM Lyng",
+  "description": "mTouch Astro OP, astro clock",
+  "image": "https://www.zigbee2mqtt.io/images/devices/mTouch_Astro.png",
+  "added_at": "2022-08-01T15:06:58",
+  "exposes_summary": "switch (state), device_mode, device_enabled, child_lock, group_id, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Device mode",
+      "type": "enum",
+      "property": "device_mode",
+      "base": "device_mode",
+      "endpoint": null,
+      "description": "Device mode..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "astro_clock",
+        "timer",
+        "daily_timer",
+        "weekly_timer"
+      ]
+    },
+    {
+      "name": "Device enabled",
+      "type": "binary",
+      "property": "device_enabled",
+      "base": "device_enabled",
+      "endpoint": null,
+      "description": "Turn the device on or off.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Physical input on the device enabled/disabled.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "locked",
+      "value_off": "unlocked"
+    },
+    {
+      "name": "Group id",
+      "type": "numeric",
+      "property": "group_id",
+      "base": "group_id",
+      "endpoint": null,
+      "description": "The device sends commands with this group ID. Put devices in this group to control them..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off"
+      ]
+    }
+  ],
+  "warnings": []
+}

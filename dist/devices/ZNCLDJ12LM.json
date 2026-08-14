@@ -1,0 +1,105 @@
+{
+  "model": "ZNCLDJ12LM",
+  "file": "ZNCLDJ12LM.md",
+  "vendor": "Aqara",
+  "description": "Curtain controller B1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZNCLDJ12LM.png",
+  "added_at": "2019-11-09T18:37:38Z",
+  "exposes_summary": "cover (state, position), battery, running, motor_state, power_outage_count",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Running",
+      "type": "binary",
+      "property": "running",
+      "base": "running",
+      "endpoint": null,
+      "description": "Whether the motor is moving or not.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Motor state",
+      "type": "enum",
+      "property": "motor_state",
+      "base": "motor_state",
+      "endpoint": null,
+      "description": "The current state of the motor..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "closing",
+        "opening",
+        "stopped"
+      ]
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages (since last pairing).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

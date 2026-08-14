@@ -1,0 +1,40 @@
+{
+  "model": "PTM 215Z",
+  "file": "PTM_215Z.md",
+  "vendor": "EnOcean",
+  "description": "Pushbutton transmitter module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/PTM-215Z.png",
+  "added_at": "2021-09-02T18:14:38Z",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "press_1",
+        "release_1",
+        "press_2",
+        "release_2",
+        "press_3",
+        "release_3",
+        "press_4",
+        "release_4",
+        "press_1_and_3",
+        "release_1_and_3",
+        "press_2_and_4",
+        "release_2_and_4",
+        "press_energy_bar"
+      ]
+    }
+  ],
+  "warnings": []
+}

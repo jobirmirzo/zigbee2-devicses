@@ -1,0 +1,49 @@
+{
+  "model": "AU-A1ZBR1GW",
+  "file": "AU-A1ZBR1GW.md",
+  "vendor": "Aurora Lighting",
+  "description": "AOne one gang wireless battery rotary dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/AU-A1ZBR1GW.png",
+  "added_at": "2021-01-08T23:43:25Z",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_step_up",
+        "brightness_step_down",
+        "color_temperature_step_up",
+        "color_temperature_step_down"
+      ]
+    }
+  ],
+  "warnings": []
+}

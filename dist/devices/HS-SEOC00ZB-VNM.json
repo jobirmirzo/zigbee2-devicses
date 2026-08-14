@@ -1,0 +1,43 @@
+{
+  "model": "HS-SEOC00ZB-VNM",
+  "file": "HS-SEOC00ZB-VNM.md",
+  "vendor": "VSmart",
+  "description": "Occupancy sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS-SEOC00ZB-VNM.png",
+  "added_at": "2025-10-03T02:16:00Z",
+  "exposes_summary": "battery, occupancy",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

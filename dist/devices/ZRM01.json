@@ -1,0 +1,70 @@
+{
+  "model": "ZRM01",
+  "file": "ZRM01.md",
+  "vendor": "Novato",
+  "description": "Smart relay 1 channel",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZRM01.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "switch (state), power_outage_memory, switch_type",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power outage memory",
+      "type": "enum",
+      "property": "power_outage_memory",
+      "base": "power_outage_memory",
+      "endpoint": null,
+      "description": "Recover state after power outage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off",
+        "restore"
+      ]
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type",
+      "base": "switch_type",
+      "endpoint": null,
+      "description": "External switch type.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "momentary",
+        "toggle",
+        "state"
+      ]
+    }
+  ],
+  "warnings": []
+}

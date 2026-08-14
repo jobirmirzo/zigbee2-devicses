@@ -1,0 +1,249 @@
+{
+  "model": "ZVG1",
+  "file": "ZVG1.md",
+  "vendor": "RTX",
+  "description": "Zigbee smart water valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZVG1.png",
+  "added_at": "2021-08-01T20:41:55Z",
+  "exposes_summary": "switch (state), battery, weather_delay, timer_state, timer, timer_time_left, last_valve_open_duration, water_consumed, cycle_timer_1, cycle_timer_2, cycle_timer_3, cycle_timer_4, normal_schedule_timer_1, normal_schedule_timer_2, normal_schedule_timer_3, normal_schedule_timer_4",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Weather delay",
+      "type": "enum",
+      "property": "weather_delay",
+      "base": "weather_delay",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disabled",
+        "24h",
+        "48h",
+        "72h"
+      ]
+    },
+    {
+      "name": "Timer state",
+      "type": "enum",
+      "property": "timer_state",
+      "base": "timer_state",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "disabled",
+        "active",
+        "enabled"
+      ]
+    },
+    {
+      "name": "Timer",
+      "type": "numeric",
+      "property": "timer",
+      "base": "timer",
+      "endpoint": null,
+      "description": "Auto off after specific time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 60,
+      "unit": "min"
+    },
+    {
+      "name": "Timer time left",
+      "type": "numeric",
+      "property": "timer_time_left",
+      "base": "timer_time_left",
+      "endpoint": null,
+      "description": "Auto off timer time left.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "min"
+    },
+    {
+      "name": "Last valve open duration",
+      "type": "numeric",
+      "property": "last_valve_open_duration",
+      "base": "last_valve_open_duration",
+      "endpoint": null,
+      "description": "Time the valve was open when state on.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "min"
+    },
+    {
+      "name": "Water consumed",
+      "type": "numeric",
+      "property": "water_consumed",
+      "base": "water_consumed",
+      "endpoint": null,
+      "description": "Liters of water consumed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "L"
+    },
+    {
+      "name": "Cycle timer 1",
+      "type": "text",
+      "property": "cycle_timer_1",
+      "base": "cycle_timer_1",
+      "endpoint": null,
+      "description": "Format 08:00 / 20:00 / 15 / 60 / MoTuWeThFrSaSu / 1 (08:00 = start time 20:00 = end time 15 = irrigation duration in minutes 60 = pause duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Cycle timer 2",
+      "type": "text",
+      "property": "cycle_timer_2",
+      "base": "cycle_timer_2",
+      "endpoint": null,
+      "description": "Format 08:00 / 20:00 / 15 / 60 / MoTuWeThFrSaSu / 1 (08:00 = start time 20:00 = end time 15 = irrigation duration in minutes 60 = pause duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Cycle timer 3",
+      "type": "text",
+      "property": "cycle_timer_3",
+      "base": "cycle_timer_3",
+      "endpoint": null,
+      "description": "Format 08:00 / 20:00 / 15 / 60 / MoTuWeThFrSaSu / 1 (08:00 = start time 20:00 = end time 15 = irrigation duration in minutes 60 = pause duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Cycle timer 4",
+      "type": "text",
+      "property": "cycle_timer_4",
+      "base": "cycle_timer_4",
+      "endpoint": null,
+      "description": "Format 08:00 / 20:00 / 15 / 60 / MoTuWeThFrSaSu / 1 (08:00 = start time 20:00 = end time 15 = irrigation duration in minutes 60 = pause duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Normal schedule timer 1",
+      "type": "text",
+      "property": "normal_schedule_timer_1",
+      "base": "normal_schedule_timer_1",
+      "endpoint": null,
+      "description": "Format 08:00 / 15 / MoTuWeThFrSaSu / 1 (08:00 = start time 15 = duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Normal schedule timer 2",
+      "type": "text",
+      "property": "normal_schedule_timer_2",
+      "base": "normal_schedule_timer_2",
+      "endpoint": null,
+      "description": "Format 08:00 / 15 / MoTuWeThFrSaSu / 1 (08:00 = start time 15 = duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Normal schedule timer 3",
+      "type": "text",
+      "property": "normal_schedule_timer_3",
+      "base": "normal_schedule_timer_3",
+      "endpoint": null,
+      "description": "Format 08:00 / 15 / MoTuWeThFrSaSu / 1 (08:00 = start time 15 = duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Normal schedule timer 4",
+      "type": "text",
+      "property": "normal_schedule_timer_4",
+      "base": "normal_schedule_timer_4",
+      "endpoint": null,
+      "description": "Format 08:00 / 15 / MoTuWeThFrSaSu / 1 (08:00 = start time 15 = duration in minutes MoTu..= active weekdays 1 = deactivate timer with 0).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    }
+  ],
+  "warnings": []
+}

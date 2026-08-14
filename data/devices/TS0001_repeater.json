@@ -1,0 +1,11 @@
+{
+  "model": "TS0001_repeater",
+  "file": "TS0001_repeater.md",
+  "vendor": "Tuya",
+  "description": "Zigbee signal repeater",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0001_repeater.png",
+  "added_at": "2025-06-01T17:54:42",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

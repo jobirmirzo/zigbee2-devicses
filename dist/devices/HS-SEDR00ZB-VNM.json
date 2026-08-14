@@ -1,0 +1,57 @@
+{
+  "model": "HS-SEDR00ZB-VNM",
+  "file": "HS-SEDR00ZB-VNM.md",
+  "vendor": "VSmart",
+  "description": "Door/window sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS-SEDR00ZB-VNM.png",
+  "added_at": "2025-10-03T02:16:00Z",
+  "exposes_summary": "contact, battery_low, tamper",
+  "exposes": [
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates whether the device is opened or closed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

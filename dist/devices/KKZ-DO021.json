@@ -1,0 +1,43 @@
+{
+  "model": "KKZ-DO021",
+  "file": "KKZ-DO021.md",
+  "vendor": "Hej",
+  "description": "Door contact sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/KKZ-DO021.png",
+  "added_at": "2025-11-30T20:32:43",
+  "exposes_summary": "contact, battery",
+  "exposes": [
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates if the contact is closed (= true) or open (= false).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

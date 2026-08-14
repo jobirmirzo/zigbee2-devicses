@@ -1,0 +1,271 @@
+{
+  "model": "DIYRuZ_AirSense_Reloaded",
+  "file": "DIYRuZ_AirSense_Reloaded.md",
+  "vendor": "EFEKTA",
+  "description": "Air quality sensor (CO2, formaldehyde, temperature, humidity, pressure)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DIYRuZ_AirSense_Reloaded.png",
+  "added_at": "2026-04-30T19:57:27",
+  "exposes_summary": "identify, co2, formaldehyde_concentration, temperature, pressure, humidity, co2_accurate_measurement, co2_automatic_calibration, led_indication, co2_moderate_threshold, co2_hazardous_threshold, formaldehyde_moderate_threshold, formaldehyde_hazardous_threshold, temperature_offset, humidity_offset, pressure_offset, formaldehyde_offset",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "Measured value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Formaldehyde concentration",
+      "type": "numeric",
+      "property": "formaldehyde_concentration",
+      "base": "formaldehyde_concentration",
+      "endpoint": null,
+      "description": "Formaldehyde (CH2O) concentration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Pressure",
+      "type": "numeric",
+      "property": "pressure",
+      "base": "pressure",
+      "endpoint": null,
+      "description": "The measured atmospheric pressure.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kPa"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Co2 accurate measurement",
+      "type": "binary",
+      "property": "co2_accurate_measurement",
+      "base": "co2_accurate_measurement",
+      "endpoint": null,
+      "description": "Enable/disable accurate CO2 measurement mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Co2 automatic calibration",
+      "type": "binary",
+      "property": "co2_automatic_calibration",
+      "base": "co2_automatic_calibration",
+      "endpoint": null,
+      "description": "Enable/disable automatic calibration of CO2 sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Led indication",
+      "type": "binary",
+      "property": "led_indication",
+      "base": "led_indication",
+      "endpoint": null,
+      "description": "Enable/disable LED indication.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Co2 moderate threshold",
+      "type": "numeric",
+      "property": "co2_moderate_threshold",
+      "base": "co2_moderate_threshold",
+      "endpoint": null,
+      "description": "Threshold for moderate CO2 level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Co2 hazardous threshold",
+      "type": "numeric",
+      "property": "co2_hazardous_threshold",
+      "base": "co2_hazardous_threshold",
+      "endpoint": null,
+      "description": "Threshold for hazardous CO2 level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Formaldehyde moderate threshold",
+      "type": "numeric",
+      "property": "formaldehyde_moderate_threshold",
+      "base": "formaldehyde_moderate_threshold",
+      "endpoint": null,
+      "description": "Threshold for moderate formaldehyde (CH2O) level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "ppb"
+    },
+    {
+      "name": "Formaldehyde hazardous threshold",
+      "type": "numeric",
+      "property": "formaldehyde_hazardous_threshold",
+      "base": "formaldehyde_hazardous_threshold",
+      "endpoint": null,
+      "description": "Threshold for hazardous formaldehyde (CH2O) level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "ppb"
+    },
+    {
+      "name": "Temperature offset",
+      "type": "numeric",
+      "property": "temperature_offset",
+      "base": "temperature_offset",
+      "endpoint": null,
+      "description": "Temperature calibration offset.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -20,
+      "value_max": 20,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity offset",
+      "type": "numeric",
+      "property": "humidity_offset",
+      "base": "humidity_offset",
+      "endpoint": null,
+      "description": "Humidity calibration offset.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "%"
+    },
+    {
+      "name": "Pressure offset",
+      "type": "numeric",
+      "property": "pressure_offset",
+      "base": "pressure_offset",
+      "endpoint": null,
+      "description": "Pressure calibration offset.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -1000,
+      "value_max": 1000,
+      "unit": "hPa"
+    },
+    {
+      "name": "Formaldehyde offset",
+      "type": "numeric",
+      "property": "formaldehyde_offset",
+      "base": "formaldehyde_offset",
+      "endpoint": null,
+      "description": "Formaldehyde ADC range calibration offset.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -100,
+      "value_max": 100,
+      "unit": "adc"
+    }
+  ],
+  "warnings": []
+}

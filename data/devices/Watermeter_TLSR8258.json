@@ -1,0 +1,151 @@
+{
+  "model": "Watermeter_TLSR8258",
+  "file": "Watermeter_TLSR8258.md",
+  "vendor": "Slacky-DIY",
+  "description": "Water Meter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Watermeter_TLSR8258.png",
+  "added_at": "2025-04-01T18:29:09",
+  "exposes_summary": "water_leak, battery, voltage, switch_actions, volume, preset",
+  "exposes": [
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions_4",
+      "base": "switch_actions",
+      "endpoint": "4",
+      "description": "Actions switch 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on_off",
+        "off_on",
+        "toggle"
+      ]
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions_5",
+      "base": "switch_actions",
+      "endpoint": "5",
+      "description": "Actions switch 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on_off",
+        "off_on",
+        "toggle"
+      ]
+    },
+    {
+      "name": "Volume",
+      "type": "numeric",
+      "property": "volume_1",
+      "base": "volume",
+      "endpoint": "1",
+      "description": "Hot water.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "L"
+    },
+    {
+      "name": "Volume",
+      "type": "numeric",
+      "property": "volume_2",
+      "base": "volume",
+      "endpoint": "2",
+      "description": "Cold water.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "L"
+    },
+    {
+      "name": "Preset",
+      "type": "composite",
+      "property": "preset",
+      "base": "preset",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "hot_water_preset",
+          "type": "numeric",
+          "description": "Preset hot water max value is 99999999, unit is L"
+        },
+        {
+          "property": "cold_water_preset",
+          "type": "numeric",
+          "description": "Preset cold water max value is 99999999, unit is L"
+        },
+        {
+          "property": "step_water_preset",
+          "type": "numeric",
+          "description": "Preset step water min value is 1, max value is 100, unit is L"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

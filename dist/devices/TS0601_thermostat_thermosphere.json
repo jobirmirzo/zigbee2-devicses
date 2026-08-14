@@ -1,0 +1,284 @@
+{
+  "model": "TS0601_thermostat_thermosphere",
+  "file": "TS0601_thermostat_thermosphere.md",
+  "vendor": "Tuya",
+  "description": "ThermoSphere thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat_thermosphere.png",
+  "added_at": "2024-10-31T20:34:53",
+  "exposes_summary": "climate (system_mode, current_heating_setpoint, local_temperature), sensor_mode, adaptive_start, max_temperature_limit, min_temperature_limit, boost, display_brightness, holiday_start_stop, holiday_temperature, frost_protection, switch_delay, power_rating, open_window_active, open_window_sensing_time, open_window_drop_limit, open_window_off_time",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "auto"
+          ],
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Sensor mode",
+      "type": "enum",
+      "property": "sensor_mode",
+      "base": "sensor_mode",
+      "endpoint": null,
+      "description": "What type of sensor are you using to measure the temperature of the floor?.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "room_temperature",
+        "floor_temperature",
+        "room_with_floor_limit"
+      ]
+    },
+    {
+      "name": "Adaptive start",
+      "type": "binary",
+      "property": "adaptive_start",
+      "base": "adaptive_start",
+      "endpoint": null,
+      "description": "Preheat the room to the desired temperature before the scheduled start time..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Max temperature limit",
+      "type": "numeric",
+      "property": "max_temperature_limit",
+      "base": "max_temperature_limit",
+      "endpoint": null,
+      "description": "Maximum temperature (default: 35 ºC).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Min temperature limit",
+      "type": "numeric",
+      "property": "min_temperature_limit",
+      "base": "min_temperature_limit",
+      "endpoint": null,
+      "description": "Minimum temperature limit for frost protection. Turns the thermostat on regardless of setpoint if the temperature drops below this..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 5,
+      "unit": "°C"
+    },
+    {
+      "name": "Boost",
+      "type": "enum",
+      "property": "boost",
+      "base": "boost",
+      "endpoint": null,
+      "description": "Override the schedule and boost at the current temperature until turned off.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "ON",
+        "OFF"
+      ]
+    },
+    {
+      "name": "Display brightness",
+      "type": "numeric",
+      "property": "display_brightness",
+      "base": "display_brightness",
+      "endpoint": null,
+      "description": "Brightness of the display when in use.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Holiday start stop",
+      "type": "numeric",
+      "property": "holiday_start_stop",
+      "base": "holiday_start_stop",
+      "endpoint": null,
+      "description": "Set the number of days of holiday, this will start immediately..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 99
+    },
+    {
+      "name": "Holiday temperature",
+      "type": "numeric",
+      "property": "holiday_temperature",
+      "base": "holiday_temperature",
+      "endpoint": null,
+      "description": "Holiday temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Frost protection",
+      "type": "binary",
+      "property": "frost_protection",
+      "base": "frost_protection",
+      "endpoint": null,
+      "description": "Turning on will keep heating at the minimum temperature limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch delay",
+      "type": "numeric",
+      "property": "switch_delay",
+      "base": "switch_delay",
+      "endpoint": null,
+      "description": "How long to wait between making a change and it taking effect.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 90,
+      "unit": "s"
+    },
+    {
+      "name": "Power rating",
+      "type": "numeric",
+      "property": "power_rating",
+      "base": "power_rating",
+      "endpoint": null,
+      "description": "How much power is the underfloor heating rated to. Entering a value will allow the Thermostat to record a value of power usage that can be checked under settings on the physical Thermostat.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 4500,
+      "unit": "W"
+    },
+    {
+      "name": "Open window active",
+      "type": "binary",
+      "property": "open_window_active",
+      "base": "open_window_active",
+      "endpoint": null,
+      "description": "When active the heating will cut off if an Open Window is detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Open window sensing time",
+      "type": "numeric",
+      "property": "open_window_sensing_time",
+      "base": "open_window_sensing_time",
+      "endpoint": null,
+      "description": "The duration that the drop in temperature needs to occur over.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 30,
+      "unit": "minutes"
+    },
+    {
+      "name": "Open window drop limit",
+      "type": "numeric",
+      "property": "open_window_drop_limit",
+      "base": "open_window_drop_limit",
+      "endpoint": null,
+      "description": "The drop in ambient room temperature that will trigger an open window warning.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 4,
+      "unit": "C"
+    },
+    {
+      "name": "Open window off time",
+      "type": "numeric",
+      "property": "open_window_off_time",
+      "base": "open_window_off_time",
+      "endpoint": null,
+      "description": "The length of time the drop in temperature must be consistent for to turn the heating off.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 60,
+      "unit": "minutes"
+    }
+  ],
+  "warnings": []
+}

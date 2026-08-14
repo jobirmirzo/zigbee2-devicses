@@ -1,0 +1,50 @@
+{
+  "model": "SSS401ZB",
+  "file": "SSS401ZB.md",
+  "vendor": "Feibit",
+  "description": "Smart 4 key scene wall switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SSS401ZB.png",
+  "added_at": "2020-04-08T17:49:06Z",
+  "exposes_summary": "action, switch (state)",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "recall_*"
+      ]
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

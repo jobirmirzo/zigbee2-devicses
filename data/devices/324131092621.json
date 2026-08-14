@@ -1,0 +1,73 @@
+{
+  "model": "324131092621",
+  "file": "324131092621.md",
+  "vendor": "Philips",
+  "description": "Hue dimmer switch gen 1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/324131092621.png",
+  "added_at": "2019-07-22T20:08:17Z",
+  "exposes_summary": "battery, action_duration, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action duration",
+      "type": "numeric",
+      "property": "action_duration",
+      "base": "action_duration",
+      "endpoint": null,
+      "description": "Triggered action duration in seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_press",
+        "on_press_release",
+        "on_hold",
+        "on_hold_release",
+        "up_press",
+        "up_press_release",
+        "up_hold",
+        "up_hold_release",
+        "down_press",
+        "down_press_release",
+        "down_hold",
+        "down_hold_release",
+        "off_press",
+        "off_press_release",
+        "off_hold",
+        "off_hold_release"
+      ]
+    }
+  ],
+  "warnings": []
+}

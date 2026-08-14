@@ -1,0 +1,166 @@
+{
+  "model": "ZY-M100-24GV3",
+  "file": "ZY-M100-24GV3.md",
+  "vendor": "Tuya",
+  "description": "24G MmWave radar human presence motion sensor (added distance switch)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZY-M100-24GV3.png",
+  "added_at": "2024-09-01T12:36:44",
+  "exposes_summary": "state, presence, distance, find_switch, illuminance, move_sensitivity, presence_sensitivity, presence_timeout, detection_distance_min, detection_distance_max",
+  "exposes": [
+    {
+      "name": "State",
+      "type": "enum",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Presence state sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "presence",
+        "move"
+      ]
+    },
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Distance",
+      "type": "numeric",
+      "property": "distance",
+      "base": "distance",
+      "endpoint": null,
+      "description": "Target distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Find switch",
+      "type": "binary",
+      "property": "find_switch",
+      "base": "find_switch",
+      "endpoint": null,
+      "description": "distance switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Illuminance sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Move sensitivity",
+      "type": "numeric",
+      "property": "move_sensitivity",
+      "base": "move_sensitivity",
+      "endpoint": null,
+      "description": "Motion Sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10
+    },
+    {
+      "name": "Presence sensitivity",
+      "type": "numeric",
+      "property": "presence_sensitivity",
+      "base": "presence_sensitivity",
+      "endpoint": null,
+      "description": "Presence Sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10
+    },
+    {
+      "name": "Presence timeout",
+      "type": "numeric",
+      "property": "presence_timeout",
+      "base": "presence_timeout",
+      "endpoint": null,
+      "description": "Fade time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 15000,
+      "unit": "s"
+    },
+    {
+      "name": "Detection distance min",
+      "type": "numeric",
+      "property": "detection_distance_min",
+      "base": "detection_distance_min",
+      "endpoint": null,
+      "description": "Minimum range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 8.25,
+      "unit": "m"
+    },
+    {
+      "name": "Detection distance max",
+      "type": "numeric",
+      "property": "detection_distance_max",
+      "base": "detection_distance_max",
+      "endpoint": null,
+      "description": "Maximum range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.75,
+      "value_max": 9,
+      "unit": "m"
+    }
+  ],
+  "warnings": []
+}

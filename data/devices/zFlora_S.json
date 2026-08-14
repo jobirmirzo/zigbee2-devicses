@@ -1,0 +1,224 @@
+{
+  "model": "zFlora_S",
+  "file": "zFlora_S.md",
+  "vendor": "EFEKTA",
+  "description": "Plant watering sensor zFlora S",
+  "image": "https://www.zigbee2mqtt.io/images/devices/zFlora_S.png",
+  "added_at": "2025-04-01T18:30:52",
+  "exposes_summary": "identify, soil_moisture, battery, voltage, battery_low, temperature, humidity, reading_interval, smart_sleep, tx_radio_power, uptime, lower_level, upper_level, temperature_compensation",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Soil moisture",
+      "type": "numeric",
+      "property": "soil_moisture",
+      "base": "soil_moisture",
+      "endpoint": null,
+      "description": "Measured soil moisture value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Reading interval",
+      "type": "numeric",
+      "property": "reading_interval",
+      "base": "reading_interval",
+      "endpoint": null,
+      "description": "Setting the time in minutes, by default 3 minutes.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 360,
+      "unit": "min"
+    },
+    {
+      "name": "Smart sleep",
+      "type": "binary",
+      "property": "smart_sleep",
+      "base": "smart_sleep",
+      "endpoint": null,
+      "description": "Enable Smart Sleep, short wakeup every 7 seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Tx radio power",
+      "type": "enum",
+      "property": "tx_radio_power",
+      "base": "tx_radio_power",
+      "endpoint": null,
+      "description": "Set TX Radio Power, dbm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "0dbm",
+        "4dbm"
+      ]
+    },
+    {
+      "name": "Uptime",
+      "type": "numeric",
+      "property": "uptime",
+      "base": "uptime",
+      "endpoint": null,
+      "description": "Uptime.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hours"
+    },
+    {
+      "name": "Lower level",
+      "type": "numeric",
+      "property": "lower_level",
+      "base": "lower_level",
+      "endpoint": null,
+      "description": "Lower level of soil moisture 0% is:.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 99,
+      "unit": "%"
+    },
+    {
+      "name": "Upper level",
+      "type": "numeric",
+      "property": "upper_level",
+      "base": "upper_level",
+      "endpoint": null,
+      "description": "Upper level of soil moisture 100% is:.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature compensation",
+      "type": "binary",
+      "property": "temperature_compensation",
+      "base": "temperature_compensation",
+      "endpoint": null,
+      "description": "Temperature compensation.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

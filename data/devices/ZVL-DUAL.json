@@ -1,0 +1,182 @@
+{
+  "model": "ZVL-DUAL",
+  "file": "ZVL-DUAL.md",
+  "vendor": "Nova Digital",
+  "description": "Water Valve with 2 zones",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZVL-DUAL.png",
+  "added_at": "2025-05-01T17:59:09",
+  "exposes_summary": "valve_1, state_1, timer_1, countdown_1, last_duration_1, valve_2, state_2, timer_2, countdown_2, last_duration_2, battery",
+  "exposes": [
+    {
+      "name": "Valve 1",
+      "type": "binary",
+      "property": "valve_1",
+      "base": "valve_1",
+      "endpoint": null,
+      "description": "State of the valve 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "State 1",
+      "type": "enum",
+      "property": "state_1",
+      "base": "state_1",
+      "endpoint": null,
+      "description": "State of the valve 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "Manual",
+        "Auto",
+        "Closed"
+      ]
+    },
+    {
+      "name": "Timer 1",
+      "type": "numeric",
+      "property": "timer_1",
+      "base": "timer_1",
+      "endpoint": null,
+      "description": "Timer for the valve 1 operation.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 1440,
+      "unit": "min"
+    },
+    {
+      "name": "Countdown 1",
+      "type": "numeric",
+      "property": "countdown_1",
+      "base": "countdown_1",
+      "endpoint": null,
+      "description": "Time remaining for the open valve 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "min"
+    },
+    {
+      "name": "Last duration 1",
+      "type": "numeric",
+      "property": "last_duration_1",
+      "base": "last_duration_1",
+      "endpoint": null,
+      "description": "Last open duration for the valve 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Valve 2",
+      "type": "binary",
+      "property": "valve_2",
+      "base": "valve_2",
+      "endpoint": null,
+      "description": "State of the valve 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "State 2",
+      "type": "enum",
+      "property": "state_2",
+      "base": "state_2",
+      "endpoint": null,
+      "description": "State of the valve 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "Manual",
+        "Auto",
+        "Closed"
+      ]
+    },
+    {
+      "name": "Timer 2",
+      "type": "numeric",
+      "property": "timer_2",
+      "base": "timer_2",
+      "endpoint": null,
+      "description": "Timer for the valve 2 operation.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 1440,
+      "unit": "min"
+    },
+    {
+      "name": "Countdown 2",
+      "type": "numeric",
+      "property": "countdown_2",
+      "base": "countdown_2",
+      "endpoint": null,
+      "description": "Time remaining for the open valve 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "min"
+    },
+    {
+      "name": "Last duration 2",
+      "type": "numeric",
+      "property": "last_duration_2",
+      "base": "last_duration_2",
+      "endpoint": null,
+      "description": "Last open duration for the valve 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

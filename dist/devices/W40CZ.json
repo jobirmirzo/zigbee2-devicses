@@ -1,0 +1,43 @@
+{
+  "model": "W40CZ",
+  "file": "W40CZ.md",
+  "vendor": "ORVIBO",
+  "description": "Smart curtain motor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/W40CZ.png",
+  "added_at": "2020-05-19T20:48:40Z",
+  "exposes_summary": "cover (state, position)",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,91 @@
+{
+  "model": "ZC-HM",
+  "file": "ZC-HM.md",
+  "vendor": "Moes",
+  "description": "Carbon monoxide alarm",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZC-HM.png",
+  "added_at": "2023-11-01T18:54:40",
+  "exposes_summary": "carbon_monoxide, co, self_test_result, battery, silence",
+  "exposes": [
+    {
+      "name": "Carbon monoxide",
+      "type": "binary",
+      "property": "carbon_monoxide",
+      "base": "carbon_monoxide",
+      "endpoint": null,
+      "description": "Indicates if CO (carbon monoxide) is detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "CO",
+      "type": "numeric",
+      "property": "co",
+      "base": "co",
+      "endpoint": null,
+      "description": "The measured CO (carbon monoxide) value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Self test result",
+      "type": "enum",
+      "property": "self_test_result",
+      "base": "self_test_result",
+      "endpoint": null,
+      "description": "Result of the self-test.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "checking",
+        "success",
+        "failure",
+        "others"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Silence",
+      "type": "binary",
+      "property": "silence",
+      "base": "silence",
+      "endpoint": null,
+      "description": "Silence the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

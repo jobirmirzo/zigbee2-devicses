@@ -1,0 +1,245 @@
+{
+  "model": "EFEKTA_T1_v2",
+  "file": "EFEKTA_T1_v2.md",
+  "vendor": "EFEKTA",
+  "description": "Temperature sensors. External DS18b20 sensor. Simple Thermostat.",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_T1_v2.png",
+  "added_at": "2025-04-01T18:30:52",
+  "exposes_summary": "identify, temperature, battery, voltage, battery_low, reading_interval, smart_sleep, uptime, resolution, config_report_enable, comparison_previous_data, enabling_temperature_control, temperature_actions, high_temperature, low_temperature",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Reading interval",
+      "type": "numeric",
+      "property": "reading_interval",
+      "base": "reading_interval",
+      "endpoint": null,
+      "description": "Setting the sensor reading interval in seconds, by default 30 seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 360,
+      "unit": "sec"
+    },
+    {
+      "name": "Smart sleep",
+      "type": "binary",
+      "property": "smart_sleep",
+      "base": "smart_sleep",
+      "endpoint": null,
+      "description": "Enable Smart Sleep, short wakeup every 7 seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Uptime",
+      "type": "numeric",
+      "property": "uptime",
+      "base": "uptime",
+      "endpoint": null,
+      "description": "Uptime.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hours"
+    },
+    {
+      "name": "Resolution",
+      "type": "enum",
+      "property": "resolution",
+      "base": "resolution",
+      "endpoint": null,
+      "description": "Set Bit resolution DS18B20.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "9 bit",
+        "10 bit",
+        "11 bit",
+        "12 bit"
+      ]
+    },
+    {
+      "name": "Config report enable",
+      "type": "binary",
+      "property": "config_report_enable",
+      "base": "config_report_enable",
+      "endpoint": null,
+      "description": "Enable reporting based on reporting configuration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Comparison previous data",
+      "type": "binary",
+      "property": "comparison_previous_data",
+      "base": "comparison_previous_data",
+      "endpoint": null,
+      "description": "Enable сontrol of comparison with previous data.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Enabling temperature control",
+      "type": "binary",
+      "property": "enabling_temperature_control",
+      "base": "enabling_temperature_control",
+      "endpoint": null,
+      "description": "Enables/disables Tempearure control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Temperature actions",
+      "type": "enum",
+      "property": "temperature_actions",
+      "base": "temperature_actions",
+      "endpoint": null,
+      "description": "Heat or cool.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "HEAT",
+        "COOL"
+      ]
+    },
+    {
+      "name": "High temperature",
+      "type": "numeric",
+      "property": "high_temperature",
+      "base": "high_temperature",
+      "endpoint": null,
+      "description": "Setting High Temperature Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 120,
+      "unit": "°C"
+    },
+    {
+      "name": "Low temperature",
+      "type": "numeric",
+      "property": "low_temperature",
+      "base": "low_temperature",
+      "endpoint": null,
+      "description": "Setting Low Temperature Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 120,
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

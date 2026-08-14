@@ -1,0 +1,4193 @@
+{
+  "model": "Icon2",
+  "file": "Icon2.md",
+  "vendor": "Danfoss",
+  "description": "Icon2 Main Controller, Room Thermostat or Sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Icon2.png",
+  "added_at": "2024-03-31T18:43:56",
+  "exposes_summary": "battery, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), min_heat_setpoint_limit, max_heat_setpoint_limit, setpoint_change_source, output_status, room_status_code, room_floor_sensor_mode, floor_min_setpoint, floor_max_setpoint, schedule_type_used, icon2_pre_heat, icon2_pre_heat_status, temperature, humidity, system_status_code, heat_supply_request, system_status_water, multimaster_role, icon_application, icon_forced_heating_cooling",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_1",
+      "base": "battery",
+      "endpoint": "1",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "1",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_1",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_1",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_1",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_1",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_1",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "1",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_1",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "1",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_1",
+      "base": "setpoint_change_source",
+      "endpoint": "1",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_1",
+      "base": "output_status",
+      "endpoint": "1",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_1",
+      "base": "room_status_code",
+      "endpoint": "1",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_1",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "1",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_1",
+      "base": "floor_min_setpoint",
+      "endpoint": "1",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_1",
+      "base": "floor_max_setpoint",
+      "endpoint": "1",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule type used",
+      "type": "enum",
+      "property": "schedule_type_used_1",
+      "base": "schedule_type_used",
+      "endpoint": "1",
+      "description": "Danfoss schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "regular_schedule_selected",
+        "vacation_schedule_selected"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat",
+      "type": "enum",
+      "property": "icon2_pre_heat_1",
+      "base": "icon2_pre_heat",
+      "endpoint": "1",
+      "description": "Danfoss pre heat control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat status",
+      "type": "enum",
+      "property": "icon2_pre_heat_status_1",
+      "base": "icon2_pre_heat_status",
+      "endpoint": "1",
+      "description": "Danfoss pre heat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_1",
+      "base": "temperature",
+      "endpoint": "1",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_1",
+      "base": "humidity",
+      "endpoint": "1",
+      "description": "Humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_2",
+      "base": "battery",
+      "endpoint": "2",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "2",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_2",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_2",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_2",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_2",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_2",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "2",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_2",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "2",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_2",
+      "base": "setpoint_change_source",
+      "endpoint": "2",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_2",
+      "base": "output_status",
+      "endpoint": "2",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_2",
+      "base": "room_status_code",
+      "endpoint": "2",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_2",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "2",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_2",
+      "base": "floor_min_setpoint",
+      "endpoint": "2",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_2",
+      "base": "floor_max_setpoint",
+      "endpoint": "2",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule type used",
+      "type": "enum",
+      "property": "schedule_type_used_2",
+      "base": "schedule_type_used",
+      "endpoint": "2",
+      "description": "Danfoss schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "regular_schedule_selected",
+        "vacation_schedule_selected"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat",
+      "type": "enum",
+      "property": "icon2_pre_heat_2",
+      "base": "icon2_pre_heat",
+      "endpoint": "2",
+      "description": "Danfoss pre heat control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat status",
+      "type": "enum",
+      "property": "icon2_pre_heat_status_2",
+      "base": "icon2_pre_heat_status",
+      "endpoint": "2",
+      "description": "Danfoss pre heat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_2",
+      "base": "temperature",
+      "endpoint": "2",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_2",
+      "base": "humidity",
+      "endpoint": "2",
+      "description": "Humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_3",
+      "base": "battery",
+      "endpoint": "3",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "3",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_3",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_3",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_3",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_3",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_3",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "3",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_3",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "3",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_3",
+      "base": "setpoint_change_source",
+      "endpoint": "3",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_3",
+      "base": "output_status",
+      "endpoint": "3",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_3",
+      "base": "room_status_code",
+      "endpoint": "3",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_3",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "3",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_3",
+      "base": "floor_min_setpoint",
+      "endpoint": "3",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_3",
+      "base": "floor_max_setpoint",
+      "endpoint": "3",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule type used",
+      "type": "enum",
+      "property": "schedule_type_used_3",
+      "base": "schedule_type_used",
+      "endpoint": "3",
+      "description": "Danfoss schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "regular_schedule_selected",
+        "vacation_schedule_selected"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat",
+      "type": "enum",
+      "property": "icon2_pre_heat_3",
+      "base": "icon2_pre_heat",
+      "endpoint": "3",
+      "description": "Danfoss pre heat control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat status",
+      "type": "enum",
+      "property": "icon2_pre_heat_status_3",
+      "base": "icon2_pre_heat_status",
+      "endpoint": "3",
+      "description": "Danfoss pre heat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_3",
+      "base": "temperature",
+      "endpoint": "3",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_3",
+      "base": "humidity",
+      "endpoint": "3",
+      "description": "Humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_4",
+      "base": "battery",
+      "endpoint": "4",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "4",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_4",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_4",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_4",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_4",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_4",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "4",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_4",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "4",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_4",
+      "base": "setpoint_change_source",
+      "endpoint": "4",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_4",
+      "base": "output_status",
+      "endpoint": "4",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_4",
+      "base": "room_status_code",
+      "endpoint": "4",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_4",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "4",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_4",
+      "base": "floor_min_setpoint",
+      "endpoint": "4",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_4",
+      "base": "floor_max_setpoint",
+      "endpoint": "4",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule type used",
+      "type": "enum",
+      "property": "schedule_type_used_4",
+      "base": "schedule_type_used",
+      "endpoint": "4",
+      "description": "Danfoss schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "regular_schedule_selected",
+        "vacation_schedule_selected"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat",
+      "type": "enum",
+      "property": "icon2_pre_heat_4",
+      "base": "icon2_pre_heat",
+      "endpoint": "4",
+      "description": "Danfoss pre heat control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat status",
+      "type": "enum",
+      "property": "icon2_pre_heat_status_4",
+      "base": "icon2_pre_heat_status",
+      "endpoint": "4",
+      "description": "Danfoss pre heat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_4",
+      "base": "temperature",
+      "endpoint": "4",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_4",
+      "base": "humidity",
+      "endpoint": "4",
+      "description": "Humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_5",
+      "base": "battery",
+      "endpoint": "5",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "5",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_5",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_5",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_5",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_5",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_5",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "5",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_5",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "5",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_5",
+      "base": "setpoint_change_source",
+      "endpoint": "5",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_5",
+      "base": "output_status",
+      "endpoint": "5",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_5",
+      "base": "room_status_code",
+      "endpoint": "5",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_5",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "5",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_5",
+      "base": "floor_min_setpoint",
+      "endpoint": "5",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_5",
+      "base": "floor_max_setpoint",
+      "endpoint": "5",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule type used",
+      "type": "enum",
+      "property": "schedule_type_used_5",
+      "base": "schedule_type_used",
+      "endpoint": "5",
+      "description": "Danfoss schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "regular_schedule_selected",
+        "vacation_schedule_selected"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat",
+      "type": "enum",
+      "property": "icon2_pre_heat_5",
+      "base": "icon2_pre_heat",
+      "endpoint": "5",
+      "description": "Danfoss pre heat control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat status",
+      "type": "enum",
+      "property": "icon2_pre_heat_status_5",
+      "base": "icon2_pre_heat_status",
+      "endpoint": "5",
+      "description": "Danfoss pre heat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_5",
+      "base": "temperature",
+      "endpoint": "5",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_5",
+      "base": "humidity",
+      "endpoint": "5",
+      "description": "Humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_6",
+      "base": "battery",
+      "endpoint": "6",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "6",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_6",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_6",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_6",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_6",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_6",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "6",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_6",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "6",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_6",
+      "base": "setpoint_change_source",
+      "endpoint": "6",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_6",
+      "base": "output_status",
+      "endpoint": "6",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_6",
+      "base": "room_status_code",
+      "endpoint": "6",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_6",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "6",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_6",
+      "base": "floor_min_setpoint",
+      "endpoint": "6",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_6",
+      "base": "floor_max_setpoint",
+      "endpoint": "6",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule type used",
+      "type": "enum",
+      "property": "schedule_type_used_6",
+      "base": "schedule_type_used",
+      "endpoint": "6",
+      "description": "Danfoss schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "regular_schedule_selected",
+        "vacation_schedule_selected"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat",
+      "type": "enum",
+      "property": "icon2_pre_heat_6",
+      "base": "icon2_pre_heat",
+      "endpoint": "6",
+      "description": "Danfoss pre heat control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat status",
+      "type": "enum",
+      "property": "icon2_pre_heat_status_6",
+      "base": "icon2_pre_heat_status",
+      "endpoint": "6",
+      "description": "Danfoss pre heat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_6",
+      "base": "temperature",
+      "endpoint": "6",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_6",
+      "base": "humidity",
+      "endpoint": "6",
+      "description": "Humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_7",
+      "base": "battery",
+      "endpoint": "7",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "7",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_7",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_7",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_7",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_7",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_7",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "7",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_7",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "7",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_7",
+      "base": "setpoint_change_source",
+      "endpoint": "7",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_7",
+      "base": "output_status",
+      "endpoint": "7",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_7",
+      "base": "room_status_code",
+      "endpoint": "7",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_7",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "7",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_7",
+      "base": "floor_min_setpoint",
+      "endpoint": "7",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_7",
+      "base": "floor_max_setpoint",
+      "endpoint": "7",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule type used",
+      "type": "enum",
+      "property": "schedule_type_used_7",
+      "base": "schedule_type_used",
+      "endpoint": "7",
+      "description": "Danfoss schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "regular_schedule_selected",
+        "vacation_schedule_selected"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat",
+      "type": "enum",
+      "property": "icon2_pre_heat_7",
+      "base": "icon2_pre_heat",
+      "endpoint": "7",
+      "description": "Danfoss pre heat control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat status",
+      "type": "enum",
+      "property": "icon2_pre_heat_status_7",
+      "base": "icon2_pre_heat_status",
+      "endpoint": "7",
+      "description": "Danfoss pre heat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_7",
+      "base": "temperature",
+      "endpoint": "7",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_7",
+      "base": "humidity",
+      "endpoint": "7",
+      "description": "Humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_8",
+      "base": "battery",
+      "endpoint": "8",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "8",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_8",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_8",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_8",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_8",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_8",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "8",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_8",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "8",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_8",
+      "base": "setpoint_change_source",
+      "endpoint": "8",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_8",
+      "base": "output_status",
+      "endpoint": "8",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_8",
+      "base": "room_status_code",
+      "endpoint": "8",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_8",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "8",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_8",
+      "base": "floor_min_setpoint",
+      "endpoint": "8",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_8",
+      "base": "floor_max_setpoint",
+      "endpoint": "8",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule type used",
+      "type": "enum",
+      "property": "schedule_type_used_8",
+      "base": "schedule_type_used",
+      "endpoint": "8",
+      "description": "Danfoss schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "regular_schedule_selected",
+        "vacation_schedule_selected"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat",
+      "type": "enum",
+      "property": "icon2_pre_heat_8",
+      "base": "icon2_pre_heat",
+      "endpoint": "8",
+      "description": "Danfoss pre heat control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat status",
+      "type": "enum",
+      "property": "icon2_pre_heat_status_8",
+      "base": "icon2_pre_heat_status",
+      "endpoint": "8",
+      "description": "Danfoss pre heat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_8",
+      "base": "temperature",
+      "endpoint": "8",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_8",
+      "base": "humidity",
+      "endpoint": "8",
+      "description": "Humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_9",
+      "base": "battery",
+      "endpoint": "9",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "9",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_9",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_9",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_9",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_9",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_9",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "9",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_9",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "9",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_9",
+      "base": "setpoint_change_source",
+      "endpoint": "9",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_9",
+      "base": "output_status",
+      "endpoint": "9",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_9",
+      "base": "room_status_code",
+      "endpoint": "9",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_9",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "9",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_9",
+      "base": "floor_min_setpoint",
+      "endpoint": "9",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_9",
+      "base": "floor_max_setpoint",
+      "endpoint": "9",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule type used",
+      "type": "enum",
+      "property": "schedule_type_used_9",
+      "base": "schedule_type_used",
+      "endpoint": "9",
+      "description": "Danfoss schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "regular_schedule_selected",
+        "vacation_schedule_selected"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat",
+      "type": "enum",
+      "property": "icon2_pre_heat_9",
+      "base": "icon2_pre_heat",
+      "endpoint": "9",
+      "description": "Danfoss pre heat control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat status",
+      "type": "enum",
+      "property": "icon2_pre_heat_status_9",
+      "base": "icon2_pre_heat_status",
+      "endpoint": "9",
+      "description": "Danfoss pre heat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_9",
+      "base": "temperature",
+      "endpoint": "9",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_9",
+      "base": "humidity",
+      "endpoint": "9",
+      "description": "Humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_10",
+      "base": "battery",
+      "endpoint": "10",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "10",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_10",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_10",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_10",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_10",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_10",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "10",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_10",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "10",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_10",
+      "base": "setpoint_change_source",
+      "endpoint": "10",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_10",
+      "base": "output_status",
+      "endpoint": "10",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_10",
+      "base": "room_status_code",
+      "endpoint": "10",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_10",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "10",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_10",
+      "base": "floor_min_setpoint",
+      "endpoint": "10",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_10",
+      "base": "floor_max_setpoint",
+      "endpoint": "10",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule type used",
+      "type": "enum",
+      "property": "schedule_type_used_10",
+      "base": "schedule_type_used",
+      "endpoint": "10",
+      "description": "Danfoss schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "regular_schedule_selected",
+        "vacation_schedule_selected"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat",
+      "type": "enum",
+      "property": "icon2_pre_heat_10",
+      "base": "icon2_pre_heat",
+      "endpoint": "10",
+      "description": "Danfoss pre heat control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat status",
+      "type": "enum",
+      "property": "icon2_pre_heat_status_10",
+      "base": "icon2_pre_heat_status",
+      "endpoint": "10",
+      "description": "Danfoss pre heat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_10",
+      "base": "temperature",
+      "endpoint": "10",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_10",
+      "base": "humidity",
+      "endpoint": "10",
+      "description": "Humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_11",
+      "base": "battery",
+      "endpoint": "11",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "11",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_11",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_11",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_11",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_11",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_11",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "11",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_11",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "11",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_11",
+      "base": "setpoint_change_source",
+      "endpoint": "11",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_11",
+      "base": "output_status",
+      "endpoint": "11",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_11",
+      "base": "room_status_code",
+      "endpoint": "11",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_11",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "11",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_11",
+      "base": "floor_min_setpoint",
+      "endpoint": "11",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_11",
+      "base": "floor_max_setpoint",
+      "endpoint": "11",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule type used",
+      "type": "enum",
+      "property": "schedule_type_used_11",
+      "base": "schedule_type_used",
+      "endpoint": "11",
+      "description": "Danfoss schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "regular_schedule_selected",
+        "vacation_schedule_selected"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat",
+      "type": "enum",
+      "property": "icon2_pre_heat_11",
+      "base": "icon2_pre_heat",
+      "endpoint": "11",
+      "description": "Danfoss pre heat control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat status",
+      "type": "enum",
+      "property": "icon2_pre_heat_status_11",
+      "base": "icon2_pre_heat_status",
+      "endpoint": "11",
+      "description": "Danfoss pre heat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_11",
+      "base": "temperature",
+      "endpoint": "11",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_11",
+      "base": "humidity",
+      "endpoint": "11",
+      "description": "Humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_12",
+      "base": "battery",
+      "endpoint": "12",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "12",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_12",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_12",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_12",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_12",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_12",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "12",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_12",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "12",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_12",
+      "base": "setpoint_change_source",
+      "endpoint": "12",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_12",
+      "base": "output_status",
+      "endpoint": "12",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_12",
+      "base": "room_status_code",
+      "endpoint": "12",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_12",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "12",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_12",
+      "base": "floor_min_setpoint",
+      "endpoint": "12",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_12",
+      "base": "floor_max_setpoint",
+      "endpoint": "12",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule type used",
+      "type": "enum",
+      "property": "schedule_type_used_12",
+      "base": "schedule_type_used",
+      "endpoint": "12",
+      "description": "Danfoss schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "regular_schedule_selected",
+        "vacation_schedule_selected"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat",
+      "type": "enum",
+      "property": "icon2_pre_heat_12",
+      "base": "icon2_pre_heat",
+      "endpoint": "12",
+      "description": "Danfoss pre heat control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat status",
+      "type": "enum",
+      "property": "icon2_pre_heat_status_12",
+      "base": "icon2_pre_heat_status",
+      "endpoint": "12",
+      "description": "Danfoss pre heat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_12",
+      "base": "temperature",
+      "endpoint": "12",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_12",
+      "base": "humidity",
+      "endpoint": "12",
+      "description": "Humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_13",
+      "base": "battery",
+      "endpoint": "13",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "13",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_13",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_13",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_13",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_13",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_13",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "13",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_13",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "13",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_13",
+      "base": "setpoint_change_source",
+      "endpoint": "13",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_13",
+      "base": "output_status",
+      "endpoint": "13",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_13",
+      "base": "room_status_code",
+      "endpoint": "13",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_13",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "13",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_13",
+      "base": "floor_min_setpoint",
+      "endpoint": "13",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_13",
+      "base": "floor_max_setpoint",
+      "endpoint": "13",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule type used",
+      "type": "enum",
+      "property": "schedule_type_used_13",
+      "base": "schedule_type_used",
+      "endpoint": "13",
+      "description": "Danfoss schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "regular_schedule_selected",
+        "vacation_schedule_selected"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat",
+      "type": "enum",
+      "property": "icon2_pre_heat_13",
+      "base": "icon2_pre_heat",
+      "endpoint": "13",
+      "description": "Danfoss pre heat control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat status",
+      "type": "enum",
+      "property": "icon2_pre_heat_status_13",
+      "base": "icon2_pre_heat_status",
+      "endpoint": "13",
+      "description": "Danfoss pre heat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_13",
+      "base": "temperature",
+      "endpoint": "13",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_13",
+      "base": "humidity",
+      "endpoint": "13",
+      "description": "Humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_14",
+      "base": "battery",
+      "endpoint": "14",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "14",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_14",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_14",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_14",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_14",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_14",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "14",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_14",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "14",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_14",
+      "base": "setpoint_change_source",
+      "endpoint": "14",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_14",
+      "base": "output_status",
+      "endpoint": "14",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_14",
+      "base": "room_status_code",
+      "endpoint": "14",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_14",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "14",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_14",
+      "base": "floor_min_setpoint",
+      "endpoint": "14",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_14",
+      "base": "floor_max_setpoint",
+      "endpoint": "14",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule type used",
+      "type": "enum",
+      "property": "schedule_type_used_14",
+      "base": "schedule_type_used",
+      "endpoint": "14",
+      "description": "Danfoss schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "regular_schedule_selected",
+        "vacation_schedule_selected"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat",
+      "type": "enum",
+      "property": "icon2_pre_heat_14",
+      "base": "icon2_pre_heat",
+      "endpoint": "14",
+      "description": "Danfoss pre heat control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat status",
+      "type": "enum",
+      "property": "icon2_pre_heat_status_14",
+      "base": "icon2_pre_heat_status",
+      "endpoint": "14",
+      "description": "Danfoss pre heat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_14",
+      "base": "temperature",
+      "endpoint": "14",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_14",
+      "base": "humidity",
+      "endpoint": "14",
+      "description": "Humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_15",
+      "base": "battery",
+      "endpoint": "15",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "15",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_15",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_15",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_15",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_15",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_15",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "15",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_15",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "15",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_15",
+      "base": "setpoint_change_source",
+      "endpoint": "15",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_15",
+      "base": "output_status",
+      "endpoint": "15",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_15",
+      "base": "room_status_code",
+      "endpoint": "15",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_15",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "15",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_15",
+      "base": "floor_min_setpoint",
+      "endpoint": "15",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_15",
+      "base": "floor_max_setpoint",
+      "endpoint": "15",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule type used",
+      "type": "enum",
+      "property": "schedule_type_used_15",
+      "base": "schedule_type_used",
+      "endpoint": "15",
+      "description": "Danfoss schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "regular_schedule_selected",
+        "vacation_schedule_selected"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat",
+      "type": "enum",
+      "property": "icon2_pre_heat_15",
+      "base": "icon2_pre_heat",
+      "endpoint": "15",
+      "description": "Danfoss pre heat control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Icon2 pre heat status",
+      "type": "enum",
+      "property": "icon2_pre_heat_status_15",
+      "base": "icon2_pre_heat_status",
+      "endpoint": "15",
+      "description": "Danfoss pre heat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_15",
+      "base": "temperature",
+      "endpoint": "15",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity_15",
+      "base": "humidity",
+      "endpoint": "15",
+      "description": "Humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "System status code",
+      "type": "enum",
+      "property": "system_status_code_232",
+      "base": "system_status_code",
+      "endpoint": "232",
+      "description": "Main Controller Status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_expansion_board",
+        "missing_radio_module",
+        "missing_command_module",
+        "missing_master_rail",
+        "missing_slave_rail_no_1",
+        "missing_slave_rail_no_2",
+        "pt1000_input_short_circuit",
+        "pt1000_input_open_circuit",
+        "error_on_one_or_more_output"
+      ]
+    },
+    {
+      "name": "Heat supply request",
+      "type": "enum",
+      "property": "heat_supply_request_232",
+      "base": "heat_supply_request",
+      "endpoint": "232",
+      "description": "Danfoss heat supply request.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "heat_supply_request"
+      ]
+    },
+    {
+      "name": "System status water",
+      "type": "enum",
+      "property": "system_status_water_232",
+      "base": "system_status_water",
+      "endpoint": "232",
+      "description": "Main Controller Water Status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "hot_water_flow_in_pipes",
+        "cool_water_flow_in_pipes"
+      ]
+    },
+    {
+      "name": "Multimaster role",
+      "type": "enum",
+      "property": "multimaster_role_232",
+      "base": "multimaster_role",
+      "endpoint": "232",
+      "description": "Main Controller Role.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "invalid_unused",
+        "master",
+        "slave_1",
+        "slave_2"
+      ]
+    },
+    {
+      "name": "Icon application",
+      "type": "enum",
+      "property": "icon_application_232",
+      "base": "icon_application",
+      "endpoint": "232",
+      "description": "Main Controller application.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ]
+    },
+    {
+      "name": "Icon forced heating cooling",
+      "type": "enum",
+      "property": "icon_forced_heating_cooling_232",
+      "base": "icon_forced_heating_cooling",
+      "endpoint": "232",
+      "description": "Main Controller application.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "force_heating",
+        "force_cooling",
+        "none"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,31 @@
+{
+  "model": "SE21",
+  "file": "SE21.md",
+  "vendor": "ORVIBO",
+  "description": "Smart emergency button",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SE21.png",
+  "added_at": "2025-02-18T14:59:37",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "off",
+        "single",
+        "double",
+        "hold"
+      ]
+    }
+  ],
+  "warnings": []
+}

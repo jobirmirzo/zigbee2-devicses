@@ -1,0 +1,431 @@
+{
+  "model": "4512785",
+  "file": "4512785.md",
+  "vendor": "Namron",
+  "description": "Zigbee 30A relay with NTC temperature sensors and water leak detection",
+  "image": "https://www.zigbee2mqtt.io/images/devices/4512785.png",
+  "added_at": "2026-04-30T19:57:27",
+  "exposes_summary": "switch (state), power_on_behavior, power, voltage, current, energy, device_temperature, ntc1_temperature, ntc2_temperature, water_sensor, ntc1_sensor_type, ntc2_sensor_type, water_alarm_relay_action, ntc1_operation_mode, ntc2_operation_mode, ntc1_relay_auto_temp, ntc2_relay_auto_temp, override_option, ntc1_calibration, ntc2_calibration, ntc1_temp_hysteresis, ntc2_temp_hysteresis, water_condition_alarm, ntc_condition_alarm, is_execute_condition",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Internal device temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Ntc1 temperature",
+      "type": "numeric",
+      "property": "ntc1_temperature",
+      "base": "ntc1_temperature",
+      "endpoint": null,
+      "description": "External NTC1 temperature probe.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Ntc2 temperature",
+      "type": "numeric",
+      "property": "ntc2_temperature",
+      "base": "ntc2_temperature",
+      "endpoint": null,
+      "description": "External NTC2 temperature probe.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Water sensor",
+      "type": "binary",
+      "property": "water_sensor",
+      "base": "water_sensor",
+      "endpoint": null,
+      "description": "External water sensor (true = water detected).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Ntc1 sensor type",
+      "type": "enum",
+      "property": "ntc1_sensor_type",
+      "base": "ntc1_sensor_type",
+      "endpoint": null,
+      "description": "NTC probe type for sensor #1 (must be set for temperature reporting).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "none",
+        "NTC-10K",
+        "NTC-12K",
+        "NTC-15K",
+        "NTC-22K",
+        "NTC-33K",
+        "NTC-47K"
+      ]
+    },
+    {
+      "name": "Ntc2 sensor type",
+      "type": "enum",
+      "property": "ntc2_sensor_type",
+      "base": "ntc2_sensor_type",
+      "endpoint": null,
+      "description": "NTC probe type for sensor #2 (must be set for temperature reporting).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "none",
+        "NTC-10K",
+        "NTC-12K",
+        "NTC-15K",
+        "NTC-22K",
+        "NTC-33K",
+        "NTC-47K"
+      ]
+    },
+    {
+      "name": "Water alarm relay action",
+      "type": "enum",
+      "property": "water_alarm_relay_action",
+      "base": "water_alarm_relay_action",
+      "endpoint": null,
+      "description": "Relay behavior when water sensor detects a leak.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "no_action",
+        "turn_off_restore",
+        "turn_on_restore",
+        "turn_off_stay",
+        "turn_on_stay",
+        "no_water_turn_off",
+        "no_water_turn_on"
+      ]
+    },
+    {
+      "name": "Ntc1 operation mode",
+      "type": "enum",
+      "property": "ntc1_operation_mode",
+      "base": "ntc1_operation_mode",
+      "endpoint": null,
+      "description": "Relay behavior based on NTC1 temperature threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "no_action",
+        "off_when_hot_on_when_cold",
+        "on_when_hot_off_when_cold",
+        "off_when_hot_stay",
+        "on_when_hot_stay"
+      ]
+    },
+    {
+      "name": "Ntc2 operation mode",
+      "type": "enum",
+      "property": "ntc2_operation_mode",
+      "base": "ntc2_operation_mode",
+      "endpoint": null,
+      "description": "Relay behavior based on NTC2 temperature threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "no_action",
+        "off_when_hot_on_when_cold",
+        "on_when_hot_off_when_cold",
+        "off_when_hot_stay",
+        "on_when_hot_stay"
+      ]
+    },
+    {
+      "name": "Ntc1 relay auto temp",
+      "type": "numeric",
+      "property": "ntc1_relay_auto_temp",
+      "base": "ntc1_relay_auto_temp",
+      "endpoint": null,
+      "description": "Temperature threshold for NTC1 relay control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "°C"
+    },
+    {
+      "name": "Ntc2 relay auto temp",
+      "type": "numeric",
+      "property": "ntc2_relay_auto_temp",
+      "base": "ntc2_relay_auto_temp",
+      "endpoint": null,
+      "description": "Temperature threshold for NTC2 relay control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "°C"
+    },
+    {
+      "name": "Override option",
+      "type": "enum",
+      "property": "override_option",
+      "base": "override_option",
+      "endpoint": null,
+      "description": "Priority when both water alarm and temperature conditions trigger.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "no_priority",
+        "water_alarm_priority",
+        "ntc_priority"
+      ]
+    },
+    {
+      "name": "Ntc1 calibration",
+      "type": "numeric",
+      "property": "ntc1_calibration",
+      "base": "ntc1_calibration",
+      "endpoint": null,
+      "description": "Temperature calibration offset for NTC1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -10,
+      "value_max": 10,
+      "unit": "°C"
+    },
+    {
+      "name": "Ntc2 calibration",
+      "type": "numeric",
+      "property": "ntc2_calibration",
+      "base": "ntc2_calibration",
+      "endpoint": null,
+      "description": "Temperature calibration offset for NTC2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -10,
+      "value_max": 10,
+      "unit": "°C"
+    },
+    {
+      "name": "Ntc1 temp hysteresis",
+      "type": "numeric",
+      "property": "ntc1_temp_hysteresis",
+      "base": "ntc1_temp_hysteresis",
+      "endpoint": null,
+      "description": "Temperature hysteresis for NTC1 relay control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -10,
+      "value_max": 10,
+      "unit": "°C"
+    },
+    {
+      "name": "Ntc2 temp hysteresis",
+      "type": "numeric",
+      "property": "ntc2_temp_hysteresis",
+      "base": "ntc2_temp_hysteresis",
+      "endpoint": null,
+      "description": "Temperature hysteresis for NTC2 relay control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -10,
+      "value_max": 10,
+      "unit": "°C"
+    },
+    {
+      "name": "Water condition alarm",
+      "type": "binary",
+      "property": "water_condition_alarm",
+      "base": "water_condition_alarm",
+      "endpoint": null,
+      "description": "Water leak alarm active.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Ntc condition alarm",
+      "type": "binary",
+      "property": "ntc_condition_alarm",
+      "base": "ntc_condition_alarm",
+      "endpoint": null,
+      "description": "NTC temperature alarm active.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Is execute condition",
+      "type": "binary",
+      "property": "is_execute_condition",
+      "base": "is_execute_condition",
+      "endpoint": null,
+      "description": "Relay action triggered by conditions.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

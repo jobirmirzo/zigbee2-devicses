@@ -1,0 +1,153 @@
+{
+  "model": "E8331SCN200ZB",
+  "file": "E8331SCN200ZB.md",
+  "vendor": "Schneider Electric",
+  "description": "Wiser AvatarOn 1G curtain switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E8331SCN200ZB.png",
+  "added_at": "2025-09-30T19:37:28",
+  "exposes_summary": "indicator_luminance_level, indicator_color, indicator_mode, cover (state, position), transition, motor_type_1, curtain_status_1",
+  "exposes": [
+    {
+      "name": "Indicator luminance level",
+      "type": "enum",
+      "property": "indicator_luminance_level",
+      "base": "indicator_luminance_level",
+      "endpoint": null,
+      "description": "Set indicator luminance Level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "100"
+      ]
+    },
+    {
+      "name": "Indicator color",
+      "type": "enum",
+      "property": "indicator_color",
+      "base": "indicator_color",
+      "endpoint": null,
+      "description": "Set indicator color.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode",
+      "base": "indicator_mode",
+      "endpoint": null,
+      "description": "Set indicator mode for switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "reverse_with_load",
+        "consistent_with_load",
+        "always_off",
+        "always_on"
+      ]
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_l1",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_l1",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Transition",
+      "type": "numeric",
+      "property": "transition_l1",
+      "base": "transition",
+      "endpoint": "l1",
+      "description": "Transition time in seconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 300,
+      "unit": "s"
+    },
+    {
+      "name": "Motor type 1",
+      "type": "enum",
+      "property": "motor_type_1",
+      "base": "motor_type_1",
+      "endpoint": null,
+      "description": "Set motor type for channel 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "ac_motor",
+        "pulse_motor"
+      ]
+    },
+    {
+      "name": "Curtain status 1",
+      "type": "enum",
+      "property": "curtain_status_1",
+      "base": "curtain_status_1",
+      "endpoint": null,
+      "description": "Set curtain status for channel 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "stop",
+        "opening",
+        "closing"
+      ]
+    }
+  ],
+  "warnings": []
+}

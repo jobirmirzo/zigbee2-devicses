@@ -1,0 +1,77 @@
+{
+  "model": "SNZB-06P",
+  "file": "SNZB-06P.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee occupancy sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SNZB-06P.png",
+  "added_at": "2023-09-28T10:54:36",
+  "exposes_summary": "occupancy, occupancy_timeout, occupancy_sensitivity, illumination",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy timeout",
+      "type": "numeric",
+      "property": "occupancy_timeout",
+      "base": "occupancy_timeout",
+      "endpoint": null,
+      "description": "Occupied to unoccupied delay.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 15,
+      "value_max": 65535
+    },
+    {
+      "name": "Occupancy sensitivity",
+      "type": "enum",
+      "property": "occupancy_sensitivity",
+      "base": "occupancy_sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity of human presence detection.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Illumination",
+      "type": "enum",
+      "property": "illumination",
+      "base": "illumination",
+      "endpoint": null,
+      "description": "Only updated when occupancy is detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "dim",
+        "bright"
+      ]
+    }
+  ],
+  "warnings": []
+}

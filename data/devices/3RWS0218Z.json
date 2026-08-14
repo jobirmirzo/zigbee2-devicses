@@ -1,0 +1,43 @@
+{
+  "model": "3RWS0218Z",
+  "file": "3RWS0218Z.md",
+  "vendor": "Third Reality",
+  "description": "Smart WaterLeak Sensor WL2",
+  "image": "https://www.zigbee2mqtt.io/images/devices/3RWS0218Z.png",
+  "added_at": "2025-11-30T20:32:44",
+  "exposes_summary": "water_leak, battery",
+  "exposes": [
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

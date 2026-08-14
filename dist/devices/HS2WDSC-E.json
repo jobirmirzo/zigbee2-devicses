@@ -1,0 +1,49 @@
+{
+  "model": "HS2WDSC-E",
+  "file": "HS2WDSC-E.md",
+  "vendor": "Heiman",
+  "description": "Remote dimmer and temperature control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS2WDSC-E.png",
+  "added_at": "2022-09-30T20:52:56Z",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "move",
+        "stop",
+        "color_move",
+        "color_temperature_move"
+      ]
+    }
+  ],
+  "warnings": []
+}

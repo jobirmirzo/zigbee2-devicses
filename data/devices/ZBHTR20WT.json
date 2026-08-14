@@ -1,0 +1,174 @@
+{
+  "model": "ZBHTR20WT",
+  "file": "ZBHTR20WT.md",
+  "vendor": "Nedis",
+  "description": "Thermostat radiator valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZBHTR20WT.png",
+  "added_at": "2025-01-03T20:11:48",
+  "exposes_summary": "battery_low, child_lock, open_window, climate (local_temperature_calibration, running_state, system_mode, local_temperature, current_heating_setpoint), frost_protection, schedule_mode, scale_protection, leave_home, error_status",
+  "exposes": [
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Open window",
+      "type": "binary",
+      "property": "open_window",
+      "base": "open_window",
+      "endpoint": null,
+      "description": "Enables/disables the status on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Frost protection",
+      "type": "binary",
+      "property": "frost_protection",
+      "base": "frost_protection",
+      "endpoint": null,
+      "description": "This function prevents freezing of the radiator. It automatically switches on the thermostat between 5°C and 8°C..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Schedule mode",
+      "type": "binary",
+      "property": "schedule_mode",
+      "base": "schedule_mode",
+      "endpoint": null,
+      "description": "Should the device be on the heating schedule.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Scale protection",
+      "type": "binary",
+      "property": "scale_protection",
+      "base": "scale_protection",
+      "endpoint": null,
+      "description": "The radiator can scale and become clogged if the valve is not opened regularly. This function opens the valve for 30 seconds every two weeks. The display shows “Rd” during this procedure..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Leave home",
+      "type": "binary",
+      "property": "leave_home",
+      "base": "leave_home",
+      "endpoint": null,
+      "description": "Temperature drops to 16°C when activated and restores when off.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Error status",
+      "type": "numeric",
+      "property": "error_status",
+      "base": "error_status",
+      "endpoint": null,
+      "description": "Error status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

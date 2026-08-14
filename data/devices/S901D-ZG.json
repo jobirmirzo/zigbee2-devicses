@@ -1,0 +1,88 @@
+{
+  "model": "S901D-ZG",
+  "file": "S901D-ZG.md",
+  "vendor": "Shyugj",
+  "description": "Door sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/S901D-ZG.png",
+  "added_at": "2024-11-30T20:27:20",
+  "exposes_summary": "battery, alarm_1, alarm_2, tamper, battery_low",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Alarm 1",
+      "type": "binary",
+      "property": "alarm_1",
+      "base": "alarm_1",
+      "endpoint": null,
+      "description": "Indicates whether IAS Zone alarm 1 is active.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Alarm 2",
+      "type": "binary",
+      "property": "alarm_2",
+      "base": "alarm_2",
+      "endpoint": null,
+      "description": "Indicates whether IAS Zone alarm 2 is active.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

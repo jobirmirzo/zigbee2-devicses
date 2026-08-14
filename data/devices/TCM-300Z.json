@@ -1,0 +1,74 @@
+{
+  "model": "TCM-300Z",
+  "file": "TCM-300Z.md",
+  "vendor": "ShinaSystem",
+  "description": "SiHAS Zigbee thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TCM-300Z.png",
+  "added_at": "2024-06-01T08:47:20",
+  "exposes_summary": "climate (system_mode, local_temperature, occupied_heating_setpoint, occupied_cooling_setpoint), keypad_lockout",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "cool"
+          ],
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 10,
+          "value_max": 70,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "occupied_cooling_setpoint",
+          "base": "occupied_cooling_setpoint",
+          "value_min": 10,
+          "value_max": 70,
+          "unit": "°C",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Keypad lockout",
+      "type": "enum",
+      "property": "keypad_lockout",
+      "base": "keypad_lockout",
+      "endpoint": null,
+      "description": "Enables or disables the device’s buttons.  Lock1 locks the temperature setting and the cooling/heating mode button input.  Lock2 locks the power button input.  Lock3 locks all button inputs..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "unlock",
+        "lock1",
+        "lock2",
+        "lock3"
+      ]
+    }
+  ],
+  "warnings": []
+}

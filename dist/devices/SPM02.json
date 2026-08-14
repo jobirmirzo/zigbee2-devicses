@@ -1,0 +1,166 @@
+{
+  "model": "SPM02",
+  "file": "SPM02.md",
+  "vendor": "Tuya",
+  "description": "Smart energy monitor for 3P+N system",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SPM02.png",
+  "added_at": "2023-08-01T15:13:29",
+  "exposes_summary": "voltage_X, voltage_Y, voltage_Z, power_X, power_Y, power_Z, current_X, current_Y, current_Z, energy, produced_energy",
+  "exposes": [
+    {
+      "name": "Voltage X",
+      "type": "numeric",
+      "property": "voltage_X",
+      "base": "voltage_X",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase X).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage Y",
+      "type": "numeric",
+      "property": "voltage_Y",
+      "base": "voltage_Y",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase Y).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage Z",
+      "type": "numeric",
+      "property": "voltage_Z",
+      "base": "voltage_Z",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase Z).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power X",
+      "type": "numeric",
+      "property": "power_X",
+      "base": "power_X",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase X).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power Y",
+      "type": "numeric",
+      "property": "power_Y",
+      "base": "power_Y",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase Y).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power Z",
+      "type": "numeric",
+      "property": "power_Z",
+      "base": "power_Z",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase Z).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current X",
+      "type": "numeric",
+      "property": "current_X",
+      "base": "current_X",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase X).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current Y",
+      "type": "numeric",
+      "property": "current_Y",
+      "base": "current_Y",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase Y).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current Z",
+      "type": "numeric",
+      "property": "current_Z",
+      "base": "current_Z",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase Z).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Total forward active energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Produced energy",
+      "type": "numeric",
+      "property": "produced_energy",
+      "base": "produced_energy",
+      "endpoint": null,
+      "description": "Total reverse active energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    }
+  ],
+  "warnings": []
+}

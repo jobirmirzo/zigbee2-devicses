@@ -1,0 +1,80 @@
+{
+  "model": "MEG5116-0300_MEG5162-0000",
+  "file": "MEG5116-0300_MEG5162-0000.md",
+  "vendor": "Schneider Electric",
+  "description": "Merten MEG5162 switch insert (2fold) with Merten System M push button (1fold)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MEG5116-0300_MEG5162-0000.png",
+  "added_at": "2024-04-29T19:24:38",
+  "exposes_summary": "identify, switch (state), action",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "left",
+      "features": [
+        {
+          "property": "state_left",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "right",
+      "features": [
+        {
+          "property": "state_right",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_left_sw",
+        "off_left_sw",
+        "toggle_left_sw"
+      ]
+    }
+  ],
+  "warnings": []
+}

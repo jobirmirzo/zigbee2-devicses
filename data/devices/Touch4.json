@@ -1,0 +1,88 @@
+{
+  "model": "Touch4",
+  "file": "Touch4.md",
+  "vendor": "databyte.ch",
+  "description": "Wall touchsensor with 4 keys",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Touch4.png",
+  "added_at": "2022-09-30T19:10:55",
+  "exposes_summary": "battery, key_1, key_2, key_3, key_4",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Key 1",
+      "type": "binary",
+      "property": "key_1",
+      "base": "key_1",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Key 2",
+      "type": "binary",
+      "property": "key_2",
+      "base": "key_2",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Key 3",
+      "type": "binary",
+      "property": "key_3",
+      "base": "key_3",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Key 4",
+      "type": "binary",
+      "property": "key_4",
+      "base": "key_4",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

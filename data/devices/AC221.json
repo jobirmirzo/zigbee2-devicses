@@ -1,0 +1,153 @@
+{
+  "model": "AC221",
+  "file": "AC221.md",
+  "vendor": "OWON",
+  "description": "AC controller / IR blaster",
+  "image": "https://www.zigbee2mqtt.io/images/devices/AC221.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "one_key_pairing, one_key_pairing_status, one_key_pairing_result, pairing_code_current, pairing_code, climate (system_mode, occupied_heating_setpoint, occupied_cooling_setpoint, local_temperature), fan (mode)",
+  "exposes": [
+    {
+      "name": "One key pairing",
+      "type": "enum",
+      "property": "one_key_pairing",
+      "base": "one_key_pairing",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "start",
+        "end"
+      ]
+    },
+    {
+      "name": "One key pairing status",
+      "type": "text",
+      "property": "one_key_pairing_status",
+      "base": "one_key_pairing_status",
+      "endpoint": null,
+      "description": "Status of the last one key pairing request command..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "One key pairing result",
+      "type": "text",
+      "property": "one_key_pairing_result",
+      "base": "one_key_pairing_result",
+      "endpoint": null,
+      "description": "Final result of one key pairing process (JSON string, device reported)..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Pairing code current",
+      "type": "numeric",
+      "property": "pairing_code_current",
+      "base": "pairing_code_current",
+      "endpoint": null,
+      "description": "Currently set pairing code on the device (null if invalid).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 65535
+    },
+    {
+      "name": "Pairing code",
+      "type": "text",
+      "property": "pairing_code",
+      "base": "pairing_code",
+      "endpoint": null,
+      "description": "Manually write pairing code to device  (decimal digits only, e.g. 123456)..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "auto",
+            "dry",
+            "fan_only"
+          ],
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 8,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "occupied_cooling_setpoint",
+          "base": "occupied_cooling_setpoint",
+          "value_min": 8,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Fan",
+      "type": "fan",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "on",
+            "auto"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

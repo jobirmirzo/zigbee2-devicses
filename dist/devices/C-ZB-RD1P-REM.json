@@ -1,0 +1,92 @@
+{
+  "model": "C-ZB-RD1P-REM",
+  "file": "C-ZB-RD1P-REM.md",
+  "vendor": "Candeo",
+  "description": "Zigbee rotary dimmer pro (remote mode)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/C-ZB-RD1P-REM.png",
+  "added_at": "2025-08-01T15:19:08",
+  "exposes_summary": "power, voltage, current, energy, action",
+  "exposes": [
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "pressed",
+        "double_pressed",
+        "held",
+        "released",
+        "started_rotating_left",
+        "started_rotating_right",
+        "rotating_right",
+        "rotating_left",
+        "stopped_rotating"
+      ]
+    }
+  ],
+  "warnings": []
+}

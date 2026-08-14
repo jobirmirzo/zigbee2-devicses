@@ -1,0 +1,49 @@
+{
+  "model": "WLCKG1",
+  "file": "WLCKG1.md",
+  "vendor": "Wyze",
+  "description": "Lock",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WLCKG1.png",
+  "added_at": "2023-01-01T08:59:10",
+  "exposes_summary": "lock (state, lock_state), battery",
+  "exposes": [
+    {
+      "name": "Lock",
+      "type": "lock",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "LOCK",
+            "UNLOCK"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

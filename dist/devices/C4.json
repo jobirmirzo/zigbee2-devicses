@@ -1,0 +1,61 @@
+{
+  "model": "C4",
+  "file": "C4.md",
+  "vendor": "Ubisys",
+  "description": "Control unit C4",
+  "image": "https://www.zigbee2mqtt.io/images/devices/C4.png",
+  "added_at": "2020-02-26T17:45:15Z",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "toggle_s1",
+        "toggle_s2",
+        "toggle_s3",
+        "toggle_s4",
+        "on_s1",
+        "on_s2",
+        "on_s3",
+        "on_s4",
+        "off_s1",
+        "off_s2",
+        "off_s3",
+        "off_s4",
+        "recall_*_s1",
+        "recal_*_s2",
+        "recall_*_s3",
+        "recal_*_s4",
+        "brightness_move_up_s1",
+        "brightness_move_up_s2",
+        "brightness_move_up_s3",
+        "brightness_move_up_s4",
+        "brightness_move_down_s1",
+        "brightness_move_down_s2",
+        "brightness_move_down_s3",
+        "brightness_move_down_s4",
+        "brightness_stop_s1",
+        "brightness_stop_s2",
+        "brightness_stop_s3",
+        "brightness_stop_s4",
+        "cover_open_s5",
+        "cover_close_s5",
+        "cover_stop_s5",
+        "cover_open_s6",
+        "cover_close_s6",
+        "cover_stop_s6"
+      ]
+    }
+  ],
+  "warnings": []
+}

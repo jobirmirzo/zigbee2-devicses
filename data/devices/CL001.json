@@ -1,0 +1,70 @@
+{
+  "model": "CL001",
+  "file": "CL001.md",
+  "vendor": "TERNCY",
+  "description": "Beevon ceiling light",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CL001.png",
+  "added_at": "2023-06-27T19:46:16",
+  "exposes_summary": "light (state, brightness, color_temp, color_temp_startup)",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 50,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup",
+          "base": "color_temp_startup",
+          "value_min": 50,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    }
+  ],
+  "warnings": []
+}

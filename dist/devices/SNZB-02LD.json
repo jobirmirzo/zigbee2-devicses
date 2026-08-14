@@ -1,0 +1,75 @@
+{
+  "model": "SNZB-02LD",
+  "file": "SNZB-02LD.md",
+  "vendor": "SONOFF",
+  "description": "Waterproof (IP65) sensor with screen and probe temperature detection",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SNZB-02LD.png",
+  "added_at": "2025-05-01T17:59:09",
+  "exposes_summary": "battery, temperature, temperature_units, temperature_calibration",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature units",
+      "type": "enum",
+      "property": "temperature_units",
+      "base": "temperature_units",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Offset to add/subtract to the reported temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

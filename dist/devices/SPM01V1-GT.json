@@ -1,0 +1,141 @@
+{
+  "model": "SPM01V1-GT",
+  "file": "SPM01V1-GT.md",
+  "vendor": "Tuya",
+  "description": "Smart energy monitor for 1P+N system",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SPM01V1-GT.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "voltage, power, current, power_factor, ac_frequency, energy, produced_energy, device_locating, update_frequency",
+  "exposes": [
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power factor",
+      "type": "numeric",
+      "property": "power_factor",
+      "base": "power_factor",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "AC frequency",
+      "type": "numeric",
+      "property": "ac_frequency",
+      "base": "ac_frequency",
+      "endpoint": null,
+      "description": "Measured electrical AC frequency.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Total forward active energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Produced energy",
+      "type": "numeric",
+      "property": "produced_energy",
+      "base": "produced_energy",
+      "endpoint": null,
+      "description": "Total reverse active energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Device locating",
+      "type": "binary",
+      "property": "device_locating",
+      "base": "device_locating",
+      "endpoint": null,
+      "description": "Locate device.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Update frequency",
+      "type": "numeric",
+      "property": "update_frequency",
+      "base": "update_frequency",
+      "endpoint": null,
+      "description": "Update frequency.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 3600,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

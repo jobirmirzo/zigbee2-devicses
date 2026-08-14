@@ -1,0 +1,236 @@
+{
+  "model": "PC311-Z-TY",
+  "file": "PC311-Z-TY.md",
+  "vendor": "Tuya",
+  "description": "Bidirectional energy meter with 80A current clamp",
+  "image": "https://www.zigbee2mqtt.io/images/devices/PC311-Z-TY.png",
+  "added_at": "2024-02-29T20:20:58",
+  "exposes_summary": "ac_frequency, voltage, power, current, energy, energy_produced, power_a, power_b, current_a, current_b, power_factor_a, power_factor_b, energy_a, energy_b, energy_produced_a, energy_produced_b",
+  "exposes": [
+    {
+      "name": "AC frequency",
+      "type": "numeric",
+      "property": "ac_frequency",
+      "base": "ac_frequency",
+      "endpoint": null,
+      "description": "Measured electrical AC frequency.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy produced",
+      "type": "numeric",
+      "property": "energy_produced",
+      "base": "energy_produced",
+      "endpoint": null,
+      "description": "Sum of produced energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Power a",
+      "type": "numeric",
+      "property": "power_a",
+      "base": "power_a",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power b",
+      "type": "numeric",
+      "property": "power_b",
+      "base": "power_b",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current a",
+      "type": "numeric",
+      "property": "current_a",
+      "base": "current_a",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current b",
+      "type": "numeric",
+      "property": "current_b",
+      "base": "current_b",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power factor a",
+      "type": "numeric",
+      "property": "power_factor_a",
+      "base": "power_factor_a",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Power factor b",
+      "type": "numeric",
+      "property": "power_factor_b",
+      "base": "power_factor_b",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Energy a",
+      "type": "numeric",
+      "property": "energy_a",
+      "base": "energy_a",
+      "endpoint": null,
+      "description": "Sum of consumed energy (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy b",
+      "type": "numeric",
+      "property": "energy_b",
+      "base": "energy_b",
+      "endpoint": null,
+      "description": "Sum of consumed energy (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy produced a",
+      "type": "numeric",
+      "property": "energy_produced_a",
+      "base": "energy_produced_a",
+      "endpoint": null,
+      "description": "Sum of produced energy (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy produced b",
+      "type": "numeric",
+      "property": "energy_produced_b",
+      "base": "energy_produced_b",
+      "endpoint": null,
+      "description": "Sum of produced energy (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    }
+  ],
+  "warnings": []
+}

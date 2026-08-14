@@ -1,0 +1,347 @@
+{
+  "model": "M1-PE",
+  "file": "M1-PE.md",
+  "vendor": "Heiman",
+  "description": "Smart occupancy sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/M1-PE.png",
+  "added_at": "2026-05-31T19:17:58",
+  "exposes_summary": "battery, occupancy, illuminance, temperature, humidity, target_distance, fault_state, identify, unoccupied_delay, detection_range, illuminance_threshold, pir_sensitivity_level, work_mode, temperature_offset, humidity_offset, learning_control, learning_state, work_indicator, reported_packages, rejoin_count, reboot_count",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Target distance",
+      "type": "numeric",
+      "property": "target_distance",
+      "base": "target_distance",
+      "endpoint": null,
+      "description": "The distance of target.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 1,
+      "value_max": 10,
+      "unit": "meter(s)"
+    },
+    {
+      "name": "Fault state",
+      "type": "text",
+      "property": "fault_state",
+      "base": "fault_state",
+      "endpoint": null,
+      "description": "device fault state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Unoccupied delay",
+      "type": "numeric",
+      "property": "unoccupied_delay",
+      "base": "unoccupied_delay",
+      "endpoint": null,
+      "description": "occupied to unoccupied delay.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Detection range",
+      "type": "composite",
+      "property": "detection_range",
+      "base": "detection_range",
+      "endpoint": null,
+      "description": "radar detection range.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "min_range",
+          "type": "numeric",
+          "description": "Minimum detection range of radar unit is cm"
+        },
+        {
+          "property": "max_range",
+          "type": "numeric",
+          "description": "The maximum detection range of the radar unit is cm"
+        }
+      ]
+    },
+    {
+      "name": "Illuminance threshold",
+      "type": "numeric",
+      "property": "illuminance_threshold",
+      "base": "illuminance_threshold",
+      "endpoint": null,
+      "description": "when the illuminance exceeds the threshold, it activates local linkages..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "lx"
+    },
+    {
+      "name": "Pir sensitivity level",
+      "type": "enum",
+      "property": "pir_sensitivity_level",
+      "base": "pir_sensitivity_level",
+      "endpoint": null,
+      "description": "The sensitivity of PIR Sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Work mode",
+      "type": "enum",
+      "property": "work_mode",
+      "base": "work_mode",
+      "endpoint": null,
+      "description": "occupany sensor work mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "pir",
+        "radar",
+        "pir_and_radar"
+      ]
+    },
+    {
+      "name": "Temperature offset",
+      "type": "numeric",
+      "property": "temperature_offset",
+      "base": "temperature_offset",
+      "endpoint": null,
+      "description": "used for temperature offset, unit: ℃.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -15,
+      "value_max": 15
+    },
+    {
+      "name": "Humidity offset",
+      "type": "numeric",
+      "property": "humidity_offset",
+      "base": "humidity_offset",
+      "endpoint": null,
+      "description": "used for humidity offset, unit: RH%.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -15,
+      "value_max": 15
+    },
+    {
+      "name": "Learning control",
+      "type": "binary",
+      "property": "learning_control",
+      "base": "learning_control",
+      "endpoint": null,
+      "description": "Radar learning mode, please wake up the device first..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "start",
+      "value_off": "reset"
+    },
+    {
+      "name": "Learning state",
+      "type": "enum",
+      "property": "learning_state",
+      "base": "learning_state",
+      "endpoint": null,
+      "description": "radar learning state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "normal",
+        "learning",
+        "completed",
+        "failed"
+      ]
+    },
+    {
+      "name": "Work indicator",
+      "type": "binary",
+      "property": "work_indicator",
+      "base": "work_indicator",
+      "endpoint": null,
+      "description": "Enable/disable the indicator on product.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "On",
+      "value_off": "Off"
+    },
+    {
+      "name": "Reported packages",
+      "type": "numeric",
+      "property": "reported_packages",
+      "base": "reported_packages",
+      "endpoint": null,
+      "description": "for diagnostic purpose, how many zigbee packages has the reported in a day..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 60000
+    },
+    {
+      "name": "Rejoin count",
+      "type": "numeric",
+      "property": "rejoin_count",
+      "base": "rejoin_count",
+      "endpoint": null,
+      "description": "for diagnostic purpose, how many times has the product rejoined to zigbee network..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 60000
+    },
+    {
+      "name": "Reboot count",
+      "type": "numeric",
+      "property": "reboot_count",
+      "base": "reboot_count",
+      "endpoint": null,
+      "description": "for diagnostic purpose, how many times has the product rebooted..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 60000
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,152 @@
+{
+  "model": "TS110E_2gang_2",
+  "file": "TS110E_2gang_2.md",
+  "vendor": "Tuya",
+  "description": "2 channel dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS110E_2gang_2.png",
+  "added_at": "2023-02-01T14:45:57",
+  "exposes_summary": "power_on_behavior, light (state, brightness, min_brightness, max_brightness), switch_type",
+  "exposes": [
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "previous",
+        "on"
+      ]
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_l1",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "min_brightness_l1",
+          "base": "min_brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "max_brightness_l1",
+          "base": "max_brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_l2",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "min_brightness_l2",
+          "base": "min_brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "max_brightness_l2",
+          "base": "max_brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type_l1",
+      "base": "switch_type",
+      "endpoint": "l1",
+      "description": "Type of the switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "toggle",
+        "state",
+        "momentary"
+      ]
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type_l2",
+      "base": "switch_type",
+      "endpoint": "l2",
+      "description": "Type of the switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "toggle",
+        "state",
+        "momentary"
+      ]
+    }
+  ],
+  "warnings": []
+}

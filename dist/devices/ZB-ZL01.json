@@ -1,0 +1,153 @@
+{
+  "model": "ZB-ZL01",
+  "file": "ZB-ZL01.md",
+  "vendor": "easyiot",
+  "description": "Smart door lock",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZB-ZL01.png",
+  "added_at": "2026-03-31T19:04:38",
+  "exposes_summary": "lock_status, unlock_door, unlock_door_with_timeout, ephemeral_pin_code, ephemeral_clear_pin_code, ephemeral_clear_all_pin_code, battery",
+  "exposes": [
+    {
+      "name": "Lock status",
+      "type": "numeric",
+      "property": "lock_status",
+      "base": "lock_status",
+      "endpoint": null,
+      "description": "Lock status reported by the lock, 0 means locked, 1 means unlocked.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Unlock door",
+      "type": "text",
+      "property": "unlock_door",
+      "base": "unlock_door",
+      "endpoint": null,
+      "description": "Enter password to unlock door.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Unlock door with timeout",
+      "type": "composite",
+      "property": "unlock_door_with_timeout",
+      "base": "unlock_door_with_timeout",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "timeout",
+          "type": "numeric",
+          "description": "Number of seconds the PIN code is valid, 0 means lock will be re-locked"
+        },
+        {
+          "property": "pin_code",
+          "type": "text",
+          "description": "Pincode to set, set pincode to null to clear"
+        }
+      ]
+    },
+    {
+      "name": "Ephemeral pin code",
+      "type": "composite",
+      "property": "ephemeral_pin_code",
+      "base": "ephemeral_pin_code",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "start_time",
+          "type": "numeric",
+          "description": "Temporary PIN start time (UNIX timestamp in seconds)"
+        },
+        {
+          "property": "end_time",
+          "type": "numeric",
+          "description": "Temporary PIN end time (UNIX timestamp in seconds)"
+        },
+        {
+          "property": "userid",
+          "type": "numeric",
+          "description": "User ID for the temporary PIN (1-20) min value is 1, max value is 20"
+        },
+        {
+          "property": "valid_times",
+          "type": "numeric",
+          "description": "Number of times the temporary PIN can be used (0-255, 0 means unlimited) max value is 255"
+        },
+        {
+          "property": "pincode",
+          "type": "text",
+          "description": "The temporary PIN code (numeric string)"
+        }
+      ]
+    },
+    {
+      "name": "Ephemeral clear pin code",
+      "type": "composite",
+      "property": "ephemeral_clear_pin_code",
+      "base": "ephemeral_clear_pin_code",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "userid",
+          "type": "numeric",
+          "description": "User ID for the temporary PIN (1-20) min value is 1, max value is 20"
+        }
+      ]
+    },
+    {
+      "name": "Ephemeral clear all pin code",
+      "type": "composite",
+      "property": "ephemeral_clear_all_pin_code",
+      "base": "ephemeral_clear_all_pin_code",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": []
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

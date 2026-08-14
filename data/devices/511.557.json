@@ -1,0 +1,31 @@
+{
+  "model": "511.557",
+  "file": "511.557.md",
+  "vendor": "Iluminize",
+  "description": "Zigbee 3.0 wall dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/511.557.png",
+  "added_at": "2020-04-08T17:49:06Z",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "off",
+        "on",
+        "color_temperature_move",
+        "color_move"
+      ]
+    }
+  ],
+  "warnings": []
+}

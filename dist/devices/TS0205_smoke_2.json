@@ -1,0 +1,58 @@
+{
+  "model": "TS0205_smoke_2",
+  "file": "TS0205_smoke_2.md",
+  "vendor": "Tuya",
+  "description": "Optical smoke sensor (model YG500A on the PCB)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0205_smoke_2.png",
+  "added_at": "2024-02-29T20:20:59",
+  "exposes_summary": "battery, smoke, tamper",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

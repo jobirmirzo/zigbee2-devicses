@@ -1,0 +1,89 @@
+{
+  "model": "MIR-SM200",
+  "file": "MIR-SM200.md",
+  "vendor": "MultIR",
+  "description": "Smoke sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MIR-SM200.png",
+  "added_at": "2025-09-30T19:37:28",
+  "exposes_summary": "silence, battery, smoke, tamper, battery_low",
+  "exposes": [
+    {
+      "name": "Silence",
+      "type": "enum",
+      "property": "silence",
+      "base": "silence",
+      "endpoint": null,
+      "description": "After enabling mute, it will return to detection state after 90 seconds..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "ON"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

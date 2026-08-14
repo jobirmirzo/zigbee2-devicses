@@ -1,0 +1,67 @@
+{
+  "model": "E2112",
+  "file": "E2112.md",
+  "vendor": "IKEA",
+  "description": "VINDSTYRKA air quality and humidity sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E2112.png",
+  "added_at": "2023-03-01T15:36:39",
+  "exposes_summary": "temperature, humidity, pm25, voc_index",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Pm25",
+      "type": "numeric",
+      "property": "pm25",
+      "base": "pm25",
+      "endpoint": null,
+      "description": "Measured PM2.5 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "VOC index",
+      "type": "numeric",
+      "property": "voc_index",
+      "base": "voc_index",
+      "endpoint": null,
+      "description": "Sensirion VOC index: 100 = average, <100 = less tVOC, >100 = more tVOC.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

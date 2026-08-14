@@ -1,0 +1,469 @@
+{
+  "model": "SBDV-00202",
+  "file": "SBDV-00202.md",
+  "vendor": "Sber",
+  "description": "Smart Wall Socket",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SBDV-00202.png",
+  "added_at": "2025-05-01T17:56:32",
+  "exposes_summary": "emergency_overvoltage, emergency_undervoltage, emergency_overcurrent, emergency_overheat, identify, device_temperature, switch (state), power_on_behavior, child_lock, voltage, current, power, led_indicator_on_enable, led_indicator_on_h, led_indicator_on_s, led_indicator_on_b, led_indicator_off_enable, led_indicator_off_h, led_indicator_off_s, led_indicator_off_b, emergency_shutoff_recovery, upper_voltage_threshold, lower_voltage_threshold, upper_current_threshold, temperature_threshold, serial_number, resets_count, uptime, button_clicks_count_1, relay_switches_count_1",
+  "exposes": [
+    {
+      "name": "Emergency overvoltage",
+      "type": "binary",
+      "property": "emergency_overvoltage",
+      "base": "emergency_overvoltage",
+      "endpoint": null,
+      "description": "Overvoltage alarm is triggered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Emergency undervoltage",
+      "type": "binary",
+      "property": "emergency_undervoltage",
+      "base": "emergency_undervoltage",
+      "endpoint": null,
+      "description": "Undervoltage alarm is triggered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Emergency overcurrent",
+      "type": "binary",
+      "property": "emergency_overcurrent",
+      "base": "emergency_overcurrent",
+      "endpoint": null,
+      "description": "Overcurrent alarm is triggered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Emergency overheat",
+      "type": "binary",
+      "property": "emergency_overheat",
+      "base": "emergency_overheat",
+      "endpoint": null,
+      "description": "Overheat alarm is triggered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enable child lock to prevent manual button operation.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "LED indication",
+      "type": "binary",
+      "property": "led_indicator_on_enable",
+      "base": "led_indicator_on_enable",
+      "endpoint": null,
+      "description": "Is LED indicator enabled in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Hue",
+      "type": "numeric",
+      "property": "led_indicator_on_h",
+      "base": "led_indicator_on_h",
+      "endpoint": null,
+      "description": "Hue of LED in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 359,
+      "unit": "°"
+    },
+    {
+      "name": "Saturation",
+      "type": "numeric",
+      "property": "led_indicator_on_s",
+      "base": "led_indicator_on_s",
+      "endpoint": null,
+      "description": "Saturation of LED in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "Brightness",
+      "type": "numeric",
+      "property": "led_indicator_on_b",
+      "base": "led_indicator_on_b",
+      "endpoint": null,
+      "description": "Brightness of LED in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "LED indication",
+      "type": "binary",
+      "property": "led_indicator_off_enable",
+      "base": "led_indicator_off_enable",
+      "endpoint": null,
+      "description": "Is LED indicator enabled in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Hue",
+      "type": "numeric",
+      "property": "led_indicator_off_h",
+      "base": "led_indicator_off_h",
+      "endpoint": null,
+      "description": "Hue of LED in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 359,
+      "unit": "°"
+    },
+    {
+      "name": "Saturation",
+      "type": "numeric",
+      "property": "led_indicator_off_s",
+      "base": "led_indicator_off_s",
+      "endpoint": null,
+      "description": "Saturation of LED in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "Brightness",
+      "type": "numeric",
+      "property": "led_indicator_off_b",
+      "base": "led_indicator_off_b",
+      "endpoint": null,
+      "description": "Brightness of LED in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Emergency shutoff recovery",
+      "type": "enum",
+      "property": "emergency_shutoff_recovery",
+      "base": "emergency_shutoff_recovery",
+      "endpoint": null,
+      "description": "Condition of automatic recovery after emergency shutoff.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "disabled",
+        "voltage_is_good"
+      ]
+    },
+    {
+      "name": "Upper voltage threshold",
+      "type": "numeric",
+      "property": "upper_voltage_threshold",
+      "base": "upper_voltage_threshold",
+      "endpoint": null,
+      "description": "Upper voltage threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 230000,
+      "value_max": 260000,
+      "unit": "mV"
+    },
+    {
+      "name": "Lower voltage threshold",
+      "type": "numeric",
+      "property": "lower_voltage_threshold",
+      "base": "lower_voltage_threshold",
+      "endpoint": null,
+      "description": "Lower voltage threshold (use with caution).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 100000,
+      "value_max": 230000,
+      "unit": "mV"
+    },
+    {
+      "name": "Upper current threshold",
+      "type": "numeric",
+      "property": "upper_current_threshold",
+      "base": "upper_current_threshold",
+      "endpoint": null,
+      "description": "Upper current threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 100,
+      "value_max": 16000,
+      "unit": "mA"
+    },
+    {
+      "name": "Temperature threshold",
+      "type": "numeric",
+      "property": "temperature_threshold",
+      "base": "temperature_threshold",
+      "endpoint": null,
+      "description": "Overtemperature threshold (use with caution).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -200,
+      "value_max": 200,
+      "unit": "°C"
+    },
+    {
+      "name": "Serial Number",
+      "type": "text",
+      "property": "serial_number",
+      "base": "serial_number",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Resets count",
+      "type": "numeric",
+      "property": "resets_count",
+      "base": "resets_count",
+      "endpoint": null,
+      "description": "(telemetry) Number of resets.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Uptime",
+      "type": "numeric",
+      "property": "uptime",
+      "base": "uptime",
+      "endpoint": null,
+      "description": "(telemetry) Device uptime, in seconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Button clicks count 1",
+      "type": "numeric",
+      "property": "button_clicks_count_1",
+      "base": "button_clicks_count_1",
+      "endpoint": null,
+      "description": "(telemetry) Total clicks count of button 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Relay switches count 1",
+      "type": "numeric",
+      "property": "relay_switches_count_1",
+      "base": "relay_switches_count_1",
+      "endpoint": null,
+      "description": "(telemetry) Total toggle count of relay 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

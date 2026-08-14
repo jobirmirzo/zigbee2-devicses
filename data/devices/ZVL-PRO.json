@@ -1,0 +1,98 @@
+{
+  "model": "ZVL-PRO",
+  "file": "ZVL-PRO.md",
+  "vendor": "Nova Digital",
+  "description": "Water walve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZVL-PRO.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "switch (state), battery, countdown, work_state, water_once",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown",
+      "base": "countdown",
+      "endpoint": null,
+      "description": "Countdown time in seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400,
+      "unit": "s"
+    },
+    {
+      "name": "Work state",
+      "type": "enum",
+      "property": "work_state",
+      "base": "work_state",
+      "endpoint": null,
+      "description": "Current state of operation.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "auto",
+        "manual",
+        "idle"
+      ]
+    },
+    {
+      "name": "Water once",
+      "type": "numeric",
+      "property": "water_once",
+      "base": "water_once",
+      "endpoint": null,
+      "description": "Consumption from the last watering.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "L"
+    }
+  ],
+  "warnings": []
+}

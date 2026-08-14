@@ -1,0 +1,27 @@
+{
+  "model": "SGMHM-I1",
+  "file": "SGMHM-I1.md",
+  "vendor": "GS",
+  "description": "Methane gas sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SGMHM-I1.png",
+  "added_at": "2020-02-04T20:38:05Z",
+  "exposes_summary": "gas",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "binary",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

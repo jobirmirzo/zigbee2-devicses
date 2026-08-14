@@ -1,0 +1,141 @@
+{
+  "model": "ZS-D1",
+  "file": "ZS-D1.md",
+  "vendor": "Moes",
+  "description": "Intelligent dimming switch - 1 gang",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZS-D1.png",
+  "added_at": "2025-09-01T18:20:17",
+  "exposes_summary": "switch (state), brightness_1, brightness_min_1, brightness_max_1, countdown_1, relay_status, light_mode, switch_backlight",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Brightness 1",
+      "type": "numeric",
+      "property": "brightness_1",
+      "base": "brightness_1",
+      "endpoint": null,
+      "description": "Channel 1 brightness.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 1000
+    },
+    {
+      "name": "Brightness min 1",
+      "type": "numeric",
+      "property": "brightness_min_1",
+      "base": "brightness_min_1",
+      "endpoint": null,
+      "description": "Channel 1 minimum brightness.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 1000
+    },
+    {
+      "name": "Brightness max 1",
+      "type": "numeric",
+      "property": "brightness_max_1",
+      "base": "brightness_max_1",
+      "endpoint": null,
+      "description": "Channel 1 maximum brightness.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 1000
+    },
+    {
+      "name": "Countdown 1",
+      "type": "numeric",
+      "property": "countdown_1",
+      "base": "countdown_1",
+      "endpoint": null,
+      "description": "Channel 1 countdown.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400,
+      "unit": "s"
+    },
+    {
+      "name": "Relay status",
+      "type": "enum",
+      "property": "relay_status",
+      "base": "relay_status",
+      "endpoint": null,
+      "description": "Relay mode after power restoration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "memory"
+      ]
+    },
+    {
+      "name": "Light mode",
+      "type": "enum",
+      "property": "light_mode",
+      "base": "light_mode",
+      "endpoint": null,
+      "description": "Indicator light mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "none",
+        "relay",
+        "pos"
+      ]
+    },
+    {
+      "name": "Switch backlight",
+      "type": "binary",
+      "property": "switch_backlight",
+      "base": "switch_backlight",
+      "endpoint": null,
+      "description": "Backlight switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

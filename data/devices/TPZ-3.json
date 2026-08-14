@@ -1,0 +1,315 @@
+{
+  "model": "TPZ-3",
+  "file": "TPZ-3.md",
+  "vendor": "Nova Digital",
+  "description": "Topazio smart switch 3 gangs",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TPZ-3.png",
+  "added_at": "2025-09-01T18:20:17",
+  "exposes_summary": "switch (state), countdown, momentary_1, momentary_2, momentary_3, mode, backlight_mode, power_on_behavior, indicator_status, induction_mode, vibration_mode, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l3",
+      "features": [
+        {
+          "property": "state_l3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_l1",
+      "base": "countdown",
+      "endpoint": "l1",
+      "description": "Toggle the device after a set duration (one time action).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_l2",
+      "base": "countdown",
+      "endpoint": "l2",
+      "description": "Toggle the device after a set duration (one time action).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_l3",
+      "base": "countdown",
+      "endpoint": "l3",
+      "description": "Toggle the device after a set duration (one time action).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Momentary 1",
+      "type": "numeric",
+      "property": "momentary_1",
+      "base": "momentary_1",
+      "endpoint": null,
+      "description": "Momentary switch timer (0=disable).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Momentary 2",
+      "type": "numeric",
+      "property": "momentary_2",
+      "base": "momentary_2",
+      "endpoint": null,
+      "description": "Momentary switch timer (0=disable).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Momentary 3",
+      "type": "numeric",
+      "property": "momentary_3",
+      "base": "momentary_3",
+      "endpoint": null,
+      "description": "Momentary switch timer (0=disable).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode_l1",
+      "base": "mode",
+      "endpoint": "l1",
+      "description": "Switch1 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch_1",
+        "scene_1"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode_l2",
+      "base": "mode",
+      "endpoint": "l2",
+      "description": "Switch2 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch_2",
+        "scene_2"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode_l3",
+      "base": "mode",
+      "endpoint": "l3",
+      "description": "Switch3 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch_3",
+        "scene_3"
+      ]
+    },
+    {
+      "name": "Backlight mode",
+      "type": "binary",
+      "property": "backlight_mode",
+      "base": "backlight_mode",
+      "endpoint": null,
+      "description": "Mode of the backlight.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "previous",
+        "on"
+      ]
+    },
+    {
+      "name": "Indicator status",
+      "type": "enum",
+      "property": "indicator_status",
+      "base": "indicator_status",
+      "endpoint": null,
+      "description": "Indicator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "relay",
+        "invert"
+      ]
+    },
+    {
+      "name": "Induction mode",
+      "type": "enum",
+      "property": "induction_mode",
+      "base": "induction_mode",
+      "endpoint": null,
+      "description": "Induction mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "ON",
+        "OFF"
+      ]
+    },
+    {
+      "name": "Vibration mode",
+      "type": "enum",
+      "property": "vibration_mode",
+      "base": "vibration_mode",
+      "endpoint": null,
+      "description": "Vibration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Gear 0",
+        "Gear 1",
+        "Gear 2",
+        "Gear 3"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "scene_1",
+        "scene_2",
+        "scene_3"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,142 @@
+{
+  "model": "SBMO-103Z",
+  "file": "SBMO-103Z.md",
+  "vendor": "Shelly",
+  "description": "BLU Motion ZB",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SBMO-103Z.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "occupancy, battery_low, battery, light_level, dark_threshold, bright_threshold, motion_sensitivity, identify",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Light level",
+      "type": "enum",
+      "property": "light_level",
+      "base": "light_level",
+      "endpoint": null,
+      "description": "Coarse light level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "dark",
+        "twilight",
+        "bright"
+      ]
+    },
+    {
+      "name": "Dark threshold",
+      "type": "numeric",
+      "property": "dark_threshold",
+      "base": "dark_threshold",
+      "endpoint": null,
+      "description": "Lux threshold below which light level is dark.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535,
+      "unit": "lx"
+    },
+    {
+      "name": "Bright threshold",
+      "type": "numeric",
+      "property": "bright_threshold",
+      "base": "bright_threshold",
+      "endpoint": null,
+      "description": "Lux threshold above which light level is bright.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535,
+      "unit": "lx"
+    },
+    {
+      "name": "Motion sensitivity",
+      "type": "enum",
+      "property": "motion_sensitivity",
+      "base": "motion_sensitivity",
+      "endpoint": null,
+      "description": "Motion sensor sensitivity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    }
+  ],
+  "warnings": []
+}

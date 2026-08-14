@@ -1,0 +1,49 @@
+{
+  "model": "TS0601_stairwell_switch",
+  "file": "TS0601_stairwell_switch.md",
+  "vendor": "Tuya",
+  "description": "1 gang stairwell switch with child lock",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_stairwell_switch.png",
+  "added_at": "2026-05-07T17:39:17",
+  "exposes_summary": "switch (state), child_lock",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Child Lock.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

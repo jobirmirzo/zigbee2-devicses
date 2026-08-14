@@ -1,0 +1,116 @@
+{
+  "model": "Flower_Sensor_v2",
+  "file": "Flower_Sensor_v2.md",
+  "vendor": "Bacchus",
+  "description": "Flower soil moisture sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Flower_Sensor_v2.png",
+  "added_at": "2025-05-01T17:56:31",
+  "exposes_summary": "soil_moisture, temperature, illuminance, report_delay, threshold, battery, voltage",
+  "exposes": [
+    {
+      "name": "Soil moisture",
+      "type": "numeric",
+      "property": "soil_moisture",
+      "base": "soil_moisture",
+      "endpoint": null,
+      "description": "Measured soil moisture value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Report delay",
+      "type": "numeric",
+      "property": "report_delay",
+      "base": "report_delay",
+      "endpoint": null,
+      "description": "Reporting interval.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 600,
+      "unit": "min"
+    },
+    {
+      "name": "Threshold",
+      "type": "numeric",
+      "property": "threshold",
+      "base": "threshold",
+      "endpoint": null,
+      "description": "Reporting interval.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

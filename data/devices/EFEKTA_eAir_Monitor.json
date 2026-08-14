@@ -1,0 +1,167 @@
+{
+  "model": "EFEKTA_eAir_Monitor",
+  "file": "EFEKTA_eAir_Monitor.md",
+  "vendor": "EFEKTA",
+  "description": "Smart digital carbon dioxide detector with e-ink display.",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_eAir_Monitor.png",
+  "added_at": "2026-01-31T13:10:41",
+  "exposes_summary": "co2, battery, battery_low, lifetime, power_mode, invert_color, forced_recalibration, manual_forced_recalibration, automatic_self_calibration, factory_reset_co2",
+  "exposes": [
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "Measured value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Lifetime",
+      "type": "numeric",
+      "property": "lifetime",
+      "base": "lifetime",
+      "endpoint": null,
+      "description": "lifetime.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hours"
+    },
+    {
+      "name": "Power mode",
+      "type": "enum",
+      "property": "power_mode",
+      "base": "power_mode",
+      "endpoint": null,
+      "description": "Set power mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Fast",
+        "Medium",
+        "Slow"
+      ]
+    },
+    {
+      "name": "Invert color",
+      "type": "enum",
+      "property": "invert_color",
+      "base": "invert_color",
+      "endpoint": null,
+      "description": "Set color mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "BW",
+        "WB"
+      ]
+    },
+    {
+      "name": "Forced recalibration",
+      "type": "binary",
+      "property": "forced_recalibration",
+      "base": "forced_recalibration",
+      "endpoint": null,
+      "description": "Start FRC (Perform Forced Recalibration of the CO2 Sensor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Manual forced recalibration",
+      "type": "numeric",
+      "property": "manual_forced_recalibration",
+      "base": "manual_forced_recalibration",
+      "endpoint": null,
+      "description": "Start Manual FRC (Perform Forced Recalibration of the CO2 Sensor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Automatic self calibration",
+      "type": "binary",
+      "property": "automatic_self_calibration",
+      "base": "automatic_self_calibration",
+      "endpoint": null,
+      "description": "Automatic self calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Factory reset co2",
+      "type": "binary",
+      "property": "factory_reset_co2",
+      "base": "factory_reset_co2",
+      "endpoint": null,
+      "description": "Factory Reset CO2 sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

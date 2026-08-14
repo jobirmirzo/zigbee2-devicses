@@ -1,0 +1,69 @@
+{
+  "model": "ERS-10TZBVB-AA",
+  "file": "ERS-10TZBVB-AA.md",
+  "vendor": "Moes",
+  "description": "Smart button",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ERS-10TZBVB-AA.png",
+  "added_at": "2022-06-01T15:08:55",
+  "exposes_summary": "battery, operation_mode, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode",
+      "base": "operation_mode",
+      "endpoint": null,
+      "description": "Operation mode: \"command\" - for group control, \"event\" - for clicks.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "command",
+        "event"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single",
+        "double",
+        "hold",
+        "brightness_move_to_level",
+        "color_temperature_move",
+        "brightness_step_up",
+        "brightness_step_down",
+        "on",
+        "off"
+      ]
+    }
+  ],
+  "warnings": []
+}

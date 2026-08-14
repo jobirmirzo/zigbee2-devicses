@@ -1,0 +1,155 @@
+{
+  "model": "Mercury_Counter",
+  "file": "Mercury_Counter.md",
+  "vendor": "Bacchus",
+  "description": "Zigbee Mercury electricity meter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Mercury_Counter.png",
+  "added_at": "2025-05-01T17:56:31",
+  "exposes_summary": "power, voltage, current, energy_t1, energy_t2, energy_t3, energy_t4, measurement_period, device_address, temperature",
+  "exposes": [
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy t1",
+      "type": "numeric",
+      "property": "energy_t1",
+      "base": "energy_t1",
+      "endpoint": null,
+      "description": "Energy on tariff 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy t2",
+      "type": "numeric",
+      "property": "energy_t2",
+      "base": "energy_t2",
+      "endpoint": null,
+      "description": "Energy on tariff 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy t3",
+      "type": "numeric",
+      "property": "energy_t3",
+      "base": "energy_t3",
+      "endpoint": null,
+      "description": "Energy on tariff 3.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy t4",
+      "type": "numeric",
+      "property": "energy_t4",
+      "base": "energy_t4",
+      "endpoint": null,
+      "description": "Energy on tariff 4.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Measurement period",
+      "type": "numeric",
+      "property": "measurement_period",
+      "base": "measurement_period",
+      "endpoint": null,
+      "description": "Measurement Period.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 600,
+      "unit": "sec"
+    },
+    {
+      "name": "Device address",
+      "type": "numeric",
+      "property": "device_address",
+      "base": "device_address",
+      "endpoint": null,
+      "description": "Device Address.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 99999999
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

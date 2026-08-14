@@ -1,0 +1,256 @@
+{
+  "model": "DWZTCGQ11LM",
+  "file": "DWZTCGQ11LM.md",
+  "vendor": "Aqara",
+  "description": "Multi-state sensor P100",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DWZTCGQ11LM.png",
+  "added_at": "2026-04-30T19:57:28",
+  "exposes_summary": "battery, voltage, device_mode, door_window_type, sensitivity, report_interval, orientation_detection, movement_detection, fall_detection, vibration_detection, triple_tap_detection, orientation, contact, device_posture, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Device mode",
+      "type": "enum",
+      "property": "device_mode",
+      "base": "device_mode",
+      "endpoint": null,
+      "description": "Device operating mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "door_window",
+        "object"
+      ]
+    },
+    {
+      "name": "Door/window type",
+      "type": "enum",
+      "property": "door_window_type",
+      "base": "door_window_type",
+      "endpoint": null,
+      "description": "Door/window type (applies when device_mode = door_window).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "casement_window",
+        "hopper_window",
+        "composite_window",
+        "hinged_door"
+      ]
+    },
+    {
+      "name": "Sensitivity",
+      "type": "numeric",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Detection sensitivity (1 = low, 10 = high).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10
+    },
+    {
+      "name": "Report interval",
+      "type": "numeric",
+      "property": "report_interval",
+      "base": "report_interval",
+      "endpoint": null,
+      "description": "Reporting interval in seconds. Also drives the device's 802.15.4 poll cadence — lower values are more responsive but reduce battery life..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 300,
+      "unit": "s"
+    },
+    {
+      "name": "Orientation detection",
+      "type": "binary",
+      "property": "orientation_detection",
+      "base": "orientation_detection",
+      "endpoint": null,
+      "description": "Enable orientation event detection (object mode, requires device button press).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Movement detection",
+      "type": "binary",
+      "property": "movement_detection",
+      "base": "movement_detection",
+      "endpoint": null,
+      "description": "Enable movement event detection (object mode, requires device button press).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Fall detection",
+      "type": "binary",
+      "property": "fall_detection",
+      "base": "fall_detection",
+      "endpoint": null,
+      "description": "Enable fall event detection (object mode, requires device button press).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Vibration detection",
+      "type": "binary",
+      "property": "vibration_detection",
+      "base": "vibration_detection",
+      "endpoint": null,
+      "description": "Enable vibration event detection (object mode, requires device button press).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Triple tap detection",
+      "type": "binary",
+      "property": "triple_tap_detection",
+      "base": "triple_tap_detection",
+      "endpoint": null,
+      "description": "Enable triple-tap event detection (object mode, requires device button press).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Orientation",
+      "type": "enum",
+      "property": "orientation",
+      "base": "orientation",
+      "endpoint": null,
+      "description": "Last reported orientation (relevant when action = orientation).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "face_up",
+        "face_down",
+        "vertical",
+        "tilt"
+      ]
+    },
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Door/window state (door/window mode only).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    },
+    {
+      "name": "Device posture",
+      "type": "enum",
+      "property": "device_posture",
+      "base": "device_posture",
+      "endpoint": null,
+      "description": "Door/window mounting orientation check — 'abnormal' if the sensor is incorrectly installed or needs calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "normal",
+        "abnormal"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "triple_tap",
+        "movement",
+        "vibration",
+        "orientation",
+        "fall",
+        "static"
+      ]
+    }
+  ],
+  "warnings": []
+}

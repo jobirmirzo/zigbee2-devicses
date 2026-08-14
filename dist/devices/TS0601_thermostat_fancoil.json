@@ -1,0 +1,123 @@
+{
+  "model": "TS0601_thermostat_fancoil",
+  "file": "TS0601_thermostat_fancoil.md",
+  "vendor": "Tuya",
+  "description": "Fan coil unit (FCU) thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat_fancoil.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "child_lock, climate (current_heating_setpoint, local_temperature, system_mode, fan_mode, preset, local_temperature_calibration), battery_low, error",
+  "exposes": [
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 10,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "heat",
+            "cool",
+            "dry",
+            "fan_only",
+            "emergency_heating",
+            "auto"
+          ],
+          "readable": false
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "value_min": 10,
+          "value_max": 35,
+          "values": [
+            "heat",
+            "cool",
+            "dry",
+            "fan_only",
+            "emergency_heating",
+            "auto"
+          ],
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "off",
+            "on"
+          ],
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Error",
+      "type": "numeric",
+      "property": "error",
+      "base": "error",
+      "endpoint": null,
+      "description": "Device error code reported by the thermostat.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

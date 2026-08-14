@@ -1,0 +1,46 @@
+{
+  "model": "MFTWIFI",
+  "file": "MFTWIFI.md",
+  "vendor": "Mill",
+  "description": "Smart floor thermostat WiFi & Zigbee",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MFTWIFI.png",
+  "added_at": "2026-04-30T19:57:27",
+  "exposes_summary": "climate (local_temperature, occupied_heating_setpoint, system_mode)",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

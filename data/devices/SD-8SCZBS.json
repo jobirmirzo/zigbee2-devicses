@@ -1,0 +1,143 @@
+{
+  "model": "SD-8SCZBS",
+  "file": "SD-8SCZBS.md",
+  "vendor": "Climax",
+  "description": "Smoke detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SD-8SCZBS.png",
+  "added_at": "2021-01-23T21:30:08Z",
+  "exposes_summary": "smoke, battery, battery_low, tamper, warning",
+  "exposes": [
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Warning",
+      "type": "composite",
+      "property": "warning",
+      "base": "warning",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "mode",
+          "type": "enum",
+          "description": "Mode of the warning (sound effect)",
+          "values": [
+            "stop",
+            "burglar",
+            "fire",
+            "emergency",
+            "police_panic",
+            "fire_panic",
+            "emergency_panic"
+          ]
+        },
+        {
+          "property": "level",
+          "type": "enum",
+          "description": "Sound level",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "property": "strobe_level",
+          "type": "enum",
+          "description": "Intensity of the strobe",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "property": "strobe",
+          "type": "binary",
+          "description": "Turn on/off the strobe (light) during warning",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "strobe_duty_cycle",
+          "type": "numeric",
+          "description": "Length of the flash cycle max value is 10"
+        },
+        {
+          "property": "duration",
+          "type": "numeric",
+          "description": "Duration in seconds of the alarm unit is s"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

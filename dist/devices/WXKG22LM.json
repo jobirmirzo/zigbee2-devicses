@@ -1,0 +1,103 @@
+{
+  "model": "WXKG22LM",
+  "file": "WXKG22LM.md",
+  "vendor": "Aqara",
+  "description": "Wireless remote switch H1M (double rocker)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WXKG22LM.png",
+  "added_at": "2023-11-30T19:41:12",
+  "exposes_summary": "battery, voltage, click_mode, operation_mode, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Click mode",
+      "type": "enum",
+      "property": "click_mode",
+      "base": "click_mode",
+      "endpoint": null,
+      "description": "Click mode, fast: only supports single click which will be send immediately after clicking.multi: supports more events like double and hold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "fast",
+        "multi"
+      ]
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode",
+      "base": "operation_mode",
+      "endpoint": null,
+      "description": "Operation mode, select \"command\" to enable bindings (wake up the device before changing modes!).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "command",
+        "event"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single_left",
+        "single_right",
+        "single_both",
+        "double_left",
+        "double_right",
+        "double_both",
+        "triple_left",
+        "triple_right",
+        "triple_both",
+        "hold_left",
+        "hold_right",
+        "hold_both"
+      ]
+    }
+  ],
+  "warnings": []
+}

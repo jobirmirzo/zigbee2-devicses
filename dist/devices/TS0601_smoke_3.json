@@ -1,0 +1,45 @@
+{
+  "model": "TS0601_smoke_3",
+  "file": "TS0601_smoke_3.md",
+  "vendor": "Tuya",
+  "description": "Photoelectric smoke detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_smoke_3.png",
+  "added_at": "2023-04-27T17:39:26",
+  "exposes_summary": "smoke, battery_state",
+  "exposes": [
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "State of the battery.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "warnings": []
+}

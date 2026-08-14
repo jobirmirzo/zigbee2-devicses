@@ -1,0 +1,151 @@
+{
+  "model": "DIYRuZ_Geiger",
+  "file": "DIYRuZ_Geiger.md",
+  "vendor": "DIYRuZ",
+  "description": "DiY Geiger counter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DIYRuZ_Geiger.png",
+  "added_at": "2020-06-10T16:45:59Z",
+  "exposes_summary": "radioactive_events_per_minute, radiation_dose_per_hour, led_feedback, buzzer_feedback, alert_threshold, sensors_type, sensors_count, sensitivity, action",
+  "exposes": [
+    {
+      "name": "Radioactive events per minute",
+      "type": "numeric",
+      "property": "radioactive_events_per_minute",
+      "base": "radioactive_events_per_minute",
+      "endpoint": null,
+      "description": "Current count radioactive pulses per minute.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "rpm"
+    },
+    {
+      "name": "Radiation dose per hour",
+      "type": "numeric",
+      "property": "radiation_dose_per_hour",
+      "base": "radiation_dose_per_hour",
+      "endpoint": null,
+      "description": "Current radiation level.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "μR/h"
+    },
+    {
+      "name": "Led feedback",
+      "type": "binary",
+      "property": "led_feedback",
+      "base": "led_feedback",
+      "endpoint": null,
+      "description": "Enable LED feedback.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Buzzer feedback",
+      "type": "binary",
+      "property": "buzzer_feedback",
+      "base": "buzzer_feedback",
+      "endpoint": null,
+      "description": "Enable buzzer feedback.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Alert threshold",
+      "type": "numeric",
+      "property": "alert_threshold",
+      "base": "alert_threshold",
+      "endpoint": null,
+      "description": "Critical radiation level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10000,
+      "unit": "μR/h"
+    },
+    {
+      "name": "Sensors type",
+      "type": "enum",
+      "property": "sensors_type",
+      "base": "sensors_type",
+      "endpoint": null,
+      "description": "Type of installed tubes.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "СБМ-20/СТС-5/BOI-33",
+        "СБМ-19/СТС-6",
+        "Others"
+      ]
+    },
+    {
+      "name": "Sensors count",
+      "type": "numeric",
+      "property": "sensors_count",
+      "base": "sensors_count",
+      "endpoint": null,
+      "description": "Count of installed tubes.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 50
+    },
+    {
+      "name": "Sensitivity",
+      "type": "numeric",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "This is applicable if tubes type is set to other.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off"
+      ]
+    }
+  ],
+  "warnings": []
+}

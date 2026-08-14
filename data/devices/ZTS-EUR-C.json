@@ -1,0 +1,94 @@
+{
+  "model": "ZTS-EUR-C",
+  "file": "ZTS-EUR-C.md",
+  "vendor": "Moes",
+  "description": "Zigbee + RF curtain switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZTS-EUR-C.png",
+  "added_at": "2022-06-01T15:08:55",
+  "exposes_summary": "cover (state, position), backlight, calibration, motor_reversal",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Backlight",
+      "type": "enum",
+      "property": "backlight",
+      "base": "backlight",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "OFF",
+        "ON"
+      ]
+    },
+    {
+      "name": "Calibration",
+      "type": "enum",
+      "property": "calibration",
+      "base": "calibration",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "OFF",
+        "ON"
+      ]
+    },
+    {
+      "name": "Motor reversal",
+      "type": "enum",
+      "property": "motor_reversal",
+      "base": "motor_reversal",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "OFF",
+        "ON"
+      ]
+    }
+  ],
+  "warnings": []
+}

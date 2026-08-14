@@ -1,0 +1,184 @@
+{
+  "model": "MHO-C401N",
+  "file": "MHO-C401N.md",
+  "vendor": "Custom devices (DiY)",
+  "description": "Xiaomi temperature & humidity sensor with custom firmware",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MHO-C401N.png",
+  "added_at": "2023-12-05T22:02:00",
+  "exposes_summary": "battery, temperature, humidity, temperature_display_mode, show_smile, temperature_calibration, humidity_calibration, comfort_temperature_min, comfort_temperature_max, comfort_humidity_min, comfort_humidity_max",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature display mode",
+      "type": "enum",
+      "property": "temperature_display_mode",
+      "base": "temperature_display_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Show smile",
+      "type": "binary",
+      "property": "show_smile",
+      "base": "show_smile",
+      "endpoint": null,
+      "description": "Whether to show a smile on the device screen..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "HIDE",
+      "value_off": "SHOW"
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "The temperature calibration, in 0.1° steps. Requires v0.1.1.6 or newer..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -12.7,
+      "value_max": 12.7,
+      "unit": "C"
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "The humidity offset is set in 0.1 % steps. Requires v0.1.1.6 or newer..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -12.7,
+      "value_max": 12.7,
+      "unit": "%"
+    },
+    {
+      "name": "Comfort temperature min",
+      "type": "numeric",
+      "property": "comfort_temperature_min",
+      "base": "comfort_temperature_min",
+      "endpoint": null,
+      "description": "Comfort parameters/Temperature minimum, in 1° steps. Requires v0.1.1.7 or newer..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -127,
+      "value_max": 127,
+      "unit": "C"
+    },
+    {
+      "name": "Comfort temperature max",
+      "type": "numeric",
+      "property": "comfort_temperature_max",
+      "base": "comfort_temperature_max",
+      "endpoint": null,
+      "description": "Comfort parameters/Temperature maximum, in 1° steps. Requires v0.1.1.7 or newer..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -127,
+      "value_max": 127,
+      "unit": "C"
+    },
+    {
+      "name": "Comfort humidity min",
+      "type": "numeric",
+      "property": "comfort_humidity_min",
+      "base": "comfort_humidity_min",
+      "endpoint": null,
+      "description": "Comfort parameters/Humidity minimum, in 1% steps. Requires v0.1.1.7 or newer..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Comfort humidity max",
+      "type": "numeric",
+      "property": "comfort_humidity_max",
+      "base": "comfort_humidity_max",
+      "endpoint": null,
+      "description": "Comfort parameters/Humidity maximum, in 1% steps. Requires v0.1.1.7 or newer..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

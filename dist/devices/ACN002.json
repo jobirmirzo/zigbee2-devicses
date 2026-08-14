@@ -1,0 +1,384 @@
+{
+  "model": "ACN002",
+  "file": "ACN002.md",
+  "vendor": "Aqara",
+  "description": "Smart Toilet T1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ACN002.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "lid_switch, seat_switch, night_light, seat_temp, cleaning_mode, water_temp, water_pressure, nozzle_position, dryer_temp, nozzle_clean, occupancy_status, stop_button, flush_big, flush_small, foam_shield, pre_mist_switch, auto_foam_on_sit, auto_foam_on_leave, child_seat_mode, foot_sensor_switch, auto_flush_after_leave, beeper_switch",
+  "exposes": [
+    {
+      "name": "Lid switch",
+      "type": "binary",
+      "property": "lid_switch",
+      "base": "lid_switch",
+      "endpoint": null,
+      "description": "Lid status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "OPEN",
+      "value_off": "CLOSE"
+    },
+    {
+      "name": "Seat switch",
+      "type": "binary",
+      "property": "seat_switch",
+      "base": "seat_switch",
+      "endpoint": null,
+      "description": "Seat status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "OPEN",
+      "value_off": "CLOSE"
+    },
+    {
+      "name": "Night light",
+      "type": "binary",
+      "property": "night_light",
+      "base": "night_light",
+      "endpoint": null,
+      "description": "Night light.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Seat temp",
+      "type": "enum",
+      "property": "seat_temp",
+      "base": "seat_temp",
+      "endpoint": null,
+      "description": "Seat heating temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Off",
+        "Temp_31C",
+        "Temp_33C",
+        "Temp_35C",
+        "Temp_37C",
+        "Temp_39C"
+      ]
+    },
+    {
+      "name": "Cleaning mode",
+      "type": "enum",
+      "property": "cleaning_mode",
+      "base": "cleaning_mode",
+      "endpoint": null,
+      "description": "Cleaning mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Stop",
+        "Rear",
+        "Rear_Moving",
+        "Female",
+        "Female_Moving",
+        "Child"
+      ]
+    },
+    {
+      "name": "Water temp",
+      "type": "enum",
+      "property": "water_temp",
+      "base": "water_temp",
+      "endpoint": null,
+      "description": "Cleaning water temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Off",
+        "Temp_31C",
+        "Temp_33C",
+        "Temp_35C",
+        "Temp_37C",
+        "Temp_39C"
+      ]
+    },
+    {
+      "name": "Water pressure",
+      "type": "enum",
+      "property": "water_pressure",
+      "base": "water_pressure",
+      "endpoint": null,
+      "description": "Water pressure.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Weak",
+        "Slightly_Weak",
+        "Middle",
+        "Slightly_Strong",
+        "Strong"
+      ]
+    },
+    {
+      "name": "Nozzle position",
+      "type": "enum",
+      "property": "nozzle_position",
+      "base": "nozzle_position",
+      "endpoint": null,
+      "description": "Nozzle position.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Back",
+        "Slightly_Back",
+        "Middle",
+        "Slightly_Front",
+        "Front"
+      ]
+    },
+    {
+      "name": "Dryer temp",
+      "type": "enum",
+      "property": "dryer_temp",
+      "base": "dryer_temp",
+      "endpoint": null,
+      "description": "Dryer wind temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Off",
+        "Normal",
+        "Low",
+        "Mid_Low",
+        "Middle",
+        "Mid_High",
+        "High"
+      ]
+    },
+    {
+      "name": "Nozzle clean",
+      "type": "enum",
+      "property": "nozzle_clean",
+      "base": "nozzle_clean",
+      "endpoint": null,
+      "description": "Nozzle self-cleaning.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Off",
+        "Auto",
+        "Manual"
+      ]
+    },
+    {
+      "name": "Occupancy status",
+      "type": "binary",
+      "property": "occupancy_status",
+      "base": "occupancy_status",
+      "endpoint": null,
+      "description": "Occupancy status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Stop button",
+      "type": "enum",
+      "property": "stop_button",
+      "base": "stop_button",
+      "endpoint": null,
+      "description": "Stop operation.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "STOP"
+      ]
+    },
+    {
+      "name": "Flush big",
+      "type": "enum",
+      "property": "flush_big",
+      "base": "flush_big",
+      "endpoint": null,
+      "description": "Full flush.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "FLUSH"
+      ]
+    },
+    {
+      "name": "Flush small",
+      "type": "enum",
+      "property": "flush_small",
+      "base": "flush_small",
+      "endpoint": null,
+      "description": "Small flush.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "FLUSH"
+      ]
+    },
+    {
+      "name": "Foam shield",
+      "type": "enum",
+      "property": "foam_shield",
+      "base": "foam_shield",
+      "endpoint": null,
+      "description": "Release splash-proof foam.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "RELEASE"
+      ]
+    },
+    {
+      "name": "Pre mist switch",
+      "type": "binary",
+      "property": "pre_mist_switch",
+      "base": "pre_mist_switch",
+      "endpoint": null,
+      "description": "Pre-mist when sitting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Auto foam on sit",
+      "type": "binary",
+      "property": "auto_foam_on_sit",
+      "base": "auto_foam_on_sit",
+      "endpoint": null,
+      "description": "Automatic foam when sitting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Auto foam on leave",
+      "type": "binary",
+      "property": "auto_foam_on_leave",
+      "base": "auto_foam_on_leave",
+      "endpoint": null,
+      "description": "Automatic foam when leaving.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Child seat mode",
+      "type": "binary",
+      "property": "child_seat_mode",
+      "base": "child_seat_mode",
+      "endpoint": null,
+      "description": "Child seat mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Foot sensor switch",
+      "type": "binary",
+      "property": "foot_sensor_switch",
+      "base": "foot_sensor_switch",
+      "endpoint": null,
+      "description": "Foot sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Auto flush after leave",
+      "type": "binary",
+      "property": "auto_flush_after_leave",
+      "base": "auto_flush_after_leave",
+      "endpoint": null,
+      "description": "Auto flush after leaving.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Beeper switch",
+      "type": "binary",
+      "property": "beeper_switch",
+      "base": "beeper_switch",
+      "endpoint": null,
+      "description": "Beeper sound.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

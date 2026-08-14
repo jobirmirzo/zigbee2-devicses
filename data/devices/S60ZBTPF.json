@@ -1,0 +1,300 @@
+{
+  "model": "S60ZBTPF",
+  "file": "S60ZBTPF.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee smart plug",
+  "image": "https://www.zigbee2mqtt.io/images/devices/S60ZBTPF.png",
+  "added_at": "2023-12-26T18:38:16",
+  "exposes_summary": "energy, switch (state), power_on_behavior, network_indicator, current, voltage, power, energy_yesterday, energy_today, energy_month, inching_control_set, outlet_control_protect, overload_protection",
+  "exposes": [
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Network indicator",
+      "type": "binary",
+      "property": "network_indicator",
+      "base": "network_indicator",
+      "endpoint": null,
+      "description": "Network indicator settings, turn off/on the blue online status network indicator..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Active power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy yesterday",
+      "type": "numeric",
+      "property": "energy_yesterday",
+      "base": "energy_yesterday",
+      "endpoint": null,
+      "description": "Electricity consumption for the yesterday.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy today",
+      "type": "numeric",
+      "property": "energy_today",
+      "base": "energy_today",
+      "endpoint": null,
+      "description": "Electricity consumption for the day.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy this month",
+      "type": "numeric",
+      "property": "energy_month",
+      "base": "energy_month",
+      "endpoint": null,
+      "description": "Electricity consumption for the month.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Inching control set",
+      "type": "composite",
+      "property": "inching_control_set",
+      "base": "inching_control_set",
+      "endpoint": null,
+      "description": "Device Inching function Settings. The device will automatically turn off (turn on) after each turn on (turn off) for a specified period of time..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "inching_control",
+          "type": "binary",
+          "description": "Enable/disable inching function.",
+          "values": [
+            "ENABLE",
+            "DISABLE"
+          ]
+        },
+        {
+          "property": "inching_time",
+          "type": "numeric",
+          "description": "Delay time for executing a inching action. min value is 0.5, max value is 3599.5, unit is seconds"
+        },
+        {
+          "property": "inching_mode",
+          "type": "binary",
+          "description": "Set inching off or inching on mode.",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Outlet control protect",
+      "type": "binary",
+      "property": "outlet_control_protect",
+      "base": "outlet_control_protect",
+      "endpoint": null,
+      "description": "Outlet overload protection Settings.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Overload protection",
+      "type": "composite",
+      "property": "overload_protection",
+      "base": "overload_protection",
+      "endpoint": null,
+      "description": "Over load protection, max power and max current are required,other is optional.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "max_power",
+          "type": "numeric",
+          "description": "max power min value is 0.1, max value is 4000, unit is W"
+        },
+        {
+          "property": "enable_min_power",
+          "type": "binary",
+          "description": "Enable/disable lower limit of power overload protection.",
+          "values": [
+            "ENABLE",
+            "DISABLE"
+          ]
+        },
+        {
+          "property": "min_power",
+          "type": "numeric",
+          "description": "Lower limit of power overload protection min value is 0.1, max value is 4000, unit is W"
+        },
+        {
+          "property": "enable_max_voltage",
+          "type": "binary",
+          "description": "Enable/disable upper limit of voltage overload protection..",
+          "values": [
+            "ENABLE",
+            "DISABLE"
+          ]
+        },
+        {
+          "property": "max_voltage",
+          "type": "numeric",
+          "description": "Upper limit of voltage overload protection. min value is 165, max value is 277, unit is V"
+        },
+        {
+          "property": "enable_min_voltage",
+          "type": "binary",
+          "description": "Enable/disable lower limit of voltage overload protection.",
+          "values": [
+            "ENABLE",
+            "DISABLE"
+          ]
+        },
+        {
+          "property": "min_voltage",
+          "type": "numeric",
+          "description": "Lower limit of voltage overload protection. min value is 165, max value is 277, unit is V"
+        },
+        {
+          "property": "max_current",
+          "type": "numeric",
+          "description": "Upper limit of current overload protection. min value is 0.1, max value is 17, unit is A"
+        },
+        {
+          "property": "enable_min_current",
+          "type": "binary",
+          "description": "Enable/disable lower limit of current overload protection.",
+          "values": [
+            "ENABLE",
+            "DISABLE"
+          ]
+        },
+        {
+          "property": "min_current",
+          "type": "numeric",
+          "description": "Lower limit of current overload protection. min value is 0.1, max value is 17, unit is A"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

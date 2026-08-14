@@ -1,0 +1,43 @@
+{
+  "model": "WSD005",
+  "file": "WSD005.md",
+  "vendor": "ADEO",
+  "description": "ENKI LEXMAN motor for roller shutler",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WSD005.png",
+  "added_at": "2025-09-30T19:37:28",
+  "exposes_summary": "cover (state, position)",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

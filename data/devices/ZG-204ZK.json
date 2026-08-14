@@ -1,0 +1,135 @@
+{
+  "model": "ZG-204ZK",
+  "file": "ZG-204ZK.md",
+  "vendor": "HOBEIAN",
+  "description": "24Ghz human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-204ZK.png",
+  "added_at": "2024-03-31T18:43:56",
+  "exposes_summary": "presence, battery, fading_time, detection_distance, static_detection_sensitivity, motion_detection_sensitivity, indicator, anti_interference",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Fading time",
+      "type": "numeric",
+      "property": "fading_time",
+      "base": "fading_time",
+      "endpoint": null,
+      "description": "Presence keep time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 28800,
+      "unit": "s"
+    },
+    {
+      "name": "Detection distance",
+      "type": "numeric",
+      "property": "detection_distance",
+      "base": "detection_distance",
+      "endpoint": null,
+      "description": "Detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5,
+      "unit": "m"
+    },
+    {
+      "name": "Static detection sensitivity",
+      "type": "numeric",
+      "property": "static_detection_sensitivity",
+      "base": "static_detection_sensitivity",
+      "endpoint": null,
+      "description": "Static detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Motion detection sensitivity",
+      "type": "numeric",
+      "property": "motion_detection_sensitivity",
+      "base": "motion_detection_sensitivity",
+      "endpoint": null,
+      "description": "Motion detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Indicator",
+      "type": "binary",
+      "property": "indicator",
+      "base": "indicator",
+      "endpoint": null,
+      "description": "LED indicator mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Anti interference",
+      "type": "binary",
+      "property": "anti_interference",
+      "base": "anti_interference",
+      "endpoint": null,
+      "description": "Anti interference function.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

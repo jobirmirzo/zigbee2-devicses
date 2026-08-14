@@ -1,0 +1,60 @@
+{
+  "model": "TS0601_smoke_6",
+  "file": "TS0601_smoke_6.md",
+  "vendor": "Tuya",
+  "description": "Smoke sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_smoke_6.png",
+  "added_at": "2024-02-29T20:20:58",
+  "exposes_summary": "smoke, tamper, battery_state",
+  "exposes": [
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "State of the battery.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "warnings": []
+}

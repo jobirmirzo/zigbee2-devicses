@@ -1,0 +1,214 @@
+{
+  "model": "HD-T1000",
+  "file": "HD-T1000.md",
+  "vendor": "Heat Decor",
+  "description": "Floor thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HD-T1000.png",
+  "added_at": "2026-04-30T19:57:28",
+  "exposes_summary": "climate (system_mode, running_state, local_temperature, local_temperature_calibration, current_heating_setpoint), work_mode, child_lock, frost_protection, window_detection, max_air_temperature, max_floor_temperature, deadzone_temperature, window_detection_time, window_detection_temperature, window_detection_recovery_time",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": false
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Work mode",
+      "type": "enum",
+      "property": "work_mode",
+      "base": "work_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "manual",
+        "schedule"
+      ]
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Frost protection",
+      "type": "binary",
+      "property": "frost_protection",
+      "base": "frost_protection",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Window detection",
+      "type": "binary",
+      "property": "window_detection",
+      "base": "window_detection",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Max air temperature",
+      "type": "numeric",
+      "property": "max_air_temperature",
+      "base": "max_air_temperature",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 35,
+      "value_max": 95,
+      "unit": "°C"
+    },
+    {
+      "name": "Max floor temperature",
+      "type": "numeric",
+      "property": "max_floor_temperature",
+      "base": "max_floor_temperature",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 60,
+      "unit": "°C"
+    },
+    {
+      "name": "Deadzone temperature",
+      "type": "numeric",
+      "property": "deadzone_temperature",
+      "base": "deadzone_temperature",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 5,
+      "unit": "°C"
+    },
+    {
+      "name": "Window detection time",
+      "type": "numeric",
+      "property": "window_detection_time",
+      "base": "window_detection_time",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 30,
+      "unit": "min"
+    },
+    {
+      "name": "Window detection temperature",
+      "type": "numeric",
+      "property": "window_detection_temperature",
+      "base": "window_detection_temperature",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 4,
+      "unit": "°C"
+    },
+    {
+      "name": "Window detection recovery time",
+      "type": "numeric",
+      "property": "window_detection_recovery_time",
+      "base": "window_detection_recovery_time",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 60,
+      "unit": "min"
+    }
+  ],
+  "warnings": []
+}

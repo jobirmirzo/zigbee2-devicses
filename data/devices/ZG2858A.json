@@ -1,0 +1,91 @@
+{
+  "model": "ZG2858A",
+  "file": "ZG2858A.md",
+  "vendor": "Sunricher",
+  "description": "Zigbee handheld remote RGBCCT 3 channels",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG2858A.png",
+  "added_at": "2021-02-28T13:58:01Z",
+  "exposes_summary": "battery, voltage, identify, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_stop",
+        "brightness_move_to_level",
+        "color_temperature_move",
+        "move_to_hue_and_saturation",
+        "recall",
+        "store",
+        "scene_1",
+        "scene_2",
+        "scene_3",
+        "scene_4",
+        "scene_5",
+        "scene_6"
+      ]
+    }
+  ],
+  "warnings": []
+}

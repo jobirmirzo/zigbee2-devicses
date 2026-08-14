@@ -1,0 +1,29 @@
+{
+  "model": "SAGE206611",
+  "file": "SAGE206611.md",
+  "vendor": "EchoStar",
+  "description": "SAGE by Hughes single gang light switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SAGE206611.png",
+  "added_at": "2021-03-30T20:29:35Z",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off"
+      ]
+    }
+  ],
+  "warnings": []
+}

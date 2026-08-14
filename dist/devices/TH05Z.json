@@ -1,0 +1,237 @@
+{
+  "model": "TH05Z",
+  "file": "TH05Z.md",
+  "vendor": "ONENUO",
+  "description": "Temperature & humidity sensor with clock and humidity display",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TH05Z.png",
+  "added_at": "2025-02-01T20:12:31",
+  "exposes_summary": "temperature, humidity, temperature_unit, max_temperature_alarm, min_temperature_alarm, max_humidity_alarm, min_humidity_alarm, temperature_alarm, humidity_alarm, temperature_periodic_report, humidity_periodic_report, temperature_sensitivity, humidity_sensitivity, battery",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature unit",
+      "type": "enum",
+      "property": "temperature_unit",
+      "base": "temperature_unit",
+      "endpoint": null,
+      "description": "Temperature unit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Max temperature alarm",
+      "type": "numeric",
+      "property": "max_temperature_alarm",
+      "base": "max_temperature_alarm",
+      "endpoint": null,
+      "description": "Alarm temperature max.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -20,
+      "value_max": 60,
+      "unit": "°C"
+    },
+    {
+      "name": "Min temperature alarm",
+      "type": "numeric",
+      "property": "min_temperature_alarm",
+      "base": "min_temperature_alarm",
+      "endpoint": null,
+      "description": "Alarm temperature min.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -20,
+      "value_max": 60,
+      "unit": "°C"
+    },
+    {
+      "name": "Max humidity alarm",
+      "type": "numeric",
+      "property": "max_humidity_alarm",
+      "base": "max_humidity_alarm",
+      "endpoint": null,
+      "description": "Alarm humidity max.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Min humidity alarm",
+      "type": "numeric",
+      "property": "min_humidity_alarm",
+      "base": "min_humidity_alarm",
+      "endpoint": null,
+      "description": "Alarm humidity min.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature alarm",
+      "type": "enum",
+      "property": "temperature_alarm",
+      "base": "temperature_alarm",
+      "endpoint": null,
+      "description": "Temperature alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "lower_alarm",
+        "upper_alarm",
+        "cancel"
+      ]
+    },
+    {
+      "name": "Humidity alarm",
+      "type": "enum",
+      "property": "humidity_alarm",
+      "base": "humidity_alarm",
+      "endpoint": null,
+      "description": "Humidity alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "lower_alarm",
+        "upper_alarm",
+        "cancel"
+      ]
+    },
+    {
+      "name": "Temperature periodic report",
+      "type": "numeric",
+      "property": "temperature_periodic_report",
+      "base": "temperature_periodic_report",
+      "endpoint": null,
+      "description": "Temp periodic report.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 120,
+      "unit": "min"
+    },
+    {
+      "name": "Humidity periodic report",
+      "type": "numeric",
+      "property": "humidity_periodic_report",
+      "base": "humidity_periodic_report",
+      "endpoint": null,
+      "description": "Humidity periodic report.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 120,
+      "unit": "min"
+    },
+    {
+      "name": "Temperature sensitivity",
+      "type": "numeric",
+      "property": "temperature_sensitivity",
+      "base": "temperature_sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity of temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.3,
+      "value_max": 1,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity sensitivity",
+      "type": "numeric",
+      "property": "humidity_sensitivity",
+      "base": "humidity_sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity of humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 3,
+      "value_max": 10,
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

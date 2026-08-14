@@ -1,0 +1,43 @@
+{
+  "model": "KKZ-MO021",
+  "file": "KKZ-MO021.md",
+  "vendor": "Hej",
+  "description": "PIR sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/KKZ-MO021.png",
+  "added_at": "2025-11-30T20:32:43",
+  "exposes_summary": "battery, occupancy",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

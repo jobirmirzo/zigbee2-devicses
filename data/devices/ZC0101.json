@@ -1,0 +1,99 @@
+{
+  "model": "ZC0101",
+  "file": "ZC0101.md",
+  "vendor": "Multiterm",
+  "description": "ZeeFan fan coil unit controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZC0101.png",
+  "added_at": "2024-09-01T12:39:25",
+  "exposes_summary": "fan (state, mode), silent_mode, heating_cooling, electric_valve",
+  "exposes": [
+    {
+      "name": "Fan Control",
+      "type": "fan",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "fan_state",
+          "base": "fan_state",
+          "values": [
+            "off",
+            "low",
+            "medium",
+            "high",
+            "on"
+          ],
+          "readable": true
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "values": [
+            "off",
+            "low",
+            "medium",
+            "high",
+            "on"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Silent mode",
+      "type": "enum",
+      "property": "silent_mode",
+      "base": "silent_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Heating/Cooling",
+      "type": "enum",
+      "property": "heating_cooling",
+      "base": "heating_cooling",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "heating",
+        "cooling"
+      ]
+    },
+    {
+      "name": "Electric Valve",
+      "type": "enum",
+      "property": "electric_valve",
+      "base": "electric_valve",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on"
+      ]
+    }
+  ],
+  "warnings": []
+}

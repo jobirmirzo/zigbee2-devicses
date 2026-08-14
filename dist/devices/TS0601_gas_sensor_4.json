@@ -1,0 +1,101 @@
+{
+  "model": "TS0601_gas_sensor_4",
+  "file": "TS0601_gas_sensor_4.md",
+  "vendor": "Tuya",
+  "description": "Gas sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_gas_sensor_4.png",
+  "added_at": "2024-04-29T19:24:38",
+  "exposes_summary": "gas, gas_value, preheat, fault_alarm, alarm_switch, silence",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "binary",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Gas value",
+      "type": "numeric",
+      "property": "gas_value",
+      "base": "gas_value",
+      "endpoint": null,
+      "description": "Measured gas concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "LEL"
+    },
+    {
+      "name": "Preheat",
+      "type": "binary",
+      "property": "preheat",
+      "base": "preheat",
+      "endpoint": null,
+      "description": "Indicates sensor preheat is active.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Fault alarm",
+      "type": "binary",
+      "property": "fault_alarm",
+      "base": "fault_alarm",
+      "endpoint": null,
+      "description": "Indicates whether a fault was detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Alarm switch",
+      "type": "binary",
+      "property": "alarm_switch",
+      "base": "alarm_switch",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Silence",
+      "type": "binary",
+      "property": "silence",
+      "base": "silence",
+      "endpoint": null,
+      "description": "Silence the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

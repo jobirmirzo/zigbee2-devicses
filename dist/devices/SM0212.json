@@ -1,0 +1,72 @@
+{
+  "model": "SM0212",
+  "file": "SM0212.md",
+  "vendor": "Tuya",
+  "description": "Gas sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SM0212.png",
+  "added_at": "2025-11-30T20:32:44",
+  "exposes_summary": "gas_alarm_1, gas_alarm_2, tamper, battery_low",
+  "exposes": [
+    {
+      "name": "Gas alarm 1",
+      "type": "binary",
+      "property": "gas_alarm_1",
+      "base": "gas_alarm_1",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas (alarm_1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Gas alarm 2",
+      "type": "binary",
+      "property": "gas_alarm_2",
+      "base": "gas_alarm_2",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas (alarm_2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

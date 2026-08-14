@@ -1,0 +1,160 @@
+{
+  "model": "BHT-002",
+  "file": "BHT-002.md",
+  "vendor": "Moes",
+  "description": "Moes BHT series Thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BHT-002.png",
+  "added_at": "2025-03-01T20:31:41",
+  "exposes_summary": "child_lock, deadzone_temperature, max_temperature_limit, min_temperature_limit, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state, preset), sensor, program",
+  "exposes": [
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Deadzone temperature",
+      "type": "numeric",
+      "property": "deadzone_temperature",
+      "base": "deadzone_temperature",
+      "endpoint": null,
+      "description": "The delta between local_temperature and current_heating_setpoint to trigger Heat.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5,
+      "unit": "°C"
+    },
+    {
+      "name": "Max temperature limit",
+      "type": "numeric",
+      "property": "max_temperature_limit",
+      "base": "max_temperature_limit",
+      "endpoint": null,
+      "description": "Maximum temperature limit. Cuts the thermostat out regardless of air temperature if the external floor sensor exceeds this temperature. Only used by the thermostat when in AL sensor mode..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 80,
+      "unit": "°C"
+    },
+    {
+      "name": "Min temperature limit",
+      "type": "numeric",
+      "property": "min_temperature_limit",
+      "base": "min_temperature_limit",
+      "endpoint": null,
+      "description": "Minimum temperature limit for frost protection. Turns the thermostat on regardless of setpoint if the temperature drops below this..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 5,
+      "unit": "°C"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 45,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": false
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "hold",
+            "program"
+          ],
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor",
+      "base": "sensor",
+      "endpoint": null,
+      "description": "Select temperature sensor to use.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "IN",
+        "AL",
+        "OU"
+      ]
+    },
+    {
+      "name": "Program",
+      "type": "composite",
+      "property": "program",
+      "base": "program",
+      "endpoint": null,
+      "description": "Time of day and setpoint to use when in program mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": []
+    }
+  ],
+  "warnings": []
+}

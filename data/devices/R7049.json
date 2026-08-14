@@ -1,0 +1,139 @@
+{
+  "model": "R7049",
+  "file": "R7049.md",
+  "vendor": "Woox",
+  "description": "Smart smoke alarm",
+  "image": "https://www.zigbee2mqtt.io/images/devices/R7049.png",
+  "added_at": "2021-06-08T15:36:48Z",
+  "exposes_summary": "battery_low, smoke, test_alarm, test_alarm_result, battery_level, alarm, fault_alarm, silence_siren",
+  "exposes": [
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Smoke alarm status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Test alarm",
+      "type": "binary",
+      "property": "test_alarm",
+      "base": "test_alarm",
+      "endpoint": null,
+      "description": "Test alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Test alarm result",
+      "type": "enum",
+      "property": "test_alarm_result",
+      "base": "test_alarm_result",
+      "endpoint": null,
+      "description": "Test alarm result.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "checking",
+        "check_success",
+        "check_failure",
+        "others"
+      ]
+    },
+    {
+      "name": "Battery level",
+      "type": "enum",
+      "property": "battery_level",
+      "base": "battery_level",
+      "endpoint": null,
+      "description": "Battery level state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "middle",
+        "high"
+      ]
+    },
+    {
+      "name": "Alarm",
+      "type": "binary",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Alarm enable.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Fault alarm",
+      "type": "binary",
+      "property": "fault_alarm",
+      "base": "fault_alarm",
+      "endpoint": null,
+      "description": "Fault alarm status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Silence siren",
+      "type": "binary",
+      "property": "silence_siren",
+      "base": "silence_siren",
+      "endpoint": null,
+      "description": "Silence siren.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

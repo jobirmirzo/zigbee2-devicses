@@ -1,0 +1,141 @@
+{
+  "model": "ZMS-208US-2",
+  "file": "ZMS-208US-2.md",
+  "vendor": "Zemismart",
+  "description": "Smart screen switch 2 gang",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZMS-208US-2.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "switch (state), child_lock, name, countdown",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Name",
+      "type": "text",
+      "property": "name_l1",
+      "base": "name",
+      "endpoint": "l1",
+      "description": "Name for Switch 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Name",
+      "type": "text",
+      "property": "name_l2",
+      "base": "name",
+      "endpoint": "l2",
+      "description": "Name for Switch 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_l1",
+      "base": "countdown",
+      "endpoint": "l1",
+      "description": "Countdown for Switch 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_l2",
+      "base": "countdown",
+      "endpoint": "l2",
+      "description": "Countdown for Switch 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

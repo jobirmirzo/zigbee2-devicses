@@ -1,0 +1,69 @@
+{
+  "model": "SS6400ZB",
+  "file": "SS6400ZB.md",
+  "vendor": "LoraTap",
+  "description": "4 button portable remote control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SS6400ZB.png",
+  "added_at": "2025-09-01T18:20:17",
+  "exposes_summary": "battery, voltage, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "1_single",
+        "1_double",
+        "1_hold",
+        "2_single",
+        "2_double",
+        "2_hold",
+        "3_single",
+        "3_double",
+        "3_hold",
+        "4_single",
+        "4_double",
+        "4_hold"
+      ]
+    }
+  ],
+  "warnings": []
+}

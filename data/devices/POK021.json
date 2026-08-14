@@ -1,0 +1,69 @@
+{
+  "model": "POK021",
+  "file": "POK021.md",
+  "vendor": "PushOk Hardware",
+  "description": "Gas pulse meter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/POK021.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "battery, voltage, pulse_frequency, pulse_count",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Pulse frequency",
+      "type": "numeric",
+      "property": "pulse_frequency",
+      "base": "pulse_frequency",
+      "endpoint": null,
+      "description": "Pulse frequency (counter mode).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Pulse count",
+      "type": "numeric",
+      "property": "pulse_count",
+      "base": "pulse_count",
+      "endpoint": null,
+      "description": "Total pulse count (counter mode).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

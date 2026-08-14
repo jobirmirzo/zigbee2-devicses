@@ -1,0 +1,249 @@
+{
+  "model": "ZG-205Z",
+  "file": "ZG-205Z.md",
+  "vendor": "Tuya",
+  "description": "5.8 GHz human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-205Z.png",
+  "added_at": "2024-08-01T18:23:40",
+  "exposes_summary": "presence, presence_state, target_distance, illuminance, indicator, none_delay_time, move_detection_max, move_detection_min, small_move_detection_max, small_move_detection_min, breath_detection_max, breath_detection_min, move_sensitivity, breath_sensitivity, small_move_sensitivity",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Presence state",
+      "type": "enum",
+      "property": "presence_state",
+      "base": "presence_state",
+      "endpoint": null,
+      "description": "The presence state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "presence",
+        "peaceful",
+        "small_movement",
+        "large_movement"
+      ]
+    },
+    {
+      "name": "Target distance",
+      "type": "numeric",
+      "property": "target_distance",
+      "base": "target_distance",
+      "endpoint": null,
+      "description": "Target distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "m"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Indicator",
+      "type": "binary",
+      "property": "indicator",
+      "base": "indicator",
+      "endpoint": null,
+      "description": "LED Indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "None delay time",
+      "type": "numeric",
+      "property": "none_delay_time",
+      "base": "none_delay_time",
+      "endpoint": null,
+      "description": "Hold delay time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 28800,
+      "unit": "Sec"
+    },
+    {
+      "name": "Move detection max",
+      "type": "numeric",
+      "property": "move_detection_max",
+      "base": "move_detection_max",
+      "endpoint": null,
+      "description": "Move detection max distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "m"
+    },
+    {
+      "name": "Move detection min",
+      "type": "numeric",
+      "property": "move_detection_min",
+      "base": "move_detection_min",
+      "endpoint": null,
+      "description": "Move detection min distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "m"
+    },
+    {
+      "name": "Small move detection max",
+      "type": "numeric",
+      "property": "small_move_detection_max",
+      "base": "small_move_detection_max",
+      "endpoint": null,
+      "description": "Small move detection max distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 6,
+      "unit": "m"
+    },
+    {
+      "name": "Small move detection min",
+      "type": "numeric",
+      "property": "small_move_detection_min",
+      "base": "small_move_detection_min",
+      "endpoint": null,
+      "description": "Small move detection min distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 6,
+      "unit": "m"
+    },
+    {
+      "name": "Breath detection max",
+      "type": "numeric",
+      "property": "breath_detection_max",
+      "base": "breath_detection_max",
+      "endpoint": null,
+      "description": "Breath detection max distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 6,
+      "unit": "m"
+    },
+    {
+      "name": "Breath detection min",
+      "type": "numeric",
+      "property": "breath_detection_min",
+      "base": "breath_detection_min",
+      "endpoint": null,
+      "description": "Breath detection min distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 6,
+      "unit": "m"
+    },
+    {
+      "name": "Move sensitivity",
+      "type": "numeric",
+      "property": "move_sensitivity",
+      "base": "move_sensitivity",
+      "endpoint": null,
+      "description": "Move sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Breath sensitivity",
+      "type": "numeric",
+      "property": "breath_sensitivity",
+      "base": "breath_sensitivity",
+      "endpoint": null,
+      "description": "Breath sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Small move sensitivity",
+      "type": "numeric",
+      "property": "small_move_sensitivity",
+      "base": "small_move_sensitivity",
+      "endpoint": null,
+      "description": "Small Move sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    }
+  ],
+  "warnings": []
+}

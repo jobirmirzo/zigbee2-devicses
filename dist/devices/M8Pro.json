@@ -1,0 +1,377 @@
+{
+  "model": "M8Pro",
+  "file": "M8Pro.md",
+  "vendor": "Tuya",
+  "description": "4 gang switch with LCD",
+  "image": "https://www.zigbee2mqtt.io/images/devices/M8Pro.png",
+  "added_at": "2024-10-31T20:34:53",
+  "exposes_summary": "switch (state), name, scene_name, mode, backlight, indicator_switch, backlight_switch, temperature_1, condition_1, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l3",
+      "features": [
+        {
+          "property": "state_l3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l4",
+      "features": [
+        {
+          "property": "state_l4",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Name",
+      "type": "text",
+      "property": "name_l1",
+      "base": "name",
+      "endpoint": "l1",
+      "description": "Name for Switch 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Name",
+      "type": "text",
+      "property": "name_l2",
+      "base": "name",
+      "endpoint": "l2",
+      "description": "Name for Switch 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Name",
+      "type": "text",
+      "property": "name_l3",
+      "base": "name",
+      "endpoint": "l3",
+      "description": "Name for Switch 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Name",
+      "type": "text",
+      "property": "name_l4",
+      "base": "name",
+      "endpoint": "l4",
+      "description": "Name for Switch 4.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Scene name",
+      "type": "text",
+      "property": "scene_name_l1",
+      "base": "scene_name",
+      "endpoint": "l1",
+      "description": "Name for Scene 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Scene name",
+      "type": "text",
+      "property": "scene_name_l2",
+      "base": "scene_name",
+      "endpoint": "l2",
+      "description": "Name for Scene 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Scene name",
+      "type": "text",
+      "property": "scene_name_l3",
+      "base": "scene_name",
+      "endpoint": "l3",
+      "description": "Name for Scene 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Scene name",
+      "type": "text",
+      "property": "scene_name_l4",
+      "base": "scene_name",
+      "endpoint": "l4",
+      "description": "Name for Scene 4.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode_l1",
+      "base": "mode",
+      "endpoint": "l1",
+      "description": "Switch1 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch_1",
+        "scene_1",
+        "smart_light_1"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode_l2",
+      "base": "mode",
+      "endpoint": "l2",
+      "description": "Switch2 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch_1",
+        "scene_1",
+        "smart_light_1"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode_l3",
+      "base": "mode",
+      "endpoint": "l3",
+      "description": "Switch3 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch_1",
+        "scene_1",
+        "smart_light_1"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode_l4",
+      "base": "mode",
+      "endpoint": "l4",
+      "description": "Switch4 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch_1",
+        "scene_1",
+        "smart_light_1"
+      ]
+    },
+    {
+      "name": "Backlight",
+      "type": "binary",
+      "property": "backlight",
+      "base": "backlight",
+      "endpoint": null,
+      "description": "Backlight.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Indicator switch",
+      "type": "enum",
+      "property": "indicator_switch",
+      "base": "indicator_switch",
+      "endpoint": null,
+      "description": "Indicator switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "status",
+        "switch_position",
+        "off"
+      ]
+    },
+    {
+      "name": "Backlight switch",
+      "type": "binary",
+      "property": "backlight_switch",
+      "base": "backlight_switch",
+      "endpoint": null,
+      "description": "Backlight switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Temperature 1",
+      "type": "numeric",
+      "property": "temperature_1",
+      "base": "temperature_1",
+      "endpoint": null,
+      "description": "Temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -65,
+      "value_max": 99
+    },
+    {
+      "name": "Condition 1",
+      "type": "enum",
+      "property": "condition_1",
+      "base": "condition_1",
+      "endpoint": null,
+      "description": "Weather condition.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "sunny",
+        "heavy_rain",
+        "cloudy",
+        "sandstorm",
+        "light_snow",
+        "snow",
+        "freezing_fog",
+        "rainstorm",
+        "shower",
+        "dust",
+        "spit",
+        "sleet",
+        "yin",
+        "freezing_rain",
+        "rain",
+        "fog",
+        "heavy_shower",
+        "heavy_snow",
+        "heavy_downpour",
+        "blizzard",
+        "hailstone",
+        "snow_shower",
+        "haze",
+        "thunder_shower"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "scene_1",
+        "scene_2",
+        "scene_3",
+        "scene_4"
+      ]
+    }
+  ],
+  "warnings": []
+}

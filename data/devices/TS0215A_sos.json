@@ -1,0 +1,58 @@
+{
+  "model": "TS0215A_sos",
+  "file": "TS0215A_sos.md",
+  "vendor": "Tuya",
+  "description": "SOS button",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0215A_sos.png",
+  "added_at": "2020-12-01T19:02:25Z",
+  "exposes_summary": "battery, voltage, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "emergency"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,35 @@
+{
+  "model": "SR-ZG9001T4-DIM-EU",
+  "file": "SR-ZG9001T4-DIM-EU.md",
+  "vendor": "Sunricher",
+  "description": "Zigbee wireless touch dimmer switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SR-ZG9001T4-DIM-EU.png",
+  "added_at": "2020-09-01T19:56:51Z",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "recall_*",
+        "on",
+        "off",
+        "brightness_stop",
+        "brightness_move_down",
+        "brightness_move_up",
+        "brightness_step_down",
+        "brightness_step_up"
+      ]
+    }
+  ],
+  "warnings": []
+}

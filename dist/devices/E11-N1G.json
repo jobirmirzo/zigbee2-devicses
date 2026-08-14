@@ -1,0 +1,41 @@
+{
+  "model": "E11-N1G",
+  "file": "E11-N1G.md",
+  "vendor": "Sengled",
+  "description": "Vintage LED edison bulb (ST19)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E11-N1G.png",
+  "added_at": "2021-07-01T18:17:29Z",
+  "exposes_summary": "light (state, brightness)",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    }
+  ],
+  "warnings": []
+}

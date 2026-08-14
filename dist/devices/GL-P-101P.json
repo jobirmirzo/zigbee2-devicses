@@ -1,0 +1,91 @@
+{
+  "model": "GL-P-101P",
+  "file": "GL-P-101P.md",
+  "vendor": "Gledopto",
+  "description": "Zigbee pro constant current CCT LED driver",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GL-P-101P.png",
+  "added_at": "2023-12-04T09:22:58",
+  "exposes_summary": "light (state, brightness, color_temp, color_temp_startup), effect",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 158,
+          "value_max": 495,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup",
+          "base": "color_temp_startup",
+          "value_min": 158,
+          "value_max": 495,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": false,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    }
+  ],
+  "warnings": []
+}

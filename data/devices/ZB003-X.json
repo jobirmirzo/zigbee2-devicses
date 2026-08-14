@@ -1,0 +1,272 @@
+{
+  "model": "ZB003-X",
+  "file": "ZB003-X.md",
+  "vendor": "Fantem",
+  "description": "4 in 1 multi sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZB003-X.png",
+  "added_at": "2021-01-31T22:24:43Z",
+  "exposes_summary": "occupancy, tamper, temperature, humidity, battery, voltage, battery2, illuminance_calibration, temperature_calibration, humidity_calibration, reporting_enable, reporting_time, led_enable, pir_enable, sensitivity, keep_time, illuminance",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Battery2",
+      "type": "numeric",
+      "property": "battery2",
+      "base": "battery2",
+      "endpoint": null,
+      "description": "Remaining battery 2 in %.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance calibration",
+      "type": "numeric",
+      "property": "illuminance_calibration",
+      "base": "illuminance_calibration",
+      "endpoint": null,
+      "description": "Illuminance calibration in lux.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -20,
+      "value_max": 20
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Temperature calibration (-2.0...2.0).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -2,
+      "value_max": 2
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Humidity calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -15,
+      "value_max": 15
+    },
+    {
+      "name": "Reporting enable",
+      "type": "binary",
+      "property": "reporting_enable",
+      "base": "reporting_enable",
+      "endpoint": null,
+      "description": "Enable reporting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Reporting time",
+      "type": "numeric",
+      "property": "reporting_time",
+      "base": "reporting_time",
+      "endpoint": null,
+      "description": "Reporting interval in minutes.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1440
+    },
+    {
+      "name": "Led enable",
+      "type": "binary",
+      "property": "led_enable",
+      "base": "led_enable",
+      "endpoint": null,
+      "description": "Enable LED.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Pir enable",
+      "type": "binary",
+      "property": "pir_enable",
+      "base": "pir_enable",
+      "endpoint": null,
+      "description": "Enable PIR sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "PIR sensor sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Keep time",
+      "type": "enum",
+      "property": "keep_time",
+      "base": "keep_time",
+      "endpoint": null,
+      "description": "PIR keep time in seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "0",
+        "30",
+        "60",
+        "120",
+        "240",
+        "480"
+      ]
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

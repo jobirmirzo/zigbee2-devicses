@@ -1,0 +1,222 @@
+{
+  "model": "ACW02-ZB",
+  "file": "ACW02-ZB.md",
+  "vendor": "Custom devices (DiY)",
+  "description": "ACW02 HVAC Thermostat Controller via Zigbee (Router)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ACW02-ZB.png",
+  "added_at": "2025-11-30T20:06:49",
+  "exposes_summary": "climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), error_text, ac_error_status, switch (state), filter_clean_status, fan_mode",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 16,
+          "value_max": 31,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "auto",
+            "cool",
+            "heat",
+            "dry",
+            "fan_only"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Error text",
+      "type": "text",
+      "property": "error_text",
+      "base": "error_text",
+      "endpoint": null,
+      "description": "Error message from AC unit (read-only).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Ac error status",
+      "type": "binary",
+      "property": "ac_error_status",
+      "base": "ac_error_status",
+      "endpoint": null,
+      "description": "Error status indicator (read-only).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "eco_mode",
+      "features": [
+        {
+          "property": "state_eco_mode",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "swing_mode",
+      "features": [
+        {
+          "property": "state_swing_mode",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "display",
+      "features": [
+        {
+          "property": "state_display",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "night_mode",
+      "features": [
+        {
+          "property": "state_night_mode",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "purifier",
+      "features": [
+        {
+          "property": "state_purifier",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Filter clean status",
+      "type": "binary",
+      "property": "filter_clean_status",
+      "base": "filter_clean_status",
+      "endpoint": null,
+      "description": "Filter cleaning reminder (read-only).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "mute",
+      "features": [
+        {
+          "property": "state_mute",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Fan mode",
+      "type": "enum",
+      "property": "fan_mode",
+      "base": "fan_mode",
+      "endpoint": null,
+      "description": "Fan speed: Quiet=SILENT, Low=P20, Low-Med=P40, Medium=P60, Med-High=P80, High=P100, Auto=AUTO.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "auto",
+        "low",
+        "low-med",
+        "medium",
+        "med-high",
+        "high",
+        "quiet"
+      ]
+    }
+  ],
+  "warnings": []
+}

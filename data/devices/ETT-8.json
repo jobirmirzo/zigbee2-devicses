@@ -1,0 +1,380 @@
+{
+  "model": "ETT-8",
+  "file": "ETT-8.md",
+  "vendor": "EKF",
+  "description": "Thermostat radiator valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ETT-8.png",
+  "added_at": "2025-11-30T20:32:44",
+  "exposes_summary": "battery_low, child_lock, open_window, open_window_temperature, comfort_temperature, eco_temperature, climate (preset, local_temperature_calibration, local_temperature, current_heating_setpoint, system_mode), heating_stop, frost_protection, boost_timeset_countdown, holiday_temperature, holiday_start_stop, working_day, schedule, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, online, error_status",
+  "exposes": [
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Open window",
+      "type": "binary",
+      "property": "open_window",
+      "base": "open_window",
+      "endpoint": null,
+      "description": "Enables/disables the status on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Open window temperature",
+      "type": "numeric",
+      "property": "open_window_temperature",
+      "base": "open_window_temperature",
+      "endpoint": null,
+      "description": "Open window temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Comfort temperature",
+      "type": "numeric",
+      "property": "comfort_temperature",
+      "base": "comfort_temperature",
+      "endpoint": null,
+      "description": "Comfort temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Eco temperature",
+      "type": "numeric",
+      "property": "eco_temperature",
+      "base": "eco_temperature",
+      "endpoint": null,
+      "description": "Eco temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "auto",
+            "manual",
+            "holiday"
+          ],
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Heating stop",
+      "type": "binary",
+      "property": "heating_stop",
+      "base": "heating_stop",
+      "endpoint": null,
+      "description": "Battery life can be prolonged by switching the heating off. To achieve this, the valve is closed fully. To activate the heating stop, the device display \"HS\", press the pair button to cancel..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Frost protection",
+      "type": "binary",
+      "property": "frost_protection",
+      "base": "frost_protection",
+      "endpoint": null,
+      "description": "When Anti-Freezing function is activated, the temperature in the house is kept at 8 °C.When Anti-Freezing function is activated, the temperature in the house is kept at 8 °C, the device display \"AF\".press the pair button to cancel..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Boost timeset countdown",
+      "type": "numeric",
+      "property": "boost_timeset_countdown",
+      "base": "boost_timeset_countdown",
+      "endpoint": null,
+      "description": "Setting minimum 0 - maximum 465 seconds boost time. The boost (♨) function is activated. The remaining time for the function will be counted down in seconds ( 465 to 0 )..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 465,
+      "unit": "s"
+    },
+    {
+      "name": "Holiday temperature",
+      "type": "numeric",
+      "property": "holiday_temperature",
+      "base": "holiday_temperature",
+      "endpoint": null,
+      "description": "Holiday temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Holiday start stop",
+      "type": "text",
+      "property": "holiday_start_stop",
+      "base": "holiday_start_stop",
+      "endpoint": null,
+      "description": "The holiday mode will automatically start at the set time starting point and run the holiday temperature. Can be defined in the following format: `startYear/startMonth/startDay startHours:startMinutes | endYear/endMonth/endDay endHours:endMinutes`. For example: `2022/10/01 16:30 | 2022/10/21 18:10`. After the end of holiday mode, it switches to \"auto\" mode and uses schedule..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Working day",
+      "type": "enum",
+      "property": "working_day",
+      "base": "working_day",
+      "endpoint": null,
+      "description": "`mon_sun` - schedule for Monday used for each day (define it only for Monday). `mon_fri+sat+sun` - schedule for workdays used from Monday (define it only for Monday), Saturday and Sunday are defined separately. `separate` - schedule for each day is defined separately..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "mon_sun",
+        "mon_fri+sat+sun",
+        "separate"
+      ]
+    },
+    {
+      "name": "Schedule",
+      "type": "composite",
+      "property": "working_day",
+      "base": "working_day",
+      "endpoint": null,
+      "description": "Schedule will work with \"auto\" preset. In this mode, the device executes a preset week programming temperature time and temperature. Before using these properties, check `working_day` property. Each day can contain up to 10 segments. At least 1 segment should be defined. Different count of segments can be defined for each day, e.g., 3 segments for Monday, 5 segments for Thursday, etc. It should be defined in the following format: `hours:minutes/temperature`. Minutes can be only tens, i.e., 00, 10, 20, 30, 40, 50. Segments should be divided by space symbol. Each day should end with the last segment of 24:00. Examples: `04:00/20 08:30/22 10:10/18 18:40/24 22:50/19.5`; `06:00/21.5 17:20/26 24:00/18`. The temperature will be set from the beginning/start of one period and until the next period, e.g., `04:00/20 24:00/22` means that from 00:00 to 04:00 temperature will be 20 degrees and from 04:00 to 00:00 temperature will be 22 degrees..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": []
+    },
+    {
+      "name": "Schedule monday",
+      "type": "text",
+      "property": "schedule_monday",
+      "base": "schedule_monday",
+      "endpoint": null,
+      "description": "Schedule for monday, example: \"HH:MM/C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Schedule tuesday",
+      "type": "text",
+      "property": "schedule_tuesday",
+      "base": "schedule_tuesday",
+      "endpoint": null,
+      "description": "Schedule for tuesday, example: \"HH:MM/C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Schedule wednesday",
+      "type": "text",
+      "property": "schedule_wednesday",
+      "base": "schedule_wednesday",
+      "endpoint": null,
+      "description": "Schedule for wednesday, example: \"HH:MM/C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Schedule thursday",
+      "type": "text",
+      "property": "schedule_thursday",
+      "base": "schedule_thursday",
+      "endpoint": null,
+      "description": "Schedule for thursday, example: \"HH:MM/C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Schedule friday",
+      "type": "text",
+      "property": "schedule_friday",
+      "base": "schedule_friday",
+      "endpoint": null,
+      "description": "Schedule for friday, example: \"HH:MM/C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Schedule saturday",
+      "type": "text",
+      "property": "schedule_saturday",
+      "base": "schedule_saturday",
+      "endpoint": null,
+      "description": "Schedule for saturday, example: \"HH:MM/C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Schedule sunday",
+      "type": "text",
+      "property": "schedule_sunday",
+      "base": "schedule_sunday",
+      "endpoint": null,
+      "description": "Schedule for sunday, example: \"HH:MM/C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Online",
+      "type": "binary",
+      "property": "online",
+      "base": "online",
+      "endpoint": null,
+      "description": "The current data request from the device..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Error status",
+      "type": "numeric",
+      "property": "error_status",
+      "base": "error_status",
+      "endpoint": null,
+      "description": "Error status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

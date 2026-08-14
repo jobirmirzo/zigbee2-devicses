@@ -1,0 +1,242 @@
+{
+  "model": "TS0601_knob_dimmer_switch",
+  "file": "TS0601_knob_dimmer_switch.md",
+  "vendor": "Tuya",
+  "description": "Dimmer knob with two lights",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_knob_dimmer_switch.png",
+  "added_at": "2025-07-01T17:54:38",
+  "exposes_summary": "switch (state), switch_mode, light (state, brightness, color_temp, color_temp_startup), adjustment_mode, power_on_behavior, mode, group_id, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch mode",
+      "type": "enum",
+      "property": "switch_mode_l1",
+      "base": "switch_mode",
+      "endpoint": "l1",
+      "description": "Sets the mode of the switch to act as a switch or as a scene.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch",
+        "scene"
+      ]
+    },
+    {
+      "name": "Switch mode",
+      "type": "enum",
+      "property": "switch_mode_l2",
+      "base": "switch_mode",
+      "endpoint": "l2",
+      "description": "Sets the mode of the switch to act as a switch or as a scene.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch",
+        "scene"
+      ]
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 154,
+          "value_max": 370,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup",
+          "base": "color_temp_startup",
+          "value_min": 154,
+          "value_max": 370,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Adjustment mode",
+      "type": "enum",
+      "property": "adjustment_mode",
+      "base": "adjustment_mode",
+      "endpoint": null,
+      "description": "Adjustment mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "brightness",
+        "color_temp"
+      ]
+    },
+    {
+      "name": "Power on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Power on behavior state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "previous"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "knob",
+        "scene"
+      ]
+    },
+    {
+      "name": "Group id",
+      "type": "numeric",
+      "property": "group_id",
+      "base": "group_id",
+      "endpoint": null,
+      "description": "Group ID to bind to..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10000
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "button_1",
+        "button_2"
+      ]
+    }
+  ],
+  "warnings": []
+}

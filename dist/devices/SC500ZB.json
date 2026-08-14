@@ -1,0 +1,122 @@
+{
+  "model": "SC500ZB",
+  "file": "SC500ZB.md",
+  "vendor": "LoraTap",
+  "description": "Smart curtain/shutter switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SC500ZB.png",
+  "added_at": "2024-10-31T20:36:06",
+  "exposes_summary": "cover (state, position), moving, motor_reversal, calibration, calibration_time, indicator_mode, backlight_mode, switch_type",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Moving",
+      "type": "enum",
+      "property": "moving",
+      "base": "moving",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "UP",
+        "STOP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Motor reversal",
+      "type": "binary",
+      "property": "motor_reversal",
+      "base": "motor_reversal",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Calibration",
+      "type": "binary",
+      "property": "calibration",
+      "base": "calibration",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Calibration time",
+      "type": "numeric",
+      "property": "calibration_time",
+      "base": "calibration_time",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type",
+      "base": "switch_type",
+      "endpoint": null,
+      "description": "Type of the installed switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "momentary",
+        "toggle"
+      ]
+    }
+  ],
+  "warnings": []
+}

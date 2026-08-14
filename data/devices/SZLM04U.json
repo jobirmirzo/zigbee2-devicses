@@ -1,0 +1,103 @@
+{
+  "model": "SZLM04U",
+  "file": "SZLM04U.md",
+  "vendor": "Lincukoo",
+  "description": "Motion and brightness sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SZLM04U.png",
+  "added_at": "2025-05-01T17:59:09",
+  "exposes_summary": "occupancy, illuminance, battery, usb_power, switch, fading_time",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Usb power",
+      "type": "binary",
+      "property": "usb_power",
+      "base": "usb_power",
+      "endpoint": null,
+      "description": "check usb power plug in or not.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch",
+      "type": "binary",
+      "property": "switch",
+      "base": "switch",
+      "endpoint": null,
+      "description": "enable or disable the sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Fading time",
+      "type": "numeric",
+      "property": "fading_time",
+      "base": "fading_time",
+      "endpoint": null,
+      "description": "Fading time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 300,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

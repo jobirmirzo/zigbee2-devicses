@@ -1,0 +1,52 @@
+{
+  "model": "HY08WE",
+  "file": "HY08WE.md",
+  "vendor": "Tuya",
+  "description": "Wall-mount thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HY08WE.png",
+  "added_at": "2020-11-01T12:47:02Z",
+  "exposes_summary": "climate (current_heating_setpoint, local_temperature, system_mode, running_state)",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "auto",
+            "heat"
+          ],
+          "readable": false
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

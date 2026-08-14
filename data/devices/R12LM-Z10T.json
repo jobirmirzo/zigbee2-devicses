@@ -1,0 +1,139 @@
+{
+  "model": "R12LM-Z10T",
+  "file": "R12LM-Z10T.md",
+  "vendor": "Lincukoo",
+  "description": "Human motion & presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/R12LM-Z10T.png",
+  "added_at": "2026-01-31T13:10:42",
+  "exposes_summary": "presence, illuminance, work_mode, radar_switch, fading_time, detection_distance, radar_sensitivity, battery_state",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Work mode",
+      "type": "enum",
+      "property": "work_mode",
+      "base": "work_mode",
+      "endpoint": null,
+      "description": "work mode of device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "radar_mode",
+        "combine_mode"
+      ]
+    },
+    {
+      "name": "Radar switch",
+      "type": "binary",
+      "property": "radar_switch",
+      "base": "radar_switch",
+      "endpoint": null,
+      "description": "Radar switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Fading time",
+      "type": "numeric",
+      "property": "fading_time",
+      "base": "fading_time",
+      "endpoint": null,
+      "description": "Fading time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 60,
+      "unit": "s"
+    },
+    {
+      "name": "Detection distance",
+      "type": "numeric",
+      "property": "detection_distance",
+      "base": "detection_distance",
+      "endpoint": null,
+      "description": "Maximum range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 3,
+      "value_max": 9,
+      "unit": "m"
+    },
+    {
+      "name": "Radar sensitivity",
+      "type": "numeric",
+      "property": "radar_sensitivity",
+      "base": "radar_sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity of the radar.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 4
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "battery state of the sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "middle",
+        "high",
+        "usb"
+      ]
+    }
+  ],
+  "warnings": []
+}

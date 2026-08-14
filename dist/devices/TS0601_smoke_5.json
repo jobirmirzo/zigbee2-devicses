@@ -1,0 +1,103 @@
+{
+  "model": "TS0601_smoke_5",
+  "file": "TS0601_smoke_5.md",
+  "vendor": "Tuya",
+  "description": "Smoke sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_smoke_5.png",
+  "added_at": "2023-04-27T17:39:26",
+  "exposes_summary": "smoke, tamper, battery, fault_alarm, silence, alarm",
+  "exposes": [
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Fault alarm",
+      "type": "binary",
+      "property": "fault_alarm",
+      "base": "fault_alarm",
+      "endpoint": null,
+      "description": "Indicates whether a fault was detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Silence",
+      "type": "binary",
+      "property": "silence",
+      "base": "silence",
+      "endpoint": null,
+      "description": "Silence the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Alarm",
+      "type": "binary",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Enable the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

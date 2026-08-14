@@ -1,0 +1,57 @@
+{
+  "model": "PSE03-V1.1.0",
+  "file": "PSE03-V1.1.0.md",
+  "vendor": "EVOLOGY",
+  "description": "Sound and flash siren",
+  "image": "https://www.zigbee2mqtt.io/images/devices/PSE03-V1.1.0.png",
+  "added_at": "2022-08-01T15:06:58",
+  "exposes_summary": "warning",
+  "exposes": [
+    {
+      "name": "Warning",
+      "type": "composite",
+      "property": "warning",
+      "base": "warning",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "mode",
+          "type": "enum",
+          "description": "Mode of the warning (sound effect)",
+          "values": [
+            "stop",
+            "burglar",
+            "fire",
+            "emergency",
+            "police_panic",
+            "fire_panic",
+            "emergency_panic"
+          ]
+        },
+        {
+          "property": "level",
+          "type": "enum",
+          "description": "Sound level",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "property": "duration",
+          "type": "numeric",
+          "description": "Duration in seconds of the alarm unit is s"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

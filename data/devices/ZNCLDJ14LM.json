@@ -1,0 +1,119 @@
+{
+  "model": "ZNCLDJ14LM",
+  "file": "ZNCLDJ14LM.md",
+  "vendor": "Aqara",
+  "description": "Curtain controller C2",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZNCLDJ14LM.png",
+  "added_at": "2023-01-01T08:59:10",
+  "exposes_summary": "cover (state, position), reverse_direction, hand_open, running, motor_state, power_outage_count",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Reverse direction",
+      "type": "binary",
+      "property": "reverse_direction",
+      "base": "reverse_direction",
+      "endpoint": null,
+      "description": "Whether the curtain direction is inverted.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Hand open",
+      "type": "binary",
+      "property": "hand_open",
+      "base": "hand_open",
+      "endpoint": null,
+      "description": "Pulling curtains by hand starts the motor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Running",
+      "type": "binary",
+      "property": "running",
+      "base": "running",
+      "endpoint": null,
+      "description": "Whether the motor is moving or not.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Motor state",
+      "type": "enum",
+      "property": "motor_state",
+      "base": "motor_state",
+      "endpoint": null,
+      "description": "The current state of the motor..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "closing",
+        "opening",
+        "stopped"
+      ]
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages (since last pairing).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

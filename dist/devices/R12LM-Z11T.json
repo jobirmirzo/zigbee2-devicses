@@ -1,0 +1,159 @@
+{
+  "model": "R12LM-Z11T",
+  "file": "R12LM-Z11T.md",
+  "vendor": "Lincukoo",
+  "description": "Human motion & presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/R12LM-Z11T.png",
+  "added_at": "2026-04-30T19:57:27",
+  "exposes_summary": "scan_environment, scan_result, mode, presence, illuminance, radar_switch, set_detection_distance, battery_state, switch_night_light",
+  "exposes": [
+    {
+      "name": "Scan environment",
+      "type": "enum",
+      "property": "scan_environment",
+      "base": "scan_environment",
+      "endpoint": null,
+      "description": "Set no one environment.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "start"
+      ]
+    },
+    {
+      "name": "Scan result",
+      "type": "enum",
+      "property": "scan_result",
+      "base": "scan_result",
+      "endpoint": null,
+      "description": "Environment scan result.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "normal",
+        "scanning",
+        "scan_success",
+        "scan_failure",
+        "scan_start"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Device mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "radar_mode",
+        "fusion_mode"
+      ]
+    },
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Radar switch",
+      "type": "binary",
+      "property": "radar_switch",
+      "base": "radar_switch",
+      "endpoint": null,
+      "description": "Radar switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Set detection distance",
+      "type": "numeric",
+      "property": "set_detection_distance",
+      "base": "set_detection_distance",
+      "endpoint": null,
+      "description": "Detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 3,
+      "value_max": 9,
+      "unit": "m"
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "Battery status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "middle",
+        "high",
+        "USB"
+      ]
+    },
+    {
+      "name": "Switch night light",
+      "type": "binary",
+      "property": "switch_night_light",
+      "base": "switch_night_light",
+      "endpoint": null,
+      "description": "Night light switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

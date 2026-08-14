@@ -1,0 +1,265 @@
+{
+  "model": "MTG075-ZB-RL",
+  "file": "MTG075-ZB-RL.md",
+  "vendor": "Tuya",
+  "description": "2.4G/5.8G human presence sensor with relay",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MTG075-ZB-RL.png",
+  "added_at": "2023-08-26T06:45:18",
+  "exposes_summary": "presence, illuminance, target_distance, radar_sensitivity, detection_range, shield_range, entry_sensitivity, entry_distance_indentation, entry_filter_time, departure_delay, block_time, breaker_status, breaker_mode, illuminance_threshold, status_indication, sensor",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Target distance",
+      "type": "numeric",
+      "property": "target_distance",
+      "base": "target_distance",
+      "endpoint": null,
+      "description": "Distance to target.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Radar sensitivity",
+      "type": "numeric",
+      "property": "radar_sensitivity",
+      "base": "radar_sensitivity",
+      "endpoint": null,
+      "description": "Detection threshold for the strength of object energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 9
+    },
+    {
+      "name": "Detection range",
+      "type": "numeric",
+      "property": "detection_range",
+      "base": "detection_range",
+      "endpoint": null,
+      "description": "Maximum distance detected by the sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 8,
+      "unit": "m"
+    },
+    {
+      "name": "Shield range",
+      "type": "numeric",
+      "property": "shield_range",
+      "base": "shield_range",
+      "endpoint": null,
+      "description": "Nearest distance detected by the sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 8,
+      "unit": "m"
+    },
+    {
+      "name": "Entry sensitivity",
+      "type": "numeric",
+      "property": "entry_sensitivity",
+      "base": "entry_sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity threshold triggered for the first time when the target enters the detection range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 9
+    },
+    {
+      "name": "Entry distance indentation",
+      "type": "numeric",
+      "property": "entry_distance_indentation",
+      "base": "entry_distance_indentation",
+      "endpoint": null,
+      "description": "Indent the distance inward based on the detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 8,
+      "unit": "m"
+    },
+    {
+      "name": "Entry filter time",
+      "type": "numeric",
+      "property": "entry_filter_time",
+      "base": "entry_filter_time",
+      "endpoint": null,
+      "description": "Sensitivity threshold triggered for the first time when the target enters the detection range .",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "s"
+    },
+    {
+      "name": "Departure delay",
+      "type": "numeric",
+      "property": "departure_delay",
+      "base": "departure_delay",
+      "endpoint": null,
+      "description": "Confirmation time after the target disappears.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "s"
+    },
+    {
+      "name": "Block time",
+      "type": "numeric",
+      "property": "block_time",
+      "base": "block_time",
+      "endpoint": null,
+      "description": "Time for the target to be detected again after switching from manned(occupy) to unmanned(unoccupy) mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "s"
+    },
+    {
+      "name": "Breaker status",
+      "type": "binary",
+      "property": "breaker_status",
+      "base": "breaker_status",
+      "endpoint": null,
+      "description": "Remotely control the breaker in standard mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Breaker mode",
+      "type": "enum",
+      "property": "breaker_mode",
+      "base": "breaker_mode",
+      "endpoint": null,
+      "description": "Breaker mode: standard is remotely controlled, local is automatic.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "standard",
+        "local"
+      ]
+    },
+    {
+      "name": "Illuminance threshold",
+      "type": "numeric",
+      "property": "illuminance_threshold",
+      "base": "illuminance_threshold",
+      "endpoint": null,
+      "description": "Illumination threshold for local (automatic) switching mode operation.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 420,
+      "unit": "lx"
+    },
+    {
+      "name": "Status indication",
+      "type": "enum",
+      "property": "status_indication",
+      "base": "status_indication",
+      "endpoint": null,
+      "description": "Indicator light will flash when human presence is detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "OFF",
+        "ON"
+      ]
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor",
+      "base": "sensor",
+      "endpoint": null,
+      "description": "The radar sensor can be set in four states: on, off, occupied and unoccupied. For example, if set to occupied, it will continue to maintain presence regardless of whether someone is present or not. If set to unoccupied, the unoccupied state will be maintained permanently..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off",
+        "occupied",
+        "unoccupied"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,2025 @@
+{
+  "model": "VZM32-SN",
+  "file": "VZM32-SN.md",
+  "vendor": "Inovelli",
+  "description": "mmWave Zigbee Dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/VZM32-SN.png",
+  "added_at": "2025-07-01T17:54:38",
+  "exposes_summary": "light (state, brightness), led_effect, individual_led_effect, notificationComplete, dimmingSpeedUpRemote, dimmingSpeedUpLocal, rampRateOffToOnRemote, rampRateOffToOnLocal, dimmingSpeedDownRemote, dimmingSpeedDownLocal, rampRateOnToOffRemote, rampRateOnToOffLocal, invertSwitch, autoTimerOff, defaultLevelLocal, defaultLevelRemote, stateAfterPowerRestored, loadLevelIndicatorTimeout, switchType, internalTemperature, overheat, buttonDelay, deviceBindNumber, smartBulbMode, doubleTapUpToParam55, doubleTapDownToParam56, brightnessLevelForDoubleTapUp, brightnessLevelForDoubleTapDown, ledColorWhenOn, ledColorWhenOff, ledIntensityWhenOn, ledIntensityWhenOff, singleTapBehavior, fanControlMode, lowLevelForFanControlMode, mediumLevelForFanControlMode, highLevelForFanControlMode, ledColorForFanControlMode, auxSwitchUniqueScenes, bindingOffToOnSyncLevel, localProtection, remoteProtection, onOffLedMode, firmwareUpdateInProgressIndicator, defaultLed1ColorWhenOn, defaultLed1ColorWhenOff, defaultLed1IntensityWhenOn, defaultLed1IntensityWhenOff, defaultLed2ColorWhenOn, defaultLed2ColorWhenOff, defaultLed2IntensityWhenOn, defaultLed2IntensityWhenOff, defaultLed3ColorWhenOn, defaultLed3ColorWhenOff, defaultLed3IntensityWhenOn, defaultLed3IntensityWhenOff, defaultLed4ColorWhenOn, defaultLed4ColorWhenOff, defaultLed4IntensityWhenOn, defaultLed4IntensityWhenOff, defaultLed5ColorWhenOn, defaultLed5ColorWhenOff, defaultLed5IntensityWhenOn, defaultLed5IntensityWhenOff, defaultLed6ColorWhenOn, defaultLed6ColorWhenOff, defaultLed6IntensityWhenOn, defaultLed6IntensityWhenOff, defaultLed7ColorWhenOn, defaultLed7ColorWhenOff, defaultLed7IntensityWhenOn, defaultLed7IntensityWhenOff, fanTimerMode, doubleTapClearNotifications, fanLedLevelType, minimumLevel, maximumLevel, powerType, outputMode, ledBarScaling, activePowerReports, periodicPowerAndEnergyReports, activeEnergyReports, quickStartTime, quickStartLevel, higherOutputInNonNeutral, dimmingMode, otaImageType, mmwaveControlWiredDevice, mmWaveRoomSizePreset, mmWaveHoldTime, mmWaveDetectSensitivity, mmWaveDetectTrigger, mmWaveTargetInfoReport, mmWaveStayLife, mmWaveVersion, mmWaveHeightMin, mmWaveHeightMax, mmWaveWidthMin, mmWaveWidthMax, mmWaveDepthMin, mmWaveDepthMax, mmwave_control_commands, area1Occupancy, area2Occupancy, area3Occupancy, area4Occupancy, mmwave_interference_areas, mmwave_detection_areas, mmwave_stay_areas, mmwave_targets, identify, energy_reset, power, voltage, current, energy, illuminance, occupancy, action",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Led effect",
+      "type": "composite",
+      "property": "led_effect",
+      "base": "led_effect",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "effect",
+          "type": "enum",
+          "description": "Animation Effect to use for the LEDs",
+          "values": [
+            "off",
+            "solid",
+            "fast_blink",
+            "slow_blink",
+            "pulse",
+            "chase",
+            "open_close",
+            "small_to_big",
+            "aurora",
+            "slow_falling",
+            "medium_falling",
+            "fast_falling",
+            "slow_rising",
+            "medium_rising",
+            "fast_rising",
+            "medium_blink",
+            "slow_chase",
+            "fast_chase",
+            "fast_siren",
+            "slow_siren",
+            "clear_effect"
+          ]
+        },
+        {
+          "property": "color",
+          "type": "numeric",
+          "description": "Calculated by using a hue color circle(value/255*360) If color = 255 display white max value is 255"
+        },
+        {
+          "property": "level",
+          "type": "numeric",
+          "description": "Brightness of the LEDs max value is 100"
+        },
+        {
+          "property": "duration",
+          "type": "numeric",
+          "description": "1-60 is in seconds calculated 61-120 is in minutes calculated by(value-60) Example a value of 65 would be 65-60 = 5 minutes - 120-254 Is in hours calculated by(value-120) Example a value of 132 would be 132-120 would be 12 hours. - 255 Indefinitely max value is 255"
+        }
+      ]
+    },
+    {
+      "name": "Individual led effect",
+      "type": "composite",
+      "property": "individual_led_effect",
+      "base": "individual_led_effect",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "led",
+          "type": "enum",
+          "description": "Individual LED to target.",
+          "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "property": "effect",
+          "type": "enum",
+          "description": "Animation Effect to use for the LED",
+          "values": [
+            "off",
+            "solid",
+            "fast_blink",
+            "slow_blink",
+            "pulse",
+            "chase",
+            "falling",
+            "rising",
+            "aurora",
+            "clear_effect"
+          ]
+        },
+        {
+          "property": "color",
+          "type": "numeric",
+          "description": "Calculated by using a hue color circle(value/255*360) If color = 255 display white max value is 255"
+        },
+        {
+          "property": "level",
+          "type": "numeric",
+          "description": "Brightness of the LED max value is 100"
+        },
+        {
+          "property": "duration",
+          "type": "numeric",
+          "description": "1-60 is in seconds calculated 61-120 is in minutes calculated by(value-60) Example a value of 65 would be 65-60 = 5 minutes - 120-254 Is in hours calculated by(value-120)  Example a value of 132 would be 132-120 would be 12 hours. - 255 Indefinitely max value is 255"
+        }
+      ]
+    },
+    {
+      "name": "NotificationComplete",
+      "type": "enum",
+      "property": "notificationComplete",
+      "base": "notificationComplete",
+      "endpoint": null,
+      "description": "Indication that a specific notification has completed..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "LED_1",
+        "LED_2",
+        "LED_3",
+        "LED_4",
+        "LED_5",
+        "LED_6",
+        "LED_7",
+        "ALL_LEDS",
+        "CONFIG_BUTTON_DOUBLE_PRESS"
+      ]
+    },
+    {
+      "name": "DimmingSpeedUpRemote",
+      "type": "numeric",
+      "property": "dimmingSpeedUpRemote",
+      "base": "dimmingSpeedUpRemote",
+      "endpoint": null,
+      "description": "This changes the speed that the light dims up when controlled from the hub. A setting of 0 turns the light immediately on. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 25 (2.5s).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "DimmingSpeedUpLocal",
+      "type": "numeric",
+      "property": "dimmingSpeedUpLocal",
+      "base": "dimmingSpeedUpLocal",
+      "endpoint": null,
+      "description": "This changes the speed that the light dims up when controlled at the switch. A setting of 0 turns the light immediately on. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 127 - Keep in sync with dimmingSpeedUpRemote setting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "RampRateOffToOnRemote",
+      "type": "numeric",
+      "property": "rampRateOffToOnRemote",
+      "base": "rampRateOffToOnRemote",
+      "endpoint": null,
+      "description": "This changes the speed that the light turns on when controlled from the hub. A setting of 0 turns the light immediately on. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 127 - Keep in sync with dimmingSpeedUpRemote setting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "RampRateOffToOnLocal",
+      "type": "numeric",
+      "property": "rampRateOffToOnLocal",
+      "base": "rampRateOffToOnLocal",
+      "endpoint": null,
+      "description": "This changes the speed that the light turns on when controlled at the switch. A setting of 0 turns the light immediately on. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 127 - Keep in sync with dimmingSpeedUpRemote setting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "DimmingSpeedDownRemote",
+      "type": "numeric",
+      "property": "dimmingSpeedDownRemote",
+      "base": "dimmingSpeedDownRemote",
+      "endpoint": null,
+      "description": "This changes the speed that the light dims down when controlled from the hub. A setting of 0 turns the light immediately off. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 127 - Keep in sync with dimmingSpeedUpRemote setting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "DimmingSpeedDownLocal",
+      "type": "numeric",
+      "property": "dimmingSpeedDownLocal",
+      "base": "dimmingSpeedDownLocal",
+      "endpoint": null,
+      "description": "This changes the speed that the light dims down when controlled at the switch. A setting of 0 turns the light immediately off. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 127 - Keep in sync with dimmingSpeedUpLocal setting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "RampRateOnToOffRemote",
+      "type": "numeric",
+      "property": "rampRateOnToOffRemote",
+      "base": "rampRateOnToOffRemote",
+      "endpoint": null,
+      "description": "This changes the speed that the light turns off when controlled from the hub. A setting of 'instant' turns the light immediately off. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 127 - Keep in sync with rampRateOffToOnRemote setting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "RampRateOnToOffLocal",
+      "type": "numeric",
+      "property": "rampRateOnToOffLocal",
+      "base": "rampRateOnToOffLocal",
+      "endpoint": null,
+      "description": "This changes the speed that the light turns off when controlled at the switch. A setting of 'instant' turns the light immediately off. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 127 - Keep in sync with rampRateOffToOnLocal setting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "InvertSwitch",
+      "type": "enum",
+      "property": "invertSwitch",
+      "base": "invertSwitch",
+      "endpoint": null,
+      "description": "Inverts the orientation of the switch. Useful when the switch is installed upside down. Essentially up becomes down and down becomes up..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Yes",
+        "No"
+      ]
+    },
+    {
+      "name": "AutoTimerOff",
+      "type": "numeric",
+      "property": "autoTimerOff",
+      "base": "autoTimerOff",
+      "endpoint": null,
+      "description": "Automatically turns the switch off after this many seconds. When the switch is turned on a timer is started. When the timer expires, the switch is turned off. 0 = Auto off is disabled..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 32767,
+      "unit": "seconds"
+    },
+    {
+      "name": "DefaultLevelLocal",
+      "type": "numeric",
+      "property": "defaultLevelLocal",
+      "base": "defaultLevelLocal",
+      "endpoint": null,
+      "description": "Default level for the load when it is turned on at the switch. A setting of 255 means that the switch will return to the level that it was on before it was turned off..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "DefaultLevelRemote",
+      "type": "numeric",
+      "property": "defaultLevelRemote",
+      "base": "defaultLevelRemote",
+      "endpoint": null,
+      "description": "Default level for the load when it is turned on from the hub. A setting of 255 means that the switch will return to the level that it was on before it was turned off..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "StateAfterPowerRestored",
+      "type": "numeric",
+      "property": "stateAfterPowerRestored",
+      "base": "stateAfterPowerRestored",
+      "endpoint": null,
+      "description": "The state the switch should return to when power is restored after power failure. 0 = off, 1-254 = level, 255 = previous..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "LoadLevelIndicatorTimeout",
+      "type": "enum",
+      "property": "loadLevelIndicatorTimeout",
+      "base": "loadLevelIndicatorTimeout",
+      "endpoint": null,
+      "description": "Shows the level that the load is at for x number of seconds after the load is adjusted and then returns to the Default LED state. 0 = Stay Off, 1-10 = seconds, 11 = Stay On..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Stay Off",
+        "1 Second",
+        "2 Seconds",
+        "3 Seconds",
+        "4 Seconds",
+        "5 Seconds",
+        "6 Seconds",
+        "7 Seconds",
+        "8 Seconds",
+        "9 Seconds",
+        "10 Seconds",
+        "Stay On"
+      ]
+    },
+    {
+      "name": "SwitchType",
+      "type": "enum",
+      "property": "switchType",
+      "base": "switchType",
+      "endpoint": null,
+      "description": "Set the switch configuration..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Single Pole",
+        "Aux Switch"
+      ]
+    },
+    {
+      "name": "InternalTemperature",
+      "type": "numeric",
+      "property": "internalTemperature",
+      "base": "internalTemperature",
+      "endpoint": null,
+      "description": "The temperature measured by the temperature sensor inside the chip, in degrees Celsius.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 127,
+      "unit": "°C"
+    },
+    {
+      "name": "Overheat",
+      "type": "enum",
+      "property": "overheat",
+      "base": "overheat",
+      "endpoint": null,
+      "description": "Indicates if the internal chipset is currently in an overheated state..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "No Alert",
+        "Overheated"
+      ]
+    },
+    {
+      "name": "ButtonDelay",
+      "type": "enum",
+      "property": "buttonDelay",
+      "base": "buttonDelay",
+      "endpoint": null,
+      "description": "This will set the button press delay. 0 = no delay (Disables Button Press Events), Default = 500ms..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "0ms",
+        "100ms",
+        "200ms",
+        "300ms",
+        "400ms",
+        "500ms",
+        "600ms",
+        "700ms",
+        "800ms",
+        "900ms"
+      ]
+    },
+    {
+      "name": "DeviceBindNumber",
+      "type": "numeric",
+      "property": "deviceBindNumber",
+      "base": "deviceBindNumber",
+      "endpoint": null,
+      "description": "The number of devices currently bound (excluding gateways) and counts one group as two devices.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "SmartBulbMode",
+      "type": "enum",
+      "property": "smartBulbMode",
+      "base": "smartBulbMode",
+      "endpoint": null,
+      "description": "For use with Smart Bulbs that need constant power and are controlled via commands rather than power..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disabled",
+        "Smart Bulb Mode"
+      ]
+    },
+    {
+      "name": "DoubleTapUpToParam55",
+      "type": "enum",
+      "property": "doubleTapUpToParam55",
+      "base": "doubleTapUpToParam55",
+      "endpoint": null,
+      "description": "Enable or Disable setting level to parameter 55 on double-tap UP..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disabled",
+        "Enabled"
+      ]
+    },
+    {
+      "name": "DoubleTapDownToParam56",
+      "type": "enum",
+      "property": "doubleTapDownToParam56",
+      "base": "doubleTapDownToParam56",
+      "endpoint": null,
+      "description": "Enable or Disable setting level to parameter 56 on double-tap DOWN..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disabled",
+        "Enabled"
+      ]
+    },
+    {
+      "name": "BrightnessLevelForDoubleTapUp",
+      "type": "numeric",
+      "property": "brightnessLevelForDoubleTapUp",
+      "base": "brightnessLevelForDoubleTapUp",
+      "endpoint": null,
+      "description": "Set this level on double-tap UP (if enabled by P53). 255 = send ON command..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 255
+    },
+    {
+      "name": "BrightnessLevelForDoubleTapDown",
+      "type": "numeric",
+      "property": "brightnessLevelForDoubleTapDown",
+      "base": "brightnessLevelForDoubleTapDown",
+      "endpoint": null,
+      "description": "Set this level on double-tap DOWN (if enabled by P54). 255 = send OFF command..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "LedColorWhenOn",
+      "type": "numeric",
+      "property": "ledColorWhenOn",
+      "base": "ledColorWhenOn",
+      "endpoint": null,
+      "description": "Set the color of the LED Indicator when the load is on..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "LedColorWhenOff",
+      "type": "numeric",
+      "property": "ledColorWhenOff",
+      "base": "ledColorWhenOff",
+      "endpoint": null,
+      "description": "Set the color of the LED Indicator when the load is off..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "LedIntensityWhenOn",
+      "type": "numeric",
+      "property": "ledIntensityWhenOn",
+      "base": "ledIntensityWhenOn",
+      "endpoint": null,
+      "description": "Set the intensity of the LED Indicator when the load is on..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "LedIntensityWhenOff",
+      "type": "numeric",
+      "property": "ledIntensityWhenOff",
+      "base": "ledIntensityWhenOff",
+      "endpoint": null,
+      "description": "Set the intensity of the LED Indicator when the load is off..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "SingleTapBehavior",
+      "type": "enum",
+      "property": "singleTapBehavior",
+      "base": "singleTapBehavior",
+      "endpoint": null,
+      "description": "Behavior of single tapping the on or off button. Old behavior turns the switch on or off. New behavior cycles through the levels set by P131-133. Down Always Off is like the new behavior but down always turns the switch off instead of going to next lower speed..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Old Behavior",
+        "New Behavior",
+        "Down Always Off"
+      ]
+    },
+    {
+      "name": "FanControlMode",
+      "type": "enum",
+      "property": "fanControlMode",
+      "base": "fanControlMode",
+      "endpoint": null,
+      "description": "Which mode to use when binding EP3 (config button) to another device (like a fan module)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disabled",
+        "Multi Tap",
+        "Cycle",
+        "Toggle"
+      ]
+    },
+    {
+      "name": "LowLevelForFanControlMode",
+      "type": "numeric",
+      "property": "lowLevelForFanControlMode",
+      "base": "lowLevelForFanControlMode",
+      "endpoint": null,
+      "description": "Level to send to device bound to EP3 when set to low..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 254
+    },
+    {
+      "name": "MediumLevelForFanControlMode",
+      "type": "numeric",
+      "property": "mediumLevelForFanControlMode",
+      "base": "mediumLevelForFanControlMode",
+      "endpoint": null,
+      "description": "Level to send to device bound to EP3 when set to medium..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 254
+    },
+    {
+      "name": "HighLevelForFanControlMode",
+      "type": "numeric",
+      "property": "highLevelForFanControlMode",
+      "base": "highLevelForFanControlMode",
+      "endpoint": null,
+      "description": "Level to send to device bound to EP3 when set to high..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 254
+    },
+    {
+      "name": "LedColorForFanControlMode",
+      "type": "numeric",
+      "property": "ledColorForFanControlMode",
+      "base": "ledColorForFanControlMode",
+      "endpoint": null,
+      "description": "LED color used to display fan control mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "AuxSwitchUniqueScenes",
+      "type": "enum",
+      "property": "auxSwitchUniqueScenes",
+      "base": "auxSwitchUniqueScenes",
+      "endpoint": null,
+      "description": "Have unique scene numbers for scenes activated with the aux switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disabled",
+        "Enabled"
+      ]
+    },
+    {
+      "name": "BindingOffToOnSyncLevel",
+      "type": "enum",
+      "property": "bindingOffToOnSyncLevel",
+      "base": "bindingOffToOnSyncLevel",
+      "endpoint": null,
+      "description": "Send Move_To_Level using Default Level with Off/On to bound devices..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disabled",
+        "Enabled"
+      ]
+    },
+    {
+      "name": "LocalProtection",
+      "type": "enum",
+      "property": "localProtection",
+      "base": "localProtection",
+      "endpoint": null,
+      "description": "Ability to control switch from the wall..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disabled",
+        "Enabled"
+      ]
+    },
+    {
+      "name": "RemoteProtection",
+      "type": "enum",
+      "property": "remoteProtection",
+      "base": "remoteProtection",
+      "endpoint": null,
+      "description": "Ability to control switch from the hub..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "Disabled",
+        "Enabled"
+      ]
+    },
+    {
+      "name": "OnOffLedMode",
+      "type": "enum",
+      "property": "onOffLedMode",
+      "base": "onOffLedMode",
+      "endpoint": null,
+      "description": "When the device is in On/Off mode, use full LED bar or just one LED..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "All",
+        "One"
+      ]
+    },
+    {
+      "name": "FirmwareUpdateInProgressIndicator",
+      "type": "enum",
+      "property": "firmwareUpdateInProgressIndicator",
+      "base": "firmwareUpdateInProgressIndicator",
+      "endpoint": null,
+      "description": "Display progress on LED bar during firmware update..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disabled",
+        "Enabled"
+      ]
+    },
+    {
+      "name": "DefaultLed1ColorWhenOn",
+      "type": "numeric",
+      "property": "defaultLed1ColorWhenOn",
+      "base": "defaultLed1ColorWhenOn",
+      "endpoint": null,
+      "description": "0-254:This is the color of the LED strip in a hex representation. 255:Synchronization with default all LED strip color parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "DefaultLed1ColorWhenOff",
+      "type": "numeric",
+      "property": "defaultLed1ColorWhenOff",
+      "base": "defaultLed1ColorWhenOff",
+      "endpoint": null,
+      "description": "0-254:This is the color of the LED strip in a hex representation. 255:Synchronization with default all LED strip color parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "DefaultLed1IntensityWhenOn",
+      "type": "numeric",
+      "property": "defaultLed1IntensityWhenOn",
+      "base": "defaultLed1IntensityWhenOn",
+      "endpoint": null,
+      "description": "Intensity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 101
+    },
+    {
+      "name": "DefaultLed1IntensityWhenOff",
+      "type": "numeric",
+      "property": "defaultLed1IntensityWhenOff",
+      "base": "defaultLed1IntensityWhenOff",
+      "endpoint": null,
+      "description": "Intensity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 101
+    },
+    {
+      "name": "DefaultLed2ColorWhenOn",
+      "type": "numeric",
+      "property": "defaultLed2ColorWhenOn",
+      "base": "defaultLed2ColorWhenOn",
+      "endpoint": null,
+      "description": "0-254:This is the color of the LED strip in a hex representation. 255:Synchronization with default all LED strip color parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "DefaultLed2ColorWhenOff",
+      "type": "numeric",
+      "property": "defaultLed2ColorWhenOff",
+      "base": "defaultLed2ColorWhenOff",
+      "endpoint": null,
+      "description": "0-254:This is the color of the LED strip in a hex representation. 255:Synchronization with default all LED strip color parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "DefaultLed2IntensityWhenOn",
+      "type": "numeric",
+      "property": "defaultLed2IntensityWhenOn",
+      "base": "defaultLed2IntensityWhenOn",
+      "endpoint": null,
+      "description": "Intensity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 101
+    },
+    {
+      "name": "DefaultLed2IntensityWhenOff",
+      "type": "numeric",
+      "property": "defaultLed2IntensityWhenOff",
+      "base": "defaultLed2IntensityWhenOff",
+      "endpoint": null,
+      "description": "Intensity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 101
+    },
+    {
+      "name": "DefaultLed3ColorWhenOn",
+      "type": "numeric",
+      "property": "defaultLed3ColorWhenOn",
+      "base": "defaultLed3ColorWhenOn",
+      "endpoint": null,
+      "description": "0-254:This is the color of the LED strip in a hex representation. 255:Synchronization with default all LED strip color parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "DefaultLed3ColorWhenOff",
+      "type": "numeric",
+      "property": "defaultLed3ColorWhenOff",
+      "base": "defaultLed3ColorWhenOff",
+      "endpoint": null,
+      "description": "0-254:This is the color of the LED strip in a hex representation. 255:Synchronization with default all LED strip color parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "DefaultLed3IntensityWhenOn",
+      "type": "numeric",
+      "property": "defaultLed3IntensityWhenOn",
+      "base": "defaultLed3IntensityWhenOn",
+      "endpoint": null,
+      "description": "Intensity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 101
+    },
+    {
+      "name": "DefaultLed3IntensityWhenOff",
+      "type": "numeric",
+      "property": "defaultLed3IntensityWhenOff",
+      "base": "defaultLed3IntensityWhenOff",
+      "endpoint": null,
+      "description": "Intensity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 101
+    },
+    {
+      "name": "DefaultLed4ColorWhenOn",
+      "type": "numeric",
+      "property": "defaultLed4ColorWhenOn",
+      "base": "defaultLed4ColorWhenOn",
+      "endpoint": null,
+      "description": "0-254:This is the color of the LED strip in a hex representation. 255:Synchronization with default all LED strip color parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "DefaultLed4ColorWhenOff",
+      "type": "numeric",
+      "property": "defaultLed4ColorWhenOff",
+      "base": "defaultLed4ColorWhenOff",
+      "endpoint": null,
+      "description": "0-254:This is the color of the LED strip in a hex representation. 255:Synchronization with default all LED strip color parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "DefaultLed4IntensityWhenOn",
+      "type": "numeric",
+      "property": "defaultLed4IntensityWhenOn",
+      "base": "defaultLed4IntensityWhenOn",
+      "endpoint": null,
+      "description": "Intensity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 101
+    },
+    {
+      "name": "DefaultLed4IntensityWhenOff",
+      "type": "numeric",
+      "property": "defaultLed4IntensityWhenOff",
+      "base": "defaultLed4IntensityWhenOff",
+      "endpoint": null,
+      "description": "Intensity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 101
+    },
+    {
+      "name": "DefaultLed5ColorWhenOn",
+      "type": "numeric",
+      "property": "defaultLed5ColorWhenOn",
+      "base": "defaultLed5ColorWhenOn",
+      "endpoint": null,
+      "description": "0-254:This is the color of the LED strip in a hex representation. 255:Synchronization with default all LED strip color parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "DefaultLed5ColorWhenOff",
+      "type": "numeric",
+      "property": "defaultLed5ColorWhenOff",
+      "base": "defaultLed5ColorWhenOff",
+      "endpoint": null,
+      "description": "0-254:This is the color of the LED strip in a hex representation. 255:Synchronization with default all LED strip color parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "DefaultLed5IntensityWhenOn",
+      "type": "numeric",
+      "property": "defaultLed5IntensityWhenOn",
+      "base": "defaultLed5IntensityWhenOn",
+      "endpoint": null,
+      "description": "Intensity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 101
+    },
+    {
+      "name": "DefaultLed5IntensityWhenOff",
+      "type": "numeric",
+      "property": "defaultLed5IntensityWhenOff",
+      "base": "defaultLed5IntensityWhenOff",
+      "endpoint": null,
+      "description": "Intensity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 101
+    },
+    {
+      "name": "DefaultLed6ColorWhenOn",
+      "type": "numeric",
+      "property": "defaultLed6ColorWhenOn",
+      "base": "defaultLed6ColorWhenOn",
+      "endpoint": null,
+      "description": "0-254:This is the color of the LED strip in a hex representation. 255:Synchronization with default all LED strip color parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "DefaultLed6ColorWhenOff",
+      "type": "numeric",
+      "property": "defaultLed6ColorWhenOff",
+      "base": "defaultLed6ColorWhenOff",
+      "endpoint": null,
+      "description": "0-254:This is the color of the LED strip in a hex representation. 255:Synchronization with default all LED strip color parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "DefaultLed6IntensityWhenOn",
+      "type": "numeric",
+      "property": "defaultLed6IntensityWhenOn",
+      "base": "defaultLed6IntensityWhenOn",
+      "endpoint": null,
+      "description": "Intensity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 101
+    },
+    {
+      "name": "DefaultLed6IntensityWhenOff",
+      "type": "numeric",
+      "property": "defaultLed6IntensityWhenOff",
+      "base": "defaultLed6IntensityWhenOff",
+      "endpoint": null,
+      "description": "Intensity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 101
+    },
+    {
+      "name": "DefaultLed7ColorWhenOn",
+      "type": "numeric",
+      "property": "defaultLed7ColorWhenOn",
+      "base": "defaultLed7ColorWhenOn",
+      "endpoint": null,
+      "description": "0-254:This is the color of the LED strip in a hex representation. 255:Synchronization with default all LED strip color parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "DefaultLed7ColorWhenOff",
+      "type": "numeric",
+      "property": "defaultLed7ColorWhenOff",
+      "base": "defaultLed7ColorWhenOff",
+      "endpoint": null,
+      "description": "0-254:This is the color of the LED strip in a hex representation. 255:Synchronization with default all LED strip color parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "DefaultLed7IntensityWhenOn",
+      "type": "numeric",
+      "property": "defaultLed7IntensityWhenOn",
+      "base": "defaultLed7IntensityWhenOn",
+      "endpoint": null,
+      "description": "Intensity of LED strip when on. 101 = Synchronized with default all LED strip intensity parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 101
+    },
+    {
+      "name": "DefaultLed7IntensityWhenOff",
+      "type": "numeric",
+      "property": "defaultLed7IntensityWhenOff",
+      "base": "defaultLed7IntensityWhenOff",
+      "endpoint": null,
+      "description": "Intensity of LED strip when off. 101 = Synchronized with default all LED strip intensity parameter..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 101
+    },
+    {
+      "name": "FanTimerMode",
+      "type": "enum",
+      "property": "fanTimerMode",
+      "base": "fanTimerMode",
+      "endpoint": null,
+      "description": "Enable or disable advanced timer mode to have the switch act like a bathroom fan timer.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disabled",
+        "Enabled"
+      ]
+    },
+    {
+      "name": "DoubleTapClearNotifications",
+      "type": "enum",
+      "property": "doubleTapClearNotifications",
+      "base": "doubleTapClearNotifications",
+      "endpoint": null,
+      "description": "Double-Tap the Config button to clear notifications..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Enabled (Default)",
+        "Disabled"
+      ]
+    },
+    {
+      "name": "FanLedLevelType",
+      "type": "numeric",
+      "property": "fanLedLevelType",
+      "base": "fanLedLevelType",
+      "endpoint": null,
+      "description": "Level display of the LED Strip.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "MinimumLevel",
+      "type": "numeric",
+      "property": "minimumLevel",
+      "base": "minimumLevel",
+      "endpoint": null,
+      "description": "The minimum level that the dimmer allows the bulb to be dimmed to. Useful when the user has an LED bulb that does not turn on or flickers at a lower level..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "MaximumLevel",
+      "type": "numeric",
+      "property": "maximumLevel",
+      "base": "maximumLevel",
+      "endpoint": null,
+      "description": "The maximum level that the dimmer allows the bulb to be dimmed to.Useful when the user has an LED bulb that reaches its maximum level before the dimmer value of 99 or when the user wants to limit the maximum brightness..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 255
+    },
+    {
+      "name": "PowerType",
+      "type": "enum",
+      "property": "powerType",
+      "base": "powerType",
+      "endpoint": null,
+      "description": "Set the power type for the device..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "Non Neutral",
+        "Neutral"
+      ]
+    },
+    {
+      "name": "OutputMode",
+      "type": "enum",
+      "property": "outputMode",
+      "base": "outputMode",
+      "endpoint": null,
+      "description": "Use device as a Dimmer or an On/Off switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Dimmer",
+        "On/Off"
+      ]
+    },
+    {
+      "name": "LedBarScaling",
+      "type": "enum",
+      "property": "ledBarScaling",
+      "base": "ledBarScaling",
+      "endpoint": null,
+      "description": "Method used for scaling..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Gen3 method (VZM-style)",
+        "Gen2 method (LZW-style)"
+      ]
+    },
+    {
+      "name": "ActivePowerReports",
+      "type": "numeric",
+      "property": "activePowerReports",
+      "base": "activePowerReports",
+      "endpoint": null,
+      "description": "Percent power level change that will result in a new power report being sent. 0 = Disabled.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "PeriodicPowerAndEnergyReports",
+      "type": "numeric",
+      "property": "periodicPowerAndEnergyReports",
+      "base": "periodicPowerAndEnergyReports",
+      "endpoint": null,
+      "description": "Time period between consecutive power & energy reports being sent (in seconds). The timer is reset after each report is sent..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 32767
+    },
+    {
+      "name": "ActiveEnergyReports",
+      "type": "numeric",
+      "property": "activeEnergyReports",
+      "base": "activeEnergyReports",
+      "endpoint": null,
+      "description": "Energy reports Energy level change which will result in sending a new energy report.0 = disabled, 1-32767 = 0.01kWh-327.67kWh. Default setting: 10 (0.1 kWh).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 32767
+    },
+    {
+      "name": "QuickStartTime",
+      "type": "numeric",
+      "property": "quickStartTime",
+      "base": "quickStartTime",
+      "endpoint": null,
+      "description": "Duration of full power output while lamp transitions from Off to On. In 60th of second. 0 = disable, 1 = 1/60s, 60 = 1s.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 60
+    },
+    {
+      "name": "QuickStartLevel",
+      "type": "numeric",
+      "property": "quickStartLevel",
+      "base": "quickStartLevel",
+      "endpoint": null,
+      "description": "Level of power output during Quick Start Light time (P23)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "HigherOutputInNonNeutral",
+      "type": "enum",
+      "property": "higherOutputInNonNeutral",
+      "base": "higherOutputInNonNeutral",
+      "endpoint": null,
+      "description": "Increase level in non-neutral mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disabled (default)",
+        "Enabled"
+      ]
+    },
+    {
+      "name": "DimmingMode",
+      "type": "enum",
+      "property": "dimmingMode",
+      "base": "dimmingMode",
+      "endpoint": null,
+      "description": "Switches the dimming mode from leading edge (default) to trailing edge. 1. Trailing Edge is only available on neutral single-pole and neutral multi-way with an aux/add-on switch (multi-way with a dumb/existing switch and non-neutral setups are not supported and will default back to Leading Edge). This parameter can only be changed at the switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "Leading edge",
+        "Trailing edge"
+      ]
+    },
+    {
+      "name": "OtaImageType",
+      "type": "enum",
+      "property": "otaImageType",
+      "base": "otaImageType",
+      "endpoint": null,
+      "description": "Which endpoint should the switch advertise for OTA update (Zigbee, mmWave, or both)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Zigbee (259)",
+        "mmWave (260)",
+        "Alternating (259 & 260) (default)"
+      ]
+    },
+    {
+      "name": "MmwaveControlWiredDevice",
+      "type": "enum",
+      "property": "mmwaveControlWiredDevice",
+      "base": "mmwaveControlWiredDevice",
+      "endpoint": null,
+      "description": "Controls whether the wired load is automatically turned on / off by the presence detector. 0 = Disabled (manual control of the load), 1 = Occupancy (default; turn on automatically with presence; turn off automatically without presence), 2 = Vacancy (does not turn on automatically; turn off automatically without presence), 3 = Wasteful Occupancy (turn on automatically with presence; does not turn off automatically), 4 = Mirrored Occupancy (turn on automatically without presence; turn off automatically with presence), 5 = Mirrored Vacancy (turn on automatically without presence; does not turn off automatically), 6 = Mirrored Wasteful Occupancy (does not turn on automatically; turns off automatically with presence)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disabled",
+        "Occupancy (default)",
+        "Vacancy",
+        "Wasteful Occupancy",
+        "Mirrored Occupancy",
+        "Mirrored Vacancy",
+        "Mirrored Wasteful Occupancy"
+      ]
+    },
+    {
+      "name": "MmWaveRoomSizePreset",
+      "type": "enum",
+      "property": "mmWaveRoomSizePreset",
+      "base": "mmWaveRoomSizePreset",
+      "endpoint": null,
+      "description": "Allows selection of predefined room dimensions for mmWave sensor processing. Useful for optimizing detection zones based on installation environment. Defaults to Custom which allows for manual dimension configuration via other parameters. Options: 0=Custom (User-defined), 1=Small (X: −100 to 100, Y: 0 to 200, Z: −100 to 100), 2=Medium (X: −160 to 160, Y: 0 to 280, Z: −100 to 100), 3=Large (X: −210 to 210, Y: 0 to 360, Z: −100 to 100).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Custom",
+        "Small",
+        "Medium",
+        "Large"
+      ]
+    },
+    {
+      "name": "MmWaveHoldTime",
+      "type": "numeric",
+      "property": "mmWaveHoldTime",
+      "base": "mmWaveHoldTime",
+      "endpoint": null,
+      "description": "This changes the duration, measured in seconds, after the mmWave radar detects transition from the presence of a person to their absence. Default = 10 (seconds)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 4294967295
+    },
+    {
+      "name": "MmWaveDetectSensitivity",
+      "type": "enum",
+      "property": "mmWaveDetectSensitivity",
+      "base": "mmWaveDetectSensitivity",
+      "endpoint": null,
+      "description": "The sensitivity of the mmWave sensor..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Low",
+        "Medium",
+        "High (default)"
+      ]
+    },
+    {
+      "name": "MmWaveDetectTrigger",
+      "type": "enum",
+      "property": "mmWaveDetectTrigger",
+      "base": "mmWaveDetectTrigger",
+      "endpoint": null,
+      "description": "The time from detecting a person to triggering an action..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Slow (5s)",
+        "Medium (1s)",
+        "Fast (0.2s, default)"
+      ]
+    },
+    {
+      "name": "MmWaveTargetInfoReport",
+      "type": "enum",
+      "property": "mmWaveTargetInfoReport",
+      "base": "mmWaveTargetInfoReport",
+      "endpoint": null,
+      "description": "Send target info report when bound to mmWave cluster..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disable (default)",
+        "Enable"
+      ]
+    },
+    {
+      "name": "MmWaveStayLife",
+      "type": "numeric",
+      "property": "mmWaveStayLife",
+      "base": "mmWaveStayLife",
+      "endpoint": null,
+      "description": "The delay time of the stay area is set to 50ms when it is set to 1, to 1 second when it is set to 20, and the default value is 300, that is, 15 seconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 4294967295
+    },
+    {
+      "name": "MmWaveVersion",
+      "type": "numeric",
+      "property": "mmWaveVersion",
+      "base": "mmWaveVersion",
+      "endpoint": null,
+      "description": "The firmware version number of the mmWave module..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 4294967295
+    },
+    {
+      "name": "MmWaveHeightMin",
+      "type": "numeric",
+      "property": "mmWaveHeightMin",
+      "base": "mmWaveHeightMin",
+      "endpoint": null,
+      "description": "Defines the detection area (negative values are below the switch, positive values are above).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -600,
+      "value_max": 600
+    },
+    {
+      "name": "MmWaveHeightMax",
+      "type": "numeric",
+      "property": "mmWaveHeightMax",
+      "base": "mmWaveHeightMax",
+      "endpoint": null,
+      "description": "Defines the detection area (negative values are below the switch, positive values are above).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -600,
+      "value_max": 600
+    },
+    {
+      "name": "MmWaveWidthMin",
+      "type": "numeric",
+      "property": "mmWaveWidthMin",
+      "base": "mmWaveWidthMin",
+      "endpoint": null,
+      "description": "Defines the detection area (negative values are left of the switch facing away from the wall, positive values are right).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -600,
+      "value_max": 600
+    },
+    {
+      "name": "MmWaveWidthMax",
+      "type": "numeric",
+      "property": "mmWaveWidthMax",
+      "base": "mmWaveWidthMax",
+      "endpoint": null,
+      "description": "Defines the detection area (negative values are left of the switch facing away from the wall, positive values are right).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -600,
+      "value_max": 600
+    },
+    {
+      "name": "MmWaveDepthMin",
+      "type": "numeric",
+      "property": "mmWaveDepthMin",
+      "base": "mmWaveDepthMin",
+      "endpoint": null,
+      "description": "Defines the detection area in front of the switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600
+    },
+    {
+      "name": "MmWaveDepthMax",
+      "type": "numeric",
+      "property": "mmWaveDepthMax",
+      "base": "mmWaveDepthMax",
+      "endpoint": null,
+      "description": "Defines the detection area in front of the switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600
+    },
+    {
+      "name": "Mmwave control commands",
+      "type": "composite",
+      "property": "mmwave_control_commands",
+      "base": "mmwave_control_commands",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": []
+    },
+    {
+      "name": "Area1Occupancy",
+      "type": "binary",
+      "property": "mmwave_area1_occupancy",
+      "base": "mmwave_area1_occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy in Area 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Area2Occupancy",
+      "type": "binary",
+      "property": "mmwave_area2_occupancy",
+      "base": "mmwave_area2_occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy in Area 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Area3Occupancy",
+      "type": "binary",
+      "property": "mmwave_area3_occupancy",
+      "base": "mmwave_area3_occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy in Area 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Area4Occupancy",
+      "type": "binary",
+      "property": "mmwave_area4_occupancy",
+      "base": "mmwave_area4_occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy in Area 4.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Mmwave interference areas",
+      "type": "composite",
+      "property": "mmwave_interference_areas",
+      "base": "mmwave_interference_areas",
+      "endpoint": null,
+      "description": "Manually defines the coordinates of an interference area, which is an ignored zone where targets are not reported as present. Up to four zones can be defined..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": []
+    },
+    {
+      "name": "Mmwave detection areas",
+      "type": "composite",
+      "property": "mmwave_detection_areas",
+      "base": "mmwave_detection_areas",
+      "endpoint": null,
+      "description": "Defines one or more active detection zones where the sensor reports movement or occupancy. Up to four detection zones can be set..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": []
+    },
+    {
+      "name": "Mmwave stay areas",
+      "type": "composite",
+      "property": "mmwave_stay_areas",
+      "base": "mmwave_stay_areas",
+      "endpoint": null,
+      "description": "Defines one or more stay areas where stationary presence should still be detected. Up to four stay zones can be configured..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": []
+    },
+    {
+      "name": "Mmwave targets",
+      "type": "list",
+      "property": "mmwave_targets",
+      "base": "mmwave_targets",
+      "endpoint": null,
+      "description": "All of the detected mmWave targets.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Energy reset",
+      "type": "enum",
+      "property": "energy_reset",
+      "base": "energy_reset",
+      "endpoint": null,
+      "description": "Reset energy meter.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "reset"
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "down_single",
+        "up_single",
+        "config_single",
+        "down_release",
+        "up_release",
+        "config_release",
+        "down_held",
+        "up_held",
+        "config_held",
+        "down_double",
+        "up_double",
+        "config_double",
+        "down_triple",
+        "up_triple",
+        "config_triple",
+        "down_quadruple",
+        "up_quadruple",
+        "config_quadruple",
+        "down_quintuple",
+        "up_quintuple",
+        "config_quintuple"
+      ]
+    }
+  ],
+  "warnings": []
+}

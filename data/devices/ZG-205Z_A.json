@@ -1,0 +1,216 @@
+{
+  "model": "ZG-205Z/A",
+  "file": "ZG-205Z_A.md",
+  "vendor": "Tuya",
+  "description": "5.8Ghz/24Ghz Human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-205Z-A.png",
+  "added_at": "2023-08-26T06:45:18",
+  "exposes_summary": "presence, motion_state, target_distance, illuminance, large_motion_detection_sensitivity, large_motion_detection_distance, fading_time, medium_motion_detection_distance, medium_motion_detection_sensitivity, indicator, small_detection_distance, small_detection_sensitivity, minimum_range",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Motion state",
+      "type": "enum",
+      "property": "motion_state",
+      "base": "motion_state",
+      "endpoint": null,
+      "description": "State of the motion.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "small",
+        "medium",
+        "large",
+        "far",
+        "near"
+      ]
+    },
+    {
+      "name": "Target distance",
+      "type": "numeric",
+      "property": "target_distance",
+      "base": "target_distance",
+      "endpoint": null,
+      "description": "Distance to target.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Large motion detection sensitivity",
+      "type": "numeric",
+      "property": "large_motion_detection_sensitivity",
+      "base": "large_motion_detection_sensitivity",
+      "endpoint": null,
+      "description": "Motion detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Large motion detection distance",
+      "type": "numeric",
+      "property": "large_motion_detection_distance",
+      "base": "large_motion_detection_distance",
+      "endpoint": null,
+      "description": "Motion detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "m"
+    },
+    {
+      "name": "Fading time",
+      "type": "numeric",
+      "property": "fading_time",
+      "base": "fading_time",
+      "endpoint": null,
+      "description": "For how much time presence should stay true after detecting it.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 28800,
+      "unit": "s"
+    },
+    {
+      "name": "Medium motion detection distance",
+      "type": "numeric",
+      "property": "medium_motion_detection_distance",
+      "base": "medium_motion_detection_distance",
+      "endpoint": null,
+      "description": "Medium motion detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 6,
+      "unit": "m"
+    },
+    {
+      "name": "Medium motion detection sensitivity",
+      "type": "numeric",
+      "property": "medium_motion_detection_sensitivity",
+      "base": "medium_motion_detection_sensitivity",
+      "endpoint": null,
+      "description": "Medium motion detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Indicator",
+      "type": "binary",
+      "property": "indicator",
+      "base": "indicator",
+      "endpoint": null,
+      "description": "LED Indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Small detection distance",
+      "type": "numeric",
+      "property": "small_detection_distance",
+      "base": "small_detection_distance",
+      "endpoint": null,
+      "description": "Small detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 6,
+      "unit": "m"
+    },
+    {
+      "name": "Small detection sensitivity",
+      "type": "numeric",
+      "property": "small_detection_sensitivity",
+      "base": "small_detection_sensitivity",
+      "endpoint": null,
+      "description": "Small detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Minimum range",
+      "type": "numeric",
+      "property": "minimum_range",
+      "base": "minimum_range",
+      "endpoint": null,
+      "description": "Minimum range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 6,
+      "unit": "m"
+    }
+  ],
+  "warnings": []
+}

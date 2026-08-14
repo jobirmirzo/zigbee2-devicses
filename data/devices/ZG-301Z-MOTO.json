@@ -1,0 +1,129 @@
+{
+  "model": "ZG-301Z-MOTO",
+  "file": "ZG-301Z-MOTO.md",
+  "vendor": "HOBEIAN",
+  "description": "Curtain Motor Controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-301Z-MOTO.png",
+  "added_at": "2024-11-30T20:27:20",
+  "exposes_summary": "cover (state, position), cur_calibration, control_back, tr_timecon, switch_type, indicator_mode",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Cur calibration",
+      "type": "enum",
+      "property": "cur_calibration",
+      "base": "cur_calibration",
+      "endpoint": null,
+      "description": "Curtain calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "start",
+        "end"
+      ]
+    },
+    {
+      "name": "Control back",
+      "type": "enum",
+      "property": "control_back",
+      "base": "control_back",
+      "endpoint": null,
+      "description": "Set curtain control back.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "forward",
+        "back"
+      ]
+    },
+    {
+      "name": "Tr timecon",
+      "type": "numeric",
+      "property": "tr_timecon",
+      "base": "tr_timecon",
+      "endpoint": null,
+      "description": "Quick Calibrate.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 120,
+      "unit": "s"
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type",
+      "base": "switch_type",
+      "endpoint": null,
+      "description": "Set curtain controller switch type.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "flip_switch",
+        "sync_switch",
+        "button_switch"
+      ]
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode",
+      "base": "indicator_mode",
+      "endpoint": null,
+      "description": "Set Controller indicator mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "relay",
+        "pos",
+        "none"
+      ]
+    }
+  ],
+  "warnings": []
+}

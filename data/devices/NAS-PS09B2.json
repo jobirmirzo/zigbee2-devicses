@@ -1,0 +1,123 @@
+{
+  "model": "NAS-PS09B2",
+  "file": "NAS-PS09B2.md",
+  "vendor": "NEO",
+  "description": "Human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/NAS-PS09B2.png",
+  "added_at": "2024-03-31T19:12:51",
+  "exposes_summary": "occupancy, human_motion_state, departure_delay, radar_range, radar_sensitivity, presence_sensitivity, dis_current",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Human motion state",
+      "type": "enum",
+      "property": "human_motion_state",
+      "base": "human_motion_state",
+      "endpoint": null,
+      "description": "Human Motion State.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "small",
+        "large"
+      ]
+    },
+    {
+      "name": "Departure delay",
+      "type": "numeric",
+      "property": "departure_delay",
+      "base": "departure_delay",
+      "endpoint": null,
+      "description": "Presence Time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 3,
+      "value_max": 600,
+      "unit": "s"
+    },
+    {
+      "name": "Radar range",
+      "type": "numeric",
+      "property": "radar_range",
+      "base": "radar_range",
+      "endpoint": null,
+      "description": "Motion Range Detection.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 150,
+      "value_max": 600,
+      "unit": "cm"
+    },
+    {
+      "name": "Radar sensitivity",
+      "type": "numeric",
+      "property": "radar_sensitivity",
+      "base": "radar_sensitivity",
+      "endpoint": null,
+      "description": "Motion Detection Sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 7
+    },
+    {
+      "name": "Presence sensitivity",
+      "type": "numeric",
+      "property": "presence_sensitivity",
+      "base": "presence_sensitivity",
+      "endpoint": null,
+      "description": "Motionless Detection Sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 7
+    },
+    {
+      "name": "Current distance",
+      "type": "numeric",
+      "property": "dis_current",
+      "base": "dis_current",
+      "endpoint": null,
+      "description": "Current Distance of Detected Motion.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "cm"
+    }
+  ],
+  "warnings": []
+}

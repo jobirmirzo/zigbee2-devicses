@@ -1,0 +1,129 @@
+{
+  "model": "HS2AQ-EF-3.0",
+  "file": "HS2AQ-EF-3.0.md",
+  "vendor": "Heiman",
+  "description": "Air quality monitor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS2AQ-EF-3.0.png",
+  "added_at": "2025-12-01T20:18:17",
+  "exposes_summary": "temperature, pm25, hcho, aqi, pm10, battery, humidity, charging_status",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "PM25",
+      "type": "numeric",
+      "property": "pm25",
+      "base": "pm25",
+      "endpoint": null,
+      "description": "Measured PM2.5 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "HCHO",
+      "type": "numeric",
+      "property": "hcho",
+      "base": "hcho",
+      "endpoint": null,
+      "description": "Measured HCHO value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mg/m³"
+    },
+    {
+      "name": "Aqi",
+      "type": "numeric",
+      "property": "aqi",
+      "base": "aqi",
+      "endpoint": null,
+      "description": "Air quality index.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "PM10",
+      "type": "numeric",
+      "property": "pm10",
+      "base": "pm10",
+      "endpoint": null,
+      "description": "Measured PM10 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Charging status",
+      "type": "enum",
+      "property": "charging_status",
+      "base": "charging_status",
+      "endpoint": null,
+      "description": "Current charging status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "NotCharged",
+        "Charging",
+        "FullyCharged"
+      ]
+    }
+  ],
+  "warnings": []
+}

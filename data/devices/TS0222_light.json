@@ -1,0 +1,42 @@
+{
+  "model": "TS0222_light",
+  "file": "TS0222_light.md",
+  "vendor": "Tuya",
+  "description": "Light sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0222_light.png",
+  "added_at": "2024-10-31T20:34:53",
+  "exposes_summary": "battery, illuminance",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

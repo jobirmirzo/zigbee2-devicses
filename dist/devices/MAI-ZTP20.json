@@ -1,0 +1,42 @@
+{
+  "model": "MAI-ZTP20",
+  "file": "MAI-ZTP20.md",
+  "vendor": "Profalux",
+  "description": "Cover remote",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MAI-ZTP20.png",
+  "added_at": "2023-10-03T08:44:52",
+  "exposes_summary": "battery, voltage",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

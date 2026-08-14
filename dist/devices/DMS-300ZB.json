@@ -1,0 +1,118 @@
+{
+  "model": "DMS-300ZB",
+  "file": "DMS-300ZB.md",
+  "vendor": "ShinaSystem",
+  "description": "SiHAS dual motion sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DMS-300ZB.png",
+  "added_at": "2021-10-30T12:58:50",
+  "exposes_summary": "battery, voltage, occupancy_in, occupancy_out, occupancy_or, occupancy_and, occupancy_timeout",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Occupancy in",
+      "type": "binary",
+      "property": "occupancy_in",
+      "base": "occupancy_in",
+      "endpoint": null,
+      "description": "Indicates whether \"IN\" Sensor of the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy out",
+      "type": "binary",
+      "property": "occupancy_out",
+      "base": "occupancy_out",
+      "endpoint": null,
+      "description": "Indicates whether \"OUT\" Sensor of the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy or",
+      "type": "binary",
+      "property": "occupancy_or",
+      "base": "occupancy_or",
+      "endpoint": null,
+      "description": "Indicates whether \"IN or OUT\" Sensor of the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy and",
+      "type": "binary",
+      "property": "occupancy_and",
+      "base": "occupancy_and",
+      "endpoint": null,
+      "description": "Indicates whether \"IN and OUT\" Sensor of the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy timeout",
+      "type": "numeric",
+      "property": "occupancy_timeout",
+      "base": "occupancy_timeout",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

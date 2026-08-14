@@ -1,0 +1,108 @@
+{
+  "model": "ZM-102-M",
+  "file": "ZM-102-M.md",
+  "vendor": "Moes",
+  "description": "Garage door opener",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZM-102-M.png",
+  "added_at": "2025-08-01T15:19:08",
+  "exposes_summary": "trigger, countdown, garage_door_contact, run_time, open_alarm_time, status",
+  "exposes": [
+    {
+      "name": "Trigger",
+      "type": "binary",
+      "property": "trigger",
+      "base": "trigger",
+      "endpoint": null,
+      "description": "Request door to close (= false) or open (= true), will not pulse output if contact shows door is already in requested state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown",
+      "base": "countdown",
+      "endpoint": null,
+      "description": "Countdown to trigger door movement after a certain time, will pulse output in all cases.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Garage door contact",
+      "type": "binary",
+      "property": "garage_door_contact",
+      "base": "garage_door_contact",
+      "endpoint": null,
+      "description": "Indicates if the garage door contact is closed (= true) or open (= false).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Run time",
+      "type": "numeric",
+      "property": "run_time",
+      "base": "run_time",
+      "endpoint": null,
+      "description": "Configure the time to wait for the door contact status to change before triggering a run time alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 120,
+      "unit": "s"
+    },
+    {
+      "name": "Open alarm time",
+      "type": "numeric",
+      "property": "open_alarm_time",
+      "base": "open_alarm_time",
+      "endpoint": null,
+      "description": "Configure the amount of time the door may be open before an open time alarm is triggered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400,
+      "unit": "s"
+    },
+    {
+      "name": "Status",
+      "type": "enum",
+      "property": "status",
+      "base": "status",
+      "endpoint": null,
+      "description": "Indicates run time alarm, door open alarm or normal status, will not return to normal until door is triggered again.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "Open Time Alarm",
+        "Run Time Alarm",
+        "Normal"
+      ]
+    }
+  ],
+  "warnings": []
+}

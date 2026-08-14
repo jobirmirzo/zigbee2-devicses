@@ -1,0 +1,26 @@
+{
+  "model": "GWRJN5169",
+  "file": "GWRJN5169.md",
+  "vendor": "OpenLumi",
+  "description": "Lumi Router (JN5169)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GWRJN5169.png",
+  "added_at": "2021-01-26T20:08:21Z",
+  "exposes_summary": "device_temperature",
+  "exposes": [
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

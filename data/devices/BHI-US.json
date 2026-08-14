@@ -1,0 +1,172 @@
+{
+  "model": "BHI-US",
+  "file": "BHI-US.md",
+  "vendor": "Bosch",
+  "description": "Universal Switch II",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BHI-US.png",
+  "added_at": "2023-12-26T18:35:42",
+  "exposes_summary": "battery_low, voltage, config_led_top_left_press, config_led_top_right_press, config_led_bottom_left_press, config_led_bottom_right_press, config_led_top_left_longpress, config_led_top_right_longpress, config_led_bottom_left_longpress, config_led_bottom_right_longpress, action",
+  "exposes": [
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "LED config (top left short press)",
+      "type": "text",
+      "property": "config_led_top_left_press",
+      "base": "config_led_top_left_press",
+      "endpoint": null,
+      "description": "Specifies LED color (rgb) and pattern on short press as hex string. 0-2: RGB value (e.g. ffffff = white) 3: Light position (01=top, 02=bottom, 00=full) 4-7: Durations for sequence fade-in -> on -> fade-out -> off (e.g. 01020102) 8: Number of Repetitions (01=1 to ff=255) Example: ff1493000104010001.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "LED config (top right short press)",
+      "type": "text",
+      "property": "config_led_top_right_press",
+      "base": "config_led_top_right_press",
+      "endpoint": null,
+      "description": "Specifies LED color (rgb) and pattern on short press as hex string. 0-2: RGB value (e.g. ffffff = white) 3: Light position (01=top, 02=bottom, 00=full) 4-7: Durations for sequence fade-in -> on -> fade-out -> off (e.g. 01020102) 8: Number of Repetitions (01=1 to ff=255) Example: ff1493000104010001.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "LED config (bottom left short press)",
+      "type": "text",
+      "property": "config_led_bottom_left_press",
+      "base": "config_led_bottom_left_press",
+      "endpoint": null,
+      "description": "Specifies LED color (rgb) and pattern on short press as hex string. 0-2: RGB value (e.g. ffffff = white) 3: Light position (01=top, 02=bottom, 00=full) 4-7: Durations for sequence fade-in -> on -> fade-out -> off (e.g. 01020102) 8: Number of Repetitions (01=1 to ff=255) Example: ff1493000104010001.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "LED config (bottom right short press)",
+      "type": "text",
+      "property": "config_led_bottom_right_press",
+      "base": "config_led_bottom_right_press",
+      "endpoint": null,
+      "description": "Specifies LED color (rgb) and pattern on short press as hex string. 0-2: RGB value (e.g. ffffff = white) 3: Light position (01=top, 02=bottom, 00=full) 4-7: Durations for sequence fade-in -> on -> fade-out -> off (e.g. 01020102) 8: Number of Repetitions (01=1 to ff=255) Example: ff1493000104010001.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "LED config (top left long press)",
+      "type": "text",
+      "property": "config_led_top_left_longpress",
+      "base": "config_led_top_left_longpress",
+      "endpoint": null,
+      "description": "Specifies LED color (rgb) and pattern on long press as hex string. 0-2: RGB value (e.g. ffffff = white) 3: Light position (01=top, 02=bottom, 00=full) 4-7: Durations for sequence fade-in -> on -> fade-out -> off (e.g. 01020102) 8: Number of Repetitions (01=1 to ff=255) Example: ff4200000502050001.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "LED config (top right long press)",
+      "type": "text",
+      "property": "config_led_top_right_longpress",
+      "base": "config_led_top_right_longpress",
+      "endpoint": null,
+      "description": "Specifies LED color (rgb) and pattern on long press as hex string. 0-2: RGB value (e.g. ffffff = white) 3: Light position (01=top, 02=bottom, 00=full) 4-7: Durations for sequence fade-in -> on -> fade-out -> off (e.g. 01020102) 8: Number of Repetitions (01=1 to ff=255) Example: ff4200000502050001.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "LED config (bottom left long press)",
+      "type": "text",
+      "property": "config_led_bottom_left_longpress",
+      "base": "config_led_bottom_left_longpress",
+      "endpoint": null,
+      "description": "Specifies LED color (rgb) and pattern on long press as hex string. 0-2: RGB value (e.g. ffffff = white) 3: Light position (01=top, 02=bottom, 00=full) 4-7: Durations for sequence fade-in -> on -> fade-out -> off (e.g. 01020102) 8: Number of Repetitions (01=1 to ff=255) Example: ff4200000502050001.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "LED config (bottom right long press)",
+      "type": "text",
+      "property": "config_led_bottom_right_longpress",
+      "base": "config_led_bottom_right_longpress",
+      "endpoint": null,
+      "description": "Specifies LED color (rgb) and pattern on long press as hex string. 0-2: RGB value (e.g. ffffff = white) 3: Light position (01=top, 02=bottom, 00=full) 4-7: Durations for sequence fade-in -> on -> fade-out -> off (e.g. 01020102) 8: Number of Repetitions (01=1 to ff=255) Example: ff4200000502050001.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "button_top_left_release",
+        "button_top_right_release",
+        "button_bottom_left_release",
+        "button_bottom_right_release",
+        "button_top_left_longpress",
+        "button_top_right_longpress",
+        "button_bottom_left_longpress",
+        "button_bottom_right_longpress",
+        "button_top_left_longpress_release",
+        "button_top_right_longpress_release",
+        "button_bottom_left_longpress_release",
+        "button_bottom_right_longpress_release"
+      ]
+    }
+  ],
+  "warnings": []
+}

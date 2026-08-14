@@ -1,0 +1,91 @@
+{
+  "model": "10024773",
+  "file": "10024773.md",
+  "vendor": "LUUMR",
+  "description": "Smart LED C35 matt E14 4,2 W",
+  "image": "https://www.zigbee2mqtt.io/images/devices/10024773.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "light (state, brightness, color_temp), effect, do_not_disturb",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 153,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Do not disturb",
+      "type": "binary",
+      "property": "do_not_disturb",
+      "base": "do_not_disturb",
+      "endpoint": null,
+      "description": "Controls state after power outage: false = on, true = restore previous state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

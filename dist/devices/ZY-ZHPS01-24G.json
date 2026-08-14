@@ -1,0 +1,197 @@
+{
+  "model": "ZY-ZHPS01-24G",
+  "file": "ZY-ZHPS01-24G.md",
+  "vendor": "Tuya",
+  "description": "24GHz mmWave human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZY-ZHPS01-24G.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "presence, illuminance, dis_current, presence_delay, movesensitivity, breathsensitivity, movedistance_max, movedistance_min, breathdistance_max, breathdistance_min, self_learning, restore_factory_setting",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Dis current",
+      "type": "numeric",
+      "property": "dis_current",
+      "base": "dis_current",
+      "endpoint": null,
+      "description": "Current detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "cm"
+    },
+    {
+      "name": "Presence delay",
+      "type": "numeric",
+      "property": "presence_delay",
+      "base": "presence_delay",
+      "endpoint": null,
+      "description": "Presence delay.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 600,
+      "unit": "s"
+    },
+    {
+      "name": "Movesensitivity",
+      "type": "numeric",
+      "property": "movesensitivity",
+      "base": "movesensitivity",
+      "endpoint": null,
+      "description": "Move sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Breathsensitivity",
+      "type": "numeric",
+      "property": "breathsensitivity",
+      "base": "breathsensitivity",
+      "endpoint": null,
+      "description": "Breath sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Movedistance max",
+      "type": "numeric",
+      "property": "movedistance_max",
+      "base": "movedistance_max",
+      "endpoint": null,
+      "description": "Move detection max distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "cm"
+    },
+    {
+      "name": "Movedistance min",
+      "type": "numeric",
+      "property": "movedistance_min",
+      "base": "movedistance_min",
+      "endpoint": null,
+      "description": "Move detection min distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "cm"
+    },
+    {
+      "name": "Breathdistance max",
+      "type": "numeric",
+      "property": "breathdistance_max",
+      "base": "breathdistance_max",
+      "endpoint": null,
+      "description": "Breath detection max distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "cm"
+    },
+    {
+      "name": "Breathdistance min",
+      "type": "numeric",
+      "property": "breathdistance_min",
+      "base": "breathdistance_min",
+      "endpoint": null,
+      "description": "Breath detection min distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "cm"
+    },
+    {
+      "name": "Self learning",
+      "type": "enum",
+      "property": "self_learning",
+      "base": "self_learning",
+      "endpoint": null,
+      "description": "Self learning mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "start",
+        "stop"
+      ]
+    },
+    {
+      "name": "Restore factory setting",
+      "type": "binary",
+      "property": "restore_factory_setting",
+      "base": "restore_factory_setting",
+      "endpoint": null,
+      "description": "Factory reset (behavior depends on firmware).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

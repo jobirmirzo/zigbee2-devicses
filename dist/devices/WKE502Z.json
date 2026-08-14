@@ -1,0 +1,263 @@
+{
+  "model": "WKE502Z",
+  "file": "WKE502Z.md",
+  "vendor": "DAEWOO",
+  "description": "Smart Zigbee keypad with RFID badge reader",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WKE502Z.png",
+  "added_at": "2026-05-07T17:39:17",
+  "exposes_summary": "arm_mode, armed, sos_alarm, battery, tamper, user_id, user_last_seen, last_added_user_code, admin_code, arm_delay_time, beep_sound_enabled, arm_delay_beep_sound, quick_home_enabled, quick_arm_enabled, quick_disarm_enabled, quick_sos_enabled, action",
+  "exposes": [
+    {
+      "name": "Arm mode",
+      "type": "numeric",
+      "property": "arm_mode",
+      "base": "arm_mode",
+      "endpoint": null,
+      "description": "Arm mode reported at startup only: 0=disarmed, 2=armed. NOT updated in real-time..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Armed",
+      "type": "binary",
+      "property": "armed",
+      "base": "armed",
+      "endpoint": null,
+      "description": "Arm state — write true to manually confirm arm_away/arm_home to the keypad.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Sos alarm",
+      "type": "binary",
+      "property": "sos_alarm",
+      "base": "sos_alarm",
+      "endpoint": null,
+      "description": "SOS alarm active — set true by SOS keypress, cleared false by disarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "User id",
+      "type": "text",
+      "property": "user_id",
+      "base": "user_id",
+      "endpoint": null,
+      "description": "User ID (RFID badge slot or PIN index) that triggered the last action.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "User last seen",
+      "type": "text",
+      "property": "user_last_seen",
+      "base": "user_last_seen",
+      "endpoint": null,
+      "description": "ISO timestamp of last user authentication — updates on every badge/code event.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Last added user code",
+      "type": "text",
+      "property": "last_added_user_code",
+      "base": "last_added_user_code",
+      "endpoint": null,
+      "description": "Last code entered by a user.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Admin code",
+      "type": "text",
+      "property": "admin_code",
+      "base": "admin_code",
+      "endpoint": null,
+      "description": "Admin code (change with caution).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Arm delay time",
+      "type": "numeric",
+      "property": "arm_delay_time",
+      "base": "arm_delay_time",
+      "endpoint": null,
+      "description": "Delay before arming (0-180 s).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 180,
+      "unit": "s"
+    },
+    {
+      "name": "Beep sound enabled",
+      "type": "binary",
+      "property": "beep_sound_enabled",
+      "base": "beep_sound_enabled",
+      "endpoint": null,
+      "description": "Enable keypad beep on key press.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Arm delay beep sound",
+      "type": "binary",
+      "property": "arm_delay_beep_sound",
+      "base": "arm_delay_beep_sound",
+      "endpoint": null,
+      "description": "Beep during arm delay countdown.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Quick home enabled",
+      "type": "binary",
+      "property": "quick_home_enabled",
+      "base": "quick_home_enabled",
+      "endpoint": null,
+      "description": "Allow arm-home without entering a code.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Quick arm enabled",
+      "type": "binary",
+      "property": "quick_arm_enabled",
+      "base": "quick_arm_enabled",
+      "endpoint": null,
+      "description": "Allow arm-away without entering a code.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Quick disarm enabled",
+      "type": "binary",
+      "property": "quick_disarm_enabled",
+      "base": "quick_disarm_enabled",
+      "endpoint": null,
+      "description": "Allow disarm without entering a code.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Quick sos enabled",
+      "type": "binary",
+      "property": "quick_sos_enabled",
+      "base": "quick_sos_enabled",
+      "endpoint": null,
+      "description": "Allow SOS without entering a code.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "disarm",
+        "arm_away",
+        "arm_home",
+        "sos"
+      ]
+    }
+  ],
+  "warnings": []
+}

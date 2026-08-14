@@ -1,0 +1,27 @@
+{
+  "model": "Cigol Connect",
+  "file": "Cigol_Connect.md",
+  "vendor": "Cigol Electronics",
+  "description": "Zigbee interface module for LK IHC installations",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Cigol-Connect.png",
+  "added_at": "2026-03-31T19:04:38",
+  "exposes_summary": "state",
+  "exposes": [
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Output state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

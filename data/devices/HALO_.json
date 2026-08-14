@@ -1,0 +1,592 @@
+{
+  "model": "HALO+",
+  "file": "HALO+.md",
+  "vendor": "Halo Smart Labs",
+  "description": "Halo+ smart smoke & CO detector with weather radio",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HALO+.png",
+  "added_at": "2026-03-31T19:04:38",
+  "exposes_summary": "smoke, carbon_monoxide, tamper, battery_low, test, mains_power_connected, halo_alert_state, room, halo_test_result, test_in_progress, halo_hush_state, hush_active, hush, test_cycle, co_ppm, light (state, brightness, color_hs), battery, voltage, temperature, humidity, pressure, weather_alert, current_weather_alert, weather_alerts_interest, weather_location, weather_station, weather_frequency, weather_playing_state, weather_playback",
+  "exposes": [
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Carbon monoxide",
+      "type": "binary",
+      "property": "carbon_monoxide",
+      "base": "carbon_monoxide",
+      "endpoint": null,
+      "description": "Indicates if CO (carbon monoxide) is detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Test",
+      "type": "binary",
+      "property": "test",
+      "base": "test",
+      "endpoint": null,
+      "description": "Indicates whether the device is being tested.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Mains power connected",
+      "type": "binary",
+      "property": "mains_power_connected",
+      "base": "mains_power_connected",
+      "endpoint": null,
+      "description": "Indicates whether mains power is currently available.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Halo alert state",
+      "type": "enum",
+      "property": "halo_alert_state",
+      "base": "halo_alert_state",
+      "endpoint": null,
+      "description": "Device state reported by the manufacturer cluster.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "safe",
+        "pre_smoke",
+        "smoke",
+        "carbon_monoxide",
+        "weather",
+        "interconnect_smoke",
+        "interconnect_carbon_monoxide",
+        "silenced",
+        "low_battery",
+        "very_low_battery",
+        "failed_battery",
+        "end_of_life",
+        "other",
+        "co_test",
+        "smoke_test"
+      ]
+    },
+    {
+      "name": "Room",
+      "type": "enum",
+      "property": "room",
+      "base": "room",
+      "endpoint": null,
+      "description": "Spoken room name used in Halo announcements.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "none",
+        "basement",
+        "bedroom",
+        "den",
+        "dining_room",
+        "downstairs",
+        "entryway",
+        "family_room",
+        "game_room",
+        "guest_bedroom",
+        "hallway",
+        "kids_bedroom",
+        "living_room",
+        "master_bedroom",
+        "office",
+        "study",
+        "upstairs",
+        "workout_room"
+      ]
+    },
+    {
+      "name": "Halo test result",
+      "type": "enum",
+      "property": "halo_test_result",
+      "base": "halo_test_result",
+      "endpoint": null,
+      "description": "Result of the most recent self-test.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "idle",
+        "running",
+        "success",
+        "fail_ion",
+        "fail_photo",
+        "fail_co",
+        "fail_temperature",
+        "fail_weather",
+        "fail_other"
+      ]
+    },
+    {
+      "name": "Test in progress",
+      "type": "binary",
+      "property": "test_in_progress",
+      "base": "test_in_progress",
+      "endpoint": null,
+      "description": "Indicates whether a test is running.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Halo hush state",
+      "type": "enum",
+      "property": "halo_hush_state",
+      "base": "halo_hush_state",
+      "endpoint": null,
+      "description": "Current hush status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "ready",
+        "success",
+        "timeout",
+        "disabled"
+      ]
+    },
+    {
+      "name": "Hush active",
+      "type": "binary",
+      "property": "hush_active",
+      "base": "hush_active",
+      "endpoint": null,
+      "description": "Indicates whether the alarm is hushed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Hush",
+      "type": "enum",
+      "property": "hush",
+      "base": "hush",
+      "endpoint": null,
+      "description": "Start or cancel hush mode.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "start",
+        "stop"
+      ]
+    },
+    {
+      "name": "Test cycle",
+      "type": "enum",
+      "property": "test_cycle",
+      "base": "test_cycle",
+      "endpoint": null,
+      "description": "Start or cancel the built-in test.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "start",
+        "cancel"
+      ]
+    },
+    {
+      "name": "Co ppm",
+      "type": "numeric",
+      "property": "co_ppm",
+      "base": "co_ppm",
+      "endpoint": null,
+      "description": "Current CO concentration reported by the detector.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "light",
+      "features": [
+        {
+          "property": "state_light",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_light",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_hs_light",
+          "base": "color_hs",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Pressure",
+      "type": "numeric",
+      "property": "pressure",
+      "base": "pressure",
+      "endpoint": null,
+      "description": "The measured atmospheric pressure.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kPa"
+    },
+    {
+      "name": "Weather alert",
+      "type": "binary",
+      "property": "weather_alert",
+      "base": "weather_alert",
+      "endpoint": null,
+      "description": "Indicates an active NOAA/SAME weather alert.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Current weather alert",
+      "type": "enum",
+      "property": "current_weather_alert",
+      "base": "current_weather_alert",
+      "endpoint": null,
+      "description": "Current NOAA/SAME event code reported by the detector.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "NONE",
+        "AVA",
+        "AVW",
+        "BZW",
+        "CFA",
+        "CFW",
+        "DSW",
+        "EQW",
+        "FFA",
+        "FFS",
+        "FFW",
+        "FLA",
+        "FLS",
+        "FLW",
+        "FRW",
+        "FSW",
+        "FZW",
+        "HLS",
+        "HUA",
+        "HUW",
+        "HWA",
+        "HWW",
+        "SPS",
+        "SVA",
+        "SVR",
+        "SVS",
+        "TOA",
+        "TOR",
+        "TRA",
+        "TRW",
+        "TSA",
+        "TSW",
+        "VOW",
+        "WSA",
+        "WSW",
+        "ADR",
+        "NIC",
+        "NMN",
+        "CAE",
+        "LAE",
+        "TOE",
+        "DMO",
+        "NAT",
+        "NPT",
+        "NST",
+        "RMT",
+        "RWT",
+        "CDW",
+        "CEM",
+        "EAN",
+        "EAT",
+        "EVI",
+        "HMW",
+        "NUW",
+        "RHW",
+        "SPW",
+        "LEW",
+        "SMW",
+        "??S",
+        "??M",
+        "??E",
+        "??A",
+        "??W",
+        "BHW",
+        "BWW",
+        "CHW",
+        "CWW",
+        "DBA",
+        "DBW",
+        "DEW",
+        "EVA",
+        "FCW",
+        "IBW",
+        "IFW",
+        "LSW",
+        "POS",
+        "WFA",
+        "WFW",
+        "EWW",
+        "SSA",
+        "SSW",
+        "UNKNOWN"
+      ]
+    },
+    {
+      "name": "Weather alerts interest",
+      "type": "list",
+      "property": "weather_alerts_interest",
+      "base": "weather_alerts_interest",
+      "endpoint": null,
+      "description": "NOAA/SAME event codes that should trigger the Halo+ speaker.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Weather location",
+      "type": "text",
+      "property": "weather_location",
+      "base": "weather_location",
+      "endpoint": null,
+      "description": "SAME location code (000000-999999) announced by the weather radio.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Weather station",
+      "type": "numeric",
+      "property": "weather_station",
+      "base": "weather_station",
+      "endpoint": null,
+      "description": "Weather radio preset (1-7).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 7
+    },
+    {
+      "name": "Weather frequency",
+      "type": "text",
+      "property": "weather_frequency",
+      "base": "weather_frequency",
+      "endpoint": null,
+      "description": "Frequency of the selected weather radio preset.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Weather playing state",
+      "type": "enum",
+      "property": "weather_playing_state",
+      "base": "weather_playing_state",
+      "endpoint": null,
+      "description": "Current playback state of the weather radio.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "quiet",
+        "playing"
+      ]
+    },
+    {
+      "name": "Weather playback",
+      "type": "enum",
+      "property": "weather_playback",
+      "base": "weather_playback",
+      "endpoint": null,
+      "description": "Start or stop the weather radio audio.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "play",
+        "stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

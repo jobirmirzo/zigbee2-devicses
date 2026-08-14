@@ -1,0 +1,49 @@
+{
+  "model": "PF-PM02D-TYZ",
+  "file": "PF-PM02D-TYZ.md",
+  "vendor": "IOTPerfect",
+  "description": "Smart water/gas valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/PF-PM02D-TYZ.png",
+  "added_at": "2021-08-17T16:57:14Z",
+  "exposes_summary": "switch (state), fault",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Fault",
+      "type": "binary",
+      "property": "fault",
+      "base": "fault",
+      "endpoint": null,
+      "description": "Indicates whether a fault was detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

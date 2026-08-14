@@ -1,0 +1,91 @@
+{
+  "model": "SA12IZL",
+  "file": "SA12IZL.md",
+  "vendor": "Tuya",
+  "description": "Smart smoke alarm",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SA12IZL.png",
+  "added_at": "2022-09-30T20:52:51",
+  "exposes_summary": "battery, smoke, battery_level, alarm, silence_siren",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Smoke alarm status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery level",
+      "type": "enum",
+      "property": "battery_level",
+      "base": "battery_level",
+      "endpoint": null,
+      "description": "Battery level state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "middle",
+        "high"
+      ]
+    },
+    {
+      "name": "Alarm",
+      "type": "binary",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Enable the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Silence siren",
+      "type": "binary",
+      "property": "silence_siren",
+      "base": "silence_siren",
+      "endpoint": null,
+      "description": "Silence the siren.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,63 @@
+{
+  "model": "TS0501B_dimmer_2",
+  "file": "TS0501B_dimmer_2.md",
+  "vendor": "Tuya",
+  "description": "Zigbee dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0501B_dimmer_2.png",
+  "added_at": "2024-06-30T19:12:33",
+  "exposes_summary": "light (state, brightness, min_brightness), do_not_disturb",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "min_brightness",
+          "base": "min_brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Do not disturb",
+      "type": "binary",
+      "property": "do_not_disturb",
+      "base": "do_not_disturb",
+      "endpoint": null,
+      "description": "Controls state after power outage: false = on, true = restore previous state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

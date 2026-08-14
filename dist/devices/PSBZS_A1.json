@@ -1,0 +1,453 @@
+{
+  "model": "PSBZS A1",
+  "file": "PSBZS_A1.md",
+  "vendor": "Lidl",
+  "description": "Parkside smart watering timer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/PSBZS-A1.png",
+  "added_at": "2021-07-01T18:17:29Z",
+  "exposes_summary": "battery, switch (state), timer, time_left, frost_lock, reset_frost_lock, schedule_mode, schedule_periodic, schedule_weekday, schedule_slot_1, schedule_slot_2, schedule_slot_3, schedule_slot_4, schedule_slot_5, schedule_slot_6",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Timer",
+      "type": "numeric",
+      "property": "timer",
+      "base": "timer",
+      "endpoint": null,
+      "description": "Auto off after specific time for manual watering..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 599,
+      "unit": "min"
+    },
+    {
+      "name": "Time left",
+      "type": "numeric",
+      "property": "time_left",
+      "base": "time_left",
+      "endpoint": null,
+      "description": "Remaining time until the watering turns off..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "min"
+    },
+    {
+      "name": "Frost lock",
+      "type": "binary",
+      "property": "frost_lock",
+      "base": "frost_lock",
+      "endpoint": null,
+      "description": "Indicates if the frost guard is currently active. If the temperature drops below 5° C, device activates frost guard and disables irrigation. You need to reset the frost guard to activate irrigation again. Note: There is no way to enable frost guard manually..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Reset frost lock",
+      "type": "enum",
+      "property": "reset_frost_lock",
+      "base": "reset_frost_lock",
+      "endpoint": null,
+      "description": "Resets frost lock to make the device workable again..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "RESET"
+      ]
+    },
+    {
+      "name": "Schedule mode",
+      "type": "enum",
+      "property": "schedule_mode",
+      "base": "schedule_mode",
+      "endpoint": null,
+      "description": "Scheduling mode that is currently in use..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "OFF",
+        "WEEKDAY",
+        "PERIODIC"
+      ]
+    },
+    {
+      "name": "Schedule periodic",
+      "type": "numeric",
+      "property": "schedule_periodic",
+      "base": "schedule_periodic",
+      "endpoint": null,
+      "description": "Watering by periodic interval: Irrigate every n days.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 7,
+      "unit": "day"
+    },
+    {
+      "name": "Schedule weekday",
+      "type": "composite",
+      "property": "schedule_weekday",
+      "base": "schedule_weekday",
+      "endpoint": null,
+      "description": "Watering by weekday: Irrigate individually for each day..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": []
+    },
+    {
+      "name": "Schedule slot 1",
+      "type": "composite",
+      "property": "schedule_slot_1",
+      "base": "schedule_slot_1",
+      "endpoint": null,
+      "description": "Watering time slot 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "state",
+          "type": "binary",
+          "description": "On/off state of the time slot",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "start_hour",
+          "type": "numeric",
+          "description": "Starting time (hour) max value is 23, unit is h"
+        },
+        {
+          "property": "start_minute",
+          "type": "numeric",
+          "description": "Starting time (minute) max value is 59, unit is min"
+        },
+        {
+          "property": "timer",
+          "type": "numeric",
+          "description": "Auto off after specific time for scheduled watering. min value is 1, max value is 599, unit is min"
+        },
+        {
+          "property": "pause",
+          "type": "numeric",
+          "description": "Pause after each iteration. max value is 599, unit is min"
+        },
+        {
+          "property": "iterations",
+          "type": "numeric",
+          "description": "Number of watering iterations. Works only if there is a pause. min value is 1, max value is 9"
+        }
+      ]
+    },
+    {
+      "name": "Schedule slot 2",
+      "type": "composite",
+      "property": "schedule_slot_2",
+      "base": "schedule_slot_2",
+      "endpoint": null,
+      "description": "Watering time slot 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "state",
+          "type": "binary",
+          "description": "On/off state of the time slot",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "start_hour",
+          "type": "numeric",
+          "description": "Starting time (hour) max value is 23, unit is h"
+        },
+        {
+          "property": "start_minute",
+          "type": "numeric",
+          "description": "Starting time (minute) max value is 59, unit is min"
+        },
+        {
+          "property": "timer",
+          "type": "numeric",
+          "description": "Auto off after specific time for scheduled watering. min value is 1, max value is 599, unit is min"
+        },
+        {
+          "property": "pause",
+          "type": "numeric",
+          "description": "Pause after each iteration. max value is 599, unit is min"
+        },
+        {
+          "property": "iterations",
+          "type": "numeric",
+          "description": "Number of watering iterations. Works only if there is a pause. min value is 1, max value is 9"
+        }
+      ]
+    },
+    {
+      "name": "Schedule slot 3",
+      "type": "composite",
+      "property": "schedule_slot_3",
+      "base": "schedule_slot_3",
+      "endpoint": null,
+      "description": "Watering time slot 3.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "state",
+          "type": "binary",
+          "description": "On/off state of the time slot",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "start_hour",
+          "type": "numeric",
+          "description": "Starting time (hour) max value is 23, unit is h"
+        },
+        {
+          "property": "start_minute",
+          "type": "numeric",
+          "description": "Starting time (minute) max value is 59, unit is min"
+        },
+        {
+          "property": "timer",
+          "type": "numeric",
+          "description": "Auto off after specific time for scheduled watering. min value is 1, max value is 599, unit is min"
+        },
+        {
+          "property": "pause",
+          "type": "numeric",
+          "description": "Pause after each iteration. max value is 599, unit is min"
+        },
+        {
+          "property": "iterations",
+          "type": "numeric",
+          "description": "Number of watering iterations. Works only if there is a pause. min value is 1, max value is 9"
+        }
+      ]
+    },
+    {
+      "name": "Schedule slot 4",
+      "type": "composite",
+      "property": "schedule_slot_4",
+      "base": "schedule_slot_4",
+      "endpoint": null,
+      "description": "Watering time slot 4.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "state",
+          "type": "binary",
+          "description": "On/off state of the time slot",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "start_hour",
+          "type": "numeric",
+          "description": "Starting time (hour) max value is 23, unit is h"
+        },
+        {
+          "property": "start_minute",
+          "type": "numeric",
+          "description": "Starting time (minute) max value is 59, unit is min"
+        },
+        {
+          "property": "timer",
+          "type": "numeric",
+          "description": "Auto off after specific time for scheduled watering. min value is 1, max value is 599, unit is min"
+        },
+        {
+          "property": "pause",
+          "type": "numeric",
+          "description": "Pause after each iteration. max value is 599, unit is min"
+        },
+        {
+          "property": "iterations",
+          "type": "numeric",
+          "description": "Number of watering iterations. Works only if there is a pause. min value is 1, max value is 9"
+        }
+      ]
+    },
+    {
+      "name": "Schedule slot 5",
+      "type": "composite",
+      "property": "schedule_slot_5",
+      "base": "schedule_slot_5",
+      "endpoint": null,
+      "description": "Watering time slot 5.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "state",
+          "type": "binary",
+          "description": "On/off state of the time slot",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "start_hour",
+          "type": "numeric",
+          "description": "Starting time (hour) max value is 23, unit is h"
+        },
+        {
+          "property": "start_minute",
+          "type": "numeric",
+          "description": "Starting time (minute) max value is 59, unit is min"
+        },
+        {
+          "property": "timer",
+          "type": "numeric",
+          "description": "Auto off after specific time for scheduled watering. min value is 1, max value is 599, unit is min"
+        },
+        {
+          "property": "pause",
+          "type": "numeric",
+          "description": "Pause after each iteration. max value is 599, unit is min"
+        },
+        {
+          "property": "iterations",
+          "type": "numeric",
+          "description": "Number of watering iterations. Works only if there is a pause. min value is 1, max value is 9"
+        }
+      ]
+    },
+    {
+      "name": "Schedule slot 6",
+      "type": "composite",
+      "property": "schedule_slot_6",
+      "base": "schedule_slot_6",
+      "endpoint": null,
+      "description": "Watering time slot 6.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "state",
+          "type": "binary",
+          "description": "On/off state of the time slot",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "start_hour",
+          "type": "numeric",
+          "description": "Starting time (hour) max value is 23, unit is h"
+        },
+        {
+          "property": "start_minute",
+          "type": "numeric",
+          "description": "Starting time (minute) max value is 59, unit is min"
+        },
+        {
+          "property": "timer",
+          "type": "numeric",
+          "description": "Auto off after specific time for scheduled watering. min value is 1, max value is 599, unit is min"
+        },
+        {
+          "property": "pause",
+          "type": "numeric",
+          "description": "Pause after each iteration. max value is 599, unit is min"
+        },
+        {
+          "property": "iterations",
+          "type": "numeric",
+          "description": "Number of watering iterations. Works only if there is a pause. min value is 1, max value is 9"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

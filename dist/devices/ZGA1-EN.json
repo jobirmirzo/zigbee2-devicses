@@ -1,0 +1,72 @@
+{
+  "model": "ZGA1-EN",
+  "file": "ZGA1-EN.md",
+  "vendor": "IMOU",
+  "description": "Smart gas detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZGA1-EN.png",
+  "added_at": "2025-05-01T17:59:08",
+  "exposes_summary": "gas_alarm_1, gas_alarm_2, tamper, test",
+  "exposes": [
+    {
+      "name": "Gas alarm 1",
+      "type": "binary",
+      "property": "gas_alarm_1",
+      "base": "gas_alarm_1",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas (alarm_1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Gas alarm 2",
+      "type": "binary",
+      "property": "gas_alarm_2",
+      "base": "gas_alarm_2",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas (alarm_2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Test",
+      "type": "binary",
+      "property": "test",
+      "base": "test",
+      "endpoint": null,
+      "description": "Indicates whether the device is currently performing a test.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,355 @@
+{
+  "model": "GR-3-ZB-S",
+  "file": "GR-3-ZB-S.md",
+  "vendor": "ONOKOM",
+  "description": "Adapter for control of semi-industrial and multi-split systems GREE",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GR-3-ZB-S.png",
+  "added_at": "2025-09-01T18:20:17",
+  "exposes_summary": "ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, outdoor_air_temperature, zb_fan_speed, vertical_vanes, horizontal_vanes, fan_speed, smart_fan_speed, vanes_swing, status_led, quiet_mode, eco_mode, turbo_mode, sleep_mode, ionization, self_cleaning, indoor_heat_exchanger_temperature",
+  "exposes": [
+    {
+      "name": "Ac connected",
+      "type": "enum",
+      "property": "ac_connected",
+      "base": "ac_connected",
+      "endpoint": null,
+      "description": "AC connected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "disconnected",
+        "invalid_data_recieved",
+        "connected_with_issues",
+        "connected"
+      ]
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Current temperature",
+      "type": "numeric",
+      "property": "current_temperature",
+      "base": "current_temperature",
+      "endpoint": null,
+      "description": "Indoor air temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Target temperature",
+      "type": "numeric",
+      "property": "target_temperature",
+      "base": "target_temperature",
+      "endpoint": null,
+      "description": "Target temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 16,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "System mode",
+      "type": "enum",
+      "property": "system_mode",
+      "base": "system_mode",
+      "endpoint": null,
+      "description": "Active mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "auto",
+        "cool",
+        "heat",
+        "fan_only",
+        "dry"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "heat",
+        "cool",
+        "auto",
+        "dry",
+        "fan_only"
+      ]
+    },
+    {
+      "name": "Outdoor air temperature",
+      "type": "numeric",
+      "property": "outdoor_air_temperature",
+      "base": "outdoor_air_temperature",
+      "endpoint": null,
+      "description": "Outdoor air temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Zb fan speed",
+      "type": "numeric",
+      "property": "zb_fan_speed",
+      "base": "zb_fan_speed",
+      "endpoint": null,
+      "description": "Fan speed modes: Auto(5), Low(1), Medium(2), Maximum(3).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 5
+    },
+    {
+      "name": "Vertical vanes",
+      "type": "numeric",
+      "property": "vertical_vanes",
+      "base": "vertical_vanes",
+      "endpoint": null,
+      "description": "Vertical vanes: Stopped(0), Swing(1), Leftmost position(2), Rightmost position(6).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 6
+    },
+    {
+      "name": "Horizontal vanes",
+      "type": "numeric",
+      "property": "horizontal_vanes",
+      "base": "horizontal_vanes",
+      "endpoint": null,
+      "description": "Horizontal vanes: Stopped(0), Swing(1), Lowest postion(2), Highest position(6).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 6
+    },
+    {
+      "name": "Fan speed",
+      "type": "numeric",
+      "property": "fan_speed",
+      "base": "fan_speed",
+      "endpoint": null,
+      "description": "Fan speed: Auto(0), First(1) - Maximum(5).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5
+    },
+    {
+      "name": "Smart fan speed",
+      "type": "numeric",
+      "property": "smart_fan_speed",
+      "base": "smart_fan_speed",
+      "endpoint": null,
+      "description": "Smart fan speed: Auto (0), Quiet mode (1), First (2) ... Maximum (6), Turbo(7).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 7
+    },
+    {
+      "name": "Vanes swing",
+      "type": "numeric",
+      "property": "vanes_swing",
+      "base": "vanes_swing",
+      "endpoint": null,
+      "description": "Vanes swing: Stopped(0), Horizontal and vertical swing(1), Horizontal swing(2), Vertical swing(3).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3
+    },
+    {
+      "name": "Status led",
+      "type": "enum",
+      "property": "status_led",
+      "base": "status_led",
+      "endpoint": null,
+      "description": "Status LED.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "normal_mode",
+        "disabled_if_no_errors",
+        "disabled_untill_reboot",
+        "always_disabled",
+        "green_untill_reboot",
+        "red_untill_reboot"
+      ]
+    },
+    {
+      "name": "Quiet mode",
+      "type": "binary",
+      "property": "quiet_mode",
+      "base": "quiet_mode",
+      "endpoint": null,
+      "description": "Quiet mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Eco mode",
+      "type": "binary",
+      "property": "eco_mode",
+      "base": "eco_mode",
+      "endpoint": null,
+      "description": "Eco mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Turbo mode",
+      "type": "binary",
+      "property": "turbo_mode",
+      "base": "turbo_mode",
+      "endpoint": null,
+      "description": "Turbo mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Sleep mode",
+      "type": "binary",
+      "property": "sleep_mode",
+      "base": "sleep_mode",
+      "endpoint": null,
+      "description": "Sleep mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Ionization",
+      "type": "binary",
+      "property": "ionization",
+      "base": "ionization",
+      "endpoint": null,
+      "description": "Ionization.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Self cleaning",
+      "type": "binary",
+      "property": "self_cleaning",
+      "base": "self_cleaning",
+      "endpoint": null,
+      "description": "Self cleaning.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Indoor heat exchanger temperature",
+      "type": "numeric",
+      "property": "indoor_heat_exchanger_temperature",
+      "base": "indoor_heat_exchanger_temperature",
+      "endpoint": null,
+      "description": "Indoor heat exchanger temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

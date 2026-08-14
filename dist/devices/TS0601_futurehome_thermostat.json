@@ -1,0 +1,177 @@
+{
+  "model": "TS0601_futurehome_thermostat",
+  "file": "TS0601_futurehome_thermostat.md",
+  "vendor": "Futurehome",
+  "description": "Thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_futurehome_thermostat.png",
+  "added_at": "2023-11-30T19:41:12",
+  "exposes_summary": "climate (system_mode, preset, local_temperature, local_temperature_calibration, running_state, current_heating_setpoint), sensor, local_temperature_floor, child_lock, switch (state), energy, hysteresis, max_temperature_protection",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": false
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "user",
+            "home",
+            "away",
+            "auto"
+          ],
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor",
+      "base": "sensor",
+      "endpoint": null,
+      "description": "Max guard. Floor sensor must be installed. The thermostat will regulate according to the room sensor, but interrupt heating if the floor sensor exceeds the maximum guard temperature. Standard is 27°C There is also a maximum guard when the thermostat is set to floor sensor. The thermostat regulates according to the floor sensor, but will interrupt heating if the floor sensor exceeds the maximum guard temperature. Standard is 27°C..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "air_sensor",
+        "floor_sensor",
+        "max_guard"
+      ]
+    },
+    {
+      "name": "Local temperature floor",
+      "type": "numeric",
+      "property": "local_temperature_floor",
+      "base": "local_temperature_floor",
+      "endpoint": null,
+      "description": "Current temperature measured on the external sensor (floor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Window detection",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "window_detection",
+          "base": "window_detection",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Hysteresis",
+      "type": "numeric",
+      "property": "hysteresis",
+      "base": "hysteresis",
+      "endpoint": null,
+      "description": "The offset from the target temperature in which the temperature has to change for the heating state to change. This is to prevent erratically turning on/off when the temperature is close to the target..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 9,
+      "unit": "°C"
+    },
+    {
+      "name": "Max temperature protection",
+      "type": "numeric",
+      "property": "max_temperature_protection",
+      "base": "max_temperature_protection",
+      "endpoint": null,
+      "description": "Max guarding temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 20,
+      "value_max": 95,
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,236 @@
+{
+  "model": "THERM_SLACKY_DIY_R0A",
+  "file": "THERM_SLACKY_DIY_R0A.md",
+  "vendor": "Slacky-DIY",
+  "description": "Tuya Thermostat for Floor Heating with custom Firmware",
+  "image": "https://www.zigbee2mqtt.io/images/devices/THERM_SLACKY_DIY_R0A.png",
+  "added_at": "2025-10-31T19:10:29",
+  "exposes_summary": "child_lock, programming_operation_mode, sensor, deadzone_temperature, min_heat_setpoint_limit, max_heat_setpoint_limit, heat_protect, eco_mode, climate (local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode, running_state, schedule), schedule_monday, schedule_saturday, schedule_sunday",
+  "exposes": [
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Programming operation mode",
+      "type": "enum",
+      "property": "programming_operation_mode",
+      "base": "programming_operation_mode",
+      "endpoint": null,
+      "description": "Setpoint or Schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "setpoint",
+        "schedule"
+      ]
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor",
+      "base": "sensor",
+      "endpoint": null,
+      "description": "Select temperature sensor to use.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Inner (IN)",
+        "All (AL)",
+        "Outer (OU)"
+      ]
+    },
+    {
+      "name": "Deadzone temperature",
+      "type": "numeric",
+      "property": "deadzone_temperature",
+      "base": "deadzone_temperature",
+      "endpoint": null,
+      "description": "The delta between local_temperature and current_heating_setpoint to trigger activity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 5,
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": null,
+      "description": "Minimum Heating set point limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 20,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": null,
+      "description": "Maximum Heating set point limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 20,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Heat protect",
+      "type": "numeric",
+      "property": "heat_protect",
+      "base": "heat_protect",
+      "endpoint": null,
+      "description": "Protection against maximum heating temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 25,
+      "value_max": 70,
+      "unit": "°C"
+    },
+    {
+      "name": "Eco mode",
+      "type": "binary",
+      "property": "eco_mode",
+      "base": "eco_mode",
+      "endpoint": null,
+      "description": "On/Off Eco Mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "On",
+      "value_off": "Off"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 1,
+          "value_max": 50,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        },
+        {
+          "property": "schedule",
+          "base": "schedule",
+          "value_min": 1,
+          "value_max": 50,
+          "values": [
+            "off",
+            "heat"
+          ],
+          "unit": "°C",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Schedule monday",
+      "type": "text",
+      "property": "schedule_monday",
+      "base": "schedule_monday",
+      "endpoint": null,
+      "description": "Schedule for the working week.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Schedule saturday",
+      "type": "text",
+      "property": "schedule_saturday",
+      "base": "schedule_saturday",
+      "endpoint": null,
+      "description": "Saturday's schedule.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Schedule sunday",
+      "type": "text",
+      "property": "schedule_sunday",
+      "base": "schedule_sunday",
+      "endpoint": null,
+      "description": "Sunday's schedule.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

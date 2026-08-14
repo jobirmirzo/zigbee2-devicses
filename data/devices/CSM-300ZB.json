@@ -1,0 +1,75 @@
+{
+  "model": "CSM-300ZB",
+  "file": "CSM-300ZB.md",
+  "vendor": "ShinaSystem",
+  "description": "SiHAS multipurpose sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CSM-300ZB.png",
+  "added_at": "2021-10-30T12:58:50",
+  "exposes_summary": "battery, voltage, status, people",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Status",
+      "type": "enum",
+      "property": "status",
+      "base": "status",
+      "endpoint": null,
+      "description": "Currently status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "idle",
+        "in",
+        "out"
+      ]
+    },
+    {
+      "name": "People",
+      "type": "numeric",
+      "property": "people",
+      "base": "people",
+      "endpoint": null,
+      "description": "People count.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 50
+    }
+  ],
+  "warnings": []
+}

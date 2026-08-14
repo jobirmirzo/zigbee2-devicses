@@ -1,0 +1,122 @@
+{
+  "model": "TLC2206",
+  "file": "TLC2206.md",
+  "vendor": "Tuya",
+  "description": "Water level sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TLC2206.png",
+  "added_at": "2025-05-01T17:56:32",
+  "exposes_summary": "liquid_state, liquid_level_percent, liquid_depth, min_set, max_set, liquid_depth_max, installation_height",
+  "exposes": [
+    {
+      "name": "Liquid state",
+      "type": "enum",
+      "property": "liquid_state",
+      "base": "liquid_state",
+      "endpoint": null,
+      "description": "Liquid level status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "normal",
+        "high"
+      ]
+    },
+    {
+      "name": "Liquid level percent",
+      "type": "numeric",
+      "property": "liquid_level_percent",
+      "base": "liquid_level_percent",
+      "endpoint": null,
+      "description": "Liquid level ratio.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Liquid depth",
+      "type": "numeric",
+      "property": "liquid_depth",
+      "base": "liquid_depth",
+      "endpoint": null,
+      "description": "Liquid depth.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Min set",
+      "type": "numeric",
+      "property": "min_set",
+      "base": "min_set",
+      "endpoint": null,
+      "description": "Liquid minimum percentage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Max set",
+      "type": "numeric",
+      "property": "max_set",
+      "base": "max_set",
+      "endpoint": null,
+      "description": "Liquid maximum percentage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Liquid depth max",
+      "type": "numeric",
+      "property": "liquid_depth_max",
+      "base": "liquid_depth_max",
+      "endpoint": null,
+      "description": "Distance from sensor to liquid surface.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 2,
+      "unit": "m"
+    },
+    {
+      "name": "Installation height",
+      "type": "numeric",
+      "property": "installation_height",
+      "base": "installation_height",
+      "endpoint": null,
+      "description": "Distance from sensor to bottom of the tank.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 3,
+      "unit": "m"
+    }
+  ],
+  "warnings": []
+}

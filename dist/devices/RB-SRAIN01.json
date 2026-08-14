@@ -1,0 +1,114 @@
+{
+  "model": "RB-SRAIN01",
+  "file": "RB-SRAIN01.md",
+  "vendor": "Tuya",
+  "description": "Solar rain sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/RB-SRAIN01.png",
+  "added_at": "2024-09-01T12:39:25",
+  "exposes_summary": "illuminance_raw, illuminance_average_20min, illuminance_maximum_today, cleaning_reminder, rain_intensity, rain, battery",
+  "exposes": [
+    {
+      "name": "Illuminance raw",
+      "type": "numeric",
+      "property": "illuminance_raw",
+      "base": "illuminance_raw",
+      "endpoint": null,
+      "description": "Raw measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Illuminance average 20min",
+      "type": "numeric",
+      "property": "illuminance_average_20min",
+      "base": "illuminance_average_20min",
+      "endpoint": null,
+      "description": "Illuminance average for the last 20 minutes.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Illuminance maximum today",
+      "type": "numeric",
+      "property": "illuminance_maximum_today",
+      "base": "illuminance_maximum_today",
+      "endpoint": null,
+      "description": "Illuminance maximum for the last 24 hours.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Cleaning reminder",
+      "type": "binary",
+      "property": "cleaning_reminder",
+      "base": "cleaning_reminder",
+      "endpoint": null,
+      "description": "Cleaning reminder.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Rain intensity",
+      "type": "numeric",
+      "property": "rain_intensity",
+      "base": "rain_intensity",
+      "endpoint": null,
+      "description": "Rainfall intensity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Rain",
+      "type": "binary",
+      "property": "rain",
+      "base": "rain",
+      "endpoint": null,
+      "description": "Indicates whether the device detected rainfall.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

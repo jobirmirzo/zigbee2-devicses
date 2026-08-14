@@ -1,0 +1,99 @@
+{
+  "model": "TS0004_fan_light_switch",
+  "file": "TS0004_fan_light_switch.md",
+  "vendor": "Tuya",
+  "description": "Fan and light controller with 3 speeds",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0004_fan_light_switch.png",
+  "added_at": "2025-11-30T20:32:44",
+  "exposes_summary": "switch (state), backlight_mode",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "lights",
+      "features": [
+        {
+          "property": "state_lights",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "low",
+      "features": [
+        {
+          "property": "state_low",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "medium",
+      "features": [
+        {
+          "property": "state_medium",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "high",
+      "features": [
+        {
+          "property": "state_high",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Backlight mode",
+      "type": "enum",
+      "property": "backlight_mode",
+      "base": "backlight_mode",
+      "endpoint": null,
+      "description": "Backlight color mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "red_when_on",
+        "pink_when_on",
+        "red_on_blue_off",
+        "pink_on_blue_off"
+      ]
+    }
+  ],
+  "warnings": []
+}

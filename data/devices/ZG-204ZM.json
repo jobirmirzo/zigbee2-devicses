@@ -1,0 +1,171 @@
+{
+  "model": "ZG-204ZM",
+  "file": "ZG-204ZM.md",
+  "vendor": "Tuya",
+  "description": "PIR 24Ghz human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-204ZM.png",
+  "added_at": "2024-03-31T18:43:56",
+  "exposes_summary": "presence, motion_state, battery, fading_time, static_detection_distance, static_detection_sensitivity, indicator, motion_detection_mode, motion_detection_sensitivity, illuminance",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Motion state",
+      "type": "enum",
+      "property": "motion_state",
+      "base": "motion_state",
+      "endpoint": null,
+      "description": "Motion state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "large",
+        "small",
+        "static"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Fading time",
+      "type": "numeric",
+      "property": "fading_time",
+      "base": "fading_time",
+      "endpoint": null,
+      "description": "Presence keep time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 28800,
+      "unit": "s"
+    },
+    {
+      "name": "Static detection distance",
+      "type": "numeric",
+      "property": "static_detection_distance",
+      "base": "static_detection_distance",
+      "endpoint": null,
+      "description": "Static detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 6,
+      "unit": "m"
+    },
+    {
+      "name": "Static detection sensitivity",
+      "type": "numeric",
+      "property": "static_detection_sensitivity",
+      "base": "static_detection_sensitivity",
+      "endpoint": null,
+      "description": "Static detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Indicator",
+      "type": "binary",
+      "property": "indicator",
+      "base": "indicator",
+      "endpoint": null,
+      "description": "LED indicator mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Motion detection mode",
+      "type": "enum",
+      "property": "motion_detection_mode",
+      "base": "motion_detection_mode",
+      "endpoint": null,
+      "description": "Motion detection mode (Firmware version>=0122052017).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "only_pir",
+        "pir_and_radar",
+        "only_radar"
+      ]
+    },
+    {
+      "name": "Motion detection sensitivity",
+      "type": "numeric",
+      "property": "motion_detection_sensitivity",
+      "base": "motion_detection_sensitivity",
+      "endpoint": null,
+      "description": "Motion detection sensitivity (Firmware version>=0122052017).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

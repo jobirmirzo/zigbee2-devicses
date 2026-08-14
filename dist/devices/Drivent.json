@@ -1,0 +1,201 @@
+{
+  "model": "Drivent",
+  "file": "Drivent.md",
+  "vendor": "Sprut.device",
+  "description": "Drivent window drive",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Drivent.png",
+  "added_at": "2025-09-01T18:20:17",
+  "exposes_summary": "cover (state, position), drive_state, blocked_jam, blocked_many, reset_block, speed, open_limit, close_limit, reset_limit, calibrate, wifi",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Drive state",
+      "type": "enum",
+      "property": "drive_state",
+      "base": "drive_state",
+      "endpoint": null,
+      "description": "Drive state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "closing",
+        "opening",
+        "stopped"
+      ]
+    },
+    {
+      "name": "Blocked jam",
+      "type": "binary",
+      "property": "blocked_jam",
+      "base": "blocked_jam",
+      "endpoint": null,
+      "description": "Blocked after 5 jam.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Blocked many",
+      "type": "binary",
+      "property": "blocked_many",
+      "base": "blocked_many",
+      "endpoint": null,
+      "description": "Blocked after 45 attempts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Reset block",
+      "type": "enum",
+      "property": "reset_block",
+      "base": "reset_block",
+      "endpoint": null,
+      "description": "Reset block.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SEND"
+      ]
+    },
+    {
+      "name": "Speed",
+      "type": "numeric",
+      "property": "speed",
+      "base": "speed",
+      "endpoint": null,
+      "description": "Speed.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Open limit",
+      "type": "enum",
+      "property": "open_limit",
+      "base": "open_limit",
+      "endpoint": null,
+      "description": "Set open limit.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SEND"
+      ]
+    },
+    {
+      "name": "Close limit",
+      "type": "enum",
+      "property": "close_limit",
+      "base": "close_limit",
+      "endpoint": null,
+      "description": "Set close limit.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SEND"
+      ]
+    },
+    {
+      "name": "Reset limit",
+      "type": "enum",
+      "property": "reset_limit",
+      "base": "reset_limit",
+      "endpoint": null,
+      "description": "Reset limits.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SEND"
+      ]
+    },
+    {
+      "name": "Calibrate",
+      "type": "binary",
+      "property": "calibrate",
+      "base": "calibrate",
+      "endpoint": null,
+      "description": "Calibration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Wifi",
+      "type": "binary",
+      "property": "wifi",
+      "base": "wifi",
+      "endpoint": null,
+      "description": "Enable Wifi AP.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

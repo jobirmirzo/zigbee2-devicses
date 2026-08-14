@@ -1,0 +1,25 @@
+{
+  "model": "A6121",
+  "file": "A6121.md",
+  "vendor": "Xiaomi",
+  "description": "Vima Smart Lock",
+  "image": "https://www.zigbee2mqtt.io/images/devices/A6121.png",
+  "added_at": "2019-07-22T20:08:17Z",
+  "exposes_summary": "inserted",
+  "exposes": [
+    {
+      "name": "Inserted",
+      "type": "text",
+      "property": "inserted",
+      "base": "inserted",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

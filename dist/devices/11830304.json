@@ -1,0 +1,123 @@
+{
+  "model": "11830304",
+  "file": "11830304.md",
+  "vendor": "Lonsonho",
+  "description": "Curtain switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/11830304.png",
+  "added_at": "2020-09-30T20:52:56Z",
+  "exposes_summary": "cover (state, position), moving, calibration, motor_reversal, backlight_mode, calibration_time",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Moving",
+      "type": "enum",
+      "property": "moving",
+      "base": "moving",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "UP",
+        "STOP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Calibration",
+      "type": "binary",
+      "property": "calibration",
+      "base": "calibration",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Motor reversal",
+      "type": "binary",
+      "property": "motor_reversal",
+      "base": "motor_reversal",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Backlight mode",
+      "type": "enum",
+      "property": "backlight_mode",
+      "base": "backlight_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ]
+    },
+    {
+      "name": "Calibration time",
+      "type": "numeric",
+      "property": "calibration_time",
+      "base": "calibration_time",
+      "endpoint": null,
+      "description": "Calibration time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

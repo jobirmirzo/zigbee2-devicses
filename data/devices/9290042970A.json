@@ -1,0 +1,58 @@
+{
+  "model": "9290042970A",
+  "file": "9290042970A.md",
+  "vendor": "Philips",
+  "description": "Hue wired wall switch module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/9290042970A.png",
+  "added_at": "2026-06-30T19:08:31",
+  "exposes_summary": "device_mode, action",
+  "exposes": [
+    {
+      "name": "Device mode",
+      "type": "enum",
+      "property": "device_mode",
+      "base": "device_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "single_rocker",
+        "single_push_button",
+        "dual_rocker",
+        "dual_push_button"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "left_press",
+        "left_press_release",
+        "right_press",
+        "right_press_release",
+        "left_hold",
+        "left_hold_release",
+        "right_hold",
+        "right_hold_release",
+        "toggle",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

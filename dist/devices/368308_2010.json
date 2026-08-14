@@ -1,0 +1,3396 @@
+{
+  "model": "368308_2010",
+  "file": "368308_2010.md",
+  "vendor": "Lidl",
+  "description": "Silvercrest radiator valve with thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/368308_2010.png",
+  "added_at": "2021-11-30T20:10:17",
+  "exposes_summary": "child_lock, comfort_temperature, eco_temperature, voltage, current_heating_setpoint_auto, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, preset), detectwindow_temperature, detectwindow_timeminute, binary_one, binary_two, away_mode, away_setting, monday, tuesday, wednesday, thursday, friday, saturday, sunday",
+  "exposes": [
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Comfort temperature",
+      "type": "numeric",
+      "property": "comfort_temperature",
+      "base": "comfort_temperature",
+      "endpoint": null,
+      "description": "Comfort temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Eco temperature",
+      "type": "numeric",
+      "property": "eco_temperature",
+      "base": "eco_temperature",
+      "endpoint": null,
+      "description": "Eco temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Current heating setpoint auto",
+      "type": "numeric",
+      "property": "current_heating_setpoint_auto",
+      "base": "current_heating_setpoint_auto",
+      "endpoint": null,
+      "description": "Temperature setpoint automatic.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 29.5,
+      "unit": "°C"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 0.5,
+          "value_max": 29.5,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "auto"
+          ],
+          "readable": false
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "schedule",
+            "manual",
+            "holiday",
+            "boost"
+          ],
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Detectwindow temperature",
+      "type": "numeric",
+      "property": "detectwindow_temperature",
+      "base": "detectwindow_temperature",
+      "endpoint": null,
+      "description": "Open window detection temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -10,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Detectwindow timeminute",
+      "type": "numeric",
+      "property": "detectwindow_timeminute",
+      "base": "detectwindow_timeminute",
+      "endpoint": null,
+      "description": "Open window time in minute.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "min"
+    },
+    {
+      "name": "Binary one",
+      "type": "binary",
+      "property": "binary_one",
+      "base": "binary_one",
+      "endpoint": null,
+      "description": "Unknown binary one.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Binary two",
+      "type": "binary",
+      "property": "binary_two",
+      "base": "binary_two",
+      "endpoint": null,
+      "description": "Unknown binary two.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Away mode",
+      "type": "binary",
+      "property": "away_mode",
+      "base": "away_mode",
+      "endpoint": null,
+      "description": "Away mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Away setting",
+      "type": "composite",
+      "property": "away_setting",
+      "base": "away_setting",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "away_preset_days",
+          "type": "numeric",
+          "description": "Away preset days max value is 100"
+        },
+        {
+          "property": "away_preset_temperature",
+          "type": "numeric",
+          "description": "Away preset temperature min value is -10, max value is 35, unit is °C"
+        },
+        {
+          "property": "away_preset_year",
+          "type": "numeric",
+          "description": "Start away year 20xx unit is year"
+        },
+        {
+          "property": "away_preset_month",
+          "type": "numeric",
+          "description": "Start away month unit is month"
+        },
+        {
+          "property": "away_preset_day",
+          "type": "numeric",
+          "description": "Start away day unit is day"
+        },
+        {
+          "property": "away_preset_hour",
+          "type": "numeric",
+          "description": "Start away hours unit is hour"
+        },
+        {
+          "property": "away_preset_minute",
+          "type": "numeric",
+          "description": "Start away minutes unit is min"
+        }
+      ]
+    },
+    {
+      "name": "Monday",
+      "type": "composite",
+      "property": "monday",
+      "base": "monday",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "monday_temp_1",
+          "type": "numeric",
+          "description": "Temperature 1 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "monday_hour_1",
+          "type": "enum",
+          "description": "Hour TO for temp 1",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "monday_minute_1",
+          "type": "enum",
+          "description": "Minute TO for temp 1",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "monday_temp_2",
+          "type": "numeric",
+          "description": "Temperature 2 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "monday_hour_2",
+          "type": "enum",
+          "description": "Hour TO for temp 2",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "monday_minute_2",
+          "type": "enum",
+          "description": "Minute TO for temp 2",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "monday_temp_3",
+          "type": "numeric",
+          "description": "Temperature 3 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "monday_hour_3",
+          "type": "enum",
+          "description": "Hour TO for temp 3",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "monday_minute_3",
+          "type": "enum",
+          "description": "Minute TO for temp 3",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "monday_temp_4",
+          "type": "numeric",
+          "description": "Temperature 4 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "monday_hour_4",
+          "type": "enum",
+          "description": "Hour TO for temp 4",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "monday_minute_4",
+          "type": "enum",
+          "description": "Minute TO for temp 4",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "monday_temp_5",
+          "type": "numeric",
+          "description": "Temperature 5 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "monday_hour_5",
+          "type": "enum",
+          "description": "Hour TO for temp 5",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "monday_minute_5",
+          "type": "enum",
+          "description": "Minute TO for temp 5",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "monday_temp_6",
+          "type": "numeric",
+          "description": "Temperature 6 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "monday_hour_6",
+          "type": "enum",
+          "description": "Hour TO for temp 6",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "monday_minute_6",
+          "type": "enum",
+          "description": "Minute TO for temp 6",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "monday_temp_7",
+          "type": "numeric",
+          "description": "Temperature 7 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "monday_hour_7",
+          "type": "enum",
+          "description": "Hour TO for temp 7",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "monday_minute_7",
+          "type": "enum",
+          "description": "Minute TO for temp 7",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "monday_temp_8",
+          "type": "numeric",
+          "description": "Temperature 8 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "monday_hour_8",
+          "type": "enum",
+          "description": "Hour TO for temp 8",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "monday_minute_8",
+          "type": "enum",
+          "description": "Minute TO for temp 8",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "monday_temp_9",
+          "type": "numeric",
+          "description": "Temperature 9 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "monday_hour_9",
+          "type": "enum",
+          "description": "Hour TO for temp 9",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "monday_minute_9",
+          "type": "enum",
+          "description": "Minute TO for temp 9",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tuesday",
+      "type": "composite",
+      "property": "tuesday",
+      "base": "tuesday",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "tuesday_temp_1",
+          "type": "numeric",
+          "description": "Temperature 1 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "tuesday_hour_1",
+          "type": "enum",
+          "description": "Hour TO for temp 1",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "tuesday_minute_1",
+          "type": "enum",
+          "description": "Minute TO for temp 1",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "tuesday_temp_2",
+          "type": "numeric",
+          "description": "Temperature 2 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "tuesday_hour_2",
+          "type": "enum",
+          "description": "Hour TO for temp 2",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "tuesday_minute_2",
+          "type": "enum",
+          "description": "Minute TO for temp 2",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "tuesday_temp_3",
+          "type": "numeric",
+          "description": "Temperature 3 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "tuesday_hour_3",
+          "type": "enum",
+          "description": "Hour TO for temp 3",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "tuesday_minute_3",
+          "type": "enum",
+          "description": "Minute TO for temp 3",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "tuesday_temp_4",
+          "type": "numeric",
+          "description": "Temperature 4 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "tuesday_hour_4",
+          "type": "enum",
+          "description": "Hour TO for temp 4",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "tuesday_minute_4",
+          "type": "enum",
+          "description": "Minute TO for temp 4",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "tuesday_temp_5",
+          "type": "numeric",
+          "description": "Temperature 5 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "tuesday_hour_5",
+          "type": "enum",
+          "description": "Hour TO for temp 5",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "tuesday_minute_5",
+          "type": "enum",
+          "description": "Minute TO for temp 5",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "tuesday_temp_6",
+          "type": "numeric",
+          "description": "Temperature 6 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "tuesday_hour_6",
+          "type": "enum",
+          "description": "Hour TO for temp 6",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "tuesday_minute_6",
+          "type": "enum",
+          "description": "Minute TO for temp 6",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "tuesday_temp_7",
+          "type": "numeric",
+          "description": "Temperature 7 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "tuesday_hour_7",
+          "type": "enum",
+          "description": "Hour TO for temp 7",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "tuesday_minute_7",
+          "type": "enum",
+          "description": "Minute TO for temp 7",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "tuesday_temp_8",
+          "type": "numeric",
+          "description": "Temperature 8 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "tuesday_hour_8",
+          "type": "enum",
+          "description": "Hour TO for temp 8",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "tuesday_minute_8",
+          "type": "enum",
+          "description": "Minute TO for temp 8",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "tuesday_temp_9",
+          "type": "numeric",
+          "description": "Temperature 9 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "tuesday_hour_9",
+          "type": "enum",
+          "description": "Hour TO for temp 9",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "tuesday_minute_9",
+          "type": "enum",
+          "description": "Minute TO for temp 9",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wednesday",
+      "type": "composite",
+      "property": "wednesday",
+      "base": "wednesday",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "wednesday_temp_1",
+          "type": "numeric",
+          "description": "Temperature 1 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "wednesday_hour_1",
+          "type": "enum",
+          "description": "Hour TO for temp 1",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "wednesday_minute_1",
+          "type": "enum",
+          "description": "Minute TO for temp 1",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "wednesday_temp_2",
+          "type": "numeric",
+          "description": "Temperature 2 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "wednesday_hour_2",
+          "type": "enum",
+          "description": "Hour TO for temp 2",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "wednesday_minute_2",
+          "type": "enum",
+          "description": "Minute TO for temp 2",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "wednesday_temp_3",
+          "type": "numeric",
+          "description": "Temperature 3 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "wednesday_hour_3",
+          "type": "enum",
+          "description": "Hour TO for temp 3",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "wednesday_minute_3",
+          "type": "enum",
+          "description": "Minute TO for temp 3",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "wednesday_temp_4",
+          "type": "numeric",
+          "description": "Temperature 4 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "wednesday_hour_4",
+          "type": "enum",
+          "description": "Hour TO for temp 4",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "wednesday_minute_4",
+          "type": "enum",
+          "description": "Minute TO for temp 4",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "wednesday_temp_5",
+          "type": "numeric",
+          "description": "Temperature 5 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "wednesday_hour_5",
+          "type": "enum",
+          "description": "Hour TO for temp 5",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "wednesday_minute_5",
+          "type": "enum",
+          "description": "Minute TO for temp 5",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "wednesday_temp_6",
+          "type": "numeric",
+          "description": "Temperature 6 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "wednesday_hour_6",
+          "type": "enum",
+          "description": "Hour TO for temp 6",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "wednesday_minute_6",
+          "type": "enum",
+          "description": "Minute TO for temp 6",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "wednesday_temp_7",
+          "type": "numeric",
+          "description": "Temperature 7 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "wednesday_hour_7",
+          "type": "enum",
+          "description": "Hour TO for temp 7",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "wednesday_minute_7",
+          "type": "enum",
+          "description": "Minute TO for temp 7",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "wednesday_temp_8",
+          "type": "numeric",
+          "description": "Temperature 8 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "wednesday_hour_8",
+          "type": "enum",
+          "description": "Hour TO for temp 8",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "wednesday_minute_8",
+          "type": "enum",
+          "description": "Minute TO for temp 8",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "wednesday_temp_9",
+          "type": "numeric",
+          "description": "Temperature 9 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "wednesday_hour_9",
+          "type": "enum",
+          "description": "Hour TO for temp 9",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "wednesday_minute_9",
+          "type": "enum",
+          "description": "Minute TO for temp 9",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Thursday",
+      "type": "composite",
+      "property": "thursday",
+      "base": "thursday",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "thursday_temp_1",
+          "type": "numeric",
+          "description": "Temperature 1 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "thursday_hour_1",
+          "type": "enum",
+          "description": "Hour TO for temp 1",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "thursday_minute_1",
+          "type": "enum",
+          "description": "Minute TO for temp 1",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "thursday_temp_2",
+          "type": "numeric",
+          "description": "Temperature 2 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "thursday_hour_2",
+          "type": "enum",
+          "description": "Hour TO for temp 2",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "thursday_minute_2",
+          "type": "enum",
+          "description": "Minute TO for temp 2",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "thursday_temp_3",
+          "type": "numeric",
+          "description": "Temperature 3 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "thursday_hour_3",
+          "type": "enum",
+          "description": "Hour TO for temp 3",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "thursday_minute_3",
+          "type": "enum",
+          "description": "Minute TO for temp 3",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "thursday_temp_4",
+          "type": "numeric",
+          "description": "Temperature 4 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "thursday_hour_4",
+          "type": "enum",
+          "description": "Hour TO for temp 4",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "thursday_minute_4",
+          "type": "enum",
+          "description": "Minute TO for temp 4",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "thursday_temp_5",
+          "type": "numeric",
+          "description": "Temperature 5 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "thursday_hour_5",
+          "type": "enum",
+          "description": "Hour TO for temp 5",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "thursday_minute_5",
+          "type": "enum",
+          "description": "Minute TO for temp 5",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "thursday_temp_6",
+          "type": "numeric",
+          "description": "Temperature 6 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "thursday_hour_6",
+          "type": "enum",
+          "description": "Hour TO for temp 6",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "thursday_minute_6",
+          "type": "enum",
+          "description": "Minute TO for temp 6",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "thursday_temp_7",
+          "type": "numeric",
+          "description": "Temperature 7 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "thursday_hour_7",
+          "type": "enum",
+          "description": "Hour TO for temp 7",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "thursday_minute_7",
+          "type": "enum",
+          "description": "Minute TO for temp 7",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "thursday_temp_8",
+          "type": "numeric",
+          "description": "Temperature 8 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "thursday_hour_8",
+          "type": "enum",
+          "description": "Hour TO for temp 8",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "thursday_minute_8",
+          "type": "enum",
+          "description": "Minute TO for temp 8",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "thursday_temp_9",
+          "type": "numeric",
+          "description": "Temperature 9 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "thursday_hour_9",
+          "type": "enum",
+          "description": "Hour TO for temp 9",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "thursday_minute_9",
+          "type": "enum",
+          "description": "Minute TO for temp 9",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Friday",
+      "type": "composite",
+      "property": "friday",
+      "base": "friday",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "friday_temp_1",
+          "type": "numeric",
+          "description": "Temperature 1 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "friday_hour_1",
+          "type": "enum",
+          "description": "Hour TO for temp 1",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "friday_minute_1",
+          "type": "enum",
+          "description": "Minute TO for temp 1",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "friday_temp_2",
+          "type": "numeric",
+          "description": "Temperature 2 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "friday_hour_2",
+          "type": "enum",
+          "description": "Hour TO for temp 2",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "friday_minute_2",
+          "type": "enum",
+          "description": "Minute TO for temp 2",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "friday_temp_3",
+          "type": "numeric",
+          "description": "Temperature 3 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "friday_hour_3",
+          "type": "enum",
+          "description": "Hour TO for temp 3",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "friday_minute_3",
+          "type": "enum",
+          "description": "Minute TO for temp 3",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "friday_temp_4",
+          "type": "numeric",
+          "description": "Temperature 4 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "friday_hour_4",
+          "type": "enum",
+          "description": "Hour TO for temp 4",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "friday_minute_4",
+          "type": "enum",
+          "description": "Minute TO for temp 4",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "friday_temp_5",
+          "type": "numeric",
+          "description": "Temperature 5 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "friday_hour_5",
+          "type": "enum",
+          "description": "Hour TO for temp 5",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "friday_minute_5",
+          "type": "enum",
+          "description": "Minute TO for temp 5",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "friday_temp_6",
+          "type": "numeric",
+          "description": "Temperature 6 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "friday_hour_6",
+          "type": "enum",
+          "description": "Hour TO for temp 6",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "friday_minute_6",
+          "type": "enum",
+          "description": "Minute TO for temp 6",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "friday_temp_7",
+          "type": "numeric",
+          "description": "Temperature 7 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "friday_hour_7",
+          "type": "enum",
+          "description": "Hour TO for temp 7",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "friday_minute_7",
+          "type": "enum",
+          "description": "Minute TO for temp 7",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "friday_temp_8",
+          "type": "numeric",
+          "description": "Temperature 8 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "friday_hour_8",
+          "type": "enum",
+          "description": "Hour TO for temp 8",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "friday_minute_8",
+          "type": "enum",
+          "description": "Minute TO for temp 8",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "friday_temp_9",
+          "type": "numeric",
+          "description": "Temperature 9 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "friday_hour_9",
+          "type": "enum",
+          "description": "Hour TO for temp 9",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "friday_minute_9",
+          "type": "enum",
+          "description": "Minute TO for temp 9",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Saturday",
+      "type": "composite",
+      "property": "saturday",
+      "base": "saturday",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "saturday_temp_1",
+          "type": "numeric",
+          "description": "Temperature 1 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "saturday_hour_1",
+          "type": "enum",
+          "description": "Hour TO for temp 1",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "saturday_minute_1",
+          "type": "enum",
+          "description": "Minute TO for temp 1",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "saturday_temp_2",
+          "type": "numeric",
+          "description": "Temperature 2 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "saturday_hour_2",
+          "type": "enum",
+          "description": "Hour TO for temp 2",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "saturday_minute_2",
+          "type": "enum",
+          "description": "Minute TO for temp 2",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "saturday_temp_3",
+          "type": "numeric",
+          "description": "Temperature 3 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "saturday_hour_3",
+          "type": "enum",
+          "description": "Hour TO for temp 3",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "saturday_minute_3",
+          "type": "enum",
+          "description": "Minute TO for temp 3",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "saturday_temp_4",
+          "type": "numeric",
+          "description": "Temperature 4 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "saturday_hour_4",
+          "type": "enum",
+          "description": "Hour TO for temp 4",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "saturday_minute_4",
+          "type": "enum",
+          "description": "Minute TO for temp 4",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "saturday_temp_5",
+          "type": "numeric",
+          "description": "Temperature 5 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "saturday_hour_5",
+          "type": "enum",
+          "description": "Hour TO for temp 5",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "saturday_minute_5",
+          "type": "enum",
+          "description": "Minute TO for temp 5",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "saturday_temp_6",
+          "type": "numeric",
+          "description": "Temperature 6 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "saturday_hour_6",
+          "type": "enum",
+          "description": "Hour TO for temp 6",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "saturday_minute_6",
+          "type": "enum",
+          "description": "Minute TO for temp 6",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "saturday_temp_7",
+          "type": "numeric",
+          "description": "Temperature 7 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "saturday_hour_7",
+          "type": "enum",
+          "description": "Hour TO for temp 7",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "saturday_minute_7",
+          "type": "enum",
+          "description": "Minute TO for temp 7",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "saturday_temp_8",
+          "type": "numeric",
+          "description": "Temperature 8 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "saturday_hour_8",
+          "type": "enum",
+          "description": "Hour TO for temp 8",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "saturday_minute_8",
+          "type": "enum",
+          "description": "Minute TO for temp 8",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "saturday_temp_9",
+          "type": "numeric",
+          "description": "Temperature 9 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "saturday_hour_9",
+          "type": "enum",
+          "description": "Hour TO for temp 9",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "saturday_minute_9",
+          "type": "enum",
+          "description": "Minute TO for temp 9",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sunday",
+      "type": "composite",
+      "property": "sunday",
+      "base": "sunday",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "sunday_temp_1",
+          "type": "numeric",
+          "description": "Temperature 1 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "sunday_hour_1",
+          "type": "enum",
+          "description": "Hour TO for temp 1",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "sunday_minute_1",
+          "type": "enum",
+          "description": "Minute TO for temp 1",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "sunday_temp_2",
+          "type": "numeric",
+          "description": "Temperature 2 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "sunday_hour_2",
+          "type": "enum",
+          "description": "Hour TO for temp 2",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "sunday_minute_2",
+          "type": "enum",
+          "description": "Minute TO for temp 2",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "sunday_temp_3",
+          "type": "numeric",
+          "description": "Temperature 3 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "sunday_hour_3",
+          "type": "enum",
+          "description": "Hour TO for temp 3",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "sunday_minute_3",
+          "type": "enum",
+          "description": "Minute TO for temp 3",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "sunday_temp_4",
+          "type": "numeric",
+          "description": "Temperature 4 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "sunday_hour_4",
+          "type": "enum",
+          "description": "Hour TO for temp 4",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "sunday_minute_4",
+          "type": "enum",
+          "description": "Minute TO for temp 4",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "sunday_temp_5",
+          "type": "numeric",
+          "description": "Temperature 5 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "sunday_hour_5",
+          "type": "enum",
+          "description": "Hour TO for temp 5",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "sunday_minute_5",
+          "type": "enum",
+          "description": "Minute TO for temp 5",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "sunday_temp_6",
+          "type": "numeric",
+          "description": "Temperature 6 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "sunday_hour_6",
+          "type": "enum",
+          "description": "Hour TO for temp 6",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "sunday_minute_6",
+          "type": "enum",
+          "description": "Minute TO for temp 6",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "sunday_temp_7",
+          "type": "numeric",
+          "description": "Temperature 7 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "sunday_hour_7",
+          "type": "enum",
+          "description": "Hour TO for temp 7",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "sunday_minute_7",
+          "type": "enum",
+          "description": "Minute TO for temp 7",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "sunday_temp_8",
+          "type": "numeric",
+          "description": "Temperature 8 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "sunday_hour_8",
+          "type": "enum",
+          "description": "Hour TO for temp 8",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "sunday_minute_8",
+          "type": "enum",
+          "description": "Minute TO for temp 8",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        },
+        {
+          "property": "sunday_temp_9",
+          "type": "numeric",
+          "description": "Temperature 9 min value is 0.5, max value is 29.5, unit is °C"
+        },
+        {
+          "property": "sunday_hour_9",
+          "type": "enum",
+          "description": "Hour TO for temp 9",
+          "values": [
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"
+          ]
+        },
+        {
+          "property": "sunday_minute_9",
+          "type": "enum",
+          "description": "Minute TO for temp 9",
+          "values": [
+            "00",
+            "15",
+            "30",
+            "45"
+          ]
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

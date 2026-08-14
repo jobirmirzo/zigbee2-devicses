@@ -1,0 +1,80 @@
+{
+  "model": "SQM300Z4",
+  "file": "SQM300Z4.md",
+  "vendor": "ShinaSystem",
+  "description": "SiHAS big button switch 4 gang",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SQM300Z4.png",
+  "added_at": "2024-10-31T20:34:53",
+  "exposes_summary": "switch (state)",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "top_left",
+      "features": [
+        {
+          "property": "state_top_left",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "bottom_left",
+      "features": [
+        {
+          "property": "state_bottom_left",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "top_right",
+      "features": [
+        {
+          "property": "state_top_right",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "bottom_right",
+      "features": [
+        {
+          "property": "state_bottom_right",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

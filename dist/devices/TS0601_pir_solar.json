@@ -1,0 +1,94 @@
+{
+  "model": "TS0601_pir_solar",
+  "file": "TS0601_pir_solar.md",
+  "vendor": "Tuya",
+  "description": "Solar PIR occupancy sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_pir_solar.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "occupancy, pir_sensitivity, alarm_time, alarm_mode, battery",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Pir sensitivity",
+      "type": "enum",
+      "property": "pir_sensitivity",
+      "base": "pir_sensitivity",
+      "endpoint": null,
+      "description": "PIR sensitivity (0=high, 1=low).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "high",
+        "low"
+      ]
+    },
+    {
+      "name": "Alarm time",
+      "type": "numeric",
+      "property": "alarm_time",
+      "base": "alarm_time",
+      "endpoint": null,
+      "description": "Alarm time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 180,
+      "unit": "s"
+    },
+    {
+      "name": "Alarm mode",
+      "type": "enum",
+      "property": "alarm_mode",
+      "base": "alarm_mode",
+      "endpoint": null,
+      "description": "Alarm work mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "arm",
+        "silent",
+        "disarm"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

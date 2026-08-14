@@ -1,0 +1,61 @@
+{
+  "model": "929002398602",
+  "file": "929002398602.md",
+  "vendor": "Philips",
+  "description": "Hue dimmer switch gen 2",
+  "image": "https://www.zigbee2mqtt.io/images/devices/929002398602.png",
+  "added_at": "2021-02-28T13:58:01Z",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_press",
+        "on_hold",
+        "on_press_release",
+        "on_hold_release",
+        "off_press",
+        "off_hold",
+        "off_press_release",
+        "off_hold_release",
+        "up_press",
+        "up_hold",
+        "up_press_release",
+        "up_hold_release",
+        "down_press",
+        "down_hold",
+        "down_press_release",
+        "down_hold_release",
+        "recall_0",
+        "recall_1"
+      ]
+    }
+  ],
+  "warnings": []
+}

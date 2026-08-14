@@ -1,0 +1,11 @@
+{
+  "model": "Dongle-M",
+  "file": "Dongle-M.md",
+  "vendor": "SONOFF",
+  "description": "Dongle Max MG24 (EFR32MG24) with router firmware",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Dongle-M.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

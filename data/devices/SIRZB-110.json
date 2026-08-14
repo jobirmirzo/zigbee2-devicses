@@ -1,0 +1,231 @@
+{
+  "model": "SIRZB-110",
+  "file": "SIRZB-110.md",
+  "vendor": "Develco",
+  "description": "Customizable siren",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SIRZB-110.png",
+  "added_at": "2021-08-22T21:01:09Z",
+  "exposes_summary": "battery_low, test, warning, squawk, max_duration, alarm, temperature, battery, voltage",
+  "exposes": [
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Test",
+      "type": "binary",
+      "property": "test",
+      "base": "test",
+      "endpoint": null,
+      "description": "Indicates whether the device is being tested.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Warning",
+      "type": "composite",
+      "property": "warning",
+      "base": "warning",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "mode",
+          "type": "enum",
+          "description": "Mode of the warning (sound effect)",
+          "values": [
+            "stop",
+            "burglar",
+            "fire",
+            "emergency",
+            "police_panic",
+            "fire_panic",
+            "emergency_panic"
+          ]
+        },
+        {
+          "property": "level",
+          "type": "enum",
+          "description": "Sound level",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "property": "strobe_level",
+          "type": "enum",
+          "description": "Intensity of the strobe",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "property": "strobe",
+          "type": "binary",
+          "description": "Turn on/off the strobe (light) during warning",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "strobe_duty_cycle",
+          "type": "numeric",
+          "description": "Length of the flash cycle max value is 10"
+        },
+        {
+          "property": "duration",
+          "type": "numeric",
+          "description": "Duration in seconds of the alarm unit is s"
+        }
+      ]
+    },
+    {
+      "name": "Squawk",
+      "type": "composite",
+      "property": "squawk",
+      "base": "squawk",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "state",
+          "type": "enum",
+          "description": "Set Squawk state",
+          "values": [
+            "system_is_armed",
+            "system_is_disarmed"
+          ]
+        },
+        {
+          "property": "level",
+          "type": "enum",
+          "description": "Sound level",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "property": "strobe",
+          "type": "binary",
+          "description": "Turn on/off the strobe (light) for Squawk",
+          "values": [
+            "true",
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Max duration",
+      "type": "numeric",
+      "property": "max_duration",
+      "base": "max_duration",
+      "endpoint": null,
+      "description": "Max duration of the siren.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 900,
+      "unit": "s"
+    },
+    {
+      "name": "Alarm",
+      "type": "binary",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Manual start of the siren.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "START",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

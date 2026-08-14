@@ -1,0 +1,252 @@
+{
+  "model": "S4SW-001P16EU",
+  "file": "S4SW-001P16EU.md",
+  "vendor": "Shelly",
+  "description": "1PM Gen 4",
+  "image": "https://www.zigbee2mqtt.io/images/devices/S4SW-001P16EU.png",
+  "added_at": "2025-05-01T17:56:32",
+  "exposes_summary": "switch_type, switch (state), power, voltage, ac_frequency, current, energy, produced_energy, wifi_status, ip_address, dhcp_enabled, wifi_config, action",
+  "exposes": [
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type_sw1",
+      "base": "switch_type",
+      "endpoint": "sw1",
+      "description": "Switch input type.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "toggle",
+        "momentary"
+      ]
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "AC frequency",
+      "type": "numeric",
+      "property": "ac_frequency",
+      "base": "ac_frequency",
+      "endpoint": null,
+      "description": "Measured electrical AC frequency.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Produced energy",
+      "type": "numeric",
+      "property": "produced_energy",
+      "base": "produced_energy",
+      "endpoint": null,
+      "description": "Sum of produced energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Wi-Fi status",
+      "type": "text",
+      "property": "wifi_status",
+      "base": "wifi_status",
+      "endpoint": null,
+      "description": "Current connection status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "IP address",
+      "type": "text",
+      "property": "ip_address",
+      "base": "ip_address",
+      "endpoint": null,
+      "description": "IP address currently assigned to the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "DHCP enabled",
+      "type": "binary",
+      "property": "dhcp_enabled",
+      "base": "dhcp_enabled",
+      "endpoint": null,
+      "description": "Indicates whether DHCP is used to automatically assign network settings.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Wi-Fi Configuration",
+      "type": "composite",
+      "property": "wifi_config",
+      "base": "wifi_config",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "enabled",
+          "type": "binary",
+          "description": "Enable/disable Wi-Fi connectivity",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "ssid",
+          "type": "text",
+          "description": "Name (SSID) of the Wi-Fi network to connect to"
+        },
+        {
+          "property": "password",
+          "type": "text",
+          "description": "Password for the selected Wi-Fi network"
+        },
+        {
+          "property": "static_ip",
+          "type": "text",
+          "description": "Manually assigned IP address (used when DHCP is disabled)"
+        },
+        {
+          "property": "net_mask",
+          "type": "text",
+          "description": "Subnet mask for the static IP configuration"
+        },
+        {
+          "property": "gateway",
+          "type": "text",
+          "description": "Default gateway address for static IP configuration"
+        },
+        {
+          "property": "name_server",
+          "type": "text",
+          "description": "Name server address for static IP configuration"
+        }
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "input_1_on",
+        "input_1_off",
+        "input_1_toggle",
+        "input_1_single",
+        "input_1_double",
+        "input_1_triple",
+        "input_1_hold"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,125 @@
+{
+  "model": "Day-Night Shade",
+  "file": "Day-Night_Shade.md",
+  "vendor": "Yoolax",
+  "description": "Top-down bottom-up day/night shade",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Day-Night-Shade.png",
+  "added_at": "2026-06-30T19:08:32",
+  "exposes_summary": "cover (state, position), battery",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": "bottom",
+      "features": [
+        {
+          "property": "state_bottom",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_bottom",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_bottom",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": "top",
+      "features": [
+        {
+          "property": "state_top",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_top",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_top",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

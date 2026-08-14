@@ -1,0 +1,47 @@
+{
+  "model": "3RSB22BZ",
+  "file": "3RSB22BZ.md",
+  "vendor": "Third Reality",
+  "description": "Smart button",
+  "image": "https://www.zigbee2mqtt.io/images/devices/3RSB22BZ.png",
+  "added_at": "2022-08-01T15:06:58",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single",
+        "double",
+        "hold",
+        "release"
+      ]
+    }
+  ],
+  "warnings": []
+}

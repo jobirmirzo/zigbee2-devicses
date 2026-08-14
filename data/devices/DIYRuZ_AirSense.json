@@ -1,0 +1,178 @@
+{
+  "model": "DIYRuZ_AirSense",
+  "file": "DIYRuZ_AirSense.md",
+  "vendor": "DIYRuZ",
+  "description": "Air quality sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DIYRuZ_AirSense.png",
+  "added_at": "2020-12-01T19:02:25Z",
+  "exposes_summary": "co2, temperature, humidity, pressure, led_feedback, enable_abc, threshold1, threshold2, temperature_offset, humidity_offset, pressure_offset",
+  "exposes": [
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "The measured CO2 (carbon dioxide) value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Pressure",
+      "type": "numeric",
+      "property": "pressure",
+      "base": "pressure",
+      "endpoint": null,
+      "description": "The measured atmospheric pressure.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "hPa"
+    },
+    {
+      "name": "Led feedback",
+      "type": "binary",
+      "property": "led_feedback",
+      "base": "led_feedback",
+      "endpoint": null,
+      "description": "Enable LEDs feedback.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Enable abc",
+      "type": "binary",
+      "property": "enable_abc",
+      "base": "enable_abc",
+      "endpoint": null,
+      "description": "Enable ABC (Automatic Baseline Correction).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Threshold1",
+      "type": "numeric",
+      "property": "threshold1",
+      "base": "threshold1",
+      "endpoint": null,
+      "description": "Warning (LED2) CO2 level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 50000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Threshold2",
+      "type": "numeric",
+      "property": "threshold2",
+      "base": "threshold2",
+      "endpoint": null,
+      "description": "Critical (LED3) CO2 level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 50000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Temperature offset",
+      "type": "numeric",
+      "property": "temperature_offset",
+      "base": "temperature_offset",
+      "endpoint": null,
+      "description": "Adjust temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -20,
+      "value_max": 20,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity offset",
+      "type": "numeric",
+      "property": "humidity_offset",
+      "base": "humidity_offset",
+      "endpoint": null,
+      "description": "Adjust humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "%"
+    },
+    {
+      "name": "Pressure offset",
+      "type": "numeric",
+      "property": "pressure_offset",
+      "base": "pressure_offset",
+      "endpoint": null,
+      "description": "Adjust pressure.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -1000,
+      "value_max": 1000,
+      "unit": "hPa"
+    }
+  ],
+  "warnings": []
+}

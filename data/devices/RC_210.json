@@ -1,0 +1,50 @@
+{
+  "model": "RC 210",
+  "file": "RC_210.md",
+  "vendor": "Innr",
+  "description": "Remote control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/RC-210.png",
+  "added_at": "2023-01-01T09:10:19",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_stop",
+        "brightness_move_to_level",
+        "color_temperature_move"
+      ]
+    }
+  ],
+  "warnings": []
+}

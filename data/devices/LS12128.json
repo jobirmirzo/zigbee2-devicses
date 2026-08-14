@@ -1,0 +1,43 @@
+{
+  "model": "LS12128",
+  "file": "LS12128.md",
+  "vendor": "Lupus",
+  "description": "Roller shutter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/LS12128.png",
+  "added_at": "2020-02-04T20:38:05Z",
+  "exposes_summary": "cover (state, position)",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

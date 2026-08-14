@@ -1,0 +1,29 @@
+{
+  "model": "ZLGP17/ZLGP18",
+  "file": "ZLGP17_ZLGP18.md",
+  "vendor": "Legrand",
+  "description": "Wireless and batteryless (double) lighting control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZLGP17-ZLGP18.png",
+  "added_at": "2021-09-02T18:14:38Z",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "press_once",
+        "press_twice"
+      ]
+    }
+  ],
+  "warnings": []
+}

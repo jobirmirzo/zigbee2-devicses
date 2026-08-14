@@ -1,0 +1,291 @@
+{
+  "model": "PIMS3028",
+  "file": "PIMS3028.md",
+  "vendor": "KnockautX",
+  "description": "Cover plug-in receiver multi STAK 3/STAS 3",
+  "image": "https://www.zigbee2mqtt.io/images/devices/PIMS3028.png",
+  "added_at": "2026-01-01T13:30:29",
+  "exposes_summary": "state, cover (state, position), mode, control_back, auto_power, work_state, time_total, situation_set, fault, border, position_best, angle_horizontal, calibration, quick_calibration, switch, reset",
+  "exposes": [
+    {
+      "name": "State",
+      "type": "enum",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Control commands.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "open",
+        "stop",
+        "close",
+        "lock",
+        "unlock"
+      ]
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Set mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "up",
+        "up_delete",
+        "remove_up_down"
+      ]
+    },
+    {
+      "name": "Control back",
+      "type": "enum",
+      "property": "control_back",
+      "base": "control_back",
+      "endpoint": null,
+      "description": "Set the motor running direction.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "forward",
+        "back"
+      ]
+    },
+    {
+      "name": "Auto power",
+      "type": "binary",
+      "property": "auto_power",
+      "base": "auto_power",
+      "endpoint": null,
+      "description": "Add wireless remote.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Work state",
+      "type": "enum",
+      "property": "work_state",
+      "base": "work_state",
+      "endpoint": null,
+      "description": "Work state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "opening",
+        "closing",
+        "123"
+      ]
+    },
+    {
+      "name": "Time total",
+      "type": "numeric",
+      "property": "time_total",
+      "base": "time_total",
+      "endpoint": null,
+      "description": "Total travel time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "s"
+    },
+    {
+      "name": "Situation set",
+      "type": "enum",
+      "property": "situation_set",
+      "base": "situation_set",
+      "endpoint": null,
+      "description": "Situation of the blinds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "fully_open",
+        "fully_close"
+      ]
+    },
+    {
+      "name": "Fault",
+      "type": "binary",
+      "property": "fault",
+      "base": "fault",
+      "endpoint": null,
+      "description": "Motor fault.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Border",
+      "type": "enum",
+      "property": "border",
+      "base": "border",
+      "endpoint": null,
+      "description": "Set lower/upper limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "down_delete",
+        "remove_top_bottom"
+      ]
+    },
+    {
+      "name": "Position best",
+      "type": "numeric",
+      "property": "position_best",
+      "base": "position_best",
+      "endpoint": null,
+      "description": "Set the best position.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100
+    },
+    {
+      "name": "Angle horizontal",
+      "type": "numeric",
+      "property": "angle_horizontal",
+      "base": "angle_horizontal",
+      "endpoint": null,
+      "description": "Set the angle.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "°"
+    },
+    {
+      "name": "Calibration",
+      "type": "enum",
+      "property": "calibration",
+      "base": "calibration",
+      "endpoint": null,
+      "description": "Calibrate the travel limits.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "start",
+        "end"
+      ]
+    },
+    {
+      "name": "Quick calibration",
+      "type": "numeric",
+      "property": "quick_calibration",
+      "base": "quick_calibration",
+      "endpoint": null,
+      "description": "Set quick calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 900,
+      "unit": "s"
+    },
+    {
+      "name": "Switch",
+      "type": "binary",
+      "property": "switch",
+      "base": "switch",
+      "endpoint": null,
+      "description": "Trigger best position.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Reset",
+      "type": "enum",
+      "property": "reset",
+      "base": "reset",
+      "endpoint": null,
+      "description": "Trigger factory reset.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "reset"
+      ]
+    }
+  ],
+  "warnings": []
+}

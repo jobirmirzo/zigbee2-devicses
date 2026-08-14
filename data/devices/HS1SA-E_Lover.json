@@ -1,0 +1,198 @@
+{
+  "model": "HS1SA-E Lover",
+  "file": "HS1SA-E_Lover.md",
+  "vendor": "Heiman",
+  "description": "Smoke detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS1SA-E-Lover.png",
+  "added_at": "2026-04-30T19:57:27",
+  "exposes_summary": "battery, identify, smoke, battery_low, test, trouble, trigger_selftest, temporary_mute, siren_for_automation_only, reported_packages, rejoin_count, reboot_count",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Test",
+      "type": "binary",
+      "property": "test",
+      "base": "test",
+      "endpoint": null,
+      "description": "Indicates whether the device is currently performing a test.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Trouble",
+      "type": "binary",
+      "property": "trouble",
+      "base": "trouble",
+      "endpoint": null,
+      "description": "Indicates whether the device is currently having trouble.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Trigger selftest",
+      "type": "enum",
+      "property": "trigger_selftest",
+      "base": "trigger_selftest",
+      "endpoint": null,
+      "description": "Trigger smoke alarm self-check test..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "test"
+      ]
+    },
+    {
+      "name": "Temporary mute",
+      "type": "enum",
+      "property": "temporary_mute",
+      "base": "temporary_mute",
+      "endpoint": null,
+      "description": "temporarily mute smoke alarm but please ensure there is no real fire..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "mute"
+      ]
+    },
+    {
+      "name": "Siren for automation only",
+      "type": "enum",
+      "property": "siren_for_automation_only",
+      "base": "siren_for_automation_only",
+      "endpoint": null,
+      "description": "siren effect.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "stop",
+        "smoke_siren"
+      ]
+    },
+    {
+      "name": "Reported packages",
+      "type": "numeric",
+      "property": "reported_packages",
+      "base": "reported_packages",
+      "endpoint": null,
+      "description": "for diagnostic purpose, how many zigbee packages has the reported in a day..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 60000
+    },
+    {
+      "name": "Rejoin count",
+      "type": "numeric",
+      "property": "rejoin_count",
+      "base": "rejoin_count",
+      "endpoint": null,
+      "description": "for diagnostic purpose, how many times has the product rejoined to zigbee network..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 60000
+    },
+    {
+      "name": "Reboot count",
+      "type": "numeric",
+      "property": "reboot_count",
+      "base": "reboot_count",
+      "endpoint": null,
+      "description": "for diagnostic purpose, how many times has the product rebooted..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 60000
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,94 @@
+{
+  "model": "HP6000ZB",
+  "file": "HP6000ZB.md",
+  "vendor": "Sinopé",
+  "description": "Mini-split air conditioner interface",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HP6000ZB.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "climate (local_temperature, occupied_heating_setpoint, system_mode, fan_mode), swing_mode, display_led",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 16,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "dry",
+            "fan_only"
+          ],
+          "readable": true
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "value_min": 16,
+          "value_max": 30,
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "dry",
+            "fan_only"
+          ],
+          "unit": "°C",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Swing mode",
+      "type": "binary",
+      "property": "swing_mode",
+      "base": "swing_mode",
+      "endpoint": null,
+      "description": "Vertical Swing.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Display led",
+      "type": "binary",
+      "property": "display_led",
+      "base": "display_led",
+      "endpoint": null,
+      "description": "Display LED.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

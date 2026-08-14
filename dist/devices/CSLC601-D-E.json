@@ -1,0 +1,53 @@
+{
+  "model": "CSLC601-D-E",
+  "file": "CSLC601-D-E.md",
+  "vendor": "CASAIA",
+  "description": "Dry contact relay switch module in 220v AC for gas boiler",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CSLC601-D-E.png",
+  "added_at": "2022-01-31T17:42:44",
+  "exposes_summary": "switch (state), power_on_behavior",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    }
+  ],
+  "warnings": []
+}

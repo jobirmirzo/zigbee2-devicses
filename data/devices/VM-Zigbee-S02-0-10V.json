@@ -1,0 +1,184 @@
+{
+  "model": "VM-Zigbee-S02-0-10V",
+  "file": "VM-Zigbee-S02-0-10V.md",
+  "vendor": "Lonsonho",
+  "description": "2 channel Zigbee 0-10V dimmer module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/VM-Zigbee-S02-0-10V.png",
+  "added_at": "2023-09-28T10:54:36",
+  "exposes_summary": "light (state, brightness, min_brightness, max_brightness), countdown, switch_type, power_on_behavior",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_l1",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "min_brightness_l1",
+          "base": "min_brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "max_brightness_l1",
+          "base": "max_brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_l2",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "min_brightness_l2",
+          "base": "min_brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "max_brightness_l2",
+          "base": "max_brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_l1",
+      "base": "countdown",
+      "endpoint": "l1",
+      "description": "Toggle the device after a set duration (one time action).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_l2",
+      "base": "countdown",
+      "endpoint": "l2",
+      "description": "Toggle the device after a set duration (one time action).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type_l1",
+      "base": "switch_type",
+      "endpoint": "l1",
+      "description": "Type of the switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "toggle",
+        "state",
+        "momentary"
+      ]
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type_l2",
+      "base": "switch_type",
+      "endpoint": "l2",
+      "description": "Type of the switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "toggle",
+        "state",
+        "momentary"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "previous",
+        "on"
+      ]
+    }
+  ],
+  "warnings": []
+}

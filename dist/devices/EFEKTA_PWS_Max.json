@@ -1,0 +1,98 @@
+{
+  "model": "EFEKTA_PWS_Max",
+  "file": "EFEKTA_PWS_Max.md",
+  "vendor": "EFEKTA",
+  "description": "Plant watering sensor EFEKTA PWS max",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_PWS_Max.png",
+  "added_at": "2021-12-31T16:51:16",
+  "exposes_summary": "soil_moisture, battery, voltage, illuminance, temperature, humidity",
+  "exposes": [
+    {
+      "name": "Soil moisture",
+      "type": "numeric",
+      "property": "soil_moisture",
+      "base": "soil_moisture",
+      "endpoint": null,
+      "description": "Measured soil moisture value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

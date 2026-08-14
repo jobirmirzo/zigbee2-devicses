@@ -1,0 +1,416 @@
+{
+  "model": "PO-BOCO-ELEC",
+  "file": "PO-BOCO-ELEC.md",
+  "vendor": "Powernity / Xanlite",
+  "description": "Pilot wire heating module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/PO-BOCO-ELEC.png",
+  "added_at": "2025-01-03T20:11:47",
+  "exposes_summary": "climate (preset, local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode), auto_mode, manual_mode, frost_protection, humidity, child_lock, switch (state), window_opening_mode, window_opening_mode_duration, temperature_unit, boost_heating, boost_timeset_countdown, power_rating, energy_consumed, mode_switching, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, holiday_start_stop, reset_consumption",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "manual",
+            "auto",
+            "holiday"
+          ],
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 0,
+          "value_max": 20,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "auto"
+          ],
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Auto mode",
+      "type": "enum",
+      "property": "auto_mode",
+      "base": "auto_mode",
+      "endpoint": null,
+      "description": "Auto Mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "antifrost",
+        "eco",
+        "comfort_-2",
+        "comfort_-1",
+        "comfort"
+      ]
+    },
+    {
+      "name": "Manual mode",
+      "type": "enum",
+      "property": "manual_mode",
+      "base": "manual_mode",
+      "endpoint": null,
+      "description": "Manual Mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "antifrost",
+        "eco",
+        "comfort_-2",
+        "comfort_-1",
+        "comfort"
+      ]
+    },
+    {
+      "name": "Frost protection",
+      "type": "binary",
+      "property": "frost_protection",
+      "base": "frost_protection",
+      "endpoint": null,
+      "description": "When Anti-Freezing function is activated, the temperature in the house is kept at 8 °C..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Window detection",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "window_detection",
+          "base": "window_detection",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Window opening mode",
+      "type": "enum",
+      "property": "window_opening_mode",
+      "base": "window_opening_mode",
+      "endpoint": null,
+      "description": "Window Opening Mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "antifrost",
+        "eco",
+        "comfort_-2",
+        "comfort_-1",
+        "comfort"
+      ]
+    },
+    {
+      "name": "Window opening mode duration",
+      "type": "numeric",
+      "property": "window_opening_mode_duration",
+      "base": "window_opening_mode_duration",
+      "endpoint": null,
+      "description": "Duration of the window opening mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 90,
+      "unit": "min"
+    },
+    {
+      "name": "Temperature unit",
+      "type": "enum",
+      "property": "temperature_unit",
+      "base": "temperature_unit",
+      "endpoint": null,
+      "description": "Temperature unit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Boost heating",
+      "type": "binary",
+      "property": "boost_heating",
+      "base": "boost_heating",
+      "endpoint": null,
+      "description": "Boost Heating: the device will enter the boost heating mode..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Boost timeset countdown",
+      "type": "numeric",
+      "property": "boost_timeset_countdown",
+      "base": "boost_timeset_countdown",
+      "endpoint": null,
+      "description": "The remaining time for the function will be counted down in seconds ( 900 to 0 ) when the boost heating is activated..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 900,
+      "unit": "s"
+    },
+    {
+      "name": "Power rating",
+      "type": "numeric",
+      "property": "power_rating",
+      "base": "power_rating",
+      "endpoint": null,
+      "description": "How much power is the heater rated to. Entering a value will allow the Thermostat to record a value of power usage that can be checked under settings on the physical Thermostat.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 10000,
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy consumed",
+      "type": "numeric",
+      "property": "energy_consumed",
+      "base": "energy_consumed",
+      "endpoint": null,
+      "description": "Consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Mode switching",
+      "type": "enum",
+      "property": "mode_switching",
+      "base": "mode_switching",
+      "endpoint": null,
+      "description": "Choose the number of mode your heater supports..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "four_modes",
+        "six_modes"
+      ]
+    },
+    {
+      "name": "Schedule monday",
+      "type": "text",
+      "property": "schedule_monday",
+      "base": "schedule_monday",
+      "endpoint": null,
+      "description": "Schedule for the auto mode. Can be defined in the following format: `mode / hours:minutes / mode`. For example: `comfort / 06:00 / eco / 12:00 / off`. Note: Minutes can only be set by multiple of 5. Your limited to 9 modes max..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule tuesday",
+      "type": "text",
+      "property": "schedule_tuesday",
+      "base": "schedule_tuesday",
+      "endpoint": null,
+      "description": "Schedule for the auto mode. Can be defined in the following format: `mode / hours:minutes / mode`. For example: `comfort / 06:00 / eco / 12:00 / off`. Note: Minutes can only be set by multiple of 5. Your limited to 9 modes max..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule wednesday",
+      "type": "text",
+      "property": "schedule_wednesday",
+      "base": "schedule_wednesday",
+      "endpoint": null,
+      "description": "Schedule for the auto mode. Can be defined in the following format: `mode / hours:minutes / mode`. For example: `comfort / 06:00 / eco / 12:00 / off`. Note: Minutes can only be set by multiple of 5. Your limited to 9 modes max..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule thursday",
+      "type": "text",
+      "property": "schedule_thursday",
+      "base": "schedule_thursday",
+      "endpoint": null,
+      "description": "Schedule for the auto mode. Can be defined in the following format: `mode / hours:minutes / mode`. For example: `comfort / 06:00 / eco / 12:00 / off`. Note: Minutes can only be set by multiple of 5. Your limited to 9 modes max..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule friday",
+      "type": "text",
+      "property": "schedule_friday",
+      "base": "schedule_friday",
+      "endpoint": null,
+      "description": "Schedule for the auto mode. Can be defined in the following format: `mode / hours:minutes / mode`. For example: `comfort / 06:00 / eco / 12:00 / off`. Note: Minutes can only be set by multiple of 5. Your limited to 9 modes max..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule saturday",
+      "type": "text",
+      "property": "schedule_saturday",
+      "base": "schedule_saturday",
+      "endpoint": null,
+      "description": "Schedule for the auto mode. Can be defined in the following format: `mode / hours:minutes / mode`. For example: `comfort / 06:00 / eco / 12:00 / off`. Note: Minutes can only be set by multiple of 5. Your limited to 9 modes max..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule sunday",
+      "type": "text",
+      "property": "schedule_sunday",
+      "base": "schedule_sunday",
+      "endpoint": null,
+      "description": "Schedule for the auto mode. Can be defined in the following format: `mode / hours:minutes / mode`. For example: `comfort / 06:00 / eco / 12:00 / off`. Note: Minutes can only be set by multiple of 5. Your limited to 9 modes max..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Holiday start stop",
+      "type": "text",
+      "property": "holiday_start_stop",
+      "base": "holiday_start_stop",
+      "endpoint": null,
+      "description": "The holiday mode will automatically start at the set time starting point and run the holiday mode. Can be defined in the following format: `startYear/startMonth/startDay startHours:startMinutes | endYear/endMonth/endDay endHours:endMinutes  | mode`. For example: `2024/12/12 09:00 | 2024/12/14 10:00 | comfort`Note: You cannot set an interval superior at 255 hours. The end date minutes will be ignore..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Reset consumption",
+      "type": "binary",
+      "property": "reset_consumption",
+      "base": "reset_consumption",
+      "endpoint": null,
+      "description": "Reset energy consumption to zero.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,313 @@
+{
+  "model": "BTH-RM",
+  "file": "BTH-RM.md",
+  "vendor": "Bosch",
+  "description": "Room thermostat II",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BTH-RM.png",
+  "added_at": "2023-06-27T19:44:08",
+  "exposes_summary": "operating_mode, climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, occupied_cooling_setpoint, system_mode, running_state, control_sequence_of_operation), setpoint_change_source, humidity, cable_sensor_mode, cable_sensor_temperature, window_detection, boost_heating, child_lock, display_brightness, display_switch_on_duration, activity_led, error_state, battery, voltage, battery_low",
+  "exposes": [
+    {
+      "name": "Operating mode",
+      "type": "enum",
+      "property": "operating_mode",
+      "base": "operating_mode",
+      "endpoint": null,
+      "description": "Bosch-specific operating mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "schedule",
+        "manual",
+        "pause"
+      ]
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "occupied_cooling_setpoint",
+          "base": "occupied_cooling_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "cool"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        },
+        {
+          "property": "control_sequence_of_operation",
+          "base": "control_sequence_of_operation",
+          "value_min": 5,
+          "value_max": 30,
+          "values": [
+            "off",
+            "heat",
+            "cool"
+          ],
+          "unit": "°C",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source",
+      "base": "setpoint_change_source",
+      "endpoint": null,
+      "description": "Source of the current setpoint temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Cable sensor mode",
+      "type": "enum",
+      "property": "cable_sensor_mode",
+      "base": "cable_sensor_mode",
+      "endpoint": null,
+      "description": "Select a configuration for the sensor connection. If you select \"with_regulation\", the measured temperature on the cable sensor is used by the heating/cooling algorithm instead of the local temperature..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "not_used",
+        "cable_sensor_without_regulation",
+        "cable_sensor_with_regulation"
+      ]
+    },
+    {
+      "name": "Cable sensor temperature",
+      "type": "numeric",
+      "property": "cable_sensor_temperature",
+      "base": "cable_sensor_temperature",
+      "endpoint": null,
+      "description": "Measured temperature value on the cable sensor (if enabled).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Window detection",
+      "type": "binary",
+      "property": "window_detection",
+      "base": "window_detection",
+      "endpoint": null,
+      "description": "Activates the window open mode, where the thermostat disables any heating/cooling to prevent unnecessary energy consumption. Please keep in mind that the device itself does not detect any open windows!.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Activate boost heating",
+      "type": "binary",
+      "property": "boost_heating",
+      "base": "boost_heating",
+      "endpoint": null,
+      "description": "Activate boost heating (opens TRV for 5 minutes).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the thermostat.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Display brightness",
+      "type": "numeric",
+      "property": "display_brightness",
+      "base": "display_brightness",
+      "endpoint": null,
+      "description": "Sets brightness of the display.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Display switch-on duration",
+      "type": "numeric",
+      "property": "display_switch_on_duration",
+      "base": "display_switch_on_duration",
+      "endpoint": null,
+      "description": "Sets the time before the display is automatically switched off.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "s"
+    },
+    {
+      "name": "Activity LED state",
+      "type": "enum",
+      "property": "activity_led",
+      "base": "activity_led",
+      "endpoint": null,
+      "description": "Determines the state of the little dot on the display next to the heating/cooling symbol.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "auto",
+        "on"
+      ]
+    },
+    {
+      "name": "Error state",
+      "type": "text",
+      "property": "error_state",
+      "base": "error_state",
+      "endpoint": null,
+      "description": "Indicates whether the device encounters any errors or not.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

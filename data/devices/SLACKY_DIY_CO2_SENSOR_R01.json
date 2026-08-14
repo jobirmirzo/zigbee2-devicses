@@ -1,0 +1,26 @@
+{
+  "model": "SLACKY_DIY_CO2_SENSOR_R01",
+  "file": "SLACKY_DIY_CO2_SENSOR_R01.md",
+  "vendor": "Slacky-DIY",
+  "description": "Tuya CO2 sensor with custom Firmware",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SLACKY_DIY_CO2_SENSOR_R01.png",
+  "added_at": "2025-04-01T18:29:09",
+  "exposes_summary": "co2",
+  "exposes": [
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "Measured value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "ppm"
+    }
+  ],
+  "warnings": []
+}

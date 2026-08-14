@@ -1,0 +1,194 @@
+{
+  "model": "EPJ-ZB",
+  "file": "EPJ-ZB.md",
+  "vendor": "Nova Digital",
+  "description": "Smart sliding window pusher",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EPJ-ZB.png",
+  "added_at": "2025-06-01T17:54:42",
+  "exposes_summary": "battery, cover (state, position), charge_state, manual_mode, fault, countdown, motor_direction, mode, fixed_window_sash, window_detection",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Charge state",
+      "type": "binary",
+      "property": "charge_state",
+      "base": "charge_state",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Manual mode",
+      "type": "enum",
+      "property": "manual_mode",
+      "base": "manual_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Enable",
+        "Disable"
+      ]
+    },
+    {
+      "name": "Fault",
+      "type": "enum",
+      "property": "fault",
+      "base": "fault",
+      "endpoint": null,
+      "description": "Motor Fault.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "Normal",
+        "None",
+        "Fault"
+      ]
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown",
+      "base": "countdown",
+      "endpoint": null,
+      "description": "Motor timeout.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 90,
+      "unit": "s"
+    },
+    {
+      "name": "Motor direction",
+      "type": "enum",
+      "property": "motor_direction",
+      "base": "motor_direction",
+      "endpoint": null,
+      "description": "Pusher install side.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Left Side",
+        "Right Side"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Slow stop mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Enable",
+        "Disable"
+      ]
+    },
+    {
+      "name": "Fixed window sash",
+      "type": "enum",
+      "property": "fixed_window_sash",
+      "base": "fixed_window_sash",
+      "endpoint": null,
+      "description": "Button position.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Up",
+        "Down"
+      ]
+    },
+    {
+      "name": "Window detection",
+      "type": "enum",
+      "property": "window_detection",
+      "base": "window_detection",
+      "endpoint": null,
+      "description": "Window detection status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "Opened",
+        "Closed",
+        "Pending"
+      ]
+    }
+  ],
+  "warnings": []
+}

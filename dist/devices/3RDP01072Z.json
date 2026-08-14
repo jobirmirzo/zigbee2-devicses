@@ -1,0 +1,362 @@
+{
+  "model": "3RDP01072Z",
+  "file": "3RDP01072Z.md",
+  "vendor": "Third Reality",
+  "description": "Smart Dual Plug ZP1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/3RDP01072Z.png",
+  "added_at": "2025-01-03T20:11:47",
+  "exposes_summary": "switch (state), power_on_behavior, power, voltage, ac_frequency, power_factor, current, energy, reset_total_energy, countdown_time_on_to_off, countdown_time_off_to_on, red_led_brightness",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "1",
+      "features": [
+        {
+          "property": "state_1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_1",
+      "base": "power_on_behavior",
+      "endpoint": "1",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power_1",
+      "base": "power",
+      "endpoint": "1",
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage_1",
+      "base": "voltage",
+      "endpoint": "1",
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "AC frequency",
+      "type": "numeric",
+      "property": "ac_frequency_1",
+      "base": "ac_frequency",
+      "endpoint": "1",
+      "description": "Measured electrical AC frequency.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Power factor",
+      "type": "numeric",
+      "property": "power_factor_1",
+      "base": "power_factor",
+      "endpoint": "1",
+      "description": "Instantaneous measured power factor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current_1",
+      "base": "current",
+      "endpoint": "1",
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy_1",
+      "base": "energy",
+      "endpoint": "1",
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "2",
+      "features": [
+        {
+          "property": "state_2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_2",
+      "base": "power_on_behavior",
+      "endpoint": "2",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power_2",
+      "base": "power",
+      "endpoint": "2",
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage_2",
+      "base": "voltage",
+      "endpoint": "2",
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "AC frequency",
+      "type": "numeric",
+      "property": "ac_frequency_2",
+      "base": "ac_frequency",
+      "endpoint": "2",
+      "description": "Measured electrical AC frequency.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Power factor",
+      "type": "numeric",
+      "property": "power_factor_2",
+      "base": "power_factor",
+      "endpoint": "2",
+      "description": "Instantaneous measured power factor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current_2",
+      "base": "current",
+      "endpoint": "2",
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy_2",
+      "base": "energy",
+      "endpoint": "2",
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Reset total energy",
+      "type": "enum",
+      "property": "reset_total_energy_1",
+      "base": "reset_total_energy",
+      "endpoint": "1",
+      "description": "Reset the sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Reset"
+      ]
+    },
+    {
+      "name": "Countdown time on to off",
+      "type": "numeric",
+      "property": "countdown_time_on_to_off_1",
+      "base": "countdown_time_on_to_off",
+      "endpoint": "1",
+      "description": "(ON-OFF).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 60000,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown time off to on",
+      "type": "numeric",
+      "property": "countdown_time_off_to_on_1",
+      "base": "countdown_time_off_to_on",
+      "endpoint": "1",
+      "description": "(OFF-ON).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 60000,
+      "unit": "s"
+    },
+    {
+      "name": "Reset total energy",
+      "type": "enum",
+      "property": "reset_total_energy_2",
+      "base": "reset_total_energy",
+      "endpoint": "2",
+      "description": "Reset the sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Reset"
+      ]
+    },
+    {
+      "name": "Countdown time on to off",
+      "type": "numeric",
+      "property": "countdown_time_on_to_off_2",
+      "base": "countdown_time_on_to_off",
+      "endpoint": "2",
+      "description": "(ON-OFF).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 60000,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown time off to on",
+      "type": "numeric",
+      "property": "countdown_time_off_to_on_2",
+      "base": "countdown_time_off_to_on",
+      "endpoint": "2",
+      "description": "(OFF-ON).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 60000,
+      "unit": "s"
+    },
+    {
+      "name": "Red led brightness",
+      "type": "numeric",
+      "property": "red_led_brightness",
+      "base": "red_led_brightness",
+      "endpoint": null,
+      "description": "Set red led brightness.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

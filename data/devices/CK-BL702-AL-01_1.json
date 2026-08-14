@@ -1,0 +1,137 @@
+{
+  "model": "CK-BL702-AL-01_1",
+  "file": "CK-BL702-AL-01_1.md",
+  "vendor": "eWeLink",
+  "description": "Zigbee 3.0 15W led light bulb E27 RGBCW",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CK-BL702-AL-01_1.png",
+  "added_at": "2025-05-01T17:59:09",
+  "exposes_summary": "do_not_disturb, light (state, brightness, color_temp, color_temp_startup, color_hs, color_xy), effect, power_on_behavior",
+  "exposes": [
+    {
+      "name": "Do not disturb",
+      "type": "binary",
+      "property": "do_not_disturb",
+      "base": "do_not_disturb",
+      "endpoint": null,
+      "description": "Controls state after power outage: false = on, true = restore previous state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 25,
+          "value_max": 1000,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup",
+          "base": "color_temp_startup",
+          "value_min": 25,
+          "value_max": 1000,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_hs",
+          "base": "color_hs",
+          "readable": true
+        },
+        {
+          "property": "color_xy",
+          "base": "color_xy",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect",
+        "colorloop",
+        "stop_colorloop"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    }
+  ],
+  "warnings": []
+}

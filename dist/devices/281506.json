@@ -1,0 +1,150 @@
+{
+  "model": "281506",
+  "file": "281506.md",
+  "vendor": "Legrand",
+  "description": "Triple light switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/281506.png",
+  "added_at": "2025-11-30T20:32:43",
+  "exposes_summary": "led_in_dark, led_if_on, switch (state), power_on_behavior",
+  "exposes": [
+    {
+      "name": "Led in dark",
+      "type": "binary",
+      "property": "led_in_dark",
+      "base": "led_in_dark",
+      "endpoint": null,
+      "description": "Enables the built-in LED allowing to see the switch in the dark.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Led if on",
+      "type": "binary",
+      "property": "led_if_on",
+      "base": "led_if_on",
+      "endpoint": null,
+      "description": "Enables the LED on activity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "right",
+      "features": [
+        {
+          "property": "state_right",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "center",
+      "features": [
+        {
+          "property": "state_center",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "left",
+      "features": [
+        {
+          "property": "state_left",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_right",
+      "base": "power_on_behavior",
+      "endpoint": "right",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_center",
+      "base": "power_on_behavior",
+      "endpoint": "center",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_left",
+      "base": "power_on_behavior",
+      "endpoint": "left",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    }
+  ],
+  "warnings": []
+}

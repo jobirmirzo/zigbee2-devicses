@@ -1,0 +1,42 @@
+{
+  "model": "SZ-WTD03",
+  "file": "SZ-WTD03.md",
+  "vendor": "Sercomm",
+  "description": "Water leak detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SZ-WTD03.png",
+  "added_at": "2023-08-26T06:45:18",
+  "exposes_summary": "water_leak, battery_low",
+  "exposes": [
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

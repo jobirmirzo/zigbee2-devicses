@@ -1,0 +1,43 @@
+{
+  "model": "WLS-100z",
+  "file": "WLS-100z.md",
+  "vendor": "Tuya",
+  "description": "Water leak sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WLS-100z.png",
+  "added_at": "2022-01-31T17:42:44",
+  "exposes_summary": "battery, water_leak",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

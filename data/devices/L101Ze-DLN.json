@@ -1,0 +1,246 @@
+{
+  "model": "L101Ze-DLN",
+  "file": "L101Ze-DLN.md",
+  "vendor": "LYTKO",
+  "description": "Dual channel thermostat without display",
+  "image": "https://www.zigbee2mqtt.io/images/devices/L101Ze-DLN.png",
+  "added_at": "2025-11-30T20:32:43",
+  "exposes_summary": "climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_mode), identify, occupied_setback, remote_sensing, sensor_type",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "3",
+      "features": [
+        {
+          "property": "local_temperature_3",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration_3",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint_3",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 40,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "system_mode_3",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_mode_3",
+          "base": "running_mode",
+          "value_min": 5,
+          "value_max": 40,
+          "values": [
+            "off",
+            "heat"
+          ],
+          "unit": "°C",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "4",
+      "features": [
+        {
+          "property": "local_temperature_4",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration_4",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint_4",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 40,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "system_mode_4",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_mode_4",
+          "base": "running_mode",
+          "value_min": 5,
+          "value_max": 40,
+          "values": [
+            "off",
+            "heat"
+          ],
+          "unit": "°C",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Occupied setback",
+      "type": "numeric",
+      "property": "occupied_setback_3",
+      "base": "occupied_setback",
+      "endpoint": "3",
+      "description": "Hysteresis.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 2.5,
+      "unit": "°C"
+    },
+    {
+      "name": "Occupied setback",
+      "type": "numeric",
+      "property": "occupied_setback_4",
+      "base": "occupied_setback",
+      "endpoint": "4",
+      "description": "Hysteresis.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 2.5,
+      "unit": "°C"
+    },
+    {
+      "name": "Remote sensing",
+      "type": "enum",
+      "property": "remote_sensing_3",
+      "base": "remote_sensing",
+      "endpoint": "3",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "internally",
+        "remotely"
+      ]
+    },
+    {
+      "name": "Remote sensing",
+      "type": "enum",
+      "property": "remote_sensing_4",
+      "base": "remote_sensing",
+      "endpoint": "4",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "internally",
+        "remotely"
+      ]
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor_type_3",
+      "base": "sensor_type",
+      "endpoint": "3",
+      "description": "Sensor type.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "3.3K",
+        "5.0K",
+        "6.8K",
+        "10.0K",
+        "12.0K",
+        "14.8K",
+        "15.0K",
+        "20.0K",
+        "33.0K",
+        "47.0K"
+      ]
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor_type_4",
+      "base": "sensor_type",
+      "endpoint": "4",
+      "description": "Sensor type.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "3.3K",
+        "5.0K",
+        "6.8K",
+        "10.0K",
+        "12.0K",
+        "14.8K",
+        "15.0K",
+        "20.0K",
+        "33.0K",
+        "47.0K"
+      ]
+    }
+  ],
+  "warnings": []
+}

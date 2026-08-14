@@ -1,0 +1,229 @@
+{
+  "model": "MJWSD06MMC",
+  "file": "MJWSD06MMC.md",
+  "vendor": "Xiaomi",
+  "description": "Temperature and Humidity Monitor 3 Mini (pvxx/ZigbeeTLc)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MJWSD06MMC.png",
+  "added_at": "2025-05-31T11:45:46",
+  "exposes_summary": "temperature, humidity, enable_display, temperature_display_mode, comfort_smiley, comfort_temperature_min, comfort_temperature_max, comfort_humidity_min, comfort_humidity_max, temperature_calibration, humidity_calibration, measurement_interval, battery, voltage",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Enable display",
+      "type": "binary",
+      "property": "enable_display",
+      "base": "enable_display",
+      "endpoint": null,
+      "description": "Whether to enable the device display..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Temperature display mode",
+      "type": "enum",
+      "property": "temperature_display_mode",
+      "base": "temperature_display_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Comfort smiley",
+      "type": "binary",
+      "property": "comfort_smiley",
+      "base": "comfort_smiley",
+      "endpoint": null,
+      "description": "Whether to show a comfort indicator on the device screen..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Comfort temperature min",
+      "type": "numeric",
+      "property": "comfort_temperature_min",
+      "base": "comfort_temperature_min",
+      "endpoint": null,
+      "description": "Minimum temperature that is considered comfortable (default 20.00°C)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 120,
+      "unit": "°C"
+    },
+    {
+      "name": "Comfort temperature max",
+      "type": "numeric",
+      "property": "comfort_temperature_max",
+      "base": "comfort_temperature_max",
+      "endpoint": null,
+      "description": "Maximum temperature that is considered comfortable (default 25.00°C)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 120,
+      "unit": "°C"
+    },
+    {
+      "name": "Comfort humidity min",
+      "type": "numeric",
+      "property": "comfort_humidity_min",
+      "base": "comfort_humidity_min",
+      "endpoint": null,
+      "description": "Minimum relative humidity that is considered comfortable (default 40.00%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Comfort humidity max",
+      "type": "numeric",
+      "property": "comfort_humidity_max",
+      "base": "comfort_humidity_max",
+      "endpoint": null,
+      "description": "Maximum relative humidity that is considered comfortable (default 60.00%)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Offset to add/subtract to the reported temperature (default 0°C)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Offset to add/subtract to the reported relative humidity (default 0%)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "%"
+    },
+    {
+      "name": "Measurement interval",
+      "type": "numeric",
+      "property": "measurement_interval",
+      "base": "measurement_interval",
+      "endpoint": null,
+      "description": "Configure sensor measurement interval (default 10 seconds)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 3,
+      "value_max": 255,
+      "unit": "s"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

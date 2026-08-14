@@ -1,0 +1,77 @@
+{
+  "model": "6735/6736/6737",
+  "file": "6735_6736_6737.md",
+  "vendor": "Busch-Jaeger",
+  "description": "Zigbee Light Link power supply/relay/dimmer/wall-switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/6735-6736-6737.png",
+  "added_at": "2020-01-14T19:34:25Z",
+  "exposes_summary": "light (state, brightness), action",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "relay",
+      "features": [
+        {
+          "property": "state_relay",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_relay",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "off_row_1",
+        "on_row_1",
+        "brightness_step_down_row_1",
+        "brightness_step_up_row_1",
+        "brightness_stop_row_1",
+        "off_row_2",
+        "on_row_2",
+        "brightness_step_down_row_2",
+        "brightness_step_up_row_2",
+        "brightness_stop_row_2",
+        "off_row_3",
+        "on_row_3",
+        "brightness_step_down_row_3",
+        "brightness_step_up_row_3",
+        "brightness_stop_row_3",
+        "off_row_4",
+        "on_row_4",
+        "brightness_step_down_row_4",
+        "brightness_step_up_row_4",
+        "brightness_stop_row_4",
+        "recall_*_row_*"
+      ]
+    }
+  ],
+  "warnings": []
+}

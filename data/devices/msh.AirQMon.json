@@ -1,0 +1,96 @@
+{
+  "model": "msh.AirQMon",
+  "file": "msh.AirQMon.md",
+  "vendor": "MySmartHouse",
+  "description": "MSH Air quality sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/msh.AirQMon.png",
+  "added_at": "2026-03-31T19:04:19",
+  "exposes_summary": "action, calibrate, co2, l2, cpu_temperature, l4",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "text",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "button clicks or data from/to UART.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Calibrate",
+      "type": "enum",
+      "property": "calibrate_l2",
+      "base": "calibrate",
+      "endpoint": "l2",
+      "description": "Calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "ZERO",
+        "SPAN"
+      ]
+    },
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "The measured CO2 (carbon dioxide) value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "L2",
+      "type": "numeric",
+      "property": "l2",
+      "base": "l2",
+      "endpoint": null,
+      "description": "Error.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "CPU temperature",
+      "type": "numeric",
+      "property": "temperature_l3",
+      "base": "temperature",
+      "endpoint": "l3",
+      "description": "Temperature of the CPU.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "L4",
+      "type": "numeric",
+      "property": "l4",
+      "base": "l4",
+      "endpoint": null,
+      "description": "Uptime (seconds).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

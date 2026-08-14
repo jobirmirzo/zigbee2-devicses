@@ -1,0 +1,138 @@
+{
+  "model": "VOCKQJK11LM",
+  "file": "VOCKQJK11LM.md",
+  "vendor": "Aqara",
+  "description": "TVOC air quality monitor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/VOCKQJK11LM.png",
+  "added_at": "2021-08-01T20:41:55Z",
+  "exposes_summary": "device_temperature, battery, voltage, air_quality, voc, temperature, humidity, display_unit",
+  "exposes": [
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Air quality",
+      "type": "enum",
+      "property": "air_quality",
+      "base": "air_quality",
+      "endpoint": null,
+      "description": "Measured air quality.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "excellent",
+        "good",
+        "moderate",
+        "poor",
+        "unhealthy",
+        "unknown"
+      ]
+    },
+    {
+      "name": "Voc",
+      "type": "numeric",
+      "property": "voc",
+      "base": "voc",
+      "endpoint": null,
+      "description": "Measured VOC value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "ppb"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Display unit",
+      "type": "enum",
+      "property": "display_unit",
+      "base": "display_unit",
+      "endpoint": null,
+      "description": "Units to show on the display.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "mgm3_celsius",
+        "ppb_celsius",
+        "mgm3_fahrenheit",
+        "ppb_fahrenheit"
+      ]
+    }
+  ],
+  "warnings": []
+}

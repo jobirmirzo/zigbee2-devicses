@@ -1,0 +1,55 @@
+{
+  "model": "02973.B",
+  "file": "02973.B.md",
+  "vendor": "Vimar",
+  "description": "Vimar IoT thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/02973.B.png",
+  "added_at": "2022-11-01T16:06:49",
+  "exposes_summary": "climate (occupied_heating_setpoint, occupied_cooling_setpoint, local_temperature, system_mode)",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 4,
+          "value_max": 40,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "occupied_cooling_setpoint",
+          "base": "occupied_cooling_setpoint",
+          "value_min": 4,
+          "value_max": 40,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "cool"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

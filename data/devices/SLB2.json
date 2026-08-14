@@ -1,0 +1,11 @@
+{
+  "model": "SLB2",
+  "file": "SLB2.md",
+  "vendor": "Hive",
+  "description": "Signal booster",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SLB2.png",
+  "added_at": "2020-05-19T20:48:40Z",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

@@ -1,0 +1,258 @@
+{
+  "model": "RM28-LE",
+  "file": "RM28-LE.md",
+  "vendor": "Ronco",
+  "description": "Zigbee roller shade motor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/RM28-LE.png",
+  "added_at": "2025-11-30T20:32:44",
+  "exposes_summary": "cover (state, position), mode, motor_direction, auto_power, work_state, countdown, countdown_left, time_total, situation_set, motor_fault, battery, border, position_best, click_control",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Operating mode. morning=normal, night=slower and quieter.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "morning",
+        "night"
+      ]
+    },
+    {
+      "name": "Motor direction",
+      "type": "enum",
+      "property": "motor_direction",
+      "base": "motor_direction",
+      "endpoint": null,
+      "description": "Motor rotation direction. Change if blind moves wrong way.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "forward",
+        "back"
+      ]
+    },
+    {
+      "name": "Auto power",
+      "type": "binary",
+      "property": "auto_power",
+      "base": "auto_power",
+      "endpoint": null,
+      "description": "Auto-complete open/close when curtain is manually pulled.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Work state",
+      "type": "enum",
+      "property": "work_state",
+      "base": "work_state",
+      "endpoint": null,
+      "description": "Current motor movement status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "opening",
+        "closing"
+      ]
+    },
+    {
+      "name": "Countdown",
+      "type": "enum",
+      "property": "countdown",
+      "base": "countdown",
+      "endpoint": null,
+      "description": "Countdown timer to trigger open/close.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "cancel",
+        "1h",
+        "2h",
+        "3h",
+        "4h"
+      ]
+    },
+    {
+      "name": "Countdown left",
+      "type": "numeric",
+      "property": "countdown_left",
+      "base": "countdown_left",
+      "endpoint": null,
+      "description": "Remaining countdown time in seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Time total",
+      "type": "numeric",
+      "property": "time_total",
+      "base": "time_total",
+      "endpoint": null,
+      "description": "Full travel time in ms, populated after calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ms"
+    },
+    {
+      "name": "Situation set",
+      "type": "enum",
+      "property": "situation_set",
+      "base": "situation_set",
+      "endpoint": null,
+      "description": "Whether motor treats 100% as fully open or fully closed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "fully_open",
+        "fully_close"
+      ]
+    },
+    {
+      "name": "Motor fault",
+      "type": "binary",
+      "property": "motor_fault",
+      "base": "motor_fault",
+      "endpoint": null,
+      "description": "Motor hardware fault.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Border",
+      "type": "enum",
+      "property": "border",
+      "base": "border",
+      "endpoint": null,
+      "description": "Set or clear motor travel limits.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "up",
+        "down",
+        "up_delete",
+        "down_delete",
+        "remove_top_bottom"
+      ]
+    },
+    {
+      "name": "Position best",
+      "type": "numeric",
+      "property": "position_best",
+      "base": "position_best",
+      "endpoint": null,
+      "description": "Saved favourite position.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Click control",
+      "type": "enum",
+      "property": "click_control",
+      "base": "click_control",
+      "endpoint": null,
+      "description": "Single jog step up or down.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "up",
+        "down"
+      ]
+    }
+  ],
+  "warnings": []
+}

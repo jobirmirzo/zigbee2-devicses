@@ -1,0 +1,131 @@
+{
+  "model": "POK008",
+  "file": "POK008.md",
+  "vendor": "PushOk Hardware",
+  "description": "Battery powered thermostat relay",
+  "image": "https://www.zigbee2mqtt.io/images/devices/POK008.png",
+  "added_at": "2024-08-01T18:23:41",
+  "exposes_summary": "switch (state), battery, voltage, temperature, tgt_temperature, hysteresis, set_op_mode",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Tgt temperature",
+      "type": "numeric",
+      "property": "tgt_temperature",
+      "base": "tgt_temperature",
+      "endpoint": null,
+      "description": "Target temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -45,
+      "value_max": 125,
+      "unit": "C"
+    },
+    {
+      "name": "Hysteresis",
+      "type": "numeric",
+      "property": "hysteresis",
+      "base": "hysteresis",
+      "endpoint": null,
+      "description": "Temperature hysteresis.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 40,
+      "unit": "C"
+    },
+    {
+      "name": "Set op mode",
+      "type": "enum",
+      "property": "set_op_mode",
+      "base": "set_op_mode",
+      "endpoint": null,
+      "description": "Operation mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "monitor",
+        "heater",
+        "cooler",
+        "monitor_inverted",
+        "heater_inverted",
+        "cooler_inverted"
+      ]
+    }
+  ],
+  "warnings": []
+}

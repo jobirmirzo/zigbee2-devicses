@@ -1,0 +1,126 @@
+{
+  "model": "3RWK0148Z",
+  "file": "3RWK0148Z.md",
+  "vendor": "Third Reality",
+  "description": "Smart watering kit",
+  "image": "https://www.zigbee2mqtt.io/images/devices/3RWK0148Z.png",
+  "added_at": "2024-10-31T20:34:53",
+  "exposes_summary": "battery, voltage, battery_low, switch (state), alarm_1, watering_times, interval_day",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Alarm 1",
+      "type": "binary",
+      "property": "alarm_1",
+      "base": "alarm_1",
+      "endpoint": null,
+      "description": "Water shortage warning.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Watering times",
+      "type": "numeric",
+      "property": "watering_times",
+      "base": "watering_times",
+      "endpoint": null,
+      "description": "watering times.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 1800,
+      "unit": "s"
+    },
+    {
+      "name": "Interval day",
+      "type": "numeric",
+      "property": "interval_day",
+      "base": "interval_day",
+      "endpoint": null,
+      "description": "interval day.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 30,
+      "unit": "Day"
+    }
+  ],
+  "warnings": []
+}

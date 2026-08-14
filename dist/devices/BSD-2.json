@@ -1,0 +1,164 @@
+{
+  "model": "BSD-2",
+  "file": "BSD-2.md",
+  "vendor": "Bosch",
+  "description": "Smoke alarm II",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BSD-2.png",
+  "added_at": "2023-03-30T17:14:41",
+  "exposes_summary": "smoke, smoke_alarm_silenced, button_pushed, manual_smoke_alarm, manual_burglar_alarm, broadcast_alarms, test_mode, test_mode_timeout, battery, battery_low",
+  "exposes": [
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Smoke alarm silenced",
+      "type": "binary",
+      "property": "smoke_alarm_silenced",
+      "base": "smoke_alarm_silenced",
+      "endpoint": null,
+      "description": "Indicates whether an smoke alarm was silenced on the device itself for 10 minutes. Please keep in mind that the smoke detection is being disabled during that time period as well..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Button pushed",
+      "type": "binary",
+      "property": "button_pushed",
+      "base": "button_pushed",
+      "endpoint": null,
+      "description": "Indicates whether the button on the device is being pushed for at least 3 seconds (e.g., to trigger a test alarm or silence a smoke alarm).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Manual smoke alarm",
+      "type": "binary",
+      "property": "manual_smoke_alarm",
+      "base": "manual_smoke_alarm",
+      "endpoint": null,
+      "description": "Indicates whether the smoke alarm siren is being manually activated on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Manual burglar alarm",
+      "type": "binary",
+      "property": "manual_burglar_alarm",
+      "base": "manual_burglar_alarm",
+      "endpoint": null,
+      "description": "Indicates whether the burglar alarm siren is being manually activated on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Broadcast alarms",
+      "type": "binary",
+      "property": "broadcast_alarms",
+      "base": "broadcast_alarms",
+      "endpoint": null,
+      "description": "Broadcast manual alarm state changes to all BSD-2 devices on the network. Please keep in mind that a detected smoke alarm is not being transmitted automatically to other devices. To achieve that, you must set up an automation, e.g., in Home Assistant..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Test mode",
+      "type": "binary",
+      "property": "test_mode",
+      "base": "test_mode",
+      "endpoint": null,
+      "description": "Check the function of the smoke alarm. Pay attention to the alarm sound and the flashing of the alarm LED. Please keep in mind that it can take up to 10 seconds for the test mode to be activated..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Test mode timeout",
+      "type": "numeric",
+      "property": "test_mode_timeout",
+      "base": "test_mode_timeout",
+      "endpoint": null,
+      "description": "Determines how long the test mode should be activated. The default length is 5 seconds..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 255,
+      "unit": "seconds"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

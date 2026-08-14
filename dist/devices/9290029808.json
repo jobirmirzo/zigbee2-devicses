@@ -1,0 +1,150 @@
+{
+  "model": "9290029808",
+  "file": "9290029808.md",
+  "vendor": "Philips",
+  "description": "Hue white filament Edison ST23 E26 LED warm-to-cool",
+  "image": "https://www.zigbee2mqtt.io/images/devices/9290029808.png",
+  "added_at": "2023-02-01T14:45:57",
+  "exposes_summary": "light (state, brightness, color_temp, color_temp_startup), power_on_behavior, effect, effect_speed, effect_color",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 222,
+          "value_max": 454,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup",
+          "base": "color_temp_startup",
+          "value_min": 222,
+          "value_max": 454,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "candle",
+        "sunset",
+        "sunrise",
+        "sparkle",
+        "opal",
+        "glisten",
+        "underwater",
+        "cosmos",
+        "sunbeam",
+        "enchant",
+        "none",
+        "finish_effect",
+        "stop_effect",
+        "stop_hue_effect"
+      ]
+    },
+    {
+      "name": "Effect speed",
+      "type": "numeric",
+      "property": "effect_speed",
+      "base": "effect_speed",
+      "endpoint": null,
+      "description": "Animation speed for the active effect (0=slowest, 1=fastest).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1
+    },
+    {
+      "name": "Effect color",
+      "type": "text",
+      "property": "effect_color",
+      "base": "effect_color",
+      "endpoint": null,
+      "description": "Set the base color of the active effect without stopping it (hex e.g. #FF4400, or JSON {\"x\":0.6,\"y\":0.3}).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      }
+    }
+  ],
+  "warnings": []
+}

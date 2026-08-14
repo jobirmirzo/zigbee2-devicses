@@ -1,0 +1,1312 @@
+{
+  "model": "MTV300E-UP",
+  "file": "MTV300E-UP.md",
+  "vendor": "YOKIS",
+  "description": "Remote dimmer with timer 300W",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MTV300E-UP.png",
+  "added_at": "2024-12-29T16:26:41",
+  "exposes_summary": "light (state, brightness), identify, prev_state, on_timer, enable_pre_on_delay, pre_on_delay, enable_pre_off_delay, pre_off_delay, pulse_duration, time_type, long_on_duration, operating_mode, enable_stop_announce, stop_announce_time, enable_deaf, deaf_blink_amount, deaf_blink_time, enable_blink, blink_amount, blink_on_time, blink_off_time, state_after_blink, enable_nc_command, move_to_position_command, pulse_command, blink_command, deaf_blink_command, long_on_command, power_failure_mode, current_position, memory_position, enable_ramp_up, ramp_up, enable_ramp_down, ramp_down, ramp_continuous_time, step_up, low_dim_limit, high_dim_limit, nightlight_starting_delay, nightlight_starting_brightness, nightlight_ending_brightness, nightlight_ramp_time, nightlight_on_time, favorite_position_1, favorite_position_2, favorite_position_3, step_controller_mode, memory_position_mode, step_down, step_continuous, step_nightlight, dimmer_loop_command, dimmer_Up_down_command, dimmer_min_max_command, dimmer_move_to_favorite, dimmer_start_nightlight_command, dimmer_start_nightlight_custom_command, reset_to_factory_settings, relaunch_ble_advert, input_mode, contact_mode, last_local_command_state, last_bp_connect_state, send_press, send_release, select_input_mode, enable_short_press, enable_long_press, long_press_duration, time_between_press, enable_R12M_long_press, enable_local_config_lock",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Prev state",
+      "type": "binary",
+      "property": "prev_state",
+      "base": "prev_state",
+      "endpoint": null,
+      "description": "Indicate the previous state before action.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "On timer",
+      "type": "numeric",
+      "property": "on_timer",
+      "base": "on_timer",
+      "endpoint": null,
+      "description": "Define the ON embedded timer duration in seconds. A `0` value will deactivate the timer.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Enable pre on delay",
+      "type": "binary",
+      "property": "enable_pre_on_delay",
+      "base": "enable_pre_on_delay",
+      "endpoint": null,
+      "description": "Enable (`0x01`) / Disable (`0x00`) PreOn delay.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Pre on delay",
+      "type": "numeric",
+      "property": "pre_on_delay",
+      "base": "pre_on_delay",
+      "endpoint": null,
+      "description": "Define the PreOn embedded delay in seconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Enable pre off delay",
+      "type": "binary",
+      "property": "enable_pre_off_delay",
+      "base": "enable_pre_off_delay",
+      "endpoint": null,
+      "description": "Enable (`0x01`) / Disable (`0x00`) PreOff delay.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Pre off delay",
+      "type": "numeric",
+      "property": "pre_off_delay",
+      "base": "pre_off_delay",
+      "endpoint": null,
+      "description": "Define the PreOff embedded delay in seconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Pulse duration",
+      "type": "numeric",
+      "property": "pulse_duration",
+      "base": "pulse_duration",
+      "endpoint": null,
+      "description": "Set the value of ON pulse length.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 20,
+      "value_max": 65534,
+      "unit": "ms"
+    },
+    {
+      "name": "Time type",
+      "type": "enum",
+      "property": "time_type",
+      "base": "time_type",
+      "endpoint": null,
+      "description": "Indicates the current Type of time selected that will be used during push button configuration: - 0x00 -> Seconds - 0x01 -> Minutes.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "seconds",
+        "minutes"
+      ]
+    },
+    {
+      "name": "Long on duration",
+      "type": "numeric",
+      "property": "long_on_duration",
+      "base": "long_on_duration",
+      "endpoint": null,
+      "description": "Set the value of the LONG ON embedded timer in seconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 4233600,
+      "unit": "s"
+    },
+    {
+      "name": "Operating mode",
+      "type": "enum",
+      "property": "operating_mode",
+      "base": "operating_mode",
+      "endpoint": null,
+      "description": "Indicates the operating mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "timer",
+        "staircase",
+        "pulse"
+      ]
+    },
+    {
+      "name": "Enable stop announce",
+      "type": "binary",
+      "property": "enable_stop_announce",
+      "base": "enable_stop_announce",
+      "endpoint": null,
+      "description": "Enable (`0x01`) / Disable (`0x00`) the announcement before turning OFF.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Stop announce time",
+      "type": "numeric",
+      "property": "stop_announce_time",
+      "base": "stop_announce_time",
+      "endpoint": null,
+      "description": "Time before goes off after the stop announce blinking. (In seconds).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 4233600,
+      "unit": "s"
+    },
+    {
+      "name": "Enable deaf",
+      "type": "binary",
+      "property": "enable_deaf",
+      "base": "enable_deaf",
+      "endpoint": null,
+      "description": "Enable (`0x01`) / Disable (`0x00`) Deaf Actions.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Deaf blink amount",
+      "type": "numeric",
+      "property": "deaf_blink_amount",
+      "base": "deaf_blink_amount",
+      "endpoint": null,
+      "description": "Define number of blink to do when receiving the DEAF action. One blink is considered as one ON step followed by one OFF step.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 20
+    },
+    {
+      "name": "Deaf blink time",
+      "type": "numeric",
+      "property": "deaf_blink_time",
+      "base": "deaf_blink_time",
+      "endpoint": null,
+      "description": "Define duration of a blink ON (In millisecond).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 100,
+      "value_max": 20000
+    },
+    {
+      "name": "Enable blink",
+      "type": "binary",
+      "property": "enable_blink",
+      "base": "enable_blink",
+      "endpoint": null,
+      "description": "Enable (`0x01`) / Disable (`0x00`) Blink  Actions.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Blink amount",
+      "type": "numeric",
+      "property": "blink_amount",
+      "base": "blink_amount",
+      "endpoint": null,
+      "description": "Number of blinks done when receiving the corresponding order. One blink is considered as one ON step followed by one OFF step.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 20
+    },
+    {
+      "name": "Blink on time",
+      "type": "numeric",
+      "property": "blink_on_time",
+      "base": "blink_on_time",
+      "endpoint": null,
+      "description": "Duration for the ON time on a blink period (In millisecond).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 4233600
+    },
+    {
+      "name": "Blink off time",
+      "type": "numeric",
+      "property": "blink_off_time",
+      "base": "blink_off_time",
+      "endpoint": null,
+      "description": "Duration for the OFF time on a blink period (In millisecond).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 4233600
+    },
+    {
+      "name": "State after blink",
+      "type": "enum",
+      "property": "state_after_blink",
+      "base": "state_after_blink",
+      "endpoint": null,
+      "description": "Indicate which state must be apply after a blink sequence.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "previous",
+        "off",
+        "on",
+        "infinite"
+      ]
+    },
+    {
+      "name": "Enable nc command",
+      "type": "binary",
+      "property": "enable_nc_command",
+      "base": "enable_nc_command",
+      "endpoint": null,
+      "description": "Define the output relay as Normally close.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Move to position command",
+      "type": "composite",
+      "property": "move_to_position_prop",
+      "base": "move_to_position_prop",
+      "endpoint": null,
+      "description": "Move to position specified in uc_BrightnessEnd parameter.If TOR mode is set (no dimming) or MTR : if uc_BrightnessEnd under 50% will set to OFF else will be set to ON.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "brightness_start",
+          "type": "numeric",
+          "description": "Define the brightness at the beginning of the transition, in %"
+        },
+        {
+          "property": "brightness_end",
+          "type": "numeric",
+          "description": "Define the brightness at the end of the transition, in %"
+        },
+        {
+          "property": "pre_timer_value",
+          "type": "numeric",
+          "description": "Define the pre timer value, otherwise use 0xFFFFFFFF to use the one configured in the product unit is s"
+        },
+        {
+          "property": "enable_pre_timer",
+          "type": "binary",
+          "description": "Define whether the device should use the pre timer or not, if 0xFF then use the one configured in product",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "timer_value",
+          "type": "numeric",
+          "description": "Define the timer ON value, otherwise use 0xFFFFFFFF to use the one configured in the product unit is s"
+        },
+        {
+          "property": "enable_timer",
+          "type": "binary",
+          "description": "Define whether the device should use the timer ON or not, if 0xFF then use the one configured in product",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "transition_time",
+          "type": "numeric",
+          "description": "Define the transition time from the brightness start to the brightness end, in ms"
+        }
+      ]
+    },
+    {
+      "name": "Pulse command",
+      "type": "composite",
+      "property": "pulse_prop",
+      "base": "pulse_prop",
+      "endpoint": null,
+      "description": "This command allows the relay to be controlled with an impulse. The pulse time is defined by PulseLength.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "pulse_length",
+          "type": "numeric",
+          "description": "Pulse length max value is 65535, unit is ms"
+        }
+      ]
+    },
+    {
+      "name": "Blink command",
+      "type": "composite",
+      "property": "blink_prop",
+      "base": "blink_prop",
+      "endpoint": null,
+      "description": "With this command, the module is asked to perform a blinking sequence..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "blink_amount",
+          "type": "numeric",
+          "description": "If defined will force the number of blink to be done (only for this order) if not the device will use its own value."
+        },
+        {
+          "property": "blink_on_period",
+          "type": "numeric",
+          "description": "If defined will force the blink’s “on time” (only for this order) if not the device will use its own value."
+        },
+        {
+          "property": "blink_off_period",
+          "type": "numeric",
+          "description": "If defined will force the blink’s “off time” (only for this order) if not the device will use its own value."
+        },
+        {
+          "property": "state_after_sequence",
+          "type": "enum",
+          "description": "If defined will force the state after the sequence (only for this order). if not the device will use its own value-",
+          "values": [
+            "previous",
+            "off",
+            "on",
+            "infinite"
+          ]
+        },
+        {
+          "property": "do_periodic_cycle",
+          "type": "binary",
+          "description": "If set to true the blinking will be “infinite”",
+          "values": [
+            "true",
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Deaf blink command",
+      "type": "composite",
+      "property": "deaf_blink_prop",
+      "base": "deaf_blink_prop",
+      "endpoint": null,
+      "description": "Start a deaf sequence on a device only if the attribute “eDeaf” is set to Enable.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "blink_amount",
+          "type": "numeric",
+          "description": "If defined will force the number of blink to be done during one sequence (only for this order) if not the device will use its own value"
+        },
+        {
+          "property": "blink_on_time",
+          "type": "numeric",
+          "description": "If defined will force the blink’s “on time” (only for this order) if not the device will use its own value"
+        },
+        {
+          "property": "sequence_amount",
+          "type": "numeric",
+          "description": "If defined will set the number of sequence to be done. Each sequence is spaced by 1 second. (Max 6) max value is 6"
+        },
+        {
+          "property": "sequence_of_blinks",
+          "type": "list",
+          "description": "Array with the number of blink to be done for each sequence. Will override “uc_BlinkAmount“"
+        }
+      ]
+    },
+    {
+      "name": "Long on command",
+      "type": "enum",
+      "property": "long_on_command",
+      "base": "long_on_command",
+      "endpoint": null,
+      "description": "Switch output ON for LONG ON DURATION time.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "longOnAction"
+      ]
+    },
+    {
+      "name": "Power failure mode",
+      "type": "enum",
+      "property": "power_failure_mode",
+      "base": "power_failure_mode",
+      "endpoint": null,
+      "description": "Define the device behavior after power failure.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "last_state",
+        "off",
+        "on",
+        "blink"
+      ]
+    },
+    {
+      "name": "Current position",
+      "type": "numeric",
+      "property": "current_position",
+      "base": "current_position",
+      "endpoint": null,
+      "description": "This attribute defines the current position, in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Memory position",
+      "type": "numeric",
+      "property": "memory_position",
+      "base": "memory_position",
+      "endpoint": null,
+      "description": "This attribute defines the memory position, in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Enable ramp up",
+      "type": "binary",
+      "property": "enable_ramp_up",
+      "base": "enable_ramp_up",
+      "endpoint": null,
+      "description": "This attribute defines if a ramp up should be used or not.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Ramp up",
+      "type": "numeric",
+      "property": "ramp_up",
+      "base": "ramp_up",
+      "endpoint": null,
+      "description": "This attribute defines the time taken during the ramp up in ms.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400000
+    },
+    {
+      "name": "Enable ramp down",
+      "type": "binary",
+      "property": "enable_ramp_down",
+      "base": "enable_ramp_down",
+      "endpoint": null,
+      "description": "This attribute defines if a ramp down should be used or not.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Ramp down",
+      "type": "numeric",
+      "property": "ramp_down",
+      "base": "ramp_down",
+      "endpoint": null,
+      "description": "This attribute defines the time taken during the ramp down in ms.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400000
+    },
+    {
+      "name": "Ramp continuous time",
+      "type": "numeric",
+      "property": "ramp_continuous_time",
+      "base": "ramp_continuous_time",
+      "endpoint": null,
+      "description": "This attribute defines the time taken during the ramp loop in ms.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400000
+    },
+    {
+      "name": "Step up",
+      "type": "numeric",
+      "property": "step_up",
+      "base": "step_up",
+      "endpoint": null,
+      "description": "This attribute defines the value of each step during a dimming up. This value is set in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Low dim limit",
+      "type": "numeric",
+      "property": "low_dim_limit",
+      "base": "low_dim_limit",
+      "endpoint": null,
+      "description": "This attribute defines the value of the low dim limit, used during a dimming loop, on a long press for example. This value is set in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "High dim limit",
+      "type": "numeric",
+      "property": "high_dim_limit",
+      "base": "high_dim_limit",
+      "endpoint": null,
+      "description": "This attribute defines the value of the high dim limit, used during a dimming loop, on a long press for example. This value is set in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Nightlight starting delay",
+      "type": "numeric",
+      "property": "nightlight_starting_delay",
+      "base": "nightlight_starting_delay",
+      "endpoint": null,
+      "description": "This attribute defines the time before the nightlight begin. This value is set in seconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 4294967294
+    },
+    {
+      "name": "Nightlight starting brightness",
+      "type": "numeric",
+      "property": "nightlight_starting_brightness",
+      "base": "nightlight_starting_brightness",
+      "endpoint": null,
+      "description": "This attribute defines the dimming value at the start of the nightlight. This value is set in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Nightlight ending brightness",
+      "type": "numeric",
+      "property": "nightlight_ending_brightness",
+      "base": "nightlight_ending_brightness",
+      "endpoint": null,
+      "description": "This attribute defines the dimming value at the last step of the nightlight. This attribute must be lower than 0x000D : Nightlight starting brightness. This value is set in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Nightlight ramp time",
+      "type": "numeric",
+      "property": "nightlight_ramp_time",
+      "base": "nightlight_ramp_time",
+      "endpoint": null,
+      "description": "This attribute defines the ramp duration of the nightlight. The ramp is running after the end of the starting delay and until the ending bright is reached. This value is set in seconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400000
+    },
+    {
+      "name": "Nightlight on time",
+      "type": "numeric",
+      "property": "nightlight_on_time",
+      "base": "nightlight_on_time",
+      "endpoint": null,
+      "description": "This attribute defines the total duration of the nightlight. It must not be lower than 0x000F : Nightlight ramp time. This value is set in seconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 4233600
+    },
+    {
+      "name": "Favorite position 1",
+      "type": "numeric",
+      "property": "favorite_position_1",
+      "base": "favorite_position_1",
+      "endpoint": null,
+      "description": "This attribute defines the value of the favorite position 1. This value is set in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Favorite position 2",
+      "type": "numeric",
+      "property": "favorite_position_2",
+      "base": "favorite_position_2",
+      "endpoint": null,
+      "description": "This attribute defines the value of the favorite position 2. This value is set in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Favorite position 3",
+      "type": "numeric",
+      "property": "favorite_position_3",
+      "base": "favorite_position_3",
+      "endpoint": null,
+      "description": "This attribute defines the value of the favorite position 3. This value is set in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Step controller mode",
+      "type": "binary",
+      "property": "step_controller_mode",
+      "base": "step_controller_mode",
+      "endpoint": null,
+      "description": "This attribute enables or disables the 2-step controller mode. This mode enable product to run without any ramp before and after ON or OFF. It acts like a relay.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Memory position mode",
+      "type": "binary",
+      "property": "memory_position_mode",
+      "base": "memory_position_mode",
+      "endpoint": null,
+      "description": "This attribute enables or disables the memory position mode at first push button release.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Step down",
+      "type": "numeric",
+      "property": "step_down",
+      "base": "step_down",
+      "endpoint": null,
+      "description": "This attribute defines the value of each step during a dimming down. This value is set in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Step continuous",
+      "type": "numeric",
+      "property": "step_continuous",
+      "base": "step_continuous",
+      "endpoint": null,
+      "description": "This attribute defines the value of each step during a dimming loop. This value is set in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Step nightlight",
+      "type": "numeric",
+      "property": "step_nightlight",
+      "base": "step_nightlight",
+      "endpoint": null,
+      "description": "This attribute defines the value of each step during the ramp down of the nightlight mode. This value is set in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Dimmer loop command",
+      "type": "composite",
+      "property": "dimmer_prop",
+      "base": "dimmer_prop",
+      "endpoint": null,
+      "description": "Start the dimming loop process for the selected duration..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "ramp_continuous_duration",
+          "type": "numeric",
+          "description": "Set the duration of the ramp for the continuous variation, otherwise use 0xFFFFFFFF to use the one configured in the product unit is ms"
+        },
+        {
+          "property": "step_continuous",
+          "type": "numeric",
+          "description": "Set the step size, otherwise use 0xFF to use the one configured in the product. Value is in % unit is s"
+        }
+      ]
+    },
+    {
+      "name": "Dimmer Up down command",
+      "type": "enum",
+      "property": "dimmer_Up_down_command",
+      "base": "dimmer_Up_down_command",
+      "endpoint": null,
+      "description": "Dim up or Down.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "dimUp",
+        "dimDown"
+      ]
+    },
+    {
+      "name": "Dimmer min max command",
+      "type": "composite",
+      "property": "dimmer_min_max_prop",
+      "base": "dimmer_min_max_prop",
+      "endpoint": null,
+      "description": "Start dimming to the min or max value set in the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "transition_time",
+          "type": "numeric",
+          "description": "Set the transition time to the selected value, otherwise use 0xFFFFFFFF to use the one configured in the product. Value is in ms unit is ms"
+        }
+      ]
+    },
+    {
+      "name": "Dimmer move to favorite",
+      "type": "enum",
+      "property": "dimmer_move_to_favorite",
+      "base": "dimmer_move_to_favorite",
+      "endpoint": null,
+      "description": "Start dimming to the favorite position 1, 2 or 3.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "moveToFavorite1",
+        "moveToFavorite2",
+        "moveToFavorite3"
+      ]
+    },
+    {
+      "name": "Dimmer start nightlight command",
+      "type": "enum",
+      "property": "dimmer_start_nightlight_command",
+      "base": "dimmer_start_nightlight_command",
+      "endpoint": null,
+      "description": "Trigger Starnight mode from the current diming value.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "startNightLightModeCurrent"
+      ]
+    },
+    {
+      "name": "Dimmer start nightlight custom command",
+      "type": "composite",
+      "property": "dimmer_start_nightlight_custom_prop",
+      "base": "dimmer_start_nightlight_custom_prop",
+      "endpoint": null,
+      "description": "Start the nightlight mode with the given parameters.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "childmode_starting_delay",
+          "type": "numeric",
+          "description": "Set the starting delay value, used before the start of the nightlight, otherwise use 0xFFFFFFFF to use the one configured in the product. Value is in ms unit is ms"
+        },
+        {
+          "property": "childmode_brightness_start",
+          "type": "numeric",
+          "description": "Set the brightness at the beginning of the ramp, otherwise use 0xFF to use the one configured in the product. Value is in % unit is %"
+        },
+        {
+          "property": "childmode_brightness_end",
+          "type": "numeric",
+          "description": "Set the brightness at the end of the ramp, otherwise use 0xFF to use the one configured in the product. Value is in % unit is %"
+        },
+        {
+          "property": "childmode_ramp_duration",
+          "type": "numeric",
+          "description": "Set the ramp duration, otherwise use 0xFFFFFFFF to use the one configured in the product. Value is in ms unit is ms"
+        },
+        {
+          "property": "childmode_on_duration",
+          "type": "numeric",
+          "description": "Set the total duration of the nightlight, otherwise use 0xFFFFFFFF to use the one configured in the product. Value is in ms unit is ms"
+        },
+        {
+          "property": "childmode_step",
+          "type": "numeric",
+          "description": "Set the step size between each dim, otherwise use 0xFF to use the one configured in the product. Value is in % unit is %"
+        }
+      ]
+    },
+    {
+      "name": "Reset to factory settings",
+      "type": "enum",
+      "property": "reset_to_factory_settings",
+      "base": "reset_to_factory_settings",
+      "endpoint": null,
+      "description": "Reset setting depending on RESET ACTION value.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "factory_reset",
+        "configuration_reset",
+        "network_reset"
+      ]
+    },
+    {
+      "name": "Relaunch ble advert",
+      "type": "enum",
+      "property": "relaunch_ble_advert",
+      "base": "relaunch_ble_advert",
+      "endpoint": null,
+      "description": "Relaunch BLE advertising for 15 minutes.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "relaunch_ble_advert"
+      ]
+    },
+    {
+      "name": "Input mode",
+      "type": "enum",
+      "property": "input_mode",
+      "base": "input_mode",
+      "endpoint": null,
+      "description": "Indicate how the input should be handled.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "unknown",
+        "push_button",
+        "switch",
+        "relay",
+        "fp_in"
+      ]
+    },
+    {
+      "name": "Contact mode",
+      "type": "enum",
+      "property": "contact_mode",
+      "base": "contact_mode",
+      "endpoint": null,
+      "description": "Indicate the contact nature of the entry.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "nc",
+        "no"
+      ]
+    },
+    {
+      "name": "Last local command state",
+      "type": "binary",
+      "property": "last_local_command_state",
+      "base": "last_local_command_state",
+      "endpoint": null,
+      "description": "Indicate the last known state of the local BP.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "PRESSED",
+      "value_off": "RELEASED"
+    },
+    {
+      "name": "Last bp connect state",
+      "type": "binary",
+      "property": "last_bp_connect_state",
+      "base": "last_bp_connect_state",
+      "endpoint": null,
+      "description": "Indicate the last known state of the Bp connect.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "PRESSED",
+      "value_off": "RELEASED"
+    },
+    {
+      "name": "Send press",
+      "type": "enum",
+      "property": "send_press",
+      "base": "send_press",
+      "endpoint": null,
+      "description": "Send to the server cluster a button press.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SendPress"
+      ]
+    },
+    {
+      "name": "Send release",
+      "type": "enum",
+      "property": "send_release",
+      "base": "send_release",
+      "endpoint": null,
+      "description": "Send to the server cluster a button release.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SendRelease"
+      ]
+    },
+    {
+      "name": "Select input mode",
+      "type": "enum",
+      "property": "select_input_mode",
+      "base": "select_input_mode",
+      "endpoint": null,
+      "description": "Change the Input mode to use switch input, wired relay or simple push button.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "unknown",
+        "push_button",
+        "switch",
+        "relay",
+        "fp_in"
+      ]
+    },
+    {
+      "name": "Enable short press",
+      "type": "binary",
+      "property": "enable_short_press",
+      "base": "enable_short_press",
+      "endpoint": null,
+      "description": "Use to enable short press action.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Enable long press",
+      "type": "binary",
+      "property": "enable_long_press",
+      "base": "enable_long_press",
+      "endpoint": null,
+      "description": "Use to enable long press action.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Long press duration",
+      "type": "numeric",
+      "property": "long_press_duration",
+      "base": "long_press_duration",
+      "endpoint": null,
+      "description": "Define long Press duration in milliseconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "ms"
+    },
+    {
+      "name": "Time between press",
+      "type": "numeric",
+      "property": "time_between_press",
+      "base": "time_between_press",
+      "endpoint": null,
+      "description": "Define the maximum time between 2 press to keep in a sequence (In milliseconds).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 100,
+      "value_max": 600,
+      "unit": "ms"
+    },
+    {
+      "name": "Enable R12M long press",
+      "type": "binary",
+      "property": "enable_R12M_long_press",
+      "base": "enable_R12M_long_press",
+      "endpoint": null,
+      "description": "Enable R12M Long Press action.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Enable local config lock",
+      "type": "binary",
+      "property": "enable_local_config_lock",
+      "base": "enable_local_config_lock",
+      "endpoint": null,
+      "description": "Disable local configuration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

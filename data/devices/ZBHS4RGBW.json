@@ -1,0 +1,55 @@
+{
+  "model": "ZBHS4RGBW",
+  "file": "ZBHS4RGBW.md",
+  "vendor": "EVN",
+  "description": "Zigbee 4 channel RGBW remote control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZBHS4RGBW.png",
+  "added_at": "2022-03-01T09:06:16",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "color_move",
+        "color_temperature_move",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_stop",
+        "hue_move",
+        "hue_stop",
+        "recall_*",
+        "on",
+        "off"
+      ]
+    }
+  ],
+  "warnings": []
+}

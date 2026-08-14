@@ -1,0 +1,272 @@
+{
+  "model": "EFEKTA_CO2_Smart_Monitor",
+  "file": "EFEKTA_CO2_Smart_Monitor.md",
+  "vendor": "EFEKTA",
+  "description": "EFEKTA CO2 Smart Monitor, rgb indicator, can control the relay, binding",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_CO2_Smart_Monitor.png",
+  "added_at": "2022-08-01T15:06:58",
+  "exposes_summary": "co2, temperature, humidity, reading_interval, light_indicator, light_indicator_level, set_altitude, temperature_offset, humidity_offset, automatic_calibrations, forced_recalibration, factory_reset_co2, manual_forced_recalibration, enable_gas, invert_logic_gas, high_gas, low_gas",
+  "exposes": [
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "Measured value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Reading interval",
+      "type": "numeric",
+      "property": "reading_interval",
+      "base": "reading_interval",
+      "endpoint": null,
+      "description": "Setting the sensor reading interval..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 15,
+      "value_max": 300,
+      "unit": "seconds"
+    },
+    {
+      "name": "Light indicator",
+      "type": "binary",
+      "property": "light_indicator",
+      "base": "light_indicator",
+      "endpoint": null,
+      "description": "Enable or Disable light indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Light indicator level",
+      "type": "numeric",
+      "property": "light_indicator_level",
+      "base": "light_indicator_level",
+      "endpoint": null,
+      "description": "Light indicator level.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Set altitude",
+      "type": "numeric",
+      "property": "set_altitude",
+      "base": "set_altitude",
+      "endpoint": null,
+      "description": "Setting the altitude above sea level (for high accuracy of the CO2 sensor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3000,
+      "unit": "meters"
+    },
+    {
+      "name": "Temperature offset",
+      "type": "numeric",
+      "property": "temperature_offset",
+      "base": "temperature_offset",
+      "endpoint": null,
+      "description": "Adjust temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity offset",
+      "type": "numeric",
+      "property": "humidity_offset",
+      "base": "humidity_offset",
+      "endpoint": null,
+      "description": "Adjust humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "%"
+    },
+    {
+      "name": "Automatic calibrations",
+      "type": "binary",
+      "property": "automatic_calibrations",
+      "base": "automatic_calibrations",
+      "endpoint": null,
+      "description": "Automatic calibration of the CO2 sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Forced recalibration",
+      "type": "binary",
+      "property": "forced_recalibration",
+      "base": "forced_recalibration",
+      "endpoint": null,
+      "description": "Start FRC (Perform Forced Recalibration of the CO2 Sensor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Factory reset co2",
+      "type": "binary",
+      "property": "factory_reset_co2",
+      "base": "factory_reset_co2",
+      "endpoint": null,
+      "description": "Factory Reset CO2 sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Manual forced recalibration",
+      "type": "numeric",
+      "property": "manual_forced_recalibration",
+      "base": "manual_forced_recalibration",
+      "endpoint": null,
+      "description": "Start Manual FRC (Perform Forced Recalibration of the CO2 Sensor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Enable gas",
+      "type": "binary",
+      "property": "enable_gas",
+      "base": "enable_gas",
+      "endpoint": null,
+      "description": "Enable CO2 Gas Control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Invert logic gas",
+      "type": "binary",
+      "property": "invert_logic_gas",
+      "base": "invert_logic_gas",
+      "endpoint": null,
+      "description": "Enable invert logic CO2 Gas Control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "High gas",
+      "type": "numeric",
+      "property": "high_gas",
+      "base": "high_gas",
+      "endpoint": null,
+      "description": "Setting High CO2 Gas Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 400,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Low gas",
+      "type": "numeric",
+      "property": "low_gas",
+      "base": "low_gas",
+      "endpoint": null,
+      "description": "Setting Low CO2 Gas Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 400,
+      "value_max": 5000,
+      "unit": "ppm"
+    }
+  ],
+  "warnings": []
+}

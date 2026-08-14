@@ -1,0 +1,303 @@
+{
+  "model": "Bed.box",
+  "file": "Bed.box.md",
+  "vendor": "Sprut.device",
+  "description": "Sprut bed.box ergomotion controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Bed.box.png",
+  "added_at": "2025-04-01T18:30:52",
+  "exposes_summary": "head_position, foot_position, current_head_position, current_foot_position, head_massage_intensity, foot_massage_intensity, massage_duration, switch (state)",
+  "exposes": [
+    {
+      "name": "Head position",
+      "type": "numeric",
+      "property": "head_position_head_control",
+      "base": "head_position",
+      "endpoint": "head_control",
+      "description": "Head position (0-100%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Foot position",
+      "type": "numeric",
+      "property": "foot_position_foot_control",
+      "base": "foot_position",
+      "endpoint": "foot_control",
+      "description": "Foot position (0-100%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Current head position",
+      "type": "numeric",
+      "property": "current_head_position_head_feedback",
+      "base": "current_head_position",
+      "endpoint": "head_feedback",
+      "description": "Current head position.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Current foot position",
+      "type": "numeric",
+      "property": "current_foot_position_foot_feedback",
+      "base": "current_foot_position",
+      "endpoint": "foot_feedback",
+      "description": "Current foot position.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Head massage intensity",
+      "type": "enum",
+      "property": "head_massage_intensity_head_massage_intensity",
+      "base": "head_massage_intensity",
+      "endpoint": "head_massage_intensity",
+      "description": "Head massage intensity (0-6).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "one",
+        "two",
+        "three",
+        "four",
+        "five"
+      ]
+    },
+    {
+      "name": "Foot massage intensity",
+      "type": "enum",
+      "property": "foot_massage_intensity_foot_massage_intensity",
+      "base": "foot_massage_intensity",
+      "endpoint": "foot_massage_intensity",
+      "description": "Foot massage intensity (0-6).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "one",
+        "two",
+        "three",
+        "four",
+        "five"
+      ]
+    },
+    {
+      "name": "Massage duration",
+      "type": "enum",
+      "property": "massage_duration_massage_duration",
+      "base": "massage_duration",
+      "endpoint": "massage_duration",
+      "description": "Massage duration (0=off, 1=10min, 2=20min, 3=30min).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "ten_min",
+        "twenty_min",
+        "thirty_min"
+      ]
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "light",
+      "features": [
+        {
+          "property": "state_light",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "flat",
+      "features": [
+        {
+          "property": "state_flat",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "zero_gravity",
+      "features": [
+        {
+          "property": "state_zero_gravity",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "reading",
+      "features": [
+        {
+          "property": "state_reading",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "tv",
+      "features": [
+        {
+          "property": "state_tv",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "clear_angles_settings",
+      "features": [
+        {
+          "property": "state_clear_angles_settings",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "massage",
+      "features": [
+        {
+          "property": "state_massage",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "anti_snoring",
+      "features": [
+        {
+          "property": "state_anti_snoring",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "move",
+      "features": [
+        {
+          "property": "state_move",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "stop",
+      "features": [
+        {
+          "property": "state_stop",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

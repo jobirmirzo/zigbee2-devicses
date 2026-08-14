@@ -1,0 +1,27 @@
+{
+  "model": "SGPHM-I1",
+  "file": "SGPHM-I1.md",
+  "vendor": "GS",
+  "description": "Propane gas sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SGPHM-I1.png",
+  "added_at": "2022-06-01T15:08:55",
+  "exposes_summary": "gas",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "binary",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

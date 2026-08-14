@@ -1,0 +1,238 @@
+{
+  "model": "ZG-205ZL",
+  "file": "ZG-205ZL.md",
+  "vendor": "Tuya",
+  "description": "24Ghz/5.8GHz human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-205ZL.png",
+  "added_at": "2023-08-19T9:25:00",
+  "exposes_summary": "presence, motion_state, illuminance, fading_time, large_motion_detection_distance, large_motion_detection_sensitivity, small_motion_detection_distance, small_motion_detection_sensitivity, static_detection_distance, static_detection_sensitivity, mode, alarm_volume, alarm_time, light_mode",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Motion state",
+      "type": "enum",
+      "property": "motion_state",
+      "base": "motion_state",
+      "endpoint": null,
+      "description": "Motion state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "large",
+        "small",
+        "static"
+      ]
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Fading time",
+      "type": "numeric",
+      "property": "fading_time",
+      "base": "fading_time",
+      "endpoint": null,
+      "description": "Presence keep time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Large motion detection distance",
+      "type": "numeric",
+      "property": "large_motion_detection_distance",
+      "base": "large_motion_detection_distance",
+      "endpoint": null,
+      "description": "Large motion detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "m"
+    },
+    {
+      "name": "Large motion detection sensitivity",
+      "type": "numeric",
+      "property": "large_motion_detection_sensitivity",
+      "base": "large_motion_detection_sensitivity",
+      "endpoint": null,
+      "description": "Large motion detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Small motion detection distance",
+      "type": "numeric",
+      "property": "small_motion_detection_distance",
+      "base": "small_motion_detection_distance",
+      "endpoint": null,
+      "description": "Small motion detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 6,
+      "unit": "m"
+    },
+    {
+      "name": "Small motion detection sensitivity",
+      "type": "numeric",
+      "property": "small_motion_detection_sensitivity",
+      "base": "small_motion_detection_sensitivity",
+      "endpoint": null,
+      "description": "Small motion detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Static detection distance",
+      "type": "numeric",
+      "property": "static_detection_distance",
+      "base": "static_detection_distance",
+      "endpoint": null,
+      "description": "Static detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 6,
+      "unit": "m"
+    },
+    {
+      "name": "Static detection sensitivity",
+      "type": "numeric",
+      "property": "static_detection_sensitivity",
+      "base": "static_detection_sensitivity",
+      "endpoint": null,
+      "description": "Static detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Working mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "arm",
+        "alarm",
+        "doorbell"
+      ]
+    },
+    {
+      "name": "Alarm volume",
+      "type": "enum",
+      "property": "alarm_volume",
+      "base": "alarm_volume",
+      "endpoint": null,
+      "description": "Alarm volume.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "mute",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Alarm time",
+      "type": "numeric",
+      "property": "alarm_time",
+      "base": "alarm_time",
+      "endpoint": null,
+      "description": "Alarm time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 60,
+      "unit": "m"
+    },
+    {
+      "name": "Light mode",
+      "type": "binary",
+      "property": "light_mode",
+      "base": "light_mode",
+      "endpoint": null,
+      "description": "LED indicator mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

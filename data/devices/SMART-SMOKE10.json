@@ -1,0 +1,137 @@
+{
+  "model": "SMART-SMOKE10",
+  "file": "SMART-SMOKE10.md",
+  "vendor": "Alecto",
+  "description": "Smoke detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SMART-SMOKE10.png",
+  "added_at": "2022-06-14T22:06:16",
+  "exposes_summary": "smoke_state, battery_state, checking_result, smoke_value, battery, lifecycle, self_checking, silence",
+  "exposes": [
+    {
+      "name": "Smoke state",
+      "type": "enum",
+      "property": "smoke_state",
+      "base": "smoke_state",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "alarm",
+        "normal"
+      ]
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "middle",
+        "high"
+      ]
+    },
+    {
+      "name": "Checking result",
+      "type": "enum",
+      "property": "checking_result",
+      "base": "checking_result",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "checking",
+        "check_success",
+        "check_failure",
+        "others"
+      ]
+    },
+    {
+      "name": "Smoke value",
+      "type": "numeric",
+      "property": "smoke_value",
+      "base": "smoke_value",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Lifecycle",
+      "type": "binary",
+      "property": "lifecycle",
+      "base": "lifecycle",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Self checking",
+      "type": "binary",
+      "property": "self_checking",
+      "base": "self_checking",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Silence",
+      "type": "binary",
+      "property": "silence",
+      "base": "silence",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

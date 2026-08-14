@@ -1,0 +1,124 @@
+{
+  "model": "MB60L-ZG-ZT-TY",
+  "file": "MB60L-ZG-ZT-TY.md",
+  "vendor": "Manhot",
+  "description": "Smart blinds motor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MB60L-ZG-ZT-TY.png",
+  "added_at": "2025-07-01T17:54:38",
+  "exposes_summary": "battery, cover (state, position), set_limits, motor_direction, tilt_mode, child_lock",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Set limits",
+      "type": "enum",
+      "property": "set_limits",
+      "base": "set_limits",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "up",
+        "down",
+        "reset"
+      ]
+    },
+    {
+      "name": "Motor direction",
+      "type": "enum",
+      "property": "motor_direction",
+      "base": "motor_direction",
+      "endpoint": null,
+      "description": "Motor Steering.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "normal",
+        "reversed"
+      ]
+    },
+    {
+      "name": "Tilt mode",
+      "type": "binary",
+      "property": "tilt_mode",
+      "base": "tilt_mode",
+      "endpoint": null,
+      "description": "Step movement.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Child Lock.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

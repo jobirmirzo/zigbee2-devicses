@@ -1,0 +1,43 @@
+{
+  "model": "VES-ZB-MOT-019",
+  "file": "VES-ZB-MOT-019.md",
+  "vendor": "Vesternet",
+  "description": "Zigbee motor controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/VES-ZB-MOT-019.png",
+  "added_at": "2023-03-01T15:36:38",
+  "exposes_summary": "cover (state, position)",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

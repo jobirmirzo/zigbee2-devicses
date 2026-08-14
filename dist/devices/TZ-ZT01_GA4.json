@@ -1,0 +1,72 @@
+{
+  "model": "TZ-ZT01_GA4",
+  "file": "TZ-ZT01_GA4.md",
+  "vendor": "Tuya",
+  "description": "Temperature & humidity Sensor with external probe",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TZ-ZT01_GA4.png",
+  "added_at": "2026-01-01T13:30:29",
+  "exposes_summary": "temperature, temperature_probe, humidity, battery_state",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature probe",
+      "type": "numeric",
+      "property": "temperature_probe",
+      "base": "temperature_probe",
+      "endpoint": null,
+      "description": "Probe temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "State of the battery.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "warnings": []
+}

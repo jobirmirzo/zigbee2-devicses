@@ -1,0 +1,204 @@
+{
+  "model": "NAS-PD07",
+  "file": "NAS-PD07.md",
+  "vendor": "NEO",
+  "description": "Motion, temperature & humidity sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/NAS-PD07.png",
+  "added_at": "2021-10-30T12:58:50",
+  "exposes_summary": "occupancy, humidity, temperature, tamper, battery_low, power_type, alarm, temperature_min, temperature_max, temperature_scale, humidity_min, humidity_max",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Power type",
+      "type": "enum",
+      "property": "power_type",
+      "base": "power_type",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "battery_full",
+        "battery_high",
+        "battery_medium",
+        "battery_low",
+        "usb"
+      ]
+    },
+    {
+      "name": "Alarm",
+      "type": "enum",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Temperature/humidity alarm status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "over_temperature",
+        "over_humidity",
+        "below_min_temperature",
+        "below_min_humdity",
+        "off"
+      ]
+    },
+    {
+      "name": "Temperature min",
+      "type": "numeric",
+      "property": "temperature_min",
+      "base": "temperature_min",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -20,
+      "value_max": 80,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature max",
+      "type": "numeric",
+      "property": "temperature_max",
+      "base": "temperature_max",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -20,
+      "value_max": 80,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature scale",
+      "type": "binary",
+      "property": "temperature_scale",
+      "base": "temperature_scale",
+      "endpoint": null,
+      "description": "Temperature scale (°F/°C).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "°C",
+      "value_off": "°F"
+    },
+    {
+      "name": "Humidity min",
+      "type": "numeric",
+      "property": "humidity_min",
+      "base": "humidity_min",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Humidity max",
+      "type": "numeric",
+      "property": "humidity_max",
+      "base": "humidity_max",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,55 @@
+{
+  "model": "4512706",
+  "file": "4512706.md",
+  "vendor": "Namron",
+  "description": "Remote control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/4512706.png",
+  "added_at": "2020-04-08T17:49:06Z",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_step_up",
+        "brightness_step_down",
+        "color_temperature_step_up",
+        "color_temperature_step_down",
+        "recall_*",
+        "color_temperature_move",
+        "move_to_hue_l1",
+        "move_to_hue_l2",
+        "move_to_hue_l3",
+        "move_to_hue_l4"
+      ]
+    }
+  ],
+  "warnings": []
+}

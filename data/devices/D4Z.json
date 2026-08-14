@@ -1,0 +1,486 @@
+{
+  "model": "D4Z",
+  "file": "D4Z.md",
+  "vendor": "Nous",
+  "description": "Smart energy monitor for 3P+N system",
+  "image": "https://www.zigbee2mqtt.io/images/devices/D4Z.png",
+  "added_at": "2024-09-01T12:39:25",
+  "exposes_summary": "faults, power, power_factor, ac_frequency, energy, produced_energy, energy_reset, power_a, power_b, power_c, power_factor_a, power_factor_b, power_factor_c, current_a, current_b, current_c, voltage_a, voltage_b, voltage_c, energy_a, energy_b, energy_c, energy_produced_a, energy_produced_b, energy_produced_c, alarm_set_1, alarm_set_2",
+  "exposes": [
+    {
+      "name": "Faults",
+      "type": "list",
+      "property": "faults",
+      "base": "faults",
+      "endpoint": null,
+      "description": "List of current faults.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Total active power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power factor",
+      "type": "numeric",
+      "property": "power_factor",
+      "base": "power_factor",
+      "endpoint": null,
+      "description": "Total power factor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "AC frequency",
+      "type": "numeric",
+      "property": "ac_frequency",
+      "base": "ac_frequency",
+      "endpoint": null,
+      "description": "Measured electrical AC frequency.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Total consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Produced energy",
+      "type": "numeric",
+      "property": "produced_energy",
+      "base": "produced_energy",
+      "endpoint": null,
+      "description": "Total produced energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy reset",
+      "type": "enum",
+      "property": "energy_reset",
+      "base": "energy_reset",
+      "endpoint": null,
+      "description": "Set the energy measurements to zero.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "RESET"
+      ]
+    },
+    {
+      "name": "Power a",
+      "type": "numeric",
+      "property": "power_a",
+      "base": "power_a",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power b",
+      "type": "numeric",
+      "property": "power_b",
+      "base": "power_b",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power c",
+      "type": "numeric",
+      "property": "power_c",
+      "base": "power_c",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase C).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power factor a",
+      "type": "numeric",
+      "property": "power_factor_a",
+      "base": "power_factor_a",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Power factor b",
+      "type": "numeric",
+      "property": "power_factor_b",
+      "base": "power_factor_b",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Power factor c",
+      "type": "numeric",
+      "property": "power_factor_c",
+      "base": "power_factor_c",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor (phase C).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Current a",
+      "type": "numeric",
+      "property": "current_a",
+      "base": "current_a",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current b",
+      "type": "numeric",
+      "property": "current_b",
+      "base": "current_b",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current c",
+      "type": "numeric",
+      "property": "current_c",
+      "base": "current_c",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase C).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage a",
+      "type": "numeric",
+      "property": "voltage_a",
+      "base": "voltage_a",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage b",
+      "type": "numeric",
+      "property": "voltage_b",
+      "base": "voltage_b",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage c",
+      "type": "numeric",
+      "property": "voltage_c",
+      "base": "voltage_c",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase C).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Energy a",
+      "type": "numeric",
+      "property": "energy_a",
+      "base": "energy_a",
+      "endpoint": null,
+      "description": "Sum of consumed energy (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy b",
+      "type": "numeric",
+      "property": "energy_b",
+      "base": "energy_b",
+      "endpoint": null,
+      "description": "Sum of consumed energy (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy c",
+      "type": "numeric",
+      "property": "energy_c",
+      "base": "energy_c",
+      "endpoint": null,
+      "description": "Sum of consumed energy (phase C).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy produced a",
+      "type": "numeric",
+      "property": "energy_produced_a",
+      "base": "energy_produced_a",
+      "endpoint": null,
+      "description": "Sum of produced energy (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy produced b",
+      "type": "numeric",
+      "property": "energy_produced_b",
+      "base": "energy_produced_b",
+      "endpoint": null,
+      "description": "Sum of produced energy (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy produced c",
+      "type": "numeric",
+      "property": "energy_produced_c",
+      "base": "energy_produced_c",
+      "endpoint": null,
+      "description": "Sum of produced energy (phase C).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Alarm set 1",
+      "type": "composite",
+      "property": "alarm_set_1",
+      "base": "alarm_set_1",
+      "endpoint": null,
+      "description": "Configuration for RS485 wired communication (if supported by device) and high power alarm.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "high_power_alarm",
+          "type": "binary",
+          "description": "Trigger alarm when power draw exceeds the limit (Default OFF)",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "high_power_threshold",
+          "type": "numeric",
+          "description": "Power limit (Default 25 kW) max value is 65535, unit is kW"
+        }
+      ]
+    },
+    {
+      "name": "Alarm set 2",
+      "type": "composite",
+      "property": "alarm_set_2",
+      "base": "alarm_set_2",
+      "endpoint": null,
+      "description": "Configuration for alarms and reporting frequency.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "over_current_alarm",
+          "type": "binary",
+          "description": "Trigger alarm when current is higher than the limit (Default OFF)",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "over_current_threshold",
+          "type": "numeric",
+          "description": "Current upper limit (Default 100A) max value is 65535, unit is A"
+        },
+        {
+          "property": "over_voltage_alarm",
+          "type": "binary",
+          "description": "Trigger alarm when the voltage is above the limit (Default ON)",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "over_voltage_threshold",
+          "type": "numeric",
+          "description": "Voltage upper limit (Default 253V) max value is 65535, unit is V"
+        },
+        {
+          "property": "under_voltage_alarm",
+          "type": "binary",
+          "description": "Trigger alarm when the voltage is below the limit (Default OFF)",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "under_voltage_threshold",
+          "type": "numeric",
+          "description": "Voltage lower limit (Default 180V) max value is 65535, unit is V"
+        },
+        {
+          "property": "unbalanced_load_alarm",
+          "type": "binary",
+          "description": "Trigger alarm when power factor is below the limit (Default 15%)",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "unbalanced_load_threshold",
+          "type": "numeric",
+          "description": "Power factor lower limit (Default 15%) max value is 100, unit is %"
+        },
+        {
+          "property": "phase_loss_alarm",
+          "type": "binary",
+          "description": "Trigger alarm when one phase is unavailable (Default OFF)",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "negative_active_power_alarm",
+          "type": "binary",
+          "description": "Trigger alarm when the active power is negative (Default ON)",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "data_reporting_interval",
+          "type": "numeric",
+          "description": "How often the device should report measurements (Default 5s) min value is 5, max value is 600, unit is s"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

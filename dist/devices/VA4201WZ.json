@@ -1,0 +1,73 @@
+{
+  "model": "VA4201WZ",
+  "file": "VA4201WZ.md",
+  "vendor": "Sinopé",
+  "description": "Zigbee smart water valve (1\")",
+  "image": "https://www.zigbee2mqtt.io/images/devices/VA4201WZ.png",
+  "added_at": "2022-03-01T09:06:16",
+  "exposes_summary": "state, position, battery_low, battery",
+  "exposes": [
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Valve state if open or closed.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "OPEN",
+      "value_off": "CLOSE"
+    },
+    {
+      "name": "Position",
+      "type": "numeric",
+      "property": "position",
+      "base": "position",
+      "endpoint": null,
+      "description": "Position of the valve.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

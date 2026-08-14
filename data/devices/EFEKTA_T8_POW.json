@@ -1,0 +1,263 @@
+{
+  "model": "EFEKTA_T8_POW",
+  "file": "EFEKTA_T8_POW.md",
+  "vendor": "EFEKTA",
+  "description": "Temperature sensor with a signal amplifier, support up to 8 DS18B20",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_T8_POW.png",
+  "added_at": "2025-02-18T14:54:46",
+  "exposes_summary": "temperature, battery, battery_low, number_of_sensors, uptime, mains_voltage, reading_interval, tx_radio_power, resolution, smart_sleep",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_1",
+      "base": "temperature",
+      "endpoint": "1",
+      "description": "Measured value of the 1 temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_2",
+      "base": "temperature",
+      "endpoint": "2",
+      "description": "Measured value of the 2 temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_3",
+      "base": "temperature",
+      "endpoint": "3",
+      "description": "Measured value of the 3 temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_4",
+      "base": "temperature",
+      "endpoint": "4",
+      "description": "Measured value of the 4 temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_5",
+      "base": "temperature",
+      "endpoint": "5",
+      "description": "Measured value of the 5 temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_6",
+      "base": "temperature",
+      "endpoint": "6",
+      "description": "Measured value of the 6 temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_7",
+      "base": "temperature",
+      "endpoint": "7",
+      "description": "Measured value of the 7 temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_8",
+      "base": "temperature",
+      "endpoint": "8",
+      "description": "Measured value of the 8 temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Number of sensors",
+      "type": "numeric",
+      "property": "number_of_sensors",
+      "base": "number_of_sensors",
+      "endpoint": null,
+      "description": "Number of ds18b20 sensors per data bus.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Uptime",
+      "type": "numeric",
+      "property": "uptime",
+      "base": "uptime",
+      "endpoint": null,
+      "description": "Uptime.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hours"
+    },
+    {
+      "name": "Mains voltage",
+      "type": "numeric",
+      "property": "mains_voltage",
+      "base": "mains_voltage",
+      "endpoint": null,
+      "description": "Mains voltage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Reading interval",
+      "type": "numeric",
+      "property": "reading_interval",
+      "base": "reading_interval",
+      "endpoint": null,
+      "description": "Setting the sensor reading interval in seconds, by default 15 seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 3,
+      "value_max": 360,
+      "unit": "sec"
+    },
+    {
+      "name": "Tx radio power",
+      "type": "enum",
+      "property": "tx_radio_power",
+      "base": "tx_radio_power",
+      "endpoint": null,
+      "description": "Set TX Radio Power, dbm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "4dbm",
+        "19dbm"
+      ]
+    },
+    {
+      "name": "Resolution",
+      "type": "enum",
+      "property": "resolution",
+      "base": "resolution",
+      "endpoint": null,
+      "description": "Set Bit resolution DS18B20.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "9 bit",
+        "10 bit",
+        "11 bit",
+        "12 bit"
+      ]
+    },
+    {
+      "name": "Smart sleep",
+      "type": "binary",
+      "property": "smart_sleep",
+      "base": "smart_sleep",
+      "endpoint": null,
+      "description": "Enable Smart Sleep, short wakeup every 2-7 seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

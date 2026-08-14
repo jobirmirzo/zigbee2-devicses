@@ -1,0 +1,44 @@
+{
+  "model": "ZE1-EN",
+  "file": "ZE1-EN.md",
+  "vendor": "IMOU",
+  "description": "Wireless switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZE1-EN.png",
+  "added_at": "2025-09-30T19:37:28",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "press"
+      ]
+    }
+  ],
+  "warnings": []
+}

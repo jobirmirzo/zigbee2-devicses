@@ -1,0 +1,267 @@
+{
+  "model": "ZNCLBL01LM",
+  "file": "ZNCLBL01LM.md",
+  "vendor": "Aqara",
+  "description": "Curtain driver E1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZNCLBL01LM.png",
+  "added_at": "2022-07-01T08:14:12",
+  "exposes_summary": "cover (state, position), hand_open, limits_calibration, battery, voltage, device_temperature, illuminance, motor_state, running, hooks_lock, hooks_state, target_position, power_source, charging, action",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Hand open",
+      "type": "binary",
+      "property": "hand_open",
+      "base": "hand_open",
+      "endpoint": null,
+      "description": "Pulling curtains by hand starts the motor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Limits calibration",
+      "type": "enum",
+      "property": "limits_calibration",
+      "base": "limits_calibration",
+      "endpoint": null,
+      "description": "Calibrate the position limits.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "start",
+        "end",
+        "reset"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Motor state",
+      "type": "enum",
+      "property": "motor_state",
+      "base": "motor_state",
+      "endpoint": null,
+      "description": "Motor state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "stopped",
+        "opening",
+        "closing",
+        "pause"
+      ]
+    },
+    {
+      "name": "Running",
+      "type": "binary",
+      "property": "running",
+      "base": "running",
+      "endpoint": null,
+      "description": "Whether the motor is moving or not.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Hooks lock",
+      "type": "enum",
+      "property": "hooks_lock",
+      "base": "hooks_lock",
+      "endpoint": null,
+      "description": "Lock the curtain driver hooks.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "LOCK",
+        "UNLOCK"
+      ]
+    },
+    {
+      "name": "Hooks state",
+      "type": "enum",
+      "property": "hooks_state",
+      "base": "hooks_state",
+      "endpoint": null,
+      "description": "Hooks state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "unlocked",
+        "locked",
+        "locking",
+        "unlocking"
+      ]
+    },
+    {
+      "name": "Target position",
+      "type": "numeric",
+      "property": "target_position",
+      "base": "target_position",
+      "endpoint": null,
+      "description": "Target position.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Power source",
+      "type": "enum",
+      "property": "power_source",
+      "base": "power_source",
+      "endpoint": null,
+      "description": "The current power source.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "battery",
+        "dc_source"
+      ]
+    },
+    {
+      "name": "Charging",
+      "type": "binary",
+      "property": "charging",
+      "base": "charging",
+      "endpoint": null,
+      "description": "The current charging state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual_open",
+        "manual_close"
+      ]
+    }
+  ],
+  "warnings": []
+}

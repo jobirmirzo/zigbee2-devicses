@@ -1,0 +1,90 @@
+{
+  "model": "ZS057-D0Z",
+  "file": "ZS057-D0Z.md",
+  "vendor": "Leviton",
+  "description": "Wall switch, 0-10V dimmer, 120-277V, Lumina™ RF",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZS057-D0Z.png",
+  "added_at": "2022-09-30T20:52:51",
+  "exposes_summary": "ballast_minimum_level, ballast_maximum_level, light (state, brightness), power_on_behavior",
+  "exposes": [
+    {
+      "name": "Ballast minimum level",
+      "type": "numeric",
+      "property": "ballast_minimum_level",
+      "base": "ballast_minimum_level",
+      "endpoint": null,
+      "description": "Specifies the minimum brightness value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Ballast maximum level",
+      "type": "numeric",
+      "property": "ballast_maximum_level",
+      "base": "ballast_maximum_level",
+      "endpoint": null,
+      "description": "Specifies the maximum brightness value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    }
+  ],
+  "warnings": []
+}

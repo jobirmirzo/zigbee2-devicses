@@ -1,0 +1,229 @@
+{
+  "model": "RD-250ZG",
+  "file": "RD-250ZG.md",
+  "vendor": "Repenic Ltd.",
+  "description": "Dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/RD-250ZG.png",
+  "added_at": "2026-03-31T19:04:39",
+  "exposes_summary": "light (state, brightness), effect, power_on_behavior, power, voltage, current, energy, min_brightness, max_brightness, start_brightness, boost, dimming_mode, default_move_rate",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Min brightness",
+      "type": "numeric",
+      "property": "min_brightness",
+      "base": "min_brightness",
+      "endpoint": null,
+      "description": "Minimum brightness (≈1–99%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 99
+    },
+    {
+      "name": "Max brightness",
+      "type": "numeric",
+      "property": "max_brightness",
+      "base": "max_brightness",
+      "endpoint": null,
+      "description": "Maximum brightness (≈1–100%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100
+    },
+    {
+      "name": "Start brightness",
+      "type": "numeric",
+      "property": "start_brightness",
+      "base": "start_brightness",
+      "endpoint": null,
+      "description": "Default brightness at power-on/startup (0-254).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "Boost",
+      "type": "binary",
+      "property": "boost",
+      "base": "boost",
+      "endpoint": null,
+      "description": "Boost function.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Dimming mode",
+      "type": "enum",
+      "property": "dimming_mode",
+      "base": "dimming_mode",
+      "endpoint": null,
+      "description": "Dimming mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Leading edge",
+        "Trailing edge"
+      ]
+    },
+    {
+      "name": "Default move rate",
+      "type": "numeric",
+      "property": "default_move_rate",
+      "base": "default_move_rate",
+      "endpoint": null,
+      "description": "Default Move Rate.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10
+    }
+  ],
+  "warnings": []
+}

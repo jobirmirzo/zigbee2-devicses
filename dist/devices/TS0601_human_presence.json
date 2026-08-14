@@ -1,0 +1,79 @@
+{
+  "model": "TS0601_human_presence",
+  "file": "TS0601_human_presence.md",
+  "vendor": "iHseno",
+  "description": "Human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_human_presence.png",
+  "added_at": "2025-11-30T20:32:44",
+  "exposes_summary": "presence, battery, sensitivity, delay_time",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Human presence detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Battery percentage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Sensor sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "middle",
+        "high"
+      ]
+    },
+    {
+      "name": "Delay time",
+      "type": "enum",
+      "property": "delay_time",
+      "base": "delay_time",
+      "endpoint": null,
+      "description": "Delay time in seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "15s",
+        "30s",
+        "60s"
+      ]
+    }
+  ],
+  "warnings": []
+}

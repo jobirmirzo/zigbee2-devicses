@@ -1,0 +1,681 @@
+{
+  "model": "ZHT-S01",
+  "file": "ZHT-S01.md",
+  "vendor": "Moes",
+  "description": "Zigbee wall thermostat (air/internal temperature priority)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZHT-S01.png",
+  "added_at": "2026-01-31T13:10:42",
+  "exposes_summary": "child_lock, system_mode, climate (preset, running_state, system_mode, current_heating_setpoint, local_temperature, local_temperature_calibration), floor_temperature, valve_state, fault_alarm, sensor, temperature_scale, backlight_brightness, antifreeze, min_temperature_limit, max_temperature_limit, deadzone_temperature, eco_temperature, program_mode, factory_reset, weekday_1_hour, weekday_1_minute, weekday_1_temp, weekday_2_hour, weekday_2_minute, weekday_2_temp, weekday_3_hour, weekday_3_minute, weekday_3_temp, weekday_4_hour, weekday_4_minute, weekday_4_temp, weekday_5_hour, weekday_5_minute, weekday_5_temp, weekday_6_hour, weekday_6_minute, weekday_6_temp, weekend_1_hour, weekend_1_minute, weekend_1_temp, weekend_2_hour, weekend_2_minute, weekend_2_temp",
+  "exposes": [
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "System mode",
+      "type": "enum",
+      "property": "system_mode",
+      "base": "system_mode",
+      "endpoint": null,
+      "description": "Thermostat system mode (device enabled/disabled).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "heat"
+      ]
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "manual",
+            "auto",
+            "eco"
+          ],
+          "readable": false
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Floor temperature",
+      "type": "numeric",
+      "property": "floor_temperature",
+      "base": "floor_temperature",
+      "endpoint": null,
+      "description": "Temperature from floor sensor (secondary).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Valve state",
+      "type": "binary",
+      "property": "valve_state",
+      "base": "valve_state",
+      "endpoint": null,
+      "description": "Valve state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "OPEN",
+      "value_off": "CLOSED"
+    },
+    {
+      "name": "Fault alarm",
+      "type": "enum",
+      "property": "fault_alarm",
+      "base": "fault_alarm",
+      "endpoint": null,
+      "description": "Fault alarm status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "e1",
+        "e2",
+        "e3",
+        "e1_e2",
+        "e1_e3",
+        "e2_e3",
+        "e1_e2_e3"
+      ]
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor",
+      "base": "sensor",
+      "endpoint": null,
+      "description": "Temperature sensor selection.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "internal",
+        "external",
+        "both"
+      ]
+    },
+    {
+      "name": "Temperature scale",
+      "type": "enum",
+      "property": "temperature_scale",
+      "base": "temperature_scale",
+      "endpoint": null,
+      "description": "Temperature scale (WARNING: converter only supports Celsius datapoints).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Backlight brightness",
+      "type": "enum",
+      "property": "backlight_brightness",
+      "base": "backlight_brightness",
+      "endpoint": null,
+      "description": "Backlight brightness.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Antifreeze",
+      "type": "binary",
+      "property": "antifreeze",
+      "base": "antifreeze",
+      "endpoint": null,
+      "description": "Antifreeze mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Min temperature limit",
+      "type": "numeric",
+      "property": "min_temperature_limit",
+      "base": "min_temperature_limit",
+      "endpoint": null,
+      "description": "Minimum temperature limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 20,
+      "unit": "°C"
+    },
+    {
+      "name": "Max temperature limit",
+      "type": "numeric",
+      "property": "max_temperature_limit",
+      "base": "max_temperature_limit",
+      "endpoint": null,
+      "description": "Maximum temperature limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 30,
+      "value_max": 70,
+      "unit": "°C"
+    },
+    {
+      "name": "Deadzone temperature",
+      "type": "numeric",
+      "property": "deadzone_temperature",
+      "base": "deadzone_temperature",
+      "endpoint": null,
+      "description": "Temperature hysteresis/deadzone.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 3,
+      "unit": "°C"
+    },
+    {
+      "name": "Eco temperature",
+      "type": "numeric",
+      "property": "eco_temperature",
+      "base": "eco_temperature",
+      "endpoint": null,
+      "description": "ECO mode temperature setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Program mode",
+      "type": "enum",
+      "property": "program_mode",
+      "base": "program_mode",
+      "endpoint": null,
+      "description": "Weekly programming mode type.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "weekend",
+        "single_break",
+        "no_day_off"
+      ]
+    },
+    {
+      "name": "Factory reset",
+      "type": "binary",
+      "property": "factory_reset",
+      "base": "factory_reset",
+      "endpoint": null,
+      "description": "Factory reset (use with caution).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Weekday 1 hour",
+      "type": "numeric",
+      "property": "weekday_1_hour",
+      "base": "weekday_1_hour",
+      "endpoint": null,
+      "description": "Weekday P1 get_up_in_the_morning - Hour.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23
+    },
+    {
+      "name": "Weekday 1 minute",
+      "type": "numeric",
+      "property": "weekday_1_minute",
+      "base": "weekday_1_minute",
+      "endpoint": null,
+      "description": "Weekday P1 get_up_in_the_morning - Minute.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 59
+    },
+    {
+      "name": "Weekday 1 temp",
+      "type": "numeric",
+      "property": "weekday_1_temp",
+      "base": "weekday_1_temp",
+      "endpoint": null,
+      "description": "Weekday P1 get_up_in_the_morning - Temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Weekday 2 hour",
+      "type": "numeric",
+      "property": "weekday_2_hour",
+      "base": "weekday_2_hour",
+      "endpoint": null,
+      "description": "Weekday P2 go_out_in_the_morning - Hour.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23
+    },
+    {
+      "name": "Weekday 2 minute",
+      "type": "numeric",
+      "property": "weekday_2_minute",
+      "base": "weekday_2_minute",
+      "endpoint": null,
+      "description": "Weekday P2 go_out_in_the_morning - Minute.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 59
+    },
+    {
+      "name": "Weekday 2 temp",
+      "type": "numeric",
+      "property": "weekday_2_temp",
+      "base": "weekday_2_temp",
+      "endpoint": null,
+      "description": "Weekday P2 go_out_in_the_morning - Temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Weekday 3 hour",
+      "type": "numeric",
+      "property": "weekday_3_hour",
+      "base": "weekday_3_hour",
+      "endpoint": null,
+      "description": "Weekday P3 back_home_in_the_noon - Hour.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23
+    },
+    {
+      "name": "Weekday 3 minute",
+      "type": "numeric",
+      "property": "weekday_3_minute",
+      "base": "weekday_3_minute",
+      "endpoint": null,
+      "description": "Weekday P3 back_home_in_the_noon - Minute.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 59
+    },
+    {
+      "name": "Weekday 3 temp",
+      "type": "numeric",
+      "property": "weekday_3_temp",
+      "base": "weekday_3_temp",
+      "endpoint": null,
+      "description": "Weekday P3 back_home_in_the_noon - Temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Weekday 4 hour",
+      "type": "numeric",
+      "property": "weekday_4_hour",
+      "base": "weekday_4_hour",
+      "endpoint": null,
+      "description": "Weekday P4 go_out_in_the_noon - Hour.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23
+    },
+    {
+      "name": "Weekday 4 minute",
+      "type": "numeric",
+      "property": "weekday_4_minute",
+      "base": "weekday_4_minute",
+      "endpoint": null,
+      "description": "Weekday P4 go_out_in_the_noon - Minute.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 59
+    },
+    {
+      "name": "Weekday 4 temp",
+      "type": "numeric",
+      "property": "weekday_4_temp",
+      "base": "weekday_4_temp",
+      "endpoint": null,
+      "description": "Weekday P4 go_out_in_the_noon - Temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Weekday 5 hour",
+      "type": "numeric",
+      "property": "weekday_5_hour",
+      "base": "weekday_5_hour",
+      "endpoint": null,
+      "description": "Weekday P5 back_home_in_the_evening - Hour.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23
+    },
+    {
+      "name": "Weekday 5 minute",
+      "type": "numeric",
+      "property": "weekday_5_minute",
+      "base": "weekday_5_minute",
+      "endpoint": null,
+      "description": "Weekday P5 back_home_in_the_evening - Minute.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 59
+    },
+    {
+      "name": "Weekday 5 temp",
+      "type": "numeric",
+      "property": "weekday_5_temp",
+      "base": "weekday_5_temp",
+      "endpoint": null,
+      "description": "Weekday P5 back_home_in_the_evening - Temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Weekday 6 hour",
+      "type": "numeric",
+      "property": "weekday_6_hour",
+      "base": "weekday_6_hour",
+      "endpoint": null,
+      "description": "Weekday P6 sleep_at_night - Hour.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23
+    },
+    {
+      "name": "Weekday 6 minute",
+      "type": "numeric",
+      "property": "weekday_6_minute",
+      "base": "weekday_6_minute",
+      "endpoint": null,
+      "description": "Weekday P6 sleep_at_night - Minute.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 59
+    },
+    {
+      "name": "Weekday 6 temp",
+      "type": "numeric",
+      "property": "weekday_6_temp",
+      "base": "weekday_6_temp",
+      "endpoint": null,
+      "description": "Weekday P6 sleep_at_night - Temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Weekend 1 hour",
+      "type": "numeric",
+      "property": "weekend_1_hour",
+      "base": "weekend_1_hour",
+      "endpoint": null,
+      "description": "Weekend P1 get_up - Hour.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23
+    },
+    {
+      "name": "Weekend 1 minute",
+      "type": "numeric",
+      "property": "weekend_1_minute",
+      "base": "weekend_1_minute",
+      "endpoint": null,
+      "description": "Weekend P1 get_up - Minute.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 59
+    },
+    {
+      "name": "Weekend 1 temp",
+      "type": "numeric",
+      "property": "weekend_1_temp",
+      "base": "weekend_1_temp",
+      "endpoint": null,
+      "description": "Weekend P1 get_up - Temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Weekend 2 hour",
+      "type": "numeric",
+      "property": "weekend_2_hour",
+      "base": "weekend_2_hour",
+      "endpoint": null,
+      "description": "Weekend P2 sleep - Hour.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23
+    },
+    {
+      "name": "Weekend 2 minute",
+      "type": "numeric",
+      "property": "weekend_2_minute",
+      "base": "weekend_2_minute",
+      "endpoint": null,
+      "description": "Weekend P2 sleep - Minute.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 59
+    },
+    {
+      "name": "Weekend 2 temp",
+      "type": "numeric",
+      "property": "weekend_2_temp",
+      "base": "weekend_2_temp",
+      "endpoint": null,
+      "description": "Weekend P2 sleep - Temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

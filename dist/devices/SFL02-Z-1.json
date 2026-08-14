@@ -1,0 +1,181 @@
+{
+  "model": "SFL02-Z-1",
+  "file": "SFL02-Z-1.md",
+  "vendor": "Moes",
+  "description": "Star feather smart switch 1 gang",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SFL02-Z-1.png",
+  "added_at": "2025-09-01T18:20:17",
+  "exposes_summary": "backlight_mode, switch (state), countdown, momentary_1, power_on_behavior, mode, indicator_status, induction_mode, vibration_mode, action",
+  "exposes": [
+    {
+      "name": "Backlight mode",
+      "type": "binary",
+      "property": "backlight_mode",
+      "base": "backlight_mode",
+      "endpoint": null,
+      "description": "Mode of the backlight.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_l1",
+      "base": "countdown",
+      "endpoint": "l1",
+      "description": "Toggle the device after a set duration (one time action).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Momentary 1",
+      "type": "numeric",
+      "property": "momentary_1",
+      "base": "momentary_1",
+      "endpoint": null,
+      "description": "Momentary switch timer (0=disable).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "previous",
+        "on"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode_l1",
+      "base": "mode",
+      "endpoint": "l1",
+      "description": "Switch1 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch_1",
+        "scene_1"
+      ]
+    },
+    {
+      "name": "Indicator status",
+      "type": "enum",
+      "property": "indicator_status",
+      "base": "indicator_status",
+      "endpoint": null,
+      "description": "Indicator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "relay",
+        "invert"
+      ]
+    },
+    {
+      "name": "Induction mode",
+      "type": "enum",
+      "property": "induction_mode",
+      "base": "induction_mode",
+      "endpoint": null,
+      "description": "Induction mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "ON",
+        "OFF"
+      ]
+    },
+    {
+      "name": "Vibration mode",
+      "type": "enum",
+      "property": "vibration_mode",
+      "base": "vibration_mode",
+      "endpoint": null,
+      "description": "Vibration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Gear 0",
+        "Gear 1",
+        "Gear 2",
+        "Gear 3"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "scene_1"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,190 @@
+{
+  "model": "TS0601_heat_meter",
+  "file": "TS0601_heat_meter.md",
+  "vendor": "Tuya",
+  "description": "Ultrasonic heat meter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_heat_meter.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "water_consumed, monthly_water_consumption, daily_water_consumption, report_period, fault, prepayment_switch, cumulative_heat, meter_id, instantaneous_flow_rate, inlet_water_temperature, outlet_water_temperature, voltage",
+  "exposes": [
+    {
+      "name": "Water consumed",
+      "type": "numeric",
+      "property": "water_consumed",
+      "base": "water_consumed",
+      "endpoint": null,
+      "description": "Total water consumption.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m³"
+    },
+    {
+      "name": "Monthly water consumption",
+      "type": "numeric",
+      "property": "monthly_water_consumption",
+      "base": "monthly_water_consumption",
+      "endpoint": null,
+      "description": "Monthly water consumption.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m³"
+    },
+    {
+      "name": "Daily water consumption",
+      "type": "numeric",
+      "property": "daily_water_consumption",
+      "base": "daily_water_consumption",
+      "endpoint": null,
+      "description": "Daily water consumption.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m³"
+    },
+    {
+      "name": "Report period",
+      "type": "enum",
+      "property": "report_period",
+      "base": "report_period",
+      "endpoint": null,
+      "description": "Report period.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "1h",
+        "2h",
+        "3h",
+        "4h",
+        "6h",
+        "8h",
+        "12h",
+        "24h",
+        "48h",
+        "72h"
+      ]
+    },
+    {
+      "name": "Fault",
+      "type": "text",
+      "property": "fault",
+      "base": "fault",
+      "endpoint": null,
+      "description": "Alarm event status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Prepayment switch",
+      "type": "binary",
+      "property": "prepayment_switch",
+      "base": "prepayment_switch",
+      "endpoint": null,
+      "description": "Cumulative metering switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Cumulative heat",
+      "type": "numeric",
+      "property": "cumulative_heat",
+      "base": "cumulative_heat",
+      "endpoint": null,
+      "description": "Cumulative heat.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Meter id",
+      "type": "text",
+      "property": "meter_id",
+      "base": "meter_id",
+      "endpoint": null,
+      "description": "Meter identification number.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Instantaneous flow rate",
+      "type": "numeric",
+      "property": "instantaneous_flow_rate",
+      "base": "instantaneous_flow_rate",
+      "endpoint": null,
+      "description": "Instantaneous flow rate.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m³/h"
+    },
+    {
+      "name": "Inlet water temperature",
+      "type": "numeric",
+      "property": "inlet_water_temperature",
+      "base": "inlet_water_temperature",
+      "endpoint": null,
+      "description": "Inlet water temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Outlet water temperature",
+      "type": "numeric",
+      "property": "outlet_water_temperature",
+      "base": "outlet_water_temperature",
+      "endpoint": null,
+      "description": "Outlet water temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

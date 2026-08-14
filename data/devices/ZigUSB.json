@@ -1,0 +1,210 @@
+{
+  "model": "ZigUSB",
+  "file": "ZigUSB.md",
+  "vendor": "xyzroe",
+  "description": "Zigbee USB power monitor and switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZigUSB.png",
+  "added_at": "2024-02-29T20:20:58",
+  "exposes_summary": "switch (state), restart, button_mode, link_to_output, bind_command, action, current, voltage, power, interval, cpu_temperature, uptime",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Restart",
+      "type": "numeric",
+      "property": "restart_l1",
+      "base": "restart",
+      "endpoint": "l1",
+      "description": "OFF time.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 30,
+      "unit": "seconds"
+    },
+    {
+      "name": "Button mode",
+      "type": "enum",
+      "property": "button_mode_l1",
+      "base": "button_mode",
+      "endpoint": "l1",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "single_click",
+        "multi_click"
+      ]
+    },
+    {
+      "name": "Link to output",
+      "type": "enum",
+      "property": "link_to_output_l1",
+      "base": "link_to_output",
+      "endpoint": "l1",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "no",
+        "yes"
+      ]
+    },
+    {
+      "name": "Bind command",
+      "type": "enum",
+      "property": "bind_command_l1",
+      "base": "bind_command",
+      "endpoint": "l1",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on/off",
+        "toggle",
+        "change_level_up",
+        "change_level_down",
+        "change_level_up_with_off",
+        "change_level_down_with_off",
+        "recall_scene_0",
+        "recall_scene_1",
+        "recall_scene_2",
+        "recall_scene_3",
+        "recall_scene_4",
+        "recall_scene_5"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Single click works only with NO link to output.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single",
+        "double",
+        "triple"
+      ]
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current_l2",
+      "base": "current",
+      "endpoint": "l2",
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage_l2",
+      "base": "voltage",
+      "endpoint": "l2",
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power_l2",
+      "base": "power",
+      "endpoint": "l2",
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Interval",
+      "type": "numeric",
+      "property": "interval_l2",
+      "base": "interval",
+      "endpoint": "l2",
+      "description": "Reporting interval.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 3600,
+      "unit": "sec"
+    },
+    {
+      "name": "CPU temperature",
+      "type": "numeric",
+      "property": "temperature_l4",
+      "base": "temperature",
+      "endpoint": "l4",
+      "description": "Temperature of the CPU.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Uptime",
+      "type": "numeric",
+      "property": "uptime_l5",
+      "base": "uptime",
+      "endpoint": "l5",
+      "description": "CC2530.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "seconds"
+    }
+  ],
+  "warnings": []
+}

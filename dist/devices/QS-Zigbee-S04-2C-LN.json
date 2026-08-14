@@ -1,0 +1,46 @@
+{
+  "model": "QS-Zigbee-S04-2C-LN",
+  "file": "QS-Zigbee-S04-2C-LN.md",
+  "vendor": "Lonsonho",
+  "description": "2 gang switch module with neutral wire",
+  "image": "https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-S04-2C-LN.png",
+  "added_at": "2020-09-01T19:56:51Z",
+  "exposes_summary": "switch (state)",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

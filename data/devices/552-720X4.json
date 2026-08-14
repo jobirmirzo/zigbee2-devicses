@@ -1,0 +1,63 @@
+{
+  "model": "552-720X4",
+  "file": "552-720X4.md",
+  "vendor": "Niko",
+  "description": "Battery switch with 4 buttons",
+  "image": "https://www.zigbee2mqtt.io/images/devices/552-720X4.png",
+  "added_at": "2023-04-27T17:39:27",
+  "exposes_summary": "action, battery",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_top_left",
+        "off_top_left",
+        "on_bottom_left",
+        "off_bottom_left",
+        "on_top_right",
+        "off_top_right",
+        "on_bottom_right",
+        "off_bottom_right",
+        "brightness_move_up_top_left",
+        "brightness_move_up_bottom_left",
+        "brightness_move_up_top_right",
+        "brightness_move_up_bottom_right",
+        "brightness_move_down_top_left",
+        "brightness_move_down_bottom_left",
+        "brightness_move_down_top_right",
+        "brightness_move_down_bottom_right",
+        "brightness_stop_top_left",
+        "brightness_stop_bottom_left",
+        "brightness_stop_top_right",
+        "brightness_stop_bottom_right"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,66 @@
+{
+  "model": "HBR2917E",
+  "file": "HBR2917E.md",
+  "vendor": "Datek",
+  "description": "Eva scene selector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HBR2917E.png",
+  "added_at": "2021-09-01T18:11:17Z",
+  "exposes_summary": "battery, temperature, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "recall_1",
+        "recall_2",
+        "recall_3",
+        "recall_4",
+        "on",
+        "off",
+        "brightness_move_down",
+        "brightness_move_up",
+        "brightness_stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

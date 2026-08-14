@@ -1,0 +1,121 @@
+{
+  "model": "ZG-103Z",
+  "file": "ZG-103Z.md",
+  "vendor": "Tuya",
+  "description": "Vibration sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-103Z.png",
+  "added_at": "2024-08-29T20:08:17Z",
+  "exposes_summary": "vibration, tilt, x, y, z, battery, sensitivity",
+  "exposes": [
+    {
+      "name": "Vibration",
+      "type": "binary",
+      "property": "vibration",
+      "base": "vibration",
+      "endpoint": null,
+      "description": "Indicates whether the device detected vibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tilt",
+      "type": "binary",
+      "property": "tilt",
+      "base": "tilt",
+      "endpoint": null,
+      "description": "Indicates whether the device detected tilt.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "X",
+      "type": "numeric",
+      "property": "x",
+      "base": "x",
+      "endpoint": null,
+      "description": "X coordinate.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 256
+    },
+    {
+      "name": "Y",
+      "type": "numeric",
+      "property": "y",
+      "base": "y",
+      "endpoint": null,
+      "description": "Y coordinate.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 256
+    },
+    {
+      "name": "Z",
+      "type": "numeric",
+      "property": "z",
+      "base": "z",
+      "endpoint": null,
+      "description": "Z coordinate.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 256
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Vibration detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "middle",
+        "high"
+      ]
+    }
+  ],
+  "warnings": []
+}

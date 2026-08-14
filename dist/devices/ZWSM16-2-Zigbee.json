@@ -1,0 +1,13 @@
+{
+  "model": "ZWSM16-2-Zigbee",
+  "file": "ZWSM16-2-Zigbee.md",
+  "vendor": null,
+  "description": null,
+  "image": null,
+  "added_at": null,
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": [
+    "no-exposes-section"
+  ]
+}

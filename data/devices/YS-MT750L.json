@@ -1,0 +1,72 @@
+{
+  "model": "YS-MT750L",
+  "file": "YS-MT750L.md",
+  "vendor": "Yushun",
+  "description": "Curtain motor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/YS-MT750L.png",
+  "added_at": "2023-06-27T19:46:17",
+  "exposes_summary": "cover (state, position), options",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Options",
+      "type": "composite",
+      "property": "options",
+      "base": "options",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "motor_speed",
+          "type": "numeric",
+          "description": "Motor speed max value is 255"
+        },
+        {
+          "property": "reverse_direction",
+          "type": "binary",
+          "description": "Reverse the motor direction",
+          "values": [
+            "true",
+            "false"
+          ]
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

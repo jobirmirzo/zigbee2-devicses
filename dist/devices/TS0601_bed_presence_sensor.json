@@ -1,0 +1,144 @@
+{
+  "model": "TS0601_bed_presence_sensor",
+  "file": "TS0601_bed_presence_sensor.md",
+  "vendor": "Tuya",
+  "description": "Pressure Sensing Strap/Bed Occupancy Sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_bed_presence_sensor.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "occupancy, battery, illuminance, sensitivity, interval_time, presence_delay, presence_time, work_state",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "middle",
+        "high"
+      ]
+    },
+    {
+      "name": "Interval time",
+      "type": "numeric",
+      "property": "interval_time",
+      "base": "interval_time",
+      "endpoint": null,
+      "description": "Sampling interval.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 720,
+      "unit": "min"
+    },
+    {
+      "name": "Presence delay",
+      "type": "numeric",
+      "property": "presence_delay",
+      "base": "presence_delay",
+      "endpoint": null,
+      "description": "Delay to report no presence.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Presence time",
+      "type": "numeric",
+      "property": "presence_time",
+      "base": "presence_time",
+      "endpoint": null,
+      "description": "Delay to report presence.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Work state",
+      "type": "enum",
+      "property": "work_state",
+      "base": "work_state",
+      "endpoint": null,
+      "description": "Summary of the state of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "presence",
+        "none",
+        "presence_5min",
+        "presence_30min",
+        "none_5min",
+        "none_30min"
+      ]
+    }
+  ],
+  "warnings": []
+}

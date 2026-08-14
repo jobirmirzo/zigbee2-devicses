@@ -1,0 +1,27 @@
+{
+  "model": "CC2530.ROUTER",
+  "file": "CC2530.ROUTER.md",
+  "vendor": "Custom devices (DiY)",
+  "description": "CC2530 router",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CC2530.ROUTER.png",
+  "added_at": "2019-07-22T20:08:17Z",
+  "exposes_summary": "led",
+  "exposes": [
+    {
+      "name": "Led",
+      "type": "binary",
+      "property": "led",
+      "base": "led",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

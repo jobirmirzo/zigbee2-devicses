@@ -1,0 +1,86 @@
+{
+  "model": "MiCASAGasCounter",
+  "file": "MiCASAGasCounter.md",
+  "vendor": "Custom devices (DiY)",
+  "description": "Zigbee Gas counter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MiCASAGasCounter.png",
+  "added_at": "2026-01-31T13:09:55",
+  "exposes_summary": "gas, battery, voltage, battery_low, gas_counter_set",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "numeric",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Total gas consumption in m³.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "m³"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Gas counter set",
+      "type": "numeric",
+      "property": "gas_counter_set",
+      "base": "gas_counter_set",
+      "endpoint": null,
+      "description": "Write absolute gas meter value.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 281474976710655
+    }
+  ],
+  "warnings": []
+}

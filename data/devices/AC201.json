@@ -1,0 +1,110 @@
+{
+  "model": "AC201",
+  "file": "AC201.md",
+  "vendor": "OWON",
+  "description": "HVAC controller/IR blaster",
+  "image": "https://www.zigbee2mqtt.io/images/devices/AC201.png",
+  "added_at": "2021-11-30T20:10:17",
+  "exposes_summary": "climate (system_mode, occupied_heating_setpoint, occupied_cooling_setpoint, ac_louver_position, local_temperature), fan (state, mode)",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "auto",
+            "dry",
+            "fan_only"
+          ],
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 8,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "occupied_cooling_setpoint",
+          "base": "occupied_cooling_setpoint",
+          "value_min": 8,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "ac_louver_position",
+          "base": "ac_louver_position",
+          "value_min": 8,
+          "value_max": 30,
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "auto",
+            "dry",
+            "fan_only"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Fan",
+      "type": "fan",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "fan_state",
+          "base": "fan_state",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "on",
+            "auto"
+          ],
+          "readable": true
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "on",
+            "auto"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

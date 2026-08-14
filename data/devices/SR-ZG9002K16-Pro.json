@@ -1,0 +1,47 @@
+{
+  "model": "SR-ZG9002K16-Pro",
+  "file": "SR-ZG9002K16-Pro.md",
+  "vendor": "Sunricher",
+  "description": "Zigbee smart wall panel remote",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SR-ZG9002K16-Pro.png",
+  "added_at": "2025-01-03T20:04:59",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "short_press",
+        "double_press",
+        "hold",
+        "hold_released"
+      ]
+    }
+  ],
+  "warnings": []
+}

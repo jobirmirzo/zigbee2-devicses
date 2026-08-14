@@ -1,0 +1,42 @@
+{
+  "model": "THS317-ET-EY",
+  "file": "THS317-ET-EY.md",
+  "vendor": "OWON",
+  "description": "Temperature sensor with probe",
+  "image": "https://www.zigbee2mqtt.io/images/devices/THS317-ET-EY.png",
+  "added_at": "2024-05-09T20:14:10",
+  "exposes_summary": "temperature, battery",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

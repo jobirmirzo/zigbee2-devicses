@@ -1,0 +1,130 @@
+{
+  "model": "CTM_MBD_Dim",
+  "file": "CTM_MBD_Dim.md",
+  "vendor": "CTM Lyng",
+  "description": "MBD Dim, motion detector with dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CTM_MBD_Dim.png",
+  "added_at": "2024-03-31T18:43:56",
+  "exposes_summary": "light (state, brightness), occupancy, device_enabled, ballast_minimum_level, ballast_maximum_level, ballast_power_on_level, illuminance",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Device enabled",
+      "type": "binary",
+      "property": "device_enabled",
+      "base": "device_enabled",
+      "endpoint": null,
+      "description": "Turn the device on or off.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Ballast minimum level",
+      "type": "numeric",
+      "property": "ballast_minimum_level",
+      "base": "ballast_minimum_level",
+      "endpoint": null,
+      "description": "Specifies the minimum brightness value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 97
+    },
+    {
+      "name": "Ballast maximum level",
+      "type": "numeric",
+      "property": "ballast_maximum_level",
+      "base": "ballast_maximum_level",
+      "endpoint": null,
+      "description": "Specifies the maximum brightness value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 97
+    },
+    {
+      "name": "Ballast power on level",
+      "type": "numeric",
+      "property": "ballast_power_on_level",
+      "base": "ballast_power_on_level",
+      "endpoint": null,
+      "description": "Specifies the initialisation light level. Can not be set lower than \"ballast_minimum_level\".",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 97
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

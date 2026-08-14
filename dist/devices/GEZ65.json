@@ -1,0 +1,11 @@
+{
+  "model": "GEZ65",
+  "file": "GEZ65.md",
+  "vendor": "Lincukoo",
+  "description": "Zigbee Repeater",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GEZ65.png",
+  "added_at": "2026-01-31T13:10:42",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

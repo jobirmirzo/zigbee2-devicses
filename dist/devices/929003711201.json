@@ -1,0 +1,486 @@
+{
+  "model": "929003711201",
+  "file": "929003711201.md",
+  "vendor": "Philips",
+  "description": "Hue Twilight sleep and wake-up light white",
+  "image": "https://www.zigbee2mqtt.io/images/devices/929003711201.png",
+  "added_at": "2024-10-31T20:34:53",
+  "exposes_summary": "light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), power_on_behavior, effect, effect_speed, effect_color, gradient_scene, gradient, gradient_style, gradient_scale, gradient_offset, action",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "front",
+      "features": [
+        {
+          "property": "state_front",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_front",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp_front",
+          "base": "color_temp",
+          "value_min": 153,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup_front",
+          "base": "color_temp_startup",
+          "value_min": 153,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_xy_front",
+          "base": "color_xy",
+          "readable": true
+        },
+        {
+          "property": "color_hs_front",
+          "base": "color_hs",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_front",
+      "base": "power_on_behavior",
+      "endpoint": "front",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect_front",
+      "base": "effect",
+      "endpoint": "front",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "candle",
+        "fireplace",
+        "colorloop",
+        "sunset",
+        "sunrise",
+        "sparkle",
+        "opal",
+        "glisten",
+        "underwater",
+        "cosmos",
+        "sunbeam",
+        "enchant",
+        "none",
+        "finish_effect",
+        "stop_effect",
+        "stop_hue_effect"
+      ]
+    },
+    {
+      "name": "Effect speed",
+      "type": "numeric",
+      "property": "effect_speed_front",
+      "base": "effect_speed",
+      "endpoint": "front",
+      "description": "Animation speed for the active effect (0=slowest, 1=fastest).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1
+    },
+    {
+      "name": "Effect color",
+      "type": "text",
+      "property": "effect_color_front",
+      "base": "effect_color",
+      "endpoint": "front",
+      "description": "Set the base color of the active effect without stopping it (hex e.g. #FF4400, or JSON {\"x\":0.6,\"y\":0.3}).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "back",
+      "features": [
+        {
+          "property": "state_back",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_back",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp_back",
+          "base": "color_temp",
+          "value_min": 153,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup_back",
+          "base": "color_temp_startup",
+          "value_min": 153,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_xy_back",
+          "base": "color_xy",
+          "readable": true
+        },
+        {
+          "property": "color_hs_back",
+          "base": "color_hs",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_back",
+      "base": "power_on_behavior",
+      "endpoint": "back",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Gradient scene",
+      "type": "enum",
+      "property": "gradient_scene_back",
+      "base": "gradient_scene",
+      "endpoint": "back",
+      "description": null,
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blossom",
+        "crocus",
+        "precious",
+        "narcissa",
+        "beginnings",
+        "first_light",
+        "horizon",
+        "valley_dawn",
+        "sunflare",
+        "emerald_flutter",
+        "memento",
+        "resplendent",
+        "scarlet_dream",
+        "lovebirds",
+        "smitten",
+        "glitz_and_glam",
+        "promise",
+        "ruby_romance",
+        "city_of_love",
+        "honolulu",
+        "savanna_sunset",
+        "golden_pond",
+        "runy_glow",
+        "tropical_twilight",
+        "miami",
+        "cancun",
+        "rio",
+        "chinatown",
+        "ibiza",
+        "osaka",
+        "tokyo",
+        "motown",
+        "fairfax",
+        "galaxy",
+        "starlight",
+        "blood moon",
+        "artic_aurora",
+        "moonlight",
+        "nebula",
+        "sundown",
+        "blue_lagoon",
+        "palm_beach",
+        "lake_placid",
+        "mountain_breeze",
+        "lake_mist",
+        "ocean_dawn",
+        "frosty_dawn",
+        "sunday_morning",
+        "emerald_isle",
+        "spring_blossom",
+        "midsummer_sun",
+        "autumn_gold",
+        "spring_lake",
+        "winter_mountain",
+        "midwinter",
+        "amber_bloom",
+        "lily",
+        "painted_sky",
+        "winter_beauty",
+        "orange_fields",
+        "forest_adventure",
+        "blue_planet",
+        "soho",
+        "vapor_wave",
+        "magneto",
+        "tyrell",
+        "disturbia",
+        "hal",
+        "golden_star",
+        "under_the_tree",
+        "silent_night",
+        "rosy_sparkle",
+        "festive_fun",
+        "colour_burst",
+        "crystalline"
+      ]
+    },
+    {
+      "name": "Gradient",
+      "type": "list",
+      "property": "gradient_back",
+      "base": "gradient",
+      "endpoint": "back",
+      "description": "List of RGB HEX colors.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect_back",
+      "base": "effect",
+      "endpoint": "back",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "candle",
+        "fireplace",
+        "colorloop",
+        "sunset",
+        "sunrise",
+        "sparkle",
+        "opal",
+        "glisten",
+        "underwater",
+        "cosmos",
+        "sunbeam",
+        "enchant",
+        "none",
+        "finish_effect",
+        "stop_effect",
+        "stop_hue_effect"
+      ]
+    },
+    {
+      "name": "Effect speed",
+      "type": "numeric",
+      "property": "effect_speed_back",
+      "base": "effect_speed",
+      "endpoint": "back",
+      "description": "Animation speed for the active effect (0=slowest, 1=fastest).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1
+    },
+    {
+      "name": "Effect color",
+      "type": "text",
+      "property": "effect_color_back",
+      "base": "effect_color",
+      "endpoint": "back",
+      "description": "Set the base color of the active effect without stopping it (hex e.g. #FF4400, or JSON {\"x\":0.6,\"y\":0.3}).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Gradient style",
+      "type": "enum",
+      "property": "gradient_style_back",
+      "base": "gradient_style",
+      "endpoint": "back",
+      "description": "Gradient rendering style: linear (smooth blend), scattered (color per segment), mirrored (symmetric from center).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "linear",
+        "scattered",
+        "mirrored"
+      ]
+    },
+    {
+      "name": "Gradient scale",
+      "type": "numeric",
+      "property": "gradient_scale_back",
+      "base": "gradient_scale",
+      "endpoint": "back",
+      "description": "Gradient scale (0=auto fit, 1.0+=number of colors visible).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 31
+    },
+    {
+      "name": "Gradient offset",
+      "type": "numeric",
+      "property": "gradient_offset_back",
+      "base": "gradient_offset",
+      "endpoint": "back",
+      "description": "Gradient color offset (0=start from first color).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 31
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "dot_press",
+        "dot_hold",
+        "dot_press_release",
+        "dot_hold_release",
+        "hue_press",
+        "hue_hold",
+        "hue_press_release",
+        "hue_hold_release"
+      ]
+    }
+  ],
+  "warnings": []
+}

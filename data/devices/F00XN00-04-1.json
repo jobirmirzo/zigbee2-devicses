@@ -1,0 +1,67 @@
+{
+  "model": "F00XN00-04-1",
+  "file": "F00XN00-04-1.md",
+  "vendor": "FORIA",
+  "description": "Dimmer 4 scenes",
+  "image": "https://www.zigbee2mqtt.io/images/devices/F00XN00-04-1.png",
+  "added_at": "2024-04-29T19:24:38",
+  "exposes_summary": "battery, voltage, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "scene_1",
+        "scene_2",
+        "scene_3",
+        "scene_4",
+        "on",
+        "off",
+        "toggle",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

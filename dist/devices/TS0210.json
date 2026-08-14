@@ -1,0 +1,72 @@
+{
+  "model": "TS0210",
+  "file": "TS0210.md",
+  "vendor": "Tuya",
+  "description": "Vibration sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0210.png",
+  "added_at": "2021-01-31T22:24:43Z",
+  "exposes_summary": "battery, voltage, vibration, sensitivity",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Vibration",
+      "type": "binary",
+      "property": "vibration",
+      "base": "vibration",
+      "endpoint": null,
+      "description": "Indicates whether the device detected vibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Sensitivity",
+      "type": "numeric",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity of the sensor (0 = highest sensitivity, 50 = lowest sensitivity). Press button on the device right before changing this.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 50
+    }
+  ],
+  "warnings": []
+}

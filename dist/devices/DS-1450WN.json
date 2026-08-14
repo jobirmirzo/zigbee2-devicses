@@ -1,0 +1,248 @@
+{
+  "model": "DS-1450WN",
+  "file": "DS-1450WN.md",
+  "vendor": "Tuya",
+  "description": "Smart Zigbee Switch with power monitoring",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DS-1450WN.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "switch (state), countdown_usb_a, countdown_usb_c, countdown_plug_1, countdown_plug_2, relay_status, switch_backlight, current, power, voltage, produced_energy, child_lock",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "usb_a",
+      "features": [
+        {
+          "property": "state_usb_a",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "usb_c",
+      "features": [
+        {
+          "property": "state_usb_c",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "plug_1",
+      "features": [
+        {
+          "property": "state_plug_1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "plug_2",
+      "features": [
+        {
+          "property": "state_plug_2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "USB A Countdown",
+      "type": "numeric",
+      "property": "countdown_usb_a",
+      "base": "countdown_usb_a",
+      "endpoint": null,
+      "description": "Countdown timer for USB A.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400,
+      "unit": "s"
+    },
+    {
+      "name": "USB C Countdown",
+      "type": "numeric",
+      "property": "countdown_usb_c",
+      "base": "countdown_usb_c",
+      "endpoint": null,
+      "description": "Countdown timer for USB C.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400,
+      "unit": "s"
+    },
+    {
+      "name": "Plug 1 Countdown",
+      "type": "numeric",
+      "property": "countdown_plug_1",
+      "base": "countdown_plug_1",
+      "endpoint": null,
+      "description": "Countdown timer for Plug 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400,
+      "unit": "s"
+    },
+    {
+      "name": "Plug 2 Countdown",
+      "type": "numeric",
+      "property": "countdown_plug_2",
+      "base": "countdown_plug_2",
+      "endpoint": null,
+      "description": "Countdown timer for Plug 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400,
+      "unit": "s"
+    },
+    {
+      "name": "Relay Status",
+      "type": "enum",
+      "property": "relay_status",
+      "base": "relay_status",
+      "endpoint": null,
+      "description": "Set the Relay Status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "memory",
+        "on",
+        "off"
+      ]
+    },
+    {
+      "name": "Switch Backlight",
+      "type": "binary",
+      "property": "switch_backlight",
+      "base": "switch_backlight",
+      "endpoint": null,
+      "description": "Enables/disables backlight indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Produced energy",
+      "type": "numeric",
+      "property": "produced_energy",
+      "base": "produced_energy",
+      "endpoint": null,
+      "description": "Sum of produced energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    }
+  ],
+  "warnings": []
+}

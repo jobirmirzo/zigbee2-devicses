@@ -1,0 +1,27 @@
+{
+  "model": "4512763",
+  "file": "4512763.md",
+  "vendor": "Namron",
+  "description": "Zigbee movement sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/4512763.png",
+  "added_at": "2023-06-01T08:09:28",
+  "exposes_summary": "occupancy",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

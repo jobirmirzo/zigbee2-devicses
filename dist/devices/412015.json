@@ -1,0 +1,70 @@
+{
+  "model": "412015",
+  "file": "412015.md",
+  "vendor": "Legrand",
+  "description": "DIN power consumption module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/412015.png",
+  "added_at": "2020-06-29T17:33:31Z",
+  "exposes_summary": "power, power_apparent, power_alarm_active, power_alarm",
+  "exposes": [
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power apparent",
+      "type": "numeric",
+      "property": "power_apparent",
+      "base": "power_apparent",
+      "endpoint": null,
+      "description": "Instantaneous measured apparent power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "Power alarm active",
+      "type": "binary",
+      "property": "power_alarm_active",
+      "base": "power_alarm_active",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Power alarm",
+      "type": "binary",
+      "property": "power_alarm",
+      "base": "power_alarm",
+      "endpoint": null,
+      "description": "Enable/disable the power alarm.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

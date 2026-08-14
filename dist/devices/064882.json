@@ -1,0 +1,116 @@
+{
+  "model": "064882",
+  "file": "064882.md",
+  "vendor": "Legrand",
+  "description": "Cable outlet with pilot wire and consumption measurement",
+  "image": "https://www.zigbee2mqtt.io/images/devices/064882.png",
+  "added_at": "2022-01-31T17:42:44",
+  "exposes_summary": "device_mode, pilot_wire_mode, switch (state, state), power, power_apparent, power_on_behavior",
+  "exposes": [
+    {
+      "name": "Device mode",
+      "type": "binary",
+      "property": "device_mode",
+      "base": "device_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "pilot_on",
+      "value_off": "pilot_off"
+    },
+    {
+      "name": "Pilot wire mode",
+      "type": "enum",
+      "property": "pilot_wire_mode",
+      "base": "pilot_wire_mode",
+      "endpoint": null,
+      "description": "Controls the target temperature of the heater, with respect to the temperature set on that heater. Possible values: comfort (target temperature = heater set temperature) eco (target temperature = heater set temperature - 3.5°C), frost_protection (target temperature = 7 to 8°C), off (heater stops heating), and the less commonly used comfort_-1 (target temperature = heater set temperature - 1°C), comfort_-2 (target temperature = heater set temperature - 2°C),..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "comfort",
+        "eco",
+        "frost_protection",
+        "off",
+        "comfort_-1",
+        "comfort_-2"
+      ]
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power apparent",
+      "type": "numeric",
+      "property": "power_apparent",
+      "base": "power_apparent",
+      "endpoint": null,
+      "description": "Instantaneous measured apparent power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on. Works only when the pilot wire is deactivated.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "previous",
+        "on"
+      ]
+    }
+  ],
+  "warnings": []
+}

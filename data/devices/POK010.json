@@ -1,0 +1,129 @@
+{
+  "model": "POK010",
+  "file": "POK010.md",
+  "vendor": "PushOk Hardware",
+  "description": "Water level and temperature sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/POK010.png",
+  "added_at": "2024-09-01T12:39:25",
+  "exposes_summary": "contact, temperature, humidity, battery, voltage, pulse_frequency, pulse_count, operating_mode",
+  "exposes": [
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates if the contact is closed (= true) or open (= false).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Pulse frequency",
+      "type": "numeric",
+      "property": "pulse_frequency",
+      "base": "pulse_frequency",
+      "endpoint": null,
+      "description": "Pulse frequency (counter mode).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Pulse count",
+      "type": "numeric",
+      "property": "pulse_count",
+      "base": "pulse_count",
+      "endpoint": null,
+      "description": "Total pulse count (counter mode).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Operating mode",
+      "type": "enum",
+      "property": "operating_mode",
+      "base": "operating_mode",
+      "endpoint": null,
+      "description": "Operating mode: contact sensor or pulse counter.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "contact",
+        "counter"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,46 @@
+{
+  "model": "HG06467",
+  "file": "HG06467.md",
+  "vendor": "Lidl",
+  "description": "Melinera smart LED string lights",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HG06467.png",
+  "added_at": "2020-11-26T15:32:23Z",
+  "exposes_summary": "light (state, brightness, color_hs)",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_hs",
+          "base": "color_hs",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

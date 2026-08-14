@@ -1,0 +1,61 @@
+{
+  "model": "2AJZ4KPKEY",
+  "file": "2AJZ4KPKEY.md",
+  "vendor": "Konke",
+  "description": "Multi-function button",
+  "image": "https://www.zigbee2mqtt.io/images/devices/2AJZ4KPKEY.png",
+  "added_at": "2019-09-08T21:16:00Z",
+  "exposes_summary": "battery_low, battery, action",
+  "exposes": [
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single",
+        "double",
+        "hold"
+      ]
+    }
+  ],
+  "warnings": []
+}

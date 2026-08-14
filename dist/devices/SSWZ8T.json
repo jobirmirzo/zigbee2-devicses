@@ -1,0 +1,73 @@
+{
+  "model": "SSWZ8T",
+  "file": "SSWZ8T.md",
+  "vendor": "zunzunbee",
+  "description": "Slate switch (8-button touch controller)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SSWZ8T.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "battery, temperature, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "button_1_short_press",
+        "button_1_long_press",
+        "button_2_short_press",
+        "button_2_long_press",
+        "button_3_short_press",
+        "button_3_long_press",
+        "button_4_short_press",
+        "button_4_long_press",
+        "button_5_short_press",
+        "button_5_long_press",
+        "button_6_short_press",
+        "button_6_long_press",
+        "button_7_short_press",
+        "button_7_long_press",
+        "button_8_short_press",
+        "button_8_long_press"
+      ]
+    }
+  ],
+  "warnings": []
+}

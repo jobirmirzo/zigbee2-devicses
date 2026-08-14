@@ -1,0 +1,222 @@
+{
+  "model": "QS-Zigbee-SEC01-Mod",
+  "file": "QS-Zigbee-SEC01-Mod.md",
+  "vendor": "Svetomaniya",
+  "description": "Smart light switch module 1 gang",
+  "image": "https://www.zigbee2mqtt.io/images/devices/QS-Zigbee-SEC01-Mod.png",
+  "added_at": "2025-11-30T20:06:49",
+  "exposes_summary": "switch (state), power_on_behavior, switch_actions, switch_type, operation_mode, scene_id, group_id, min_level, max_level, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions",
+      "base": "switch_actions",
+      "endpoint": null,
+      "description": "Actions switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on"
+      ]
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type",
+      "base": "switch_type",
+      "endpoint": null,
+      "description": "Switch type.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "toggle",
+        "momentary",
+        "multifunction",
+        "light_control",
+        "scene"
+      ]
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode",
+      "base": "operation_mode",
+      "endpoint": null,
+      "description": "Relay decoupled.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "control_relay",
+        "decoupled"
+      ]
+    },
+    {
+      "name": "Scene id",
+      "type": "numeric",
+      "property": "scene_id",
+      "base": "scene_id",
+      "endpoint": null,
+      "description": "Scene ID.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "Group id",
+      "type": "numeric",
+      "property": "group_id",
+      "base": "group_id",
+      "endpoint": null,
+      "description": "Group ID for scenes.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65527
+    },
+    {
+      "name": "Min level",
+      "type": "numeric",
+      "property": "min_level",
+      "base": "min_level",
+      "endpoint": null,
+      "description": "Minimum level when decreasing.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 255
+    },
+    {
+      "name": "Max level",
+      "type": "numeric",
+      "property": "max_level",
+      "base": "max_level",
+      "endpoint": null,
+      "description": "Maximum level when increasing.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 255
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "toggle",
+        "hold",
+        "single",
+        "double",
+        "triple",
+        "quadruple",
+        "quintuple",
+        "release",
+        "brightness_move_to_level",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_stop",
+        "color_temperature_move_stop",
+        "color_temperature_move_up",
+        "color_temperature_move_down",
+        "color_temperature_step_up",
+        "color_temperature_step_down",
+        "enhanced_move_to_hue_and_saturation",
+        "move_to_hue_and_saturation",
+        "color_hue_step_up",
+        "color_hue_step_down",
+        "color_saturation_step_up",
+        "color_saturation_step_down",
+        "color_loop_set",
+        "color_temperature_move",
+        "color_move",
+        "hue_move",
+        "hue_stop",
+        "move_to_saturation",
+        "move_to_hue",
+        "stop_move_step",
+        "recall",
+        "store",
+        "add",
+        "remove",
+        "remove_all"
+      ]
+    }
+  ],
+  "warnings": []
+}

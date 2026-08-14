@@ -1,0 +1,53 @@
+{
+  "model": "4512729",
+  "file": "4512729.md",
+  "vendor": "Namron",
+  "description": "Zigbee 2 channel switch K4 (black)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/4512729.png",
+  "added_at": "2021-05-01T14:47:09Z",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_l1",
+        "off_l1",
+        "brightness_move_up_l1",
+        "brightness_move_down_l1",
+        "brightness_stop_l1",
+        "on_l2",
+        "off_l2",
+        "brightness_move_up_l2",
+        "brightness_move_down_l2",
+        "brightness_stop_l2"
+      ]
+    }
+  ],
+  "warnings": []
+}

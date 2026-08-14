@@ -1,0 +1,65 @@
+{
+  "model": "E1744",
+  "file": "E1744.md",
+  "vendor": "IKEA",
+  "description": "SYMFONISK sound remote, gen 1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E1744.png",
+  "added_at": "2019-11-09T18:37:38Z",
+  "exposes_summary": "identify, battery, action",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "toggle",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_stop",
+        "brightness_step_up",
+        "brightness_step_down"
+      ]
+    }
+  ],
+  "warnings": []
+}

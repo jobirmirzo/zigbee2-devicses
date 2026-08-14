@@ -1,0 +1,76 @@
+{
+  "model": "ZN-USC1U-HT",
+  "file": "ZN-USC1U-HT.md",
+  "vendor": "Zemismart",
+  "description": "Smart curtain wall switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZN-USC1U-HT.png",
+  "added_at": "2025-10-31T19:10:30",
+  "exposes_summary": "cover (state, position), motor_steering, calibration_time",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Motor steering",
+      "type": "enum",
+      "property": "motor_steering",
+      "base": "motor_steering",
+      "endpoint": null,
+      "description": "Motor steering.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "FORWARD",
+        "BACKWARD"
+      ]
+    },
+    {
+      "name": "Calibration time",
+      "type": "numeric",
+      "property": "calibration_time",
+      "base": "calibration_time",
+      "endpoint": null,
+      "description": "Calibration time in seconds (Please fully close the curtain before set the calibration time).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 500,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

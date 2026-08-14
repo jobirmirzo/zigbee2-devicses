@@ -1,0 +1,147 @@
+{
+  "model": "ERS-10TZBVK-AA",
+  "file": "ERS-10TZBVK-AA.md",
+  "vendor": "Tuya",
+  "description": "Smart knob",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ERS-10TZBVK-AA.png",
+  "added_at": "2021-12-31T16:51:16",
+  "exposes_summary": "action_brightness_delta, action_step_size, action_color_temperature_delta, action_transition_time, action_rate, battery, operation_mode, action",
+  "exposes": [
+    {
+      "name": "Action brightness delta",
+      "type": "numeric",
+      "property": "action_brightness_delta",
+      "base": "action_brightness_delta",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": -255,
+      "value_max": 255
+    },
+    {
+      "name": "Action step size",
+      "type": "numeric",
+      "property": "action_step_size",
+      "base": "action_step_size",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "Action color temperature delta",
+      "type": "numeric",
+      "property": "action_color_temperature_delta",
+      "base": "action_color_temperature_delta",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": -65535,
+      "value_max": 65535
+    },
+    {
+      "name": "Action transition time",
+      "type": "numeric",
+      "property": "action_transition_time",
+      "base": "action_transition_time",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Action rate",
+      "type": "numeric",
+      "property": "action_rate",
+      "base": "action_rate",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode",
+      "base": "operation_mode",
+      "endpoint": null,
+      "description": "Operation mode: \"command\" - for group control, \"event\" - for clicks.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "command",
+        "event"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "toggle",
+        "brightness_step_up",
+        "brightness_step_down",
+        "color_temperature_step_up",
+        "color_temperature_step_down",
+        "saturation_move",
+        "hue_move",
+        "hue_stop",
+        "single",
+        "double",
+        "hold",
+        "rotate_left",
+        "rotate_right"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,70 @@
+{
+  "model": "TS0601_human_presence_sensor",
+  "file": "TS0601_human_presence_sensor.md",
+  "vendor": "Tuya",
+  "description": "Human presence sensor Zigbee",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_human_presence_sensor.png",
+  "added_at": "2022-08-25T08:00:58",
+  "exposes_summary": "presence, duration_of_attendance, duration_of_absence, led_state",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Duration of attendance",
+      "type": "numeric",
+      "property": "duration_of_attendance",
+      "base": "duration_of_attendance",
+      "endpoint": null,
+      "description": "Shows the presence duration in minutes.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "min"
+    },
+    {
+      "name": "Duration of absence",
+      "type": "numeric",
+      "property": "duration_of_absence",
+      "base": "duration_of_absence",
+      "endpoint": null,
+      "description": "Shows the duration of the absence in minutes.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "min"
+    },
+    {
+      "name": "Led state",
+      "type": "binary",
+      "property": "led_state",
+      "base": "led_state",
+      "endpoint": null,
+      "description": "Turns the onboard LED on or off.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

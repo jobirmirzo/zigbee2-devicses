@@ -1,0 +1,108 @@
+{
+  "model": "SR-ZG9030F-PS",
+  "file": "SR-ZG9030F-PS.md",
+  "vendor": "Sunricher",
+  "description": "Smart human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SR-ZG9030F-PS.png",
+  "added_at": "2025-02-01T20:02:57",
+  "exposes_summary": "illuminance, occupancy, indicator_light, detection_area, illuminance_threshold, action",
+  "exposes": [
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Indicator light",
+      "type": "enum",
+      "property": "indicator_light",
+      "base": "indicator_light",
+      "endpoint": null,
+      "description": "Enable/disable the LED indicator.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off"
+      ]
+    },
+    {
+      "name": "Detection area",
+      "type": "numeric",
+      "property": "detection_area",
+      "base": "detection_area",
+      "endpoint": null,
+      "description": "Detection area range (default: 50%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance threshold",
+      "type": "numeric",
+      "property": "illuminance_threshold",
+      "base": "illuminance_threshold",
+      "endpoint": null,
+      "description": "Illuminance threshold for triggering (default: 100).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 100,
+      "unit": "lx"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "toggle"
+      ]
+    }
+  ],
+  "warnings": []
+}

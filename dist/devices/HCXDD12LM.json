@@ -1,0 +1,289 @@
+{
+  "model": "HCXDD12LM",
+  "file": "HCXDD12LM.md",
+  "vendor": "Aqara",
+  "description": "Ceiling light T1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HCXDD12LM.png",
+  "added_at": "2024-03-31T18:43:56",
+  "exposes_summary": "light (state, brightness, color_temp), power_outage_count, device_temperature, light (state, brightness, color_temp, color_xy), power_on_behavior, identify, dimming_range_minimum, dimming_range_maximum, on_off_duration, off_on_duration, effect, effect_speed, effect_colors, segment_colors",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "white",
+      "features": [
+        {
+          "property": "state_white",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_white",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp_white",
+          "base": "color_temp",
+          "value_min": 153,
+          "value_max": 370,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warmest"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages (since last pairing).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "rgb",
+      "features": [
+        {
+          "property": "state_rgb",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_rgb",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp_rgb",
+          "base": "color_temp",
+          "value_min": 153,
+          "value_max": 370,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_xy_rgb",
+          "base": "color_xy",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Power on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "previous",
+        "off"
+      ]
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Dimming range minimum",
+      "type": "numeric",
+      "property": "dimming_range_minimum",
+      "base": "dimming_range_minimum",
+      "endpoint": null,
+      "description": "Minimum allowed dimming value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 99,
+      "unit": "%"
+    },
+    {
+      "name": "Dimming range maximum",
+      "type": "numeric",
+      "property": "dimming_range_maximum",
+      "base": "dimming_range_maximum",
+      "endpoint": null,
+      "description": "Maximum allowed dimming value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "On off duration",
+      "type": "numeric",
+      "property": "on_off_duration",
+      "base": "on_off_duration",
+      "endpoint": null,
+      "description": "Duration for light to gradually dim when turning off.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "s"
+    },
+    {
+      "name": "Off on duration",
+      "type": "numeric",
+      "property": "off_on_duration",
+      "base": "off_on_duration",
+      "endpoint": null,
+      "description": "Duration for light to gradually brighten when turning on.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "s"
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "RGB dynamic effect type.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "flow1",
+        "flow2",
+        "fading",
+        "hopping",
+        "breathing",
+        "rolling"
+      ]
+    },
+    {
+      "name": "Effect speed",
+      "type": "numeric",
+      "property": "effect_speed",
+      "base": "effect_speed",
+      "endpoint": null,
+      "description": "RGB dynamic effect speed (1-100%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Effect colors",
+      "type": "list",
+      "property": "effect_colors",
+      "base": "effect_colors",
+      "endpoint": null,
+      "description": "Array of RGB color objects for dynamic effects (1-8 colors)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Segment colors",
+      "type": "list",
+      "property": "segment_colors",
+      "base": "segment_colors",
+      "endpoint": null,
+      "description": "Set individual segment colors..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    }
+  ],
+  "warnings": []
+}

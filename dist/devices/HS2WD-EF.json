@@ -1,0 +1,100 @@
+{
+  "model": "HS2WD-EF",
+  "file": "HS2WD-EF.md",
+  "vendor": "Heiman",
+  "description": "Smart siren",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS2WD-EF.png",
+  "added_at": "2026-01-01T13:27:46",
+  "exposes_summary": "battery, max_duration, warning",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Max duration",
+      "type": "numeric",
+      "property": "max_duration",
+      "base": "max_duration",
+      "endpoint": null,
+      "description": "Max duration of Siren.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1800,
+      "unit": "s"
+    },
+    {
+      "name": "Warning",
+      "type": "composite",
+      "property": "warning",
+      "base": "warning",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "level",
+          "type": "enum",
+          "description": "Sound level",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "property": "strobe",
+          "type": "binary",
+          "description": "Turn on/off the strobe (light) during warning",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "strobe_duty_cycle",
+          "type": "numeric",
+          "description": "Length of the flash cycle max value is 10"
+        },
+        {
+          "property": "duration",
+          "type": "numeric",
+          "description": "Duration in seconds of the alarm unit is s"
+        },
+        {
+          "property": "mode",
+          "type": "enum",
+          "description": "Mode of the warning(sound effect)",
+          "values": [
+            "stop",
+            "burglar",
+            "fire",
+            "emergency"
+          ]
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

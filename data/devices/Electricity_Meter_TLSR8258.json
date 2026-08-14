@@ -1,0 +1,288 @@
+{
+  "model": "Electricity Meter TLSR8258",
+  "file": "Electricity_Meter_TLSR8258.md",
+  "vendor": "Slacky-DIY",
+  "description": "Electricity Meter via optical port",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Electricity-Meter-TLSR8258.png",
+  "added_at": "2025-04-01T18:30:52",
+  "exposes_summary": "device_temperature, power, voltage, current, energy, energy_tier_1, energy_tier_2, energy_tier_3, energy_tier_4, model_name, serial_number, date_release, battery_life, tamper, battery_low, device_address_preset, device_password_preset, device_measurement_preset, device_model_preset",
+  "exposes": [
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy tier 1",
+      "type": "numeric",
+      "property": "energy_tier_1",
+      "base": "energy_tier_1",
+      "endpoint": null,
+      "description": "Energy consumed at Tier 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy tier 2",
+      "type": "numeric",
+      "property": "energy_tier_2",
+      "base": "energy_tier_2",
+      "endpoint": null,
+      "description": "Energy consumed at Tier 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy tier 3",
+      "type": "numeric",
+      "property": "energy_tier_3",
+      "base": "energy_tier_3",
+      "endpoint": null,
+      "description": "Energy consumed at Tier 3.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy tier 4",
+      "type": "numeric",
+      "property": "energy_tier_4",
+      "base": "energy_tier_4",
+      "endpoint": null,
+      "description": "Energy consumed at Tier 4.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Model name",
+      "type": "text",
+      "property": "model_name",
+      "base": "model_name",
+      "endpoint": null,
+      "description": "Meter Model Name.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Serial number",
+      "type": "text",
+      "property": "serial_number",
+      "base": "serial_number",
+      "endpoint": null,
+      "description": "Meter Serial Number.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Date release",
+      "type": "text",
+      "property": "date_release",
+      "base": "date_release",
+      "endpoint": null,
+      "description": "Meter Date Release.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Battery life",
+      "type": "numeric",
+      "property": "battery_life",
+      "base": "battery_life",
+      "endpoint": null,
+      "description": "Battery Life.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Tamper.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Battery Low.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Device address preset",
+      "type": "numeric",
+      "property": "device_address_preset",
+      "base": "device_address_preset",
+      "endpoint": null,
+      "description": "Device Address.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 9999999
+    },
+    {
+      "name": "Device password preset",
+      "type": "text",
+      "property": "device_password_preset",
+      "base": "device_password_preset",
+      "endpoint": null,
+      "description": "Meter Password.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Device measurement preset",
+      "type": "numeric",
+      "property": "device_measurement_preset",
+      "base": "device_measurement_preset",
+      "endpoint": null,
+      "description": "Measurement Period.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 255
+    },
+    {
+      "name": "Device model preset",
+      "type": "enum",
+      "property": "device_model_preset",
+      "base": "device_model_preset",
+      "endpoint": null,
+      "description": "Device Model.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "no_device",
+        "KASKAD-1-MT (MIRTEK)",
+        "KASKAD-11-C1",
+        "MERCURY-206",
+        "ENERGOMERA-CE102M",
+        "ENERGOMERA-CE208BY",
+        "NEVA-MT124",
+        "NARTIS-100",
+        "NARTIS-I100"
+      ]
+    }
+  ],
+  "warnings": []
+}

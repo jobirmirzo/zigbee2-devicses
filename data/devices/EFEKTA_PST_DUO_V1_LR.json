@@ -1,0 +1,359 @@
+{
+  "model": "EFEKTA_PST_DUO_V1_LR",
+  "file": "EFEKTA_PST_DUO_V1_LR.md",
+  "vendor": "EFEKTA",
+  "description": "Water, gas smart pressure monitor with two sensors and signal amplifier",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_PST_DUO_V1_LR.png",
+  "added_at": "2025-02-18T14:54:46",
+  "exposes_summary": "pressure, bar, psi, temperature, pressure_offset, raw_temperature_cal, range, raw_temperature_calibration, battery, voltage, battery_low, uptime, reading_interval, tx_radio_power, smart_sleep, config_report_enable, comparison_previous_data",
+  "exposes": [
+    {
+      "name": "Pressure",
+      "type": "numeric",
+      "property": "pressure_1",
+      "base": "pressure",
+      "endpoint": "1",
+      "description": "Measured pressure value оf the first sensor in kPa.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kPa"
+    },
+    {
+      "name": "Bar",
+      "type": "numeric",
+      "property": "bar_1",
+      "base": "bar",
+      "endpoint": "1",
+      "description": "Measured pressure value оf the first sensor in bar.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "bar"
+    },
+    {
+      "name": "Psi",
+      "type": "numeric",
+      "property": "psi_1",
+      "base": "psi",
+      "endpoint": "1",
+      "description": "Measured pressure value оf the first sensor in psi.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "psi"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_1",
+      "base": "temperature",
+      "endpoint": "1",
+      "description": "Measured value of the first temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Pressure offset",
+      "type": "numeric",
+      "property": "pressure_offset_1",
+      "base": "pressure_offset",
+      "endpoint": "1",
+      "description": "Adjust first pressure sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -100,
+      "value_max": 100,
+      "unit": "kPa"
+    },
+    {
+      "name": "Raw temperature cal",
+      "type": "numeric",
+      "property": "raw_temperature_cal_1",
+      "base": "raw_temperature_cal",
+      "endpoint": "1",
+      "description": "Adjust first temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -8192,
+      "value_max": 8192,
+      "unit": "raw unit"
+    },
+    {
+      "name": "Range",
+      "type": "enum",
+      "property": "range_1",
+      "base": "range",
+      "endpoint": "1",
+      "description": "Measuring range of the first sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "0-10 Bar",
+        "0-16 Bar"
+      ]
+    },
+    {
+      "name": "Pressure",
+      "type": "numeric",
+      "property": "pressure_2",
+      "base": "pressure",
+      "endpoint": "2",
+      "description": "Measured pressure value оf the second sensor in kPa.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kPa"
+    },
+    {
+      "name": "Bar",
+      "type": "numeric",
+      "property": "bar_2",
+      "base": "bar",
+      "endpoint": "2",
+      "description": "Measured pressure value оf the second sensor in bar.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "bar"
+    },
+    {
+      "name": "Psi",
+      "type": "numeric",
+      "property": "psi_2",
+      "base": "psi",
+      "endpoint": "2",
+      "description": "Measured pressure value оf the second sensor in psi.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "psi"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_2",
+      "base": "temperature",
+      "endpoint": "2",
+      "description": "Measured value of the second temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Pressure offset",
+      "type": "numeric",
+      "property": "pressure_offset_2",
+      "base": "pressure_offset",
+      "endpoint": "2",
+      "description": "Adjust second pressure sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -100,
+      "value_max": 100,
+      "unit": "kPa"
+    },
+    {
+      "name": "Raw temperature calibration",
+      "type": "numeric",
+      "property": "raw_temperature_calibration_2",
+      "base": "raw_temperature_calibration",
+      "endpoint": "2",
+      "description": "Adjust second temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -8192,
+      "value_max": 8192,
+      "unit": "raw unit"
+    },
+    {
+      "name": "Range",
+      "type": "enum",
+      "property": "range_2",
+      "base": "range",
+      "endpoint": "2",
+      "description": "Measuring range of the first sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "0-10 Bar",
+        "0-16 Bar"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Uptime",
+      "type": "numeric",
+      "property": "uptime",
+      "base": "uptime",
+      "endpoint": null,
+      "description": "Uptime.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hours"
+    },
+    {
+      "name": "Reading interval",
+      "type": "numeric",
+      "property": "reading_interval",
+      "base": "reading_interval",
+      "endpoint": null,
+      "description": "Setting the sensor reading interval in seconds, by default 40 seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 360,
+      "unit": "sec"
+    },
+    {
+      "name": "Tx radio power",
+      "type": "enum",
+      "property": "tx_radio_power",
+      "base": "tx_radio_power",
+      "endpoint": null,
+      "description": "Set TX Radio Power, dbm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "4dbm",
+        "19dbm"
+      ]
+    },
+    {
+      "name": "Smart sleep",
+      "type": "binary",
+      "property": "smart_sleep",
+      "base": "smart_sleep",
+      "endpoint": null,
+      "description": "Enable Smart Sleep, short wakeup every 7 seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Config report enable",
+      "type": "binary",
+      "property": "config_report_enable",
+      "base": "config_report_enable",
+      "endpoint": null,
+      "description": "Enable reporting based on reporting configuration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Comparison previous data",
+      "type": "binary",
+      "property": "comparison_previous_data",
+      "base": "comparison_previous_data",
+      "endpoint": null,
+      "description": "Enable сontrol of comparison with previous data.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

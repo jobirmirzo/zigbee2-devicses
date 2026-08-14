@@ -1,0 +1,83 @@
+{
+  "model": "iH-F8260",
+  "file": "iH-F8260.md",
+  "vendor": "Tuya",
+  "description": "Universal smart IR remote control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/iH-F8260.png",
+  "added_at": "2024-02-06T19:45:40",
+  "exposes_summary": "learn_ir_code, learned_ir_code, ir_code_to_send, battery, voltage",
+  "exposes": [
+    {
+      "name": "Learn ir code",
+      "type": "binary",
+      "property": "learn_ir_code",
+      "base": "learn_ir_code",
+      "endpoint": null,
+      "description": "Turn on to learn new IR code.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Learned ir code",
+      "type": "text",
+      "property": "learned_ir_code",
+      "base": "learned_ir_code",
+      "endpoint": null,
+      "description": "The IR code learned by device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Ir code to send",
+      "type": "text",
+      "property": "ir_code_to_send",
+      "base": "ir_code_to_send",
+      "endpoint": null,
+      "description": "The IR code to send by device.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

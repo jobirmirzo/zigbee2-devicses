@@ -1,0 +1,425 @@
+{
+  "model": "TRVZB",
+  "file": "TRVZB.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee thermostatic radiator valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TRVZB.png",
+  "added_at": "2023-09-28T10:54:36",
+  "exposes_summary": "climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, running_state), battery, timer_mode_target_temp, temporary_mode_duration, temporary_mode_select, child_lock, open_window, frost_protection_temperature, temperature_sensor_select, external_temperature_input, idle_steps, closing_steps, valve_opening_limit_voltage, valve_closing_limit_voltage, valve_motor_running_voltage, valve_opening_degree, valve_closing_degree, temperature_accuracy, weekly_schedule_sunday, weekly_schedule_monday, weekly_schedule_tuesday, weekly_schedule_wednesday, weekly_schedule_thursday, weekly_schedule_friday, weekly_schedule_saturday, smart_temperature_control",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 4,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "auto",
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Timer mode target temp",
+      "type": "numeric",
+      "property": "timer_mode_target_temp",
+      "base": "timer_mode_target_temp",
+      "endpoint": null,
+      "description": "In timer mode, the temperature can be set to 4-35 ℃..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temporary mode duration",
+      "type": "numeric",
+      "property": "temporary_mode_duration",
+      "base": "temporary_mode_duration",
+      "endpoint": null,
+      "description": "Boost Mode: Sets maximum TRV temperature for up to 180 minutes.Timer Mode: Customizes temperature and duration, up to 24 hours..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1440,
+      "unit": "minutes"
+    },
+    {
+      "name": "Temporary mode",
+      "type": "enum",
+      "property": "temporary_mode_select",
+      "base": "temporary_mode_select",
+      "endpoint": null,
+      "description": "Boost mode: Activates maximum TRV temperature for a user-defined duration, enabling rapid heating. Timer Mode: Allows customization of temperature and duration for precise heating control.After the set duration, the system will return to its previous normal mode and temperature..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "boost",
+        "timer"
+      ]
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Open window",
+      "type": "binary",
+      "property": "open_window",
+      "base": "open_window",
+      "endpoint": null,
+      "description": "Automatically turns off the radiator when local temperature drops by more than 1.5°C in 4.5 minutes..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Frost protection temperature",
+      "type": "numeric",
+      "property": "frost_protection_temperature",
+      "base": "frost_protection_temperature",
+      "endpoint": null,
+      "description": "Minimum temperature at which to automatically turn on the radiator, if system mode is off, to prevent pipes freezing..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature sensor",
+      "type": "enum",
+      "property": "temperature_sensor_select",
+      "base": "temperature_sensor_select",
+      "endpoint": null,
+      "description": "Whether to use the value of the internal temperature sensor or an external temperature sensor for the perceived local temperature. Using an external sensor does not require local temperature calibration..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "internal",
+        "external",
+        "external_2",
+        "external_3"
+      ]
+    },
+    {
+      "name": "External temperature",
+      "type": "numeric",
+      "property": "external_temperature_input",
+      "base": "external_temperature_input",
+      "endpoint": null,
+      "description": "The value of an external temperature sensor. Note: synchronisation of this value with the external temperature sensor needs to happen outside of Zigbee2MQTT..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 99.9,
+      "unit": "°C"
+    },
+    {
+      "name": "Idle steps",
+      "type": "numeric",
+      "property": "idle_steps",
+      "base": "idle_steps",
+      "endpoint": null,
+      "description": "Number of steps used for calibration (no-load steps).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Closing steps",
+      "type": "numeric",
+      "property": "closing_steps",
+      "base": "closing_steps",
+      "endpoint": null,
+      "description": "Number of steps it takes to close the valve.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Valve opening limit voltage",
+      "type": "numeric",
+      "property": "valve_opening_limit_voltage",
+      "base": "valve_opening_limit_voltage",
+      "endpoint": null,
+      "description": "Valve opening limit voltage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Valve closing limit voltage",
+      "type": "numeric",
+      "property": "valve_closing_limit_voltage",
+      "base": "valve_closing_limit_voltage",
+      "endpoint": null,
+      "description": "Valve closing limit voltage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Valve motor running voltage",
+      "type": "numeric",
+      "property": "valve_motor_running_voltage",
+      "base": "valve_motor_running_voltage",
+      "endpoint": null,
+      "description": "Valve motor running voltage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Valve opening degree",
+      "type": "numeric",
+      "property": "valve_opening_degree",
+      "base": "valve_opening_degree",
+      "endpoint": null,
+      "description": "Valve open position (percentage) control. If the opening degree is set to 100%, the valve is fully open when it is opened. If the opening degree is set to 0%, the valve is fully closed when it is opened, and the default value is 100%. Note: only version v1.1.4 or higher is supported..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Valve closing degree",
+      "type": "numeric",
+      "property": "valve_closing_degree",
+      "base": "valve_closing_degree",
+      "endpoint": null,
+      "description": "Valve closed position (percentage) control. If the closing degree is set to 100%, the valve is fully closed when it is closed. If the closing degree is set to 0%, the valve is fully opened when it is closed, and the default value is 100%. Note: Only version v1.1.4 or higher is supported..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature accuracy",
+      "type": "numeric",
+      "property": "temperature_accuracy",
+      "base": "temperature_accuracy",
+      "endpoint": null,
+      "description": "Temperature control accuracy. The range is -0.2 ~ -1°C, with an interval of 0.2, and the default is -1. If the temperature control accuracy is selected as -1°C (default value) and the target temperature is 26 degrees, then TRVZB will close the valve when the room temperature reaches 26 degrees and open the valve at 25 degrees. If -0.4°C is chosen as the temperature control accuracy, then the valve will close when the room temperature reaches 26 degrees and open at 25.6 degrees.Note: Only version v1.3.0 or higher is supported..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -1,
+      "value_max": -0.2,
+      "unit": "°C"
+    },
+    {
+      "name": "Weekly schedule sunday",
+      "type": "text",
+      "property": "weekly_schedule_sunday",
+      "base": "weekly_schedule_sunday",
+      "endpoint": null,
+      "description": "The preset heating schedule to use when the system mode is set to \"auto\" (indicated with ⏲ on the TRV). Up to 6 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The first transition for each day must start at 00:00 and the valid temperature range is 4-35°C (in 0.5°C steps). The temperature will be set at the time of the first transition until the time of the next transition, e.g. '04:00/20 10:00/25' will result in the temperature being set to 20°C at 04:00 until 10:00, when it will change to 25°C..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Weekly schedule monday",
+      "type": "text",
+      "property": "weekly_schedule_monday",
+      "base": "weekly_schedule_monday",
+      "endpoint": null,
+      "description": "The preset heating schedule to use when the system mode is set to \"auto\" (indicated with ⏲ on the TRV). Up to 6 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The first transition for each day must start at 00:00 and the valid temperature range is 4-35°C (in 0.5°C steps). The temperature will be set at the time of the first transition until the time of the next transition, e.g. '04:00/20 10:00/25' will result in the temperature being set to 20°C at 04:00 until 10:00, when it will change to 25°C..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Weekly schedule tuesday",
+      "type": "text",
+      "property": "weekly_schedule_tuesday",
+      "base": "weekly_schedule_tuesday",
+      "endpoint": null,
+      "description": "The preset heating schedule to use when the system mode is set to \"auto\" (indicated with ⏲ on the TRV). Up to 6 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The first transition for each day must start at 00:00 and the valid temperature range is 4-35°C (in 0.5°C steps). The temperature will be set at the time of the first transition until the time of the next transition, e.g. '04:00/20 10:00/25' will result in the temperature being set to 20°C at 04:00 until 10:00, when it will change to 25°C..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Weekly schedule wednesday",
+      "type": "text",
+      "property": "weekly_schedule_wednesday",
+      "base": "weekly_schedule_wednesday",
+      "endpoint": null,
+      "description": "The preset heating schedule to use when the system mode is set to \"auto\" (indicated with ⏲ on the TRV). Up to 6 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The first transition for each day must start at 00:00 and the valid temperature range is 4-35°C (in 0.5°C steps). The temperature will be set at the time of the first transition until the time of the next transition, e.g. '04:00/20 10:00/25' will result in the temperature being set to 20°C at 04:00 until 10:00, when it will change to 25°C..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Weekly schedule thursday",
+      "type": "text",
+      "property": "weekly_schedule_thursday",
+      "base": "weekly_schedule_thursday",
+      "endpoint": null,
+      "description": "The preset heating schedule to use when the system mode is set to \"auto\" (indicated with ⏲ on the TRV). Up to 6 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The first transition for each day must start at 00:00 and the valid temperature range is 4-35°C (in 0.5°C steps). The temperature will be set at the time of the first transition until the time of the next transition, e.g. '04:00/20 10:00/25' will result in the temperature being set to 20°C at 04:00 until 10:00, when it will change to 25°C..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Weekly schedule friday",
+      "type": "text",
+      "property": "weekly_schedule_friday",
+      "base": "weekly_schedule_friday",
+      "endpoint": null,
+      "description": "The preset heating schedule to use when the system mode is set to \"auto\" (indicated with ⏲ on the TRV). Up to 6 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The first transition for each day must start at 00:00 and the valid temperature range is 4-35°C (in 0.5°C steps). The temperature will be set at the time of the first transition until the time of the next transition, e.g. '04:00/20 10:00/25' will result in the temperature being set to 20°C at 04:00 until 10:00, when it will change to 25°C..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Weekly schedule saturday",
+      "type": "text",
+      "property": "weekly_schedule_saturday",
+      "base": "weekly_schedule_saturday",
+      "endpoint": null,
+      "description": "The preset heating schedule to use when the system mode is set to \"auto\" (indicated with ⏲ on the TRV). Up to 6 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The first transition for each day must start at 00:00 and the valid temperature range is 4-35°C (in 0.5°C steps). The temperature will be set at the time of the first transition until the time of the next transition, e.g. '04:00/20 10:00/25' will result in the temperature being set to 20°C at 04:00 until 10:00, when it will change to 25°C..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Smart temperature control",
+      "type": "binary",
+      "property": "smart_temperature_control",
+      "base": "smart_temperature_control",
+      "endpoint": null,
+      "description": "Enable adaptive valve control using a PID algorithm. When enabled, \"Valve Opening Percentage\" and \"Temperature Accuracy\" are unavailable..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

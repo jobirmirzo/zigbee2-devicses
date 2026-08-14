@@ -1,0 +1,114 @@
+{
+  "model": "HT-SLM-2",
+  "file": "HT-SLM-2.md",
+  "vendor": "Heimgard Technologies",
+  "description": "Smart (fingerprint/PIN/RFID) doorlock",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HT-SLM-2.png",
+  "added_at": "2023-04-27T17:39:27",
+  "exposes_summary": "lock (state, lock_state), pin_code, battery, sound_volume",
+  "exposes": [
+    {
+      "name": "Lock",
+      "type": "lock",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "LOCK",
+            "UNLOCK"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Pin code",
+      "type": "composite",
+      "property": "pin_code",
+      "base": "pin_code",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "user",
+          "type": "numeric",
+          "description": "User ID to set or clear the pincode for"
+        },
+        {
+          "property": "user_type",
+          "type": "enum",
+          "description": "Type of user, unrestricted: owner (default), (year|week)_day_schedule: user has ability to open lock based on specific time period, master: user has ability to both program and operate the door lock, non_access: user is recognized by the lock but does not have the ability to open the lock",
+          "values": [
+            "unrestricted",
+            "year_day_schedule",
+            "week_day_schedule",
+            "master",
+            "non_access"
+          ]
+        },
+        {
+          "property": "user_enabled",
+          "type": "binary",
+          "description": "Whether the user is enabled/disabled",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "pin_code",
+          "type": "numeric",
+          "description": "Pincode to set, set pincode to null to clear"
+        }
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Sound volume",
+      "type": "enum",
+      "property": "sound_volume",
+      "base": "sound_volume",
+      "endpoint": null,
+      "description": "Sound volume.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "warnings": []
+}

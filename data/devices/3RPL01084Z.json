@@ -1,0 +1,270 @@
+{
+  "model": "3RPL01084Z",
+  "file": "3RPL01084Z.md",
+  "vendor": "Third Reality",
+  "description": "Multi-function smart presence sensor R3",
+  "image": "https://www.zigbee2mqtt.io/images/devices/3RPL01084Z.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "occupancy, illuminance, total_volatile_organic_compounds, tvoc_sensor_calibration, presence_sensor_sensitivity, tvoc_alert_threshold, tvoc_alert_enable, motion_detect_sensitivity_level, presence_detect_sensitivity_level, presence_hold_time_level, light (state, brightness, color_temp, color_temp_startup, color_xy), effect, power_on_behavior",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Total volatile organic compounds",
+      "type": "numeric",
+      "property": "total_volatile_organic_compounds",
+      "base": "total_volatile_organic_compounds",
+      "endpoint": null,
+      "description": "Measured TVOC value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "ppb"
+    },
+    {
+      "name": "Tvoc sensor calibration",
+      "type": "enum",
+      "property": "tvoc_sensor_calibration",
+      "base": "tvoc_sensor_calibration",
+      "endpoint": null,
+      "description": "TVOC sensor calibration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Reset"
+      ]
+    },
+    {
+      "name": "Presence sensor sensitivity",
+      "type": "numeric",
+      "property": "presence_sensor_sensitivity",
+      "base": "presence_sensor_sensitivity",
+      "endpoint": null,
+      "description": "Presence sensor detect distance level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 6
+    },
+    {
+      "name": "Tvoc alert threshold",
+      "type": "numeric",
+      "property": "tvoc_alert_threshold",
+      "base": "tvoc_alert_threshold",
+      "endpoint": null,
+      "description": "TVOC alert threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 3000,
+      "value_max": 50000,
+      "unit": "ppb"
+    },
+    {
+      "name": "Tvoc alert enable",
+      "type": "binary",
+      "property": "tvoc_alert_enable",
+      "base": "tvoc_alert_enable",
+      "endpoint": null,
+      "description": "TVOC alert enable.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Motion detect sensitivity level",
+      "type": "numeric",
+      "property": "motion_detect_sensitivity_level",
+      "base": "motion_detect_sensitivity_level",
+      "endpoint": null,
+      "description": "Set motion detect sensitivity level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 20,
+      "unit": "level"
+    },
+    {
+      "name": "Presence detect sensitivity level",
+      "type": "numeric",
+      "property": "presence_detect_sensitivity_level",
+      "base": "presence_detect_sensitivity_level",
+      "endpoint": null,
+      "description": "Set Presence detect sensitivity level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 20,
+      "unit": "level"
+    },
+    {
+      "name": "Presence hold time level",
+      "type": "numeric",
+      "property": "presence_hold_time_level",
+      "base": "presence_hold_time_level",
+      "endpoint": null,
+      "description": "Set Presence hold time level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 4,
+      "unit": "level"
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 154,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup",
+          "base": "color_temp_startup",
+          "value_min": 154,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_xy",
+          "base": "color_xy",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect",
+        "colorloop",
+        "stop_colorloop"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    }
+  ],
+  "warnings": []
+}

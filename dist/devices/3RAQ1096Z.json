@@ -1,0 +1,68 @@
+{
+  "model": "3RAQ1096Z",
+  "file": "3RAQ1096Z.md",
+  "vendor": "Third Reality",
+  "description": "Smart air quality sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/3RAQ1096Z.png",
+  "added_at": "2026-04-30T19:57:28",
+  "exposes_summary": "temperature, humidity, co2, voc_index",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "Measured value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Voc index",
+      "type": "numeric",
+      "property": "voc_index",
+      "base": "voc_index",
+      "endpoint": null,
+      "description": "Measured VOC Index.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "VOC Index points"
+    }
+  ],
+  "warnings": []
+}

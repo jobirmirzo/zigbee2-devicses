@@ -1,0 +1,11 @@
+{
+  "model": "XBee",
+  "file": "XBee.md",
+  "vendor": "Digi",
+  "description": "Router",
+  "image": "https://www.zigbee2mqtt.io/images/devices/XBee.png",
+  "added_at": "2020-04-29T17:11:59Z",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

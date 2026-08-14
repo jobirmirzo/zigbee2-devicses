@@ -1,0 +1,220 @@
+{
+  "model": "JY-GZ-01AQ",
+  "file": "JY-GZ-01AQ.md",
+  "vendor": "Aqara",
+  "description": "Smart smoke detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/JY-GZ-01AQ.png",
+  "added_at": "2022-04-30T08:00:58",
+  "exposes_summary": "smoke, smoke_density, smoke_density_dbm, selftest, test, buzzer, buzzer_manual_alarm, buzzer_manual_mute, heartbeat_indicator, linkage_alarm, linkage_alarm_state, battery, voltage, power_outage_count",
+  "exposes": [
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Smoke density",
+      "type": "numeric",
+      "property": "smoke_density",
+      "base": "smoke_density",
+      "endpoint": null,
+      "description": "Value of smoke concentration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Smoke density dbm",
+      "type": "numeric",
+      "property": "smoke_density_dbm",
+      "base": "smoke_density_dbm",
+      "endpoint": null,
+      "description": "Value of smoke concentration in dB/m.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "dB/m"
+    },
+    {
+      "name": "Selftest",
+      "type": "enum",
+      "property": "selftest",
+      "base": "selftest",
+      "endpoint": null,
+      "description": "Starts the self-test process (checking the indicator light and buzzer work properly).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "selftest"
+      ]
+    },
+    {
+      "name": "Test",
+      "type": "binary",
+      "property": "test",
+      "base": "test",
+      "endpoint": null,
+      "description": "Self-test in progress.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Buzzer",
+      "type": "enum",
+      "property": "buzzer",
+      "base": "buzzer",
+      "endpoint": null,
+      "description": "The buzzer can be muted and alarmed manually. During a smoke alarm, the buzzer can be manually muted for 80 seconds (\"mute\") and unmuted (\"alarm\"). The buzzer cannot be pre-muted, as this function only works during a smoke alarm. During the absence of a smoke alarm, the buzzer can be manually alarmed (\"alarm\") and disalarmed (\"mute\"), but for this \"linkage_alarm\" option must be enabled.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "mute",
+        "alarm"
+      ]
+    },
+    {
+      "name": "Buzzer manual alarm",
+      "type": "binary",
+      "property": "buzzer_manual_alarm",
+      "base": "buzzer_manual_alarm",
+      "endpoint": null,
+      "description": "Buzzer alarmed (manually).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Buzzer manual mute",
+      "type": "binary",
+      "property": "buzzer_manual_mute",
+      "base": "buzzer_manual_mute",
+      "endpoint": null,
+      "description": "Buzzer muted (manually).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Heartbeat indicator",
+      "type": "binary",
+      "property": "heartbeat_indicator",
+      "base": "heartbeat_indicator",
+      "endpoint": null,
+      "description": "When this option is enabled then in the normal monitoring state, the green indicator light flashes every 60 seconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Linkage alarm",
+      "type": "binary",
+      "property": "linkage_alarm",
+      "base": "linkage_alarm",
+      "endpoint": null,
+      "description": "When this option is enabled and a smoke alarm has occurred, then \"linkage_alarm_state\"=true, and when the smoke alarm has ended or the buzzer has been manually muted, then \"linkage_alarm_state\"=false.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Linkage alarm state",
+      "type": "binary",
+      "property": "linkage_alarm_state",
+      "base": "linkage_alarm_state",
+      "endpoint": null,
+      "description": "\"linkage_alarm\" is triggered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

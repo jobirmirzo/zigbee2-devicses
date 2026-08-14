@@ -1,0 +1,264 @@
+{
+  "model": "ZG-204ZH",
+  "file": "ZG-204ZH.md",
+  "vendor": "HOBEIAN",
+  "description": "PIR 24Ghz human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-204ZH.png",
+  "added_at": "2025-08-01T15:19:08",
+  "exposes_summary": "presence, motion_state, illuminance, temperature, humidity, temperature_unit, temperature_calibration, humidity_calibration, battery, fading_time, indicator, illuminance_interval, static_detection_distance, static_detection_sensitivity, motion_detection_mode, motion_detection_sensitivity",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Motion state",
+      "type": "enum",
+      "property": "motion_state",
+      "base": "motion_state",
+      "endpoint": null,
+      "description": "Motion state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "large",
+        "small",
+        "static"
+      ]
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature unit",
+      "type": "enum",
+      "property": "temperature_unit",
+      "base": "temperature_unit",
+      "endpoint": null,
+      "description": "Temperature unit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Temperature calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -2,
+      "value_max": 2,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Humidity calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -30,
+      "value_max": 30,
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Fading time",
+      "type": "numeric",
+      "property": "fading_time",
+      "base": "fading_time",
+      "endpoint": null,
+      "description": "Motion keep time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 28800,
+      "unit": "s"
+    },
+    {
+      "name": "Indicator",
+      "type": "binary",
+      "property": "indicator",
+      "base": "indicator",
+      "endpoint": null,
+      "description": "LED indicator mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Illuminance interval",
+      "type": "numeric",
+      "property": "illuminance_interval",
+      "base": "illuminance_interval",
+      "endpoint": null,
+      "description": "Light sensing sampling(refresh and update only while active).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 720,
+      "unit": "minutes"
+    },
+    {
+      "name": "Static detection distance",
+      "type": "numeric",
+      "property": "static_detection_distance",
+      "base": "static_detection_distance",
+      "endpoint": null,
+      "description": "Static detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5,
+      "unit": "m"
+    },
+    {
+      "name": "Static detection sensitivity",
+      "type": "numeric",
+      "property": "static_detection_sensitivity",
+      "base": "static_detection_sensitivity",
+      "endpoint": null,
+      "description": "Static detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Motion detection mode",
+      "type": "enum",
+      "property": "motion_detection_mode",
+      "base": "motion_detection_mode",
+      "endpoint": null,
+      "description": "Motion detection mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "pir_and_radar",
+        "pir_or_radar",
+        "only_radar"
+      ]
+    },
+    {
+      "name": "Motion detection sensitivity",
+      "type": "numeric",
+      "property": "motion_detection_sensitivity",
+      "base": "motion_detection_sensitivity",
+      "endpoint": null,
+      "description": "Radar Motion detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    }
+  ],
+  "warnings": []
+}

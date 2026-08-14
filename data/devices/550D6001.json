@@ -1,0 +1,55 @@
+{
+  "model": "550D6001",
+  "file": "550D6001.md",
+  "vendor": "Schneider Electric",
+  "description": "LK FUGA wiser wireless battery 4 button switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/550D6001.png",
+  "added_at": "2021-07-01T18:17:29Z",
+  "exposes_summary": "action, battery",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_top",
+        "off_top",
+        "on_bottom",
+        "off_bottom",
+        "brightness_move_up_top",
+        "brightness_stop_top",
+        "brightness_move_down_top",
+        "brightness_stop_top",
+        "brightness_move_up_bottom",
+        "brightness_stop_bottom",
+        "brightness_move_down_bottom",
+        "brightness_stop_bottom"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

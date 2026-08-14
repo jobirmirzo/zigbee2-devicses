@@ -1,0 +1,134 @@
+{
+  "model": "ZP-301Z",
+  "file": "ZP-301Z.md",
+  "vendor": "Arteco",
+  "description": "PIR motion sensor light with night light function",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZP-301Z.png",
+  "added_at": "2025-11-30T20:32:44",
+  "exposes_summary": "presence, battery_value, illuminance, brightness_value, presence_time, presence_delay, illuminance_trigger, detection_cycle",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Human presence detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery value",
+      "type": "numeric",
+      "property": "battery_value",
+      "base": "battery_value",
+      "endpoint": null,
+      "description": "battery value in %.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Brightness value",
+      "type": "numeric",
+      "property": "brightness_value",
+      "base": "brightness_value",
+      "endpoint": null,
+      "description": "When the light brightness is activated after the lights are turned on.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Presence time",
+      "type": "numeric",
+      "property": "presence_time",
+      "base": "presence_time",
+      "endpoint": null,
+      "description": "How long to wait before turning on the lights after detecting a person and meeting the light conditions.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 60,
+      "unit": "s"
+    },
+    {
+      "name": "Presence delay",
+      "type": "numeric",
+      "property": "presence_delay",
+      "base": "presence_delay",
+      "endpoint": null,
+      "description": "How long after no one is detected will the lights turn off.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 120,
+      "unit": "s"
+    },
+    {
+      "name": "Illuminance trigger",
+      "type": "numeric",
+      "property": "illuminance_trigger",
+      "base": "illuminance_trigger",
+      "endpoint": null,
+      "description": "Detection is only allowed when the illuminance is less than the current value..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10000
+    },
+    {
+      "name": "Detection cycle",
+      "type": "numeric",
+      "property": "detection_cycle",
+      "base": "detection_cycle",
+      "endpoint": null,
+      "description": "How often is the battery level and illuminance detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 1200,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

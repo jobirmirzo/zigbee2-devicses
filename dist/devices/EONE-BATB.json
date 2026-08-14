@@ -1,0 +1,525 @@
+{
+  "model": "EONE-BATB",
+  "file": "EONE-BATB.md",
+  "vendor": "ENGO",
+  "description": "Zigbee smart thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EONE-BATB.png",
+  "added_at": "2026-03-31T19:04:39",
+  "exposes_summary": "state, climate (system_mode, current_heating_setpoint, local_temperature, local_temperature_calibration, running_state, preset), local_temperature, floor_temperature, humidity, backlight, sensor_error, child_lock, battery, sensor_choose, holiday_temperature, holiday_days, frost_set, max_floor_temp_heating, min_floor_temp_heating, max_floor_temp_cooling, min_floor_temp_coolnig, control_algorithm, valve_protection, comfort_warm_floor, temp_resolution, max_temperature, min_temperature, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday",
+  "exposes": [
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Turn the thermostat ON/OFF.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "heat",
+            "cool"
+          ],
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 45,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "manual",
+            "schedule",
+            "holiday",
+            "frost"
+          ],
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Local temperature",
+      "type": "numeric",
+      "property": "local_temperature",
+      "base": "local_temperature",
+      "endpoint": null,
+      "description": "Measured room temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Floor temperature",
+      "type": "numeric",
+      "property": "floor_temperature",
+      "base": "floor_temperature",
+      "endpoint": null,
+      "description": "Measured floor temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Backlight",
+      "type": "numeric",
+      "property": "backlight",
+      "base": "backlight",
+      "endpoint": null,
+      "description": "Backlight brightness.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Sensor error",
+      "type": "enum",
+      "property": "sensor_error",
+      "base": "sensor_error",
+      "endpoint": null,
+      "description": "Sensor error status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "normal",
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Sensor choose",
+      "type": "enum",
+      "property": "sensor_choose",
+      "base": "sensor_choose",
+      "endpoint": null,
+      "description": "Sensor selection S1/S2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "internal",
+        "floor_temp",
+        "external",
+        "external_on_off"
+      ]
+    },
+    {
+      "name": "Holiday temperature",
+      "type": "numeric",
+      "property": "holiday_temperature",
+      "base": "holiday_temperature",
+      "endpoint": null,
+      "description": "Holiday temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 45,
+      "unit": "°C"
+    },
+    {
+      "name": "Holiday days",
+      "type": "numeric",
+      "property": "holiday_days",
+      "base": "holiday_days",
+      "endpoint": null,
+      "description": "Number of holiday days.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 30,
+      "unit": "days"
+    },
+    {
+      "name": "Frost set",
+      "type": "numeric",
+      "property": "frost_set",
+      "base": "frost_set",
+      "endpoint": null,
+      "description": "Frost protection temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 17,
+      "unit": "°C"
+    },
+    {
+      "name": "Max floor temp heating",
+      "type": "numeric",
+      "property": "max_floor_temp_heating",
+      "base": "max_floor_temp_heating",
+      "endpoint": null,
+      "description": "Maximum floor temperature while heating (requires sensor mode floor_temp).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 45,
+      "unit": "°C"
+    },
+    {
+      "name": "Min floor temp heating",
+      "type": "numeric",
+      "property": "min_floor_temp_heating",
+      "base": "min_floor_temp_heating",
+      "endpoint": null,
+      "description": "Minimum floor temperature while heating (requires sensor mode floor_temp).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 45,
+      "unit": "°C"
+    },
+    {
+      "name": "Max floor temp cooling",
+      "type": "numeric",
+      "property": "max_floor_temp_cooling",
+      "base": "max_floor_temp_cooling",
+      "endpoint": null,
+      "description": "Maximum floor temperature while cooling (requires sensor mode floor_temp).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 45,
+      "unit": "°C"
+    },
+    {
+      "name": "Min floor temp coolnig",
+      "type": "numeric",
+      "property": "min_floor_temp_coolnig",
+      "base": "min_floor_temp_coolnig",
+      "endpoint": null,
+      "description": "Minimum floor temperature while cooling (requires sensor mode floor_temp).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 45,
+      "unit": "°C"
+    },
+    {
+      "name": "Control algorithm",
+      "type": "enum",
+      "property": "control_algorithm",
+      "base": "control_algorithm",
+      "endpoint": null,
+      "description": "Control algorithm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "TPI_UFH",
+        "TPI_RAD",
+        "TPI_ELE",
+        "HIS_02",
+        "HIS_04",
+        "HIS_06",
+        "HIS_08",
+        "HIS_10",
+        "HIS_20",
+        "HIS_30",
+        "HIS_40"
+      ]
+    },
+    {
+      "name": "Valve Protection",
+      "type": "enum",
+      "property": "valve_protection",
+      "base": "valve_protection",
+      "endpoint": null,
+      "description": "Prevents valve blockage during long periods of inactivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "anti_stop"
+      ]
+    },
+    {
+      "name": "Comfort warm floor",
+      "type": "enum",
+      "property": "comfort_warm_floor",
+      "base": "comfort_warm_floor",
+      "endpoint": null,
+      "description": "Comfort warm floor setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "OFF",
+        "LEVEL1",
+        "LEVEL2",
+        "LEVEL3",
+        "LEVEL4",
+        "LEVEL5"
+      ]
+    },
+    {
+      "name": "Temp resolution",
+      "type": "enum",
+      "property": "temp_resolution",
+      "base": "temp_resolution",
+      "endpoint": null,
+      "description": "Temperature resolution.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "one",
+        "five"
+      ]
+    },
+    {
+      "name": "Max temperature",
+      "type": "numeric",
+      "property": "max_temperature",
+      "base": "max_temperature",
+      "endpoint": null,
+      "description": "Max temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 45,
+      "unit": "°C"
+    },
+    {
+      "name": "Min temperature",
+      "type": "numeric",
+      "property": "min_temperature",
+      "base": "min_temperature",
+      "endpoint": null,
+      "description": "Min temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 45,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule monday",
+      "type": "text",
+      "property": "schedule_monday",
+      "base": "schedule_monday",
+      "endpoint": null,
+      "description": "Schedule Monday.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule tuesday",
+      "type": "text",
+      "property": "schedule_tuesday",
+      "base": "schedule_tuesday",
+      "endpoint": null,
+      "description": "Schedule Tuesday.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule wednesday",
+      "type": "text",
+      "property": "schedule_wednesday",
+      "base": "schedule_wednesday",
+      "endpoint": null,
+      "description": "Schedule Wednesday.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule thursday",
+      "type": "text",
+      "property": "schedule_thursday",
+      "base": "schedule_thursday",
+      "endpoint": null,
+      "description": "Schedule Thursday.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule friday",
+      "type": "text",
+      "property": "schedule_friday",
+      "base": "schedule_friday",
+      "endpoint": null,
+      "description": "Schedule Friday.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule saturday",
+      "type": "text",
+      "property": "schedule_saturday",
+      "base": "schedule_saturday",
+      "endpoint": null,
+      "description": "Schedule Saturday.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule sunday",
+      "type": "text",
+      "property": "schedule_sunday",
+      "base": "schedule_sunday",
+      "endpoint": null,
+      "description": "Schedule Sunday.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    }
+  ],
+  "warnings": []
+}

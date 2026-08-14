@@ -1,0 +1,58 @@
+{
+  "model": "ZG-103V",
+  "file": "ZG-103V.md",
+  "vendor": "Excellux",
+  "description": "Vibration sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-103V.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "vibration, battery, vibration_sensitivity",
+  "exposes": [
+    {
+      "name": "Vibration",
+      "type": "binary",
+      "property": "vibration",
+      "base": "vibration",
+      "endpoint": null,
+      "description": "Vibration state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Vibration sensitivity",
+      "type": "numeric",
+      "property": "vibration_sensitivity",
+      "base": "vibration_sensitivity",
+      "endpoint": null,
+      "description": "Vibration sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 50
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,206 @@
+{
+  "model": "552-721X2",
+  "file": "552-721X2.md",
+  "vendor": "Niko",
+  "description": "Double connectable switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/552-721X2.png",
+  "added_at": "2022-03-31T18:50:25",
+  "exposes_summary": "switch (state), operation_mode, action_reporting, led_enable, led_color, led_state, led_sync_mode, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode",
+      "base": "operation_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "control_relay",
+        "decoupled"
+      ]
+    },
+    {
+      "name": "Action reporting",
+      "type": "binary",
+      "property": "action_reporting",
+      "base": "action_reporting",
+      "endpoint": null,
+      "description": "Enable Action Reporting.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Led enable",
+      "type": "binary",
+      "property": "led_enable",
+      "base": "led_enable",
+      "endpoint": null,
+      "description": "Enable LED.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Led color",
+      "type": "enum",
+      "property": "led_color",
+      "base": "led_color",
+      "endpoint": null,
+      "description": "LED ambient color.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "ON",
+        "OFF",
+        "Blue",
+        "Red",
+        "Purple"
+      ]
+    },
+    {
+      "name": "Led state",
+      "type": "binary",
+      "property": "led_state_l1",
+      "base": "led_state",
+      "endpoint": "l1",
+      "description": "LED state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Led state",
+      "type": "binary",
+      "property": "led_state_l2",
+      "base": "led_state",
+      "endpoint": "l2",
+      "description": "LED state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Led sync mode",
+      "type": "enum",
+      "property": "led_sync_mode_l1",
+      "base": "led_sync_mode",
+      "endpoint": "l1",
+      "description": "Sync LED with relay state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Off",
+        "On",
+        "Inverted"
+      ]
+    },
+    {
+      "name": "Led sync mode",
+      "type": "enum",
+      "property": "led_sync_mode_l2",
+      "base": "led_sync_mode",
+      "endpoint": "l2",
+      "description": "Sync LED with relay state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Off",
+        "On",
+        "Inverted"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single_left",
+        "hold_left",
+        "release_left",
+        "single_left_ext",
+        "hold_left_ext",
+        "release_left_ext",
+        "single_right",
+        "hold_right",
+        "release_right",
+        "single_right_ext",
+        "hold_right_ext",
+        "release_right_ext"
+      ]
+    }
+  ],
+  "warnings": []
+}

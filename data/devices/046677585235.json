@@ -1,0 +1,312 @@
+{
+  "model": "046677585235",
+  "file": "046677585235.md",
+  "vendor": "Philips",
+  "description": "Hue Dymera indoor and outdoor wall light",
+  "image": "https://www.zigbee2mqtt.io/images/devices/046677585235.png",
+  "added_at": "2024-06-01T08:47:20",
+  "exposes_summary": "light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), power_on_behavior, effect, effect_speed, effect_color",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "top",
+      "features": [
+        {
+          "property": "state_top",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_top",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp_top",
+          "base": "color_temp",
+          "value_min": 153,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup_top",
+          "base": "color_temp_startup",
+          "value_min": 153,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_xy_top",
+          "base": "color_xy",
+          "readable": true
+        },
+        {
+          "property": "color_hs_top",
+          "base": "color_hs",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "bottom",
+      "features": [
+        {
+          "property": "state_bottom",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_bottom",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp_bottom",
+          "base": "color_temp",
+          "value_min": 153,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup_bottom",
+          "base": "color_temp_startup",
+          "value_min": 153,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_xy_bottom",
+          "base": "color_xy",
+          "readable": true
+        },
+        {
+          "property": "color_hs_bottom",
+          "base": "color_hs",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_top",
+      "base": "power_on_behavior",
+      "endpoint": "top",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_bottom",
+      "base": "power_on_behavior",
+      "endpoint": "bottom",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect_top",
+      "base": "effect",
+      "endpoint": "top",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "candle",
+        "fireplace",
+        "colorloop",
+        "sunset",
+        "sunrise",
+        "sparkle",
+        "opal",
+        "glisten",
+        "underwater",
+        "cosmos",
+        "sunbeam",
+        "enchant",
+        "none",
+        "finish_effect",
+        "stop_effect",
+        "stop_hue_effect"
+      ]
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect_bottom",
+      "base": "effect",
+      "endpoint": "bottom",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "candle",
+        "fireplace",
+        "colorloop",
+        "sunset",
+        "sunrise",
+        "sparkle",
+        "opal",
+        "glisten",
+        "underwater",
+        "cosmos",
+        "sunbeam",
+        "enchant",
+        "none",
+        "finish_effect",
+        "stop_effect",
+        "stop_hue_effect"
+      ]
+    },
+    {
+      "name": "Effect speed",
+      "type": "numeric",
+      "property": "effect_speed_top",
+      "base": "effect_speed",
+      "endpoint": "top",
+      "description": "Animation speed for the active effect (0=slowest, 1=fastest).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1
+    },
+    {
+      "name": "Effect speed",
+      "type": "numeric",
+      "property": "effect_speed_bottom",
+      "base": "effect_speed",
+      "endpoint": "bottom",
+      "description": "Animation speed for the active effect (0=slowest, 1=fastest).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1
+    },
+    {
+      "name": "Effect color",
+      "type": "text",
+      "property": "effect_color_top",
+      "base": "effect_color",
+      "endpoint": "top",
+      "description": "Set the base color of the active effect without stopping it (hex e.g. #FF4400, or JSON {\"x\":0.6,\"y\":0.3}).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Effect color",
+      "type": "text",
+      "property": "effect_color_bottom",
+      "base": "effect_color",
+      "endpoint": "bottom",
+      "description": "Set the base color of the active effect without stopping it (hex e.g. #FF4400, or JSON {\"x\":0.6,\"y\":0.3}).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      }
+    }
+  ],
+  "warnings": []
+}

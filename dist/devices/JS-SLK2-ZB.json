@@ -1,0 +1,44 @@
+{
+  "model": "JS-SLK2-ZB",
+  "file": "JS-SLK2-ZB.md",
+  "vendor": "JAVIS",
+  "description": "Intelligent biometric digital lock",
+  "image": "https://www.zigbee2mqtt.io/images/devices/JS-SLK2-ZB.png",
+  "added_at": "2020-11-01T12:47:02Z",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "unlock"
+      ]
+    }
+  ],
+  "warnings": []
+}

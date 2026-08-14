@@ -1,0 +1,356 @@
+{
+  "model": "SR-ZG9093TRV",
+  "file": "SR-ZG9093TRV.md",
+  "vendor": "Sunricher",
+  "description": "Zigbee thermostatic radiator valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SR-ZG9093TRV.png",
+  "added_at": "2025-03-01T20:31:41",
+  "exposes_summary": "climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset, system_mode, running_state), battery, identify, screen_timeout, anti_freezing_temp, temperature_display_mode, window_open_check, hysteresis, window_open_flag, forced_heating_time, error_code, temperature_display_unit, schedule_sunday, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, child_lock",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "off",
+            "auto",
+            "away",
+            "sleep",
+            "manual",
+            "forced"
+          ],
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "auto",
+            "heat",
+            "sleep"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Screen timeout",
+      "type": "numeric",
+      "property": "screen_timeout",
+      "base": "screen_timeout",
+      "endpoint": null,
+      "description": "Screen Timeout for Inactivity (excluding gateway config). Range: 10-30s, Default: 10s.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 30,
+      "unit": "s"
+    },
+    {
+      "name": "Anti freezing temp",
+      "type": "numeric",
+      "property": "anti_freezing_temp",
+      "base": "anti_freezing_temp",
+      "endpoint": null,
+      "description": "Anti Freezing(Low Temp) Mode Configuration. 0: disabled, 5~10: temperature (5°C by default).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature display mode",
+      "type": "enum",
+      "property": "temperature_display_mode",
+      "base": "temperature_display_mode",
+      "endpoint": null,
+      "description": "Temperature Display Mode. 1: displays set temp, 2: displays room temp (default).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "set_temp",
+        "room_temp"
+      ]
+    },
+    {
+      "name": "Window open check",
+      "type": "numeric",
+      "property": "window_open_check",
+      "base": "window_open_check",
+      "endpoint": null,
+      "description": "The temperature threshold for Window Open Detect, value range 0~10, unit is 1°C, 0 means disabled, default value is 5.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "°C"
+    },
+    {
+      "name": "Hysteresis",
+      "type": "numeric",
+      "property": "hysteresis",
+      "base": "hysteresis",
+      "endpoint": null,
+      "description": "Control hysteresis setting, range is 5-20, unit is 0.1°C, default value is 10. Because the sensor accuracy is 0.5°C, it is recommended not to set this value below 1°C to avoid affecting the battery life..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 20,
+      "unit": "°C"
+    },
+    {
+      "name": "Window open flag",
+      "type": "binary",
+      "property": "window_open_flag",
+      "base": "window_open_flag",
+      "endpoint": null,
+      "description": "Window open flag.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "opened",
+      "value_off": "not_opened"
+    },
+    {
+      "name": "Forced heating time",
+      "type": "numeric",
+      "property": "forced_heating_time",
+      "base": "forced_heating_time",
+      "endpoint": null,
+      "description": "Forced heating time, range 10~90, unit is 10s, default value is 30(300s).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 90,
+      "unit": "10s"
+    },
+    {
+      "name": "Error code",
+      "type": "enum",
+      "property": "error_code",
+      "base": "error_code",
+      "endpoint": null,
+      "description": "Error code: 0=No hardware error, 4=Motor error (detected not running), 5=The motor runs exceeding the self-check time without finding the boundary.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "motor_error",
+        "motor_timeout"
+      ]
+    },
+    {
+      "name": "Temperature display unit",
+      "type": "enum",
+      "property": "temperature_display_unit",
+      "base": "temperature_display_unit",
+      "endpoint": null,
+      "description": "The temperature unit shown on the display.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Schedule sunday",
+      "type": "text",
+      "property": "schedule_sunday",
+      "base": "schedule_sunday",
+      "endpoint": null,
+      "description": "Schedule for Sunday, example: \"06:00/21.0 12:00/21.0 18:00/21.0 22:00/16.0\".",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule monday",
+      "type": "text",
+      "property": "schedule_monday",
+      "base": "schedule_monday",
+      "endpoint": null,
+      "description": "Schedule for Monday, example: \"06:00/21.0 12:00/21.0 18:00/21.0 22:00/16.0\".",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule tuesday",
+      "type": "text",
+      "property": "schedule_tuesday",
+      "base": "schedule_tuesday",
+      "endpoint": null,
+      "description": "Schedule for Tuesday, example: \"06:00/21.0 12:00/21.0 18:00/21.0 22:00/16.0\".",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule wednesday",
+      "type": "text",
+      "property": "schedule_wednesday",
+      "base": "schedule_wednesday",
+      "endpoint": null,
+      "description": "Schedule for Wednesday, example: \"06:00/21.0 12:00/21.0 18:00/21.0 22:00/16.0\".",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule thursday",
+      "type": "text",
+      "property": "schedule_thursday",
+      "base": "schedule_thursday",
+      "endpoint": null,
+      "description": "Schedule for Thursday, example: \"06:00/21.0 12:00/21.0 18:00/21.0 22:00/16.0\".",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule friday",
+      "type": "text",
+      "property": "schedule_friday",
+      "base": "schedule_friday",
+      "endpoint": null,
+      "description": "Schedule for Friday, example: \"06:00/21.0 12:00/21.0 18:00/21.0 22:00/16.0\".",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule saturday",
+      "type": "text",
+      "property": "schedule_saturday",
+      "base": "schedule_saturday",
+      "endpoint": null,
+      "description": "Schedule for Saturday, example: \"06:00/21.0 12:00/21.0 18:00/21.0 22:00/16.0\".",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    }
+  ],
+  "warnings": []
+}

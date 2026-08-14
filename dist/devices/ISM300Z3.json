@@ -1,0 +1,117 @@
+{
+  "model": "ISM300Z3",
+  "file": "ISM300Z3.md",
+  "vendor": "ShinaSystem",
+  "description": "SiHAS IOT smart inner switch 3 gang",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ISM300Z3.png",
+  "added_at": "2021-10-30T12:58:50",
+  "exposes_summary": "switch (state), operation_mode, rf_pairing, switch_3way_mode",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l3",
+      "features": [
+        {
+          "property": "state_l3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode_l1",
+      "base": "operation_mode",
+      "endpoint": "l1",
+      "description": "switch type: \"auto\" - toggle by S/W, \"push\" - for momentary S/W, \"latch\" - sync S/W..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "auto",
+        "push",
+        "latch"
+      ]
+    },
+    {
+      "name": "Rf pairing",
+      "type": "enum",
+      "property": "rf_pairing_l1",
+      "base": "rf_pairing",
+      "endpoint": "l1",
+      "description": "Enable RF pairing mode each button l1, l2, l3. It is supported only in repeat mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "none",
+        "l1",
+        "l2",
+        "l3"
+      ]
+    },
+    {
+      "name": "Switch 3way mode",
+      "type": "enum",
+      "property": "switch_3way_mode_l1",
+      "base": "switch_3way_mode",
+      "endpoint": "l1",
+      "description": "If the 3-way switch setting is enabled, the 1st and 3rd switches are used. At this time, connect the remote switch to SW3..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    }
+  ],
+  "warnings": []
+}

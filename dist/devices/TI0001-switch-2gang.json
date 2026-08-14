@@ -1,0 +1,46 @@
+{
+  "model": "TI0001-switch-2gang",
+  "file": "TI0001-switch-2gang.md",
+  "vendor": "Livolo",
+  "description": "Zigbee Switch 2 gang",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TI0001-switch-2gang.png",
+  "added_at": "2021-02-05T19:15:16Z",
+  "exposes_summary": "switch (state)",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "left",
+      "features": [
+        {
+          "property": "state_left",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "right",
+      "features": [
+        {
+          "property": "state_right",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

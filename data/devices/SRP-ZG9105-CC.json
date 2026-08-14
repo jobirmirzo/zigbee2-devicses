@@ -1,0 +1,99 @@
+{
+  "model": "SRP-ZG9105-CC",
+  "file": "SRP-ZG9105-CC.md",
+  "vendor": "Sunricher",
+  "description": "Constant Current Zigbee LED dimmable driver",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SRP-ZG9105-CC.png",
+  "added_at": "2021-01-31T22:24:43Z",
+  "exposes_summary": "light (state, brightness), effect, power_on_behavior, external_switch_type",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "External switch type",
+      "type": "enum",
+      "property": "external_switch_type",
+      "base": "external_switch_type",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "push_button",
+        "normal_on_off",
+        "three_way"
+      ]
+    }
+  ],
+  "warnings": []
+}

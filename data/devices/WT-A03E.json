@@ -1,0 +1,545 @@
+{
+  "model": "WT-A03E",
+  "file": "WT-A03E.md",
+  "vendor": "Aqara",
+  "description": "Radiator thermostat W600",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WT-A03E.png",
+  "added_at": "2025-09-30T19:37:28",
+  "exposes_summary": "battery, valve_alarm, window_open, climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_state, preset), temperature_setpoint_hold_duration, override_active, sensor, external_temperature_input, calibrate, calibrated, temperature_control_abnormal_notification, display_flip, window_detection, child_lock, anti_freeze_temperature, preset_home_temperature, preset_away_temperature, preset_sleep_temperature, preset_vacation_temperature, preset_wind_down_temperature, weekly_schedule_sunday, weekly_schedule_monday, weekly_schedule_tuesday, weekly_schedule_wednesday, weekly_schedule_thursday, weekly_schedule_friday, weekly_schedule_saturday, schedule_upload_status, save_schedule, clear_schedule, position, identify",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Battery percentage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Valve alarm",
+      "type": "binary",
+      "property": "valve_alarm",
+      "base": "valve_alarm",
+      "endpoint": null,
+      "description": "Indicates whether temperature control abnormal notification has reported an active alert.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Window open",
+      "type": "binary",
+      "property": "window_open",
+      "base": "window_open",
+      "endpoint": null,
+      "description": "Indicates whether open window detection has reported an open window.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "auto"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "home",
+            "away",
+            "sleep",
+            "vacation",
+            "wind_down"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Manual Override Duration",
+      "type": "numeric",
+      "property": "temperature_setpoint_hold_duration",
+      "base": "temperature_setpoint_hold_duration",
+      "endpoint": null,
+      "description": "Duration in minutes for the current manual override. 0 means until next schedule event, 65535 means indefinitely..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535,
+      "unit": "min"
+    },
+    {
+      "name": "Manual Override",
+      "type": "binary",
+      "property": "override_active",
+      "base": "override_active",
+      "endpoint": null,
+      "description": "Temporary manual override active.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Temperature source",
+      "type": "enum",
+      "property": "sensor",
+      "base": "sensor",
+      "endpoint": null,
+      "description": "Choose whether the thermostat uses its internal sensor or data provided via 'External Sensor Temperature'.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "internal",
+        "external"
+      ]
+    },
+    {
+      "name": "External temperature input",
+      "type": "numeric",
+      "property": "external_temperature_input",
+      "base": "external_temperature_input",
+      "endpoint": null,
+      "description": "Manual external temperature forwarded to the W600 when temperature source is external.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -40,
+      "value_max": 125,
+      "unit": "°C"
+    },
+    {
+      "name": "Calibrate",
+      "type": "enum",
+      "property": "calibrate",
+      "base": "calibrate",
+      "endpoint": null,
+      "description": "Start valve calibration.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "start"
+      ]
+    },
+    {
+      "name": "Calibration status",
+      "type": "enum",
+      "property": "calibrated",
+      "base": "calibrated",
+      "endpoint": null,
+      "description": "Valve calibration state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "not_ready",
+        "ready",
+        "error",
+        "in_progress"
+      ]
+    },
+    {
+      "name": "Temperature control abnormal notification",
+      "type": "binary",
+      "property": "temperature_control_abnormal_notification",
+      "base": "temperature_control_abnormal_notification",
+      "endpoint": null,
+      "description": "Enable or disable reporting of abnormal temperature control status. When enabled, the valve alarm is set to true if an abnormality is detected.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Display flip",
+      "type": "binary",
+      "property": "display_flip",
+      "base": "display_flip",
+      "endpoint": null,
+      "description": "Flip the display orientation.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Open window detection",
+      "type": "binary",
+      "property": "window_detection",
+      "base": "window_detection",
+      "endpoint": null,
+      "description": "Enable or disable open window detection. When enabled, the window_open is set to true if an open window is detected.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Lock or unlock the physical controls on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Anti freeze temperature",
+      "type": "numeric",
+      "property": "anti_freeze_temperature",
+      "base": "anti_freeze_temperature",
+      "endpoint": null,
+      "description": "Minimum temperature limit for frost protection. Turns the thermostat on regardless of setpoint if the temperature drops below this..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 15,
+      "unit": "°C"
+    },
+    {
+      "name": "Home temperature",
+      "type": "numeric",
+      "property": "preset_home_temperature",
+      "base": "preset_home_temperature",
+      "endpoint": null,
+      "description": "Home preset temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Away temperature",
+      "type": "numeric",
+      "property": "preset_away_temperature",
+      "base": "preset_away_temperature",
+      "endpoint": null,
+      "description": "Away preset temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Sleep temperature",
+      "type": "numeric",
+      "property": "preset_sleep_temperature",
+      "base": "preset_sleep_temperature",
+      "endpoint": null,
+      "description": "Sleep preset temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Vacation temperature",
+      "type": "numeric",
+      "property": "preset_vacation_temperature",
+      "base": "preset_vacation_temperature",
+      "endpoint": null,
+      "description": "Vacation preset temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Wind down temperature",
+      "type": "numeric",
+      "property": "preset_wind_down_temperature",
+      "base": "preset_wind_down_temperature",
+      "endpoint": null,
+      "description": "Wind-down preset temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Sunday schedule",
+      "type": "text",
+      "property": "weekly_schedule_sunday",
+      "base": "weekly_schedule_sunday",
+      "endpoint": null,
+      "description": "Staged weekly schedule for this day. Use comma-delimited entries in the format HH:MM/preset, for example '08:00/home, 19:00/vacation'. Editing the text fields does not upload anything until Save schedule is triggered..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Monday schedule",
+      "type": "text",
+      "property": "weekly_schedule_monday",
+      "base": "weekly_schedule_monday",
+      "endpoint": null,
+      "description": "Staged weekly schedule for this day. Use comma-delimited entries in the format HH:MM/preset, for example '08:00/home, 19:00/vacation'. Editing the text fields does not upload anything until Save schedule is triggered..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Tuesday schedule",
+      "type": "text",
+      "property": "weekly_schedule_tuesday",
+      "base": "weekly_schedule_tuesday",
+      "endpoint": null,
+      "description": "Staged weekly schedule for this day. Use comma-delimited entries in the format HH:MM/preset, for example '08:00/home, 19:00/vacation'. Editing the text fields does not upload anything until Save schedule is triggered..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Wednesday schedule",
+      "type": "text",
+      "property": "weekly_schedule_wednesday",
+      "base": "weekly_schedule_wednesday",
+      "endpoint": null,
+      "description": "Staged weekly schedule for this day. Use comma-delimited entries in the format HH:MM/preset, for example '08:00/home, 19:00/vacation'. Editing the text fields does not upload anything until Save schedule is triggered..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Thursday schedule",
+      "type": "text",
+      "property": "weekly_schedule_thursday",
+      "base": "weekly_schedule_thursday",
+      "endpoint": null,
+      "description": "Staged weekly schedule for this day. Use comma-delimited entries in the format HH:MM/preset, for example '08:00/home, 19:00/vacation'. Editing the text fields does not upload anything until Save schedule is triggered..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Friday schedule",
+      "type": "text",
+      "property": "weekly_schedule_friday",
+      "base": "weekly_schedule_friday",
+      "endpoint": null,
+      "description": "Staged weekly schedule for this day. Use comma-delimited entries in the format HH:MM/preset, for example '08:00/home, 19:00/vacation'. Editing the text fields does not upload anything until Save schedule is triggered..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Saturday schedule",
+      "type": "text",
+      "property": "weekly_schedule_saturday",
+      "base": "weekly_schedule_saturday",
+      "endpoint": null,
+      "description": "Staged weekly schedule for this day. Use comma-delimited entries in the format HH:MM/preset, for example '08:00/home, 19:00/vacation'. Editing the text fields does not upload anything until Save schedule is triggered..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule upload status",
+      "type": "enum",
+      "property": "schedule_upload_status",
+      "base": "schedule_upload_status",
+      "endpoint": null,
+      "description": "Current state of the custom OTA transfer used to upload the weekly schedule to the thermostat..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "idle",
+        "staged",
+        "in_progress",
+        "success",
+        "failed"
+      ]
+    },
+    {
+      "name": "Save schedule",
+      "type": "enum",
+      "property": "save_schedule",
+      "base": "save_schedule",
+      "endpoint": null,
+      "description": "Upload the weekly schedule to the thermostat.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "trigger"
+      ]
+    },
+    {
+      "name": "Clear schedule",
+      "type": "enum",
+      "property": "clear_schedule",
+      "base": "clear_schedule",
+      "endpoint": null,
+      "description": "Clear all weekly schedule inputs and upload an empty schedule to the thermostat.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "trigger"
+      ]
+    },
+    {
+      "name": "Valve position",
+      "type": "numeric",
+      "property": "position",
+      "base": "position",
+      "endpoint": null,
+      "description": "Position of the valve, 100% is fully open.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    }
+  ],
+  "warnings": []
+}

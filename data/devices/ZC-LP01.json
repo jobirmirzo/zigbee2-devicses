@@ -1,0 +1,121 @@
+{
+  "model": "ZC-LP01",
+  "file": "ZC-LP01.md",
+  "vendor": "Moes",
+  "description": "Smart sliding window pusher",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZC-LP01.png",
+  "added_at": "2025-06-01T17:54:42",
+  "exposes_summary": "cover (state, position), charging, automatic_mode, slow_stop, button_position, battery",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Charging",
+      "type": "binary",
+      "property": "charging",
+      "base": "charging",
+      "endpoint": null,
+      "description": "Whether the device is being charged via USB-C.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Automatic mode",
+      "type": "binary",
+      "property": "automatic_mode",
+      "base": "automatic_mode",
+      "endpoint": null,
+      "description": "When set to `ON`, the device will start pushing in the same direction the window was pushed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Slow stop",
+      "type": "binary",
+      "property": "slow_stop",
+      "base": "slow_stop",
+      "endpoint": null,
+      "description": "When set to `ON`, the device decelerates gradually for quieter operation.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Button position",
+      "type": "enum",
+      "property": "button_position",
+      "base": "button_position",
+      "endpoint": null,
+      "description": "Swaps the behavior of the device's physical buttons.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "UP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

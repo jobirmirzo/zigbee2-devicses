@@ -1,0 +1,255 @@
+{
+  "model": "TS0601_smart_scene_knob",
+  "file": "TS0601_smart_scene_knob.md",
+  "vendor": "Tuya",
+  "description": "Smart scene knob controller with 4 buttons",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_smart_scene_knob.png",
+  "added_at": "2026-01-01T13:30:29",
+  "exposes_summary": "brightness, color_temp, curtain_position, assignment_status, base_group_id, action_button, action_group, bind_all_scene, bind_all_light, bind_all_curtain, assign_button_1, set_base_group_id, action",
+  "exposes": [
+    {
+      "name": "Brightness",
+      "type": "numeric",
+      "property": "brightness",
+      "base": "brightness",
+      "endpoint": null,
+      "description": "Brightness level from light mode (1-255).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 1,
+      "value_max": 255
+    },
+    {
+      "name": "Color temp",
+      "type": "numeric",
+      "property": "color_temp",
+      "base": "color_temp",
+      "endpoint": null,
+      "description": "Color temperature from light mode (mired).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 153,
+      "value_max": 523
+    },
+    {
+      "name": "Curtain position",
+      "type": "numeric",
+      "property": "curtain_position",
+      "base": "curtain_position",
+      "endpoint": null,
+      "description": "Curtain position from curtain mode (0-100%).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Assignment status",
+      "type": "enum",
+      "property": "assignment_status",
+      "base": "assignment_status",
+      "endpoint": null,
+      "description": "Button assignment status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "unassigned",
+        "waiting_button_1",
+        "ready"
+      ]
+    },
+    {
+      "name": "Base group id",
+      "type": "numeric",
+      "property": "base_group_id",
+      "base": "base_group_id",
+      "endpoint": null,
+      "description": "Base Group ID for button 1 (buttons 2-4 are +20, +40, +60).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action button",
+      "type": "numeric",
+      "property": "action_button",
+      "base": "action_button",
+      "endpoint": null,
+      "description": "Button number from last action.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 1,
+      "value_max": 4
+    },
+    {
+      "name": "Action group",
+      "type": "numeric",
+      "property": "action_group",
+      "base": "action_group",
+      "endpoint": null,
+      "description": "Group ID from last action.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Bind all scene",
+      "type": "enum",
+      "property": "bind_all_scene",
+      "base": "bind_all_scene",
+      "endpoint": null,
+      "description": "Bind all buttons to Scene mode (red LED).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "bind"
+      ]
+    },
+    {
+      "name": "Bind all light",
+      "type": "enum",
+      "property": "bind_all_light",
+      "base": "bind_all_light",
+      "endpoint": null,
+      "description": "Bind all buttons to Light mode (green LED).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "bind"
+      ]
+    },
+    {
+      "name": "Bind all curtain",
+      "type": "enum",
+      "property": "bind_all_curtain",
+      "base": "bind_all_curtain",
+      "endpoint": null,
+      "description": "Bind all buttons to Curtain mode (blue LED).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "bind"
+      ]
+    },
+    {
+      "name": "Assign button 1",
+      "type": "enum",
+      "property": "assign_button_1",
+      "base": "assign_button_1",
+      "endpoint": null,
+      "description": "Start assignment: press button 1 after clicking.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "assign"
+      ]
+    },
+    {
+      "name": "Set base group id",
+      "type": "numeric",
+      "property": "set_base_group_id",
+      "base": "set_base_group_id",
+      "endpoint": null,
+      "description": "Manually set base Group ID (advanced).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 65000
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "scene_1",
+        "scene_2",
+        "scene_3",
+        "scene_4",
+        "light_1_on",
+        "light_1_off",
+        "light_1_brightness_up",
+        "light_1_brightness_down",
+        "light_1_colortemp_up",
+        "light_1_colortemp_down",
+        "light_2_on",
+        "light_2_off",
+        "light_2_brightness_up",
+        "light_2_brightness_down",
+        "light_2_colortemp_up",
+        "light_2_colortemp_down",
+        "light_3_on",
+        "light_3_off",
+        "light_3_brightness_up",
+        "light_3_brightness_down",
+        "light_3_colortemp_up",
+        "light_3_colortemp_down",
+        "light_4_on",
+        "light_4_off",
+        "light_4_brightness_up",
+        "light_4_brightness_down",
+        "light_4_colortemp_up",
+        "light_4_colortemp_down",
+        "curtain_1_start",
+        "curtain_1_stop",
+        "curtain_1_position_open",
+        "curtain_1_position_close",
+        "curtain_2_start",
+        "curtain_2_stop",
+        "curtain_2_position_open",
+        "curtain_2_position_close",
+        "curtain_3_start",
+        "curtain_3_stop",
+        "curtain_3_position_open",
+        "curtain_3_position_close",
+        "curtain_4_start",
+        "curtain_4_stop",
+        "curtain_4_position_open",
+        "curtain_4_position_close"
+      ]
+    }
+  ],
+  "warnings": []
+}

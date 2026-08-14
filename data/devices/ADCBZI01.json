@@ -1,0 +1,297 @@
+{
+  "model": "ADCBZI01",
+  "file": "ADCBZI01.md",
+  "vendor": "Moes",
+  "description": "Curtain Robot",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ADCBZI01.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "cover (state, position), position, battery, illuminance, work_state, total_time, situation_set, fault, charging_status, open_threshold, close_threshold, curtain_status, total_distance, factory_test, custom_week_prog_1, custom_week_prog_2, custom_week_prog_3, custom_week_prog_4",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Position",
+      "type": "numeric",
+      "property": "position",
+      "base": "position",
+      "endpoint": null,
+      "description": "Position.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Work state",
+      "type": "enum",
+      "property": "work_state",
+      "base": "work_state",
+      "endpoint": null,
+      "description": "Current work state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "standby",
+        "opening",
+        "closing"
+      ]
+    },
+    {
+      "name": "Total time",
+      "type": "numeric",
+      "property": "total_time",
+      "base": "total_time",
+      "endpoint": null,
+      "description": "Total operation time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Situation set",
+      "type": "enum",
+      "property": "situation_set",
+      "base": "situation_set",
+      "endpoint": null,
+      "description": "Situation control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "fully_open",
+        "fully_close"
+      ]
+    },
+    {
+      "name": "Fault",
+      "type": "enum",
+      "property": "fault",
+      "base": "fault",
+      "endpoint": null,
+      "description": "Fault status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none"
+      ]
+    },
+    {
+      "name": "Charging status",
+      "type": "enum",
+      "property": "charging_status",
+      "base": "charging_status",
+      "endpoint": null,
+      "description": "Charging status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "uncharged",
+        "charging",
+        "charged"
+      ]
+    },
+    {
+      "name": "Open threshold",
+      "type": "numeric",
+      "property": "open_threshold",
+      "base": "open_threshold",
+      "endpoint": null,
+      "description": "Light threshold for opening.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Close threshold",
+      "type": "numeric",
+      "property": "close_threshold",
+      "base": "close_threshold",
+      "endpoint": null,
+      "description": "Light threshold for closing.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Curtain status",
+      "type": "numeric",
+      "property": "curtain_status",
+      "base": "curtain_status",
+      "endpoint": null,
+      "description": "Curtain status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "Total distance",
+      "type": "numeric",
+      "property": "total_distance",
+      "base": "total_distance",
+      "endpoint": null,
+      "description": "Total distance traveled.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Factory test",
+      "type": "numeric",
+      "property": "factory_test",
+      "base": "factory_test",
+      "endpoint": null,
+      "description": "Factory test feedback.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Custom week prog 1",
+      "type": "text",
+      "property": "custom_week_prog_1",
+      "base": "custom_week_prog_1",
+      "endpoint": null,
+      "description": "Custom week program 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Custom week prog 2",
+      "type": "text",
+      "property": "custom_week_prog_2",
+      "base": "custom_week_prog_2",
+      "endpoint": null,
+      "description": "Custom week program 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Custom week prog 3",
+      "type": "text",
+      "property": "custom_week_prog_3",
+      "base": "custom_week_prog_3",
+      "endpoint": null,
+      "description": "Custom week program 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Custom week prog 4",
+      "type": "text",
+      "property": "custom_week_prog_4",
+      "base": "custom_week_prog_4",
+      "endpoint": null,
+      "description": "Custom week program 4.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    }
+  ],
+  "warnings": []
+}

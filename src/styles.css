@@ -1,0 +1,98 @@
+/* Hive — deep slate + honey amber. Design tokens only; layout & component
+   styling live in Tailwind classes (see src/tailwind.css for font tokens). */
+
+:root {
+  --bg: #131720;
+  --surface: #1b2130;
+  --raised: #232b3d;
+  --border: #2c3549;
+  --text: #e9edf4;
+  --muted: #97a1b7;
+  --honey: #f2b32e;
+  --honey-dim: rgba(242, 179, 46, 0.14);
+  --ok: #53c98b;
+  --warn: #f2b32e;
+  --danger: #e5534b;
+  --radius: 10px;
+  font-size: 15px;
+
+  /* ---- theme tokens (light) — toggle & future soft-UI components ---- */
+  --soft-ambient: rgba(15, 23, 42, 0.05);
+  --soft-cast: rgba(15, 23, 42, 0.1);
+  --soft-cast-lifted: rgba(15, 23, 42, 0.16);
+  --soft-rim: rgba(255, 255, 255, 0.9);
+
+  --label-primary: #333333;
+  --label-secondary: rgba(51, 62, 77, 0.64);
+  --label-tertiary: rgba(51, 62, 77, 0.32);
+  --label-quaternary: rgba(51, 62, 77, 0.16);
+  --label-opposite: #ffffff;
+
+  --bg-elevation-1: #ffffff;
+  --bg-elevation-1-alt: #f5f6f7;
+  --bg-elevation-2: #ffffff;
+
+  --fill-tertiary: rgba(0, 16, 36, 0.06);
+  --fill-quaternary: rgba(0, 16, 36, 0.04);
+
+  --separator-opaque: rgba(117, 128, 138, 0.16);
+
+  --static-black: #333333;
+  --static-white: #ffffff;
+
+  --accent-red: #ff3b30;
+  --accent-green: #34c759;
+  --accent-blue: #007aff;
+  --accent-yellow: #f6b51e;
+  --accent-orange: #ff7c0a;
+  --accent-gray: #888888;
+
+  --tint-red: rgba(255, 59, 48, 0.16);
+  --tint-green: rgba(52, 199, 89, 0.16);
+  --tint-blue: rgba(0, 122, 255, 0.12);
+  --tint-yellow: rgba(246, 181, 30, 0.16);
+}
+
+:root.dark {
+  /* Dark surfaces sit closer to the page, so the cast softens and the rim
+     becomes a faint top edge rather than a bright highlight. */
+  --soft-ambient: rgba(0, 0, 0, 0.3);
+  --soft-cast: rgba(0, 0, 0, 0.45);
+  --soft-cast-lifted: rgba(0, 0, 0, 0.6);
+  --soft-rim: rgba(255, 255, 255, 0.06);
+
+  --label-primary: #ffffff;
+  --label-secondary: rgba(255, 255, 255, 0.64);
+  --label-tertiary: rgba(255, 255, 255, 0.32);
+  --label-quaternary: rgba(255, 255, 255, 0.16);
+  --label-opposite: #333333;
+
+  --bg-elevation-1: #1c1c1e;
+  --bg-elevation-1-alt: #1c1c1e;
+  --bg-elevation-2: #2c2c2e;
+
+  --fill-tertiary: rgba(120, 120, 128, 0.24);
+  --fill-quaternary: rgba(120, 120, 128, 0.18);
+
+  --separator-opaque: rgba(255, 255, 255, 0.1);
+
+  --accent-red: #ff453a;
+  --accent-green: #30d158;
+  --accent-blue: #0a84ff;
+  --accent-yellow: #ffd60a;
+
+  --tint-red: rgba(255, 69, 58, 0.16);
+  --tint-green: rgba(48, 209, 88, 0.16);
+  --tint-blue: rgba(10, 132, 255, 0.16);
+  --tint-yellow: rgba(255, 214, 10, 0.16);
+}
+
+/* ------------------------------------------------------------ base layer */
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+button { font: inherit; color: inherit; cursor: pointer; }
+input, select { font: inherit; }
+:focus-visible { outline: 2px solid var(--honey); outline-offset: 2px; }
+
+@keyframes slide-in { from { transform: translateX(40px); opacity: 0; } }

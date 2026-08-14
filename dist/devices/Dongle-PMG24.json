@@ -1,0 +1,11 @@
+{
+  "model": "Dongle-PMG24",
+  "file": "Dongle-PMG24.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee Dongle Plus MG24 (EFR32MG24) with router firmware",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Dongle-PMG24.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

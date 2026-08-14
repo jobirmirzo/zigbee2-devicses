@@ -1,0 +1,63 @@
+{
+  "model": "4512721",
+  "file": "4512721.md",
+  "vendor": "Namron",
+  "description": "Zigbee 4 channel switch K8 (black)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/4512721.png",
+  "added_at": "2020-08-11T22:17:44Z",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_l1",
+        "off_l1",
+        "brightness_move_up_l1",
+        "brightness_move_down_l1",
+        "brightness_stop_l1",
+        "on_l2",
+        "off_l2",
+        "brightness_move_up_l2",
+        "brightness_move_down_l2",
+        "brightness_stop_l2",
+        "on_l3",
+        "off_l3",
+        "brightness_move_up_l3",
+        "brightness_move_down_l3",
+        "brightness_stop_l3",
+        "on_l4",
+        "off_l4",
+        "brightness_move_up_l4",
+        "brightness_move_down_l4",
+        "brightness_stop_l4"
+      ]
+    }
+  ],
+  "warnings": []
+}

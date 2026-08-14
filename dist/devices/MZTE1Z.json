@@ -1,0 +1,343 @@
+{
+  "model": "MZTE1Z",
+  "file": "MZTE1Z.md",
+  "vendor": "MAZDA",
+  "description": "Smart thermostat for electric radiator with pilot wire",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MZTE1Z.png",
+  "added_at": "2026-03-31T19:04:39",
+  "exposes_summary": "state, child_lock, climate (current_heating_setpoint, local_temperature, local_temperature_calibration, system_mode, preset), mode, radiators_without_integrated_regulation, comfort_temperature, eco_temperature, antifrost_temperature, temperature_sensibility, antifrost, window_detection, window, power, voltage, current, energy, energy_today, energy_yesterday, device_mode_type",
+  "exposes": [
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Turn the heater on or off.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "readable": false
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "comfort",
+            "eco",
+            "antifrost",
+            "off",
+            "comfort_1",
+            "comfort_2",
+            "program",
+            "manual"
+          ],
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Current running mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "eco",
+        "antifrost",
+        "off",
+        "comfort_1",
+        "comfort_2",
+        "program",
+        "manual"
+      ]
+    },
+    {
+      "name": "Radiators without integrated regulation",
+      "type": "binary",
+      "property": "radiators_without_integrated_regulation",
+      "base": "radiators_without_integrated_regulation",
+      "endpoint": null,
+      "description": "Enable this for radiator without integrated regulation. OFF if Comfort, Eco and Antifrost temperatures can be defined on the radiator. ON if the radiator has no integrated regulation (i.e define temperatures on the thermostat)..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Comfort temperature",
+      "type": "numeric",
+      "property": "comfort_temperature",
+      "base": "comfort_temperature",
+      "endpoint": null,
+      "description": "Set comfort temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "  C"
+    },
+    {
+      "name": "Eco temperature",
+      "type": "numeric",
+      "property": "eco_temperature",
+      "base": "eco_temperature",
+      "endpoint": null,
+      "description": "Set ECO temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "  C"
+    },
+    {
+      "name": "Antifrost temperature",
+      "type": "numeric",
+      "property": "antifrost_temperature",
+      "base": "antifrost_temperature",
+      "endpoint": null,
+      "description": "Set antifrost temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 15,
+      "unit": "  C"
+    },
+    {
+      "name": "Temperature sensibility",
+      "type": "numeric",
+      "property": "temperature_sensibility",
+      "base": "temperature_sensibility",
+      "endpoint": null,
+      "description": "Set thermostat sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 5,
+      "unit": "  C"
+    },
+    {
+      "name": "Antifrost",
+      "type": "binary",
+      "property": "antifrost",
+      "base": "antifrost",
+      "endpoint": null,
+      "description": "Enable antifrost protection feature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Open window detection",
+      "type": "binary",
+      "property": "window_detection",
+      "base": "window_detection",
+      "endpoint": null,
+      "description": "Enable / Disable open window detection feature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Window",
+      "type": "enum",
+      "property": "window",
+      "base": "window",
+      "endpoint": null,
+      "description": "Indicates if window is open.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "close",
+        "open"
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy today",
+      "type": "numeric",
+      "property": "energy_today",
+      "base": "energy_today",
+      "endpoint": null,
+      "description": "Energy consumed today.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy yesterday",
+      "type": "numeric",
+      "property": "energy_yesterday",
+      "base": "energy_yesterday",
+      "endpoint": null,
+      "description": "Energy consumed yesterday.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Device mode type",
+      "type": "enum",
+      "property": "device_mode_type",
+      "base": "device_mode_type",
+      "endpoint": null,
+      "description": "Indicates the actual pilot wire mode of the thermostat.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "four",
+        "six",
+        "switch"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,102 @@
+{
+  "model": "SBRC-005B-B",
+  "file": "SBRC-005B-B.md",
+  "vendor": "Shelly",
+  "description": "BLU Remote Control ZB",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SBRC-005B-B.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "action_group, action_step_size, action_transition_time, battery, identify, action",
+  "exposes": [
+    {
+      "name": "Action group",
+      "type": "numeric",
+      "property": "action_group",
+      "base": "action_group",
+      "endpoint": null,
+      "description": "Group ID associated with the action command..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action step size",
+      "type": "numeric",
+      "property": "action_step_size",
+      "base": "action_step_size",
+      "endpoint": null,
+      "description": "Step size value used for brightness step actions..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action transition time",
+      "type": "numeric",
+      "property": "action_transition_time",
+      "base": "action_transition_time",
+      "endpoint": null,
+      "description": "Transition time in seconds for the action..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_step_up",
+        "brightness_step_down"
+      ]
+    }
+  ],
+  "warnings": []
+}

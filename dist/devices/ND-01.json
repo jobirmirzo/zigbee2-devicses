@@ -1,0 +1,143 @@
+{
+  "model": "ND-01",
+  "file": "ND-01.md",
+  "vendor": "NoDieby",
+  "description": "Infrasonic intrusion detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ND-01.png",
+  "added_at": "2026-06-30T19:08:31",
+  "exposes_summary": "switch (state), occupancy, led_brightness, volume, sensitivity, alarm_duration, alarm_delay",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "alarm",
+      "features": [
+        {
+          "property": "state_alarm",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "siren",
+      "features": [
+        {
+          "property": "state_siren",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Led brightness",
+      "type": "numeric",
+      "property": "led_brightness_alarm",
+      "base": "led_brightness",
+      "endpoint": "alarm",
+      "description": "Brightness of the status LED.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Volume",
+      "type": "numeric",
+      "property": "volume_alarm",
+      "base": "volume",
+      "endpoint": "alarm",
+      "description": "Siren volume.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity_alarm",
+      "base": "sensitivity",
+      "endpoint": "alarm",
+      "description": "Intrusion detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Alarm duration",
+      "type": "numeric",
+      "property": "alarm_duration_alarm",
+      "base": "alarm_duration",
+      "endpoint": "alarm",
+      "description": "Siren duration once triggered.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 300,
+      "unit": "s"
+    },
+    {
+      "name": "Alarm delay",
+      "type": "numeric",
+      "property": "alarm_delay_alarm",
+      "base": "alarm_delay",
+      "endpoint": "alarm",
+      "description": "Delay before the alarm triggers after detection.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 120,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

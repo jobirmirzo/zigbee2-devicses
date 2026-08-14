@@ -1,0 +1,46 @@
+{
+  "model": "SBDV-00032",
+  "file": "SBDV-00032.md",
+  "vendor": "Sber",
+  "description": "Smart button",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SBDV-00032.png",
+  "added_at": "2023-08-26T06:45:18",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single",
+        "double",
+        "hold"
+      ]
+    }
+  ],
+  "warnings": []
+}

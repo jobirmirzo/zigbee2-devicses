@@ -1,0 +1,104 @@
+{
+  "model": "3RSM0347Z",
+  "file": "3RSM0347Z.md",
+  "vendor": "Third Reality",
+  "description": "Smart Soil Moisture Sensor Gen2",
+  "image": "https://www.zigbee2mqtt.io/images/devices/3RSM0347Z.png",
+  "added_at": "2026-01-01T13:30:29",
+  "exposes_summary": "battery, temperature, soil_moisture, celsius_degree_calibration, humidity_calibration, fahrenheit_degree_calibration",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Soil moisture",
+      "type": "numeric",
+      "property": "soil_moisture",
+      "base": "soil_moisture",
+      "endpoint": null,
+      "description": "Measured soil moisture value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Celsius degree calibration",
+      "type": "numeric",
+      "property": "celsius_degree_calibration",
+      "base": "celsius_degree_calibration",
+      "endpoint": null,
+      "description": "Celsius degree calibration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -200,
+      "value_max": 200,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Humidity calibration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -100,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Fahrenheit degree calibration",
+      "type": "numeric",
+      "property": "fahrenheit_degree_calibration",
+      "base": "fahrenheit_degree_calibration",
+      "endpoint": null,
+      "description": "Fahrenheit degree calibration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -200,
+      "value_max": 200,
+      "unit": "°F"
+    }
+  ],
+  "warnings": []
+}

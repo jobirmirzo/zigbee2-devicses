@@ -1,0 +1,122 @@
+{
+  "model": "TCUR218W-V1",
+  "file": "TCUR218W-V1.md",
+  "vendor": "Feibit",
+  "description": "Dual Track Curtain Panel",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TCUR218W-V1.png",
+  "added_at": "2024-09-01T12:39:25",
+  "exposes_summary": "identify, cover (state, position, tilt)",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": "top",
+      "features": [
+        {
+          "property": "state_top",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_top",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "tilt_top",
+          "base": "tilt",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_top",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "tilt_top",
+          "base": "tilt",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": "bottom",
+      "features": [
+        {
+          "property": "state_bottom",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_bottom",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "tilt_bottom",
+          "base": "tilt",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_bottom",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "tilt_bottom",
+          "base": "tilt",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,182 @@
+{
+  "model": "ZG-302ZL",
+  "file": "ZG-302ZL.md",
+  "vendor": "HOBEIAN",
+  "description": "Motion sensing switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-302ZL.png",
+  "added_at": "2025-01-24T19:08:17Z",
+  "exposes_summary": "presence, switch_1, switch_2, switch_3, sensitivity, backlight, trigger_hold, power_outage_memory, auto_on, auto_off",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Switch 1",
+      "type": "binary",
+      "property": "switch_1",
+      "base": "switch_1",
+      "endpoint": null,
+      "description": "Switch2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch 2",
+      "type": "binary",
+      "property": "switch_2",
+      "base": "switch_2",
+      "endpoint": null,
+      "description": "Switch2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch 3",
+      "type": "binary",
+      "property": "switch_3",
+      "base": "switch_3",
+      "endpoint": null,
+      "description": "Switch3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Sensitivity",
+      "type": "numeric",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 19
+    },
+    {
+      "name": "Backlight",
+      "type": "binary",
+      "property": "backlight",
+      "base": "backlight",
+      "endpoint": null,
+      "description": "backlight.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Trigger hold",
+      "type": "numeric",
+      "property": "trigger_hold",
+      "base": "trigger_hold",
+      "endpoint": null,
+      "description": "Trigger hold(second).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 28800,
+      "unit": "s"
+    },
+    {
+      "name": "Power outage memory",
+      "type": "enum",
+      "property": "power_outage_memory",
+      "base": "power_outage_memory",
+      "endpoint": null,
+      "description": "Recover state after power outage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off",
+        "restore"
+      ]
+    },
+    {
+      "name": "Auto on",
+      "type": "enum",
+      "property": "auto_on",
+      "base": "auto_on",
+      "endpoint": null,
+      "description": "When somebody passes in front of their sensors, the lights turn.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "all",
+        "ch1",
+        "ch2",
+        "ch3",
+        "ch1_and_ch2",
+        "ch2_and_ch3",
+        "ch1_and_ch3"
+      ]
+    },
+    {
+      "name": "Auto off",
+      "type": "enum",
+      "property": "auto_off",
+      "base": "auto_off",
+      "endpoint": null,
+      "description": "No one turns off the lights.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "all",
+        "ch1",
+        "ch2",
+        "ch3",
+        "ch1_and_ch2",
+        "ch2_and_ch3",
+        "ch1_and_ch3"
+      ]
+    }
+  ],
+  "warnings": []
+}

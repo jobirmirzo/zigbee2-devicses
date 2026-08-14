@@ -1,0 +1,119 @@
+{
+  "model": "ZG-204ZE",
+  "file": "ZG-204ZE.md",
+  "vendor": "HOBEIAN",
+  "description": "10G mw motion detection",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-204ZE.png",
+  "added_at": "2022-05-07T18:17:42",
+  "exposes_summary": "presence, illuminance, battery, fading_time, indicator, motion_detection_sensitivity, illuminance_interval",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Fading time",
+      "type": "numeric",
+      "property": "fading_time",
+      "base": "fading_time",
+      "endpoint": null,
+      "description": "Motion keep time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 28800,
+      "unit": "s"
+    },
+    {
+      "name": "Indicator",
+      "type": "binary",
+      "property": "indicator",
+      "base": "indicator",
+      "endpoint": null,
+      "description": "LED indicator mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Motion detection sensitivity",
+      "type": "numeric",
+      "property": "motion_detection_sensitivity",
+      "base": "motion_detection_sensitivity",
+      "endpoint": null,
+      "description": "The larger the value, the more sensitive it is (refresh and update only while active).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 19
+    },
+    {
+      "name": "Illuminance interval",
+      "type": "numeric",
+      "property": "illuminance_interval",
+      "base": "illuminance_interval",
+      "endpoint": null,
+      "description": "Light sensing sampling(refresh and update only while active).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 720,
+      "unit": "minutes"
+    }
+  ],
+  "warnings": []
+}

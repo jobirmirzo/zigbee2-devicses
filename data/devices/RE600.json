@@ -1,0 +1,11 @@
+{
+  "model": "RE600",
+  "file": "RE600.md",
+  "vendor": "Salus Controls",
+  "description": "Router Zigbee",
+  "image": "https://www.zigbee2mqtt.io/images/devices/RE600.png",
+  "added_at": "2020-12-01T19:02:25Z",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

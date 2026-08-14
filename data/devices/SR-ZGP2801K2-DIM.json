@@ -1,0 +1,32 @@
+{
+  "model": "SR-ZGP2801K2-DIM",
+  "file": "SR-ZGP2801K2-DIM.md",
+  "vendor": "Sunricher",
+  "description": "Pushbutton transmitter module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SR-ZGP2801K2-DIM.png",
+  "added_at": "2021-12-03T18:14:38Z",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "press_on",
+        "press_off",
+        "hold_on",
+        "hold_off",
+        "release"
+      ]
+    }
+  ],
+  "warnings": []
+}

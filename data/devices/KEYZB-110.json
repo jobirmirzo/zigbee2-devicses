@@ -1,0 +1,132 @@
+{
+  "model": "KEYZB-110",
+  "file": "KEYZB-110.md",
+  "vendor": "Develco",
+  "description": "Keypad",
+  "image": "https://www.zigbee2mqtt.io/images/devices/KEYZB-110.png",
+  "added_at": "2021-10-30T12:58:50",
+  "exposes_summary": "battery_low, tamper, action_code, action_transaction, action_zone, battery, voltage, action",
+  "exposes": [
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Action code",
+      "type": "text",
+      "property": "action_code",
+      "base": "action_code",
+      "endpoint": null,
+      "description": "Pin code introduced..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action transaction",
+      "type": "numeric",
+      "property": "action_transaction",
+      "base": "action_transaction",
+      "endpoint": null,
+      "description": "Last action transaction number..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action zone",
+      "type": "text",
+      "property": "action_zone",
+      "base": "action_zone",
+      "endpoint": null,
+      "description": "Alarm zone. Default value 23.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "disarm",
+        "arm_day_zones",
+        "arm_night_zones",
+        "arm_all_zones",
+        "exit_delay",
+        "emergency"
+      ]
+    }
+  ],
+  "warnings": []
+}

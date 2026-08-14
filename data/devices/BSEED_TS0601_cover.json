@@ -1,0 +1,43 @@
+{
+  "model": "BSEED_TS0601_cover",
+  "file": "BSEED_TS0601_cover.md",
+  "vendor": "BSEED",
+  "description": "Zigbee curtain switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BSEED_TS0601_cover.png",
+  "added_at": "2022-6-20T12:58:50",
+  "exposes_summary": "cover (state, position)",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

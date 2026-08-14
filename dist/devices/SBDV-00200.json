@@ -1,0 +1,805 @@
+{
+  "model": "SBDV-00200",
+  "file": "SBDV-00200.md",
+  "vendor": "Sber",
+  "description": "Smart Wall Switch (optional neutral wire, two buttons)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SBDV-00200.png",
+  "added_at": "2026-04-30T19:55:31",
+  "exposes_summary": "action, switch (state), power_on_behavior, relay_mode, allow_double_click, identify, led_indicator_on_enable, led_indicator_on_h, led_indicator_on_s, led_indicator_on_b, led_indicator_off_enable, led_indicator_off_h, led_indicator_off_s, led_indicator_off_b, state, position, cover_mode, calibration_time, motor_timeout, buttons_mode, child_lock, serial_number, neutral_presence, power_profile, led_indication_type, resets_count, uptime, button_clicks_count_1, button_clicks_count_2, button_clicks_count_3, relay_switches_count_1, relay_switches_count_2",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "hold_switch_1",
+        "hold_switch_2",
+        "single_switch_1",
+        "single_switch_2",
+        "double_switch_1",
+        "double_switch_2"
+      ]
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "switch_1",
+      "features": [
+        {
+          "property": "state_switch_1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "(1) Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_switch_1",
+      "base": "power_on_behavior",
+      "endpoint": "switch_1",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "(1) Relay mode",
+      "type": "enum",
+      "property": "relay_mode_switch_1",
+      "base": "relay_mode",
+      "endpoint": "switch_1",
+      "description": "Decoupled mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "control_relay",
+        "decoupled"
+      ]
+    },
+    {
+      "name": "(1) Allow double clicks",
+      "type": "binary",
+      "property": "allow_double_click_switch_1",
+      "base": "allow_double_click",
+      "endpoint": "switch_1",
+      "description": "Allow detection of double clicks, may introduce delay in reaction when enabled.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "(1) Identify",
+      "type": "enum",
+      "property": "identify_switch_1",
+      "base": "identify",
+      "endpoint": "switch_1",
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "(1) LED indication",
+      "type": "binary",
+      "property": "led_indicator_on_enable_switch_1",
+      "base": "led_indicator_on_enable",
+      "endpoint": "switch_1",
+      "description": "Is LED indicator enabled in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "(1) Hue",
+      "type": "numeric",
+      "property": "led_indicator_on_h_switch_1",
+      "base": "led_indicator_on_h",
+      "endpoint": "switch_1",
+      "description": "Hue of LED in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 359,
+      "unit": "°"
+    },
+    {
+      "name": "(1) Saturation",
+      "type": "numeric",
+      "property": "led_indicator_on_s_switch_1",
+      "base": "led_indicator_on_s",
+      "endpoint": "switch_1",
+      "description": "Saturation of LED in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "(1) Brightness",
+      "type": "numeric",
+      "property": "led_indicator_on_b_switch_1",
+      "base": "led_indicator_on_b",
+      "endpoint": "switch_1",
+      "description": "Brightness of LED in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "(1) LED indication",
+      "type": "binary",
+      "property": "led_indicator_off_enable_switch_1",
+      "base": "led_indicator_off_enable",
+      "endpoint": "switch_1",
+      "description": "Is LED indicator enabled in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "(1) Hue",
+      "type": "numeric",
+      "property": "led_indicator_off_h_switch_1",
+      "base": "led_indicator_off_h",
+      "endpoint": "switch_1",
+      "description": "Hue of LED in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 359,
+      "unit": "°"
+    },
+    {
+      "name": "(1) Saturation",
+      "type": "numeric",
+      "property": "led_indicator_off_s_switch_1",
+      "base": "led_indicator_off_s",
+      "endpoint": "switch_1",
+      "description": "Saturation of LED in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "(1) Brightness",
+      "type": "numeric",
+      "property": "led_indicator_off_b_switch_1",
+      "base": "led_indicator_off_b",
+      "endpoint": "switch_1",
+      "description": "Brightness of LED in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "switch_2",
+      "features": [
+        {
+          "property": "state_switch_2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "(2) Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_switch_2",
+      "base": "power_on_behavior",
+      "endpoint": "switch_2",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "(2) Relay mode",
+      "type": "enum",
+      "property": "relay_mode_switch_2",
+      "base": "relay_mode",
+      "endpoint": "switch_2",
+      "description": "Decoupled mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "control_relay",
+        "decoupled"
+      ]
+    },
+    {
+      "name": "(2) Allow double clicks",
+      "type": "binary",
+      "property": "allow_double_click_switch_2",
+      "base": "allow_double_click",
+      "endpoint": "switch_2",
+      "description": "Allow detection of double clicks, may introduce delay in reaction when enabled.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "(2) Identify",
+      "type": "enum",
+      "property": "identify_switch_2",
+      "base": "identify",
+      "endpoint": "switch_2",
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "(2) LED indication",
+      "type": "binary",
+      "property": "led_indicator_on_enable_switch_2",
+      "base": "led_indicator_on_enable",
+      "endpoint": "switch_2",
+      "description": "Is LED indicator enabled in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "(2) Hue",
+      "type": "numeric",
+      "property": "led_indicator_on_h_switch_2",
+      "base": "led_indicator_on_h",
+      "endpoint": "switch_2",
+      "description": "Hue of LED in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 359,
+      "unit": "°"
+    },
+    {
+      "name": "(2) Saturation",
+      "type": "numeric",
+      "property": "led_indicator_on_s_switch_2",
+      "base": "led_indicator_on_s",
+      "endpoint": "switch_2",
+      "description": "Saturation of LED in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "(2) Brightness",
+      "type": "numeric",
+      "property": "led_indicator_on_b_switch_2",
+      "base": "led_indicator_on_b",
+      "endpoint": "switch_2",
+      "description": "Brightness of LED in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "(2) LED indication",
+      "type": "binary",
+      "property": "led_indicator_off_enable_switch_2",
+      "base": "led_indicator_off_enable",
+      "endpoint": "switch_2",
+      "description": "Is LED indicator enabled in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "(2) Hue",
+      "type": "numeric",
+      "property": "led_indicator_off_h_switch_2",
+      "base": "led_indicator_off_h",
+      "endpoint": "switch_2",
+      "description": "Hue of LED in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 359,
+      "unit": "°"
+    },
+    {
+      "name": "(2) Saturation",
+      "type": "numeric",
+      "property": "led_indicator_off_s_switch_2",
+      "base": "led_indicator_off_s",
+      "endpoint": "switch_2",
+      "description": "Saturation of LED in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "(2) Brightness",
+      "type": "numeric",
+      "property": "led_indicator_off_b_switch_2",
+      "base": "led_indicator_off_b",
+      "endpoint": "switch_2",
+      "description": "Brightness of LED in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "State",
+      "type": "enum",
+      "property": "current_state_cover",
+      "base": "current_state",
+      "endpoint": "cover",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "OPEN",
+        "CLOSE",
+        "STOP"
+      ]
+    },
+    {
+      "name": "Position",
+      "type": "numeric",
+      "property": "position_cover",
+      "base": "position",
+      "endpoint": "cover",
+      "description": "Position of this cover, 100 is fully open if 'Invert cover' option is false (default).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Cover mode",
+      "type": "composite",
+      "property": "cover_mode_cover",
+      "base": "cover_mode",
+      "endpoint": "cover",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "reversed",
+          "type": "binary",
+          "description": "Reversal of the motor rotating direction",
+          "values": [
+            "true",
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Calibration time",
+      "type": "numeric",
+      "property": "calibration_time_cover",
+      "base": "calibration_time",
+      "endpoint": "cover",
+      "description": "Calibration time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Motor timeout",
+      "type": "numeric",
+      "property": "motor_timeout_cover",
+      "base": "motor_timeout",
+      "endpoint": "cover",
+      "description": "Timeout for continuous motor action.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Buttons mode",
+      "type": "enum",
+      "property": "buttons_mode_cover",
+      "base": "buttons_mode",
+      "endpoint": "cover",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "normal",
+        "inverted"
+      ]
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify_cover",
+      "base": "identify",
+      "endpoint": "cover",
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "LED indication",
+      "type": "binary",
+      "property": "led_indicator_off_enable_cover",
+      "base": "led_indicator_off_enable",
+      "endpoint": "cover",
+      "description": "Is LED indicator enabled.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Hue",
+      "type": "numeric",
+      "property": "led_indicator_off_h_cover",
+      "base": "led_indicator_off_h",
+      "endpoint": "cover",
+      "description": "Hue of LED indicator.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 359,
+      "unit": "°"
+    },
+    {
+      "name": "Saturation",
+      "type": "numeric",
+      "property": "led_indicator_off_s_cover",
+      "base": "led_indicator_off_s",
+      "endpoint": "cover",
+      "description": "Saturation of LED indicator.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "Brightness",
+      "type": "numeric",
+      "property": "led_indicator_off_b_cover",
+      "base": "led_indicator_off_b",
+      "endpoint": "cover",
+      "description": "Brightness of LED indicator.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enable child lock to prevent manual button operation.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Serial Number",
+      "type": "text",
+      "property": "serial_number",
+      "base": "serial_number",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Neutral presence",
+      "type": "binary",
+      "property": "neutral_presence",
+      "base": "neutral_presence",
+      "endpoint": null,
+      "description": "Neutral wire presence status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "YES",
+      "value_off": "NO"
+    },
+    {
+      "name": "Power profile",
+      "type": "enum",
+      "property": "power_profile",
+      "base": "power_profile",
+      "endpoint": null,
+      "description": "Power Profile when neutral wire is absent: quick mode is for fastest device response; anti-flicker (af) modes have different polling intervals (in ms). Anti-flicker fallback mode is the safest one: device will fall back to it automatically if unstable behavior has been detected in more responsive mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "quick",
+        "af_250",
+        "af_500",
+        "af_750",
+        "af_1000",
+        "af_1250",
+        "af_1750",
+        "af_2000",
+        "af_fallback"
+      ]
+    },
+    {
+      "name": "Led indication type",
+      "type": "enum",
+      "property": "led_indication_type",
+      "base": "led_indication_type",
+      "endpoint": null,
+      "description": "Type of LED indication (ignored in cover controller mode). Either continuous light, or short flashes.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "continuous",
+        "flashes"
+      ]
+    },
+    {
+      "name": "Resets count",
+      "type": "numeric",
+      "property": "resets_count",
+      "base": "resets_count",
+      "endpoint": null,
+      "description": "(telemetry) Number of resets.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Uptime",
+      "type": "numeric",
+      "property": "uptime",
+      "base": "uptime",
+      "endpoint": null,
+      "description": "(telemetry) Device uptime, in seconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Button clicks count 1",
+      "type": "numeric",
+      "property": "button_clicks_count_1",
+      "base": "button_clicks_count_1",
+      "endpoint": null,
+      "description": "(telemetry) Total clicks count of button 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Button clicks count 2",
+      "type": "numeric",
+      "property": "button_clicks_count_2",
+      "base": "button_clicks_count_2",
+      "endpoint": null,
+      "description": "(telemetry) Total clicks count of button 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Button clicks count 3",
+      "type": "numeric",
+      "property": "button_clicks_count_3",
+      "base": "button_clicks_count_3",
+      "endpoint": null,
+      "description": "(telemetry) Total clicks count of button 3.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Relay switches count 1",
+      "type": "numeric",
+      "property": "relay_switches_count_1",
+      "base": "relay_switches_count_1",
+      "endpoint": null,
+      "description": "(telemetry) Total toggle count of relay 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Relay switches count 2",
+      "type": "numeric",
+      "property": "relay_switches_count_2",
+      "base": "relay_switches_count_2",
+      "endpoint": null,
+      "description": "(telemetry) Total toggle count of relay 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

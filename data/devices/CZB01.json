@@ -1,0 +1,46 @@
+{
+  "model": "CZB01",
+  "file": "CZB01.md",
+  "vendor": "Lincukoo",
+  "description": "Wireless switch with 1 button",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CZB01.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "toggle"
+      ]
+    }
+  ],
+  "warnings": []
+}

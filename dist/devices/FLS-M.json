@@ -1,0 +1,11 @@
+{
+  "model": "FLS-M",
+  "file": "FLS-M.md",
+  "vendor": "Dresden Elektronik",
+  "description": "Universal LED controller (dynamic endpoints)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/FLS-M.png",
+  "added_at": "2025-05-01T17:59:08",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

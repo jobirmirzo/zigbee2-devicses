@@ -1,0 +1,151 @@
+{
+  "model": "ZTS-MM",
+  "file": "ZTS-MM.md",
+  "vendor": "Nova Digital",
+  "description": "mmWave radar 5.8GHz",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZTS-MM.png",
+  "added_at": "2025-09-01T18:20:17",
+  "exposes_summary": "illuminance, occupancy, presence_timeout, move_sensitivity, move_minimum_range, move_maximum_range, breath_sensitivity, breath_minimum_range, breath_maximum_range",
+  "exposes": [
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Presence timeout",
+      "type": "numeric",
+      "property": "presence_timeout",
+      "base": "presence_timeout",
+      "endpoint": null,
+      "description": "Presence timeout.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 180,
+      "unit": "s"
+    },
+    {
+      "name": "Move sensitivity",
+      "type": "numeric",
+      "property": "move_sensitivity",
+      "base": "move_sensitivity",
+      "endpoint": null,
+      "description": "sensitivity of the radar.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Move minimum range",
+      "type": "numeric",
+      "property": "move_minimum_range",
+      "base": "move_minimum_range",
+      "endpoint": null,
+      "description": "Movement minimum range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "cm"
+    },
+    {
+      "name": "Move maximum range",
+      "type": "numeric",
+      "property": "move_maximum_range",
+      "base": "move_maximum_range",
+      "endpoint": null,
+      "description": "Movement maximum range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "cm"
+    },
+    {
+      "name": "Breath sensitivity",
+      "type": "numeric",
+      "property": "breath_sensitivity",
+      "base": "breath_sensitivity",
+      "endpoint": null,
+      "description": "Breath sensitivity of the radar.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Breath minimum range",
+      "type": "numeric",
+      "property": "breath_minimum_range",
+      "base": "breath_minimum_range",
+      "endpoint": null,
+      "description": "Breath minimum range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "cm"
+    },
+    {
+      "name": "Breath maximum range",
+      "type": "numeric",
+      "property": "breath_maximum_range",
+      "base": "breath_maximum_range",
+      "endpoint": null,
+      "description": "Breath maximum range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "cm"
+    }
+  ],
+  "warnings": []
+}

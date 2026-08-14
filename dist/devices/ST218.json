@@ -1,0 +1,89 @@
+{
+  "model": "ST218",
+  "file": "ST218.md",
+  "vendor": "Stelpro",
+  "description": "Ki convector, line-voltage thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ST218.png",
+  "added_at": "2019-07-22T20:08:17Z",
+  "exposes_summary": "local_temperature, keypad_lockout, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state, pi_heating_demand)",
+  "exposes": [
+    {
+      "name": "Local temperature",
+      "type": "numeric",
+      "property": "local_temperature",
+      "base": "local_temperature",
+      "endpoint": null,
+      "description": "Current temperature measured on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Keypad lockout",
+      "type": "enum",
+      "property": "keypad_lockout",
+      "base": "keypad_lockout",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "unlock",
+        "lock1",
+        "lock2"
+      ]
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "auto",
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        },
+        {
+          "property": "pi_heating_demand",
+          "base": "pi_heating_demand",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

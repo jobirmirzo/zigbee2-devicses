@@ -1,0 +1,118 @@
+{
+  "model": "CCT5010-0001",
+  "file": "CCT5010-0001.md",
+  "vendor": "Schneider Electric",
+  "description": "Micro module dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CCT5010-0001.png",
+  "added_at": "2021-05-01T14:47:09Z",
+  "exposes_summary": "ballast_minimum_level, ballast_maximum_level, dimmer_mode, light (state, brightness, level_config), effect",
+  "exposes": [
+    {
+      "name": "Ballast minimum level",
+      "type": "numeric",
+      "property": "ballast_minimum_level",
+      "base": "ballast_minimum_level",
+      "endpoint": null,
+      "description": "Specifies the minimum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Ballast maximum level",
+      "type": "numeric",
+      "property": "ballast_maximum_level",
+      "base": "ballast_maximum_level",
+      "endpoint": null,
+      "description": "Specifies the maximum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Dimmer mode",
+      "type": "enum",
+      "property": "dimmer_mode",
+      "base": "dimmer_mode",
+      "endpoint": null,
+      "description": "Sets dimming mode to autodetect or fixed RC/RL/RL_LED mode (max load is reduced in RL_LED).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "auto",
+        "rc",
+        "rl",
+        "rl_led"
+      ]
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "level_config",
+          "base": "level_config",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    }
+  ],
+  "warnings": []
+}

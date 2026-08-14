@@ -1,0 +1,71 @@
+{
+  "model": "3RSB01085Z",
+  "file": "3RSB01085Z.md",
+  "vendor": "Third Reality",
+  "description": "Smart Scene Button S3",
+  "image": "https://www.zigbee2mqtt.io/images/devices/3RSB01085Z.png",
+  "added_at": "2025-11-30T20:32:44",
+  "exposes_summary": "identify, battery, action",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "release_1",
+        "release_2",
+        "release_3",
+        "single_1",
+        "single_2",
+        "single_3",
+        "double_1",
+        "double_2",
+        "double_3",
+        "hold_1",
+        "hold_2",
+        "hold_3"
+      ]
+    }
+  ],
+  "warnings": []
+}

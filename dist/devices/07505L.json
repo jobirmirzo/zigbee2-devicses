@@ -1,0 +1,191 @@
+{
+  "model": "07505L",
+  "file": "07505L.md",
+  "vendor": "Immax",
+  "description": "Neo smart keypad",
+  "image": "https://www.zigbee2mqtt.io/images/devices/07505L.png",
+  "added_at": "2023-01-01T09:10:19",
+  "exposes_summary": "battery, tamper, admin_code, last_added_user_code, arm_delay_time, beep_sound_enabled, quick_home_enabled, quick_disarm_enabled, quick_arm_enabled, arm_delay_beep_sound, user_id, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Admin code",
+      "type": "text",
+      "property": "admin_code",
+      "base": "admin_code",
+      "endpoint": null,
+      "description": "Admin code.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Last added user code",
+      "type": "text",
+      "property": "last_added_user_code",
+      "base": "last_added_user_code",
+      "endpoint": null,
+      "description": "Last Added User code.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Arm delay time",
+      "type": "numeric",
+      "property": "arm_delay_time",
+      "base": "arm_delay_time",
+      "endpoint": null,
+      "description": "Arm Delay Time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 180
+    },
+    {
+      "name": "Beep sound enabled",
+      "type": "binary",
+      "property": "beep_sound_enabled",
+      "base": "beep_sound_enabled",
+      "endpoint": null,
+      "description": "Beep Sound Enabled.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Quick home enabled",
+      "type": "binary",
+      "property": "quick_home_enabled",
+      "base": "quick_home_enabled",
+      "endpoint": null,
+      "description": "Quick Home Enabled.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Quick disarm enabled",
+      "type": "binary",
+      "property": "quick_disarm_enabled",
+      "base": "quick_disarm_enabled",
+      "endpoint": null,
+      "description": "Quick Disarm Enabled.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Quick arm enabled",
+      "type": "binary",
+      "property": "quick_arm_enabled",
+      "base": "quick_arm_enabled",
+      "endpoint": null,
+      "description": "Quick Arm Enabled.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Arm delay beep sound",
+      "type": "binary",
+      "property": "arm_delay_beep_sound",
+      "base": "arm_delay_beep_sound",
+      "endpoint": null,
+      "description": "Arm Delay Beep Sound.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "User id",
+      "type": "text",
+      "property": "user_id",
+      "base": "user_id",
+      "endpoint": null,
+      "description": "Last Used User ID.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "disarm",
+        "arm_home",
+        "arm_away",
+        "sos"
+      ]
+    }
+  ],
+  "warnings": []
+}

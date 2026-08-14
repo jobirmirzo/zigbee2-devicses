@@ -1,0 +1,11 @@
+{
+  "model": "EFR32MG21.Router.2",
+  "file": "EFR32MG21.Router.2.md",
+  "vendor": "Custom devices (DiY)",
+  "description": "EFR32MG21 router",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFR32MG21.Router.2.png",
+  "added_at": "2024-11-30T20:27:20",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

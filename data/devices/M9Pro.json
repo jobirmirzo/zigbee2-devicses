@@ -1,0 +1,963 @@
+{
+  "model": "M9Pro",
+  "file": "M9Pro.md",
+  "vendor": "Tuya",
+  "description": "Smart 4 gang switch, curtain, smart light or scene. 1x thermostat control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/M9Pro.png",
+  "added_at": "2025-11-30T20:32:44",
+  "exposes_summary": "switch (state), mode, name, scene_name, dimmer_name, dimmer_switch, brightness, color_temp, curtain_name, curtain_switch, group_id, power_on_behavior, show_weather, backlight, show_screen, thermostat, thermostat_name, current_heating_setpoint, fan_mode, scene_switch, temperature_1, condition_1, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l3",
+      "features": [
+        {
+          "property": "state_l3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l4",
+      "features": [
+        {
+          "property": "state_l4",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode_l1",
+      "base": "mode",
+      "endpoint": "l1",
+      "description": "Switch 1 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch",
+        "scene",
+        "smart_light",
+        "curtain"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode_l2",
+      "base": "mode",
+      "endpoint": "l2",
+      "description": "Switch 2 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch",
+        "scene",
+        "smart_light",
+        "curtain"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode_l3",
+      "base": "mode",
+      "endpoint": "l3",
+      "description": "Switch 3 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch",
+        "scene",
+        "smart_light",
+        "curtain"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode_l4",
+      "base": "mode",
+      "endpoint": "l4",
+      "description": "Switch 4 mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch",
+        "scene",
+        "smart_light",
+        "curtain",
+        "thermostat"
+      ]
+    },
+    {
+      "name": "Name",
+      "type": "text",
+      "property": "name_l1",
+      "base": "name",
+      "endpoint": "l1",
+      "description": "Name for Switch 1 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Name",
+      "type": "text",
+      "property": "name_l2",
+      "base": "name",
+      "endpoint": "l2",
+      "description": "Name for Switch 2 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Name",
+      "type": "text",
+      "property": "name_l3",
+      "base": "name",
+      "endpoint": "l3",
+      "description": "Name for Switch 3 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Name",
+      "type": "text",
+      "property": "name_l4",
+      "base": "name",
+      "endpoint": "l4",
+      "description": "Name for Switch 4 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Scene name",
+      "type": "text",
+      "property": "scene_name_l1",
+      "base": "scene_name",
+      "endpoint": "l1",
+      "description": "Scene name for switch 1 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Scene name",
+      "type": "text",
+      "property": "scene_name_l2",
+      "base": "scene_name",
+      "endpoint": "l2",
+      "description": "Scene name for switch 2 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Scene name",
+      "type": "text",
+      "property": "scene_name_l3",
+      "base": "scene_name",
+      "endpoint": "l3",
+      "description": "Scene name for switch 3 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Scene name",
+      "type": "text",
+      "property": "scene_name_l4",
+      "base": "scene_name",
+      "endpoint": "l4",
+      "description": "Scene name for switch 4 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Dimmer name",
+      "type": "text",
+      "property": "dimmer_name_l1",
+      "base": "dimmer_name",
+      "endpoint": "l1",
+      "description": "Smart Light name for switch 1 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Dimmer name",
+      "type": "text",
+      "property": "dimmer_name_l2",
+      "base": "dimmer_name",
+      "endpoint": "l2",
+      "description": "Smart Light name for switch 2 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Dimmer name",
+      "type": "text",
+      "property": "dimmer_name_l3",
+      "base": "dimmer_name",
+      "endpoint": "l3",
+      "description": "Smart Light name for switch 3 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Dimmer name",
+      "type": "text",
+      "property": "dimmer_name_l4",
+      "base": "dimmer_name",
+      "endpoint": "l4",
+      "description": "Smart Light name for switch 4 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Dimmer switch",
+      "type": "binary",
+      "property": "dimmer_switch_l1",
+      "base": "dimmer_switch",
+      "endpoint": "l1",
+      "description": "Smart Light - toggle switch 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Dimmer switch",
+      "type": "binary",
+      "property": "dimmer_switch_l2",
+      "base": "dimmer_switch",
+      "endpoint": "l2",
+      "description": "Smart Light - toggle switch 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Dimmer switch",
+      "type": "binary",
+      "property": "dimmer_switch_l3",
+      "base": "dimmer_switch",
+      "endpoint": "l3",
+      "description": "Smart Light - toggle switch 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Dimmer switch",
+      "type": "binary",
+      "property": "dimmer_switch_l4",
+      "base": "dimmer_switch",
+      "endpoint": "l4",
+      "description": "Smart Light - toggle switch 4.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Brightness",
+      "type": "numeric",
+      "property": "brightness_l1",
+      "base": "brightness",
+      "endpoint": "l1",
+      "description": "Brightness for endpoint 1 (Read Only).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "Brightness",
+      "type": "numeric",
+      "property": "brightness_l2",
+      "base": "brightness",
+      "endpoint": "l2",
+      "description": "Brightness for endpoint 2 (Read Only).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "Brightness",
+      "type": "numeric",
+      "property": "brightness_l3",
+      "base": "brightness",
+      "endpoint": "l3",
+      "description": "Brightness for endpoint 3 (Read Only).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "Brightness",
+      "type": "numeric",
+      "property": "brightness_l4",
+      "base": "brightness",
+      "endpoint": "l4",
+      "description": "Brightness for endpoint 4 (Read Only).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "Color temp",
+      "type": "numeric",
+      "property": "color_temp_l1",
+      "base": "color_temp",
+      "endpoint": "l1",
+      "description": "Color temp for endpoint 1 (Read Only).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "Color temp",
+      "type": "numeric",
+      "property": "color_temp_l2",
+      "base": "color_temp",
+      "endpoint": "l2",
+      "description": "Color temp for endpoint 2 (Read Only).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "Color temp",
+      "type": "numeric",
+      "property": "color_temp_l3",
+      "base": "color_temp",
+      "endpoint": "l3",
+      "description": "Color temp for endpoint 3 (Read Only).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "Color temp",
+      "type": "numeric",
+      "property": "color_temp_l4",
+      "base": "color_temp",
+      "endpoint": "l4",
+      "description": "Color temp for endpoint 4 (Read Only).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "Curtain name",
+      "type": "text",
+      "property": "curtain_name_l1",
+      "base": "curtain_name",
+      "endpoint": "l1",
+      "description": "Curtain name for switch 1 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Curtain name",
+      "type": "text",
+      "property": "curtain_name_l2",
+      "base": "curtain_name",
+      "endpoint": "l2",
+      "description": "Curtain name for switch 2 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Curtain name",
+      "type": "text",
+      "property": "curtain_name_l3",
+      "base": "curtain_name",
+      "endpoint": "l3",
+      "description": "Curtain name for switch 3 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Curtain name",
+      "type": "text",
+      "property": "curtain_name_l4",
+      "base": "curtain_name",
+      "endpoint": "l4",
+      "description": "Curtain name for switch 4 (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Curtain switch",
+      "type": "binary",
+      "property": "curtain_switch_l1",
+      "base": "curtain_switch",
+      "endpoint": "l1",
+      "description": "Curtain - toggle switch 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Curtain switch",
+      "type": "binary",
+      "property": "curtain_switch_l2",
+      "base": "curtain_switch",
+      "endpoint": "l2",
+      "description": "Curtain - toggle switch 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Curtain switch",
+      "type": "binary",
+      "property": "curtain_switch_l3",
+      "base": "curtain_switch",
+      "endpoint": "l3",
+      "description": "Curtain - toggle switch 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Curtain switch",
+      "type": "binary",
+      "property": "curtain_switch_l4",
+      "base": "curtain_switch",
+      "endpoint": "l4",
+      "description": "Curtain - toggle switch 4.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Group id",
+      "type": "numeric",
+      "property": "group_id_l1",
+      "base": "group_id",
+      "endpoint": "l1",
+      "description": "Group ID to bind to for switch 1..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10000
+    },
+    {
+      "name": "Group id",
+      "type": "numeric",
+      "property": "group_id_l2",
+      "base": "group_id",
+      "endpoint": "l2",
+      "description": "Group ID to bind to for switch 2..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10000
+    },
+    {
+      "name": "Group id",
+      "type": "numeric",
+      "property": "group_id_l3",
+      "base": "group_id",
+      "endpoint": "l3",
+      "description": "Group ID to bind to for switch 3..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10000
+    },
+    {
+      "name": "Group id",
+      "type": "numeric",
+      "property": "group_id_l4",
+      "base": "group_id",
+      "endpoint": "l4",
+      "description": "Group ID to bind to for switch 4..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10000
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Whole panel override..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_l1",
+      "base": "power_on_behavior",
+      "endpoint": "l1",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_l2",
+      "base": "power_on_behavior",
+      "endpoint": "l2",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_l3",
+      "base": "power_on_behavior",
+      "endpoint": "l3",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_l4",
+      "base": "power_on_behavior",
+      "endpoint": "l4",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "previous"
+      ]
+    },
+    {
+      "name": "Show weather",
+      "type": "binary",
+      "property": "show_weather",
+      "base": "show_weather",
+      "endpoint": null,
+      "description": "Show time and weather (on) or just switch names (off).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Backlight",
+      "type": "binary",
+      "property": "backlight",
+      "base": "backlight",
+      "endpoint": null,
+      "description": "Button LED backlights.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Show screen",
+      "type": "enum",
+      "property": "show_screen",
+      "base": "show_screen",
+      "endpoint": null,
+      "description": "Screen display mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "motion",
+        "on_press",
+        "on"
+      ]
+    },
+    {
+      "name": "Thermostat",
+      "type": "binary",
+      "property": "thermostat",
+      "base": "thermostat",
+      "endpoint": null,
+      "description": "Thermostat - toggle switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Thermostat name",
+      "type": "text",
+      "property": "thermostat_name",
+      "base": "thermostat_name",
+      "endpoint": null,
+      "description": "Name for Thermostat (max 8 chars displayed).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Current heating setpoint",
+      "type": "numeric",
+      "property": "current_heating_setpoint",
+      "base": "current_heating_setpoint",
+      "endpoint": null,
+      "description": "Thermostat temperature setting (Read Only).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 16,
+      "value_max": 32
+    },
+    {
+      "name": "Fan mode",
+      "type": "numeric",
+      "property": "fan_mode",
+      "base": "fan_mode",
+      "endpoint": null,
+      "description": "Thermostat fan setting (Read Only).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 3
+    },
+    {
+      "name": "Scene switch",
+      "type": "enum",
+      "property": "scene_switch",
+      "base": "scene_switch",
+      "endpoint": null,
+      "description": "Scene Switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "switch_1",
+        "switch_2",
+        "switch_3",
+        "switch_4",
+        "switch_5",
+        "switch_6",
+        "switch_7",
+        "switch_8",
+        "switch_9"
+      ]
+    },
+    {
+      "name": "Temperature 1",
+      "type": "numeric",
+      "property": "temperature_1",
+      "base": "temperature_1",
+      "endpoint": null,
+      "description": "Temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -65,
+      "value_max": 99
+    },
+    {
+      "name": "Condition 1",
+      "type": "enum",
+      "property": "condition_1",
+      "base": "condition_1",
+      "endpoint": null,
+      "description": "Weather condition.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "sunny",
+        "heavy_rain",
+        "cloudy",
+        "sandstorm",
+        "light_snow",
+        "snow",
+        "freezing_fog",
+        "rainstorm",
+        "shower",
+        "dust",
+        "spit",
+        "sleet",
+        "yin",
+        "freezing_rain",
+        "rain",
+        "fog",
+        "heavy_shower",
+        "heavy_snow",
+        "heavy_downpour",
+        "blizzard",
+        "hailstone",
+        "snow_shower",
+        "haze",
+        "thunder_shower"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "scene_0",
+        "scene_1",
+        "scene_2",
+        "scene_3",
+        "scene_4",
+        "scene_5",
+        "scene_6",
+        "scene_7",
+        "scene_8"
+      ]
+    }
+  ],
+  "warnings": []
+}

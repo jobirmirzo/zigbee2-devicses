@@ -1,0 +1,89 @@
+{
+  "model": "ptvo_counter_2ch",
+  "file": "ptvo_counter_2ch.md",
+  "vendor": "Custom devices (DiY)",
+  "description": "2 channel counter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ptvo_counter_2ch.png",
+  "added_at": "2023-11-07T00:31:40Z",
+  "exposes_summary": "battery, l3, l5, switch (state), voltage",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "L3",
+      "type": "numeric",
+      "property": "l3",
+      "base": "l3",
+      "endpoint": null,
+      "description": "Counter 1 value. Write zero or positive value to set a counter value. Write a negative value to set a wakeup interval in minutes.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -999999999,
+      "value_max": 999999999
+    },
+    {
+      "name": "L5",
+      "type": "numeric",
+      "property": "l5",
+      "base": "l5",
+      "endpoint": null,
+      "description": "Counter 2 value. Write zero or positive value to set a counter value. Write a negative value to set a wakeup interval in minutes.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -999999999,
+      "value_max": 999999999
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l6",
+      "features": [
+        {
+          "property": "state_l6",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

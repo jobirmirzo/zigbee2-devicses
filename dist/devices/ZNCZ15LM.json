@@ -1,0 +1,180 @@
+{
+  "model": "ZNCZ15LM",
+  "file": "ZNCZ15LM.md",
+  "vendor": "Aqara",
+  "description": "Smart plug T1, CN",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZNCZ15LM.png",
+  "added_at": "2021-08-01T20:41:55Z",
+  "exposes_summary": "switch (state), power, energy, device_temperature, voltage, current, consumer_connected, power_outage_memory, led_disabled_night, button_lock, overload_protection",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Consumer connected",
+      "type": "binary",
+      "property": "consumer_connected",
+      "base": "consumer_connected",
+      "endpoint": null,
+      "description": "Indicates whether a plug is physically attached. Device does not have to pull power or even be connected electrically (state of this binary switch can be ON even if main power switch is OFF).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Power outage memory",
+      "type": "binary",
+      "property": "power_outage_memory",
+      "base": "power_outage_memory",
+      "endpoint": null,
+      "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "LED disabled night",
+      "type": "binary",
+      "property": "led_disabled_night",
+      "base": "led_disabled_night",
+      "endpoint": null,
+      "description": "Enable/disable the LED at night.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Button lock",
+      "type": "binary",
+      "property": "button_lock",
+      "base": "button_lock",
+      "endpoint": null,
+      "description": "Disables the physical switch button.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Overload protection",
+      "type": "numeric",
+      "property": "overload_protection",
+      "base": "overload_protection",
+      "endpoint": null,
+      "description": "Maximum allowed load, turns off if exceeded.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 100,
+      "value_max": 2500,
+      "unit": "W"
+    }
+  ],
+  "warnings": []
+}

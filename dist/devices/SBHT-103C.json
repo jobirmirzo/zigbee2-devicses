@@ -1,0 +1,106 @@
+{
+  "model": "SBHT-103C",
+  "file": "SBHT-103C.md",
+  "vendor": "Shelly",
+  "description": "BLU H&T display Zigbee",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SBHT-103C.png",
+  "added_at": "2026-01-31T13:12:45",
+  "exposes_summary": "battery, temperature, humidity, light_level, dark_threshold, bright_threshold",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Light level",
+      "type": "enum",
+      "property": "light_level",
+      "base": "light_level",
+      "endpoint": null,
+      "description": "Coarse light level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "dark",
+        "twilight",
+        "bright"
+      ]
+    },
+    {
+      "name": "Dark threshold",
+      "type": "numeric",
+      "property": "dark_threshold",
+      "base": "dark_threshold",
+      "endpoint": null,
+      "description": "Lux threshold below which light level is dark.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535,
+      "unit": "lx"
+    },
+    {
+      "name": "Bright threshold",
+      "type": "numeric",
+      "property": "bright_threshold",
+      "base": "bright_threshold",
+      "endpoint": null,
+      "description": "Lux threshold above which light level is bright.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535,
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,160 @@
+{
+  "model": "YXZBSL",
+  "file": "YXZBSL.md",
+  "vendor": "Tuya",
+  "description": "Smart siren",
+  "image": "https://www.zigbee2mqtt.io/images/devices/YXZBSL.png",
+  "added_at": "2024-09-01T12:37:03",
+  "exposes_summary": "alarm, type, volume, ringtone, power_type, duration, battery_level, battery",
+  "exposes": [
+    {
+      "name": "Alarm",
+      "type": "binary",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Turn the light of the alarm ON/OFF.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Type",
+      "type": "enum",
+      "property": "type",
+      "base": "type",
+      "endpoint": null,
+      "description": "Alarm type.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "sound",
+        "light",
+        "sound+light",
+        "normal"
+      ]
+    },
+    {
+      "name": "Volume",
+      "type": "enum",
+      "property": "volume",
+      "base": "volume",
+      "endpoint": null,
+      "description": "Volume of the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "mute",
+        "low",
+        "middle",
+        "high"
+      ]
+    },
+    {
+      "name": "Ringtone",
+      "type": "enum",
+      "property": "ringtone",
+      "base": "ringtone",
+      "endpoint": null,
+      "description": "Ringtone of the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "melody1",
+        "melody2",
+        "melody3",
+        "melody4",
+        "melody5",
+        "melody6",
+        "melody7",
+        "melody8",
+        "door",
+        "water",
+        "temperature",
+        "entered",
+        "left"
+      ]
+    },
+    {
+      "name": "Power type",
+      "type": "enum",
+      "property": "power_type",
+      "base": "power_type",
+      "endpoint": null,
+      "description": "Power type.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "battery",
+        "cable"
+      ]
+    },
+    {
+      "name": "Duration",
+      "type": "numeric",
+      "property": "duration",
+      "base": "duration",
+      "endpoint": null,
+      "description": "Duration of the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 60,
+      "unit": "min"
+    },
+    {
+      "name": "Battery level",
+      "type": "enum",
+      "property": "battery_level",
+      "base": "battery_level",
+      "endpoint": null,
+      "description": "Battery level state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "middle",
+        "high"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

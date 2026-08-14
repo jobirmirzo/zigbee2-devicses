@@ -1,0 +1,104 @@
+{
+  "model": "E1525/E1745",
+  "file": "E1525_E1745.md",
+  "vendor": "IKEA",
+  "description": "TRADFRI motion sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E1525-E1745.png",
+  "added_at": "2021-10-30T12:58:50",
+  "exposes_summary": "occupancy, illuminance_above_threshold, requested_brightness_level, requested_brightness_percent, identify, battery",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance above threshold",
+      "type": "binary",
+      "property": "illuminance_above_threshold",
+      "base": "illuminance_above_threshold",
+      "endpoint": null,
+      "description": "Indicates whether the device detected bright light (works only in night mode).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Requested brightness level",
+      "type": "numeric",
+      "property": "requested_brightness_level",
+      "base": "requested_brightness_level",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 76,
+      "value_max": 254
+    },
+    {
+      "name": "Requested brightness percent",
+      "type": "numeric",
+      "property": "requested_brightness_percent",
+      "base": "requested_brightness_percent",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 30,
+      "value_max": 100
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

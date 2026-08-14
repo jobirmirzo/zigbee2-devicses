@@ -1,0 +1,94 @@
+{
+  "model": "ZSS-HM-SSD01",
+  "file": "ZSS-HM-SSD01.md",
+  "vendor": "Moes",
+  "description": "Smoke sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZSS-HM-SSD01.png",
+  "added_at": "2023-11-30T19:41:12",
+  "exposes_summary": "smoke, battery, battery_state, silence, self_test",
+  "exposes": [
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "State of the battery.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Silence",
+      "type": "binary",
+      "property": "silence",
+      "base": "silence",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Self test",
+      "type": "enum",
+      "property": "self_test",
+      "base": "self_test",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "checking",
+        "check_success",
+        "check_failure"
+      ]
+    }
+  ],
+  "warnings": []
+}

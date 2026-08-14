@@ -1,0 +1,46 @@
+{
+  "model": "MEG5126-0300",
+  "file": "MEG5126-0300.md",
+  "vendor": "Schneider Electric",
+  "description": "Merten MEG5165 PlusLink relais insert with Merten Wiser System M push button (2fold)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MEG5126-0300.png",
+  "added_at": "2023-02-01T14:45:57",
+  "exposes_summary": "switch (state)",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

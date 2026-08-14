@@ -1,0 +1,110 @@
+{
+  "model": "GCM-300Z",
+  "file": "GCM-300Z.md",
+  "vendor": "ShinaSystem",
+  "description": "SiHAS gas valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GCM-300Z.png",
+  "added_at": "2023-12-26T18:38:16",
+  "exposes_summary": "gas_valve_state, battery, close_timeout, close_remain_timeout, volume, overheat_mode",
+  "exposes": [
+    {
+      "name": "Gas valve state",
+      "type": "binary",
+      "property": "gas_valve_state",
+      "base": "gas_valve_state",
+      "endpoint": null,
+      "description": "Valve state if open or closed.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "OPEN",
+      "value_off": "CLOSE"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Close timeout",
+      "type": "numeric",
+      "property": "close_timeout",
+      "base": "close_timeout",
+      "endpoint": null,
+      "description": "Set the default closing time when the gas valve is open..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 540,
+      "unit": "min"
+    },
+    {
+      "name": "Close remain timeout",
+      "type": "numeric",
+      "property": "close_remain_timeout",
+      "base": "close_remain_timeout",
+      "endpoint": null,
+      "description": "Set the time or remaining time until the gas valve closes..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 540,
+      "unit": "min"
+    },
+    {
+      "name": "Volume",
+      "type": "enum",
+      "property": "volume",
+      "base": "volume",
+      "endpoint": null,
+      "description": "Values observed are `1` (voice), `2` (high) or `3` (low)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "voice",
+        "high",
+        "low"
+      ]
+    },
+    {
+      "name": "Overheat mode",
+      "type": "enum",
+      "property": "overheat_mode",
+      "base": "overheat_mode",
+      "endpoint": null,
+      "description": "Temperature overheating condition..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "normal",
+        "overheat"
+      ]
+    }
+  ],
+  "warnings": []
+}

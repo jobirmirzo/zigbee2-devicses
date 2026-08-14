@@ -1,0 +1,41 @@
+{
+  "model": "E12-N14",
+  "file": "E12-N14.md",
+  "vendor": "Sengled",
+  "description": "Element Classic (BR30)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E12-N14.png",
+  "added_at": "2019-07-22T20:08:17Z",
+  "exposes_summary": "light (state, brightness)",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    }
+  ],
+  "warnings": []
+}

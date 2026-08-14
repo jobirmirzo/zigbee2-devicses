@@ -1,0 +1,55 @@
+{
+  "model": "TZE284_4cqhd2ha",
+  "file": "TZE284_4cqhd2ha.md",
+  "vendor": "Girier",
+  "description": "Vibration sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TZE284_4cqhd2ha.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "vibration, sensitivity, buzzer_mute",
+  "exposes": [
+    {
+      "name": "Vibration",
+      "type": "binary",
+      "property": "vibration",
+      "base": "vibration",
+      "endpoint": null,
+      "description": "Indicates whether the device detected vibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Sensitivity",
+      "type": "numeric",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity of the sensor (single press the button when muted to switch between low (one beep), medium (two beeps) and max (three beeps)).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 2
+    },
+    {
+      "name": "Buzzer mute",
+      "type": "text",
+      "property": "buzzer_mute",
+      "base": "buzzer_mute",
+      "endpoint": null,
+      "description": "ON when buzzer is muted (double press the button on device to toggle).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

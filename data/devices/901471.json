@@ -1,0 +1,163 @@
+{
+  "model": "901471",
+  "file": "901471.md",
+  "vendor": "EGLO",
+  "description": "ROVITO-Z ceiling light",
+  "image": "https://www.zigbee2mqtt.io/images/devices/901471.png",
+  "added_at": "2026-05-31T19:17:58",
+  "exposes_summary": "light (state, brightness, color_temp, color_temp_startup, color_xy, color_hs), effect, power_on_behavior, action",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 153,
+          "value_max": 370,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_temp_startup",
+          "base": "color_temp_startup",
+          "value_min": 153,
+          "value_max": 370,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warmest",
+            "previous"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_xy",
+          "base": "color_xy",
+          "readable": true
+        },
+        {
+          "property": "color_hs",
+          "base": "color_hs",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect",
+        "colorloop",
+        "stop_colorloop"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "toggle",
+        "brightness_move_to_level",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_stop",
+        "color_temperature_move_stop",
+        "color_temperature_move_up",
+        "color_temperature_move_down",
+        "color_temperature_step_up",
+        "color_temperature_step_down",
+        "enhanced_move_to_hue_and_saturation",
+        "move_to_hue_and_saturation",
+        "color_hue_step_up",
+        "color_hue_step_down",
+        "color_saturation_step_up",
+        "color_saturation_step_down",
+        "color_loop_set",
+        "color_temperature_move",
+        "color_move",
+        "hue_move",
+        "hue_stop",
+        "move_to_saturation",
+        "move_to_hue",
+        "stop_move_step"
+      ]
+    }
+  ],
+  "warnings": []
+}

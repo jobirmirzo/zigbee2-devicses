@@ -1,0 +1,203 @@
+{
+  "model": "MIR-HE200-TY",
+  "file": "MIR-HE200-TY.md",
+  "vendor": "Tuya",
+  "description": "Human presence sensor with fall function",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MIR-HE200-TY.png",
+  "added_at": "2021-10-30T12:58:50",
+  "exposes_summary": "illuminance, presence, occupancy, motion_speed, motion_direction, radar_sensitivity, radar_scene, tumble_switch, fall_sensitivity, tumble_alarm_time, fall_down_status, static_dwell_alarm",
+  "exposes": [
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Motion speed",
+      "type": "numeric",
+      "property": "motion_speed",
+      "base": "motion_speed",
+      "endpoint": null,
+      "description": "Speed of movement.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Motion direction",
+      "type": "enum",
+      "property": "motion_direction",
+      "base": "motion_direction",
+      "endpoint": null,
+      "description": "direction of movement from the point of view of the radar.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "standing_still",
+        "moving_forward",
+        "moving_backward"
+      ]
+    },
+    {
+      "name": "Radar sensitivity",
+      "type": "numeric",
+      "property": "radar_sensitivity",
+      "base": "radar_sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity of the radar.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Radar scene",
+      "type": "enum",
+      "property": "radar_scene",
+      "base": "radar_scene",
+      "endpoint": null,
+      "description": "Presets for sensitivity for presence and movement.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "default",
+        "area",
+        "toilet",
+        "bedroom",
+        "parlour",
+        "office",
+        "hotel"
+      ]
+    },
+    {
+      "name": "Tumble switch",
+      "type": "enum",
+      "property": "tumble_switch",
+      "base": "tumble_switch",
+      "endpoint": null,
+      "description": "Tumble status switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "ON",
+        "OFF"
+      ]
+    },
+    {
+      "name": "Fall sensitivity",
+      "type": "numeric",
+      "property": "fall_sensitivity",
+      "base": "fall_sensitivity",
+      "endpoint": null,
+      "description": "Fall sensitivity of the radar.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10
+    },
+    {
+      "name": "Tumble alarm time",
+      "type": "numeric",
+      "property": "tumble_alarm_time",
+      "base": "tumble_alarm_time",
+      "endpoint": null,
+      "description": "Tumble alarm time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 5,
+      "unit": "min"
+    },
+    {
+      "name": "Fall down status",
+      "type": "enum",
+      "property": "fall_down_status",
+      "base": "fall_down_status",
+      "endpoint": null,
+      "description": "Fall down status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "maybe_fall",
+        "fall"
+      ]
+    },
+    {
+      "name": "Static dwell alarm",
+      "type": "text",
+      "property": "static_dwell_alarm",
+      "base": "static_dwell_alarm",
+      "endpoint": null,
+      "description": "Static dwell alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

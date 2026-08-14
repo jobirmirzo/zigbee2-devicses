@@ -1,0 +1,199 @@
+{
+  "model": "ZS-302Z",
+  "file": "ZS-302Z.md",
+  "vendor": "Arteco",
+  "description": "Soil moisture sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZS-302Z.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "water_warning, battery_state, soil_moisture, temperature, humidity, illuminance, soil_sampling, soil_calibration, humidity_calibration, illuminance_calibration, temperature_calibration, soil_warning",
+  "exposes": [
+    {
+      "name": "Water warning",
+      "type": "enum",
+      "property": "water_warning",
+      "base": "water_warning",
+      "endpoint": null,
+      "description": "Water shortage warning.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "alarm"
+      ]
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "low: 16.67%, middle:16.68-83.33%, high: 83.34-100%.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "middle",
+        "high"
+      ]
+    },
+    {
+      "name": "Soil moisture",
+      "type": "numeric",
+      "property": "soil_moisture",
+      "base": "soil_moisture",
+      "endpoint": null,
+      "description": "Measured soil moisture value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Soil sampling",
+      "type": "numeric",
+      "property": "soil_sampling",
+      "base": "soil_sampling",
+      "endpoint": null,
+      "description": "Soil humidity sampling.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Soil calibration",
+      "type": "numeric",
+      "property": "soil_calibration",
+      "base": "soil_calibration",
+      "endpoint": null,
+      "description": "Soil Humidity calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -30,
+      "value_max": 30,
+      "unit": "%"
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Humidity calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -30,
+      "value_max": 30,
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance calibration",
+      "type": "numeric",
+      "property": "illuminance_calibration",
+      "base": "illuminance_calibration",
+      "endpoint": null,
+      "description": "Illuminance calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -1000,
+      "value_max": 1000,
+      "unit": "lx"
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Temperature calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -2,
+      "value_max": 2,
+      "unit": "°C"
+    },
+    {
+      "name": "Soil warning",
+      "type": "numeric",
+      "property": "soil_warning",
+      "base": "soil_warning",
+      "endpoint": null,
+      "description": "Soil water shortage humidity value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

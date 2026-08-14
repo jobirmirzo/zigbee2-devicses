@@ -1,0 +1,27 @@
+{
+  "model": "TS0601_water_sensor",
+  "file": "TS0601_water_sensor.md",
+  "vendor": "Tuya",
+  "description": "Water leak sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_water_sensor.png",
+  "added_at": "2021-09-01T18:11:17Z",
+  "exposes_summary": "water_leak",
+  "exposes": [
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

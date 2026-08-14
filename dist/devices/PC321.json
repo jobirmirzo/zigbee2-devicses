@@ -1,0 +1,392 @@
+{
+  "model": "PC321",
+  "file": "PC321.md",
+  "vendor": "OWON",
+  "description": "3-Phase clamp power meter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/PC321.png",
+  "added_at": "2022-07-01T08:15:09",
+  "exposes_summary": "current, power, power_reactive, energy, reactive_energy, voltage_l1, voltage_l2, voltage_l3, current_l1, current_l2, current_l3, energy_l1, energy_l2, energy_l3, reactive_energy_l1, reactive_energy_l2, reactive_energy_l3, power_l1, power_l2, power_l3, reactive_power_l1, reactive_power_l2, reactive_power_l3, power_factor_l1, power_factor_l2, power_factor_l3, clear_metering",
+  "exposes": [
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power reactive",
+      "type": "numeric",
+      "property": "power_reactive",
+      "base": "power_reactive",
+      "endpoint": null,
+      "description": "Instantaneous measured reactive power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VAR"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Reactive energy",
+      "type": "numeric",
+      "property": "reactive_energy",
+      "base": "reactive_energy",
+      "endpoint": null,
+      "description": "Reactive energy for all phase.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kVArh"
+    },
+    {
+      "name": "Voltage l1",
+      "type": "numeric",
+      "property": "voltage_l1",
+      "base": "voltage_l1",
+      "endpoint": null,
+      "description": "Phase 1 voltage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage l2",
+      "type": "numeric",
+      "property": "voltage_l2",
+      "base": "voltage_l2",
+      "endpoint": null,
+      "description": "Phase 2 voltage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage l3",
+      "type": "numeric",
+      "property": "voltage_l3",
+      "base": "voltage_l3",
+      "endpoint": null,
+      "description": "Phase 3 voltage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current l1",
+      "type": "numeric",
+      "property": "current_l1",
+      "base": "current_l1",
+      "endpoint": null,
+      "description": "Phase 1 current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current l2",
+      "type": "numeric",
+      "property": "current_l2",
+      "base": "current_l2",
+      "endpoint": null,
+      "description": "Phase 2 current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current l3",
+      "type": "numeric",
+      "property": "current_l3",
+      "base": "current_l3",
+      "endpoint": null,
+      "description": "Phase 3 current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy l1",
+      "type": "numeric",
+      "property": "energy_l1",
+      "base": "energy_l1",
+      "endpoint": null,
+      "description": "Phase 1 energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy l2",
+      "type": "numeric",
+      "property": "energy_l2",
+      "base": "energy_l2",
+      "endpoint": null,
+      "description": "Phase 2 energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy l3",
+      "type": "numeric",
+      "property": "energy_l3",
+      "base": "energy_l3",
+      "endpoint": null,
+      "description": "Phase 3 energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Reactive energy l1",
+      "type": "numeric",
+      "property": "reactive_energy_l1",
+      "base": "reactive_energy_l1",
+      "endpoint": null,
+      "description": "Phase 1 reactive energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kVArh"
+    },
+    {
+      "name": "Reactive energy l2",
+      "type": "numeric",
+      "property": "reactive_energy_l2",
+      "base": "reactive_energy_l2",
+      "endpoint": null,
+      "description": "Phase 2 reactive energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kVArh"
+    },
+    {
+      "name": "Reactive energy l3",
+      "type": "numeric",
+      "property": "reactive_energy_l3",
+      "base": "reactive_energy_l3",
+      "endpoint": null,
+      "description": "Phase 3 reactive energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kVArh"
+    },
+    {
+      "name": "Power l1",
+      "type": "numeric",
+      "property": "power_l1",
+      "base": "power_l1",
+      "endpoint": null,
+      "description": "Phase 1 power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power l2",
+      "type": "numeric",
+      "property": "power_l2",
+      "base": "power_l2",
+      "endpoint": null,
+      "description": "Phase 2 power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power l3",
+      "type": "numeric",
+      "property": "power_l3",
+      "base": "power_l3",
+      "endpoint": null,
+      "description": "Phase 3 power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Reactive power l1",
+      "type": "numeric",
+      "property": "reactive_power_l1",
+      "base": "reactive_power_l1",
+      "endpoint": null,
+      "description": "Phase 1 reactive power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VAr"
+    },
+    {
+      "name": "Reactive power l2",
+      "type": "numeric",
+      "property": "reactive_power_l2",
+      "base": "reactive_power_l2",
+      "endpoint": null,
+      "description": "Phase 2 reactive power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VAr"
+    },
+    {
+      "name": "Reactive power l3",
+      "type": "numeric",
+      "property": "reactive_power_l3",
+      "base": "reactive_power_l3",
+      "endpoint": null,
+      "description": "Phase 3 reactive power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VAr"
+    },
+    {
+      "name": "Power factor l1",
+      "type": "numeric",
+      "property": "power_factor_l1",
+      "base": "power_factor_l1",
+      "endpoint": null,
+      "description": "Phase 1 power factor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Power factor l2",
+      "type": "numeric",
+      "property": "power_factor_l2",
+      "base": "power_factor_l2",
+      "endpoint": null,
+      "description": "Phase 2 power factor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Power factor l3",
+      "type": "numeric",
+      "property": "power_factor_l3",
+      "base": "power_factor_l3",
+      "endpoint": null,
+      "description": "Phase 3 power factor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Clear metering",
+      "type": "enum",
+      "property": "clear_metering",
+      "base": "clear_metering",
+      "endpoint": null,
+      "description": "Clear measurement data.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "clear"
+      ]
+    }
+  ],
+  "warnings": []
+}

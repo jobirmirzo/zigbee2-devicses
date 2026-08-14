@@ -1,0 +1,143 @@
+{
+  "model": "HS2AQ-EM",
+  "file": "HS2AQ-EM.md",
+  "vendor": "Heiman",
+  "description": "Air quality monitor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS2AQ-EM.png",
+  "added_at": "2020-09-30T20:52:56Z",
+  "exposes_summary": "battery, temperature, humidity, pm25, hcho, voc, aqi, pm10, battery_state",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "PM25",
+      "type": "numeric",
+      "property": "pm25",
+      "base": "pm25",
+      "endpoint": null,
+      "description": "Measured PM2.5 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "HCHO",
+      "type": "numeric",
+      "property": "hcho",
+      "base": "hcho",
+      "endpoint": null,
+      "description": "Measured HCHO value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mg/m³"
+    },
+    {
+      "name": "VOC",
+      "type": "numeric",
+      "property": "voc",
+      "base": "voc",
+      "endpoint": null,
+      "description": "Measured VOC value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Aqi",
+      "type": "numeric",
+      "property": "aqi",
+      "base": "aqi",
+      "endpoint": null,
+      "description": "Air quality index.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "PM10",
+      "type": "numeric",
+      "property": "pm10",
+      "base": "pm10",
+      "endpoint": null,
+      "description": "Measured PM10 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "not_charging",
+        "charging",
+        "charged"
+      ]
+    }
+  ],
+  "warnings": []
+}

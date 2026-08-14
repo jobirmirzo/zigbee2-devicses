@@ -1,0 +1,332 @@
+{
+  "model": "TRV801",
+  "file": "TRV801.md",
+  "vendor": "Moes",
+  "description": "Thermostatic radiator valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TRV801.png",
+  "added_at": "2025-01-03T20:11:48",
+  "exposes_summary": "battery, child_lock, max_temperature, min_temperature, position, switch (state), window, alarm_switch, climate (local_temperature, current_heating_setpoint, local_temperature_calibration, preset, system_mode, running_state), schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, display_brightness, screen_orientation, mode",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Max temperature",
+      "type": "numeric",
+      "property": "max_temperature",
+      "base": "max_temperature",
+      "endpoint": null,
+      "description": "Maximum temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 15,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Min temperature",
+      "type": "numeric",
+      "property": "min_temperature",
+      "base": "min_temperature",
+      "endpoint": null,
+      "description": "Minimum temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 15,
+      "unit": "°C"
+    },
+    {
+      "name": "Position",
+      "type": "numeric",
+      "property": "position",
+      "base": "position",
+      "endpoint": null,
+      "description": "Position.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Window detection",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "window_detection",
+          "base": "window_detection",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Window",
+      "type": "binary",
+      "property": "window",
+      "base": "window",
+      "endpoint": null,
+      "description": "Window status closed or open .",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "OPEN",
+      "value_off": "CLOSE"
+    },
+    {
+      "name": "Alarm switch",
+      "type": "binary",
+      "property": "alarm_switch",
+      "base": "alarm_switch",
+      "endpoint": null,
+      "description": "Thermostat in error state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "auto",
+            "manual",
+            "off",
+            "on"
+          ],
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "readable": false
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Schedule monday",
+      "type": "text",
+      "property": "schedule_monday",
+      "base": "schedule_monday",
+      "endpoint": null,
+      "description": "Schedule for monday, example: \"HH:MM/C HH:MM/C HH:MM/C HH:MM/C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule tuesday",
+      "type": "text",
+      "property": "schedule_tuesday",
+      "base": "schedule_tuesday",
+      "endpoint": null,
+      "description": "Schedule for tuesday, example: \"HH:MM/C HH:MM/C HH:MM/C HH:MM/C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule wednesday",
+      "type": "text",
+      "property": "schedule_wednesday",
+      "base": "schedule_wednesday",
+      "endpoint": null,
+      "description": "Schedule for wednesday, example: \"HH:MM/C HH:MM/C HH:MM/C HH:MM/C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule thursday",
+      "type": "text",
+      "property": "schedule_thursday",
+      "base": "schedule_thursday",
+      "endpoint": null,
+      "description": "Schedule for thursday, example: \"HH:MM/C HH:MM/C HH:MM/C HH:MM/C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule friday",
+      "type": "text",
+      "property": "schedule_friday",
+      "base": "schedule_friday",
+      "endpoint": null,
+      "description": "Schedule for friday, example: \"HH:MM/C HH:MM/C HH:MM/C HH:MM/C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule saturday",
+      "type": "text",
+      "property": "schedule_saturday",
+      "base": "schedule_saturday",
+      "endpoint": null,
+      "description": "Schedule for saturday, example: \"HH:MM/C HH:MM/C HH:MM/C HH:MM/C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule sunday",
+      "type": "text",
+      "property": "schedule_sunday",
+      "base": "schedule_sunday",
+      "endpoint": null,
+      "description": "Schedule for sunday, example: \"HH:MM/C HH:MM/C HH:MM/C HH:MM/C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Display brightness",
+      "type": "enum",
+      "property": "display_brightness",
+      "base": "display_brightness",
+      "endpoint": null,
+      "description": "Display brightness.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    {
+      "name": "Screen orientation",
+      "type": "enum",
+      "property": "screen_orientation",
+      "base": "screen_orientation",
+      "endpoint": null,
+      "description": "Screen orientation.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "up",
+        "right",
+        "down",
+        "left"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Hysteresis - comfort > switches off/on exactly at reached temperature with valve smooth from 0 to 100%, eco > 0.5 degrees above or below, valve either 0 or 100%.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "comfort",
+        "eco"
+      ]
+    }
+  ],
+  "warnings": []
+}

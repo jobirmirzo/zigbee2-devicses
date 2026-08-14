@@ -1,0 +1,130 @@
+{
+  "model": "067776A",
+  "file": "067776A.md",
+  "vendor": "Legrand",
+  "description": "Netatmo wired shutter switch with level control (NLLV)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/067776A.png",
+  "added_at": "2023-10-03T20:27:32Z",
+  "exposes_summary": "cover (state, position), action, identify, led_in_dark, led_if_on, calibration_mode",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "identify",
+        "open",
+        "close",
+        "stop",
+        "moving",
+        "stopped"
+      ]
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Blinks the built-in LED to make it easier to identify the device.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Led in dark",
+      "type": "binary",
+      "property": "led_in_dark",
+      "base": "led_in_dark",
+      "endpoint": null,
+      "description": "Enables the built-in LED allowing to see the switch in the dark.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Led if on",
+      "type": "binary",
+      "property": "led_if_on",
+      "base": "led_if_on",
+      "endpoint": null,
+      "description": "Enables the LED on activity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Calibration mode",
+      "type": "enum",
+      "property": "calibration_mode",
+      "base": "calibration_mode",
+      "endpoint": null,
+      "description": "Defines the calibration mode of the switch. (Caution: Changing modes requires a recalibration of the shutter switch!).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "classic_nllv",
+        "specific_nllv",
+        "up_down_stop",
+        "temporal",
+        "venetian_bso"
+      ]
+    }
+  ],
+  "warnings": []
+}

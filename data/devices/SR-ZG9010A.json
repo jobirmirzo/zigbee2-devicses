@@ -1,0 +1,43 @@
+{
+  "model": "SR-ZG9010A",
+  "file": "SR-ZG9010A.md",
+  "vendor": "Sunricher",
+  "description": "Door windows sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SR-ZG9010A.png",
+  "added_at": "2023-01-01T08:59:10",
+  "exposes_summary": "contact, battery",
+  "exposes": [
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates if the contact is closed (= true) or open (= false).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

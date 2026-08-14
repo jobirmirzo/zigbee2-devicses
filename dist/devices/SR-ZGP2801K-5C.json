@@ -1,0 +1,40 @@
+{
+  "model": "SR-ZGP2801K-5C",
+  "file": "SR-ZGP2801K-5C.md",
+  "vendor": "Sunricher",
+  "description": "Pushbutton transmitter module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SR-ZGP2801K-5C.png",
+  "added_at": "2022-07-01T08:15:09",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "press_on",
+        "press_off",
+        "press_high",
+        "press_low",
+        "hold_high",
+        "hold_low",
+        "high_low_release",
+        "cw_ww_release",
+        "cw_dec_ww_inc",
+        "ww_inc_cw_dec",
+        "r_g_b",
+        "b_g_r",
+        "rgb_release"
+      ]
+    }
+  ],
+  "warnings": []
+}

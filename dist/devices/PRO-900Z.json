@@ -1,0 +1,360 @@
+{
+  "model": "PRO-900Z",
+  "file": "PRO-900Z.md",
+  "vendor": "ElectSmart",
+  "description": "Thermostat for electric floor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/PRO-900Z.png",
+  "added_at": "2024-09-01T12:36:44",
+  "exposes_summary": "child_lock, eco_mode, eco_temperature, climate (system_mode, preset, current_heating_setpoint, local_temperature, local_temperature_calibration, running_state), deadzone_temperature, min_temperature, max_temperature, min_temperature_limit, max_temperature_limit, sensor, external_temperature_input, brightness, display_brightness, schedule_monday, schedule_tuesday, schedule_wednesday, schedule_thursday, schedule_friday, schedule_saturday, schedule_sunday, factory_reset",
+  "exposes": [
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "ECO mode",
+      "type": "binary",
+      "property": "eco_mode",
+      "base": "eco_mode",
+      "endpoint": null,
+      "description": "Default: Off.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "OFF",
+      "value_off": "ON"
+    },
+    {
+      "name": "Eco temperature",
+      "type": "numeric",
+      "property": "eco_temperature",
+      "base": "eco_temperature",
+      "endpoint": null,
+      "description": "Max temperature in ECO mode. Default: 20.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": false
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "manual",
+            "auto"
+          ],
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Deadzone temperature",
+      "type": "numeric",
+      "property": "deadzone_temperature",
+      "base": "deadzone_temperature",
+      "endpoint": null,
+      "description": "Hysteresis. Default: 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 5,
+      "unit": "°C"
+    },
+    {
+      "name": "Min temperature",
+      "type": "numeric",
+      "property": "min_temperature",
+      "base": "min_temperature",
+      "endpoint": null,
+      "description": "Default: 5.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 15,
+      "unit": "°C"
+    },
+    {
+      "name": "Max temperature",
+      "type": "numeric",
+      "property": "max_temperature",
+      "base": "max_temperature",
+      "endpoint": null,
+      "description": "Default: 35.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 15,
+      "value_max": 45,
+      "unit": "°C"
+    },
+    {
+      "name": "Low temperature protection",
+      "type": "numeric",
+      "property": "min_temperature_limit",
+      "base": "min_temperature_limit",
+      "endpoint": null,
+      "description": "Default: 0.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "°C"
+    },
+    {
+      "name": "High temperature protection",
+      "type": "numeric",
+      "property": "max_temperature_limit",
+      "base": "max_temperature_limit",
+      "endpoint": null,
+      "description": "Default: 45.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 25,
+      "value_max": 70,
+      "unit": "°C"
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor",
+      "base": "sensor",
+      "endpoint": null,
+      "description": "Choose which sensor to use. Default: AL.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "IN",
+        "OU",
+        "AL"
+      ]
+    },
+    {
+      "name": "Floor temperature",
+      "type": "numeric",
+      "property": "external_temperature_input",
+      "base": "external_temperature_input",
+      "endpoint": null,
+      "description": "Temperature from floor sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Screen brightness 06:00 - 22:00",
+      "type": "numeric",
+      "property": "brightness",
+      "base": "brightness",
+      "endpoint": null,
+      "description": "0 - on for 10 seconds. Default: 6.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 8
+    },
+    {
+      "name": "Screen brightness 22:00 - 06:00",
+      "type": "numeric",
+      "property": "display_brightness",
+      "base": "display_brightness",
+      "endpoint": null,
+      "description": "0 - on for 10 seconds. Default: 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 8
+    },
+    {
+      "name": "Schedule for monday",
+      "type": "text",
+      "property": "schedule_monday",
+      "base": "schedule_monday",
+      "endpoint": null,
+      "description": "Default: 06:00/20.0 11:30/20.0 13:30/20.0 17:30/20.0.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule for tuesday",
+      "type": "text",
+      "property": "schedule_tuesday",
+      "base": "schedule_tuesday",
+      "endpoint": null,
+      "description": "Default: 06:00/20.0 11:30/20.0 13:30/20.0 17:30/20.0.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule for wednesday",
+      "type": "text",
+      "property": "schedule_wednesday",
+      "base": "schedule_wednesday",
+      "endpoint": null,
+      "description": "Default: 06:00/20.0 11:30/20.0 13:30/20.0 17:30/20.0.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule for thursday",
+      "type": "text",
+      "property": "schedule_thursday",
+      "base": "schedule_thursday",
+      "endpoint": null,
+      "description": "Default: 06:00/20.0 11:30/20.0 13:30/20.0 17:30/20.0.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule for friday",
+      "type": "text",
+      "property": "schedule_friday",
+      "base": "schedule_friday",
+      "endpoint": null,
+      "description": "Default: 06:00/20.0 11:30/20.0 13:30/20.0 17:30/20.0.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule for saturday",
+      "type": "text",
+      "property": "schedule_saturday",
+      "base": "schedule_saturday",
+      "endpoint": null,
+      "description": "Default: 06:00/20.0 11:30/20.0 13:30/20.0 17:30/20.0.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule for sunday",
+      "type": "text",
+      "property": "schedule_sunday",
+      "base": "schedule_sunday",
+      "endpoint": null,
+      "description": "Default: 06:00/20.0 11:30/20.0 13:30/20.0 17:30/20.0.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Factory reset",
+      "type": "enum",
+      "property": "factory_reset",
+      "base": "factory_reset",
+      "endpoint": null,
+      "description": "Reset all settings to factory ones.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "factory reset"
+      ]
+    }
+  ],
+  "warnings": []
+}

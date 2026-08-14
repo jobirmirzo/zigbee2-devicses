@@ -1,0 +1,140 @@
+{
+  "model": "TS0601_cover_4",
+  "file": "TS0601_cover_4.md",
+  "vendor": "Tuya",
+  "description": "Cover",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_cover_4.png",
+  "added_at": "2023-04-27T17:39:26",
+  "exposes_summary": "cover (state, position), motor_direction, motor_speed, opening_mode, set_upper_limit, set_bottom_limit, factory_reset",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Motor direction",
+      "type": "enum",
+      "property": "motor_direction",
+      "base": "motor_direction",
+      "endpoint": null,
+      "description": "Set the motor direction.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "normal",
+        "reversed"
+      ]
+    },
+    {
+      "name": "Motor speed",
+      "type": "numeric",
+      "property": "motor_speed",
+      "base": "motor_speed",
+      "endpoint": null,
+      "description": "Motor speed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255,
+      "unit": "rpm"
+    },
+    {
+      "name": "Opening mode",
+      "type": "enum",
+      "property": "opening_mode",
+      "base": "opening_mode",
+      "endpoint": null,
+      "description": "Opening mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "tilt",
+        "lift"
+      ]
+    },
+    {
+      "name": "Set upper limit",
+      "type": "enum",
+      "property": "set_upper_limit",
+      "base": "set_upper_limit",
+      "endpoint": null,
+      "description": "Set the upper limit, to reset limits use factory_reset.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SET"
+      ]
+    },
+    {
+      "name": "Set bottom limit",
+      "type": "enum",
+      "property": "set_bottom_limit",
+      "base": "set_bottom_limit",
+      "endpoint": null,
+      "description": "Set the bottom limit, to reset limits use factory_reset.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SET"
+      ]
+    },
+    {
+      "name": "Factory reset",
+      "type": "binary",
+      "property": "factory_reset",
+      "base": "factory_reset",
+      "endpoint": null,
+      "description": "Factory reset the device.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

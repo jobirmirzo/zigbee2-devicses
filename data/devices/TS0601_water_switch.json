@@ -1,0 +1,158 @@
+{
+  "model": "TS0601_water_switch",
+  "file": "TS0601_water_switch.md",
+  "vendor": "Tuya",
+  "description": "Dual water valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_water_switch.png",
+  "added_at": "2025-06-01T17:54:42",
+  "exposes_summary": "valve_status, switch (state), countdown, valve_duration, battery",
+  "exposes": [
+    {
+      "name": "Valve status",
+      "type": "enum",
+      "property": "valve_status_l1",
+      "base": "valve_status",
+      "endpoint": "l1",
+      "description": "Valve 1 status (manual, auto, idle).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "auto",
+        "idle"
+      ]
+    },
+    {
+      "name": "Valve status",
+      "type": "enum",
+      "property": "valve_status_l2",
+      "base": "valve_status",
+      "endpoint": "l2",
+      "description": "Valve 2 status (manual, auto, idle).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "auto",
+        "idle"
+      ]
+    },
+    {
+      "name": "Valve 1",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Valve 2",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_l1",
+      "base": "countdown",
+      "endpoint": "l1",
+      "description": "Valve 1 countdown in minutes.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1440,
+      "unit": "min"
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_l2",
+      "base": "countdown",
+      "endpoint": "l2",
+      "description": "Valve 2 countdown in minutes.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1440,
+      "unit": "min"
+    },
+    {
+      "name": "Valve duration",
+      "type": "numeric",
+      "property": "valve_duration_l1",
+      "base": "valve_duration",
+      "endpoint": "l1",
+      "description": "Valve 1 irrigation last duration in seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Valve duration",
+      "type": "numeric",
+      "property": "valve_duration_l2",
+      "base": "valve_duration",
+      "endpoint": "l2",
+      "description": "Valve 2 irrigation last duration in seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

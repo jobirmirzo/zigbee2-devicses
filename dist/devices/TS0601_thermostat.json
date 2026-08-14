@@ -1,0 +1,371 @@
+{
+  "model": "TS0601_thermostat",
+  "file": "TS0601_thermostat.md",
+  "vendor": "Tuya",
+  "description": "Radiator valve with thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_thermostat.png",
+  "added_at": "2021-10-30T12:58:50",
+  "exposes_summary": "child_lock, switch (state), window_open, battery_low, position, climate (current_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, preset, running_state), away_preset_days, boost_time, comfort_temperature, eco_temperature, force, max_temperature, min_temperature, away_preset_temperature, week, workdays_schedule, holidays_schedule",
+  "exposes": [
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Window detection",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "window_detection",
+          "base": "window_detection",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Window open",
+      "type": "binary",
+      "property": "window_open",
+      "base": "window_open",
+      "endpoint": null,
+      "description": "Window open?.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Valve detection",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "valve_detection",
+          "base": "valve_detection",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Position",
+      "type": "numeric",
+      "property": "position",
+      "base": "position",
+      "endpoint": null,
+      "description": "Position.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "heat",
+            "auto",
+            "off"
+          ],
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "schedule",
+            "manual",
+            "boost",
+            "complex",
+            "comfort",
+            "eco",
+            "away"
+          ],
+          "readable": false
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Auto lock",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "auto_lock",
+          "base": "auto_lock",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Away mode",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "away_mode",
+          "base": "away_mode",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Away preset days",
+      "type": "numeric",
+      "property": "away_preset_days",
+      "base": "away_preset_days",
+      "endpoint": null,
+      "description": "Away preset days.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Boost time",
+      "type": "numeric",
+      "property": "boost_time",
+      "base": "boost_time",
+      "endpoint": null,
+      "description": "Boost time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 900,
+      "unit": "s"
+    },
+    {
+      "name": "Comfort temperature",
+      "type": "numeric",
+      "property": "comfort_temperature",
+      "base": "comfort_temperature",
+      "endpoint": null,
+      "description": "Comfort temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Eco temperature",
+      "type": "numeric",
+      "property": "eco_temperature",
+      "base": "eco_temperature",
+      "endpoint": null,
+      "description": "Eco temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Force",
+      "type": "enum",
+      "property": "force",
+      "base": "force",
+      "endpoint": null,
+      "description": "Force the valve position.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "normal",
+        "open",
+        "close"
+      ]
+    },
+    {
+      "name": "Max temperature",
+      "type": "numeric",
+      "property": "max_temperature",
+      "base": "max_temperature",
+      "endpoint": null,
+      "description": "Maximum temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 16,
+      "value_max": 70,
+      "unit": "°C"
+    },
+    {
+      "name": "Min temperature",
+      "type": "numeric",
+      "property": "min_temperature",
+      "base": "min_temperature",
+      "endpoint": null,
+      "description": "Minimum temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 15,
+      "unit": "°C"
+    },
+    {
+      "name": "Away preset temperature",
+      "type": "numeric",
+      "property": "away_preset_temperature",
+      "base": "away_preset_temperature",
+      "endpoint": null,
+      "description": "Away preset temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -10,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Week",
+      "type": "enum",
+      "property": "week",
+      "base": "week",
+      "endpoint": null,
+      "description": "Week format user for schedule.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "5+2",
+        "6+1",
+        "7"
+      ]
+    },
+    {
+      "name": "Workdays schedule",
+      "type": "text",
+      "property": "workdays_schedule",
+      "base": "workdays_schedule",
+      "endpoint": null,
+      "description": "Workdays schedule, 6 entries max, example: \"00:20/5°C 01:20/5°C 6:59/15°C 18:00/5°C 20:00/5°C 23:30/5°C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Holidays schedule",
+      "type": "text",
+      "property": "holidays_schedule",
+      "base": "holidays_schedule",
+      "endpoint": null,
+      "description": "Holidays schedule, 6 entries max, example: \"00:20/5°C 01:20/5°C 6:59/15°C 18:00/5°C 20:00/5°C 23:30/5°C\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    }
+  ],
+  "warnings": []
+}

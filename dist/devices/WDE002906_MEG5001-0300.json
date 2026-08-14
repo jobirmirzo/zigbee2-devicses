@@ -1,0 +1,119 @@
+{
+  "model": "WDE002906/MEG5001-0300",
+  "file": "WDE002906_MEG5001-0300.md",
+  "vendor": "Schneider Electric",
+  "description": "Wiser wireless switch 1-gang or 2-gang",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WDE002906-MEG5001-0300.png",
+  "added_at": "2024-04-29T19:24:38",
+  "exposes_summary": "battery, switch_actions, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions_right",
+      "base": "switch_actions",
+      "endpoint": "right",
+      "description": "Set Switch Action for right Button..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "light",
+        "light_opposite",
+        "dimmer",
+        "dimmer_opposite",
+        "standard_shutter",
+        "standard_shutter_opposite",
+        "schneider_shutter",
+        "schneider_shutter_opposite",
+        "scene",
+        "toggle_light",
+        "toggle_dimmer",
+        "alternate_light",
+        "alternate_dimmer",
+        "not_used"
+      ]
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions_left",
+      "base": "switch_actions",
+      "endpoint": "left",
+      "description": "Set Switch Action for left Button..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "light",
+        "light_opposite",
+        "dimmer",
+        "dimmer_opposite",
+        "standard_shutter",
+        "standard_shutter_opposite",
+        "schneider_shutter",
+        "schneider_shutter_opposite",
+        "scene",
+        "toggle_light",
+        "toggle_dimmer",
+        "alternate_light",
+        "alternate_dimmer",
+        "not_used"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_right",
+        "on_left",
+        "off_right",
+        "off_left",
+        "toggle_right",
+        "toggle_left",
+        "brightness_move_to_level_right",
+        "brightness_move_to_level_left",
+        "brightness_move_up_right",
+        "brightness_move_up_left",
+        "brightness_move_down_right",
+        "brightness_move_down_left",
+        "brightness_step_up_right",
+        "brightness_step_up_left",
+        "brightness_step_down_right",
+        "brightness_step_down_left",
+        "brightness_stop_right",
+        "brightness_stop_left"
+      ]
+    }
+  ],
+  "warnings": []
+}

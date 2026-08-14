@@ -1,0 +1,38 @@
+{
+  "model": "ZB-TTS01",
+  "file": "ZB-TTS01.md",
+  "vendor": "easyiot",
+  "description": "TTS Converter for Simplified Chinese GB2312 encoded text",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZB-TTS01.png",
+  "added_at": "2024-01-11T16:23:11Z",
+  "exposes_summary": "last_received_status, send_tts",
+  "exposes": [
+    {
+      "name": "Last received status",
+      "type": "text",
+      "property": "last_received_status",
+      "base": "last_received_status",
+      "endpoint": null,
+      "description": "status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Send tts",
+      "type": "text",
+      "property": "send_tts",
+      "base": "send_tts",
+      "endpoint": null,
+      "description": "Please enter text.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      }
+    }
+  ],
+  "warnings": []
+}

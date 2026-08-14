@@ -1,0 +1,133 @@
+{
+  "model": "RT_ZCZ03Z",
+  "file": "RT_ZCZ03Z.md",
+  "vendor": "Tuya",
+  "description": "Human presence sensor 24G",
+  "image": "https://www.zigbee2mqtt.io/images/devices/RT_ZCZ03Z.png",
+  "added_at": "2024-08-01T18:23:40",
+  "exposes_summary": "illuminance, presence, detection_distance_max, detection_distance_min, target_distance, fading_time, presence_sensitivity, indicator",
+  "exposes": [
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Detection distance max",
+      "type": "numeric",
+      "property": "detection_distance_max",
+      "base": "detection_distance_max",
+      "endpoint": null,
+      "description": "Max detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 840,
+      "unit": "cm"
+    },
+    {
+      "name": "Detection distance min",
+      "type": "numeric",
+      "property": "detection_distance_min",
+      "base": "detection_distance_min",
+      "endpoint": null,
+      "description": "Min detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 840,
+      "unit": "cm"
+    },
+    {
+      "name": "Target distance",
+      "type": "numeric",
+      "property": "target_distance",
+      "base": "target_distance",
+      "endpoint": null,
+      "description": "Distance to target.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "cm"
+    },
+    {
+      "name": "Fading time",
+      "type": "numeric",
+      "property": "fading_time",
+      "base": "fading_time",
+      "endpoint": null,
+      "description": "Delay time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 59,
+      "unit": "s"
+    },
+    {
+      "name": "Presence sensitivity",
+      "type": "numeric",
+      "property": "presence_sensitivity",
+      "base": "presence_sensitivity",
+      "endpoint": null,
+      "description": "Presence sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10
+    },
+    {
+      "name": "Indicator",
+      "type": "binary",
+      "property": "indicator",
+      "base": "indicator",
+      "endpoint": null,
+      "description": "LED Indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

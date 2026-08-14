@@ -1,0 +1,120 @@
+{
+  "model": "ZSS-QY-SSD-A-EN",
+  "file": "ZSS-QY-SSD-A-EN.md",
+  "vendor": "Tuya",
+  "description": "Smart smoke alarm",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZSS-QY-SSD-A-EN.png",
+  "added_at": "2023-06-27T19:46:16",
+  "exposes_summary": "smoke, fault_alarm, battery_state, battery, silence, self_test, smoke_concentration",
+  "exposes": [
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Fault alarm",
+      "type": "binary",
+      "property": "fault_alarm",
+      "base": "fault_alarm",
+      "endpoint": null,
+      "description": "Indicates whether a fault was detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "State of the battery.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Silence",
+      "type": "binary",
+      "property": "silence",
+      "base": "silence",
+      "endpoint": null,
+      "description": "Silence the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Self test",
+      "type": "binary",
+      "property": "self_test",
+      "base": "self_test",
+      "endpoint": null,
+      "description": "Indicates whether the device is being self-tested.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Smoke concentration",
+      "type": "numeric",
+      "property": "smoke_concentration",
+      "base": "smoke_concentration",
+      "endpoint": null,
+      "description": "Parts per million of smoke detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,74 @@
+{
+  "model": "1811680",
+  "file": "1811680.md",
+  "vendor": "SOMFY",
+  "description": "Zigbee opening sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/1811680.png",
+  "added_at": "2024-09-07T11:16:42",
+  "exposes_summary": "identify, alarm_1, battery_low, battery",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Alarm 1",
+      "type": "binary",
+      "property": "alarm_1",
+      "base": "alarm_1",
+      "endpoint": null,
+      "description": "Indicates whether IAS Zone alarm 1 is active.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

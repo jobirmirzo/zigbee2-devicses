@@ -1,0 +1,81 @@
+{
+  "model": "SZW08",
+  "file": "SZW08.md",
+  "vendor": "Lincukoo",
+  "description": "Smart water leakage/lack alarm sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SZW08.png",
+  "added_at": "2025-05-01T17:59:09",
+  "exposes_summary": "alarm_status, mode, alarm_ringtone, battery",
+  "exposes": [
+    {
+      "name": "Alarm status",
+      "type": "enum",
+      "property": "alarm_status",
+      "base": "alarm_status",
+      "endpoint": null,
+      "description": "device alarm status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "normal",
+        "alarm"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "work mode of the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "leakage",
+        "shortage"
+      ]
+    },
+    {
+      "name": "Alarm ringtone",
+      "type": "enum",
+      "property": "alarm_ringtone",
+      "base": "alarm_ringtone",
+      "endpoint": null,
+      "description": "Ringtone of the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "mute",
+        "ring1",
+        "ring2",
+        "ring3"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

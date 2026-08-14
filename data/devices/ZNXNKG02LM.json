@@ -1,0 +1,186 @@
+{
+  "model": "ZNXNKG02LM",
+  "file": "ZNXNKG02LM.md",
+  "vendor": "Aqara",
+  "description": "Smart rotary knob H1 (wireless)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZNXNKG02LM.png",
+  "added_at": "2021-10-01T17:18:02Z",
+  "exposes_summary": "operation_mode, battery, voltage, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, action_rotation_button_state, sensitivity, action",
+  "exposes": [
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode",
+      "base": "operation_mode",
+      "endpoint": null,
+      "description": "Command mode is useful for binding. Event mode is useful for processing..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "event",
+        "command"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Action rotation angle",
+      "type": "numeric",
+      "property": "action_rotation_angle",
+      "base": "action_rotation_angle",
+      "endpoint": null,
+      "description": "Rotation angle.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "*"
+    },
+    {
+      "name": "Action rotation angle speed",
+      "type": "numeric",
+      "property": "action_rotation_angle_speed",
+      "base": "action_rotation_angle_speed",
+      "endpoint": null,
+      "description": "Rotation angle speed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "*"
+    },
+    {
+      "name": "Action rotation percent",
+      "type": "numeric",
+      "property": "action_rotation_percent",
+      "base": "action_rotation_percent",
+      "endpoint": null,
+      "description": "Rotation percent.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Action rotation percent speed",
+      "type": "numeric",
+      "property": "action_rotation_percent_speed",
+      "base": "action_rotation_percent_speed",
+      "endpoint": null,
+      "description": "Rotation percent speed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Action rotation time",
+      "type": "numeric",
+      "property": "action_rotation_time",
+      "base": "action_rotation_time",
+      "endpoint": null,
+      "description": "Rotation time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ms"
+    },
+    {
+      "name": "Action rotation button state",
+      "type": "enum",
+      "property": "action_rotation_button_state",
+      "base": "action_rotation_button_state",
+      "endpoint": null,
+      "description": "Button state during rotation.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "released",
+        "pressed"
+      ]
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Rotation sensitivity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "hold",
+        "single",
+        "double",
+        "release",
+        "start_rotating",
+        "rotation",
+        "stop_rotating"
+      ]
+    }
+  ],
+  "warnings": []
+}

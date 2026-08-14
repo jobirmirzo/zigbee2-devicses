@@ -1,0 +1,60 @@
+{
+  "model": "TI0001-illuminance",
+  "file": "TI0001-illuminance.md",
+  "vendor": "Livolo",
+  "description": "Zigbee digital illuminance and sound sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TI0001-illuminance.png",
+  "added_at": "2024-06-30T19:12:33",
+  "exposes_summary": "noise_detected, illuminance, noise_level",
+  "exposes": [
+    {
+      "name": "Noise detected",
+      "type": "binary",
+      "property": "noise_detected",
+      "base": "noise_detected",
+      "endpoint": null,
+      "description": "Indicates whether the device detected noise.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Noise level",
+      "type": "enum",
+      "property": "noise_level",
+      "base": "noise_level",
+      "endpoint": null,
+      "description": "Detected noise level.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "silent",
+        "normal",
+        "lively",
+        "noisy"
+      ]
+    }
+  ],
+  "warnings": []
+}

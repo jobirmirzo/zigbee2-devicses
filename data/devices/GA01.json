@@ -1,0 +1,61 @@
+{
+  "model": "GA01",
+  "file": "GA01.md",
+  "vendor": "Meian",
+  "description": "Gas sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GA01.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "gas, self_test_result, preheat",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "binary",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Self test result",
+      "type": "enum",
+      "property": "self_test_result",
+      "base": "self_test_result",
+      "endpoint": null,
+      "description": "Result of the self-test.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "checking",
+        "success",
+        "failure",
+        "others"
+      ]
+    },
+    {
+      "name": "Preheat",
+      "type": "binary",
+      "property": "preheat",
+      "base": "preheat",
+      "endpoint": null,
+      "description": "Indicates sensor preheat is active.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

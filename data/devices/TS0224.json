@@ -1,0 +1,132 @@
+{
+  "model": "TS0224",
+  "file": "TS0224.md",
+  "vendor": "Tuya",
+  "description": "Smart light & sound siren",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0224.png",
+  "added_at": "2023-03-01T15:36:38",
+  "exposes_summary": "warning, light, duration, volume",
+  "exposes": [
+    {
+      "name": "Warning",
+      "type": "composite",
+      "property": "warning",
+      "base": "warning",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "mode",
+          "type": "enum",
+          "description": "Mode of the warning (sound effect)",
+          "values": [
+            "stop",
+            "burglar",
+            "fire",
+            "emergency",
+            "police_panic",
+            "fire_panic",
+            "emergency_panic"
+          ]
+        },
+        {
+          "property": "level",
+          "type": "enum",
+          "description": "Sound level",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "property": "strobe_level",
+          "type": "enum",
+          "description": "Intensity of the strobe",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "very_high"
+          ]
+        },
+        {
+          "property": "strobe",
+          "type": "binary",
+          "description": "Turn on/off the strobe (light) during warning",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "strobe_duty_cycle",
+          "type": "numeric",
+          "description": "Length of the flash cycle max value is 10"
+        },
+        {
+          "property": "duration",
+          "type": "numeric",
+          "description": "Duration in seconds of the alarm unit is s"
+        }
+      ]
+    },
+    {
+      "name": "Light",
+      "type": "binary",
+      "property": "light",
+      "base": "light",
+      "endpoint": null,
+      "description": "Turn the light of the alarm ON/OFF.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Duration",
+      "type": "numeric",
+      "property": "duration",
+      "base": "duration",
+      "endpoint": null,
+      "description": "Duration of the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 60,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Volume",
+      "type": "enum",
+      "property": "volume",
+      "base": "volume",
+      "endpoint": null,
+      "description": "Volume of the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "mute",
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "warnings": []
+}

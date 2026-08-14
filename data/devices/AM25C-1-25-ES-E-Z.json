@@ -1,0 +1,139 @@
+{
+  "model": "AM25C-1-25-ES-E-Z",
+  "file": "AM25C-1-25-ES-E-Z.md",
+  "vendor": "eWeLink",
+  "description": "AK Curtain",
+  "image": "https://www.zigbee2mqtt.io/images/devices/AM25C-1-25-ES-E-Z.png",
+  "added_at": "2025-01-03T20:11:48",
+  "exposes_summary": "battery, voltage, cover (state, position), motor_direction, motor_mode, motor_clb_position, motor_clb_position_result",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Motor direction",
+      "type": "enum",
+      "property": "motor_direction",
+      "base": "motor_direction",
+      "endpoint": null,
+      "description": "Set the motor direction.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "forward",
+        "reverse"
+      ]
+    },
+    {
+      "name": "Motor mode",
+      "type": "enum",
+      "property": "motor_mode",
+      "base": "motor_mode",
+      "endpoint": null,
+      "description": "Motor Mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "inching",
+        "continuou"
+      ]
+    },
+    {
+      "name": "Motor clb position",
+      "type": "enum",
+      "property": "motor_clb_position",
+      "base": "motor_clb_position",
+      "endpoint": null,
+      "description": "Motor Calibration By Position.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "open",
+        "close",
+        "other",
+        "clear"
+      ]
+    },
+    {
+      "name": "Motor clb position result",
+      "type": "text",
+      "property": "motor_clb_position_result",
+      "base": "motor_clb_position_result",
+      "endpoint": null,
+      "description": "Motor Calibration Result.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

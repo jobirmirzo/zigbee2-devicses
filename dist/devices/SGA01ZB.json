@@ -1,0 +1,27 @@
+{
+  "model": "SGA01ZB",
+  "file": "SGA01ZB.md",
+  "vendor": "Feibit",
+  "description": "Combustible gas sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SGA01ZB.png",
+  "added_at": "2020-04-08T17:49:06Z",
+  "exposes_summary": "gas",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "binary",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

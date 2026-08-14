@@ -1,0 +1,125 @@
+{
+  "model": "JKD-816COM-Z",
+  "file": "JKD-816COM-Z.md",
+  "vendor": "Tuya",
+  "description": "Carbon monoxide & gas sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/JKD-816COM-Z.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "carbon_monoxide, co, gas, gas_value, silence, self_test, fault",
+  "exposes": [
+    {
+      "name": "Carbon monoxide",
+      "type": "binary",
+      "property": "carbon_monoxide",
+      "base": "carbon_monoxide",
+      "endpoint": null,
+      "description": "Indicates if CO (carbon monoxide) is detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "CO",
+      "type": "numeric",
+      "property": "co",
+      "base": "co",
+      "endpoint": null,
+      "description": "The measured CO (carbon monoxide) value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Gas",
+      "type": "binary",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Gas value",
+      "type": "numeric",
+      "property": "gas_value",
+      "base": "gas_value",
+      "endpoint": null,
+      "description": "Measured gas concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "LEL"
+    },
+    {
+      "name": "Silence",
+      "type": "binary",
+      "property": "silence",
+      "base": "silence",
+      "endpoint": null,
+      "description": "Mute the alarm buzzer.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Self test",
+      "type": "enum",
+      "property": "self_test",
+      "base": "self_test",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "checking",
+        "check_success",
+        "check_failure",
+        "others"
+      ]
+    },
+    {
+      "name": "Fault",
+      "type": "enum",
+      "property": "fault",
+      "base": "fault",
+      "endpoint": null,
+      "description": "Fault status of the device (none = no fault).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "fault",
+        "serious_fault",
+        "sensor_fault",
+        "probe_fault",
+        "power_fault"
+      ]
+    }
+  ],
+  "warnings": []
+}

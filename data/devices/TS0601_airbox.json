@@ -1,0 +1,82 @@
+{
+  "model": "TS0601_airbox",
+  "file": "TS0601_airbox.md",
+  "vendor": "Tuya",
+  "description": "zigbee air quality sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_airbox.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "temperature, humidity, co2, voc, formaldehyd",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "The measured CO2 (carbon dioxide) value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "VOC",
+      "type": "numeric",
+      "property": "voc",
+      "base": "voc",
+      "endpoint": null,
+      "description": "Measured VOC value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppb"
+    },
+    {
+      "name": "Formaldehyd",
+      "type": "numeric",
+      "property": "formaldehyd",
+      "base": "formaldehyd",
+      "endpoint": null,
+      "description": "The measured formaldehyd value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    }
+  ],
+  "warnings": []
+}

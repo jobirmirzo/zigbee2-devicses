@@ -1,0 +1,3568 @@
+{
+  "model": "Icon",
+  "file": "Icon.md",
+  "vendor": "Danfoss",
+  "description": "Icon Main Controller with Zigbee Module, Room Thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Icon.png",
+  "added_at": "2021-10-30T12:58:50",
+  "exposes_summary": "battery, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), abs_min_heat_setpoint_limit, abs_max_heat_setpoint_limit, min_heat_setpoint_limit, max_heat_setpoint_limit, setpoint_change_source, output_status, room_status_code, room_floor_sensor_mode, floor_min_setpoint, floor_max_setpoint, temperature, system_status_code, system_status_water, multimaster_role",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_l1",
+      "base": "battery",
+      "endpoint": "l1",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_l1",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_l1",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l1",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_l1",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit_l1",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": "l1",
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit_l1",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": "l1",
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_l1",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "l1",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_l1",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "l1",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_l1",
+      "base": "setpoint_change_source",
+      "endpoint": "l1",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_l1",
+      "base": "output_status",
+      "endpoint": "l1",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_l1",
+      "base": "room_status_code",
+      "endpoint": "l1",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_l1",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "l1",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_l1",
+      "base": "floor_min_setpoint",
+      "endpoint": "l1",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_l1",
+      "base": "floor_max_setpoint",
+      "endpoint": "l1",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l1",
+      "base": "temperature",
+      "endpoint": "l1",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_l2",
+      "base": "battery",
+      "endpoint": "l2",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_l2",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_l2",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l2",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_l2",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit_l2",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": "l2",
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit_l2",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": "l2",
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_l2",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "l2",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_l2",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "l2",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_l2",
+      "base": "setpoint_change_source",
+      "endpoint": "l2",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_l2",
+      "base": "output_status",
+      "endpoint": "l2",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_l2",
+      "base": "room_status_code",
+      "endpoint": "l2",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_l2",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "l2",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_l2",
+      "base": "floor_min_setpoint",
+      "endpoint": "l2",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_l2",
+      "base": "floor_max_setpoint",
+      "endpoint": "l2",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l2",
+      "base": "temperature",
+      "endpoint": "l2",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_l3",
+      "base": "battery",
+      "endpoint": "l3",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l3",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_l3",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_l3",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l3",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_l3",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit_l3",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": "l3",
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit_l3",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": "l3",
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_l3",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "l3",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_l3",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "l3",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_l3",
+      "base": "setpoint_change_source",
+      "endpoint": "l3",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_l3",
+      "base": "output_status",
+      "endpoint": "l3",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_l3",
+      "base": "room_status_code",
+      "endpoint": "l3",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_l3",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "l3",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_l3",
+      "base": "floor_min_setpoint",
+      "endpoint": "l3",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_l3",
+      "base": "floor_max_setpoint",
+      "endpoint": "l3",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l3",
+      "base": "temperature",
+      "endpoint": "l3",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_l4",
+      "base": "battery",
+      "endpoint": "l4",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l4",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_l4",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_l4",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l4",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_l4",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit_l4",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": "l4",
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit_l4",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": "l4",
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_l4",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "l4",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_l4",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "l4",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_l4",
+      "base": "setpoint_change_source",
+      "endpoint": "l4",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_l4",
+      "base": "output_status",
+      "endpoint": "l4",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_l4",
+      "base": "room_status_code",
+      "endpoint": "l4",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_l4",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "l4",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_l4",
+      "base": "floor_min_setpoint",
+      "endpoint": "l4",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_l4",
+      "base": "floor_max_setpoint",
+      "endpoint": "l4",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l4",
+      "base": "temperature",
+      "endpoint": "l4",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_l5",
+      "base": "battery",
+      "endpoint": "l5",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l5",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_l5",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_l5",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l5",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_l5",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit_l5",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": "l5",
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit_l5",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": "l5",
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_l5",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "l5",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_l5",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "l5",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_l5",
+      "base": "setpoint_change_source",
+      "endpoint": "l5",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_l5",
+      "base": "output_status",
+      "endpoint": "l5",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_l5",
+      "base": "room_status_code",
+      "endpoint": "l5",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_l5",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "l5",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_l5",
+      "base": "floor_min_setpoint",
+      "endpoint": "l5",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_l5",
+      "base": "floor_max_setpoint",
+      "endpoint": "l5",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l5",
+      "base": "temperature",
+      "endpoint": "l5",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_l6",
+      "base": "battery",
+      "endpoint": "l6",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l6",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_l6",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_l6",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l6",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_l6",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit_l6",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": "l6",
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit_l6",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": "l6",
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_l6",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "l6",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_l6",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "l6",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_l6",
+      "base": "setpoint_change_source",
+      "endpoint": "l6",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_l6",
+      "base": "output_status",
+      "endpoint": "l6",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_l6",
+      "base": "room_status_code",
+      "endpoint": "l6",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_l6",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "l6",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_l6",
+      "base": "floor_min_setpoint",
+      "endpoint": "l6",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_l6",
+      "base": "floor_max_setpoint",
+      "endpoint": "l6",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l6",
+      "base": "temperature",
+      "endpoint": "l6",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_l7",
+      "base": "battery",
+      "endpoint": "l7",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l7",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_l7",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_l7",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l7",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_l7",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit_l7",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": "l7",
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit_l7",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": "l7",
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_l7",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "l7",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_l7",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "l7",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_l7",
+      "base": "setpoint_change_source",
+      "endpoint": "l7",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_l7",
+      "base": "output_status",
+      "endpoint": "l7",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_l7",
+      "base": "room_status_code",
+      "endpoint": "l7",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_l7",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "l7",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_l7",
+      "base": "floor_min_setpoint",
+      "endpoint": "l7",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_l7",
+      "base": "floor_max_setpoint",
+      "endpoint": "l7",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l7",
+      "base": "temperature",
+      "endpoint": "l7",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_l8",
+      "base": "battery",
+      "endpoint": "l8",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l8",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_l8",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_l8",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l8",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_l8",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit_l8",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": "l8",
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit_l8",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": "l8",
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_l8",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "l8",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_l8",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "l8",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_l8",
+      "base": "setpoint_change_source",
+      "endpoint": "l8",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_l8",
+      "base": "output_status",
+      "endpoint": "l8",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_l8",
+      "base": "room_status_code",
+      "endpoint": "l8",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_l8",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "l8",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_l8",
+      "base": "floor_min_setpoint",
+      "endpoint": "l8",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_l8",
+      "base": "floor_max_setpoint",
+      "endpoint": "l8",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l8",
+      "base": "temperature",
+      "endpoint": "l8",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_l9",
+      "base": "battery",
+      "endpoint": "l9",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l9",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_l9",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_l9",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l9",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_l9",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit_l9",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": "l9",
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit_l9",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": "l9",
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_l9",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "l9",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_l9",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "l9",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_l9",
+      "base": "setpoint_change_source",
+      "endpoint": "l9",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_l9",
+      "base": "output_status",
+      "endpoint": "l9",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_l9",
+      "base": "room_status_code",
+      "endpoint": "l9",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_l9",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "l9",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_l9",
+      "base": "floor_min_setpoint",
+      "endpoint": "l9",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_l9",
+      "base": "floor_max_setpoint",
+      "endpoint": "l9",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l9",
+      "base": "temperature",
+      "endpoint": "l9",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_l10",
+      "base": "battery",
+      "endpoint": "l10",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l10",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_l10",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_l10",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l10",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_l10",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit_l10",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": "l10",
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit_l10",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": "l10",
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_l10",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "l10",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_l10",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "l10",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_l10",
+      "base": "setpoint_change_source",
+      "endpoint": "l10",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_l10",
+      "base": "output_status",
+      "endpoint": "l10",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_l10",
+      "base": "room_status_code",
+      "endpoint": "l10",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_l10",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "l10",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_l10",
+      "base": "floor_min_setpoint",
+      "endpoint": "l10",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_l10",
+      "base": "floor_max_setpoint",
+      "endpoint": "l10",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l10",
+      "base": "temperature",
+      "endpoint": "l10",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_l11",
+      "base": "battery",
+      "endpoint": "l11",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l11",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_l11",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_l11",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l11",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_l11",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit_l11",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": "l11",
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit_l11",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": "l11",
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_l11",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "l11",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_l11",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "l11",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_l11",
+      "base": "setpoint_change_source",
+      "endpoint": "l11",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_l11",
+      "base": "output_status",
+      "endpoint": "l11",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_l11",
+      "base": "room_status_code",
+      "endpoint": "l11",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_l11",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "l11",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_l11",
+      "base": "floor_min_setpoint",
+      "endpoint": "l11",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_l11",
+      "base": "floor_max_setpoint",
+      "endpoint": "l11",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l11",
+      "base": "temperature",
+      "endpoint": "l11",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_l12",
+      "base": "battery",
+      "endpoint": "l12",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l12",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_l12",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_l12",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l12",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_l12",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit_l12",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": "l12",
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit_l12",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": "l12",
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_l12",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "l12",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_l12",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "l12",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_l12",
+      "base": "setpoint_change_source",
+      "endpoint": "l12",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_l12",
+      "base": "output_status",
+      "endpoint": "l12",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_l12",
+      "base": "room_status_code",
+      "endpoint": "l12",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_l12",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "l12",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_l12",
+      "base": "floor_min_setpoint",
+      "endpoint": "l12",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_l12",
+      "base": "floor_max_setpoint",
+      "endpoint": "l12",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l12",
+      "base": "temperature",
+      "endpoint": "l12",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_l13",
+      "base": "battery",
+      "endpoint": "l13",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l13",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_l13",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_l13",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l13",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_l13",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit_l13",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": "l13",
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit_l13",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": "l13",
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_l13",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "l13",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_l13",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "l13",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_l13",
+      "base": "setpoint_change_source",
+      "endpoint": "l13",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_l13",
+      "base": "output_status",
+      "endpoint": "l13",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_l13",
+      "base": "room_status_code",
+      "endpoint": "l13",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_l13",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "l13",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_l13",
+      "base": "floor_min_setpoint",
+      "endpoint": "l13",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_l13",
+      "base": "floor_max_setpoint",
+      "endpoint": "l13",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l13",
+      "base": "temperature",
+      "endpoint": "l13",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_l14",
+      "base": "battery",
+      "endpoint": "l14",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l14",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_l14",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_l14",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l14",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_l14",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit_l14",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": "l14",
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit_l14",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": "l14",
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_l14",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "l14",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_l14",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "l14",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_l14",
+      "base": "setpoint_change_source",
+      "endpoint": "l14",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_l14",
+      "base": "output_status",
+      "endpoint": "l14",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_l14",
+      "base": "room_status_code",
+      "endpoint": "l14",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_l14",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "l14",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_l14",
+      "base": "floor_min_setpoint",
+      "endpoint": "l14",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_l14",
+      "base": "floor_max_setpoint",
+      "endpoint": "l14",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l14",
+      "base": "temperature",
+      "endpoint": "l14",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery_l15",
+      "base": "battery",
+      "endpoint": "l15",
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l15",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_l15",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_l15",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l15",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_l15",
+          "base": "running_state",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit_l15",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": "l15",
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit_l15",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": "l15",
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit_l15",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": "l15",
+      "description": "Min temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit_l15",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": "l15",
+      "description": "Max temperature limit set on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source_l15",
+      "base": "setpoint_change_source",
+      "endpoint": "l15",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Output status",
+      "type": "enum",
+      "property": "output_status_l15",
+      "base": "output_status",
+      "endpoint": "l15",
+      "description": "Actuator status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "name": "Room status code",
+      "type": "enum",
+      "property": "room_status_code_l15",
+      "base": "room_status_code",
+      "endpoint": "l15",
+      "description": "Thermostat status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_rt",
+        "rt_touch_error",
+        "floor_sensor_short_circuit",
+        "floor_sensor_disconnected"
+      ]
+    },
+    {
+      "name": "Room floor sensor mode",
+      "type": "enum",
+      "property": "room_floor_sensor_mode_l15",
+      "base": "room_floor_sensor_mode",
+      "endpoint": "l15",
+      "description": "Floor sensor mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "comfort",
+        "floor_only",
+        "dual_mode"
+      ]
+    },
+    {
+      "name": "Floor min setpoint",
+      "type": "numeric",
+      "property": "floor_min_setpoint_l15",
+      "base": "floor_min_setpoint",
+      "endpoint": "l15",
+      "description": "Min floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Floor max setpoint",
+      "type": "numeric",
+      "property": "floor_max_setpoint_l15",
+      "base": "floor_max_setpoint",
+      "endpoint": "l15",
+      "description": "Max floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 18,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature_l15",
+      "base": "temperature",
+      "endpoint": "l15",
+      "description": "Floor temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "System status code",
+      "type": "enum",
+      "property": "system_status_code_l16",
+      "base": "system_status_code",
+      "endpoint": "l16",
+      "description": "Main Controller Status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "no_error",
+        "missing_expansion_board",
+        "missing_radio_module",
+        "missing_command_module",
+        "missing_master_rail",
+        "missing_slave_rail_no_1",
+        "missing_slave_rail_no_2",
+        "pt1000_input_short_circuit",
+        "pt1000_input_open_circuit",
+        "error_on_one_or_more_output"
+      ]
+    },
+    {
+      "name": "System status water",
+      "type": "enum",
+      "property": "system_status_water_l16",
+      "base": "system_status_water",
+      "endpoint": "l16",
+      "description": "Main Controller Water Status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "hot_water_flow_in_pipes",
+        "cool_water_flow_in_pipes"
+      ]
+    },
+    {
+      "name": "Multimaster role",
+      "type": "enum",
+      "property": "multimaster_role_l16",
+      "base": "multimaster_role",
+      "endpoint": "l16",
+      "description": "Main Controller Role.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "invalid_unused",
+        "master",
+        "slave_1",
+        "slave_2"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,129 @@
+{
+  "model": "LYAI-14",
+  "file": "LYAI-14.md",
+  "vendor": "Tuya",
+  "description": "Solar intelligent timed water valve controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/LYAI-14.png",
+  "added_at": "2025-10-31T19:10:30",
+  "exposes_summary": "countdown, error_status, rain_sensor_status, rain_sensor_switch, battery_state, battery, switch (state)",
+  "exposes": [
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown",
+      "base": "countdown",
+      "endpoint": null,
+      "description": "Toggle the device after a set duration (one time action).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Error status",
+      "type": "numeric",
+      "property": "error_status",
+      "base": "error_status",
+      "endpoint": null,
+      "description": "Device error code.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Rain sensor status",
+      "type": "enum",
+      "property": "rain_sensor_status",
+      "base": "rain_sensor_status",
+      "endpoint": null,
+      "description": "Rain sensor state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "rain",
+        "no_rain"
+      ]
+    },
+    {
+      "name": "Rain sensor switch",
+      "type": "binary",
+      "property": "rain_sensor_switch",
+      "base": "rain_sensor_switch",
+      "endpoint": null,
+      "description": "Enable/disable rain sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "Battery charging state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "no_charge",
+        "charging",
+        "charged"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

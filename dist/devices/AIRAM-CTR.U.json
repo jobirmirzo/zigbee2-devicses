@@ -1,0 +1,35 @@
+{
+  "model": "AIRAM-CTR.U",
+  "file": "AIRAM-CTR.U.md",
+  "vendor": "Airam",
+  "description": "CTR.U remote",
+  "image": "https://www.zigbee2mqtt.io/images/devices/AIRAM-CTR.U.png",
+  "added_at": "2019-07-22T20:08:17Z",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_down_click",
+        "brightness_up_click",
+        "brightness_down_hold",
+        "brightness_up_hold",
+        "brightness_down_release",
+        "brightness_up_release"
+      ]
+    }
+  ],
+  "warnings": []
+}

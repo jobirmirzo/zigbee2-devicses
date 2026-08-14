@@ -1,0 +1,53 @@
+{
+  "model": "5412748727388",
+  "file": "5412748727388.md",
+  "vendor": "Prolight",
+  "description": "Remote control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/5412748727388.png",
+  "added_at": "2021-01-31T22:24:43Z",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "color_temperature_move",
+        "color_temperature_move_up",
+        "color_temperature_move_down",
+        "color_move",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_stop",
+        "brightness_move_to_level"
+      ]
+    }
+  ],
+  "warnings": []
+}

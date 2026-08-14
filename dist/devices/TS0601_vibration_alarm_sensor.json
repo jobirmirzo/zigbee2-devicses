@@ -1,0 +1,96 @@
+{
+  "model": "TS0601_vibration_alarm_sensor",
+  "file": "TS0601_vibration_alarm_sensor.md",
+  "vendor": "Tuya",
+  "description": "Vibration alarm sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_vibration_alarm_sensor.png",
+  "added_at": "2026-04-30T19:57:27",
+  "exposes_summary": "alarm_status, sensitivity, dismiss_alarm, silent_mode, battery_state",
+  "exposes": [
+    {
+      "name": "Alarm status",
+      "type": "enum",
+      "property": "alarm_status",
+      "base": "alarm_status",
+      "endpoint": null,
+      "description": "Indicates when vibration is detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "normal",
+        "alarm"
+      ]
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity level of the sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "middle",
+        "high"
+      ]
+    },
+    {
+      "name": "Dismiss alarm",
+      "type": "enum",
+      "property": "dismiss_alarm",
+      "base": "dismiss_alarm",
+      "endpoint": null,
+      "description": "Stop the buzzer for the current alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "DISMISS"
+      ]
+    },
+    {
+      "name": "Silent mode",
+      "type": "binary",
+      "property": "silent_mode",
+      "base": "silent_mode",
+      "endpoint": null,
+      "description": "Mute the buzzer for all alarms.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "State of the battery.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "warnings": []
+}

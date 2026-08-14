@@ -1,0 +1,79 @@
+{
+  "model": "ALCANTARA3",
+  "file": "ALCANTARA3.md",
+  "vendor": "Acova",
+  "description": "Alcantara 3 heater",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ALCANTARA3.png",
+  "added_at": "2026-04-30T19:57:27",
+  "exposes_summary": "climate (occupied_heating_setpoint, unoccupied_heating_setpoint, local_temperature, system_mode, running_state), power_apparent",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 7,
+          "value_max": 28,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "unoccupied_heating_setpoint",
+          "base": "unoccupied_heating_setpoint",
+          "value_min": 7,
+          "value_max": 28,
+          "values": [
+            "off",
+            "heat",
+            "auto"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "auto"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power apparent",
+      "type": "numeric",
+      "property": "power_apparent",
+      "base": "power_apparent",
+      "endpoint": null,
+      "description": "Instantaneous measured apparent power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    }
+  ],
+  "warnings": []
+}

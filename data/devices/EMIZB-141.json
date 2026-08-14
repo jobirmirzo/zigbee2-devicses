@@ -1,0 +1,86 @@
+{
+  "model": "EMIZB-141",
+  "file": "EMIZB-141.md",
+  "vendor": "Frient",
+  "description": "Electricity meter interface 2 LED",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EMIZB-141.png",
+  "added_at": "2023-12-01T09:53:36",
+  "exposes_summary": "power, energy, battery, pulse_configuration, current_summation",
+  "exposes": [
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Pulse configuration",
+      "type": "numeric",
+      "property": "pulse_configuration",
+      "base": "pulse_configuration",
+      "endpoint": null,
+      "description": "Pulses per kwh. Default 1000 imp/kWh. Range 0 to 65535.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535
+    },
+    {
+      "name": "Current summation",
+      "type": "numeric",
+      "property": "current_summation",
+      "base": "current_summation",
+      "endpoint": null,
+      "description": "Current summation value sent to the display. e.g. 570 = 0,570 kWh.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 268435455
+    }
+  ],
+  "warnings": []
+}

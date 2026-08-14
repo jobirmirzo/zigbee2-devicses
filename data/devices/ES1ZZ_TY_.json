@@ -1,0 +1,146 @@
+{
+  "model": "ES1ZZ(TY)",
+  "file": "ES1ZZ(TY).md",
+  "vendor": "Linptech",
+  "description": "mmWave Presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ES1ZZ(TY",
+  "added_at": "2023-11-01T18:54:40",
+  "exposes_summary": "occupancy, illuminance, target_distance, motion_detection_distance, presence_keep_time, motion_detection_sensitivity, static_detection_sensitivity, fading_time, led_indicator",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Presence state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Target distance",
+      "type": "numeric",
+      "property": "target_distance",
+      "base": "target_distance",
+      "endpoint": null,
+      "description": "Distance to target.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "cm"
+    },
+    {
+      "name": "Motion detection distance",
+      "type": "numeric",
+      "property": "motion_detection_distance",
+      "base": "motion_detection_distance",
+      "endpoint": null,
+      "description": "Motion detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "cm"
+    },
+    {
+      "name": "Presence keep time",
+      "type": "numeric",
+      "property": "presence_keep_time",
+      "base": "presence_keep_time",
+      "endpoint": null,
+      "description": "Presence keep time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "min"
+    },
+    {
+      "name": "Motion detection sensitivity",
+      "type": "numeric",
+      "property": "motion_detection_sensitivity",
+      "base": "motion_detection_sensitivity",
+      "endpoint": null,
+      "description": "Motion detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5
+    },
+    {
+      "name": "Static detection sensitivity",
+      "type": "numeric",
+      "property": "static_detection_sensitivity",
+      "base": "static_detection_sensitivity",
+      "endpoint": null,
+      "description": "Static detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5
+    },
+    {
+      "name": "Fading time",
+      "type": "numeric",
+      "property": "fading_time",
+      "base": "fading_time",
+      "endpoint": null,
+      "description": "Time after which the device will check again for presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10000,
+      "unit": "s"
+    },
+    {
+      "name": "Led indicator",
+      "type": "binary",
+      "property": "led_indicator",
+      "base": "led_indicator",
+      "endpoint": null,
+      "description": "LED Presence Indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

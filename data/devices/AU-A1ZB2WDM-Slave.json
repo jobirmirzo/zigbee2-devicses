@@ -1,0 +1,53 @@
+{
+  "model": "AU-A1ZB2WDM-Slave",
+  "file": "AU-A1ZB2WDM-Slave.md",
+  "vendor": "Aurora",
+  "description": "AOne Rotary Slave Dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/AU-A1ZB2WDM-Slave.png",
+  "added_at": "2026-05-31T19:17:58",
+  "exposes_summary": "switch (state), action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "backlight",
+      "features": [
+        {
+          "property": "state_backlight",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_default",
+        "off_default",
+        "toggle_default",
+        "brightness_move_to_level_default",
+        "brightness_move_up_default",
+        "brightness_move_down_default",
+        "brightness_step_up_default",
+        "brightness_step_down_default",
+        "brightness_stop_default"
+      ]
+    }
+  ],
+  "warnings": []
+}

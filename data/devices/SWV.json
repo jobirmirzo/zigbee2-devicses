@@ -1,0 +1,251 @@
+{
+  "model": "SWV",
+  "file": "SWV.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee smart water valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SWV.png",
+  "added_at": "2024-03-31T18:43:56",
+  "exposes_summary": "flow, battery, switch (state), current_device_status, auto_close_when_water_shortage, cyclic_timed_irrigation, cyclic_quantitative_irrigation, real_time_irrigation_duration, real_time_irrigation_volume, irrigation_start_time, irrigation_end_time, daily_irrigation_volume, valve_work_state",
+  "exposes": [
+    {
+      "name": "Flow",
+      "type": "numeric",
+      "property": "flow",
+      "base": "flow",
+      "endpoint": null,
+      "description": "Current water flow.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m³/h"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Current device status",
+      "type": "enum",
+      "property": "current_device_status",
+      "base": "current_device_status",
+      "endpoint": null,
+      "description": "The water valve is in normal state, water shortage or water leakage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "normal_state",
+        "water_shortage",
+        "water_leakage",
+        "water_shortage & water_leakage"
+      ]
+    },
+    {
+      "name": "Auto close when water shortage",
+      "type": "binary",
+      "property": "auto_close_when_water_shortage",
+      "base": "auto_close_when_water_shortage",
+      "endpoint": null,
+      "description": "Automatically shut down the water valve after the water shortage exceeds 30 minutes. Requires firmware version 1.0.4 or later!.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ENABLE",
+      "value_off": "DISABLE"
+    },
+    {
+      "name": "Cyclic timed irrigation",
+      "type": "composite",
+      "property": "cyclic_timed_irrigation",
+      "base": "cyclic_timed_irrigation",
+      "endpoint": null,
+      "description": "Smart water valve cycle timing irrigation.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "current_count",
+          "type": "numeric",
+          "description": "Number of times it has been executed unit is times"
+        },
+        {
+          "property": "total_number",
+          "type": "numeric",
+          "description": "Total times of circulating irrigation max value is 100, unit is times"
+        },
+        {
+          "property": "irrigation_duration",
+          "type": "numeric",
+          "description": "Single irrigation duration max value is 86400, unit is seconds"
+        },
+        {
+          "property": "irrigation_interval",
+          "type": "numeric",
+          "description": "Time interval between two adjacent irrigation max value is 86400, unit is seconds"
+        }
+      ]
+    },
+    {
+      "name": "Cyclic quantitative irrigation",
+      "type": "composite",
+      "property": "cyclic_quantitative_irrigation",
+      "base": "cyclic_quantitative_irrigation",
+      "endpoint": null,
+      "description": "Smart water valve circulating quantitative irrigation.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "current_count",
+          "type": "numeric",
+          "description": "Number of times it has been executed unit is times"
+        },
+        {
+          "property": "total_number",
+          "type": "numeric",
+          "description": "Total times of circulating irrigation max value is 100, unit is times"
+        },
+        {
+          "property": "irrigation_capacity",
+          "type": "numeric",
+          "description": "Single irrigation capacity max value is 6500, unit is liter"
+        },
+        {
+          "property": "irrigation_interval",
+          "type": "numeric",
+          "description": "Time interval between two adjacent irrigation max value is 86400, unit is seconds"
+        }
+      ]
+    },
+    {
+      "name": "Real time irrigation duration",
+      "type": "numeric",
+      "property": "real_time_irrigation_duration",
+      "base": "real_time_irrigation_duration",
+      "endpoint": null,
+      "description": "Duration of the last/current irrigation session.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Real time irrigation volume",
+      "type": "numeric",
+      "property": "real_time_irrigation_volume",
+      "base": "real_time_irrigation_volume",
+      "endpoint": null,
+      "description": "Volume of the last/current irrigation session.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "L"
+    },
+    {
+      "name": "Irrigation start time",
+      "type": "numeric",
+      "property": "irrigation_start_time",
+      "base": "irrigation_start_time",
+      "endpoint": null,
+      "description": "Start time of the last/current irrigation session (Unix timestamp).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Irrigation end time",
+      "type": "numeric",
+      "property": "irrigation_end_time",
+      "base": "irrigation_end_time",
+      "endpoint": null,
+      "description": "End time of the last irrigation session (Unix timestamp).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Daily irrigation volume",
+      "type": "numeric",
+      "property": "daily_irrigation_volume",
+      "base": "daily_irrigation_volume",
+      "endpoint": null,
+      "description": "Total irrigation volume today.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "L"
+    },
+    {
+      "name": "Valve work state",
+      "type": "binary",
+      "property": "valve_work_state",
+      "base": "valve_work_state",
+      "endpoint": null,
+      "description": "Current valve work state, this turns on when a Cyclic timed or quantitative irrigation program is running, and turns off when the program is complete..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "working",
+      "value_off": "idle"
+    }
+  ],
+  "warnings": []
+}

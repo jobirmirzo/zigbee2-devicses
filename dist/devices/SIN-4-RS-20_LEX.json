@@ -1,0 +1,43 @@
+{
+  "model": "SIN-4-RS-20_LEX",
+  "file": "SIN-4-RS-20_LEX.md",
+  "vendor": "ADEO",
+  "description": "Roller shutter controller (Leroy Merlin version)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SIN-4-RS-20_LEX.png",
+  "added_at": "2023-06-01T08:16:21",
+  "exposes_summary": "cover (state, position)",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

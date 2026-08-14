@@ -1,0 +1,126 @@
+{
+  "model": "412175",
+  "file": "412175.md",
+  "vendor": "Legrand",
+  "description": "DIN 3 Phases power consumption module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/412175.png",
+  "added_at": "2025-06-01T17:54:42",
+  "exposes_summary": "power, power_phase_b, power_phase_c, power_apparent, power_apparent_phase_b, power_apparent_phase_c, power_alarm_active, power_alarm",
+  "exposes": [
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power phase b",
+      "type": "numeric",
+      "property": "power_phase_b",
+      "base": "power_phase_b",
+      "endpoint": null,
+      "description": "Instantaneous measured power on phase B.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power phase c",
+      "type": "numeric",
+      "property": "power_phase_c",
+      "base": "power_phase_c",
+      "endpoint": null,
+      "description": "Instantaneous measured power on phase C.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power apparent",
+      "type": "numeric",
+      "property": "power_apparent",
+      "base": "power_apparent",
+      "endpoint": null,
+      "description": "Instantaneous measured apparent power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "Power apparent phase b",
+      "type": "numeric",
+      "property": "power_apparent_phase_b",
+      "base": "power_apparent_phase_b",
+      "endpoint": null,
+      "description": "Instantaneous measured apparent power on phase B.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "Power apparent phase c",
+      "type": "numeric",
+      "property": "power_apparent_phase_c",
+      "base": "power_apparent_phase_c",
+      "endpoint": null,
+      "description": "Instantaneous measured apparent power on phase C.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "Power alarm active",
+      "type": "binary",
+      "property": "power_alarm_active",
+      "base": "power_alarm_active",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Power alarm",
+      "type": "binary",
+      "property": "power_alarm",
+      "base": "power_alarm",
+      "endpoint": null,
+      "description": "Enable/disable the power alarm.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

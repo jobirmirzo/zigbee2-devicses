@@ -1,0 +1,110 @@
+{
+  "model": "511.324",
+  "file": "511.324.md",
+  "vendor": "Iluminize",
+  "description": "Zigbee handheld remote CCT 4 channels",
+  "image": "https://www.zigbee2mqtt.io/images/devices/511.324.png",
+  "added_at": "2023-02-01T14:45:57",
+  "exposes_summary": "battery, action, action_group, action_transition_time, action_step_size, action_rate",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "color_move",
+        "color_temperature_move",
+        "hue_move",
+        "brightness_step_up",
+        "brightness_step_down",
+        "recall_*",
+        "on",
+        "off",
+        "toggle",
+        "brightness_stop",
+        "brightness_move_up",
+        "brightness_move_down",
+        "color_loop_set",
+        "enhanced_move_to_hue_and_saturation",
+        "hue_stop"
+      ]
+    },
+    {
+      "name": "Action group",
+      "type": "numeric",
+      "property": "action_group",
+      "base": "action_group",
+      "endpoint": null,
+      "description": "Shows the zigbee2mqtt group bound to the active data point EP(1-4)..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action transition time",
+      "type": "numeric",
+      "property": "action_transition_time",
+      "base": "action_transition_time",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action step size",
+      "type": "numeric",
+      "property": "action_step_size",
+      "base": "action_step_size",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action rate",
+      "type": "numeric",
+      "property": "action_rate",
+      "base": "action_rate",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

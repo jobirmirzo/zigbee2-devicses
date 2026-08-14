@@ -1,0 +1,104 @@
+{
+  "model": "DS-K02D/DS-K02E",
+  "file": "DS-K02D_DS-K02E.md",
+  "vendor": "Aqara",
+  "description": "Aqara Shutter Switch H2 EU",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DS-K02D-DS-K02E.png",
+  "added_at": "2026-04-09T00:00:00Z",
+  "exposes_summary": "energy, cover (state, position), multi_click, action",
+  "exposes": [
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Multi click",
+      "type": "binary",
+      "property": "multi_click_top_wireless_button",
+      "base": "multi_click",
+      "endpoint": "top_wireless_button",
+      "description": "Multi-click mode for top wireless button.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Multi click",
+      "type": "binary",
+      "property": "multi_click_bottom_wireless_button",
+      "base": "multi_click",
+      "endpoint": "bottom_wireless_button",
+      "description": "Multi-click mode for bottom wireless button.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "button_3_single",
+        "button_4_single"
+      ]
+    }
+  ],
+  "warnings": []
+}

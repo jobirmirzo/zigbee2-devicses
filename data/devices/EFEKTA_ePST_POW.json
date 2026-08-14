@@ -1,0 +1,227 @@
+{
+  "model": "EFEKTA_ePST_POW",
+  "file": "EFEKTA_ePST_POW.md",
+  "vendor": "EFEKTA",
+  "description": "Water, gas smart pressure monitor with e-ink display",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_ePST_POW.png",
+  "added_at": "2026-01-31T13:10:41",
+  "exposes_summary": "pressure, bar, psi, temperature, pressure_offset, raw_temperature_calibration, mains_voltage, battery, battery_low, reading_interval, tx_radio_power, comparison_previous_data, invert, fastmode",
+  "exposes": [
+    {
+      "name": "Pressure",
+      "type": "numeric",
+      "property": "pressure",
+      "base": "pressure",
+      "endpoint": null,
+      "description": "Pressure in kPa.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kPa"
+    },
+    {
+      "name": "Bar",
+      "type": "numeric",
+      "property": "bar",
+      "base": "bar",
+      "endpoint": null,
+      "description": "Pressure in bar.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "bar"
+    },
+    {
+      "name": "Psi",
+      "type": "numeric",
+      "property": "psi",
+      "base": "psi",
+      "endpoint": null,
+      "description": "Pressure in psi.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "psi"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Pressure offset",
+      "type": "numeric",
+      "property": "pressure_offset",
+      "base": "pressure_offset",
+      "endpoint": null,
+      "description": "Adjust pressure sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -100,
+      "value_max": 100,
+      "unit": "kPa"
+    },
+    {
+      "name": "Raw temperature calibration",
+      "type": "numeric",
+      "property": "raw_temperature_calibration",
+      "base": "raw_temperature_calibration",
+      "endpoint": null,
+      "description": "Adjust temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -8192,
+      "value_max": 8192,
+      "unit": "raw unit"
+    },
+    {
+      "name": "Mains voltage",
+      "type": "numeric",
+      "property": "mains_voltage",
+      "base": "mains_voltage",
+      "endpoint": null,
+      "description": "Mains voltage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Reading interval",
+      "type": "numeric",
+      "property": "reading_interval",
+      "base": "reading_interval",
+      "endpoint": null,
+      "description": "Setting the sensor reading interval in seconds, by default 20 seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 300,
+      "unit": "sec"
+    },
+    {
+      "name": "Tx radio power",
+      "type": "enum",
+      "property": "tx_radio_power",
+      "base": "tx_radio_power",
+      "endpoint": null,
+      "description": "Set TX Radio Power, dbm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "4dbm",
+        "19dbm"
+      ]
+    },
+    {
+      "name": "Comparison previous data",
+      "type": "binary",
+      "property": "comparison_previous_data",
+      "base": "comparison_previous_data",
+      "endpoint": null,
+      "description": "Enable сontrol of comparison with previous data.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Invert",
+      "type": "enum",
+      "property": "invert",
+      "base": "invert",
+      "endpoint": null,
+      "description": "Invert display color.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "BW",
+        "WB"
+      ]
+    },
+    {
+      "name": "Fastmode",
+      "type": "enum",
+      "property": "fastmode",
+      "base": "fastmode",
+      "endpoint": null,
+      "description": "Display refresh mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Fast",
+        "Ultra Fast"
+      ]
+    }
+  ],
+  "warnings": []
+}

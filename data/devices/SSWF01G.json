@@ -1,0 +1,70 @@
+{
+  "model": "SSWF01G",
+  "file": "SSWF01G.md",
+  "vendor": "Mercator Ikuü",
+  "description": "AC fan controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SSWF01G.png",
+  "added_at": "2022-09-02T12:41:00",
+  "exposes_summary": "switch (state), fan (state, mode)",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Fan",
+      "type": "fan",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "fan_state",
+          "base": "fan_state",
+          "values": [
+            "off",
+            "low",
+            "medium",
+            "high",
+            "on"
+          ],
+          "readable": true
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "values": [
+            "off",
+            "low",
+            "medium",
+            "high",
+            "on"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

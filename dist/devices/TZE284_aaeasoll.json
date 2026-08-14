@@ -1,0 +1,63 @@
+{
+  "model": "TZE284_aaeasoll",
+  "file": "TZE284_aaeasoll.md",
+  "vendor": "SMARTERCURRY",
+  "description": "Illuminance sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TZE284_aaeasoll.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "illuminance, battery, report_interval",
+  "exposes": [
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Report interval",
+      "type": "enum",
+      "property": "report_interval",
+      "base": "report_interval",
+      "endpoint": null,
+      "description": "Data reporting interval.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "5m",
+        "10m",
+        "15m",
+        "20m",
+        "30m",
+        "1h"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,400 @@
+{
+  "model": "ZNCJMB14LM",
+  "file": "ZNCJMB14LM.md",
+  "vendor": "Aqara",
+  "description": "Smart touch panel S1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZNCJMB14LM.png",
+  "added_at": "2021-05-11T20:10:12Z",
+  "exposes_summary": "switch (state), standby_enabled, theme, beep_volume, lcd_brightness, language, screen_saver_style, standby_time, font_size, lcd_auto_brightness_enabled, homepage, screen_saver_enabled, standby_lcd_brightness, available_switches, switch_1_text_icon, switch_2_text_icon, switch_3_text_icon",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "left",
+      "features": [
+        {
+          "property": "state_left",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "center",
+      "features": [
+        {
+          "property": "state_center",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "right",
+      "features": [
+        {
+          "property": "state_right",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Standby enabled",
+      "type": "binary",
+      "property": "standby_enabled",
+      "base": "standby_enabled",
+      "endpoint": null,
+      "description": "Enable standby.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Theme",
+      "type": "enum",
+      "property": "theme",
+      "base": "theme",
+      "endpoint": null,
+      "description": "Display theme.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "classic",
+        "concise"
+      ]
+    },
+    {
+      "name": "Beep volume",
+      "type": "enum",
+      "property": "beep_volume",
+      "base": "beep_volume",
+      "endpoint": null,
+      "description": "Beep volume.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "mute",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Lcd brightness",
+      "type": "numeric",
+      "property": "lcd_brightness",
+      "base": "lcd_brightness",
+      "endpoint": null,
+      "description": "LCD brightness (will not persist if auto-brightness is enabled).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Language",
+      "type": "enum",
+      "property": "language",
+      "base": "language",
+      "endpoint": null,
+      "description": "Interface language.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "chinese",
+        "english"
+      ]
+    },
+    {
+      "name": "Screen saver style",
+      "type": "enum",
+      "property": "screen_saver_style",
+      "base": "screen_saver_style",
+      "endpoint": null,
+      "description": "Screen saver style.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "classic",
+        "analog clock"
+      ]
+    },
+    {
+      "name": "Standby time",
+      "type": "numeric",
+      "property": "standby_time",
+      "base": "standby_time",
+      "endpoint": null,
+      "description": "Display standby time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65534,
+      "unit": "s"
+    },
+    {
+      "name": "Font size",
+      "type": "enum",
+      "property": "font_size",
+      "base": "font_size",
+      "endpoint": null,
+      "description": "Display font size.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "small",
+        "medium",
+        "large"
+      ]
+    },
+    {
+      "name": "Lcd auto brightness enabled",
+      "type": "binary",
+      "property": "lcd_auto_brightness_enabled",
+      "base": "lcd_auto_brightness_enabled",
+      "endpoint": null,
+      "description": "Enable LCD auto brightness.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Homepage",
+      "type": "enum",
+      "property": "homepage",
+      "base": "homepage",
+      "endpoint": null,
+      "description": "Default display homepage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "scene",
+        "feel",
+        "thermostat",
+        "switch"
+      ]
+    },
+    {
+      "name": "Screen saver enabled",
+      "type": "binary",
+      "property": "screen_saver_enabled",
+      "base": "screen_saver_enabled",
+      "endpoint": null,
+      "description": "Enable screen saver.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Standby lcd brightness",
+      "type": "numeric",
+      "property": "standby_lcd_brightness",
+      "base": "standby_lcd_brightness",
+      "endpoint": null,
+      "description": "Standby LCD brightness.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Available switches",
+      "type": "enum",
+      "property": "available_switches",
+      "base": "available_switches",
+      "endpoint": null,
+      "description": "Control which switches are available in the switches screen (none disables switches screen).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "none",
+        "1",
+        "2",
+        "3",
+        "1 and 2",
+        "1 and 3",
+        "2 and 3",
+        "all"
+      ]
+    },
+    {
+      "name": "Switch 1 text icon",
+      "type": "composite",
+      "property": "switch_1_text_icon",
+      "base": "switch_1_text_icon",
+      "endpoint": null,
+      "description": "Switch 1 text and icon.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "switch_1_icon",
+          "type": "enum",
+          "description": "Icon",
+          "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
+          ]
+        },
+        {
+          "property": "switch_1_text",
+          "type": "text",
+          "description": "Text"
+        }
+      ]
+    },
+    {
+      "name": "Switch 2 text icon",
+      "type": "composite",
+      "property": "switch_2_text_icon",
+      "base": "switch_2_text_icon",
+      "endpoint": null,
+      "description": "Switch 2 text and icon.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "switch_2_icon",
+          "type": "enum",
+          "description": "Icon",
+          "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
+          ]
+        },
+        {
+          "property": "switch_2_text",
+          "type": "text",
+          "description": "Text"
+        }
+      ]
+    },
+    {
+      "name": "Switch 3 text icon",
+      "type": "composite",
+      "property": "switch_3_text_icon",
+      "base": "switch_3_text_icon",
+      "endpoint": null,
+      "description": "Switch 3 text and icon.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "switch_3_icon",
+          "type": "enum",
+          "description": "Icon",
+          "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"
+          ]
+        },
+        {
+          "property": "switch_3_text",
+          "type": "text",
+          "description": "Text"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

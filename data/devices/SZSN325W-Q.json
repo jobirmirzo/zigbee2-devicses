@@ -1,0 +1,28 @@
+{
+  "model": "SZSN325W-Q",
+  "file": "SZSN325W-Q.md",
+  "vendor": "Feibit",
+  "description": "Three-Gang Scene Switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SZSN325W-Q.png",
+  "added_at": "2024-09-01T12:39:25",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "recall_*"
+      ]
+    }
+  ],
+  "warnings": []
+}

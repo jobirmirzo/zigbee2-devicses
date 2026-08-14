@@ -1,0 +1,312 @@
+{
+  "model": "A5",
+  "file": "A5.md",
+  "vendor": "Moes",
+  "description": "Smart circuit breaker",
+  "image": "https://www.zigbee2mqtt.io/images/devices/A5.png",
+  "added_at": "2025-08-01T15:19:08",
+  "exposes_summary": "temperature, temperature_threshold, temperature_breaker, power_threshold, power_breaker, over_current_threshold, over_current_breaker, over_voltage_threshold, over_voltage_breaker, under_voltage_threshold, under_voltage_breaker, switch (state), countdown, power_outage_memory, indicator_mode, power, current, voltage, energy",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature threshold",
+      "type": "numeric",
+      "property": "temperature_threshold",
+      "base": "temperature_threshold",
+      "endpoint": null,
+      "description": "High temperature threshold.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 40,
+      "value_max": 100,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature breaker",
+      "type": "binary",
+      "property": "temperature_breaker",
+      "base": "temperature_breaker",
+      "endpoint": null,
+      "description": "High temperature breaker.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Power threshold",
+      "type": "numeric",
+      "property": "power_threshold",
+      "base": "power_threshold",
+      "endpoint": null,
+      "description": "High power threshold.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 26,
+      "unit": "kW"
+    },
+    {
+      "name": "Power breaker",
+      "type": "binary",
+      "property": "power_breaker",
+      "base": "power_breaker",
+      "endpoint": null,
+      "description": "High power breaker.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Over current threshold",
+      "type": "numeric",
+      "property": "over_current_threshold",
+      "base": "over_current_threshold",
+      "endpoint": null,
+      "description": "Over-current threshold.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 65,
+      "unit": "A"
+    },
+    {
+      "name": "Over current breaker",
+      "type": "binary",
+      "property": "over_current_breaker",
+      "base": "over_current_breaker",
+      "endpoint": null,
+      "description": "Over-current breaker.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Over voltage threshold",
+      "type": "numeric",
+      "property": "over_voltage_threshold",
+      "base": "over_voltage_threshold",
+      "endpoint": null,
+      "description": "Over-voltage threshold.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 220,
+      "value_max": 265,
+      "unit": "V"
+    },
+    {
+      "name": "Over voltage breaker",
+      "type": "binary",
+      "property": "over_voltage_breaker",
+      "base": "over_voltage_breaker",
+      "endpoint": null,
+      "description": "Over-voltage breaker.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Under voltage threshold",
+      "type": "numeric",
+      "property": "under_voltage_threshold",
+      "base": "under_voltage_threshold",
+      "endpoint": null,
+      "description": "Under-voltage threshold.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 75,
+      "value_max": 240,
+      "unit": "V"
+    },
+    {
+      "name": "Under voltage breaker",
+      "type": "binary",
+      "property": "under_voltage_breaker",
+      "base": "under_voltage_breaker",
+      "endpoint": null,
+      "description": "Under-voltage breaker.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown",
+      "base": "countdown",
+      "endpoint": null,
+      "description": "Toggle the device after a set duration (one time action).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Power outage memory",
+      "type": "enum",
+      "property": "power_outage_memory",
+      "base": "power_outage_memory",
+      "endpoint": null,
+      "description": "Recover state after power outage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off",
+        "restore"
+      ]
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode",
+      "base": "indicator_mode",
+      "endpoint": null,
+      "description": "LED indicator mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "off/on",
+        "on/off",
+        "on"
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    }
+  ],
+  "warnings": []
+}

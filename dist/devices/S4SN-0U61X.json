@@ -1,0 +1,323 @@
+{
+  "model": "S4SN-0U61X",
+  "file": "S4SN-0U61X.md",
+  "vendor": "Shelly",
+  "description": "Presence Gen4 Zigbee",
+  "image": "https://www.zigbee2mqtt.io/images/devices/S4SN-0U61X.png",
+  "added_at": "2026-04-30T19:57:28",
+  "exposes_summary": "occupancy, light_level, dark_threshold, bright_threshold, identify, wifi_status, ip_address, dhcp_enabled, wifi_config",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy_1",
+      "base": "occupancy",
+      "endpoint": "1",
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy_2",
+      "base": "occupancy",
+      "endpoint": "2",
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy_3",
+      "base": "occupancy",
+      "endpoint": "3",
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy_4",
+      "base": "occupancy",
+      "endpoint": "4",
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy_5",
+      "base": "occupancy",
+      "endpoint": "5",
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy_6",
+      "base": "occupancy",
+      "endpoint": "6",
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy_7",
+      "base": "occupancy",
+      "endpoint": "7",
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy_8",
+      "base": "occupancy",
+      "endpoint": "8",
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy_9",
+      "base": "occupancy",
+      "endpoint": "9",
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy_10",
+      "base": "occupancy",
+      "endpoint": "10",
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Light level",
+      "type": "enum",
+      "property": "light_level",
+      "base": "light_level",
+      "endpoint": null,
+      "description": "Coarse light level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "dark",
+        "twilight",
+        "bright"
+      ]
+    },
+    {
+      "name": "Dark threshold",
+      "type": "numeric",
+      "property": "dark_threshold",
+      "base": "dark_threshold",
+      "endpoint": null,
+      "description": "Lux threshold below which light level is dark.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535,
+      "unit": "lx"
+    },
+    {
+      "name": "Bright threshold",
+      "type": "numeric",
+      "property": "bright_threshold",
+      "base": "bright_threshold",
+      "endpoint": null,
+      "description": "Lux threshold above which light level is bright.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535,
+      "unit": "lx"
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Wi-Fi status",
+      "type": "text",
+      "property": "wifi_status",
+      "base": "wifi_status",
+      "endpoint": null,
+      "description": "Current connection status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "IP address",
+      "type": "text",
+      "property": "ip_address",
+      "base": "ip_address",
+      "endpoint": null,
+      "description": "IP address currently assigned to the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "DHCP enabled",
+      "type": "binary",
+      "property": "dhcp_enabled",
+      "base": "dhcp_enabled",
+      "endpoint": null,
+      "description": "Indicates whether DHCP is used to automatically assign network settings.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Wi-Fi Configuration",
+      "type": "composite",
+      "property": "wifi_config",
+      "base": "wifi_config",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "enabled",
+          "type": "binary",
+          "description": "Enable/disable Wi-Fi connectivity",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "ssid",
+          "type": "text",
+          "description": "Name (SSID) of the Wi-Fi network to connect to"
+        },
+        {
+          "property": "password",
+          "type": "text",
+          "description": "Password for the selected Wi-Fi network"
+        },
+        {
+          "property": "static_ip",
+          "type": "text",
+          "description": "Manually assigned IP address (used when DHCP is disabled)"
+        },
+        {
+          "property": "net_mask",
+          "type": "text",
+          "description": "Subnet mask for the static IP configuration"
+        },
+        {
+          "property": "gateway",
+          "type": "text",
+          "description": "Default gateway address for static IP configuration"
+        },
+        {
+          "property": "name_server",
+          "type": "text",
+          "description": "Name server address for static IP configuration"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

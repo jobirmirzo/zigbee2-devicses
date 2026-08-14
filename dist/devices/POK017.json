@@ -1,0 +1,118 @@
+{
+  "model": "POK017",
+  "file": "POK017.md",
+  "vendor": "PushOk Hardware",
+  "description": "Battery powered greenhouse vent",
+  "image": "https://www.zigbee2mqtt.io/images/devices/POK017.png",
+  "added_at": "2025-05-01T17:59:09",
+  "exposes_summary": "cover (state, position), battery, voltage, thermostat_preset, status",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Thermostat preset",
+      "type": "enum",
+      "property": "thermostat_preset",
+      "base": "thermostat_preset",
+      "endpoint": null,
+      "description": "Heat sensitivity level for automatic vent opening.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "level_1",
+        "level_2",
+        "level_3",
+        "level_4",
+        "level_5",
+        "level_6",
+        "level_7",
+        "level_8",
+        "level_9"
+      ]
+    },
+    {
+      "name": "Status",
+      "type": "enum",
+      "property": "status",
+      "base": "status",
+      "endpoint": null,
+      "description": "Actual window status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "off",
+        "on",
+        "moving",
+        "stuck",
+        "middle"
+      ]
+    }
+  ],
+  "warnings": []
+}

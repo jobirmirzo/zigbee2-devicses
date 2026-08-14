@@ -1,0 +1,50 @@
+{
+  "model": "SZT211_AW-P1",
+  "file": "SZT211_AW-P1.md",
+  "vendor": "Feibit",
+  "description": "Curtain Motor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SZT211_AW-P1.png",
+  "added_at": "2024-09-01T12:39:25",
+  "exposes_summary": "cover (state, position, tilt)",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "tilt",
+          "base": "tilt",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

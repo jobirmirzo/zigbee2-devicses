@@ -1,0 +1,132 @@
+{
+  "model": "BSEN-M",
+  "file": "BSEN-M.md",
+  "vendor": "Bosch",
+  "description": "Motion detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BSEN-M.png",
+  "added_at": "2025-09-30T19:37:28",
+  "exposes_summary": "tamper, occupancy, voltage, battery_low, sensitivity_level, test_mode, illuminance, temperature",
+  "exposes": [
+    {
+      "name": "Tamper state",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy state",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected any motion in the surroundings.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Sensitivity level",
+      "type": "enum",
+      "property": "sensitivity_level",
+      "base": "sensitivity_level",
+      "endpoint": null,
+      "description": "Specifies the selected sensitivity level on the back of the device (either 'pet immunity' or 'sneak-by guard')..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "pet_immunity",
+        "sneak_by_guard",
+        "unknown"
+      ]
+    },
+    {
+      "name": "Test mode",
+      "type": "binary",
+      "property": "test_mode",
+      "base": "test_mode",
+      "endpoint": null,
+      "description": "Activates the test mode. In this mode, the device blinks on every detected motion without any wait time in between to verify the installation. Please keep in mind that it can take up to 45 seconds for the test mode to be activated..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

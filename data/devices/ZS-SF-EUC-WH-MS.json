@@ -1,0 +1,43 @@
+{
+  "model": "ZS-SF-EUC-WH-MS",
+  "file": "ZS-SF-EUC-WH-MS.md",
+  "vendor": "Moes",
+  "description": "Star feather Zigbee curtain switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZS-SF-EUC-WH-MS.png",
+  "added_at": "2026-04-30T19:57:27",
+  "exposes_summary": "cover (state, position)",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,11 @@
+{
+  "model": "R0",
+  "file": "R0.md",
+  "vendor": "Ubisys",
+  "description": "Zigbee Router",
+  "image": "https://www.zigbee2mqtt.io/images/devices/R0.png",
+  "added_at": "2023-04-01T20:16:00Z",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

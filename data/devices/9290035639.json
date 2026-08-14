@@ -1,0 +1,86 @@
+{
+  "model": "9290035639",
+  "file": "9290035639.md",
+  "vendor": "Philips",
+  "description": "Hue Secure contact sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/9290035639.png",
+  "added_at": "2023-09-28T10:54:36",
+  "exposes_summary": "contact, tamper, contact_last_changed, tamper_last_changed, battery",
+  "exposes": [
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates if the contact is closed (= true) or open (= false).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Contact last changed",
+      "type": "numeric",
+      "property": "contact_last_changed",
+      "base": "contact_last_changed",
+      "endpoint": null,
+      "description": "Time (in seconds) since when contact was last changed..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Tamper last changed",
+      "type": "numeric",
+      "property": "tamper_last_changed",
+      "base": "tamper_last_changed",
+      "endpoint": null,
+      "description": "Time (in seconds) since when tamper was last changed..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

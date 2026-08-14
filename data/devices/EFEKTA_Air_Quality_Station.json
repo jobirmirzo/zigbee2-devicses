@@ -1,0 +1,384 @@
+{
+  "model": "EFEKTA_Air_Quality_Station",
+  "file": "EFEKTA_Air_Quality_Station.md",
+  "vendor": "EFEKTA",
+  "description": "Air quality station",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_Air_Quality_Station.png",
+  "added_at": "2025-02-06T19:24:12",
+  "exposes_summary": "co2, pm1, pm25, pm4, pm10, pm_size, aqi_25_index, voc_index, temperature, humidity, illuminance, report_delay, auto_brightness, night_onoff_backlight, night_on_backlight, night_off_backlight, temperature_offset, humidity_offset, auto_clean_interval, manual_clean, set_altitude, forced_recalibration, manual_forced_recalibration, automatic_self_calibration, factory_reset_co2",
+  "exposes": [
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "Measured value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Pm1",
+      "type": "numeric",
+      "property": "pm1",
+      "base": "pm1",
+      "endpoint": null,
+      "description": "Measured PM1.0 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Pm25",
+      "type": "numeric",
+      "property": "pm25",
+      "base": "pm25",
+      "endpoint": null,
+      "description": "Measured PM2.5 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Pm4",
+      "type": "numeric",
+      "property": "pm4",
+      "base": "pm4",
+      "endpoint": null,
+      "description": "Measured PM4.0 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Pm10",
+      "type": "numeric",
+      "property": "pm10",
+      "base": "pm10",
+      "endpoint": null,
+      "description": "Measured PM10.0 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Pm size",
+      "type": "numeric",
+      "property": "pm_size",
+      "base": "pm_size",
+      "endpoint": null,
+      "description": "Typical Particle Size.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µm"
+    },
+    {
+      "name": "Aqi 25 index",
+      "type": "numeric",
+      "property": "aqi_25_index",
+      "base": "aqi_25_index",
+      "endpoint": null,
+      "description": "PM 2.5 INDEX.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "PM2.5 Index"
+    },
+    {
+      "name": "Voc index",
+      "type": "numeric",
+      "property": "voc_index",
+      "base": "voc_index",
+      "endpoint": null,
+      "description": "VOC index.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VOC Index points"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured value of the built-in temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured value of the built-in humidity sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Report delay",
+      "type": "numeric",
+      "property": "report_delay",
+      "base": "report_delay",
+      "endpoint": null,
+      "description": "Setting the sensor report delay. Setting the time in seconds (6-600), by default 15 seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 6,
+      "value_max": 600,
+      "unit": "sec"
+    },
+    {
+      "name": "Auto brightness",
+      "type": "binary",
+      "property": "auto_brightness",
+      "base": "auto_brightness",
+      "endpoint": null,
+      "description": "Enable or Disable Auto Brightness of the Display.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Night onoff backlight",
+      "type": "binary",
+      "property": "night_onoff_backlight",
+      "base": "night_onoff_backlight",
+      "endpoint": null,
+      "description": "Complete shutdown of the backlight at night mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Night on backlight",
+      "type": "numeric",
+      "property": "night_on_backlight",
+      "base": "night_on_backlight",
+      "endpoint": null,
+      "description": "Night mode activation time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23,
+      "unit": "Hr"
+    },
+    {
+      "name": "Night off backlight",
+      "type": "numeric",
+      "property": "night_off_backlight",
+      "base": "night_off_backlight",
+      "endpoint": null,
+      "description": "Night mode activation time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23,
+      "unit": "Hr"
+    },
+    {
+      "name": "Temperature offset",
+      "type": "numeric",
+      "property": "temperature_offset",
+      "base": "temperature_offset",
+      "endpoint": null,
+      "description": "Adjust temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity offset",
+      "type": "numeric",
+      "property": "humidity_offset",
+      "base": "humidity_offset",
+      "endpoint": null,
+      "description": "Adjust humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "%"
+    },
+    {
+      "name": "Auto clean interval",
+      "type": "numeric",
+      "property": "auto_clean_interval",
+      "base": "auto_clean_interval",
+      "endpoint": null,
+      "description": "Auto clean interval PM2.5 sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "day"
+    },
+    {
+      "name": "Manual clean",
+      "type": "binary",
+      "property": "manual_clean",
+      "base": "manual_clean",
+      "endpoint": null,
+      "description": "Manual clean PM2.5 sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Set altitude",
+      "type": "numeric",
+      "property": "set_altitude",
+      "base": "set_altitude",
+      "endpoint": null,
+      "description": "Setting the altitude above sea level (for high accuracy of the CO2 sensor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3000,
+      "unit": "meters"
+    },
+    {
+      "name": "Forced recalibration",
+      "type": "binary",
+      "property": "forced_recalibration",
+      "base": "forced_recalibration",
+      "endpoint": null,
+      "description": "Start FRC (Perform Forced Recalibration of the CO2 Sensor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Manual forced recalibration",
+      "type": "numeric",
+      "property": "manual_forced_recalibration",
+      "base": "manual_forced_recalibration",
+      "endpoint": null,
+      "description": "Start Manual FRC (Perform Forced Recalibration of the CO2 Sensor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Automatic self calibration",
+      "type": "binary",
+      "property": "automatic_self_calibration",
+      "base": "automatic_self_calibration",
+      "endpoint": null,
+      "description": "Automatic self calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Factory reset co2",
+      "type": "binary",
+      "property": "factory_reset_co2",
+      "base": "factory_reset_co2",
+      "endpoint": null,
+      "description": "Factory Reset CO2 sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

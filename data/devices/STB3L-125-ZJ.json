@@ -1,0 +1,433 @@
+{
+  "model": "STB3L-125-ZJ",
+  "file": "STB3L-125-ZJ.md",
+  "vendor": "SUTON",
+  "description": "Zigbee DIN RCBO energy meter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/STB3L-125-ZJ.png",
+  "added_at": "2024-09-01T12:39:25",
+  "exposes_summary": "switch (state), energy, faults, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, temperature, leakage_test, over_current_breaker, over_current_threshold, over_voltage_breaker, over_voltage_threshold, under_voltage_breaker, under_voltage_threshold, insufficient_balance_breaker, insufficient_balance_threshold, overload_breaker, overload_threshold, leakage_breaker, leakage_threshold, high_temperature_breaker, high_temperature_threshold",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Faults",
+      "type": "list",
+      "property": "faults",
+      "base": "faults",
+      "endpoint": null,
+      "description": "List of current faults.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Voltage a",
+      "type": "numeric",
+      "property": "voltage_a",
+      "base": "voltage_a",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage b",
+      "type": "numeric",
+      "property": "voltage_b",
+      "base": "voltage_b",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage c",
+      "type": "numeric",
+      "property": "voltage_c",
+      "base": "voltage_c",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase C).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power a",
+      "type": "numeric",
+      "property": "power_a",
+      "base": "power_a",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power b",
+      "type": "numeric",
+      "property": "power_b",
+      "base": "power_b",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power c",
+      "type": "numeric",
+      "property": "power_c",
+      "base": "power_c",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase C).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current a",
+      "type": "numeric",
+      "property": "current_a",
+      "base": "current_a",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current b",
+      "type": "numeric",
+      "property": "current_b",
+      "base": "current_b",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current c",
+      "type": "numeric",
+      "property": "current_c",
+      "base": "current_c",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase C).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Leakage test",
+      "type": "binary",
+      "property": "leakage_test",
+      "base": "leakage_test",
+      "endpoint": null,
+      "description": "Turn ON to perform a leagage test.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Over current breaker",
+      "type": "binary",
+      "property": "over_current_breaker",
+      "base": "over_current_breaker",
+      "endpoint": null,
+      "description": "OFF - alarm only, ON - relay will turn off when threshold reached.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Over current threshold",
+      "type": "numeric",
+      "property": "over_current_threshold",
+      "base": "over_current_threshold",
+      "endpoint": null,
+      "description": "Setup the value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 63,
+      "unit": "A"
+    },
+    {
+      "name": "Over voltage breaker",
+      "type": "binary",
+      "property": "over_voltage_breaker",
+      "base": "over_voltage_breaker",
+      "endpoint": null,
+      "description": "OFF - alarm only, ON - relay will turn off when threshold reached.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Over voltage threshold",
+      "type": "numeric",
+      "property": "over_voltage_threshold",
+      "base": "over_voltage_threshold",
+      "endpoint": null,
+      "description": "Setup value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 250,
+      "value_max": 300,
+      "unit": "V"
+    },
+    {
+      "name": "Under voltage breaker",
+      "type": "binary",
+      "property": "under_voltage_breaker",
+      "base": "under_voltage_breaker",
+      "endpoint": null,
+      "description": "OFF - alarm only, ON - relay will turn off when threshold reached.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Under voltage threshold",
+      "type": "numeric",
+      "property": "under_voltage_threshold",
+      "base": "under_voltage_threshold",
+      "endpoint": null,
+      "description": "Setup value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 150,
+      "value_max": 200,
+      "unit": "V"
+    },
+    {
+      "name": "Insufficient balance breaker",
+      "type": "binary",
+      "property": "insufficient_balance_breaker",
+      "base": "insufficient_balance_breaker",
+      "endpoint": null,
+      "description": "OFF - alarm only, ON - relay will turn off when threshold reached.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Insufficient balance threshold",
+      "type": "numeric",
+      "property": "insufficient_balance_threshold",
+      "base": "insufficient_balance_threshold",
+      "endpoint": null,
+      "description": "Setup value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 65535,
+      "unit": "kWh"
+    },
+    {
+      "name": "Overload breaker",
+      "type": "binary",
+      "property": "overload_breaker",
+      "base": "overload_breaker",
+      "endpoint": null,
+      "description": "OFF - alarm only, ON - relay will turn off when threshold reached.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Overload threshold",
+      "type": "numeric",
+      "property": "overload_threshold",
+      "base": "overload_threshold",
+      "endpoint": null,
+      "description": "Setup value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 25,
+      "unit": "kW"
+    },
+    {
+      "name": "Leakage breaker",
+      "type": "binary",
+      "property": "leakage_breaker",
+      "base": "leakage_breaker",
+      "endpoint": null,
+      "description": "OFF - alarm only, ON - relay will turn off when threshold reached.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Leakage threshold",
+      "type": "numeric",
+      "property": "leakage_threshold",
+      "base": "leakage_threshold",
+      "endpoint": null,
+      "description": "Setup value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 90,
+      "unit": "mA"
+    },
+    {
+      "name": "High temperature breaker",
+      "type": "binary",
+      "property": "high_temperature_breaker",
+      "base": "high_temperature_breaker",
+      "endpoint": null,
+      "description": "OFF - alarm only, ON - relay will turn off when threshold reached.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "High temperature threshold",
+      "type": "numeric",
+      "property": "high_temperature_threshold",
+      "base": "high_temperature_threshold",
+      "endpoint": null,
+      "description": "Setup value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 40,
+      "value_max": 100,
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

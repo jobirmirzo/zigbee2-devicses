@@ -1,0 +1,168 @@
+{
+  "model": "ZG-210Z",
+  "file": "ZG-210Z.md",
+  "vendor": "HOBEIAN",
+  "description": "Pressure Sensing Strap/Bed Occupancy Sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-210Z.png",
+  "added_at": "2026-06-27T20:18:44",
+  "exposes_summary": "pressure_state, current_pressure, temperature, humidity, battery, pressure_intensity, presence_delay, sedentary_reminder, temperature_calibration, humidity_calibration",
+  "exposes": [
+    {
+      "name": "Pressure state",
+      "type": "enum",
+      "property": "pressure_state",
+      "base": "pressure_state",
+      "endpoint": null,
+      "description": "Pressure state,none: Vacant,sit: Sitting,sedentary: Sedentary.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "sit",
+        "sedentary"
+      ]
+    },
+    {
+      "name": "Current pressure",
+      "type": "numeric",
+      "property": "current_pressure",
+      "base": "current_pressure",
+      "endpoint": null,
+      "description": "Sensing pressure value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "x"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Pressure intensity",
+      "type": "numeric",
+      "property": "pressure_intensity",
+      "base": "pressure_intensity",
+      "endpoint": null,
+      "description": "Set Sensing pressure intensity value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 2000,
+      "unit": "x"
+    },
+    {
+      "name": "Presence delay",
+      "type": "numeric",
+      "property": "presence_delay",
+      "base": "presence_delay",
+      "endpoint": null,
+      "description": "Delay to report no presence.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Sedentary reminder",
+      "type": "numeric",
+      "property": "sedentary_reminder",
+      "base": "sedentary_reminder",
+      "endpoint": null,
+      "description": "Set sedentary Reminder Time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1440,
+      "unit": "minutes"
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Temperature calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -2,
+      "value_max": 2,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Humidity calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -30,
+      "value_max": 30,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

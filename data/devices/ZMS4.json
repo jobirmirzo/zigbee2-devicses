@@ -1,0 +1,42 @@
+{
+  "model": "ZMS4",
+  "file": "ZMS4.md",
+  "vendor": "RTX",
+  "description": "Zigbee PIR sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZMS4.png",
+  "added_at": "2022-08-31T11:26:27",
+  "exposes_summary": "battery_low, occupancy",
+  "exposes": [
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

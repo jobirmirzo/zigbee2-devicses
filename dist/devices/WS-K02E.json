@@ -1,0 +1,206 @@
+{
+  "model": "WS-K02E",
+  "file": "WS-K02E.md",
+  "vendor": "Aqara",
+  "description": "Light Switch H2 US (double rocker)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WS-K02E.png",
+  "added_at": "2025-05-01T17:59:09",
+  "exposes_summary": "power, switch (state), device_temperature, power_outage_count, power_on_behavior, operation_mode, lock_relay, multi_click, led_disabled_night, flip_indicator_light, mode_switch, action",
+  "exposes": [
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "top",
+      "features": [
+        {
+          "property": "state_top",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages (since last pairing).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Power on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "previous",
+        "off",
+        "inverted"
+      ]
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode_top",
+      "base": "operation_mode",
+      "endpoint": "top",
+      "description": "Decoupled mode for top button.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "decoupled",
+        "control_relay"
+      ]
+    },
+    {
+      "name": "Lock relay",
+      "type": "binary",
+      "property": "lock_relay_top",
+      "base": "lock_relay",
+      "endpoint": "top",
+      "description": "Locks top relay and prevents it from operating.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Multi click",
+      "type": "binary",
+      "property": "multi_click_wireless",
+      "base": "multi_click",
+      "endpoint": "wireless",
+      "description": "Multi-click mode for wireless button.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Led disabled night",
+      "type": "binary",
+      "property": "led_disabled_night",
+      "base": "led_disabled_night",
+      "endpoint": null,
+      "description": "Enables/disables LED indicator at night.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Flip indicator light",
+      "type": "binary",
+      "property": "flip_indicator_light",
+      "base": "flip_indicator_light",
+      "endpoint": null,
+      "description": "After turn on, the indicator light turns on while switch is off, and vice versa.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Mode switch",
+      "type": "enum",
+      "property": "mode_switch",
+      "base": "mode_switch",
+      "endpoint": null,
+      "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "quick_mode",
+        "anti_flicker_mode"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "hold_top",
+        "hold_wireless",
+        "single_top",
+        "single_wireless",
+        "double_top",
+        "double_wireless",
+        "release_top",
+        "release_wireless"
+      ]
+    }
+  ],
+  "warnings": []
+}

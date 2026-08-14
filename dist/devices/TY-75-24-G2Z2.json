@@ -1,0 +1,59 @@
+{
+  "model": "TY-75-24-G2Z2",
+  "file": "TY-75-24-G2Z2.md",
+  "vendor": "Ltech",
+  "description": "150W 24V Zigbee CV tunable white LED driver",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TY-75-24-G2Z2.png",
+  "added_at": "2023-08-01T15:13:29",
+  "exposes_summary": "light (state, brightness), power_on_behavior",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "previous",
+        "on"
+      ]
+    }
+  ],
+  "warnings": []
+}

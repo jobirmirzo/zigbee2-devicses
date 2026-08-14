@@ -1,0 +1,329 @@
+{
+  "model": "TERNCY-WS07-D3",
+  "file": "TERNCY-WS07-D3.md",
+  "vendor": "TERNCY",
+  "description": "3-gang neutral wall switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TERNCY-WS07-D3.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "operation_mode, wireless_led_status, led_feedback_mode, action_duration, switch (state), power_on_behavior, action",
+  "exposes": [
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode_l1",
+      "base": "operation_mode",
+      "endpoint": "l1",
+      "description": "Control relay or act as wireless switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "control_relay",
+        "wireless"
+      ]
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode_l2",
+      "base": "operation_mode",
+      "endpoint": "l2",
+      "description": "Control relay or act as wireless switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "control_relay",
+        "wireless"
+      ]
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode_l3",
+      "base": "operation_mode",
+      "endpoint": "l3",
+      "description": "Control relay or act as wireless switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "control_relay",
+        "wireless"
+      ]
+    },
+    {
+      "name": "Wireless led status",
+      "type": "enum",
+      "property": "wireless_led_status_l1",
+      "base": "wireless_led_status",
+      "endpoint": "l1",
+      "description": "LED state while in wireless switch mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on"
+      ]
+    },
+    {
+      "name": "Wireless led status",
+      "type": "enum",
+      "property": "wireless_led_status_l2",
+      "base": "wireless_led_status",
+      "endpoint": "l2",
+      "description": "LED state while in wireless switch mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on"
+      ]
+    },
+    {
+      "name": "Wireless led status",
+      "type": "enum",
+      "property": "wireless_led_status_l3",
+      "base": "wireless_led_status",
+      "endpoint": "l3",
+      "description": "LED state while in wireless switch mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on"
+      ]
+    },
+    {
+      "name": "Led feedback mode",
+      "type": "enum",
+      "property": "led_feedback_mode_l1",
+      "base": "led_feedback_mode",
+      "endpoint": "l1",
+      "description": "Relay-mode LED feedback relation.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "positive",
+        "negative"
+      ]
+    },
+    {
+      "name": "Led feedback mode",
+      "type": "enum",
+      "property": "led_feedback_mode_l2",
+      "base": "led_feedback_mode",
+      "endpoint": "l2",
+      "description": "Relay-mode LED feedback relation.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "positive",
+        "negative"
+      ]
+    },
+    {
+      "name": "Led feedback mode",
+      "type": "enum",
+      "property": "led_feedback_mode_l3",
+      "base": "led_feedback_mode",
+      "endpoint": "l3",
+      "description": "Relay-mode LED feedback relation.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "positive",
+        "negative"
+      ]
+    },
+    {
+      "name": "Action duration",
+      "type": "numeric",
+      "property": "action_duration",
+      "base": "action_duration",
+      "endpoint": null,
+      "description": "Triggered action duration in seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l3",
+      "features": [
+        {
+          "property": "state_l3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_l1",
+      "base": "power_on_behavior",
+      "endpoint": "l1",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_l2",
+      "base": "power_on_behavior",
+      "endpoint": "l2",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_l3",
+      "base": "power_on_behavior",
+      "endpoint": "l3",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single_l1",
+        "double_l1",
+        "triple_l1",
+        "quadruple_l1",
+        "5_click_l1",
+        "6_click_l1",
+        "7_click_l1",
+        "hold_l1",
+        "release_l1",
+        "single_l2",
+        "double_l2",
+        "triple_l2",
+        "quadruple_l2",
+        "5_click_l2",
+        "6_click_l2",
+        "7_click_l2",
+        "hold_l2",
+        "release_l2",
+        "single_l3",
+        "double_l3",
+        "triple_l3",
+        "quadruple_l3",
+        "5_click_l3",
+        "6_click_l3",
+        "7_click_l3",
+        "hold_l3",
+        "release_l3"
+      ]
+    }
+  ],
+  "warnings": []
+}

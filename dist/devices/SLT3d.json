@@ -1,0 +1,28 @@
+{
+  "model": "SLT3d",
+  "file": "SLT3d.md",
+  "vendor": "Hive",
+  "description": "Heating thermostat remote control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SLT3d.png",
+  "added_at": "2023-09-28T10:54:36",
+  "exposes_summary": "battery",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

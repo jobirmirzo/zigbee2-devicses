@@ -1,0 +1,214 @@
+{
+  "model": "SNZB-02_EFEKTA",
+  "file": "SNZB-02_EFEKTA.md",
+  "vendor": "EFEKTA",
+  "description": "Alternative firmware for the SONOFF SNZB-02 sensor from EfektaLab, DIY",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SNZB-02_EFEKTA.png",
+  "added_at": "2022-09-06T00:31:40Z",
+  "exposes_summary": "battery, voltage, temperature, humidity, sensor_reading_interval, enabling_temperature_control, temperature_actions, high_temperature, low_temperature, enabling_humidity_control, humidity_actions, high_humidity, low_humidity",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Sensor reading interval",
+      "type": "numeric",
+      "property": "sensor_reading_interval",
+      "base": "sensor_reading_interval",
+      "endpoint": null,
+      "description": "Adjust Report Delay. Setting the time in seconds, by default 6 seconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 60,
+      "unit": "sec."
+    },
+    {
+      "name": "Enabling temperature control",
+      "type": "binary",
+      "property": "enabling_temperature_control",
+      "base": "enabling_temperature_control",
+      "endpoint": null,
+      "description": "Enables/disables Tempearure control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Temperature actions",
+      "type": "enum",
+      "property": "temperature_actions",
+      "base": "temperature_actions",
+      "endpoint": null,
+      "description": "Heat or cool.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "HEAT",
+        "COOL"
+      ]
+    },
+    {
+      "name": "High temperature",
+      "type": "numeric",
+      "property": "high_temperature",
+      "base": "high_temperature",
+      "endpoint": null,
+      "description": "Setting High Temperature Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -40,
+      "value_max": 90,
+      "unit": "°C"
+    },
+    {
+      "name": "Low temperature",
+      "type": "numeric",
+      "property": "low_temperature",
+      "base": "low_temperature",
+      "endpoint": null,
+      "description": "Setting Low Temperature Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -40,
+      "value_max": 90,
+      "unit": "°C"
+    },
+    {
+      "name": "Enabling humidity control",
+      "type": "binary",
+      "property": "enabling_humidity_control",
+      "base": "enabling_humidity_control",
+      "endpoint": null,
+      "description": "Enables/disables Humidity control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Humidity actions",
+      "type": "enum",
+      "property": "humidity_actions",
+      "base": "humidity_actions",
+      "endpoint": null,
+      "description": "Wet or dry.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "WET",
+        "DRY"
+      ]
+    },
+    {
+      "name": "High humidity",
+      "type": "numeric",
+      "property": "high_humidity",
+      "base": "high_humidity",
+      "endpoint": null,
+      "description": "Setting High Humidity Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 99,
+      "unit": "%"
+    },
+    {
+      "name": "Low humidity",
+      "type": "numeric",
+      "property": "low_humidity",
+      "base": "low_humidity",
+      "endpoint": null,
+      "description": "Setting Low Humidity Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 99,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

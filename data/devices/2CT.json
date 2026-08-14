@@ -1,0 +1,298 @@
+{
+  "model": "2CT",
+  "file": "2CT.md",
+  "vendor": "Tuya",
+  "description": "Bidirectional energy meter with 80A current clamp",
+  "image": "https://www.zigbee2mqtt.io/images/devices/2CT.png",
+  "added_at": "2025-02-01T20:02:57",
+  "exposes_summary": "ac_frequency, voltage, power, power_a, power_b, current_a, current_b, power_factor_a, power_factor_b, energy_a, energy_b, update_frequency, timestamp_a, timestamp_b, calibration_ac_frequency, calibration_voltage, calibration_power_a, calibration_current_a, calibration_power_b, calibration_current_b",
+  "exposes": [
+    {
+      "name": "AC frequency",
+      "type": "numeric",
+      "property": "ac_frequency",
+      "base": "ac_frequency",
+      "endpoint": null,
+      "description": "Measured electrical AC frequency.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power a",
+      "type": "numeric",
+      "property": "power_a",
+      "base": "power_a",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power b",
+      "type": "numeric",
+      "property": "power_b",
+      "base": "power_b",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current a",
+      "type": "numeric",
+      "property": "current_a",
+      "base": "current_a",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current b",
+      "type": "numeric",
+      "property": "current_b",
+      "base": "current_b",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power factor a",
+      "type": "numeric",
+      "property": "power_factor_a",
+      "base": "power_factor_a",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Power factor b",
+      "type": "numeric",
+      "property": "power_factor_b",
+      "base": "power_factor_b",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Energy a",
+      "type": "numeric",
+      "property": "energy_a",
+      "base": "energy_a",
+      "endpoint": null,
+      "description": "Sum of consumed energy (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy b",
+      "type": "numeric",
+      "property": "energy_b",
+      "base": "energy_b",
+      "endpoint": null,
+      "description": "Sum of consumed energy (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Update frequency",
+      "type": "numeric",
+      "property": "update_frequency",
+      "base": "update_frequency",
+      "endpoint": null,
+      "description": "Update frequency.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 3,
+      "value_max": 60,
+      "unit": "s"
+    },
+    {
+      "name": "Timestamp a",
+      "type": "numeric",
+      "property": "timestamp_a",
+      "base": "timestamp_a",
+      "endpoint": null,
+      "description": "Timestamp at power measure (phase a).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Timestamp b",
+      "type": "numeric",
+      "property": "timestamp_b",
+      "base": "timestamp_b",
+      "endpoint": null,
+      "description": "Timestamp at power measure (phase b).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Calibration ac frequency",
+      "type": "numeric",
+      "property": "calibration_ac_frequency",
+      "base": "calibration_ac_frequency",
+      "endpoint": null,
+      "description": "Calibration AC frequency.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 1.5
+    },
+    {
+      "name": "Calibration voltage",
+      "type": "numeric",
+      "property": "calibration_voltage",
+      "base": "calibration_voltage",
+      "endpoint": null,
+      "description": "Calibration voltage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 1.5
+    },
+    {
+      "name": "Calibration power a",
+      "type": "numeric",
+      "property": "calibration_power_a",
+      "base": "calibration_power_a",
+      "endpoint": null,
+      "description": "Calibration power A.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 1.5
+    },
+    {
+      "name": "Calibration current a",
+      "type": "numeric",
+      "property": "calibration_current_a",
+      "base": "calibration_current_a",
+      "endpoint": null,
+      "description": "Calibration current A.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 1.5
+    },
+    {
+      "name": "Calibration power b",
+      "type": "numeric",
+      "property": "calibration_power_b",
+      "base": "calibration_power_b",
+      "endpoint": null,
+      "description": "Calibration power B.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 1.5
+    },
+    {
+      "name": "Calibration current b",
+      "type": "numeric",
+      "property": "calibration_current_b",
+      "base": "calibration_current_b",
+      "endpoint": null,
+      "description": "Calibration current B.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 1.5
+    }
+  ],
+  "warnings": []
+}

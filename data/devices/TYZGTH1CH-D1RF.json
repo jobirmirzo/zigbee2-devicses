@@ -1,0 +1,226 @@
+{
+  "model": "TYZGTH1CH-D1RF",
+  "file": "TYZGTH1CH-D1RF.md",
+  "vendor": "Mumubiz",
+  "description": "Smart switch with temperature/humidity sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TYZGTH1CH-D1RF.png",
+  "added_at": "2024-06-30T19:12:33",
+  "exposes_summary": "switch (state), power_outage_memory, child_lock, temperature, humidity, temperature_calibration, humidity_calibration, temperature_sensitivity, humidity_sensitivity, manual_mode, auto_settings",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power outage memory",
+      "type": "enum",
+      "property": "power_outage_memory",
+      "base": "power_outage_memory",
+      "endpoint": null,
+      "description": "Recover state after power outage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off",
+        "restore"
+      ]
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Temperature calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -10,
+      "value_max": 10,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Humidity calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -10,
+      "value_max": 10,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature sensitivity",
+      "type": "numeric",
+      "property": "temperature_sensitivity",
+      "base": "temperature_sensitivity",
+      "endpoint": null,
+      "description": "Temperature sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 1,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity sensitivity",
+      "type": "numeric",
+      "property": "humidity_sensitivity",
+      "base": "humidity_sensitivity",
+      "endpoint": null,
+      "description": "Humidity sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10,
+      "unit": "%"
+    },
+    {
+      "name": "Manual mode",
+      "type": "binary",
+      "property": "manual_mode",
+      "base": "manual_mode",
+      "endpoint": null,
+      "description": "Manual mode, ON = auto settings disabled, OFF = auto settings enabled.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Auto settings",
+      "type": "composite",
+      "property": "auto_settings",
+      "base": "auto_settings",
+      "endpoint": null,
+      "description": "Automatically switch ON/OFF, make sure manual mode is turned OFF otherwise auto settings are not applied..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "enabled",
+          "type": "binary",
+          "description": "Enable auto settings",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "temp_greater_then",
+          "type": "enum",
+          "description": "Greater action",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "temp_greater_value",
+          "type": "numeric",
+          "description": "Temperature greater than value min value is -20, max value is 80, unit is °C"
+        },
+        {
+          "property": "temp_lower_then",
+          "type": "enum",
+          "description": "Lower action",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        },
+        {
+          "property": "temp_lower_value",
+          "type": "numeric",
+          "description": "Temperature lower than value min value is -20, max value is 80, unit is °C"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

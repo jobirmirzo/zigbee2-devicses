@@ -1,0 +1,113 @@
+{
+  "model": "NH3526",
+  "file": "NH3526.md",
+  "vendor": "Schneider Electric",
+  "description": "Motion sensor with switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/NH3526.png",
+  "added_at": "2022-01-31T17:42:44",
+  "exposes_summary": "switch (state), illuminance, occupancy, occupancy_timeout, occupancy_sensitivity, ambience_light_threshold",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy timeout",
+      "type": "numeric",
+      "property": "occupancy_timeout",
+      "base": "occupancy_timeout",
+      "endpoint": null,
+      "description": "Time in seconds before occupancy is cleared after the last detected movement..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65534,
+      "unit": "s"
+    },
+    {
+      "name": "Occupancy sensitivity",
+      "type": "enum",
+      "property": "occupancy_sensitivity",
+      "base": "occupancy_sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity of the occupancy sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Low",
+        "Medium",
+        "High"
+      ]
+    },
+    {
+      "name": "Ambience light threshold",
+      "type": "numeric",
+      "property": "ambience_light_threshold",
+      "base": "ambience_light_threshold",
+      "endpoint": null,
+      "description": "Threshold above which occupancy will not trigger the light switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 2000,
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

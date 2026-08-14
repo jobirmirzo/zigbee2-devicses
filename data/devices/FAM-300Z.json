@@ -1,0 +1,89 @@
+{
+  "model": "FAM-300Z",
+  "file": "FAM-300Z.md",
+  "vendor": "ShinaSystem",
+  "description": "SiHAS Smoke detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/FAM-300Z.png",
+  "added_at": "2025-05-01T17:59:09",
+  "exposes_summary": "remote_control_permission, force_smoke_alarm, smoke_battery, smoke, battery",
+  "exposes": [
+    {
+      "name": "Remote control permission",
+      "type": "binary",
+      "property": "remote_control_permission",
+      "base": "remote_control_permission",
+      "endpoint": null,
+      "description": "Indicate whether remote control is permitted or denied..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "True",
+      "value_off": "False"
+    },
+    {
+      "name": "Force smoke alarm",
+      "type": "binary",
+      "property": "force_smoke_alarm",
+      "base": "force_smoke_alarm",
+      "endpoint": null,
+      "description": "Forcibly activating/deactivating smoke alarms. This command is only available when Remote control permission is True..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Smoke battery",
+      "type": "numeric",
+      "property": "smoke_battery",
+      "base": "smoke_battery",
+      "endpoint": null,
+      "description": "Remaining battery in % for smoke sensor, For reference, two batteries are used. One is for Smoke sensor, the other is for Zigbee..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

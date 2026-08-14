@@ -1,0 +1,297 @@
+{
+  "model": "81949",
+  "file": "81949.md",
+  "vendor": "AduroSmart",
+  "description": "ERIA built-in dimmer module (with power measurements)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/81949.png",
+  "added_at": "2025-05-01T17:59:08",
+  "exposes_summary": "light (state, brightness), effect, power_on_behavior, power, voltage, current, dimmer_load_control_mode, dimmer_switch_mode, dimmer_invert_switch, dimmer_scene_activation, dimmer_s1_double_click_scene, dimmer_s2_double_click_scene, dimmer_min_brightness_level, dimmer_max_brightness_level, dimmer_manual_dimming_step_size, dimmer_manual_dimming_time",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Load Control Mode",
+      "type": "enum",
+      "property": "dimmer_load_control_mode",
+      "base": "dimmer_load_control_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "leading_edge_control",
+        "trailing_edge_control"
+      ]
+    },
+    {
+      "name": "Switch Mode",
+      "type": "enum",
+      "property": "dimmer_switch_mode",
+      "base": "dimmer_switch_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "momentary_switch",
+        "toggle_switch",
+        "roller_blind_switch"
+      ]
+    },
+    {
+      "name": "Invert Switch",
+      "type": "enum",
+      "property": "dimmer_invert_switch",
+      "base": "dimmer_invert_switch",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disabled",
+        "enabled"
+      ]
+    },
+    {
+      "name": "Scene Activation",
+      "type": "enum",
+      "property": "dimmer_scene_activation",
+      "base": "dimmer_scene_activation",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disabled",
+        "enabled"
+      ]
+    },
+    {
+      "name": "S1 Double Click Scene",
+      "type": "enum",
+      "property": "dimmer_s1_double_click_scene",
+      "base": "dimmer_s1_double_click_scene",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "null",
+        "on",
+        "off",
+        "dimming_up",
+        "dimming_down",
+        "dimming_to_brightest",
+        "dimming_to_darkest"
+      ]
+    },
+    {
+      "name": "S2 Double Click Scene",
+      "type": "enum",
+      "property": "dimmer_s2_double_click_scene",
+      "base": "dimmer_s2_double_click_scene",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "null",
+        "on",
+        "off",
+        "dimming_up",
+        "dimming_down",
+        "dimming_to_brightest",
+        "dimming_to_darkest"
+      ]
+    },
+    {
+      "name": "Min Brightness Level",
+      "type": "numeric",
+      "property": "dimmer_min_brightness_level",
+      "base": "dimmer_min_brightness_level",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100
+    },
+    {
+      "name": "Max Brightness Level",
+      "type": "numeric",
+      "property": "dimmer_max_brightness_level",
+      "base": "dimmer_max_brightness_level",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100
+    },
+    {
+      "name": "Manual Dimming Step Size",
+      "type": "numeric",
+      "property": "dimmer_manual_dimming_step_size",
+      "base": "dimmer_manual_dimming_step_size",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 25
+    },
+    {
+      "name": "Manual Dimming Time",
+      "type": "numeric",
+      "property": "dimmer_manual_dimming_time",
+      "base": "dimmer_manual_dimming_time",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 100,
+      "value_max": 10000,
+      "unit": "ms"
+    }
+  ],
+  "warnings": []
+}

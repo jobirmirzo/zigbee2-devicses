@@ -1,0 +1,1518 @@
+{
+  "model": "SWV-ZF2",
+  "file": "SWV-ZF2.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee dual-channel smart water valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SWV-ZF2.png",
+  "added_at": "2026-04-30T19:57:28",
+  "exposes_summary": "battery, switch (state), child_lock, valve_abnormal_state, manual_irrigation_duration, manual_irrigation_mode, manual_irrigation_amount_unit, manual_irrigation_amount, manual_fail_safe, irrigation_plan_index, irrigation_plan_enabled, irrigation_plan_loop_type, irrigation_plan_interval_days, irrigation_plan_sunday, irrigation_plan_monday, irrigation_plan_tuesday, irrigation_plan_wednesday, irrigation_plan_thursday, irrigation_plan_friday, irrigation_plan_saturday, irrigation_plan_enable_date, irrigation_plan_start_time, irrigation_plan_mode, irrigation_plan_total_duration, irrigation_plan_duration, irrigation_plan_interval_duration, irrigation_plan_amount_unit, irrigation_plan_amount, irrigation_plan_fail_safe, irrigation_plan_create_datetime, irrigation_plan_remove_plan_index, irrigation_plan_removed_report, irrigation_schedule_status, rain_delay, rain_delay_end_datetime, seasonal_watering_adjustment_january, seasonal_watering_adjustment_february, seasonal_watering_adjustment_march, seasonal_watering_adjustment_april, seasonal_watering_adjustment_may, seasonal_watering_adjustment_june, seasonal_watering_adjustment_july, seasonal_watering_adjustment_august, seasonal_watering_adjustment_september, seasonal_watering_adjustment_october, seasonal_watering_adjustment_november, seasonal_watering_adjustment_december, enable_alarm_water_shortage, enable_alarm_water_leak, enable_water_shortage_auto_close, alarm_water_shortage_duration, alarm_water_leak_duration, real_time_irrigation_duration, real_time_irrigation_volume, hour_irrigation_duration, hour_irrigation_volume, 24_hours_records, 30_days_records, 180_days_records, read_swvzf_records",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "1",
+      "features": [
+        {
+          "property": "state_1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "2",
+      "features": [
+        {
+          "property": "state_2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Valve abnormal state",
+      "type": "enum",
+      "property": "valve_abnormal_state",
+      "base": "valve_abnormal_state",
+      "endpoint": null,
+      "description": "Valve abnormal state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "normal",
+        "water_shortage_channel_1",
+        "water_leakage",
+        "water_shortage_channel_1,water_leakage",
+        "fail_safe_channel_1",
+        "water_shortage_channel_1,fail_safe_channel_1",
+        "water_leakage,fail_safe_channel_1",
+        "water_shortage_channel_1,water_leakage,fail_safe_channel_1",
+        "water_shortage_channel_2",
+        "water_shortage_channel_1,water_shortage_channel_2",
+        "water_leakage,water_shortage_channel_2",
+        "water_shortage_channel_1,water_leakage,water_shortage_channel_2",
+        "fail_safe_channel_1,water_shortage_channel_2",
+        "water_shortage_channel_1,fail_safe_channel_1,water_shortage_channel_2",
+        "water_leakage,fail_safe_channel_1,water_shortage_channel_2",
+        "water_shortage_channel_1,water_leakage,fail_safe_channel_1,water_shortage_channel_2",
+        "fail_safe_channel_2",
+        "water_shortage_channel_1,fail_safe_channel_2",
+        "water_leakage,fail_safe_channel_2",
+        "water_shortage_channel_1,water_leakage,fail_safe_channel_2",
+        "fail_safe_channel_1,fail_safe_channel_2",
+        "water_shortage_channel_1,fail_safe_channel_1,fail_safe_channel_2",
+        "water_leakage,fail_safe_channel_1,fail_safe_channel_2",
+        "water_shortage_channel_1,water_leakage,fail_safe_channel_1,fail_safe_channel_2",
+        "water_shortage_channel_2,fail_safe_channel_2",
+        "water_shortage_channel_1,water_shortage_channel_2,fail_safe_channel_2",
+        "water_leakage,water_shortage_channel_2,fail_safe_channel_2",
+        "water_shortage_channel_1,water_leakage,water_shortage_channel_2,fail_safe_channel_2",
+        "fail_safe_channel_1,water_shortage_channel_2,fail_safe_channel_2",
+        "water_shortage_channel_1,fail_safe_channel_1,water_shortage_channel_2,fail_safe_channel_2",
+        "water_leakage,fail_safe_channel_1,water_shortage_channel_2,fail_safe_channel_2",
+        "water_shortage_channel_1,water_leakage,fail_safe_channel_1,water_shortage_channel_2,fail_safe_channel_2"
+      ]
+    },
+    {
+      "name": "Manual irrigation duration",
+      "type": "numeric",
+      "property": "manual_irrigation_duration",
+      "base": "manual_irrigation_duration",
+      "endpoint": null,
+      "description": "Default duration for manual irrigation.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 719,
+      "unit": "min"
+    },
+    {
+      "name": "Manual irrigation mode",
+      "type": "enum",
+      "property": "manual_irrigation_mode",
+      "base": "manual_irrigation_mode",
+      "endpoint": null,
+      "description": "Default mode for manual irrigation.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "duration",
+        "capacity"
+      ]
+    },
+    {
+      "name": "Manual irrigation amount unit",
+      "type": "enum",
+      "property": "manual_irrigation_amount_unit",
+      "base": "manual_irrigation_amount_unit",
+      "endpoint": null,
+      "description": "Default manual irrigation unit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "US gallon",
+        "liter"
+      ]
+    },
+    {
+      "name": "Manual irrigation amount",
+      "type": "numeric",
+      "property": "manual_irrigation_amount",
+      "base": "manual_irrigation_amount",
+      "endpoint": null,
+      "description": "Default manual irrigation amount.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10000
+    },
+    {
+      "name": "Manual fail safe",
+      "type": "numeric",
+      "property": "manual_fail_safe",
+      "base": "manual_fail_safe",
+      "endpoint": null,
+      "description": "Manual irrigation safety timeout.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 719,
+      "unit": "min"
+    },
+    {
+      "name": "Irrigation plan index",
+      "type": "numeric",
+      "property": "irrigation_plan_index_1",
+      "base": "irrigation_plan_index",
+      "endpoint": "1",
+      "description": "Irrigation plan index.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5
+    },
+    {
+      "name": "Irrigation plan index",
+      "type": "numeric",
+      "property": "irrigation_plan_index_2",
+      "base": "irrigation_plan_index",
+      "endpoint": "2",
+      "description": "Irrigation plan index.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5
+    },
+    {
+      "name": "Irrigation plan enabled",
+      "type": "binary",
+      "property": "irrigation_plan_enabled_1",
+      "base": "irrigation_plan_enabled",
+      "endpoint": "1",
+      "description": "Enable the selected irrigation plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan enabled",
+      "type": "binary",
+      "property": "irrigation_plan_enabled_2",
+      "base": "irrigation_plan_enabled",
+      "endpoint": "2",
+      "description": "Enable the selected irrigation plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan loop type",
+      "type": "enum",
+      "property": "irrigation_plan_loop_type_1",
+      "base": "irrigation_plan_loop_type",
+      "endpoint": "1",
+      "description": "Repeat mode for the selected irrigation plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "odd_days",
+        "even_days",
+        "day_interval",
+        "weekdays"
+      ]
+    },
+    {
+      "name": "Irrigation plan loop type",
+      "type": "enum",
+      "property": "irrigation_plan_loop_type_2",
+      "base": "irrigation_plan_loop_type",
+      "endpoint": "2",
+      "description": "Repeat mode for the selected irrigation plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "odd_days",
+        "even_days",
+        "day_interval",
+        "weekdays"
+      ]
+    },
+    {
+      "name": "Irrigation plan interval days",
+      "type": "numeric",
+      "property": "irrigation_plan_interval_days_1",
+      "base": "irrigation_plan_interval_days",
+      "endpoint": "1",
+      "description": "Repeat interval in days when loop type is day_interval.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 30
+    },
+    {
+      "name": "Irrigation plan interval days",
+      "type": "numeric",
+      "property": "irrigation_plan_interval_days_2",
+      "base": "irrigation_plan_interval_days",
+      "endpoint": "2",
+      "description": "Repeat interval in days when loop type is day_interval.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 30
+    },
+    {
+      "name": "Irrigation plan sunday",
+      "type": "binary",
+      "property": "irrigation_plan_sunday_1",
+      "base": "irrigation_plan_sunday",
+      "endpoint": "1",
+      "description": "Run the selected irrigation plan on sunday.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan sunday",
+      "type": "binary",
+      "property": "irrigation_plan_sunday_2",
+      "base": "irrigation_plan_sunday",
+      "endpoint": "2",
+      "description": "Run the selected irrigation plan on sunday.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan monday",
+      "type": "binary",
+      "property": "irrigation_plan_monday_1",
+      "base": "irrigation_plan_monday",
+      "endpoint": "1",
+      "description": "Run the selected irrigation plan on monday.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan monday",
+      "type": "binary",
+      "property": "irrigation_plan_monday_2",
+      "base": "irrigation_plan_monday",
+      "endpoint": "2",
+      "description": "Run the selected irrigation plan on monday.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan tuesday",
+      "type": "binary",
+      "property": "irrigation_plan_tuesday_1",
+      "base": "irrigation_plan_tuesday",
+      "endpoint": "1",
+      "description": "Run the selected irrigation plan on tuesday.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan tuesday",
+      "type": "binary",
+      "property": "irrigation_plan_tuesday_2",
+      "base": "irrigation_plan_tuesday",
+      "endpoint": "2",
+      "description": "Run the selected irrigation plan on tuesday.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan wednesday",
+      "type": "binary",
+      "property": "irrigation_plan_wednesday_1",
+      "base": "irrigation_plan_wednesday",
+      "endpoint": "1",
+      "description": "Run the selected irrigation plan on wednesday.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan wednesday",
+      "type": "binary",
+      "property": "irrigation_plan_wednesday_2",
+      "base": "irrigation_plan_wednesday",
+      "endpoint": "2",
+      "description": "Run the selected irrigation plan on wednesday.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan thursday",
+      "type": "binary",
+      "property": "irrigation_plan_thursday_1",
+      "base": "irrigation_plan_thursday",
+      "endpoint": "1",
+      "description": "Run the selected irrigation plan on thursday.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan thursday",
+      "type": "binary",
+      "property": "irrigation_plan_thursday_2",
+      "base": "irrigation_plan_thursday",
+      "endpoint": "2",
+      "description": "Run the selected irrigation plan on thursday.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan friday",
+      "type": "binary",
+      "property": "irrigation_plan_friday_1",
+      "base": "irrigation_plan_friday",
+      "endpoint": "1",
+      "description": "Run the selected irrigation plan on friday.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan friday",
+      "type": "binary",
+      "property": "irrigation_plan_friday_2",
+      "base": "irrigation_plan_friday",
+      "endpoint": "2",
+      "description": "Run the selected irrigation plan on friday.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan saturday",
+      "type": "binary",
+      "property": "irrigation_plan_saturday_1",
+      "base": "irrigation_plan_saturday",
+      "endpoint": "1",
+      "description": "Run the selected irrigation plan on saturday.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan saturday",
+      "type": "binary",
+      "property": "irrigation_plan_saturday_2",
+      "base": "irrigation_plan_saturday",
+      "endpoint": "2",
+      "description": "Run the selected irrigation plan on saturday.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Irrigation plan enable date",
+      "type": "text",
+      "property": "irrigation_plan_enable_date_1",
+      "base": "irrigation_plan_enable_date",
+      "endpoint": "1",
+      "description": "Enable date in local YYYY-MM-DD format.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Irrigation plan enable date",
+      "type": "text",
+      "property": "irrigation_plan_enable_date_2",
+      "base": "irrigation_plan_enable_date",
+      "endpoint": "2",
+      "description": "Enable date in local YYYY-MM-DD format.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Irrigation plan start time",
+      "type": "text",
+      "property": "irrigation_plan_start_time_1",
+      "base": "irrigation_plan_start_time",
+      "endpoint": "1",
+      "description": "Start time in local HH:mm format.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Irrigation plan start time",
+      "type": "text",
+      "property": "irrigation_plan_start_time_2",
+      "base": "irrigation_plan_start_time",
+      "endpoint": "2",
+      "description": "Start time in local HH:mm format.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Irrigation plan mode",
+      "type": "enum",
+      "property": "irrigation_plan_mode_1",
+      "base": "irrigation_plan_mode",
+      "endpoint": "1",
+      "description": "Irrigation mode for the selected plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "duration",
+        "capacity",
+        "duration_with_interval"
+      ]
+    },
+    {
+      "name": "Irrigation plan mode",
+      "type": "enum",
+      "property": "irrigation_plan_mode_2",
+      "base": "irrigation_plan_mode",
+      "endpoint": "2",
+      "description": "Irrigation mode for the selected plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "duration",
+        "capacity",
+        "duration_with_interval"
+      ]
+    },
+    {
+      "name": "Irrigation plan total duration",
+      "type": "numeric",
+      "property": "irrigation_plan_total_duration_1",
+      "base": "irrigation_plan_total_duration",
+      "endpoint": "1",
+      "description": "Total duration for the selected irrigation plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 719,
+      "unit": "min"
+    },
+    {
+      "name": "Irrigation plan total duration",
+      "type": "numeric",
+      "property": "irrigation_plan_total_duration_2",
+      "base": "irrigation_plan_total_duration",
+      "endpoint": "2",
+      "description": "Total duration for the selected irrigation plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 719,
+      "unit": "min"
+    },
+    {
+      "name": "Irrigation plan duration",
+      "type": "numeric",
+      "property": "irrigation_plan_duration_1",
+      "base": "irrigation_plan_duration",
+      "endpoint": "1",
+      "description": "Irrigation duration for the selected plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 60,
+      "unit": "min"
+    },
+    {
+      "name": "Irrigation plan duration",
+      "type": "numeric",
+      "property": "irrigation_plan_duration_2",
+      "base": "irrigation_plan_duration",
+      "endpoint": "2",
+      "description": "Irrigation duration for the selected plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 60,
+      "unit": "min"
+    },
+    {
+      "name": "Irrigation plan interval duration",
+      "type": "numeric",
+      "property": "irrigation_plan_interval_duration_1",
+      "base": "irrigation_plan_interval_duration",
+      "endpoint": "1",
+      "description": "Pause duration between irrigation cycles.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 60,
+      "unit": "min"
+    },
+    {
+      "name": "Irrigation plan interval duration",
+      "type": "numeric",
+      "property": "irrigation_plan_interval_duration_2",
+      "base": "irrigation_plan_interval_duration",
+      "endpoint": "2",
+      "description": "Pause duration between irrigation cycles.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 60,
+      "unit": "min"
+    },
+    {
+      "name": "Irrigation plan amount unit",
+      "type": "enum",
+      "property": "irrigation_plan_amount_unit_1",
+      "base": "irrigation_plan_amount_unit",
+      "endpoint": "1",
+      "description": "Water amount unit for the selected irrigation plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "US gallon",
+        "liter"
+      ]
+    },
+    {
+      "name": "Irrigation plan amount unit",
+      "type": "enum",
+      "property": "irrigation_plan_amount_unit_2",
+      "base": "irrigation_plan_amount_unit",
+      "endpoint": "2",
+      "description": "Water amount unit for the selected irrigation plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "US gallon",
+        "liter"
+      ]
+    },
+    {
+      "name": "Irrigation plan amount",
+      "type": "numeric",
+      "property": "irrigation_plan_amount_1",
+      "base": "irrigation_plan_amount",
+      "endpoint": "1",
+      "description": "Water amount for the selected irrigation plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10000
+    },
+    {
+      "name": "Irrigation plan amount",
+      "type": "numeric",
+      "property": "irrigation_plan_amount_2",
+      "base": "irrigation_plan_amount",
+      "endpoint": "2",
+      "description": "Water amount for the selected irrigation plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10000
+    },
+    {
+      "name": "Irrigation plan fail safe",
+      "type": "numeric",
+      "property": "irrigation_plan_fail_safe_1",
+      "base": "irrigation_plan_fail_safe",
+      "endpoint": "1",
+      "description": "Safety timeout for the selected irrigation plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 719,
+      "unit": "min"
+    },
+    {
+      "name": "Irrigation plan fail safe",
+      "type": "numeric",
+      "property": "irrigation_plan_fail_safe_2",
+      "base": "irrigation_plan_fail_safe",
+      "endpoint": "2",
+      "description": "Safety timeout for the selected irrigation plan.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 719,
+      "unit": "min"
+    },
+    {
+      "name": "Irrigation plan create datetime",
+      "type": "text",
+      "property": "irrigation_plan_create_datetime_1",
+      "base": "irrigation_plan_create_datetime",
+      "endpoint": "1",
+      "description": "Create datetime in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Irrigation plan create datetime",
+      "type": "text",
+      "property": "irrigation_plan_create_datetime_2",
+      "base": "irrigation_plan_create_datetime",
+      "endpoint": "2",
+      "description": "Create datetime in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Irrigation plan remove plan index",
+      "type": "numeric",
+      "property": "irrigation_plan_remove_plan_index_1",
+      "base": "irrigation_plan_remove_plan_index",
+      "endpoint": "1",
+      "description": "Index of the irrigation plan to remove.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5
+    },
+    {
+      "name": "Irrigation plan remove plan index",
+      "type": "numeric",
+      "property": "irrigation_plan_remove_plan_index_2",
+      "base": "irrigation_plan_remove_plan_index",
+      "endpoint": "2",
+      "description": "Index of the irrigation plan to remove.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5
+    },
+    {
+      "name": "Irrigation plan removed report",
+      "type": "numeric",
+      "property": "irrigation_plan_removed_report_1",
+      "base": "irrigation_plan_removed_report",
+      "endpoint": "1",
+      "description": "Local irrigation plan removed report.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 5
+    },
+    {
+      "name": "Irrigation plan removed report",
+      "type": "numeric",
+      "property": "irrigation_plan_removed_report_2",
+      "base": "irrigation_plan_removed_report",
+      "endpoint": "2",
+      "description": "Local irrigation plan removed report.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 5
+    },
+    {
+      "name": "Irrigation schedule status",
+      "type": "composite",
+      "property": "irrigation_schedule_status_1",
+      "base": "irrigation_schedule_status",
+      "endpoint": "1",
+      "description": "Irrigation schedule execution status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "features": [
+        {
+          "property": "schedule_status",
+          "type": "enum",
+          "description": "Schedule status",
+          "values": [
+            "start",
+            "end",
+            "running",
+            "standby"
+          ]
+        },
+        {
+          "property": "schedule_index",
+          "type": "numeric",
+          "description": "Schedule index"
+        },
+        {
+          "property": "schedule_type",
+          "type": "enum",
+          "description": "Schedule type",
+          "values": [
+            "automatic",
+            "manual"
+          ]
+        },
+        {
+          "property": "irrigation_mode",
+          "type": "enum",
+          "description": "Irrigation mode",
+          "values": [
+            "duration",
+            "capacity",
+            "duration_with_interval"
+          ]
+        },
+        {
+          "property": "start_time",
+          "type": "text",
+          "description": "Schedule start time"
+        },
+        {
+          "property": "expected_end_time",
+          "type": "text",
+          "description": "Expected end time"
+        },
+        {
+          "property": "actual_end_time",
+          "type": "text",
+          "description": "Actual end time"
+        },
+        {
+          "property": "irrigation_amount_unit",
+          "type": "enum",
+          "description": "Irrigation amount unit",
+          "values": [
+            "US gallon",
+            "liter"
+          ]
+        },
+        {
+          "property": "expected_irrigation_amount",
+          "type": "numeric",
+          "description": "Expected irrigation amount"
+        },
+        {
+          "property": "actual_irrigation_amount",
+          "type": "numeric",
+          "description": "Actual irrigation amount"
+        }
+      ]
+    },
+    {
+      "name": "Irrigation schedule status",
+      "type": "composite",
+      "property": "irrigation_schedule_status_2",
+      "base": "irrigation_schedule_status",
+      "endpoint": "2",
+      "description": "Irrigation schedule execution status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "features": [
+        {
+          "property": "schedule_status",
+          "type": "enum",
+          "description": "Schedule status",
+          "values": [
+            "start",
+            "end",
+            "running",
+            "standby"
+          ]
+        },
+        {
+          "property": "schedule_index",
+          "type": "numeric",
+          "description": "Schedule index"
+        },
+        {
+          "property": "schedule_type",
+          "type": "enum",
+          "description": "Schedule type",
+          "values": [
+            "automatic",
+            "manual"
+          ]
+        },
+        {
+          "property": "irrigation_mode",
+          "type": "enum",
+          "description": "Irrigation mode",
+          "values": [
+            "duration",
+            "capacity",
+            "duration_with_interval"
+          ]
+        },
+        {
+          "property": "start_time",
+          "type": "text",
+          "description": "Schedule start time"
+        },
+        {
+          "property": "expected_end_time",
+          "type": "text",
+          "description": "Expected end time"
+        },
+        {
+          "property": "actual_end_time",
+          "type": "text",
+          "description": "Actual end time"
+        },
+        {
+          "property": "irrigation_amount_unit",
+          "type": "enum",
+          "description": "Irrigation amount unit",
+          "values": [
+            "US gallon",
+            "liter"
+          ]
+        },
+        {
+          "property": "expected_irrigation_amount",
+          "type": "numeric",
+          "description": "Expected irrigation amount"
+        },
+        {
+          "property": "actual_irrigation_amount",
+          "type": "numeric",
+          "description": "Actual irrigation amount"
+        }
+      ]
+    },
+    {
+      "name": "Rain delay",
+      "type": "text",
+      "property": "rain_delay",
+      "base": "rain_delay",
+      "endpoint": null,
+      "description": "Schedule delay end time in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00), or \"0\" to disable.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Rain delay end datetime",
+      "type": "text",
+      "property": "rain_delay_end_datetime",
+      "base": "rain_delay_end_datetime",
+      "endpoint": null,
+      "description": "User triggered delay end time..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Seasonal watering adjustment january",
+      "type": "numeric",
+      "property": "seasonal_watering_adjustment_january",
+      "base": "seasonal_watering_adjustment_january",
+      "endpoint": null,
+      "description": "Watering adjustment multiplier for january (1.0 = 100%, 2.0 = 200%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 2
+    },
+    {
+      "name": "Seasonal watering adjustment february",
+      "type": "numeric",
+      "property": "seasonal_watering_adjustment_february",
+      "base": "seasonal_watering_adjustment_february",
+      "endpoint": null,
+      "description": "Watering adjustment multiplier for february (1.0 = 100%, 2.0 = 200%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 2
+    },
+    {
+      "name": "Seasonal watering adjustment march",
+      "type": "numeric",
+      "property": "seasonal_watering_adjustment_march",
+      "base": "seasonal_watering_adjustment_march",
+      "endpoint": null,
+      "description": "Watering adjustment multiplier for march (1.0 = 100%, 2.0 = 200%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 2
+    },
+    {
+      "name": "Seasonal watering adjustment april",
+      "type": "numeric",
+      "property": "seasonal_watering_adjustment_april",
+      "base": "seasonal_watering_adjustment_april",
+      "endpoint": null,
+      "description": "Watering adjustment multiplier for april (1.0 = 100%, 2.0 = 200%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 2
+    },
+    {
+      "name": "Seasonal watering adjustment may",
+      "type": "numeric",
+      "property": "seasonal_watering_adjustment_may",
+      "base": "seasonal_watering_adjustment_may",
+      "endpoint": null,
+      "description": "Watering adjustment multiplier for may (1.0 = 100%, 2.0 = 200%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 2
+    },
+    {
+      "name": "Seasonal watering adjustment june",
+      "type": "numeric",
+      "property": "seasonal_watering_adjustment_june",
+      "base": "seasonal_watering_adjustment_june",
+      "endpoint": null,
+      "description": "Watering adjustment multiplier for june (1.0 = 100%, 2.0 = 200%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 2
+    },
+    {
+      "name": "Seasonal watering adjustment july",
+      "type": "numeric",
+      "property": "seasonal_watering_adjustment_july",
+      "base": "seasonal_watering_adjustment_july",
+      "endpoint": null,
+      "description": "Watering adjustment multiplier for july (1.0 = 100%, 2.0 = 200%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 2
+    },
+    {
+      "name": "Seasonal watering adjustment august",
+      "type": "numeric",
+      "property": "seasonal_watering_adjustment_august",
+      "base": "seasonal_watering_adjustment_august",
+      "endpoint": null,
+      "description": "Watering adjustment multiplier for august (1.0 = 100%, 2.0 = 200%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 2
+    },
+    {
+      "name": "Seasonal watering adjustment september",
+      "type": "numeric",
+      "property": "seasonal_watering_adjustment_september",
+      "base": "seasonal_watering_adjustment_september",
+      "endpoint": null,
+      "description": "Watering adjustment multiplier for september (1.0 = 100%, 2.0 = 200%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 2
+    },
+    {
+      "name": "Seasonal watering adjustment october",
+      "type": "numeric",
+      "property": "seasonal_watering_adjustment_october",
+      "base": "seasonal_watering_adjustment_october",
+      "endpoint": null,
+      "description": "Watering adjustment multiplier for october (1.0 = 100%, 2.0 = 200%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 2
+    },
+    {
+      "name": "Seasonal watering adjustment november",
+      "type": "numeric",
+      "property": "seasonal_watering_adjustment_november",
+      "base": "seasonal_watering_adjustment_november",
+      "endpoint": null,
+      "description": "Watering adjustment multiplier for november (1.0 = 100%, 2.0 = 200%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 2
+    },
+    {
+      "name": "Seasonal watering adjustment december",
+      "type": "numeric",
+      "property": "seasonal_watering_adjustment_december",
+      "base": "seasonal_watering_adjustment_december",
+      "endpoint": null,
+      "description": "Watering adjustment multiplier for december (1.0 = 100%, 2.0 = 200%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 2
+    },
+    {
+      "name": "Enable alarm water shortage",
+      "type": "binary",
+      "property": "enable_alarm_water_shortage",
+      "base": "enable_alarm_water_shortage",
+      "endpoint": null,
+      "description": "Water shortage alarm.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Enable alarm water leak",
+      "type": "binary",
+      "property": "enable_alarm_water_leak",
+      "base": "enable_alarm_water_leak",
+      "endpoint": null,
+      "description": "Water leak alarm.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Enable water shortage auto close",
+      "type": "binary",
+      "property": "enable_water_shortage_auto_close",
+      "base": "enable_water_shortage_auto_close",
+      "endpoint": null,
+      "description": "Auto close valve on water shortage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Alarm water shortage duration",
+      "type": "numeric",
+      "property": "alarm_water_shortage_duration",
+      "base": "alarm_water_shortage_duration",
+      "endpoint": null,
+      "description": "Water shortage trigger alarm duration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10,
+      "unit": "min"
+    },
+    {
+      "name": "Alarm water leak duration",
+      "type": "numeric",
+      "property": "alarm_water_leak_duration",
+      "base": "alarm_water_leak_duration",
+      "endpoint": null,
+      "description": "Water leak trigger alarm duration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 3,
+      "unit": "min"
+    },
+    {
+      "name": "Real time irrigation duration",
+      "type": "numeric",
+      "property": "real_time_irrigation_duration_1",
+      "base": "real_time_irrigation_duration",
+      "endpoint": "1",
+      "description": "Real-time irrigation duration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "min"
+    },
+    {
+      "name": "Real time irrigation duration",
+      "type": "numeric",
+      "property": "real_time_irrigation_duration_2",
+      "base": "real_time_irrigation_duration",
+      "endpoint": "2",
+      "description": "Real-time irrigation duration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "min"
+    },
+    {
+      "name": "Real time irrigation volume",
+      "type": "numeric",
+      "property": "real_time_irrigation_volume",
+      "base": "real_time_irrigation_volume",
+      "endpoint": null,
+      "description": "The amount of water irrigated in real time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "L"
+    },
+    {
+      "name": "Hour irrigation duration",
+      "type": "numeric",
+      "property": "hour_irrigation_duration_1",
+      "base": "hour_irrigation_duration",
+      "endpoint": "1",
+      "description": "Hourly irrigation duration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "min"
+    },
+    {
+      "name": "Hour irrigation duration",
+      "type": "numeric",
+      "property": "hour_irrigation_duration_2",
+      "base": "hour_irrigation_duration",
+      "endpoint": "2",
+      "description": "Hourly irrigation duration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "min"
+    },
+    {
+      "name": "Hour irrigation volume",
+      "type": "numeric",
+      "property": "hour_irrigation_volume",
+      "base": "hour_irrigation_volume",
+      "endpoint": null,
+      "description": "Hourly irrigation volume.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "L"
+    },
+    {
+      "name": "24 hours records",
+      "type": "text",
+      "property": "24_hours_records",
+      "base": "24_hours_records",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "30 days records",
+      "type": "text",
+      "property": "30_days_records",
+      "base": "30_days_records",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "180 days records",
+      "type": "text",
+      "property": "180_days_records",
+      "base": "180_days_records",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Read irrigation history",
+      "type": "composite",
+      "property": "read_swvzf_records",
+      "base": "read_swvzf_records",
+      "endpoint": null,
+      "description": "Read irrigation water volume and duration in the past 24 hours, 30 days, and 6 months..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "type",
+          "type": "enum",
+          "description": "Reading type",
+          "values": [
+            "24_hours",
+            "30_days",
+            "6_months"
+          ]
+        },
+        {
+          "property": "time_start",
+          "type": "text",
+          "description": "Start time in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00)"
+        },
+        {
+          "property": "time_end",
+          "type": "text",
+          "description": "End time in ISO format with timezone (e.g. YYYY-MM-DDTHH:mm:ss+08:00)"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

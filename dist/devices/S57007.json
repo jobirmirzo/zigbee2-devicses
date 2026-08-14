@@ -1,0 +1,67 @@
+{
+  "model": "S57007",
+  "file": "S57007.md",
+  "vendor": "The Light Group",
+  "description": "SLC SmartOne Zigbee remote control Zigbee IP20",
+  "image": "https://www.zigbee2mqtt.io/images/devices/S57007.png",
+  "added_at": "2025-08-01T15:19:08",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_1",
+        "on_2",
+        "on_3",
+        "off_1",
+        "off_2",
+        "off_3",
+        "toggle_1",
+        "toggle_2",
+        "toggle_3",
+        "recall_1",
+        "recall_2",
+        "recall_3",
+        "store_1",
+        "store_2",
+        "store_3",
+        "add_1",
+        "add_2",
+        "add_3",
+        "remove_1",
+        "remove_2",
+        "remove_3",
+        "remove_all_1",
+        "remove_all_2",
+        "remove_all_3"
+      ]
+    }
+  ],
+  "warnings": []
+}

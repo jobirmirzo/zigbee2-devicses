@@ -1,0 +1,747 @@
+{
+  "model": "SBDV-00205",
+  "file": "SBDV-00205.md",
+  "vendor": "Sber",
+  "description": "Smart Thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SBDV-00205.png",
+  "added_at": "2025-09-30T19:35:14",
+  "exposes_summary": "emergency_overcurrent, emergency_overheat, emergency_no_load, sensor_error_remote_disconnected, sensor_error_local_disconnected, sensor_error_short_circuit, status_heat_inefficient, status_antifrost, status_invalid_time, keypad_lockout, climate (occupied_heating_setpoint, local_temperature, system_mode, local_temperature_calibration, control_sequence_of_operation, running_mode, running_state), clear_weekly_schedule, programming_operation_mode, abs_min_heat_setpoint_limit, abs_max_heat_setpoint_limit, min_heat_setpoint_limit, max_heat_setpoint_limit, schedule, min_local_temperature_limit, max_local_temperature_limit, heating_hysteresis, device_temperature, temperature, voltage, current, power, upper_current_threshold, temperature_threshold, sensor_type, sensor_mode, remote_temperature, remote_temperature_calibration, remote_sensor_timeout, output_mode, brightness_operations_mode, brightness_steady_mode, identify, rtc_status, serial_number, resets_count, uptime, button_clicks_count_1, button_clicks_count_2, button_clicks_count_3, relay_switches_count_1",
+  "exposes": [
+    {
+      "name": "Emergency overcurrent",
+      "type": "binary",
+      "property": "emergency_overcurrent",
+      "base": "emergency_overcurrent",
+      "endpoint": null,
+      "description": "Overcurrent alarm is triggered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Emergency overheat",
+      "type": "binary",
+      "property": "emergency_overheat",
+      "base": "emergency_overheat",
+      "endpoint": null,
+      "description": "Overheat alarm is triggered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Emergency no load",
+      "type": "binary",
+      "property": "emergency_no_load",
+      "base": "emergency_no_load",
+      "endpoint": null,
+      "description": "Load disconnection alarm is triggered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Sensor error remote disconnected",
+      "type": "binary",
+      "property": "sensor_error_remote_disconnected",
+      "base": "sensor_error_remote_disconnected",
+      "endpoint": null,
+      "description": "Wireless sensor disconnected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Sensor error local disconnected",
+      "type": "binary",
+      "property": "sensor_error_local_disconnected",
+      "base": "sensor_error_local_disconnected",
+      "endpoint": null,
+      "description": "Wired sensor disconnected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Sensor error short circuit",
+      "type": "binary",
+      "property": "sensor_error_short_circuit",
+      "base": "sensor_error_short_circuit",
+      "endpoint": null,
+      "description": "Wired sensor short circuit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Status heat inefficient",
+      "type": "binary",
+      "property": "status_heat_inefficient",
+      "base": "status_heat_inefficient",
+      "endpoint": null,
+      "description": "Heating is inefficient.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Status antifrost",
+      "type": "binary",
+      "property": "status_antifrost",
+      "base": "status_antifrost",
+      "endpoint": null,
+      "description": "Antifrost mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Status invalid time",
+      "type": "binary",
+      "property": "status_invalid_time",
+      "base": "status_invalid_time",
+      "endpoint": null,
+      "description": "Time information is not valid, schedule is not functioning.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Keypad lockout",
+      "type": "enum",
+      "property": "keypad_lockout",
+      "base": "keypad_lockout",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "unlock",
+        "lock1"
+      ]
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 1,
+          "value_max": 50,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "heat",
+            "off",
+            "sleep"
+          ],
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "control_sequence_of_operation",
+          "base": "control_sequence_of_operation",
+          "value_min": 1,
+          "value_max": 50,
+          "values": [
+            "heat",
+            "off",
+            "sleep"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "running_mode",
+          "base": "running_mode",
+          "value_min": 1,
+          "value_max": 50,
+          "values": [
+            "heat",
+            "off",
+            "sleep"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Clear weekly schedule",
+      "type": "enum",
+      "property": "clear_weekly_schedule",
+      "base": "clear_weekly_schedule",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Clear"
+      ]
+    },
+    {
+      "name": "Programming operation mode",
+      "type": "enum",
+      "property": "programming_operation_mode",
+      "base": "programming_operation_mode",
+      "endpoint": null,
+      "description": "Controls how programming affects the thermostat. Possible values: setpoint (only use specified setpoint), schedule (follow programmed setpoint schedule).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "setpoint",
+        "schedule"
+      ]
+    },
+    {
+      "name": "Abs min heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_min_heat_setpoint_limit",
+      "base": "abs_min_heat_setpoint_limit",
+      "endpoint": null,
+      "description": "Absolute min temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": null,
+      "description": "Absolute max temperature allowed on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Min heat setpoint limit",
+      "type": "numeric",
+      "property": "min_heat_setpoint_limit",
+      "base": "min_heat_setpoint_limit",
+      "endpoint": null,
+      "description": "Minimum Heating set point limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": null,
+      "description": "Maximum Heating set point limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Schedule",
+      "type": "composite",
+      "property": "weekly_schedule",
+      "base": "weekly_schedule",
+      "endpoint": null,
+      "description": "The heating schedule to use when the operation mode is set to 'schedule'. Up to 10 transitions can be defined per day, where a transition is expressed in the format 'HH:mm/temperature', each separated by a space. The valid temperature range is 1-50°C..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": []
+    },
+    {
+      "name": "Min local temperature limit",
+      "type": "numeric",
+      "property": "min_local_temperature_limit",
+      "base": "min_local_temperature_limit",
+      "endpoint": null,
+      "description": "Min Local Temperature Threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Max local temperature limit",
+      "type": "numeric",
+      "property": "max_local_temperature_limit",
+      "base": "max_local_temperature_limit",
+      "endpoint": null,
+      "description": "Max Local Temperature Threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Heating hysteresis",
+      "type": "numeric",
+      "property": "heating_hysteresis",
+      "base": "heating_hysteresis",
+      "endpoint": null,
+      "description": "Heating hysteresis.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10,
+      "unit": "°C"
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Sensor Temperature (Wired)",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Temperature from wired NTC sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Upper current threshold",
+      "type": "numeric",
+      "property": "upper_current_threshold",
+      "base": "upper_current_threshold",
+      "endpoint": null,
+      "description": "Upper current threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 100,
+      "value_max": 16000,
+      "unit": "mA"
+    },
+    {
+      "name": "Temperature threshold",
+      "type": "numeric",
+      "property": "temperature_threshold",
+      "base": "temperature_threshold",
+      "endpoint": null,
+      "description": "Overtemperature threshold (use with caution).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -200,
+      "value_max": 200,
+      "unit": "°C"
+    },
+    {
+      "name": "Sensor type",
+      "type": "enum",
+      "property": "sensor_type",
+      "base": "sensor_type",
+      "endpoint": null,
+      "description": "Resistance of NTC sensor, default is 10 kOhm.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "4p7K",
+        "6p8K",
+        "10K",
+        "12K",
+        "15K",
+        "33K",
+        "47K"
+      ]
+    },
+    {
+      "name": "Sensor mode",
+      "type": "enum",
+      "property": "sensor_mode",
+      "base": "sensor_mode",
+      "endpoint": null,
+      "description": "Sensor mode selects active temperature sensor: local (wired), remote (wireless), or combined logic which uses both sensors.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "local",
+        "remote",
+        "both"
+      ]
+    },
+    {
+      "name": "Remote temperature",
+      "type": "numeric",
+      "property": "remote_temperature",
+      "base": "remote_temperature",
+      "endpoint": null,
+      "description": "Remote Temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -273.15,
+      "value_max": 327.67,
+      "unit": "°C"
+    },
+    {
+      "name": "Remote temperature calibration",
+      "type": "numeric",
+      "property": "remote_temperature_calibration",
+      "base": "remote_temperature_calibration",
+      "endpoint": null,
+      "description": "Remote Temperature Calibration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -12.8,
+      "value_max": 12.7,
+      "unit": "°C"
+    },
+    {
+      "name": "Remote sensor timeout",
+      "type": "numeric",
+      "property": "remote_sensor_timeout",
+      "base": "remote_sensor_timeout",
+      "endpoint": null,
+      "description": "Timeout of remote temperature sensor (in seconds).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 65535
+    },
+    {
+      "name": "Output mode",
+      "type": "enum",
+      "property": "output_mode",
+      "base": "output_mode",
+      "endpoint": null,
+      "description": "Output mode: normal or inverted logic of relay.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "normal",
+        "inverted"
+      ]
+    },
+    {
+      "name": "Brightness operations mode",
+      "type": "numeric",
+      "property": "brightness_operations_mode",
+      "base": "brightness_operations_mode",
+      "endpoint": null,
+      "description": "Brightness (active mode).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000
+    },
+    {
+      "name": "Brightness steady mode",
+      "type": "numeric",
+      "property": "brightness_steady_mode",
+      "base": "brightness_steady_mode",
+      "endpoint": null,
+      "description": "Brightness (steady mode).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Rtc status",
+      "type": "list",
+      "property": "rtc_status",
+      "base": "rtc_status",
+      "endpoint": null,
+      "description": "List of active RTC warnings.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Serial Number",
+      "type": "text",
+      "property": "serial_number",
+      "base": "serial_number",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Resets count",
+      "type": "numeric",
+      "property": "resets_count",
+      "base": "resets_count",
+      "endpoint": null,
+      "description": "(telemetry) Number of resets.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Uptime",
+      "type": "numeric",
+      "property": "uptime",
+      "base": "uptime",
+      "endpoint": null,
+      "description": "(telemetry) Device uptime, in seconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Button clicks count 1",
+      "type": "numeric",
+      "property": "button_clicks_count_1",
+      "base": "button_clicks_count_1",
+      "endpoint": null,
+      "description": "(telemetry) Total clicks count of button 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Button clicks count 2",
+      "type": "numeric",
+      "property": "button_clicks_count_2",
+      "base": "button_clicks_count_2",
+      "endpoint": null,
+      "description": "(telemetry) Total clicks count of button 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Button clicks count 3",
+      "type": "numeric",
+      "property": "button_clicks_count_3",
+      "base": "button_clicks_count_3",
+      "endpoint": null,
+      "description": "(telemetry) Total clicks count of button 3.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Relay switches count 1",
+      "type": "numeric",
+      "property": "relay_switches_count_1",
+      "base": "relay_switches_count_1",
+      "endpoint": null,
+      "description": "(telemetry) Total toggle count of relay 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

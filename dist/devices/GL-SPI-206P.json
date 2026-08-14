@@ -1,0 +1,259 @@
+{
+  "model": "GL-SPI-206P",
+  "file": "GL-SPI-206P.md",
+  "vendor": "Gledopto",
+  "description": "SPI pixel controller RGBCCT/RGBW/RGB",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GL-SPI-206P.png",
+  "added_at": "2025-08-27T14:37:38Z",
+  "exposes_summary": "light (state, color_hs), brightness, color_temp, scene, music_mode, music_sensitivity, countdown, do_not_disturb, light_bead_sequence, chip_type, lightpixel_number_set, work_mode",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_hs",
+          "base": "color_hs",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Brightness",
+      "type": "numeric",
+      "property": "brightness",
+      "base": "brightness",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000
+    },
+    {
+      "name": "Color temp",
+      "type": "numeric",
+      "property": "color_temp",
+      "base": "color_temp",
+      "endpoint": null,
+      "description": "Color temperature (0=warm, 1000=cold).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000
+    },
+    {
+      "name": "Scene",
+      "type": "enum",
+      "property": "scene",
+      "base": "scene",
+      "endpoint": null,
+      "description": "Scenes selection.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "ice_land_blue",
+        "glacier_express",
+        "sea_of_clouds",
+        "fireworks_at_sea",
+        "firefly_night",
+        "grass_land",
+        "northern_lights",
+        "late_autumn",
+        "game",
+        "holiday",
+        "party",
+        "trend",
+        "meditation",
+        "dating",
+        "valentines_day",
+        "neon_world"
+      ]
+    },
+    {
+      "name": "Music mode",
+      "type": "enum",
+      "property": "music_mode",
+      "base": "music_mode",
+      "endpoint": null,
+      "description": "Local music.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "rock",
+        "jazz",
+        "classic",
+        "rolling",
+        "energy",
+        "spectrum"
+      ]
+    },
+    {
+      "name": "Music sensitivity",
+      "type": "numeric",
+      "property": "music_sensitivity",
+      "base": "music_sensitivity",
+      "endpoint": null,
+      "description": "Music rhythm sensitivity (1-100).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown",
+      "base": "countdown",
+      "endpoint": null,
+      "description": "Toggle the device after a set duration (one time action).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Do not disturb",
+      "type": "binary",
+      "property": "do_not_disturb",
+      "base": "do_not_disturb",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Light bead sequence",
+      "type": "enum",
+      "property": "light_bead_sequence",
+      "base": "light_bead_sequence",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "RGB",
+        "RBG",
+        "GRB",
+        "GBR",
+        "BRG",
+        "BGR",
+        "RGBW",
+        "RBGW",
+        "GRBW",
+        "GBRW",
+        "BRGW",
+        "BGRW",
+        "WRGB",
+        "WRBG",
+        "WGRB",
+        "WGBR",
+        "WBRG",
+        "WBGR"
+      ]
+    },
+    {
+      "name": "Chip type",
+      "type": "enum",
+      "property": "chip_type",
+      "base": "chip_type",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "WS2801",
+        "LPD6803",
+        "LPD8803",
+        "WS2811",
+        "TM1814B",
+        "TM1934A",
+        "SK6812",
+        "SK9822",
+        "UCS8904B",
+        "WS2805"
+      ]
+    },
+    {
+      "name": "Lightpixel number set",
+      "type": "numeric",
+      "property": "lightpixel_number_set",
+      "base": "lightpixel_number_set",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 1000
+    },
+    {
+      "name": "Work mode",
+      "type": "enum",
+      "property": "work_mode",
+      "base": "work_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "white",
+        "colour",
+        "scene",
+        "music"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,425 @@
+{
+  "model": "SR-ZG9030A-MW",
+  "file": "SR-ZG9030A-MW.md",
+  "vendor": "Sunricher",
+  "description": "Zigbee compatible ceiling mount occupancy sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SR-ZG9030A-MW.png",
+  "added_at": "2025-01-03T20:11:47",
+  "exposes_summary": "model, light_pwm_frequency, brightness_curve, start_up_on_off, motion_sensor_light_duration, motion_sensor_light_sensitivity, motion_sensor_working_mode, motion_sensor_sensing_distance, motion_sensor_microwave_switch, motion_sensor_onoff_broadcast, motion_sensor_light_state, motion_sensor_in_pwm_brightness, motion_sensor_in_pwm_output, motion_sensor_leave_pwm_output, motion_sensor_leave_delay, motion_sensor_pwm_output_after_delay, linearity_error_ratio_lux, fixed_deviation_lux, light (state, brightness), effect, power_on_behavior, occupancy, illuminance, action",
+  "exposes": [
+    {
+      "name": "Model",
+      "type": "enum",
+      "property": "model",
+      "base": "model",
+      "endpoint": null,
+      "description": "Model of the device.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "HK-DIM",
+        "ZG9030A-MW"
+      ]
+    },
+    {
+      "name": "Light pwm frequency",
+      "type": "numeric",
+      "property": "light_pwm_frequency",
+      "base": "light_pwm_frequency",
+      "endpoint": null,
+      "description": "Light PWM frequency (0-65535, default: 3300).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535
+    },
+    {
+      "name": "Brightness curve",
+      "type": "enum",
+      "property": "brightness_curve",
+      "base": "brightness_curve",
+      "endpoint": null,
+      "description": "Brightness curve (default: Linear).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "linear",
+        "gamma_logistics_1_5",
+        "gamma_logistics_1_8"
+      ]
+    },
+    {
+      "name": "Start up on off",
+      "type": "enum",
+      "property": "start_up_on_off",
+      "base": "start_up_on_off",
+      "endpoint": null,
+      "description": "Start up on/off (default: last_state).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "last_state",
+        "on",
+        "off"
+      ]
+    },
+    {
+      "name": "Motion sensor light duration",
+      "type": "numeric",
+      "property": "motion_sensor_light_duration",
+      "base": "motion_sensor_light_duration",
+      "endpoint": null,
+      "description": "Motion sensor light duration (0s-65535s, default: 5s).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535,
+      "unit": "s"
+    },
+    {
+      "name": "Motion sensor light sensitivity",
+      "type": "numeric",
+      "property": "motion_sensor_light_sensitivity",
+      "base": "motion_sensor_light_sensitivity",
+      "endpoint": null,
+      "description": "Motion sensor light sensitivity (0-255, default: 0).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "Motion sensor working mode",
+      "type": "enum",
+      "property": "motion_sensor_working_mode",
+      "base": "motion_sensor_working_mode",
+      "endpoint": null,
+      "description": "Motion sensor working mode (default: Automatic).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "automatic",
+        "manual"
+      ]
+    },
+    {
+      "name": "Motion sensor sensing distance",
+      "type": "numeric",
+      "property": "motion_sensor_sensing_distance",
+      "base": "motion_sensor_sensing_distance",
+      "endpoint": null,
+      "description": "Motion sensor sensing distance (0-15, default: 1).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 15
+    },
+    {
+      "name": "Motion sensor microwave switch",
+      "type": "enum",
+      "property": "motion_sensor_microwave_switch",
+      "base": "motion_sensor_microwave_switch",
+      "endpoint": null,
+      "description": "Motion sensor microwave switch (default: On).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off"
+      ]
+    },
+    {
+      "name": "Motion sensor onoff broadcast",
+      "type": "enum",
+      "property": "motion_sensor_onoff_broadcast",
+      "base": "motion_sensor_onoff_broadcast",
+      "endpoint": null,
+      "description": "Motion sensor on/off broadcast (default: On).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off"
+      ]
+    },
+    {
+      "name": "Motion sensor light state",
+      "type": "enum",
+      "property": "motion_sensor_light_state",
+      "base": "motion_sensor_light_state",
+      "endpoint": null,
+      "description": "Motion sensor light state (default: On).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off"
+      ]
+    },
+    {
+      "name": "Motion sensor in pwm brightness",
+      "type": "numeric",
+      "property": "motion_sensor_in_pwm_brightness",
+      "base": "motion_sensor_in_pwm_brightness",
+      "endpoint": null,
+      "description": "Motion sensor IN PWM brightness (0-1000 lux, default: 0).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "lux"
+    },
+    {
+      "name": "Motion sensor in pwm output",
+      "type": "numeric",
+      "property": "motion_sensor_in_pwm_output",
+      "base": "motion_sensor_in_pwm_output",
+      "endpoint": null,
+      "description": "Motion sensor IN PWM output (0-254, default: 254).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "Motion sensor leave pwm output",
+      "type": "numeric",
+      "property": "motion_sensor_leave_pwm_output",
+      "base": "motion_sensor_leave_pwm_output",
+      "endpoint": null,
+      "description": "Motion sensor LEAVE PWM output (0%-100%, default: 0%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Motion sensor leave delay",
+      "type": "numeric",
+      "property": "motion_sensor_leave_delay",
+      "base": "motion_sensor_leave_delay",
+      "endpoint": null,
+      "description": "Motion sensor LEAVE delay (0s-65535s, default: 0s).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535,
+      "unit": "s"
+    },
+    {
+      "name": "Motion sensor pwm output after delay",
+      "type": "numeric",
+      "property": "motion_sensor_pwm_output_after_delay",
+      "base": "motion_sensor_pwm_output_after_delay",
+      "endpoint": null,
+      "description": "Motion sensor PWM output after delay (0%-100%, default: 0%).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Linearity error ratio lux",
+      "type": "numeric",
+      "property": "linearity_error_ratio_lux",
+      "base": "linearity_error_ratio_lux",
+      "endpoint": null,
+      "description": "Linearity error ratio coefficient for LUX measurement. 1000 means 1000‰ (default). Increasing this value magnifies the LUX measurement linearly, decreasing minifies it. For example, 1001 means 1.001x, 500 means 0.5x..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 100,
+      "value_max": 10000
+    },
+    {
+      "name": "Fixed deviation lux",
+      "type": "numeric",
+      "property": "fixed_deviation_lux",
+      "base": "fixed_deviation_lux",
+      "endpoint": null,
+      "description": "Fixed deviation of LUX measurement. Signed 2-byte integer. Positive value increases, negative value decreases the measured LUX. For example, 100 means +100 LUX, -100 means -100 LUX..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -100,
+      "value_max": 100
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy_2",
+      "base": "occupancy",
+      "endpoint": "2",
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance_3",
+      "base": "illuminance",
+      "endpoint": "3",
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "toggle",
+        "brightness_move_to_level",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

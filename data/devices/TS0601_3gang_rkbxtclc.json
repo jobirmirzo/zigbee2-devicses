@@ -1,0 +1,263 @@
+{
+  "model": "TS0601_3gang_rkbxtclc",
+  "file": "TS0601_3gang_rkbxtclc.md",
+  "vendor": "Tuya",
+  "description": "Three gang smart switch with colored backlight modes",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_3gang_rkbxtclc.png",
+  "added_at": "2025-11-30T20:32:44",
+  "exposes_summary": "switch (state), backlight_switch, backlight, indicator_mode, power_on_behavior, child_lock, on_color, off_color, countdown_l1, countdown_l2, countdown_l3",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l3",
+      "features": [
+        {
+          "property": "state_l3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Backlight switch",
+      "type": "binary",
+      "property": "backlight_switch",
+      "base": "backlight_switch",
+      "endpoint": null,
+      "description": "Backlight master switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Backlight",
+      "type": "numeric",
+      "property": "backlight",
+      "base": "backlight",
+      "endpoint": null,
+      "description": "Backlight brightness percentage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode",
+      "base": "indicator_mode",
+      "endpoint": null,
+      "description": "LED indicator mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on_off_status",
+        "switch_position"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "previous",
+        "on"
+      ]
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Child lock.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "On color",
+      "type": "enum",
+      "property": "on_color",
+      "base": "on_color",
+      "endpoint": null,
+      "description": "ON color.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "red",
+        "blue",
+        "green",
+        "white",
+        "yellow",
+        "magenta",
+        "cyan",
+        "warm_white",
+        "warm_yellow"
+      ]
+    },
+    {
+      "name": "Off color",
+      "type": "enum",
+      "property": "off_color",
+      "base": "off_color",
+      "endpoint": null,
+      "description": "OFF color.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "red",
+        "blue",
+        "green",
+        "white",
+        "yellow",
+        "magenta",
+        "cyan",
+        "warm_white",
+        "warm_yellow"
+      ]
+    },
+    {
+      "name": "Countdown l1",
+      "type": "numeric",
+      "property": "countdown_l1",
+      "base": "countdown_l1",
+      "endpoint": null,
+      "description": "Countdown for l1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown l2",
+      "type": "numeric",
+      "property": "countdown_l2",
+      "base": "countdown_l2",
+      "endpoint": null,
+      "description": "Countdown for l2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown l3",
+      "type": "numeric",
+      "property": "countdown_l3",
+      "base": "countdown_l3",
+      "endpoint": null,
+      "description": "Countdown for l3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

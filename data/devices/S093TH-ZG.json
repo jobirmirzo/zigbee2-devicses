@@ -1,0 +1,40 @@
+{
+  "model": "S093TH-ZG",
+  "file": "S093TH-ZG.md",
+  "vendor": "HZC Electric",
+  "description": "Temperature and humidity sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/S093TH-ZG.png",
+  "added_at": "2022-10-10T21:00:00Z",
+  "exposes_summary": "temperature, humidity",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

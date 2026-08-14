@@ -1,0 +1,281 @@
+{
+  "model": "NAS-WV05B2",
+  "file": "NAS-WV05B2.md",
+  "vendor": "NEO",
+  "description": "Smart sprinkler timer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/NAS-WV05B2.png",
+  "added_at": "2024-08-01T18:23:33",
+  "exposes_summary": "switch (state), status, refresh, countdown, on_with_countdown, countdown_left, single_watering_duration, flow_switch, quantitative_watering, single_watering_amount, surplus_flow, water_current, water_total, water_total_reset, fault, child_lock, battery",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Status",
+      "type": "enum",
+      "property": "status",
+      "base": "status",
+      "endpoint": null,
+      "description": "Status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "off",
+        "on_auto",
+        "button_locked",
+        "on_manual_app",
+        "on_manual_button"
+      ]
+    },
+    {
+      "name": "Refresh",
+      "type": "enum",
+      "property": "refresh",
+      "base": "refresh",
+      "endpoint": null,
+      "description": "Refresh the device status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "refresh"
+      ]
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown",
+      "base": "countdown",
+      "endpoint": null,
+      "description": "Turn off the sprinkler after set duration (one time action).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 240,
+      "unit": "min"
+    },
+    {
+      "name": "On with countdown",
+      "type": "numeric",
+      "property": "on_with_countdown",
+      "base": "on_with_countdown",
+      "endpoint": null,
+      "description": "Turn on the sprinkler and start countdown.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 240,
+      "unit": "min"
+    },
+    {
+      "name": "Countdown left",
+      "type": "numeric",
+      "property": "countdown_left",
+      "base": "countdown_left",
+      "endpoint": null,
+      "description": "Time left in the countdown.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 240,
+      "unit": "min"
+    },
+    {
+      "name": "Single watering duration",
+      "type": "numeric",
+      "property": "single_watering_duration",
+      "base": "single_watering_duration",
+      "endpoint": null,
+      "description": "Duration of last watering.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Flow switch",
+      "type": "binary",
+      "property": "flow_switch",
+      "base": "flow_switch",
+      "endpoint": null,
+      "description": "Enables water flow measurement, and automatically turn off the sprinkler when flow is 0 for ~30s.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Quantitative watering",
+      "type": "numeric",
+      "property": "quantitative_watering",
+      "base": "quantitative_watering",
+      "endpoint": null,
+      "description": "Turn on the sprinkler with a set amount of water.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10000,
+      "unit": "gal"
+    },
+    {
+      "name": "Single watering amount",
+      "type": "numeric",
+      "property": "single_watering_amount",
+      "base": "single_watering_amount",
+      "endpoint": null,
+      "description": "Quantity of last watering.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "gal"
+    },
+    {
+      "name": "Surplus flow",
+      "type": "numeric",
+      "property": "surplus_flow",
+      "base": "surplus_flow",
+      "endpoint": null,
+      "description": "Remaining amount.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "gal"
+    },
+    {
+      "name": "Water current",
+      "type": "numeric",
+      "property": "water_current",
+      "base": "water_current",
+      "endpoint": null,
+      "description": "Current water flow.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "gal/min"
+    },
+    {
+      "name": "Water total",
+      "type": "numeric",
+      "property": "water_total",
+      "base": "water_total",
+      "endpoint": null,
+      "description": "Total watering amount.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "gal"
+    },
+    {
+      "name": "Water total reset",
+      "type": "enum",
+      "property": "water_total_reset",
+      "base": "water_total_reset",
+      "endpoint": null,
+      "description": "Reset the stored watering amount to 0.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "reset"
+      ]
+    },
+    {
+      "name": "Fault",
+      "type": "binary",
+      "property": "fault",
+      "base": "fault",
+      "endpoint": null,
+      "description": "Indicates whether a fault was detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

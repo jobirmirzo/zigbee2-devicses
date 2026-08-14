@@ -1,0 +1,51 @@
+{
+  "model": "E0040006",
+  "file": "E0040006.md",
+  "vendor": "Paul Neuhaus",
+  "description": "Q RGBW remote controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E0040006.png",
+  "added_at": "2023-08-26T06:45:18",
+  "exposes_summary": "action, action_group",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_step_up",
+        "brightness_step_down",
+        "color_move",
+        "color_temperature_move",
+        "brightness_stop",
+        "brightness_move_up",
+        "brightness_move_down",
+        "color_loop_set",
+        "enhanced_move_to_hue_and_saturation"
+      ]
+    },
+    {
+      "name": "Action group",
+      "type": "numeric",
+      "property": "action_group",
+      "base": "action_group",
+      "endpoint": null,
+      "description": "Group where the action was triggered on.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

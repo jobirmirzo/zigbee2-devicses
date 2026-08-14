@@ -1,0 +1,154 @@
+{
+  "model": "EZCP04",
+  "file": "EZCP04.md",
+  "vendor": "Lincukoo",
+  "description": "Smart air quality monitor (CO2+PM2.5)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EZCP04.png",
+  "added_at": "2026-01-31T13:10:42",
+  "exposes_summary": "co2, pm25, temperature, humidity, temperature_unit_convert, co2_alarm_value, pm25_alarm_value, alarm_ringtone, alarm_state",
+  "exposes": [
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "The measured CO2 (carbon dioxide) value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "PM25",
+      "type": "numeric",
+      "property": "pm25",
+      "base": "pm25",
+      "endpoint": null,
+      "description": "Measured PM2.5 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature unit convert",
+      "type": "enum",
+      "property": "temperature_unit_convert",
+      "base": "temperature_unit_convert",
+      "endpoint": null,
+      "description": "Current display unit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Co2 alarm value",
+      "type": "numeric",
+      "property": "co2_alarm_value",
+      "base": "co2_alarm_value",
+      "endpoint": null,
+      "description": "CO2 alarm value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1000,
+      "value_max": 10000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Pm25 alarm value",
+      "type": "numeric",
+      "property": "pm25_alarm_value",
+      "base": "pm25_alarm_value",
+      "endpoint": null,
+      "description": "PM2.5 alarm value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 1000,
+      "unit": "ug/m3"
+    },
+    {
+      "name": "Alarm ringtone",
+      "type": "enum",
+      "property": "alarm_ringtone",
+      "base": "alarm_ringtone",
+      "endpoint": null,
+      "description": "alarm_ringtone.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "mute",
+        "ringtone_1",
+        "ringtone_2",
+        "ringtone_3"
+      ]
+    },
+    {
+      "name": "Alarm state",
+      "type": "enum",
+      "property": "alarm_state",
+      "base": "alarm_state",
+      "endpoint": null,
+      "description": "alarm status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "normal",
+        "alarm_co2",
+        "alarm_pm25"
+      ]
+    }
+  ],
+  "warnings": []
+}

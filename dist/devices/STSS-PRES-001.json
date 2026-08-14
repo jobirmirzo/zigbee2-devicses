@@ -1,0 +1,43 @@
+{
+  "model": "STSS-PRES-001",
+  "file": "STSS-PRES-001.md",
+  "vendor": "SmartThings",
+  "description": "Presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/STSS-PRES-001.png",
+  "added_at": "2020-09-01T19:56:51Z",
+  "exposes_summary": "battery, presence",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

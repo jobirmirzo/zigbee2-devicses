@@ -1,0 +1,91 @@
+{
+  "model": "POK012",
+  "file": "POK012.md",
+  "vendor": "PushOk Hardware",
+  "description": "20 dBm Zigbee router with battery backup for indoor/outdoor use",
+  "image": "https://www.zigbee2mqtt.io/images/devices/POK012.png",
+  "added_at": "2024-10-31T20:34:53",
+  "exposes_summary": "battery_state, ac_status, battery_defect, battery, voltage",
+  "exposes": [
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "Battery state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "missing",
+        "charging",
+        "full",
+        "discharging"
+      ]
+    },
+    {
+      "name": "Ac status",
+      "type": "binary",
+      "property": "ac_status",
+      "base": "ac_status",
+      "endpoint": null,
+      "description": "Indicates whether the device mains voltage supply is at fault.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery defect",
+      "type": "binary",
+      "property": "battery_defect",
+      "base": "battery_defect",
+      "endpoint": null,
+      "description": "Indicates whether the device battery is defective.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

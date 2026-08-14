@@ -1,0 +1,212 @@
+{
+  "model": "MINI-ZB1GP",
+  "file": "MINI-ZB1GP.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee smart power monitoring sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MINI-ZB1GP.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "network_indicator, turbo_mode, power, current, voltage, energy_today, output_energy_today, energy_month, output_energy_month, total_energy, total_output_energy, metering_communication_error, overload_protection, power_protector",
+  "exposes": [
+    {
+      "name": "Network indicator",
+      "type": "binary",
+      "property": "network_indicator",
+      "base": "network_indicator",
+      "endpoint": null,
+      "description": "Turn the blue network status indicator on or off..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Turbo mode",
+      "type": "binary",
+      "property": "turbo_mode",
+      "base": "turbo_mode",
+      "endpoint": null,
+      "description": "Boost Zigbee radio transmit power to improve range..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Power used by the connected load..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Current drawn by the connected load..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Supply voltage measured by the plug..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Energy today",
+      "type": "numeric",
+      "property": "energy_today",
+      "base": "energy_today",
+      "endpoint": null,
+      "description": "Energy used today by the connected load..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Export energy today",
+      "type": "numeric",
+      "property": "output_energy_today",
+      "base": "output_energy_today",
+      "endpoint": null,
+      "description": "Energy fed back today through the plug..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy this month",
+      "type": "numeric",
+      "property": "energy_month",
+      "base": "energy_month",
+      "endpoint": null,
+      "description": "Energy used this month by the connected load..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Export energy this month",
+      "type": "numeric",
+      "property": "output_energy_month",
+      "base": "output_energy_month",
+      "endpoint": null,
+      "description": "Energy fed back this month through the plug..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Total energy",
+      "type": "numeric",
+      "property": "total_energy",
+      "base": "total_energy",
+      "endpoint": null,
+      "description": "Total energy used by the connected load..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Total export energy",
+      "type": "numeric",
+      "property": "total_output_energy",
+      "base": "total_output_energy",
+      "endpoint": null,
+      "description": "Total energy fed back through the plug..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Metering communication error",
+      "type": "binary",
+      "property": "metering_communication_error",
+      "base": "metering_communication_error",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Alarm Active",
+      "value_off": "Normal"
+    },
+    {
+      "name": "Electrical Status",
+      "type": "binary",
+      "property": "overload_protection",
+      "base": "overload_protection",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Alarm Active",
+      "value_off": "Normal"
+    },
+    {
+      "name": "Electrical Monitoring",
+      "type": "composite",
+      "property": "power_protector",
+      "base": "power_protector",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": []
+    }
+  ],
+  "warnings": []
+}

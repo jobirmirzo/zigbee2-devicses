@@ -1,0 +1,11 @@
+{
+  "model": "BRI4P",
+  "file": "BRI4P.md",
+  "vendor": "Imhotep Creation",
+  "description": "BRI4P Bridge for underfloor heating central and local thermostats",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BRI4P.png",
+  "added_at": "2023-11-30T19:41:12",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

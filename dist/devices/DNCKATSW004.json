@@ -1,0 +1,179 @@
+{
+  "model": "DNCKATSW004",
+  "file": "DNCKATSW004.md",
+  "vendor": "Custom devices (DiY)",
+  "description": "DNCKAT quadruple key wired wall light switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DNCKATSW004.png",
+  "added_at": "2019-07-22T20:08:17Z",
+  "exposes_summary": "switch (state), power_on_behavior, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "bottom_left",
+      "features": [
+        {
+          "property": "state_bottom_left",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "bottom_right",
+      "features": [
+        {
+          "property": "state_bottom_right",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "top_left",
+      "features": [
+        {
+          "property": "state_top_left",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "top_right",
+      "features": [
+        {
+          "property": "state_top_right",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_bottom_left",
+      "base": "power_on_behavior",
+      "endpoint": "bottom_left",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_bottom_right",
+      "base": "power_on_behavior",
+      "endpoint": "bottom_right",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_top_left",
+      "base": "power_on_behavior",
+      "endpoint": "top_left",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_top_right",
+      "base": "power_on_behavior",
+      "endpoint": "top_right",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "release_bottom_left",
+        "hold_bottom_left",
+        "release_bottom_right",
+        "hold_bottom_right",
+        "release_top_left",
+        "hold_top_left",
+        "release_top_right",
+        "hold_top_right"
+      ]
+    }
+  ],
+  "warnings": []
+}

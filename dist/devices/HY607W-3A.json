@@ -1,0 +1,87 @@
+{
+  "model": "HY607W-3A",
+  "file": "HY607W-3A.md",
+  "vendor": "Tuya",
+  "description": "Thermostat for gas boiler",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HY607W-3A.png",
+  "added_at": "2025-08-01T15:19:08",
+  "exposes_summary": "climate (local_temperature, occupied_heating_setpoint), mode_state, state, running_state",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Mode state",
+      "type": "enum",
+      "property": "mode_state",
+      "base": "mode_state",
+      "endpoint": null,
+      "description": "Thermostat mode: manual, auto, or temp_override.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "manual",
+        "auto",
+        "temp_override"
+      ]
+    },
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "ON/OFF thermostat.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Running state",
+      "type": "enum",
+      "property": "running_state",
+      "base": "running_state",
+      "endpoint": null,
+      "description": "State of heating.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "idle",
+        "heat"
+      ]
+    }
+  ],
+  "warnings": []
+}

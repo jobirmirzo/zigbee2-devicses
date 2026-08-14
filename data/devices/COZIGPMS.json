@@ -1,0 +1,41 @@
+{
+  "model": "COZIGPMS",
+  "file": "COZIGPMS.md",
+  "vendor": "Conecto",
+  "description": "PIR Motion Sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/COZIGPMS.png",
+  "added_at": "2025-07-09T18:35:13",
+  "exposes_summary": "occupancy, illuminance, battery",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

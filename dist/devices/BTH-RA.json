@@ -1,0 +1,321 @@
+{
+  "model": "BTH-RA",
+  "file": "BTH-RA.md",
+  "vendor": "Bosch",
+  "description": "Radiator thermostat II",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BTH-RA.png",
+  "added_at": "2022-12-01T15:07:19",
+  "exposes_summary": "climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_state, pi_heating_demand), setpoint_change_source, operating_mode, window_detection, boost_heating, remote_temperature, child_lock, display_brightness, display_switch_on_duration, display_orientation, displayed_temperature, valve_adapt_status, automatic_valve_adapt, valve_adapt_process, error_state, battery, battery_low",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        },
+        {
+          "property": "pi_heating_demand",
+          "base": "pi_heating_demand",
+          "value_min": 0,
+          "value_max": 100,
+          "unit": "%",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source",
+      "base": "setpoint_change_source",
+      "endpoint": null,
+      "description": "Source of the current setpoint temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "Operating mode",
+      "type": "enum",
+      "property": "operating_mode",
+      "base": "operating_mode",
+      "endpoint": null,
+      "description": "Bosch-specific operating mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "schedule",
+        "manual",
+        "pause"
+      ]
+    },
+    {
+      "name": "Window detection",
+      "type": "binary",
+      "property": "window_detection",
+      "base": "window_detection",
+      "endpoint": null,
+      "description": "Activates the window open mode, where the thermostat disables any heating/cooling to prevent unnecessary energy consumption. Please keep in mind that the device itself does not detect any open windows!.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Activate boost heating",
+      "type": "binary",
+      "property": "boost_heating",
+      "base": "boost_heating",
+      "endpoint": null,
+      "description": "Activate boost heating (opens TRV for 5 minutes).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Remote temperature",
+      "type": "numeric",
+      "property": "remote_temperature",
+      "base": "remote_temperature",
+      "endpoint": null,
+      "description": "Input for remote temperature sensor. Required at least every 30 minutes to prevent fallback to the internal sensor!.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the thermostat.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Display brightness",
+      "type": "numeric",
+      "property": "display_brightness",
+      "base": "display_brightness",
+      "endpoint": null,
+      "description": "Sets brightness of the display.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Display switch-on duration",
+      "type": "numeric",
+      "property": "display_switch_on_duration",
+      "base": "display_switch_on_duration",
+      "endpoint": null,
+      "description": "Sets the time before the display is automatically switched off.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 30,
+      "unit": "s"
+    },
+    {
+      "name": "Display orientation",
+      "type": "enum",
+      "property": "display_orientation",
+      "base": "display_orientation",
+      "endpoint": null,
+      "description": "You can rotate the display content by 180° here. This is recommended if your thermostat is fitted vertically, for instance..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "standard_arrangement",
+        "rotated_by_180_degrees"
+      ]
+    },
+    {
+      "name": "Displayed temperature",
+      "type": "enum",
+      "property": "displayed_temperature",
+      "base": "displayed_temperature",
+      "endpoint": null,
+      "description": "Select which temperature should be displayed on your radiator thermostat display.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "set_temperature",
+        "measured_temperature"
+      ]
+    },
+    {
+      "name": "Valve adaptation status",
+      "type": "enum",
+      "property": "valve_adapt_status",
+      "base": "valve_adapt_status",
+      "endpoint": null,
+      "description": "Specifies the current status of the valve adaptation.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "ready_to_calibrate",
+        "calibration_in_progress",
+        "error",
+        "success"
+      ]
+    },
+    {
+      "name": "Automatic valve adaptation requested",
+      "type": "binary",
+      "property": "automatic_valve_adapt",
+      "base": "automatic_valve_adapt",
+      "endpoint": null,
+      "description": "Specifies if an automatic valve adaptation is being requested by the thermostat (for example after a successful firmware upgrade). If this is the case, the valve adaptation will be automatically started as soon as the adaptation status is 'ready_to_calibrate' or 'error'..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Trigger adaptation process",
+      "type": "enum",
+      "property": "valve_adapt_process",
+      "base": "valve_adapt_process",
+      "endpoint": null,
+      "description": "Trigger the valve adaptation process. Only possible when the adaptation status is 'ready_to_calibrate' or 'error'..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "adapt"
+      ]
+    },
+    {
+      "name": "Error state",
+      "type": "text",
+      "property": "error_state",
+      "base": "error_state",
+      "endpoint": null,
+      "description": "Indicates whether the device encounters any errors or not.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

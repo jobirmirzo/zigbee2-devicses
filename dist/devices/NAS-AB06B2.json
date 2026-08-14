@@ -1,0 +1,159 @@
+{
+  "model": "NAS-AB06B2",
+  "file": "NAS-AB06B2.md",
+  "vendor": "NEO",
+  "description": "Outdoor solar alarm",
+  "image": "https://www.zigbee2mqtt.io/images/devices/NAS-AB06B2.png",
+  "added_at": "2023-06-27T19:46:17",
+  "exposes_summary": "alarm_state, alarm_switch, tamper_alarm_switch, tamper_alarm, alarm_melody, alarm_mode, alarm_time, charging, battery",
+  "exposes": [
+    {
+      "name": "Alarm state",
+      "type": "enum",
+      "property": "alarm_state",
+      "base": "alarm_state",
+      "endpoint": null,
+      "description": "Alarm status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "alarm_sound",
+        "alarm_light",
+        "alarm_sound_light",
+        "normal"
+      ]
+    },
+    {
+      "name": "Alarm switch",
+      "type": "binary",
+      "property": "alarm_switch",
+      "base": "alarm_switch",
+      "endpoint": null,
+      "description": "Enable alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Tamper alarm switch",
+      "type": "binary",
+      "property": "tamper_alarm_switch",
+      "base": "tamper_alarm_switch",
+      "endpoint": null,
+      "description": "Enable tamper alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Tamper alarm",
+      "type": "binary",
+      "property": "tamper_alarm",
+      "base": "tamper_alarm",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Alarm melody",
+      "type": "enum",
+      "property": "alarm_melody",
+      "base": "alarm_melody",
+      "endpoint": null,
+      "description": "Alarm sound effect.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "melody_1",
+        "melody_2",
+        "melody_3"
+      ]
+    },
+    {
+      "name": "Alarm mode",
+      "type": "enum",
+      "property": "alarm_mode",
+      "base": "alarm_mode",
+      "endpoint": null,
+      "description": "Alarm mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "alarm_sound",
+        "alarm_light",
+        "alarm_sound_light"
+      ]
+    },
+    {
+      "name": "Alarm time",
+      "type": "numeric",
+      "property": "alarm_time",
+      "base": "alarm_time",
+      "endpoint": null,
+      "description": "Alarm duration in minutes.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 60,
+      "unit": "min"
+    },
+    {
+      "name": "Charging",
+      "type": "binary",
+      "property": "charging",
+      "base": "charging",
+      "endpoint": null,
+      "description": "Charging status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

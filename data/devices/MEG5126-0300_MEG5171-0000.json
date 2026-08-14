@@ -1,0 +1,195 @@
+{
+  "model": "MEG5126-0300/MEG5171-0000",
+  "file": "MEG5126-0300_MEG5171-0000.md",
+  "vendor": "Schneider Electric",
+  "description": "Merten MEG5171 PlusLink Dimmer insert with Merten Wiser System M Push Button (2fold)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MEG5126-0300-MEG5171-0000.png",
+  "added_at": "2023-09-28T10:54:36",
+  "exposes_summary": "light (state, brightness, level_config), ballast_minimum_level, ballast_maximum_level, dimmer_mode, indicator_mode, switch_actions",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "level_config",
+          "base": "level_config",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Ballast minimum level",
+      "type": "numeric",
+      "property": "ballast_minimum_level",
+      "base": "ballast_minimum_level",
+      "endpoint": null,
+      "description": "Specifies the minimum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Ballast maximum level",
+      "type": "numeric",
+      "property": "ballast_maximum_level",
+      "base": "ballast_maximum_level",
+      "endpoint": null,
+      "description": "Specifies the maximum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Dimmer mode",
+      "type": "enum",
+      "property": "dimmer_mode",
+      "base": "dimmer_mode",
+      "endpoint": null,
+      "description": "Sets dimming mode to autodetect or fixed RC/RL/RL_LED mode (max load is reduced in RL_LED).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "auto",
+        "rc",
+        "rl",
+        "rl_led"
+      ]
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode_right",
+      "base": "indicator_mode",
+      "endpoint": "right",
+      "description": "Set Indicator Mode for right switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "reverse_with_load",
+        "consistent_with_load",
+        "always_off",
+        "always_on",
+        "flash_on_click"
+      ]
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode_left",
+      "base": "indicator_mode",
+      "endpoint": "left",
+      "description": "Set Indicator Mode for left switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "reverse_with_load",
+        "consistent_with_load",
+        "always_off",
+        "always_on",
+        "flash_on_click"
+      ]
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions_right",
+      "base": "switch_actions",
+      "endpoint": "right",
+      "description": "Set Switch Action for right Button..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "light",
+        "light_opposite",
+        "dimmer",
+        "dimmer_opposite",
+        "standard_shutter",
+        "standard_shutter_opposite",
+        "schneider_shutter",
+        "schneider_shutter_opposite",
+        "scene",
+        "toggle_light",
+        "toggle_dimmer",
+        "alternate_light",
+        "alternate_dimmer",
+        "not_used"
+      ]
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions_left",
+      "base": "switch_actions",
+      "endpoint": "left",
+      "description": "Set Switch Action for left Button..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "light",
+        "light_opposite",
+        "dimmer",
+        "dimmer_opposite",
+        "standard_shutter",
+        "standard_shutter_opposite",
+        "schneider_shutter",
+        "schneider_shutter_opposite",
+        "scene",
+        "toggle_light",
+        "toggle_dimmer",
+        "alternate_light",
+        "alternate_dimmer",
+        "not_used"
+      ]
+    }
+  ],
+  "warnings": []
+}

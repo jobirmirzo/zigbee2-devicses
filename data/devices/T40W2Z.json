@@ -1,0 +1,63 @@
+{
+  "model": "T40W2Z",
+  "file": "T40W2Z.md",
+  "vendor": "ORVIBO",
+  "description": "MixSwitch 2 gangs",
+  "image": "https://www.zigbee2mqtt.io/images/devices/T40W2Z.png",
+  "added_at": "2025-02-18T14:59:37",
+  "exposes_summary": "power_on_behavior, switch (state)",
+  "exposes": [
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "previous"
+      ]
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "left",
+      "features": [
+        {
+          "property": "state_left",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "right",
+      "features": [
+        {
+          "property": "state_right",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

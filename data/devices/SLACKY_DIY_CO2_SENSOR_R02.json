@@ -1,0 +1,82 @@
+{
+  "model": "SLACKY_DIY_CO2_SENSOR_R02",
+  "file": "SLACKY_DIY_CO2_SENSOR_R02.md",
+  "vendor": "Slacky-DIY",
+  "description": "Tuya CO2 sensor with custom Firmware",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SLACKY_DIY_CO2_SENSOR_R02.png",
+  "added_at": "2025-05-01T17:56:32",
+  "exposes_summary": "co2, formaldehyde, voc, temperature, humidity",
+  "exposes": [
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "Measured value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Formaldehyde",
+      "type": "numeric",
+      "property": "formaldehyde",
+      "base": "formaldehyde",
+      "endpoint": null,
+      "description": "Measured Formaldehyde value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Voc",
+      "type": "numeric",
+      "property": "voc",
+      "base": "voc",
+      "endpoint": null,
+      "description": "Measured VOC value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

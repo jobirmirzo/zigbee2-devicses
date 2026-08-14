@@ -1,0 +1,101 @@
+{
+  "model": "Y1_IN",
+  "file": "Y1_IN.md",
+  "vendor": "Tuya",
+  "description": "Smart human presence sensor 24G",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Y1_IN.png",
+  "added_at": "2024-10-31T20:34:53",
+  "exposes_summary": "presence, illuminance, keep_sensitivity, trigger_sensitivity, fading_time, target_distance",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Keep sensitivity",
+      "type": "numeric",
+      "property": "keep_sensitivity",
+      "base": "keep_sensitivity",
+      "endpoint": null,
+      "description": "Keep sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Trigger sensitivity",
+      "type": "numeric",
+      "property": "trigger_sensitivity",
+      "base": "trigger_sensitivity",
+      "endpoint": null,
+      "description": "Trigger sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 20
+    },
+    {
+      "name": "Fading time",
+      "type": "numeric",
+      "property": "fading_time",
+      "base": "fading_time",
+      "endpoint": null,
+      "description": "Presence timeout.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 60,
+      "unit": "s"
+    },
+    {
+      "name": "Target distance",
+      "type": "numeric",
+      "property": "target_distance",
+      "base": "target_distance",
+      "endpoint": null,
+      "description": "Distance to target.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    }
+  ],
+  "warnings": []
+}

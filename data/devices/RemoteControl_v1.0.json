@@ -1,0 +1,39 @@
+{
+  "model": "RemoteControl_v1.0",
+  "file": "RemoteControl_v1.0.md",
+  "vendor": "Vimar",
+  "description": "Remote control IoT",
+  "image": "https://www.zigbee2mqtt.io/images/devices/RemoteControl_v1.0.png",
+  "added_at": "2025-04-01T18:30:52",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "toggle",
+        "open",
+        "close",
+        "stop",
+        "brightness_move_to_level",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

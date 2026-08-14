@@ -1,0 +1,389 @@
+{
+  "model": "ECB62-ZB",
+  "file": "ECB62-ZB.md",
+  "vendor": "ENGO",
+  "description": "Control box for underfloor heating system",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ECB62-ZB.png",
+  "added_at": "2025-07-01T17:54:38",
+  "exposes_summary": "pump_delay_time, zone_1, zone_2, zone_3, zone_4, zone_5, zone_6, zone_a, zone_b, boiler_state, pump_state, zone_1_linked, zone_2_linked, zone_3_linked, zone_4_linked, zone_5_linked, zone_6_linked, zone_a_name, zone_b_name, zone_1_name, zone_2_name, zone_3_name, zone_4_name, zone_5_name, zone_6_name, voltage",
+  "exposes": [
+    {
+      "name": "Pump delay time",
+      "type": "enum",
+      "property": "pump_delay_time",
+      "base": "pump_delay_time",
+      "endpoint": null,
+      "description": "Pump shutdown delay.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "OFF",
+        "3_min",
+        "5_min",
+        "15_min"
+      ]
+    },
+    {
+      "name": "Zone 1",
+      "type": "binary",
+      "property": "zone_1",
+      "base": "zone_1",
+      "endpoint": null,
+      "description": "Zigbee zone 1 heat demand.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Zone 2",
+      "type": "binary",
+      "property": "zone_2",
+      "base": "zone_2",
+      "endpoint": null,
+      "description": "Zigbee zone 2 heat demand.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Zone 3",
+      "type": "binary",
+      "property": "zone_3",
+      "base": "zone_3",
+      "endpoint": null,
+      "description": "Zigbee zone 3 heat demand.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Zone 4",
+      "type": "binary",
+      "property": "zone_4",
+      "base": "zone_4",
+      "endpoint": null,
+      "description": "Zigbee zone 4 heat demand.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Zone 5",
+      "type": "binary",
+      "property": "zone_5",
+      "base": "zone_5",
+      "endpoint": null,
+      "description": "Zigbee zone 5 heat demand.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Zone 6",
+      "type": "binary",
+      "property": "zone_6",
+      "base": "zone_6",
+      "endpoint": null,
+      "description": "Zigbee zone 6 heat demand.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Zone a",
+      "type": "binary",
+      "property": "zone_a",
+      "base": "zone_a",
+      "endpoint": null,
+      "description": "Wired zone A heat demand.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Zone b",
+      "type": "binary",
+      "property": "zone_b",
+      "base": "zone_b",
+      "endpoint": null,
+      "description": "Wired zone B heat demand.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Boiler state",
+      "type": "binary",
+      "property": "boiler_state",
+      "base": "boiler_state",
+      "endpoint": null,
+      "description": "Boiler output.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Pump state",
+      "type": "binary",
+      "property": "pump_state",
+      "base": "pump_state",
+      "endpoint": null,
+      "description": "Pump output.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Zone 1 linked",
+      "type": "binary",
+      "property": "zone_1_linked",
+      "base": "zone_1_linked",
+      "endpoint": null,
+      "description": "Zone 1 thermostat connection status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Zone 2 linked",
+      "type": "binary",
+      "property": "zone_2_linked",
+      "base": "zone_2_linked",
+      "endpoint": null,
+      "description": "Zone 2 thermostat connection status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Zone 3 linked",
+      "type": "binary",
+      "property": "zone_3_linked",
+      "base": "zone_3_linked",
+      "endpoint": null,
+      "description": "Zone 3 thermostat connection status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Zone 4 linked",
+      "type": "binary",
+      "property": "zone_4_linked",
+      "base": "zone_4_linked",
+      "endpoint": null,
+      "description": "Zone 4 thermostat connection status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Zone 5 linked",
+      "type": "binary",
+      "property": "zone_5_linked",
+      "base": "zone_5_linked",
+      "endpoint": null,
+      "description": "Zone 5 thermostat connection status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Zone 6 linked",
+      "type": "binary",
+      "property": "zone_6_linked",
+      "base": "zone_6_linked",
+      "endpoint": null,
+      "description": "Zone 6 thermostat connection status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Zone a name",
+      "type": "text",
+      "property": "zone_a_name",
+      "base": "zone_a_name",
+      "endpoint": null,
+      "description": "Custom name for wired zone A.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Zone b name",
+      "type": "text",
+      "property": "zone_b_name",
+      "base": "zone_b_name",
+      "endpoint": null,
+      "description": "Custom name for wired zone B.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Zone 1 name",
+      "type": "text",
+      "property": "zone_1_name",
+      "base": "zone_1_name",
+      "endpoint": null,
+      "description": "Custom name for zigbee zone 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Zone 2 name",
+      "type": "text",
+      "property": "zone_2_name",
+      "base": "zone_2_name",
+      "endpoint": null,
+      "description": "Custom name for zigbee zone 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Zone 3 name",
+      "type": "text",
+      "property": "zone_3_name",
+      "base": "zone_3_name",
+      "endpoint": null,
+      "description": "Custom name for zigbee zone 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Zone 4 name",
+      "type": "text",
+      "property": "zone_4_name",
+      "base": "zone_4_name",
+      "endpoint": null,
+      "description": "Custom name for zigbee zone 4.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Zone 5 name",
+      "type": "text",
+      "property": "zone_5_name",
+      "base": "zone_5_name",
+      "endpoint": null,
+      "description": "Custom name for zigbee zone 5.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Zone 6 name",
+      "type": "text",
+      "property": "zone_6_name",
+      "base": "zone_6_name",
+      "endpoint": null,
+      "description": "Custom name for zigbee zone 6.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    }
+  ],
+  "warnings": []
+}

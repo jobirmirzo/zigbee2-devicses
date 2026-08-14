@@ -1,0 +1,227 @@
+{
+  "model": "SNZB-06P24",
+  "file": "SNZB-06P24.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee occupancy sensor with illuminance",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SNZB-06P24.png",
+  "added_at": "2026-04-30T19:57:28",
+  "exposes_summary": "illuminance, occupancy, pir_o_to_u_delay, enable_occupancy_zone_1, enable_occupancy_zone_2, enable_occupancy_zone_3, enable_occupancy_zone_4, enable_occupancy_zone_5, enable_occupancy_zone_6, enable_occupancy_zone_7, illuminance_calibration, radar_sensitivity, spatial_learning, spatial_learning_state",
+  "exposes": [
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy timeout",
+      "type": "numeric",
+      "property": "pir_o_to_u_delay",
+      "base": "pir_o_to_u_delay",
+      "endpoint": null,
+      "description": "Occupied to unoccupied delay.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 15,
+      "value_max": 65535,
+      "unit": "s"
+    },
+    {
+      "name": "Zone 1 (0m-1m)",
+      "type": "binary",
+      "property": "enable_occupancy_zone_1",
+      "base": "enable_occupancy_zone_1",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Zone 2 (1m-1.5m)",
+      "type": "binary",
+      "property": "enable_occupancy_zone_2",
+      "base": "enable_occupancy_zone_2",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Zone 3 (1.5m-2m)",
+      "type": "binary",
+      "property": "enable_occupancy_zone_3",
+      "base": "enable_occupancy_zone_3",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Zone 4 (2m-2.5m)",
+      "type": "binary",
+      "property": "enable_occupancy_zone_4",
+      "base": "enable_occupancy_zone_4",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Zone 5 (2.5m-3m)",
+      "type": "binary",
+      "property": "enable_occupancy_zone_5",
+      "base": "enable_occupancy_zone_5",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Zone 6 (3m-3.5m)",
+      "type": "binary",
+      "property": "enable_occupancy_zone_6",
+      "base": "enable_occupancy_zone_6",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Zone 7 (3.5m-4m)",
+      "type": "binary",
+      "property": "enable_occupancy_zone_7",
+      "base": "enable_occupancy_zone_7",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance calibration",
+      "type": "numeric",
+      "property": "illuminance_calibration",
+      "base": "illuminance_calibration",
+      "endpoint": null,
+      "description": "Illuminance compensation offset.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -1000,
+      "value_max": 1000,
+      "unit": "lx"
+    },
+    {
+      "name": "Fine-tune Sensitivity",
+      "type": "numeric",
+      "property": "radar_sensitivity",
+      "base": "radar_sensitivity",
+      "endpoint": null,
+      "description": "Radar sensitivity level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -6,
+      "value_max": 6
+    },
+    {
+      "name": "Spatial learning",
+      "type": "enum",
+      "property": "spatial_learning",
+      "base": "spatial_learning",
+      "endpoint": null,
+      "description": "Start space learning calibration.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "start_learning"
+      ]
+    },
+    {
+      "name": "Spatial learning state",
+      "type": "enum",
+      "property": "spatial_learning_state",
+      "base": "spatial_learning_state",
+      "endpoint": null,
+      "description": "Current state of space learning.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "Clear",
+        "Learning",
+        "Failed"
+      ]
+    }
+  ],
+  "warnings": []
+}

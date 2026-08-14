@@ -1,0 +1,170 @@
+{
+  "model": "IOMZB-110",
+  "file": "IOMZB-110.md",
+  "vendor": "Develco",
+  "description": "IO module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/IOMZB-110.png",
+  "added_at": "2022-11-01T16:06:49",
+  "exposes_summary": "input, switch (state), duration, trigger",
+  "exposes": [
+    {
+      "name": "Input",
+      "type": "binary",
+      "property": "input_l1",
+      "base": "input",
+      "endpoint": "l1",
+      "description": "State of input 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Input",
+      "type": "binary",
+      "property": "input_l2",
+      "base": "input",
+      "endpoint": "l2",
+      "description": "State of input 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Input",
+      "type": "binary",
+      "property": "input_l3",
+      "base": "input",
+      "endpoint": "l3",
+      "description": "State of input 3.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Input",
+      "type": "binary",
+      "property": "input_l4",
+      "base": "input",
+      "endpoint": "l4",
+      "description": "State of input 4.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l11",
+      "features": [
+        {
+          "property": "state_l11",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l12",
+      "features": [
+        {
+          "property": "state_l12",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Pulse duration",
+      "type": "numeric",
+      "property": "duration_l11",
+      "base": "duration",
+      "endpoint": "l11",
+      "description": "Duration of the pulse..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Pulse duration",
+      "type": "numeric",
+      "property": "duration_l12",
+      "base": "duration",
+      "endpoint": "l12",
+      "description": "Duration of the pulse..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Trigger",
+      "type": "enum",
+      "property": "trigger_l11",
+      "base": "trigger",
+      "endpoint": "l11",
+      "description": "Trigger a timed pulse. The length of the pulse is defined by 'Pulse duration'. If the 'Pulse duration' is undefined a default value of 1s will be used..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "press"
+      ]
+    },
+    {
+      "name": "Trigger",
+      "type": "enum",
+      "property": "trigger_l12",
+      "base": "trigger",
+      "endpoint": "l12",
+      "description": "Trigger a timed pulse. The length of the pulse is defined by 'Pulse duration'. If the 'Pulse duration' is undefined a default value of 1s will be used..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "press"
+      ]
+    }
+  ],
+  "warnings": []
+}

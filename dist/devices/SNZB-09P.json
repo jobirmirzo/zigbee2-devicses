@@ -1,0 +1,165 @@
+{
+  "model": "SNZB-09P",
+  "file": "SNZB-09P.md",
+  "vendor": "SONOFF",
+  "description": "Siren",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SNZB-09P.png",
+  "added_at": "2026-06-01T18:22:36",
+  "exposes_summary": "siren_on, power_supply_mode, battery, alarm_sound_enable, alarm_light_enable, tamper, alarm_sound_type, alarm_volume_level, alarm_duration",
+  "exposes": [
+    {
+      "name": "Siren on",
+      "type": "binary",
+      "property": "siren_on",
+      "base": "siren_on",
+      "endpoint": null,
+      "description": "using the configured sound, light, volume, and duration..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Power supply mode",
+      "type": "enum",
+      "property": "power_supply_mode",
+      "base": "power_supply_mode",
+      "endpoint": null,
+      "description": "Current power source of the device..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "battery",
+        "external"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Alarm sound enable",
+      "type": "binary",
+      "property": "alarm_sound_enable",
+      "base": "alarm_sound_enable",
+      "endpoint": null,
+      "description": "Enable or disable the alarm sound..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Alarm light enable",
+      "type": "binary",
+      "property": "alarm_light_enable",
+      "base": "alarm_light_enable",
+      "endpoint": null,
+      "description": "Enable or disable the alarm light..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Tamper-proof status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Alarm sound type",
+      "type": "enum",
+      "property": "alarm_sound_type",
+      "base": "alarm_sound_type",
+      "endpoint": null,
+      "description": "Select the alarm sound preset..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "sound_0",
+        "sound_1",
+        "sound_2",
+        "sound_3",
+        "sound_4",
+        "sound_5",
+        "sound_6",
+        "sound_7",
+        "sound_8",
+        "sound_9"
+      ]
+    },
+    {
+      "name": "Alarm volume level",
+      "type": "enum",
+      "property": "alarm_volume_level",
+      "base": "alarm_volume_level",
+      "endpoint": null,
+      "description": "Set the alarm sound volume level..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "highest"
+      ]
+    },
+    {
+      "name": "Alarm duration",
+      "type": "numeric",
+      "property": "alarm_duration",
+      "base": "alarm_duration",
+      "endpoint": null,
+      "description": "Alarm duration in seconds..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 900,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,98 @@
+{
+  "model": "41EPBDWCLMZ/354PBDMBTZ",
+  "file": "41EPBDWCLMZ_354PBDMBTZ.md",
+  "vendor": "Schneider Electric",
+  "description": "Wiser 40/300-Series Module Dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/41EPBDWCLMZ-354PBDMBTZ.png",
+  "added_at": "2021-07-01T18:17:29Z",
+  "exposes_summary": "light (state, brightness, level_config), ballast_minimum_level, ballast_maximum_level, indicator_mode",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "level_config",
+          "base": "level_config",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Ballast minimum level",
+      "type": "numeric",
+      "property": "ballast_minimum_level",
+      "base": "ballast_minimum_level",
+      "endpoint": null,
+      "description": "Specifies the minimum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Ballast maximum level",
+      "type": "numeric",
+      "property": "ballast_maximum_level",
+      "base": "ballast_maximum_level",
+      "endpoint": null,
+      "description": "Specifies the maximum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode_smart",
+      "base": "indicator_mode",
+      "endpoint": "smart",
+      "description": "Set Indicator Mode for smart switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "reverse_with_load",
+        "consistent_with_load",
+        "always_off",
+        "always_on",
+        "flash_on_click"
+      ]
+    }
+  ],
+  "warnings": []
+}

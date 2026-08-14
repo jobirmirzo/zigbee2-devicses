@@ -1,0 +1,74 @@
+{
+  "model": "ZNMS11LM",
+  "file": "ZNMS11LM.md",
+  "vendor": "Aqara",
+  "description": "Smart door lock",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZNMS11LM.png",
+  "added_at": "2020-02-26T17:45:15Z",
+  "exposes_summary": "state, reverse, action",
+  "exposes": [
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "UNLOCK",
+      "value_off": "LOCK"
+    },
+    {
+      "name": "Reverse",
+      "type": "binary",
+      "property": "reverse",
+      "base": "reverse",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "UNLOCK",
+      "value_off": "LOCK"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "finger_not_match",
+        "password_not_match",
+        "reverse_lock",
+        "reverse_lock_cancel",
+        "locked",
+        "lock_opened",
+        "finger_add",
+        "finger_delete",
+        "password_add",
+        "password_delete",
+        "lock_opened_inside",
+        "lock_opened_outside",
+        "ring_bell",
+        "change_language_to",
+        "finger_open",
+        "password_open",
+        "door_closed"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,89 @@
+{
+  "model": "SNZB-03PR2",
+  "file": "SNZB-03PR2.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee PIR sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SNZB-03PR2.png",
+  "added_at": "2026-06-01T18:22:36",
+  "exposes_summary": "occupancy, illuminance, battery, pir_occupied_to_unoccupied_delay, illumination_compensation_offset",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Detection Duration",
+      "type": "numeric",
+      "property": "pir_occupied_to_unoccupied_delay",
+      "base": "pir_occupied_to_unoccupied_delay",
+      "endpoint": null,
+      "description": "Detection Duration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 60,
+      "unit": "s"
+    },
+    {
+      "name": "Illumination calibration",
+      "type": "numeric",
+      "property": "illumination_compensation_offset",
+      "base": "illumination_compensation_offset",
+      "endpoint": null,
+      "description": "Light intensity calibration offset.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -1000,
+      "value_max": 1000,
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,61 @@
+{
+  "model": "WZ5_rgbw",
+  "file": "WZ5_rgbw.md",
+  "vendor": "Skydance",
+  "description": "Zigbee & RF 5 in 1 LED controller (RGBW mode)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WZ5_rgbw.png",
+  "added_at": "2022-01-31T17:42:44",
+  "exposes_summary": "light (state, brightness, color_hs), white_brightness",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_hs",
+          "base": "color_hs",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "White brightness",
+      "type": "numeric",
+      "property": "white_brightness",
+      "base": "white_brightness",
+      "endpoint": null,
+      "description": "White brightness of this light.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254
+    }
+  ],
+  "warnings": []
+}

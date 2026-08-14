@@ -1,0 +1,222 @@
+{
+  "model": "ATMS10013Z3",
+  "file": "ATMS10013Z3.md",
+  "vendor": "Ourtop",
+  "description": "Zigbee 3 Phase Meter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ATMS10013Z3.png",
+  "added_at": "2025-02-01T20:02:57",
+  "exposes_summary": "energy, voltage_a, voltage_b, voltage_c, power_a, power_b, power_c, current_a, current_b, current_c, produced_energy, total_energy, power, power_reactive, power_factor",
+  "exposes": [
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Voltage a",
+      "type": "numeric",
+      "property": "voltage_a",
+      "base": "voltage_a",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage b",
+      "type": "numeric",
+      "property": "voltage_b",
+      "base": "voltage_b",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage c",
+      "type": "numeric",
+      "property": "voltage_c",
+      "base": "voltage_c",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase C).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power a",
+      "type": "numeric",
+      "property": "power_a",
+      "base": "power_a",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power b",
+      "type": "numeric",
+      "property": "power_b",
+      "base": "power_b",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power c",
+      "type": "numeric",
+      "property": "power_c",
+      "base": "power_c",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase C).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current a",
+      "type": "numeric",
+      "property": "current_a",
+      "base": "current_a",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current b",
+      "type": "numeric",
+      "property": "current_b",
+      "base": "current_b",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase B).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current c",
+      "type": "numeric",
+      "property": "current_c",
+      "base": "current_c",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase C).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Produced energy",
+      "type": "numeric",
+      "property": "produced_energy",
+      "base": "produced_energy",
+      "endpoint": null,
+      "description": "Sum of produced energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Total energy",
+      "type": "numeric",
+      "property": "total_energy",
+      "base": "total_energy",
+      "endpoint": null,
+      "description": "Total consumed and produced energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power reactive",
+      "type": "numeric",
+      "property": "power_reactive",
+      "base": "power_reactive",
+      "endpoint": null,
+      "description": "Instantaneous measured reactive power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VAR"
+    },
+    {
+      "name": "Power factor",
+      "type": "numeric",
+      "property": "power_factor",
+      "base": "power_factor",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

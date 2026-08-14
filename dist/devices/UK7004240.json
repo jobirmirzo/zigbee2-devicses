@@ -1,0 +1,547 @@
+{
+  "model": "UK7004240",
+  "file": "UK7004240.md",
+  "vendor": "Hive",
+  "description": "Radiator valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/UK7004240.png",
+  "added_at": "2019-12-15T17:27:48Z",
+  "exposes_summary": "system_status_code, climate (local_temperature, occupied_heating_setpoint, system_mode, pi_heating_demand, running_state), max_heat_setpoint_limit, programming_operation_mode, occupied_heating_setpoint_scheduled, abs_max_heat_setpoint_limit, battery, keypad_lockout, mounted_mode_active, mounted_mode_control, thermostat_orientation, viewing_direction, heat_available, heat_required, setpoint_change_source, external_measured_room_sensor, radiator_covered, window_open_feature, window_open_internal, window_open_external, day_of_week, trigger_time, algorithm_scale_factor, load_balancing_enable, load_room_mean, load_estimate, preheat_status, preheat_time, adaptation_run_status, adaptation_run_settings, adaptation_run_control, regulation_setpoint_offset",
+  "exposes": [
+    {
+      "name": "System status code",
+      "type": "text",
+      "property": "system_status_code",
+      "base": "system_status_code",
+      "endpoint": null,
+      "description": "Diagnostic error codes (e.g. 'invalid_clock_information,low_battery'). 'ok' when no errors..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "pi_heating_demand",
+          "base": "pi_heating_demand",
+          "readable": false
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": null,
+      "description": "Maximum Heating set point limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Programming operation mode",
+      "type": "enum",
+      "property": "programming_operation_mode",
+      "base": "programming_operation_mode",
+      "endpoint": null,
+      "description": "Controls how programming affects the thermostat. Possible values: setpoint (only use specified setpoint), schedule (follow programmed setpoint schedule), schedule_with_preheat (follow programmed setpoint schedule with pre-heating). Changing this value does not clear programmed schedules..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "setpoint",
+        "schedule",
+        "schedule_with_preheat",
+        "eco"
+      ]
+    },
+    {
+      "name": "Occupied heating setpoint scheduled",
+      "type": "numeric",
+      "property": "occupied_heating_setpoint_scheduled",
+      "base": "occupied_heating_setpoint_scheduled",
+      "endpoint": null,
+      "description": "Scheduled change of the setpoint. Alternative method for changing the setpoint. In contrast to occupied heating setpoint it does not trigger an aggressive response from the actuator. (more suitable for scheduled changes).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Abs max heat setpoint limit",
+      "type": "numeric",
+      "property": "abs_max_heat_setpoint_limit",
+      "base": "abs_max_heat_setpoint_limit",
+      "endpoint": null,
+      "description": "Absolute Maximum Heating Setpoint Limit for the device. Adjust the 'Max heat setpoint limit' accordingly..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Keypad lockout",
+      "type": "enum",
+      "property": "keypad_lockout",
+      "base": "keypad_lockout",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "unlock",
+        "lock"
+      ]
+    },
+    {
+      "name": "Mounted mode active",
+      "type": "binary",
+      "property": "mounted_mode_active",
+      "base": "mounted_mode_active",
+      "endpoint": null,
+      "description": "Is the unit in mounting mode. This is set to `false` for mounted (already on the radiator) or `true` for not mounted (after factory reset).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Mounted mode control",
+      "type": "binary",
+      "property": "mounted_mode_control",
+      "base": "mounted_mode_control",
+      "endpoint": null,
+      "description": "Set the unit mounting mode. `false` Go to Mounted Mode or `true` Go to Mounting Mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Thermostat orientation",
+      "type": "binary",
+      "property": "thermostat_orientation",
+      "base": "thermostat_orientation",
+      "endpoint": null,
+      "description": "Thermostat Orientation. This is important for the PID in how it assesses temperature..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "vertical",
+      "value_off": "horizontal"
+    },
+    {
+      "name": "Viewing direction",
+      "type": "binary",
+      "property": "viewing_direction",
+      "base": "viewing_direction",
+      "endpoint": null,
+      "description": "Viewing/display direction.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "upside-down",
+      "value_off": "normal"
+    },
+    {
+      "name": "Heat available",
+      "type": "binary",
+      "property": "heat_available",
+      "base": "heat_available",
+      "endpoint": null,
+      "description": "Not clear how this affects operation. However, it would appear that the device does not execute any motor functions if this is set to false. This may be a means to conserve battery during periods that the heating system is not energized (e.g. during summer)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Heat required",
+      "type": "binary",
+      "property": "heat_required",
+      "base": "heat_required",
+      "endpoint": null,
+      "description": "Whether or not the unit needs warm water..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Setpoint change source",
+      "type": "enum",
+      "property": "setpoint_change_source",
+      "base": "setpoint_change_source",
+      "endpoint": null,
+      "description": "Values observed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "externally"
+      ]
+    },
+    {
+      "name": "External measured room sensor",
+      "type": "numeric",
+      "property": "External_measured_room_sensor",
+      "base": "External_measured_room_sensor",
+      "endpoint": null,
+      "description": "The temperature sensor of the TRV is — due to its design — relatively close to the heat source (i.e. the hot water in the radiator). Thus there are situations where the `local_temperature` measured by the TRV is not accurate enough: If the radiator is covered behind curtains or furniture, if the room is rather big, or if the radiator itself is big and the flow temperature is high, then the temperature in the room may easily diverge from the `local_temperature` measured by the TRV by 5°C to 8°C. In this case you might choose to use an external room sensor and send the measured value of the external room sensor to the `External_measured_room_sensor` property. The way the TRV operates on the `External_measured_room_sensor` depends on the setting of the `Radiator_covered` property: If `Radiator_covered` is `false` (Auto Offset Mode): You *must* set the `External_measured_room_sensor` property *at least* every 3 hours. After 3 hours the TRV disables this function and resets the value of the `External_measured_room_sensor` property to -8000 (disabled). You *should* set the `External_measured_room_sensor` property *at most* every 30 minutes or every 0.1°C change in measured room temperature. If `Radiator_covered` is `true` (Room Sensor Mode): You *must* set the `External_measured_room_sensor` property *at least* every 30 minutes. After 35 minutes the TRV disables this function and resets the value of the `External_measured_room_sensor` property to -8000 (disabled). You *should* set the `External_measured_room_sensor` property *at most* every 5 minutes or every 0.1°C change in measured room temperature. The unit of this value is 0.01 `°C` (so e.g. 21°C would be represented as 2100)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -8000,
+      "value_max": 3500
+    },
+    {
+      "name": "Radiator covered",
+      "type": "binary",
+      "property": "radiator_covered",
+      "base": "radiator_covered",
+      "endpoint": null,
+      "description": "Controls whether the TRV should solely rely on an external room sensor or operate in offset mode. `false` = Auto Offset Mode (use this e.g. for exposed radiators) or `true` = Room Sensor Mode (use this e.g. for covered radiators). Please note that this flag only controls how the TRV operates on the value of `External_measured_room_sensor`; only setting this flag without setting the `External_measured_room_sensor` has no (noticeable?) effect..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Window open feature",
+      "type": "binary",
+      "property": "window_open_feature",
+      "base": "window_open_feature",
+      "endpoint": null,
+      "description": "Whether or not the window open feature is enabled.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Window open internal",
+      "type": "enum",
+      "property": "window_open_internal",
+      "base": "window_open_internal",
+      "endpoint": null,
+      "description": "0=Quarantine, 1=Windows are closed, 2=Hold - Windows are maybe about to open, 3=Open window detected, 4=In window open state from external but detected closed locally.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "quarantine",
+        "closed",
+        "hold",
+        "open",
+        "external_open"
+      ]
+    },
+    {
+      "name": "Window open external",
+      "type": "binary",
+      "property": "window_open_external",
+      "base": "window_open_external",
+      "endpoint": null,
+      "description": "Set if the window is open or closed. This setting will trigger a change in the internal window and heating demand..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Day of week",
+      "type": "enum",
+      "property": "day_of_week",
+      "base": "day_of_week",
+      "endpoint": null,
+      "description": "Exercise day of week: 0=Sun...6=Sat, 7=undefined.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "sunday",
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "away_or_vacation"
+      ]
+    },
+    {
+      "name": "Trigger time",
+      "type": "text",
+      "property": "trigger_time",
+      "base": "trigger_time",
+      "endpoint": null,
+      "description": "Exercise trigger time. Format: 'HH:MM' (e.g., '14:30'). Send 'undefined' to disable. Note: during DST, the valve may exercise earlier than configured due to a firmware limitation (the TRV uses standard time instead of wall-clock time).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Algorithm scale factor",
+      "type": "numeric",
+      "property": "algorithm_scale_factor",
+      "base": "algorithm_scale_factor",
+      "endpoint": null,
+      "description": "Scale factor of setpoint filter timeconstant (\"aggressiveness\" of control algorithm) 1= Quick ... 5=Moderate ... 10=Slow.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10
+    },
+    {
+      "name": "Load balancing enable",
+      "type": "binary",
+      "property": "load_balancing_enable",
+      "base": "load_balancing_enable",
+      "endpoint": null,
+      "description": "Whether or not the thermostat acts as standalone thermostat or shares load with other thermostats in the room. The gateway must update load_room_mean if enabled..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Load room mean",
+      "type": "numeric",
+      "property": "load_room_mean",
+      "base": "load_room_mean",
+      "endpoint": null,
+      "description": "Mean radiator load for room calculated by gateway for load balancing purposes (-8000=undefined).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -8000,
+      "value_max": 3600
+    },
+    {
+      "name": "Load estimate",
+      "type": "numeric",
+      "property": "load_estimate",
+      "base": "load_estimate",
+      "endpoint": null,
+      "description": "Load estimate on this radiator.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": -8000,
+      "value_max": 3600
+    },
+    {
+      "name": "Preheat status",
+      "type": "binary",
+      "property": "preheat_status",
+      "base": "preheat_status",
+      "endpoint": null,
+      "description": "Specific for pre-heat running in Zigbee Weekly Schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Preheat time",
+      "type": "numeric",
+      "property": "preheat_time",
+      "base": "preheat_time",
+      "endpoint": null,
+      "description": "Timestamp of the scheduled setpoint currently being preheated to (read-only).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Adaptation run status",
+      "type": "enum",
+      "property": "adaptation_run_status",
+      "base": "adaptation_run_status",
+      "endpoint": null,
+      "description": "Status of adaptation run: None (before first run), In Progress, Valve Characteristic Found, Valve Characteristic Lost.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "in_progress",
+        "found",
+        "lost",
+        "lost_in_progress"
+      ]
+    },
+    {
+      "name": "Adaptation run settings",
+      "type": "binary",
+      "property": "adaptation_run_settings",
+      "base": "adaptation_run_settings",
+      "endpoint": null,
+      "description": "Automatic adaptation run enabled (the one during the night).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Adaptation run control",
+      "type": "enum",
+      "property": "adaptation_run_control",
+      "base": "adaptation_run_control",
+      "endpoint": null,
+      "description": "Adaptation run control: Initiate Adaptation Run or Cancel Adaptation Run.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "idle",
+        "initiate_adaptation",
+        "cancel_adaptation"
+      ]
+    },
+    {
+      "name": "Regulation setpoint offset",
+      "type": "numeric",
+      "property": "regulation_setpoint_offset",
+      "base": "regulation_setpoint_offset",
+      "endpoint": null,
+      "description": "Regulation SetPoint Offset in range -2.5°C to 2.5°C in steps of 0.1°C..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -2.5,
+      "value_max": 2.5,
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

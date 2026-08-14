@@ -1,0 +1,35 @@
+{
+  "model": "9133",
+  "file": "9133.md",
+  "vendor": "LED-Trading",
+  "description": "Pushbutton transmitter module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/9133.png",
+  "added_at": "2022-04-30T08:00:58",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "press_1",
+        "hold_1",
+        "press_2",
+        "hold_2",
+        "press_3",
+        "hold_3",
+        "press_4",
+        "hold_4"
+      ]
+    }
+  ],
+  "warnings": []
+}

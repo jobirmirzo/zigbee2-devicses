@@ -1,0 +1,42 @@
+{
+  "model": "POFLW-WH02",
+  "file": "POFLW-WH02.md",
+  "vendor": "Quirky",
+  "description": "Smart water leak sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/POFLW-WH02.png",
+  "added_at": "2025-04-01T18:30:52",
+  "exposes_summary": "water_leak, battery_low",
+  "exposes": [
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,13 @@
+{
+  "model": "901463",
+  "file": "901463.md",
+  "vendor": null,
+  "description": null,
+  "image": null,
+  "added_at": null,
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": [
+    "no-exposes-section"
+  ]
+}

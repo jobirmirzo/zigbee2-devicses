@@ -1,0 +1,352 @@
+{
+  "model": "545D6102",
+  "file": "545D6102.md",
+  "vendor": "Schneider Electric",
+  "description": "LK FUGA wiser wireless dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/545D6102.png",
+  "added_at": "2021-07-01T18:17:29Z",
+  "exposes_summary": "ballast_minimum_level, ballast_maximum_level, dimmer_mode, light (state, brightness, level_config), effect, power_on_behavior, indicator_mode, switch_actions, action",
+  "exposes": [
+    {
+      "name": "Ballast minimum level",
+      "type": "numeric",
+      "property": "ballast_minimum_level_l1",
+      "base": "ballast_minimum_level",
+      "endpoint": "l1",
+      "description": "Specifies the minimum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Ballast maximum level",
+      "type": "numeric",
+      "property": "ballast_maximum_level_l1",
+      "base": "ballast_maximum_level",
+      "endpoint": "l1",
+      "description": "Specifies the maximum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Dimmer mode",
+      "type": "enum",
+      "property": "dimmer_mode_l1",
+      "base": "dimmer_mode",
+      "endpoint": "l1",
+      "description": "Controls Capacitive or Inductive Dimming Mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "RC",
+        "RL"
+      ]
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_l1",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "level_config_l1",
+          "base": "level_config",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect_l1",
+      "base": "effect",
+      "endpoint": "l1",
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_l1",
+      "base": "power_on_behavior",
+      "endpoint": "l1",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode_s1",
+      "base": "indicator_mode",
+      "endpoint": "s1",
+      "description": "Set Indicator Mode for s1 switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "reverse_with_load",
+        "consistent_with_load",
+        "always_off",
+        "always_on",
+        "flash_on_click"
+      ]
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode_s2",
+      "base": "indicator_mode",
+      "endpoint": "s2",
+      "description": "Set Indicator Mode for s2 switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "reverse_with_load",
+        "consistent_with_load",
+        "always_off",
+        "always_on",
+        "flash_on_click"
+      ]
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode_s3",
+      "base": "indicator_mode",
+      "endpoint": "s3",
+      "description": "Set Indicator Mode for s3 switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "reverse_with_load",
+        "consistent_with_load",
+        "always_off",
+        "always_on",
+        "flash_on_click"
+      ]
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode_s4",
+      "base": "indicator_mode",
+      "endpoint": "s4",
+      "description": "Set Indicator Mode for s4 switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "reverse_with_load",
+        "consistent_with_load",
+        "always_off",
+        "always_on",
+        "flash_on_click"
+      ]
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions_s1",
+      "base": "switch_actions",
+      "endpoint": "s1",
+      "description": "Set Switch Action for s1 Button..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "light",
+        "light_opposite",
+        "dimmer",
+        "dimmer_opposite",
+        "standard_shutter",
+        "standard_shutter_opposite",
+        "schneider_shutter",
+        "schneider_shutter_opposite",
+        "scene",
+        "toggle_light",
+        "toggle_dimmer",
+        "alternate_light",
+        "alternate_dimmer",
+        "not_used"
+      ]
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions_s2",
+      "base": "switch_actions",
+      "endpoint": "s2",
+      "description": "Set Switch Action for s2 Button..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "light",
+        "light_opposite",
+        "dimmer",
+        "dimmer_opposite",
+        "standard_shutter",
+        "standard_shutter_opposite",
+        "schneider_shutter",
+        "schneider_shutter_opposite",
+        "scene",
+        "toggle_light",
+        "toggle_dimmer",
+        "alternate_light",
+        "alternate_dimmer",
+        "not_used"
+      ]
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions_s3",
+      "base": "switch_actions",
+      "endpoint": "s3",
+      "description": "Set Switch Action for s3 Button..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "light",
+        "light_opposite",
+        "dimmer",
+        "dimmer_opposite",
+        "standard_shutter",
+        "standard_shutter_opposite",
+        "schneider_shutter",
+        "schneider_shutter_opposite",
+        "scene",
+        "toggle_light",
+        "toggle_dimmer",
+        "alternate_light",
+        "alternate_dimmer",
+        "not_used"
+      ]
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions_s4",
+      "base": "switch_actions",
+      "endpoint": "s4",
+      "description": "Set Switch Action for s4 Button..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "light",
+        "light_opposite",
+        "dimmer",
+        "dimmer_opposite",
+        "standard_shutter",
+        "standard_shutter_opposite",
+        "schneider_shutter",
+        "schneider_shutter_opposite",
+        "scene",
+        "toggle_light",
+        "toggle_dimmer",
+        "alternate_light",
+        "alternate_dimmer",
+        "not_used"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_stop",
+        "recall_*"
+      ]
+    }
+  ],
+  "warnings": []
+}

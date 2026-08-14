@@ -1,0 +1,11 @@
+{
+  "model": "tubeszb.router",
+  "file": "tubeszb.router.md",
+  "vendor": "TubesZB",
+  "description": "CC2652 Router",
+  "image": "https://www.zigbee2mqtt.io/images/devices/tubeszb.router.png",
+  "added_at": "2022-01-31T17:42:44",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

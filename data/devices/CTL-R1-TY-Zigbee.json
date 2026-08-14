@@ -1,0 +1,216 @@
+{
+  "model": "CTL-R1-TY-Zigbee",
+  "file": "CTL-R1-TY-Zigbee.md",
+  "vendor": "Tuya",
+  "description": "24G radar human presence motion sensor.",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CTL-R1-TY-Zigbee.png",
+  "added_at": "2023-11-01T18:54:40",
+  "exposes_summary": "illuminance, presence, presence_sensitivity, detection_range, detection_delay, illuminance_treshold_max, illuminance_treshold_min, presence_illuminance_switch, light_switch, light_linkage, detection_method, indicator_light, identify",
+  "exposes": [
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Presence sensitivity",
+      "type": "numeric",
+      "property": "presence_sensitivity",
+      "base": "presence_sensitivity",
+      "endpoint": null,
+      "description": "Presence sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Detection range",
+      "type": "numeric",
+      "property": "detection_range",
+      "base": "detection_range",
+      "endpoint": null,
+      "description": "Detection range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1.5,
+      "value_max": 4.5,
+      "unit": "m"
+    },
+    {
+      "name": "Detection delay",
+      "type": "numeric",
+      "property": "detection_delay",
+      "base": "detection_delay",
+      "endpoint": null,
+      "description": "Presence detection delay.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 600,
+      "unit": "s"
+    },
+    {
+      "name": "Illuminance treshold max",
+      "type": "numeric",
+      "property": "illuminance_treshold_max",
+      "base": "illuminance_treshold_max",
+      "endpoint": null,
+      "description": "The max illuminance threshold to turn on the light.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 2000,
+      "unit": "lx"
+    },
+    {
+      "name": "Illuminance treshold min",
+      "type": "numeric",
+      "property": "illuminance_treshold_min",
+      "base": "illuminance_treshold_min",
+      "endpoint": null,
+      "description": "The min illuminance threshold to turn on the light.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 2000,
+      "unit": "lx"
+    },
+    {
+      "name": "Presence illuminance switch",
+      "type": "binary",
+      "property": "presence_illuminance_switch",
+      "base": "presence_illuminance_switch",
+      "endpoint": null,
+      "description": "Whether to enable 'light_switch' illumination is between min/max threshold.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Light switch",
+      "type": "binary",
+      "property": "light_switch",
+      "base": "light_switch",
+      "endpoint": null,
+      "description": "This state will determine the light on/off based on the lighting threshold and presence sensing.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Light linkage",
+      "type": "binary",
+      "property": "light_linkage",
+      "base": "light_linkage",
+      "endpoint": null,
+      "description": "Light linkage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Detection method",
+      "type": "enum",
+      "property": "detection_method",
+      "base": "detection_method",
+      "endpoint": null,
+      "description": "When 'only_move' is used, presence will only be triggered when there is movement.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "only_move",
+        "exist_move"
+      ]
+    },
+    {
+      "name": "Indicator light",
+      "type": "enum",
+      "property": "indicator_light",
+      "base": "indicator_light",
+      "endpoint": null,
+      "description": "Controls when the indicator light is turned on.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "presence",
+        "off",
+        "on"
+      ]
+    },
+    {
+      "name": "Identify",
+      "type": "binary",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "After turning on, the indicator light quickly flashes, used to locate devices.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

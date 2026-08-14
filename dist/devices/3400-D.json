@@ -1,0 +1,117 @@
+{
+  "model": "3400-D",
+  "file": "3400-D.md",
+  "vendor": "Centralite",
+  "description": "3-Series security keypad",
+  "image": "https://www.zigbee2mqtt.io/images/devices/3400-D.png",
+  "added_at": "2025-12-06T20:10:20",
+  "exposes_summary": "battery, temperature, occupancy, action_code, action_transaction, action_zone, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Action code",
+      "type": "numeric",
+      "property": "action_code",
+      "base": "action_code",
+      "endpoint": null,
+      "description": "Pin code introduced..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action transaction",
+      "type": "numeric",
+      "property": "action_transaction",
+      "base": "action_transaction",
+      "endpoint": null,
+      "description": "Last action transaction number..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action zone",
+      "type": "text",
+      "property": "action_zone",
+      "base": "action_zone",
+      "endpoint": null,
+      "description": "Alarm zone. Default value 0.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "disarm",
+        "arm_day_zones",
+        "arm_night_zones",
+        "arm_all_zones",
+        "exit_delay",
+        "emergency"
+      ]
+    }
+  ],
+  "warnings": []
+}

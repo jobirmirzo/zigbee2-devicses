@@ -1,0 +1,57 @@
+{
+  "model": "ZB-5028",
+  "file": "ZB-5028.md",
+  "vendor": "RGB Genie",
+  "description": "RGB remote with 4 endpoints and 3 scene recalls",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZB-5028.png",
+  "added_at": "2021-03-30T20:29:35Z",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_stop",
+        "recall_1",
+        "recall_2",
+        "recall_3",
+        "hue_move",
+        "color_temperature_move",
+        "color_move",
+        "hue_stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

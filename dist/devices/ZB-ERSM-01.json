@@ -1,0 +1,112 @@
+{
+  "model": "ZB-ERSM-01",
+  "file": "ZB-ERSM-01.md",
+  "vendor": "Chacon",
+  "description": "Roller shutter module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZB-ERSM-01.png",
+  "added_at": "2024-10-31T20:32:44",
+  "exposes_summary": "cover (state, position), cover_mode, action",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Cover mode",
+      "type": "composite",
+      "property": "cover_mode",
+      "base": "cover_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "reversed",
+          "type": "binary",
+          "description": "Reversal of the motor rotating direction",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "calibration",
+          "type": "binary",
+          "description": "Set the cover calibration mode",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "maintenance",
+          "type": "binary",
+          "description": "Set the cover maintenance mode, enabling will disable the cover motor",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "led",
+          "type": "binary",
+          "description": "Set the LED",
+          "values": [
+            "true",
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "open",
+        "close",
+        "stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

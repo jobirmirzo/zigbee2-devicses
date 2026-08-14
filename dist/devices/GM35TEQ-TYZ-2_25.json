@@ -1,0 +1,60 @@
+{
+  "model": "GM35TEQ-TYZ-2/25",
+  "file": "GM35TEQ-TYZ-2_25.md",
+  "vendor": "Tuya",
+  "description": "Roller Shade Blinds Motor for 38mm Tube",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GM35TEQ-TYZ-2-25.png",
+  "added_at": "2026-01-31T13:10:42",
+  "exposes_summary": "cover (state, position), motor_direction",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Motor direction",
+      "type": "enum",
+      "property": "motor_direction",
+      "base": "motor_direction",
+      "endpoint": null,
+      "description": "Set the motor direction.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "forward",
+        "back"
+      ]
+    }
+  ],
+  "warnings": []
+}

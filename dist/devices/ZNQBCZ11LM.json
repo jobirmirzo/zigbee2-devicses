@@ -1,0 +1,211 @@
+{
+  "model": "ZNQBCZ11LM",
+  "file": "ZNQBCZ11LM.md",
+  "vendor": "Aqara",
+  "description": "Smart wall outlet H2 (USB)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZNQBCZ11LM.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "button_switch_mode, switch (state), device_temperature, power_outage_count, power_on_behavior, led_disabled_night, power, energy, voltage, current, overload_protection, button_lock",
+  "exposes": [
+    {
+      "name": "Button switch mode",
+      "type": "enum",
+      "property": "button_switch_mode",
+      "base": "button_switch_mode",
+      "endpoint": null,
+      "description": "Control both relay and usb or only the relay with the physical switch button.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "relay",
+        "relay_and_usb"
+      ]
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "relay",
+      "features": [
+        {
+          "property": "state_relay",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "usb",
+      "features": [
+        {
+          "property": "state_usb",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages (since last pairing).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Power on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "previous",
+        "off",
+        "inverted"
+      ]
+    },
+    {
+      "name": "Led disabled night",
+      "type": "binary",
+      "property": "led_disabled_night",
+      "base": "led_disabled_night",
+      "endpoint": null,
+      "description": "Enables/disables LED indicator at night.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Overload protection",
+      "type": "numeric",
+      "property": "overload_protection",
+      "base": "overload_protection",
+      "endpoint": null,
+      "description": "Maximum allowed load, turns off if exceeded.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 100,
+      "value_max": 3840,
+      "unit": "W"
+    },
+    {
+      "name": "Button lock",
+      "type": "binary",
+      "property": "button_lock",
+      "base": "button_lock",
+      "endpoint": null,
+      "description": "Disables the physical switch button.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

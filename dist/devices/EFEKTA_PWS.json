@@ -1,0 +1,86 @@
+{
+  "model": "EFEKTA_PWS",
+  "file": "EFEKTA_PWS.md",
+  "vendor": "EFEKTA",
+  "description": "[Plant Wattering Sensor, CR2450, CR2477 batteries, temperature ]",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_PWS.png",
+  "added_at": "2021-08-01T20:41:55Z",
+  "exposes_summary": "soil_moisture, battery, voltage, temperature, report_delay",
+  "exposes": [
+    {
+      "name": "Soil moisture",
+      "type": "numeric",
+      "property": "soil_moisture",
+      "base": "soil_moisture",
+      "endpoint": null,
+      "description": "Measured soil moisture value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Report delay",
+      "type": "numeric",
+      "property": "report_delay",
+      "base": "report_delay",
+      "endpoint": null,
+      "description": "Adjust Report Delay. Setting the time in minutes, by default 15 minutes.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 240,
+      "unit": "min"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,93 @@
+{
+  "model": "ZSM-01",
+  "file": "ZSM-01.md",
+  "vendor": "Novato",
+  "description": "Curtain motor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZSM-01.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "cover (state, position), control_back_mode, click_control, position_best",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Control back mode",
+      "type": "enum",
+      "property": "control_back_mode",
+      "base": "control_back_mode",
+      "endpoint": null,
+      "description": "Motor direction.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "forward",
+        "back"
+      ]
+    },
+    {
+      "name": "Click control",
+      "type": "enum",
+      "property": "click_control",
+      "base": "click_control",
+      "endpoint": null,
+      "description": "Step control (up/down).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "up",
+        "down"
+      ]
+    },
+    {
+      "name": "Position best",
+      "type": "numeric",
+      "property": "position_best",
+      "base": "position_best",
+      "endpoint": null,
+      "description": "Preferred position.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

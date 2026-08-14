@@ -1,0 +1,174 @@
+{
+  "model": "NHMOTION/UNIDIM/1",
+  "file": "NHMOTION_UNIDIM_1.md",
+  "vendor": "Schneider Electric",
+  "description": "Motion sensor with dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/NHMOTION-UNIDIM-1.png",
+  "added_at": "2025-01-03T20:11:47",
+  "exposes_summary": "light (state, brightness, level_config), ballast_minimum_level, ballast_maximum_level, illuminance, occupancy, occupancy_timeout, occupancy_sensitivity, ambience_light_threshold, dimmer_mode",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "level_config",
+          "base": "level_config",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Ballast minimum level",
+      "type": "numeric",
+      "property": "ballast_minimum_level",
+      "base": "ballast_minimum_level",
+      "endpoint": null,
+      "description": "Specifies the minimum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Ballast maximum level",
+      "type": "numeric",
+      "property": "ballast_maximum_level",
+      "base": "ballast_maximum_level",
+      "endpoint": null,
+      "description": "Specifies the maximum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy timeout",
+      "type": "numeric",
+      "property": "occupancy_timeout",
+      "base": "occupancy_timeout",
+      "endpoint": null,
+      "description": "Time in seconds before occupancy is cleared after the last detected movement..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65534,
+      "unit": "s"
+    },
+    {
+      "name": "Occupancy sensitivity",
+      "type": "enum",
+      "property": "occupancy_sensitivity",
+      "base": "occupancy_sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity of the occupancy sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Low",
+        "Medium",
+        "High"
+      ]
+    },
+    {
+      "name": "Ambience light threshold",
+      "type": "numeric",
+      "property": "ambience_light_threshold",
+      "base": "ambience_light_threshold",
+      "endpoint": null,
+      "description": "Threshold above which occupancy will not trigger the light switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 2000,
+      "unit": "lx"
+    },
+    {
+      "name": "Dimmer mode",
+      "type": "enum",
+      "property": "dimmer_mode",
+      "base": "dimmer_mode",
+      "endpoint": null,
+      "description": "Auto detects the correct mode for the ballast. RL-LED may have improved dimming quality for LEDs..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Auto",
+        "RL-LED"
+      ]
+    }
+  ],
+  "warnings": []
+}

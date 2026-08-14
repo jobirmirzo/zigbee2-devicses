@@ -1,0 +1,159 @@
+{
+  "model": "TS0601_water_meter",
+  "file": "TS0601_water_meter.md",
+  "vendor": "Tuya",
+  "description": "Ultrasonic water meter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_water_meter.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "water_consumed, month_consumption, daily_consumption, flow_rate, reverse_water_consumed, report_period, meter_id, temperature, voltage, faults",
+  "exposes": [
+    {
+      "name": "Water consumed",
+      "type": "numeric",
+      "property": "water_consumed",
+      "base": "water_consumed",
+      "endpoint": null,
+      "description": "Total water consumption.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m³"
+    },
+    {
+      "name": "Month consumption",
+      "type": "numeric",
+      "property": "month_consumption",
+      "base": "month_consumption",
+      "endpoint": null,
+      "description": "Monthly water consumption.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m³"
+    },
+    {
+      "name": "Daily consumption",
+      "type": "numeric",
+      "property": "daily_consumption",
+      "base": "daily_consumption",
+      "endpoint": null,
+      "description": "Daily water consumption.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m³"
+    },
+    {
+      "name": "Flow rate",
+      "type": "numeric",
+      "property": "flow_rate",
+      "base": "flow_rate",
+      "endpoint": null,
+      "description": "Instantaneous flow rate.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m³/h"
+    },
+    {
+      "name": "Reverse water consumed",
+      "type": "numeric",
+      "property": "reverse_water_consumed",
+      "base": "reverse_water_consumed",
+      "endpoint": null,
+      "description": "Reverse water consumption.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m³"
+    },
+    {
+      "name": "Report period",
+      "type": "enum",
+      "property": "report_period",
+      "base": "report_period",
+      "endpoint": null,
+      "description": "Report period.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "1h",
+        "2h",
+        "3h",
+        "4h",
+        "6h",
+        "8h",
+        "12h",
+        "24h"
+      ]
+    },
+    {
+      "name": "Meter id",
+      "type": "text",
+      "property": "meter_id",
+      "base": "meter_id",
+      "endpoint": null,
+      "description": "Meter identification number.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Faults",
+      "type": "text",
+      "property": "faults",
+      "base": "faults",
+      "endpoint": null,
+      "description": "Active fault status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

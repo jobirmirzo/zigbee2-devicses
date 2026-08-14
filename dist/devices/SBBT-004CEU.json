@@ -1,0 +1,87 @@
+{
+  "model": "SBBT-004CEU",
+  "file": "SBBT-004CEU.md",
+  "vendor": "Shelly",
+  "description": "BLU Wall Switch 4 ZB",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SBBT-004CEU.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "battery, identify, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "1_single",
+        "2_single",
+        "3_single",
+        "4_single",
+        "1_double",
+        "2_double",
+        "3_double",
+        "4_double",
+        "1_triple",
+        "2_triple",
+        "3_triple",
+        "4_triple",
+        "1_single_long",
+        "2_single_long",
+        "3_single_long",
+        "4_single_long",
+        "1_double_long",
+        "2_double_long",
+        "3_double_long",
+        "4_double_long",
+        "1_triple_long",
+        "2_triple_long",
+        "3_triple_long",
+        "4_triple_long",
+        "1_hold",
+        "2_hold",
+        "3_hold",
+        "4_hold"
+      ]
+    }
+  ],
+  "warnings": []
+}

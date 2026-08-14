@@ -1,0 +1,483 @@
+{
+  "model": "Leleka",
+  "file": "Leleka.md",
+  "vendor": "MindY",
+  "description": "Advanced Environmental Monitoring Device",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Leleka.png",
+  "added_at": "2025-04-01T18:30:52",
+  "exposes_summary": "last_boot, wifi, ip_address, temperature, humidity, pressure, co2, illuminance, light (state, brightness), identify, read_interval, night_mode, night_on_time, night_off_time, co2_control, co2_invert, co2_level_high, co2_level_low, co2_auto_calibration, co2_forced_recalibration, co2_factory_reset, lux_control, lux_invert, lux_level_high, lux_level_low, offset_illuminance, temperature_sensor, offset_temperature, offset_humidity, offset_pressure",
+  "exposes": [
+    {
+      "name": "Last boot",
+      "type": "text",
+      "property": "last_boot",
+      "base": "last_boot",
+      "endpoint": null,
+      "description": "Device boot date and time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Wifi",
+      "type": "binary",
+      "property": "wifi",
+      "base": "wifi",
+      "endpoint": null,
+      "description": "Device WiFi state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Ip address",
+      "type": "text",
+      "property": "ip_address",
+      "base": "ip_address",
+      "endpoint": null,
+      "description": "Device IP address.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Pressure",
+      "type": "numeric",
+      "property": "pressure",
+      "base": "pressure",
+      "endpoint": null,
+      "description": "The measured atmospheric pressure.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kPa"
+    },
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "Measured value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Read interval",
+      "type": "numeric",
+      "property": "read_interval",
+      "base": "read_interval",
+      "endpoint": null,
+      "description": "Read interval of sensors. Default 30.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 600,
+      "unit": "seconds"
+    },
+    {
+      "name": "Night mode",
+      "type": "binary",
+      "property": "night_mode",
+      "base": "night_mode",
+      "endpoint": null,
+      "description": "Turn OFF LED at night.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Night on time",
+      "type": "numeric",
+      "property": "night_on_time",
+      "base": "night_on_time",
+      "endpoint": null,
+      "description": "Night mode activation time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23,
+      "unit": "Hr"
+    },
+    {
+      "name": "Night off time",
+      "type": "numeric",
+      "property": "night_off_time",
+      "base": "night_off_time",
+      "endpoint": null,
+      "description": "Night mode deactivation time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23,
+      "unit": "Hr"
+    },
+    {
+      "name": "Co2 control",
+      "type": "binary",
+      "property": "co2_control",
+      "base": "co2_control",
+      "endpoint": null,
+      "description": "Enable CO2 bind-control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Co2 invert",
+      "type": "binary",
+      "property": "co2_invert",
+      "base": "co2_invert",
+      "endpoint": null,
+      "description": "Invert CO2 control logic.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Co2 level high",
+      "type": "numeric",
+      "property": "co2_level_high",
+      "base": "co2_level_high",
+      "endpoint": null,
+      "description": "High CO2 threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 400,
+      "value_max": 2000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Co2 level low",
+      "type": "numeric",
+      "property": "co2_level_low",
+      "base": "co2_level_low",
+      "endpoint": null,
+      "description": "Low CO2 threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 400,
+      "value_max": 2000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Co2 auto calibration",
+      "type": "binary",
+      "property": "co2_auto_calibration",
+      "base": "co2_auto_calibration",
+      "endpoint": null,
+      "description": "Automatic self calibration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Co2 forced recalibration",
+      "type": "numeric",
+      "property": "co2_forced_recalibration",
+      "base": "co2_forced_recalibration",
+      "endpoint": null,
+      "description": "Start FRC by setting the value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Co2 factory reset",
+      "type": "binary",
+      "property": "co2_factory_reset",
+      "base": "co2_factory_reset",
+      "endpoint": null,
+      "description": "Factory Reset CO2 sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Lux control",
+      "type": "binary",
+      "property": "lux_control",
+      "base": "lux_control",
+      "endpoint": null,
+      "description": "Enable illuminance bind-control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Lux invert",
+      "type": "binary",
+      "property": "lux_invert",
+      "base": "lux_invert",
+      "endpoint": null,
+      "description": "Invert illuminance control logic.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Lux level high",
+      "type": "numeric",
+      "property": "lux_level_high",
+      "base": "lux_level_high",
+      "endpoint": null,
+      "description": "High illuminance threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 100,
+      "value_max": 10000,
+      "unit": "lx"
+    },
+    {
+      "name": "Lux level low",
+      "type": "numeric",
+      "property": "lux_level_low",
+      "base": "lux_level_low",
+      "endpoint": null,
+      "description": "Low illuminance threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 100,
+      "value_max": 10000,
+      "unit": "lx"
+    },
+    {
+      "name": "Offset illuminance",
+      "type": "numeric",
+      "property": "offset_illuminance",
+      "base": "offset_illuminance",
+      "endpoint": null,
+      "description": "Adjust illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -500,
+      "value_max": 500,
+      "unit": "lx"
+    },
+    {
+      "name": "Temperature sensor",
+      "type": "enum",
+      "property": "temperature_sensor",
+      "base": "temperature_sensor",
+      "endpoint": null,
+      "description": "Active temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "CPU",
+        "SCD4X",
+        "BMP280"
+      ]
+    },
+    {
+      "name": "Offset temperature",
+      "type": "numeric",
+      "property": "offset_temperature",
+      "base": "offset_temperature",
+      "endpoint": null,
+      "description": "Adjust temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Offset humidity",
+      "type": "numeric",
+      "property": "offset_humidity",
+      "base": "offset_humidity",
+      "endpoint": null,
+      "description": "Adjust humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "%"
+    },
+    {
+      "name": "Offset pressure",
+      "type": "numeric",
+      "property": "offset_pressure",
+      "base": "offset_pressure",
+      "endpoint": null,
+      "description": "Adjust pressure.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -100,
+      "value_max": 100,
+      "unit": "kPa"
+    }
+  ],
+  "warnings": []
+}

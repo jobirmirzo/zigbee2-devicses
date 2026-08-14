@@ -1,0 +1,83 @@
+{
+  "model": "E2213",
+  "file": "E2213.md",
+  "vendor": "IKEA",
+  "description": "SOMRIG shortcut button",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E2213.png",
+  "added_at": "2023-12-26T18:35:42",
+  "exposes_summary": "identify, battery, voltage, action",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "1_initial_press",
+        "1_long_press",
+        "1_short_release",
+        "1_long_release",
+        "1_double_press",
+        "2_initial_press",
+        "2_long_press",
+        "2_short_release",
+        "2_long_release",
+        "2_double_press"
+      ]
+    }
+  ],
+  "warnings": []
+}

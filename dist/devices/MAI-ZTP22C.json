@@ -1,0 +1,42 @@
+{
+  "model": "MAI-ZTP22C",
+  "file": "MAI-ZTP22C.md",
+  "vendor": "Profalux",
+  "description": "Cover remote",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MAI-ZTP22C.png",
+  "added_at": "2026-05-07T17:39:17",
+  "exposes_summary": "battery, voltage",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

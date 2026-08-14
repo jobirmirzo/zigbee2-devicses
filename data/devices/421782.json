@@ -1,0 +1,36 @@
+{
+  "model": "421782",
+  "file": "421782.md",
+  "vendor": "Calex",
+  "description": "Smart Wall Switch, wall mounted RGB controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/421782.png",
+  "added_at": "2021-01-04T16:09:00Z",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "color_temperature_move",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_stop",
+        "enhanced_move_to_hue_and_saturation"
+      ]
+    }
+  ],
+  "warnings": []
+}

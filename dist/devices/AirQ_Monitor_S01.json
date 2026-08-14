@@ -1,0 +1,362 @@
+{
+  "model": "AirQ_Monitor_S01",
+  "file": "AirQ_Monitor_S01.md",
+  "vendor": "Slacky-DIY",
+  "description": "Air quality monitor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/AirQ_Monitor_S01.png",
+  "added_at": "2025-09-01T18:17:11",
+  "exposes_summary": "co2, voc_index, temperature, humidity, pressure, illuminance, display_rotate, display_inversion, temperature_display_mode, temperature_offset, read_interval, enabling_co2_control, low_co2, high_co2, enabling_voc_control, low_voc, high_voc, switch_actions, brightness, enabling_sound, frc_co2_correction, features_sensors, life_time",
+  "exposes": [
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "Measured value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Voc index",
+      "type": "numeric",
+      "property": "voc_index",
+      "base": "voc_index",
+      "endpoint": null,
+      "description": "VOC index.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "VOC Index points"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Pressure",
+      "type": "numeric",
+      "property": "pressure",
+      "base": "pressure",
+      "endpoint": null,
+      "description": "The measured atmospheric pressure.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kPa"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Display rotate",
+      "type": "enum",
+      "property": "display_rotate",
+      "base": "display_rotate",
+      "endpoint": null,
+      "description": "Display orientation (horizontal/vertical).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "horizontal",
+        "vertical"
+      ]
+    },
+    {
+      "name": "Display inversion",
+      "type": "enum",
+      "property": "display_inversion",
+      "base": "display_inversion",
+      "endpoint": null,
+      "description": "Display inversion (black on white/white on black).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "black_on_white",
+        "white_on_black"
+      ]
+    },
+    {
+      "name": "Temperature display mode",
+      "type": "enum",
+      "property": "temperature_display_mode",
+      "base": "temperature_display_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Temperature offset",
+      "type": "numeric",
+      "property": "temperature_offset",
+      "base": "temperature_offset",
+      "endpoint": null,
+      "description": "Offset to add/subtract to the inside temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -5,
+      "value_max": 5,
+      "unit": "°C"
+    },
+    {
+      "name": "Read interval",
+      "type": "numeric",
+      "property": "read_interval",
+      "base": "read_interval",
+      "endpoint": null,
+      "description": "Sensors reading period.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 600,
+      "unit": "Sec"
+    },
+    {
+      "name": "Enabling co2 control",
+      "type": "binary",
+      "property": "enabling_co2_control",
+      "base": "enabling_co2_control",
+      "endpoint": null,
+      "description": "Enables/disables CO2 control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Low co2",
+      "type": "numeric",
+      "property": "low_co2",
+      "base": "low_co2",
+      "endpoint": null,
+      "description": "CO2 low turn-off limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 400,
+      "value_max": 2000,
+      "unit": "ppm"
+    },
+    {
+      "name": "High co2",
+      "type": "numeric",
+      "property": "high_co2",
+      "base": "high_co2",
+      "endpoint": null,
+      "description": "CO2 high turn-on limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 400,
+      "value_max": 2000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Enabling voc control",
+      "type": "binary",
+      "property": "enabling_voc_control",
+      "base": "enabling_voc_control",
+      "endpoint": null,
+      "description": "Enables/disables VOC control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Low voc",
+      "type": "numeric",
+      "property": "low_voc",
+      "base": "low_voc",
+      "endpoint": null,
+      "description": "VOC low turn-off limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 500,
+      "unit": "VOC index points"
+    },
+    {
+      "name": "High voc",
+      "type": "numeric",
+      "property": "high_voc",
+      "base": "high_voc",
+      "endpoint": null,
+      "description": "VOC high turn-on limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 500,
+      "unit": "VOC index points"
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions",
+      "base": "switch_actions",
+      "endpoint": null,
+      "description": "Actions switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on"
+      ]
+    },
+    {
+      "name": "Brightness",
+      "type": "numeric",
+      "property": "brightness",
+      "base": "brightness",
+      "endpoint": null,
+      "description": "LED brightness.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "Enabling sound",
+      "type": "binary",
+      "property": "enabling_sound",
+      "base": "enabling_sound",
+      "endpoint": null,
+      "description": "Enables/disables sound.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Frc co2 correction",
+      "type": "numeric",
+      "property": "frc_co2_correction",
+      "base": "frc_co2_correction",
+      "endpoint": null,
+      "description": "FRC CO2 correction.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Features sensors",
+      "type": "composite",
+      "property": "features_sensors",
+      "base": "features_sensors",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": []
+    },
+    {
+      "name": "Life time",
+      "type": "numeric",
+      "property": "life_time",
+      "base": "life_time",
+      "endpoint": null,
+      "description": "Life time of device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "h"
+    }
+  ],
+  "warnings": []
+}

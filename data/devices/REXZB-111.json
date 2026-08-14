@@ -1,0 +1,169 @@
+{
+  "model": "REXZB-111",
+  "file": "REXZB-111.md",
+  "vendor": "Develco",
+  "description": "Range extender with backup battery",
+  "image": "https://www.zigbee2mqtt.io/images/devices/REXZB-111.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "battery, voltage, battery_low, battery_defect, ac_connected, led_control, tx_power, zone_status_interval, identify",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery defect",
+      "type": "binary",
+      "property": "battery_defect",
+      "base": "battery_defect",
+      "endpoint": null,
+      "description": "Indicates whether the device battery is defective.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Ac connected",
+      "type": "binary",
+      "property": "ac_connected",
+      "base": "ac_connected",
+      "endpoint": null,
+      "description": "Indicates whether the device is connected to AC mains power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Led control",
+      "type": "composite",
+      "property": "led_control",
+      "base": "led_control",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "indicate_faults",
+          "type": "binary",
+          "description": "Enable/disable LED indication for faults (e.g., lost connection to gateway)",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "indicate_mains_power",
+          "type": "binary",
+          "description": "Enable/disable green LED indication for mains power status",
+          "values": [
+            "true",
+            "false"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tx power",
+      "type": "enum",
+      "property": "tx_power",
+      "base": "tx_power",
+      "endpoint": null,
+      "description": "TX power mode for regulatory compliance (CE or FCC). Requires device rejoin to apply..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "CE",
+        "FCC"
+      ]
+    },
+    {
+      "name": "Zone status interval",
+      "type": "numeric",
+      "property": "zone_status_interval",
+      "base": "zone_status_interval",
+      "endpoint": null,
+      "description": "Heartbeat interval in seconds. Controls the periodic interval between ZoneStatusChange commands (default 300s).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535,
+      "unit": "s"
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    }
+  ],
+  "warnings": []
+}

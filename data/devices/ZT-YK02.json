@@ -1,0 +1,49 @@
+{
+  "model": "ZT-YK02",
+  "file": "ZT-YK02.md",
+  "vendor": "Moes",
+  "description": "Wireless switch with 2 buttons",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZT-YK02.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "1_single",
+        "1_double",
+        "1_hold",
+        "2_single",
+        "2_double",
+        "2_hold"
+      ]
+    }
+  ],
+  "warnings": []
+}

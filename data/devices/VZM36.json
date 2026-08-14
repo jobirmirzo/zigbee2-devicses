@@ -1,0 +1,634 @@
+{
+  "model": "VZM36",
+  "file": "VZM36.md",
+  "vendor": "Inovelli",
+  "description": "Fan canopy module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/VZM36.png",
+  "added_at": "2024-02-29T20:20:58",
+  "exposes_summary": "light (state, brightness), fan (state, mode), breeze mode, dimmingSpeedUpRemote_1, rampRateOffToOnRemote_1, dimmingSpeedDownRemote_1, rampRateOnToOffRemote_1, minimumLevel_1, maximumLevel_1, autoTimerOff_1, defaultLevelRemote_1, stateAfterPowerRestored_1, quickStartTime_1, quickStartLevel_1, higherOutputInNonNeutral_1, dimmingMode_1, smartBulbMode_1, ledColorWhenOn_1, ledIntensityWhenOn_1, outputMode_1, dimmingSpeedUpRemote_2, rampRateOffToOnRemote_2, dimmingSpeedDownRemote_2, rampRateOnToOffRemote_2, minimumLevel_2, maximumLevel_2, autoTimerOff_2, defaultLevelRemote_2, stateAfterPowerRestored_2, quickStartTime_2, smartBulbMode_2, outputMode_2, identify",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Fan",
+      "type": "fan",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "fan_state",
+          "base": "fan_state",
+          "values": [
+            "off",
+            "low",
+            "smart",
+            "medium",
+            "high",
+            "on"
+          ],
+          "readable": true
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "values": [
+            "off",
+            "low",
+            "smart",
+            "medium",
+            "high",
+            "on"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Breeze mode",
+      "type": "composite",
+      "property": "breezeMode",
+      "base": "breezeMode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "speed1",
+          "type": "enum",
+          "description": "Step 1 Speed",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "property": "time1",
+          "type": "numeric",
+          "description": "Duration (s) for fan in Step 1   min value is 1, max value is 80"
+        },
+        {
+          "property": "speed2",
+          "type": "enum",
+          "description": "Step 2 Speed",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "property": "time2",
+          "type": "numeric",
+          "description": "Duration (s) for fan in Step 2   min value is 1, max value is 80"
+        },
+        {
+          "property": "speed3",
+          "type": "enum",
+          "description": "Step 3 Speed",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "property": "time3",
+          "type": "numeric",
+          "description": "Duration (s) for fan in Step 3   min value is 1, max value is 80"
+        },
+        {
+          "property": "speed4",
+          "type": "enum",
+          "description": "Step 4 Speed",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "property": "time4",
+          "type": "numeric",
+          "description": "Duration (s) for fan in Step 4   min value is 1, max value is 80"
+        },
+        {
+          "property": "speed5",
+          "type": "enum",
+          "description": "Step 5 Speed",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "property": "time5",
+          "type": "numeric",
+          "description": "Duration (s) for fan in Step 5   min value is 1, max value is 80"
+        }
+      ]
+    },
+    {
+      "name": "DimmingSpeedUpRemote 1",
+      "type": "numeric",
+      "property": "dimmingSpeedUpRemote_1",
+      "base": "dimmingSpeedUpRemote_1",
+      "endpoint": null,
+      "description": "This changes the speed that the light dims up when controlled from the hub. A setting of 0 turns the light immediately on. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 25 (2.5s).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "RampRateOffToOnRemote 1",
+      "type": "numeric",
+      "property": "rampRateOffToOnRemote_1",
+      "base": "rampRateOffToOnRemote_1",
+      "endpoint": null,
+      "description": "This changes the speed that the light turns on when controlled from the hub. A setting of 0 turns the light immediately on. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 127 - Keep in sync with dimmingSpeedUpRemote setting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "DimmingSpeedDownRemote 1",
+      "type": "numeric",
+      "property": "dimmingSpeedDownRemote_1",
+      "base": "dimmingSpeedDownRemote_1",
+      "endpoint": null,
+      "description": "This changes the speed that the light dims down when controlled from the hub. A setting of 0 turns the light immediately off. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 127 - Keep in sync with dimmingSpeedUpRemote setting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "RampRateOnToOffRemote 1",
+      "type": "numeric",
+      "property": "rampRateOnToOffRemote_1",
+      "base": "rampRateOnToOffRemote_1",
+      "endpoint": null,
+      "description": "This changes the speed that the light turns off when controlled from the hub. A setting of 'instant' turns the light immediately off. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 127 - Keep in sync with rampRateOffToOnRemote setting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "MinimumLevel 1",
+      "type": "numeric",
+      "property": "minimumLevel_1",
+      "base": "minimumLevel_1",
+      "endpoint": null,
+      "description": "The minimum level that the dimmer allows the bulb to be dimmed to. Useful when the user has an LED bulb that does not turn on or flickers at a lower level..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "MaximumLevel 1",
+      "type": "numeric",
+      "property": "maximumLevel_1",
+      "base": "maximumLevel_1",
+      "endpoint": null,
+      "description": "The maximum level that the dimmer allows the bulb to be dimmed to.Useful when the user has an LED bulb that reaches its maximum level before the dimmer value of 99 or when the user wants to limit the maximum brightness..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 255
+    },
+    {
+      "name": "AutoTimerOff 1",
+      "type": "numeric",
+      "property": "autoTimerOff_1",
+      "base": "autoTimerOff_1",
+      "endpoint": null,
+      "description": "Automatically turns the light off after this many seconds. When the light is turned on a timer is started. When the timer expires, the light is turned off. 0 = Auto off is disabled..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 32767,
+      "unit": "seconds"
+    },
+    {
+      "name": "DefaultLevelRemote 1",
+      "type": "numeric",
+      "property": "defaultLevelRemote_1",
+      "base": "defaultLevelRemote_1",
+      "endpoint": null,
+      "description": "Default level for the light when it is turned on from the hub. A setting of 255 means that the light will return to the level that it was on before it was turned off..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "StateAfterPowerRestored 1",
+      "type": "numeric",
+      "property": "stateAfterPowerRestored_1",
+      "base": "stateAfterPowerRestored_1",
+      "endpoint": null,
+      "description": "The state the light should return to when power is restored after power failure. 0 = off, 1-254 = level, 255 = previous..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "QuickStartTime 1",
+      "type": "numeric",
+      "property": "quickStartTime_1",
+      "base": "quickStartTime_1",
+      "endpoint": null,
+      "description": "Duration of full power output while lamp transitions from Off to On. In 60th of second. 0 = disable, 1 = 1/60s, 60 = 1s.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 60
+    },
+    {
+      "name": "QuickStartLevel 1",
+      "type": "numeric",
+      "property": "quickStartLevel_1",
+      "base": "quickStartLevel_1",
+      "endpoint": null,
+      "description": "Level of power output during Quick Start Light time (P23)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "HigherOutputInNonNeutral 1",
+      "type": "enum",
+      "property": "higherOutputInNonNeutral_1",
+      "base": "higherOutputInNonNeutral_1",
+      "endpoint": null,
+      "description": "Increase level in non-neutral mode for light..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disabled (default)",
+        "Enabled"
+      ]
+    },
+    {
+      "name": "DimmingMode 1",
+      "type": "enum",
+      "property": "dimmingMode_1",
+      "base": "dimmingMode_1",
+      "endpoint": null,
+      "description": "Switches the dimming mode from leading edge (default) to trailing edge. 1. Trailing Edge is only available on neutral single-pole and neutral multi-way with an aux/add-on switch (multi-way with a dumb/existing switch and non-neutral setups are not supported and will default back to Leading Edge)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Leading edge",
+        "Trailing edge"
+      ]
+    },
+    {
+      "name": "SmartBulbMode 1",
+      "type": "enum",
+      "property": "smartBulbMode_1",
+      "base": "smartBulbMode_1",
+      "endpoint": null,
+      "description": "For use with Smart Bulbs that need constant power and are controlled via commands rather than power..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disabled",
+        "Smart Bulb Mode"
+      ]
+    },
+    {
+      "name": "LedColorWhenOn 1",
+      "type": "numeric",
+      "property": "ledColorWhenOn_1",
+      "base": "ledColorWhenOn_1",
+      "endpoint": null,
+      "description": "Set the color of the LED Indicator when the load is on..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "LedIntensityWhenOn 1",
+      "type": "numeric",
+      "property": "ledIntensityWhenOn_1",
+      "base": "ledIntensityWhenOn_1",
+      "endpoint": null,
+      "description": "Set the intensity of the LED Indicator when the load is on..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "OutputMode 1",
+      "type": "enum",
+      "property": "outputMode_1",
+      "base": "outputMode_1",
+      "endpoint": null,
+      "description": "Use device as a Dimmer or an On/Off switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Dimmer",
+        "On/Off"
+      ]
+    },
+    {
+      "name": "DimmingSpeedUpRemote 2",
+      "type": "numeric",
+      "property": "dimmingSpeedUpRemote_2",
+      "base": "dimmingSpeedUpRemote_2",
+      "endpoint": null,
+      "description": "This changes the speed that the fan ramps up when controlled from the hub. A setting of 0 turns the fan immediately on. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 25 (2.5s).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "RampRateOffToOnRemote 2",
+      "type": "numeric",
+      "property": "rampRateOffToOnRemote_2",
+      "base": "rampRateOffToOnRemote_2",
+      "endpoint": null,
+      "description": "This changes the speed that the fan turns on when controlled from the hub. A setting of 0 turns the fan immediately on. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 127 - Keep in sync with dimmingSpeedUpRemote setting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "DimmingSpeedDownRemote 2",
+      "type": "numeric",
+      "property": "dimmingSpeedDownRemote_2",
+      "base": "dimmingSpeedDownRemote_2",
+      "endpoint": null,
+      "description": "This changes the speed that the fan ramps down when controlled from the hub. A setting of 0 turns the fan immediately off. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 127 - Keep in sync with dimmingSpeedUpRemote setting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "RampRateOnToOffRemote 2",
+      "type": "numeric",
+      "property": "rampRateOnToOffRemote_2",
+      "base": "rampRateOnToOffRemote_2",
+      "endpoint": null,
+      "description": "This changes the speed that the fan turns off when controlled from the hub. A setting of 'instant' turns the fan immediately off. Increasing the value slows down the transition speed. Every number represents 100ms. Default = 127 - Keep in sync with rampRateOffToOnRemote setting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 127
+    },
+    {
+      "name": "MinimumLevel 2",
+      "type": "numeric",
+      "property": "minimumLevel_2",
+      "base": "minimumLevel_2",
+      "endpoint": null,
+      "description": "The minimum level that the fan can be set to..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "MaximumLevel 2",
+      "type": "numeric",
+      "property": "maximumLevel_2",
+      "base": "maximumLevel_2",
+      "endpoint": null,
+      "description": "The maximum level that the fan can be set to..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 255
+    },
+    {
+      "name": "AutoTimerOff 2",
+      "type": "numeric",
+      "property": "autoTimerOff_2",
+      "base": "autoTimerOff_2",
+      "endpoint": null,
+      "description": "Automatically turns the fan off after this many seconds. When the fan is turned on a timer is started. When the timer expires, the switch is turned off. 0 = Auto off is disabled..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 32767,
+      "unit": "seconds"
+    },
+    {
+      "name": "DefaultLevelRemote 2",
+      "type": "numeric",
+      "property": "defaultLevelRemote_2",
+      "base": "defaultLevelRemote_2",
+      "endpoint": null,
+      "description": "Default level for the fan when it is turned on from the hub. A setting of 255 means that the fan will return to the level that it was on before it was turned off..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "StateAfterPowerRestored 2",
+      "type": "numeric",
+      "property": "stateAfterPowerRestored_2",
+      "base": "stateAfterPowerRestored_2",
+      "endpoint": null,
+      "description": "The state the fan should return to when power is restored after power failure. 0 = off, 1-254 = level, 255 = previous..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "QuickStartTime 2",
+      "type": "numeric",
+      "property": "quickStartTime_2",
+      "base": "quickStartTime_2",
+      "endpoint": null,
+      "description": "Duration of full power output while fan transitions from Off to On. In 60th of second. 0 = disable, 1 = 1/60s, 60 = 1s.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 60
+    },
+    {
+      "name": "SmartBulbMode 2",
+      "type": "enum",
+      "property": "smartBulbMode_2",
+      "base": "smartBulbMode_2",
+      "endpoint": null,
+      "description": "For use with Smart Fans that need constant power and are controlled via commands rather than power..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Disabled",
+        "Smart Fan Mode"
+      ]
+    },
+    {
+      "name": "OutputMode 2",
+      "type": "enum",
+      "property": "outputMode_2",
+      "base": "outputMode_2",
+      "endpoint": null,
+      "description": "Use device in ceiling fan (3-Speed) or in exhaust fan (On/Off) mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Ceiling Fan (3-Speed)",
+        "Exhaust Fan (On/Off)"
+      ]
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    }
+  ],
+  "warnings": []
+}

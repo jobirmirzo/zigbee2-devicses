@@ -1,0 +1,51 @@
+{
+  "model": "BMCT-RZ",
+  "file": "BMCT-RZ.md",
+  "vendor": "Bosch",
+  "description": "Relay (potential free)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BMCT-RZ.png",
+  "added_at": "2024-01-07T12:36:48",
+  "exposes_summary": "switch (state), actuator_type",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Actuator type",
+      "type": "enum",
+      "property": "actuator_type",
+      "base": "actuator_type",
+      "endpoint": null,
+      "description": "Select the appropriate actuator type so that the connected device can be controlled correctly..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "normally_closed",
+        "normally_open"
+      ]
+    }
+  ],
+  "warnings": []
+}

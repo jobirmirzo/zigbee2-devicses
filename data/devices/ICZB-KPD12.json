@@ -1,0 +1,48 @@
+{
+  "model": "ICZB-KPD12",
+  "file": "ICZB-KPD12.md",
+  "vendor": "iCasa",
+  "description": "Zigbee 3.0 Keypad Pulse 2",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ICZB-KPD12.png",
+  "added_at": "2021-01-31T22:24:43Z",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_move_up",
+        "brightenss_move_down",
+        "brightness_stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

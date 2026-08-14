@@ -1,0 +1,209 @@
+{
+  "model": "Senoro.Win v2",
+  "file": "Senoro.Win_v2.md",
+  "vendor": "Senoro",
+  "description": "Window sensor with 3-state opening (DP101), optional alarm, battery",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Senoro.Win-v2.png",
+  "added_at": "2025-12-06T20:11:28",
+  "exposes_summary": "opening_state, alarm_state, setup_mode, alarm_siren, alarm_siren_duration, vibration, vibration_limit, vibration_siren, vibration_siren_duration, close_signal, transmission_power, magnetic_status, battery",
+  "exposes": [
+    {
+      "name": "Opening state",
+      "type": "enum",
+      "property": "opening_state",
+      "base": "opening_state",
+      "endpoint": null,
+      "description": "Opening state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "open",
+        "closed",
+        "tilted"
+      ]
+    },
+    {
+      "name": "Alarm state",
+      "type": "binary",
+      "property": "alarm_state",
+      "base": "alarm_state",
+      "endpoint": null,
+      "description": "Alarm state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Setup mode",
+      "type": "binary",
+      "property": "setup_mode",
+      "base": "setup_mode",
+      "endpoint": null,
+      "description": "Exit Setup Mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Alarm siren",
+      "type": "binary",
+      "property": "alarm_siren",
+      "base": "alarm_siren",
+      "endpoint": null,
+      "description": "Alarm siren.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Alarm siren duration",
+      "type": "numeric",
+      "property": "alarm_siren_duration",
+      "base": "alarm_siren_duration",
+      "endpoint": null,
+      "description": "Alarm siren duration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 180
+    },
+    {
+      "name": "Vibration",
+      "type": "numeric",
+      "property": "vibration",
+      "base": "vibration",
+      "endpoint": null,
+      "description": "Value of vibration..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Vibration limit",
+      "type": "numeric",
+      "property": "vibration_limit",
+      "base": "vibration_limit",
+      "endpoint": null,
+      "description": "Vibration limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Vibration siren",
+      "type": "binary",
+      "property": "vibration_siren",
+      "base": "vibration_siren",
+      "endpoint": null,
+      "description": "Vibration siren.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Vibration siren duration",
+      "type": "numeric",
+      "property": "vibration_siren_duration",
+      "base": "vibration_siren_duration",
+      "endpoint": null,
+      "description": "Vibration siren duration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 180
+    },
+    {
+      "name": "Close signal",
+      "type": "binary",
+      "property": "close_signal",
+      "base": "close_signal",
+      "endpoint": null,
+      "description": "Close signal.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Transmission power",
+      "type": "numeric",
+      "property": "transmission_power",
+      "base": "transmission_power",
+      "endpoint": null,
+      "description": "Transmission power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 11,
+      "value_max": 19
+    },
+    {
+      "name": "Magnetic status",
+      "type": "binary",
+      "property": "magnetic_status",
+      "base": "magnetic_status",
+      "endpoint": null,
+      "description": "Magnetic status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,27 @@
+{
+  "model": "SNTZ009",
+  "file": "SNTZ009.md",
+  "vendor": "Tuya",
+  "description": "Water leak sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SNTZ009.png",
+  "added_at": "2020-08-11T22:17:44Z",
+  "exposes_summary": "water_leak",
+  "exposes": [
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

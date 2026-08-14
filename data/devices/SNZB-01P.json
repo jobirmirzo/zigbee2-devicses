@@ -1,0 +1,60 @@
+{
+  "model": "SNZB-01P",
+  "file": "SNZB-01P.md",
+  "vendor": "SONOFF",
+  "description": "Wireless button",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SNZB-01P.png",
+  "added_at": "2023-06-01T08:16:21",
+  "exposes_summary": "battery, voltage, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single",
+        "double",
+        "long"
+      ]
+    }
+  ],
+  "warnings": []
+}

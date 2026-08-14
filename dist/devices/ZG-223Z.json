@@ -1,0 +1,90 @@
+{
+  "model": "ZG-223Z",
+  "file": "ZG-223Z.md",
+  "vendor": "HOBEIAN",
+  "description": "Rainwater detection sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-223Z.png",
+  "added_at": "2023-06-01T08:16:21",
+  "exposes_summary": "rainwater, illuminance, sensitivity, illuminance_sampling, battery",
+  "exposes": [
+    {
+      "name": "Rainwater",
+      "type": "enum",
+      "property": "rainwater",
+      "base": "rainwater",
+      "endpoint": null,
+      "description": "Sensor rainwater status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "raining"
+      ]
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Sensitivity",
+      "type": "numeric",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "The larger the value, the more sensitive it is (refresh and update only while active).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 9
+    },
+    {
+      "name": "Illuminance sampling",
+      "type": "numeric",
+      "property": "illuminance_sampling",
+      "base": "illuminance_sampling",
+      "endpoint": null,
+      "description": "Brightness acquisition interval (refresh and update only while active).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 480,
+      "unit": "minutes"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

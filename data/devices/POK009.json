@@ -1,0 +1,163 @@
+{
+  "model": "POK009",
+  "file": "POK009.md",
+  "vendor": "PushOk Hardware",
+  "description": "Voltage monitor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/POK009.png",
+  "added_at": "2024-09-01T12:39:25",
+  "exposes_summary": "ext_voltage, comp_state, tgt_voltage, voltage_type, identify, battery, voltage, battery_low, pulse_frequency, pulse_count",
+  "exposes": [
+    {
+      "name": "Ext voltage",
+      "type": "numeric",
+      "property": "ext_voltage",
+      "base": "ext_voltage",
+      "endpoint": null,
+      "description": "Mains voltage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Comp state",
+      "type": "binary",
+      "property": "comp_state",
+      "base": "comp_state",
+      "endpoint": null,
+      "description": "Voltage status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "NORMAL",
+      "value_off": "LOW"
+    },
+    {
+      "name": "Tgt voltage",
+      "type": "numeric",
+      "property": "tgt_voltage",
+      "base": "tgt_voltage",
+      "endpoint": null,
+      "description": "Voltage threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 4,
+      "value_max": 340,
+      "unit": "V"
+    },
+    {
+      "name": "Voltage type",
+      "type": "enum",
+      "property": "voltage_type",
+      "base": "voltage_type",
+      "endpoint": null,
+      "description": "Mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "AC",
+        "DC",
+        "DC_COUNTER"
+      ]
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Pulse frequency",
+      "type": "numeric",
+      "property": "pulse_frequency",
+      "base": "pulse_frequency",
+      "endpoint": null,
+      "description": "Pulse frequency (counter mode).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Pulse count",
+      "type": "numeric",
+      "property": "pulse_count",
+      "base": "pulse_count",
+      "endpoint": null,
+      "description": "Total pulse count (counter mode).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

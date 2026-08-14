@@ -1,0 +1,76 @@
+{
+  "model": "ZG-225Z",
+  "file": "ZG-225Z.md",
+  "vendor": "Tuya",
+  "description": "Gas sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-225Z.png",
+  "added_at": "2022-11-09T12:35:00Z",
+  "exposes_summary": "gas, gas_value, sensitivity, ring",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "binary",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Gas value",
+      "type": "numeric",
+      "property": "gas_value",
+      "base": "gas_value",
+      "endpoint": null,
+      "description": "Measured gas concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Gas sensor sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Ring",
+      "type": "enum",
+      "property": "ring",
+      "base": "ring",
+      "endpoint": null,
+      "description": "Ring.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "ring1",
+        "ring2"
+      ]
+    }
+  ],
+  "warnings": []
+}

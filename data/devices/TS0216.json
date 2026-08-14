@@ -1,0 +1,58 @@
+{
+  "model": "TS0216",
+  "file": "TS0216.md",
+  "vendor": "Tuya",
+  "description": "Sound and flash siren",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0216.png",
+  "added_at": "2020-11-01T12:47:02Z",
+  "exposes_summary": "battery, alarm, volume",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Alarm",
+      "type": "binary",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Volume",
+      "type": "numeric",
+      "property": "volume",
+      "base": "volume",
+      "endpoint": null,
+      "description": "Volume of siren.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,41 @@
+{
+  "model": "5AA-SS-ZA-H0",
+  "file": "5AA-SS-ZA-H0.md",
+  "vendor": "Leedarson",
+  "description": "Motion sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/5AA-SS-ZA-H0.png",
+  "added_at": "2020-04-29T17:11:59Z",
+  "exposes_summary": "occupancy, illuminance",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

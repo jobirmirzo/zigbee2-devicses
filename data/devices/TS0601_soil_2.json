@@ -1,0 +1,240 @@
+{
+  "model": "TS0601_soil_2",
+  "file": "TS0601_soil_2.md",
+  "vendor": "Tuya",
+  "description": "Soil sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_soil_2.png",
+  "added_at": "2024-06-30T19:12:33",
+  "exposes_summary": "soil_moisture, temperature, temperature_f, temperature_sensitivity, humidity_sensitivity, temperature_alarm, humidity_alarm, max_temperature_alarm, min_temperature_alarm, max_humidity_alarm, min_humidity_alarm, schedule_periodic, battery, battery_state",
+  "exposes": [
+    {
+      "name": "Soil moisture",
+      "type": "numeric",
+      "property": "soil_moisture",
+      "base": "soil_moisture",
+      "endpoint": null,
+      "description": "Measured soil moisture value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Soil temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": -10,
+      "value_max": 60,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature f",
+      "type": "numeric",
+      "property": "temperature_f",
+      "base": "temperature_f",
+      "endpoint": null,
+      "description": "Soil temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 14,
+      "value_max": 140,
+      "unit": "°F"
+    },
+    {
+      "name": "Temperature sensitivity",
+      "type": "numeric",
+      "property": "temperature_sensitivity",
+      "base": "temperature_sensitivity",
+      "endpoint": null,
+      "description": "Temperature sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.3,
+      "value_max": 1,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity sensitivity",
+      "type": "numeric",
+      "property": "humidity_sensitivity",
+      "base": "humidity_sensitivity",
+      "endpoint": null,
+      "description": "Humidity sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 5,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature alarm",
+      "type": "enum",
+      "property": "temperature_alarm",
+      "base": "temperature_alarm",
+      "endpoint": null,
+      "description": "Temperature alarm state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "lower_alarm",
+        "upper_alarm",
+        "cancel"
+      ]
+    },
+    {
+      "name": "Humidity alarm",
+      "type": "enum",
+      "property": "humidity_alarm",
+      "base": "humidity_alarm",
+      "endpoint": null,
+      "description": "Humidity alarm state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "lower_alarm",
+        "upper_alarm",
+        "cancel"
+      ]
+    },
+    {
+      "name": "Max temperature alarm",
+      "type": "numeric",
+      "property": "max_temperature_alarm",
+      "base": "max_temperature_alarm",
+      "endpoint": null,
+      "description": "Upper temperature limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 60,
+      "unit": "°C"
+    },
+    {
+      "name": "Min temperature alarm",
+      "type": "numeric",
+      "property": "min_temperature_alarm",
+      "base": "min_temperature_alarm",
+      "endpoint": null,
+      "description": "Lower temperature limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 60,
+      "unit": "°C"
+    },
+    {
+      "name": "Max humidity alarm",
+      "type": "numeric",
+      "property": "max_humidity_alarm",
+      "base": "max_humidity_alarm",
+      "endpoint": null,
+      "description": "Upper humidity limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Min humidity alarm",
+      "type": "numeric",
+      "property": "min_humidity_alarm",
+      "base": "min_humidity_alarm",
+      "endpoint": null,
+      "description": "Lower humidity limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Schedule periodic",
+      "type": "numeric",
+      "property": "schedule_periodic",
+      "base": "schedule_periodic",
+      "endpoint": null,
+      "description": "Report sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 60,
+      "unit": "min"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "State of the battery.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "warnings": []
+}

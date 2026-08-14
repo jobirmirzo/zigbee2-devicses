@@ -1,0 +1,106 @@
+{
+  "model": "ZBMicro",
+  "file": "ZBMicro.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee USB repeater plug",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZBMicro.png",
+  "added_at": "2024-04-29T19:24:38",
+  "exposes_summary": "switch (state), power_on_behavior, rf_turbo_mode, inching_control_set",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Rf turbo mode",
+      "type": "binary",
+      "property": "rf_turbo_mode",
+      "base": "rf_turbo_mode",
+      "endpoint": null,
+      "description": "Enable/disable Radio power turbo mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Inching control set",
+      "type": "composite",
+      "property": "inching_control_set",
+      "base": "inching_control_set",
+      "endpoint": null,
+      "description": "Device Inching function Settings. The device will automatically turn off (turn on) after each turn on (turn off) for a specified period of time..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "inching_control",
+          "type": "binary",
+          "description": "Enable/disable inching function.",
+          "values": [
+            "ENABLE",
+            "DISABLE"
+          ]
+        },
+        {
+          "property": "inching_time",
+          "type": "numeric",
+          "description": "Delay time for executing a inching action. min value is 0.5, max value is 3599.5, unit is seconds"
+        },
+        {
+          "property": "inching_mode",
+          "type": "binary",
+          "description": "Set inching off or inching on mode.",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

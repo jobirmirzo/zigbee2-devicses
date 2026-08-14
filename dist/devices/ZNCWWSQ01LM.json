@@ -1,0 +1,195 @@
+{
+  "model": "ZNCWWSQ01LM",
+  "file": "ZNCWWSQ01LM.md",
+  "vendor": "Aqara",
+  "description": "Smart pet feeder C1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZNCWWSQ01LM.png",
+  "added_at": "2022-12-01T15:07:19",
+  "exposes_summary": "feed, feeding_source, feeding_size, portions_per_day, weight_per_day, error, schedule, led_indicator, child_lock, mode, serving_size, portion_weight",
+  "exposes": [
+    {
+      "name": "Feed",
+      "type": "enum",
+      "property": "feed",
+      "base": "feed",
+      "endpoint": null,
+      "description": "Start feeding.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "",
+        "START"
+      ]
+    },
+    {
+      "name": "Feeding source",
+      "type": "enum",
+      "property": "feeding_source",
+      "base": "feeding_source",
+      "endpoint": null,
+      "description": "Feeding source.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "schedule",
+        "manual",
+        "remote"
+      ]
+    },
+    {
+      "name": "Feeding size",
+      "type": "numeric",
+      "property": "feeding_size",
+      "base": "feeding_size",
+      "endpoint": null,
+      "description": "Feeding size.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "portion"
+    },
+    {
+      "name": "Portions per day",
+      "type": "numeric",
+      "property": "portions_per_day",
+      "base": "portions_per_day",
+      "endpoint": null,
+      "description": "Portions per day.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Weight per day",
+      "type": "numeric",
+      "property": "weight_per_day",
+      "base": "weight_per_day",
+      "endpoint": null,
+      "description": "Weight per day.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "g"
+    },
+    {
+      "name": "Error",
+      "type": "binary",
+      "property": "error",
+      "base": "error",
+      "endpoint": null,
+      "description": "Indicates whether there is an error with the feeder.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Schedule",
+      "type": "list",
+      "property": "schedule",
+      "base": "schedule",
+      "endpoint": null,
+      "description": "Feeding schedule.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Disable LED at night",
+      "type": "binary",
+      "property": "led_indicator",
+      "base": "led_indicator",
+      "endpoint": null,
+      "description": "LED indicator will be disabled every day from 21:00 to 09:00.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Feeding mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "schedule",
+        "manual"
+      ]
+    },
+    {
+      "name": "Serving size",
+      "type": "numeric",
+      "property": "serving_size",
+      "base": "serving_size",
+      "endpoint": null,
+      "description": "One serving size.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 10,
+      "unit": "portion"
+    },
+    {
+      "name": "Portion weight",
+      "type": "numeric",
+      "property": "portion_weight",
+      "base": "portion_weight",
+      "endpoint": null,
+      "description": "Portion weight.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 20,
+      "unit": "g"
+    }
+  ],
+  "warnings": []
+}

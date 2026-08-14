@@ -1,0 +1,41 @@
+{
+  "model": "DCR-CO",
+  "file": "DCR-CO.md",
+  "vendor": "Tuya",
+  "description": "Smart air box (carbon monoxide)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DCR-CO.png",
+  "added_at": "2025-05-01T17:59:09",
+  "exposes_summary": "carbon_monoxide, co",
+  "exposes": [
+    {
+      "name": "Carbon monoxide",
+      "type": "binary",
+      "property": "carbon_monoxide",
+      "base": "carbon_monoxide",
+      "endpoint": null,
+      "description": "Indicates if CO (carbon monoxide) is detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "CO",
+      "type": "numeric",
+      "property": "co",
+      "base": "co",
+      "endpoint": null,
+      "description": "The measured CO (carbon monoxide) value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    }
+  ],
+  "warnings": []
+}

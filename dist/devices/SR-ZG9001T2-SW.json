@@ -1,0 +1,139 @@
+{
+  "model": "SR-ZG9001T2-SW",
+  "file": "SR-ZG9001T2-SW.md",
+  "vendor": "Sunricher",
+  "description": "Zigbee 2-gang touch panel",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SR-ZG9001T2-SW.png",
+  "added_at": "2026-01-01T13:30:29",
+  "exposes_summary": "switch (state), power_on_behavior, identify, external_switch_type, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "1",
+      "features": [
+        {
+          "property": "state_1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "2",
+      "features": [
+        {
+          "property": "state_2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_1",
+      "base": "power_on_behavior",
+      "endpoint": "1",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_2",
+      "base": "power_on_behavior",
+      "endpoint": "2",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "External switch type",
+      "type": "enum",
+      "property": "external_switch_type",
+      "base": "external_switch_type",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "push_button",
+        "normal_on_off",
+        "three_way"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_1",
+        "on_2",
+        "off_1",
+        "off_2",
+        "toggle_1",
+        "toggle_2"
+      ]
+    }
+  ],
+  "warnings": []
+}

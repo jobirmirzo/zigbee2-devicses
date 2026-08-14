@@ -1,0 +1,40 @@
+{
+  "model": "RS-23ZBS",
+  "file": "RS-23ZBS.md",
+  "vendor": "Climax",
+  "description": "Temperature & humidity sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/RS-23ZBS.png",
+  "added_at": "2020-06-12T22:33:07Z",
+  "exposes_summary": "temperature, humidity",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

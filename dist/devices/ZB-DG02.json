@@ -1,0 +1,27 @@
+{
+  "model": "ZB-DG02",
+  "file": "ZB-DG02.md",
+  "vendor": "Spacetronik",
+  "description": "Gas leakage sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZB-DG02.png",
+  "added_at": "2026-03-31T19:04:39",
+  "exposes_summary": "gas",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "binary",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

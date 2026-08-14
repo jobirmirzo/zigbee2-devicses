@@ -1,0 +1,230 @@
+{
+  "model": "DAC2161C",
+  "file": "DAC2161C.md",
+  "vendor": "MatSee Plus",
+  "description": "Smart Zigbee energy meter 80A din rail",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DAC2161C.png",
+  "added_at": "2023-04-27T17:39:27",
+  "exposes_summary": "switch (state), energy, power, voltage, current, fault, threshold_1, threshold_1_protection, threshold_1_value, threshold_2, threshold_2_protection, threshold_2_value, clear_fault, meter_id",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Fault",
+      "type": "enum",
+      "property": "fault",
+      "base": "fault",
+      "endpoint": null,
+      "description": "Fault status of the device (clear = nothing).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "clear",
+        "over_current_threshold",
+        "over_power_threshold",
+        "over_voltage threshold",
+        "wrong_frequency_threshold"
+      ]
+    },
+    {
+      "name": "Threshold 1",
+      "type": "enum",
+      "property": "threshold_1",
+      "base": "threshold_1",
+      "endpoint": null,
+      "description": "State of threshold_1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "not_set",
+        "over_current_threshold",
+        "over_voltage_threshold"
+      ]
+    },
+    {
+      "name": "Threshold 1 protection",
+      "type": "binary",
+      "property": "threshold_1_protection",
+      "base": "threshold_1_protection",
+      "endpoint": null,
+      "description": "OFF - alarm only, ON - relay will be off when threshold reached.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Threshold 1 value",
+      "type": "numeric",
+      "property": "threshold_1_value",
+      "base": "threshold_1_value",
+      "endpoint": null,
+      "description": "Can be in Volt or Ampere depending on threshold setting. Setup the value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Threshold 2",
+      "type": "enum",
+      "property": "threshold_2",
+      "base": "threshold_2",
+      "endpoint": null,
+      "description": "State of threshold_2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "not_set",
+        "over_current_threshold",
+        "over_voltage_threshold"
+      ]
+    },
+    {
+      "name": "Threshold 2 protection",
+      "type": "binary",
+      "property": "threshold_2_protection",
+      "base": "threshold_2_protection",
+      "endpoint": null,
+      "description": "OFF - alarm only, ON - relay will be off when threshold reached.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Threshold 2 value",
+      "type": "numeric",
+      "property": "threshold_2_value",
+      "base": "threshold_2_value",
+      "endpoint": null,
+      "description": "Setup value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Clear fault",
+      "type": "binary",
+      "property": "clear_fault",
+      "base": "clear_fault",
+      "endpoint": null,
+      "description": "Turn ON to clear last the fault.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Meter id",
+      "type": "text",
+      "property": "meter_id",
+      "base": "meter_id",
+      "endpoint": null,
+      "description": "Meter ID (ID of device).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

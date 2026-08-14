@@ -1,0 +1,27 @@
+{
+  "model": "M415-6C",
+  "file": "M415-6C.md",
+  "vendor": "BYUN",
+  "description": "Smoke sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/M415-6C.png",
+  "added_at": "2020-12-07T16:41:15Z",
+  "exposes_summary": "smoke",
+  "exposes": [
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

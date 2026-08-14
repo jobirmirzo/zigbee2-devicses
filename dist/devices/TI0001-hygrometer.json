@@ -1,0 +1,40 @@
+{
+  "model": "TI0001-hygrometer",
+  "file": "TI0001-hygrometer.md",
+  "vendor": "Livolo",
+  "description": "Zigbee Digital Humidity and Temperature Sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TI0001-hygrometer.png",
+  "added_at": "2024-06-30T19:11:08",
+  "exposes_summary": "humidity, temperature",
+  "exposes": [
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

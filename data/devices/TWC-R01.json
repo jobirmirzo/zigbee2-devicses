@@ -1,0 +1,208 @@
+{
+  "model": "TWC-R01",
+  "file": "TWC-R01.md",
+  "vendor": "THALEOS",
+  "description": "Smart thermostat for electric heater with pilot wire",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TWC-R01.png",
+  "added_at": "2025-11-30T20:32:44",
+  "exposes_summary": "pilot_wire_mode, local_temperature, local_temperature_calibration, eco_mode, open_window, open_window_temperature, power, voltage, current, energy, energy_today, energy_yesterday, device_mode_type",
+  "exposes": [
+    {
+      "name": "Pilot wire mode",
+      "type": "enum",
+      "property": "pilot_wire_mode",
+      "base": "pilot_wire_mode",
+      "endpoint": null,
+      "description": "Controls the target temperature of the heater, with respect to the temperature set on that heater. Possible values: comfort (target temperature = heater set temperature) eco (target temperature = heater set temperature - 3.5°C), frost_protection (target temperature = 7 to 8°C), off (heater stops heating), and the less commonly used comfort_-1 (target temperature = heater set temperature - 1°C), comfort_-2 (target temperature = heater set temperature - 2°C),..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "comfort",
+        "eco",
+        "antifrost",
+        "off",
+        "comfort_1",
+        "comfort_2"
+      ]
+    },
+    {
+      "name": "Local temperature",
+      "type": "numeric",
+      "property": "local_temperature",
+      "base": "local_temperature",
+      "endpoint": null,
+      "description": "Current temperature measured on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Local temperature calibration",
+      "type": "numeric",
+      "property": "local_temperature_calibration",
+      "base": "local_temperature_calibration",
+      "endpoint": null,
+      "description": "Set temperature calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -8,
+      "value_max": 8,
+      "unit": "°C"
+    },
+    {
+      "name": "Eco mode",
+      "type": "binary",
+      "property": "eco_mode",
+      "base": "eco_mode",
+      "endpoint": null,
+      "description": "Enables/disables the weekly program..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Open window",
+      "type": "binary",
+      "property": "open_window",
+      "base": "open_window",
+      "endpoint": null,
+      "description": "Enables/disables the status on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Open window temperature",
+      "type": "numeric",
+      "property": "open_window_temperature",
+      "base": "open_window_temperature",
+      "endpoint": null,
+      "description": "Open window temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 35,
+      "unit": "°C"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy today",
+      "type": "numeric",
+      "property": "energy_today",
+      "base": "energy_today",
+      "endpoint": null,
+      "description": "Energy consumed today.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy yesterday",
+      "type": "numeric",
+      "property": "energy_yesterday",
+      "base": "energy_yesterday",
+      "endpoint": null,
+      "description": "Energy consumed yesterday.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Device mode type",
+      "type": "binary",
+      "property": "device_mode_type",
+      "base": "device_mode_type",
+      "endpoint": null,
+      "description": "Set pilot wire mode to 6 modes (includes comfort 1 & 2)..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

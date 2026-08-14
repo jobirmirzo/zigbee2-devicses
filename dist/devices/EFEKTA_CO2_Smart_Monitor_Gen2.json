@@ -1,0 +1,376 @@
+{
+  "model": "EFEKTA_CO2_Smart_Monitor_Gen2",
+  "file": "EFEKTA_CO2_Smart_Monitor_Gen2.md",
+  "vendor": "EFEKTA",
+  "description": "CO2, illuminance Smart Monitor, rgb indicator, binding, control the relays",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_CO2_Smart_Monitor_Gen2.png",
+  "added_at": "2025-06-01T17:54:42",
+  "exposes_summary": "identify, co2, temperature, humidity, illuminance, lifetime, lux_factor, light (state, brightness), night_onoff_backlight, night_on_backlight, night_off_backlight, reading_interval, set_altitude, temperature_offset, humidity_offset, automatic_calibrations, forced_recalibration, factory_reset_co2, manual_forced_recalibration, invert_logic_onoff, enable_co2_gas, high_co2_gas, low_co2_gas",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "Measured value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Lifetime",
+      "type": "numeric",
+      "property": "lifetime",
+      "base": "lifetime",
+      "endpoint": null,
+      "description": "Uptime.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hours"
+    },
+    {
+      "name": "Lux factor",
+      "type": "numeric",
+      "property": "lux_factor",
+      "base": "lux_factor",
+      "endpoint": null,
+      "description": "Lux factor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 50
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Night onoff backlight",
+      "type": "binary",
+      "property": "night_onoff_backlight",
+      "base": "night_onoff_backlight",
+      "endpoint": null,
+      "description": "Complete shutdown of the backlight at night mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Night on backlight",
+      "type": "numeric",
+      "property": "night_on_backlight",
+      "base": "night_on_backlight",
+      "endpoint": null,
+      "description": "Night mode activation time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23,
+      "unit": "Hr"
+    },
+    {
+      "name": "Night off backlight",
+      "type": "numeric",
+      "property": "night_off_backlight",
+      "base": "night_off_backlight",
+      "endpoint": null,
+      "description": "Night mode deactivation time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23,
+      "unit": "Hr"
+    },
+    {
+      "name": "Reading interval",
+      "type": "numeric",
+      "property": "reading_interval",
+      "base": "reading_interval",
+      "endpoint": null,
+      "description": "Setting the sensor reading interval..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 15,
+      "value_max": 300,
+      "unit": "seconds"
+    },
+    {
+      "name": "Set altitude",
+      "type": "numeric",
+      "property": "set_altitude",
+      "base": "set_altitude",
+      "endpoint": null,
+      "description": "Setting the altitude above sea level (for high accuracy of the CO2 sensor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3000,
+      "unit": "meters"
+    },
+    {
+      "name": "Temperature offset",
+      "type": "numeric",
+      "property": "temperature_offset",
+      "base": "temperature_offset",
+      "endpoint": null,
+      "description": "Adjust temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -10,
+      "value_max": 10,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity offset",
+      "type": "numeric",
+      "property": "humidity_offset",
+      "base": "humidity_offset",
+      "endpoint": null,
+      "description": "Adjust humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "%"
+    },
+    {
+      "name": "Automatic calibrations",
+      "type": "binary",
+      "property": "automatic_calibrations",
+      "base": "automatic_calibrations",
+      "endpoint": null,
+      "description": "Automatic calibration of the CO2 sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Forced recalibration",
+      "type": "binary",
+      "property": "forced_recalibration",
+      "base": "forced_recalibration",
+      "endpoint": null,
+      "description": "Start FRC (Perform Forced Recalibration of the CO2 Sensor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Factory reset co2",
+      "type": "binary",
+      "property": "factory_reset_co2",
+      "base": "factory_reset_co2",
+      "endpoint": null,
+      "description": "Factory Reset CO2 sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Manual forced recalibration",
+      "type": "numeric",
+      "property": "manual_forced_recalibration",
+      "base": "manual_forced_recalibration",
+      "endpoint": null,
+      "description": "Start Manual FRC (Perform Forced Recalibration of the CO2 Sensor).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Invert logic onoff",
+      "type": "binary",
+      "property": "invert_logic_onoff",
+      "base": "invert_logic_onoff",
+      "endpoint": null,
+      "description": "Enable invert logic onoff.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Enable co2 gas",
+      "type": "binary",
+      "property": "enable_co2_gas",
+      "base": "enable_co2_gas",
+      "endpoint": null,
+      "description": "Enable CO2 Gas Control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "High co2 gas",
+      "type": "numeric",
+      "property": "high_co2_gas",
+      "base": "high_co2_gas",
+      "endpoint": null,
+      "description": "Setting High CO2 Gas Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 400,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Low co2 gas",
+      "type": "numeric",
+      "property": "low_co2_gas",
+      "base": "low_co2_gas",
+      "endpoint": null,
+      "description": "Setting Low CO2 Gas Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 400,
+      "value_max": 5000,
+      "unit": "ppm"
+    }
+  ],
+  "warnings": []
+}

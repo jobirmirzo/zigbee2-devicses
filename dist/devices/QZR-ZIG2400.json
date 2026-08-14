@@ -1,0 +1,41 @@
+{
+  "model": "QZR-ZIG2400",
+  "file": "QZR-ZIG2400.md",
+  "vendor": "Qmotion",
+  "description": "5 channel remote",
+  "image": "https://www.zigbee2mqtt.io/images/devices/QZR-ZIG2400.png",
+  "added_at": "2020-09-30T20:52:56Z",
+  "exposes_summary": "action, position",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Position",
+      "type": "numeric",
+      "property": "position",
+      "base": "position",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

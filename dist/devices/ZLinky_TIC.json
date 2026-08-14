@@ -1,0 +1,1134 @@
+{
+  "model": "ZLinky_TIC",
+  "file": "ZLinky_TIC.md",
+  "vendor": "LiXee",
+  "description": "Lixee ZLinky",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZLinky_TIC.png",
+  "added_at": "2019-09-08T21:16:00Z",
+  "exposes_summary": "EAST, EAIT, EASF01, EASF02, EASF03, EASF04, EASF05, EASF06, EASF07, EASF08, EASF09, EASF10, ADSC, PRM, PREF, PCOUP, VTIC, CCASN, CCASN-1, UMOY1, ERQ1, ERQ2, ERQ3, ERQ4, IRMS1, URMS1, EASD01, EASD02, EASD03, EASD04, DATE, NTARF, LTARF, NGTF, NJOURF, NJOURF+1, PJOURF+1, PPOINTE1, CCAIN, CCAIN-1, SINSTI, SMAXIN, SMAXIN-1, MSG1, MSG2, RELAIS, DPM1, DPM2, DPM3, STGE, FPM1, FPM2, FPM3, SMAXSN, SINSTS, SMAXSN-1, SMAXSN2, SMAXSN3, SINSTS2, SINSTS3, UMOY3, UMOY2, IRMS2, IRMS3, URMS2, URMS3, SMAXSN2-1, SMAXSN3-1, PTEC, MOTDETAT, HHPHC, PEJP, DEMAIN, IMAX, ADPS, IMAX2, IMAX3, PPOT, ADIR1, ADIR2, ADIR3",
+  "exposes": [
+    {
+      "name": "EAST",
+      "type": "numeric",
+      "property": "current_summ_delivered",
+      "base": "current_summ_delivered",
+      "endpoint": null,
+      "description": "Total active power delivered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "EAIT",
+      "type": "numeric",
+      "property": "current_summ_received",
+      "base": "current_summ_received",
+      "endpoint": null,
+      "description": "Total active power injected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "EASF01",
+      "type": "numeric",
+      "property": "current_tier1_summ_delivered",
+      "base": "current_tier1_summ_delivered",
+      "endpoint": null,
+      "description": "Total provider active power delivered (index 01).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "EASF02",
+      "type": "numeric",
+      "property": "current_tier2_summ_delivered",
+      "base": "current_tier2_summ_delivered",
+      "endpoint": null,
+      "description": "Total provider active power delivered (index 02).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "EASF03",
+      "type": "numeric",
+      "property": "current_tier3_summ_delivered",
+      "base": "current_tier3_summ_delivered",
+      "endpoint": null,
+      "description": "Total provider active power delivered (index 03).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "EASF04",
+      "type": "numeric",
+      "property": "current_tier4_summ_delivered",
+      "base": "current_tier4_summ_delivered",
+      "endpoint": null,
+      "description": "Total provider active power delivered (index 04).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "EASF05",
+      "type": "numeric",
+      "property": "current_tier5_summ_delivered",
+      "base": "current_tier5_summ_delivered",
+      "endpoint": null,
+      "description": "Total provider active power delivered (index 05).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "EASF06",
+      "type": "numeric",
+      "property": "current_tier6_summ_delivered",
+      "base": "current_tier6_summ_delivered",
+      "endpoint": null,
+      "description": "Total provider active power delivered (index 06).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "EASF07",
+      "type": "numeric",
+      "property": "current_tier7_summ_delivered",
+      "base": "current_tier7_summ_delivered",
+      "endpoint": null,
+      "description": "Total provider active power delivered (index 07).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "EASF08",
+      "type": "numeric",
+      "property": "current_tier8_summ_delivered",
+      "base": "current_tier8_summ_delivered",
+      "endpoint": null,
+      "description": "Total provider active power delivered (index 08).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "EASF09",
+      "type": "numeric",
+      "property": "current_tier9_summ_delivered",
+      "base": "current_tier9_summ_delivered",
+      "endpoint": null,
+      "description": "Total provider active power delivered (index 09).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "EASF10",
+      "type": "numeric",
+      "property": "current_tier10_summ_delivered",
+      "base": "current_tier10_summ_delivered",
+      "endpoint": null,
+      "description": "Total provider active power delivered (index 10).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "ADSC",
+      "type": "text",
+      "property": "meter_serial_number",
+      "base": "meter_serial_number",
+      "endpoint": null,
+      "description": "Serial Number.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "PRM",
+      "type": "text",
+      "property": "site_id",
+      "base": "site_id",
+      "endpoint": null,
+      "description": "PRM number.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "PREF",
+      "type": "numeric",
+      "property": "available_power",
+      "base": "available_power",
+      "endpoint": null,
+      "description": "Apparent power of reference.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kVA"
+    },
+    {
+      "name": "PCOUP",
+      "type": "numeric",
+      "property": "power_threshold",
+      "base": "power_threshold",
+      "endpoint": null,
+      "description": "Apparent power threshold.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kVA"
+    },
+    {
+      "name": "VTIC",
+      "type": "numeric",
+      "property": "software_revision",
+      "base": "software_revision",
+      "endpoint": null,
+      "description": "Customer tele-information protocol version.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "CCASN",
+      "type": "numeric",
+      "property": "active_power",
+      "base": "active_power",
+      "endpoint": null,
+      "description": "Current point of the active load curve drawn.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "CCASN-1",
+      "type": "numeric",
+      "property": "active_power_ph_b",
+      "base": "active_power_ph_b",
+      "endpoint": null,
+      "description": "Previous point of the active load curve drawn.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "UMOY1",
+      "type": "numeric",
+      "property": "average_rms_voltage_meas_period",
+      "base": "average_rms_voltage_meas_period",
+      "endpoint": null,
+      "description": "Average RMS voltage (phase 1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "ERQ1",
+      "type": "numeric",
+      "property": "total_reactive_power",
+      "base": "total_reactive_power",
+      "endpoint": null,
+      "description": "Total reactive power (Q1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VArh"
+    },
+    {
+      "name": "ERQ2",
+      "type": "numeric",
+      "property": "reactive_power",
+      "base": "reactive_power",
+      "endpoint": null,
+      "description": "Total reactive power (Q2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VArh"
+    },
+    {
+      "name": "ERQ3",
+      "type": "numeric",
+      "property": "reactive_power_ph_b",
+      "base": "reactive_power_ph_b",
+      "endpoint": null,
+      "description": "Total reactive power (Q3).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VArh"
+    },
+    {
+      "name": "ERQ4",
+      "type": "numeric",
+      "property": "reactive_power_ph_c",
+      "base": "reactive_power_ph_c",
+      "endpoint": null,
+      "description": "Total reactive power (Q4).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VArh"
+    },
+    {
+      "name": "IRMS1",
+      "type": "numeric",
+      "property": "rms_current",
+      "base": "rms_current",
+      "endpoint": null,
+      "description": "RMS current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "URMS1",
+      "type": "numeric",
+      "property": "rms_voltage",
+      "base": "rms_voltage",
+      "endpoint": null,
+      "description": "RMS voltage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "EASD01",
+      "type": "numeric",
+      "property": "active_energy_out_d01",
+      "base": "active_energy_out_d01",
+      "endpoint": null,
+      "description": "Active energy withdrawn Distributor (index 01).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "EASD02",
+      "type": "numeric",
+      "property": "active_energy_out_d02",
+      "base": "active_energy_out_d02",
+      "endpoint": null,
+      "description": "Active energy withdrawn Distributor (index 02).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "EASD03",
+      "type": "numeric",
+      "property": "active_energy_out_d03",
+      "base": "active_energy_out_d03",
+      "endpoint": null,
+      "description": "Active energy withdrawn Distributor (index 03).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "EASD04",
+      "type": "numeric",
+      "property": "active_energy_out_d04",
+      "base": "active_energy_out_d04",
+      "endpoint": null,
+      "description": "Active energy withdrawn Distributor (index 04).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "DATE",
+      "type": "text",
+      "property": "current_date",
+      "base": "current_date",
+      "endpoint": null,
+      "description": "Current date and time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "NTARF",
+      "type": "numeric",
+      "property": "current_index_tarif",
+      "base": "current_index_tarif",
+      "endpoint": null,
+      "description": "Current tariff index number.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "LTARF",
+      "type": "text",
+      "property": "current_price",
+      "base": "current_price",
+      "endpoint": null,
+      "description": "Current supplier price label.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "NGTF",
+      "type": "text",
+      "property": "current_tarif",
+      "base": "current_tarif",
+      "endpoint": null,
+      "description": "Supplier pricing schedule name.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "NJOURF",
+      "type": "numeric",
+      "property": "days_number_current_calendar",
+      "base": "days_number_current_calendar",
+      "endpoint": null,
+      "description": "Current day number supplier calendar.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "NJOURF+1",
+      "type": "numeric",
+      "property": "days_number_next_calendar",
+      "base": "days_number_next_calendar",
+      "endpoint": null,
+      "description": "Next day number supplier calendar.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "PJOURF+1",
+      "type": "text",
+      "property": "days_profile_current_calendar",
+      "base": "days_profile_current_calendar",
+      "endpoint": null,
+      "description": "Profile of the next supplier calendar day.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "PPOINTE1",
+      "type": "text",
+      "property": "days_profile_next_calendar",
+      "base": "days_profile_next_calendar",
+      "endpoint": null,
+      "description": "Profile of the next check-in day.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "CCAIN",
+      "type": "numeric",
+      "property": "injected_active_load_n",
+      "base": "injected_active_load_n",
+      "endpoint": null,
+      "description": "Point n of the withdrawn active load curve.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "CCAIN-1",
+      "type": "numeric",
+      "property": "injected_active_load_n1",
+      "base": "injected_active_load_n1",
+      "endpoint": null,
+      "description": "Point n-1 of the withdrawn active load curve.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "SINSTI",
+      "type": "numeric",
+      "property": "injected_v_a",
+      "base": "injected_v_a",
+      "endpoint": null,
+      "description": "Instantaneous apparent power injected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "SMAXIN",
+      "type": "numeric",
+      "property": "injected_v_a_max_n",
+      "base": "injected_v_a_max_n",
+      "endpoint": null,
+      "description": "Apparent power max. injected n.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "SMAXIN-1",
+      "type": "numeric",
+      "property": "injected_v_a_max_n1",
+      "base": "injected_v_a_max_n1",
+      "endpoint": null,
+      "description": "Apparent power max. injected n-1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "MSG1",
+      "type": "text",
+      "property": "message1",
+      "base": "message1",
+      "endpoint": null,
+      "description": "Message short.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "MSG2",
+      "type": "text",
+      "property": "message2",
+      "base": "message2",
+      "endpoint": null,
+      "description": "Message ultra-short.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "RELAIS",
+      "type": "numeric",
+      "property": "relais",
+      "base": "relais",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "DPM1",
+      "type": "numeric",
+      "property": "start_mobile_point1",
+      "base": "start_mobile_point1",
+      "endpoint": null,
+      "description": "Start mobile point 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "DPM2",
+      "type": "numeric",
+      "property": "start_mobile_point2",
+      "base": "start_mobile_point2",
+      "endpoint": null,
+      "description": "Start mobile point 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "DPM3",
+      "type": "numeric",
+      "property": "start_mobile_point3",
+      "base": "start_mobile_point3",
+      "endpoint": null,
+      "description": "Start mobile point 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "STGE",
+      "type": "text",
+      "property": "status_register",
+      "base": "status_register",
+      "endpoint": null,
+      "description": "Register of Statutes.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "FPM1",
+      "type": "numeric",
+      "property": "stop_mobile_point1",
+      "base": "stop_mobile_point1",
+      "endpoint": null,
+      "description": "Stop mobile point 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "FPM2",
+      "type": "numeric",
+      "property": "stop_mobile_point2",
+      "base": "stop_mobile_point2",
+      "endpoint": null,
+      "description": "Stop mobile point 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "FPM3",
+      "type": "numeric",
+      "property": "stop_mobile_point3",
+      "base": "stop_mobile_point3",
+      "endpoint": null,
+      "description": "Stop mobile point 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "SMAXSN",
+      "type": "numeric",
+      "property": "active_power_max",
+      "base": "active_power_max",
+      "endpoint": null,
+      "description": "Apparent power delivered peak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "SINSTS",
+      "type": "numeric",
+      "property": "apparent_power",
+      "base": "apparent_power",
+      "endpoint": null,
+      "description": "Immediate apparent power delivered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "SMAXSN-1",
+      "type": "numeric",
+      "property": "drawn_v_a_max_n1",
+      "base": "drawn_v_a_max_n1",
+      "endpoint": null,
+      "description": "Apparent power max. draw-off n-1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "SMAXSN2",
+      "type": "numeric",
+      "property": "active_power_max_ph_b",
+      "base": "active_power_max_ph_b",
+      "endpoint": null,
+      "description": "Apparent power delivered peak (phase 2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "SMAXSN3",
+      "type": "numeric",
+      "property": "active_power_max_ph_c",
+      "base": "active_power_max_ph_c",
+      "endpoint": null,
+      "description": "Apparent power delivered peak (phase 3).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "SINSTS2",
+      "type": "numeric",
+      "property": "apparent_power_ph_b",
+      "base": "apparent_power_ph_b",
+      "endpoint": null,
+      "description": "Immediate apparent power delivered (phase 2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "SINSTS3",
+      "type": "numeric",
+      "property": "apparent_power_ph_c",
+      "base": "apparent_power_ph_c",
+      "endpoint": null,
+      "description": "Immediate apparent power delivered (phase 3).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "SINSTS",
+      "type": "numeric",
+      "property": "total_apparent_power",
+      "base": "total_apparent_power",
+      "endpoint": null,
+      "description": "Total immediate apparent power delivered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "UMOY3",
+      "type": "numeric",
+      "property": "average_rms_voltage_meas_period_ph_c",
+      "base": "average_rms_voltage_meas_period_ph_c",
+      "endpoint": null,
+      "description": "Average RMS voltage (phase 3).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "UMOY2",
+      "type": "numeric",
+      "property": "average_rms_voltage_measure_period_ph_b",
+      "base": "average_rms_voltage_measure_period_ph_b",
+      "endpoint": null,
+      "description": "Average RMS voltage (phase 2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "IRMS2",
+      "type": "numeric",
+      "property": "rms_current_ph_b",
+      "base": "rms_current_ph_b",
+      "endpoint": null,
+      "description": "RMS current (phase 2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "IRMS3",
+      "type": "numeric",
+      "property": "rms_current_ph_c",
+      "base": "rms_current_ph_c",
+      "endpoint": null,
+      "description": "RMS current (phase 3).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "URMS2",
+      "type": "numeric",
+      "property": "rms_voltage_ph_b",
+      "base": "rms_voltage_ph_b",
+      "endpoint": null,
+      "description": "RMS voltage (phase 2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "URMS3",
+      "type": "numeric",
+      "property": "rms_voltage_ph_c",
+      "base": "rms_voltage_ph_c",
+      "endpoint": null,
+      "description": "RMS voltage (phase 3).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "SMAXSN2-1",
+      "type": "numeric",
+      "property": "drawn_v_a_max_n1_p2",
+      "base": "drawn_v_a_max_n1_p2",
+      "endpoint": null,
+      "description": "Apparent power max. draw-off n-1 (phase 2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "SMAXSN3-1",
+      "type": "numeric",
+      "property": "drawn_v_a_max_n1_p3",
+      "base": "drawn_v_a_max_n1_p3",
+      "endpoint": null,
+      "description": "Apparent power max. draw-off n-1 (phase 3).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "PTEC",
+      "type": "text",
+      "property": "active_register_tier_delivered",
+      "base": "active_register_tier_delivered",
+      "endpoint": null,
+      "description": "Current pricing period.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "MOTDETAT",
+      "type": "text",
+      "property": "MOTDETAT",
+      "base": "MOTDETAT",
+      "endpoint": null,
+      "description": "Meter Status Word.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "HHPHC",
+      "type": "numeric",
+      "property": "schedule_h_p_h_c",
+      "base": "schedule_h_p_h_c",
+      "endpoint": null,
+      "description": "Schedule HPHC.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "PEJP",
+      "type": "numeric",
+      "property": "start_notice_e_j_p",
+      "base": "start_notice_e_j_p",
+      "endpoint": null,
+      "description": "EJP start notice (30min).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "min"
+    },
+    {
+      "name": "DEMAIN",
+      "type": "text",
+      "property": "tomorrow_color",
+      "base": "tomorrow_color",
+      "endpoint": null,
+      "description": "Tomorrow color.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "IMAX",
+      "type": "numeric",
+      "property": "rms_current_max",
+      "base": "rms_current_max",
+      "endpoint": null,
+      "description": "RMS current peak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "ADPS",
+      "type": "numeric",
+      "property": "warn_d_p_s",
+      "base": "warn_d_p_s",
+      "endpoint": null,
+      "description": "Subscribed Power Exceeded Warning.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "IMAX2",
+      "type": "numeric",
+      "property": "rms_current_max_ph_b",
+      "base": "rms_current_max_ph_b",
+      "endpoint": null,
+      "description": "RMS current peak (phase 2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "IMAX3",
+      "type": "numeric",
+      "property": "rms_current_max_ph_c",
+      "base": "rms_current_max_ph_c",
+      "endpoint": null,
+      "description": "RMS current peak (phase 3).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "PPOT",
+      "type": "numeric",
+      "property": "presence_potential",
+      "base": "presence_potential",
+      "endpoint": null,
+      "description": "Presence of potentials.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "ADIR1",
+      "type": "numeric",
+      "property": "warn_d_i_r1",
+      "base": "warn_d_i_r1",
+      "endpoint": null,
+      "description": "Over Current Warning (phase 1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "ADIR2",
+      "type": "numeric",
+      "property": "warn_d_i_r2",
+      "base": "warn_d_i_r2",
+      "endpoint": null,
+      "description": "Over Current Warning (phase 2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "ADIR3",
+      "type": "numeric",
+      "property": "warn_d_i_r3",
+      "base": "warn_d_i_r3",
+      "endpoint": null,
+      "description": "Over Current Warning (phase 3).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    }
+  ],
+  "warnings": []
+}

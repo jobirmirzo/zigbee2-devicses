@@ -1,0 +1,287 @@
+{
+  "model": "TS0601_rcbo",
+  "file": "TS0601_rcbo.md",
+  "vendor": "Tuya",
+  "description": "DIN mount RCBO with smart energy metering",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_rcbo.png",
+  "added_at": "2021-10-30T12:58:50",
+  "exposes_summary": "meter_number, state, alarm, trip, child_lock, power_on_behavior, countdown_timer, voltage_rms, current, current_average, power, voltage, energy, temperature, power_l1, power_l2, power_l3, energy_consumed, clear_device_data",
+  "exposes": [
+    {
+      "name": "Meter number",
+      "type": "text",
+      "property": "meter_number",
+      "base": "meter_number",
+      "endpoint": null,
+      "description": "Meter number.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "State.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Alarm",
+      "type": "text",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Alarm text.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Trip",
+      "type": "binary",
+      "property": "trip",
+      "base": "trip",
+      "endpoint": null,
+      "description": "Trip.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "trip",
+      "value_off": "clear"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Child lock.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Power on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Power on behavior.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "previous"
+      ]
+    },
+    {
+      "name": "Countdown timer",
+      "type": "numeric",
+      "property": "countdown_timer",
+      "base": "countdown_timer",
+      "endpoint": null,
+      "description": "Countdown timer.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400,
+      "unit": "s"
+    },
+    {
+      "name": "Voltage rms",
+      "type": "numeric",
+      "property": "voltage_rms",
+      "base": "voltage_rms",
+      "endpoint": null,
+      "description": "Voltage RMS.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current average",
+      "type": "numeric",
+      "property": "current_average",
+      "base": "current_average",
+      "endpoint": null,
+      "description": "Current average.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Power l1",
+      "type": "numeric",
+      "property": "power_l1",
+      "base": "power_l1",
+      "endpoint": null,
+      "description": "Instantaneous measured power on phase 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power l2",
+      "type": "numeric",
+      "property": "power_l2",
+      "base": "power_l2",
+      "endpoint": null,
+      "description": "Instantaneous measured power on phase 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power l3",
+      "type": "numeric",
+      "property": "power_l3",
+      "base": "power_l3",
+      "endpoint": null,
+      "description": "Instantaneous measured power on phase 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy consumed",
+      "type": "numeric",
+      "property": "energy_consumed",
+      "base": "energy_consumed",
+      "endpoint": null,
+      "description": "Consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Clear device data",
+      "type": "enum",
+      "property": "clear_device_data",
+      "base": "clear_device_data",
+      "endpoint": null,
+      "description": "Clear device data.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        ""
+      ]
+    }
+  ],
+  "warnings": []
+}

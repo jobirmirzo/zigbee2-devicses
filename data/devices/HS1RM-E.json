@@ -1,0 +1,184 @@
+{
+  "model": "HS1RM-E",
+  "file": "HS1RM-E.md",
+  "vendor": "Heiman",
+  "description": "Smart relay module - 2 gang with neutral wire",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS1RM-E.png",
+  "added_at": "2026-06-30T19:08:31",
+  "exposes_summary": "switch (state), power_on_behavior, identify, device_intenal_temperature, switch_type_l1, switch_type_l2, switch_actions_l1, switch_actions_l2",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_l1",
+      "base": "power_on_behavior",
+      "endpoint": "l1",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_l2",
+      "base": "power_on_behavior",
+      "endpoint": "l2",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Device intenal temperature",
+      "type": "numeric",
+      "property": "device_intenal_temperature",
+      "base": "device_intenal_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Switch type l1",
+      "type": "enum",
+      "property": "switch_type_l1_l1",
+      "base": "switch_type_l1",
+      "endpoint": "l1",
+      "description": "Switch input type for l1..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "toggle",
+        "momentary"
+      ]
+    },
+    {
+      "name": "Switch type l2",
+      "type": "enum",
+      "property": "switch_type_l2_l2",
+      "base": "switch_type_l2",
+      "endpoint": "l2",
+      "description": "Switch input type for l2..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "toggle",
+        "momentary"
+      ]
+    },
+    {
+      "name": "Switch actions l1",
+      "type": "enum",
+      "property": "switch_actions_l1_l1",
+      "base": "switch_actions_l1",
+      "endpoint": "l1",
+      "description": "Actions for switch 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on_off",
+        "off_on",
+        "toggle"
+      ]
+    },
+    {
+      "name": "Switch actions l2",
+      "type": "enum",
+      "property": "switch_actions_l2_l2",
+      "base": "switch_actions_l2",
+      "endpoint": "l2",
+      "description": "Actions for switch 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on_off",
+        "off_on",
+        "toggle"
+      ]
+    }
+  ],
+  "warnings": []
+}

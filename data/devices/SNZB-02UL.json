@@ -1,0 +1,173 @@
+{
+  "model": "SNZB-02UL",
+  "file": "SNZB-02UL.md",
+  "vendor": "SONOFF",
+  "description": "E-ink screen temperature and humidity sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SNZB-02UL.png",
+  "added_at": "2026-06-30T19:08:31",
+  "exposes_summary": "battery, temperature, humidity, comfort_temperature_min, comfort_temperature_max, temperature_units, comfort_humidity_min, comfort_humidity_max, temperature_calibration, humidity_calibration",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 5,
+      "value_max": 95,
+      "unit": "%"
+    },
+    {
+      "name": "Comfort temperature min",
+      "type": "numeric",
+      "property": "comfort_temperature_min",
+      "base": "comfort_temperature_min",
+      "endpoint": null,
+      "description": "Minimum temperature that is considered comfortable. The device will display ❄️ when the temperature is lower than this value. Note: wake up the device by pressing the button on the back before changing this value..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Comfort temperature max",
+      "type": "numeric",
+      "property": "comfort_temperature_max",
+      "base": "comfort_temperature_max",
+      "endpoint": null,
+      "description": "Maximum temperature that is considered comfortable. The device will display 🔥 when the temperature is higher than this value. Note: wake up the device by pressing the button on the back before changing this value..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature units",
+      "type": "enum",
+      "property": "temperature_units",
+      "base": "temperature_units",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Comfort humidity min",
+      "type": "numeric",
+      "property": "comfort_humidity_min",
+      "base": "comfort_humidity_min",
+      "endpoint": null,
+      "description": "Minimum relative humidity that is considered comfortable. The device will display ☀️ when the humidity is lower than this value. Note: wake up the device by pressing the button on the back before changing this value..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 95,
+      "unit": "%"
+    },
+    {
+      "name": "Comfort humidity max",
+      "type": "numeric",
+      "property": "comfort_humidity_max",
+      "base": "comfort_humidity_max",
+      "endpoint": null,
+      "description": "Maximum relative humidity that is considered comfortable. The device will display 💧 when the humidity is higher than this value. Note: wake up the device by pressing the button on the back before changing this value..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 95,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Calibrated temperature target value (supports 0.1°C step). Note: wake up the device by pressing the button on the back before changing this value..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Calibrated relative humidity target value (supports 0.1% step). Note: wake up the device by pressing the button on the back before changing this value..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -95,
+      "value_max": 95,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

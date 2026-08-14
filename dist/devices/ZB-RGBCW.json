@@ -1,0 +1,60 @@
+{
+  "model": "ZB-RGBCW",
+  "file": "ZB-RGBCW.md",
+  "vendor": "Lonsonho",
+  "description": "Zigbee 3.0 LED-bulb, RGBW LED",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZB-RGBCW.png",
+  "added_at": "2020-12-30T11:31:00Z",
+  "exposes_summary": "light (state, brightness, color_temp, color_xy)",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 153,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        },
+        {
+          "property": "color_xy",
+          "base": "color_xy",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,52 @@
+{
+  "model": "ZG9101SAC-HP-Switch",
+  "file": "ZG9101SAC-HP-Switch.md",
+  "vendor": "Sunricher",
+  "description": "Zigbee AC in wall switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG9101SAC-HP-Switch.png",
+  "added_at": "2019-12-15T17:27:48Z",
+  "exposes_summary": "switch (state), external_switch_type",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "External switch type",
+      "type": "enum",
+      "property": "external_switch_type",
+      "base": "external_switch_type",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "push_button",
+        "normal_on_off",
+        "three_way"
+      ]
+    }
+  ],
+  "warnings": []
+}

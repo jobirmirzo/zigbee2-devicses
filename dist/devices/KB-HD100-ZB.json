@@ -1,0 +1,42 @@
+{
+  "model": "KB-HD100-ZB",
+  "file": "KB-HD100-ZB.md",
+  "vendor": "Dawon DNS",
+  "description": "IOT Card holder",
+  "image": "https://www.zigbee2mqtt.io/images/devices/KB-HD100-ZB.png",
+  "added_at": "2021-12-27T12:27:11Z",
+  "exposes_summary": "card, battery_low",
+  "exposes": [
+    {
+      "name": "Card",
+      "type": "binary",
+      "property": "card",
+      "base": "card",
+      "endpoint": null,
+      "description": "Indicates if the card is inserted (= true) or not (= false).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

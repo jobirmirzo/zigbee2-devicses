@@ -1,0 +1,71 @@
+{
+  "model": "ZG2855-RGB",
+  "file": "ZG2855-RGB.md",
+  "vendor": "Sunricher",
+  "description": "DIM RGB 3 in 1 Zigbee remote",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG2855-RGB.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "toggle",
+        "brightness_move_to_level",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_stop",
+        "color_temperature_move_stop",
+        "color_temperature_move_up",
+        "color_temperature_move_down",
+        "color_temperature_step_up",
+        "color_temperature_step_down",
+        "enhanced_move_to_hue_and_saturation",
+        "move_to_hue_and_saturation",
+        "color_hue_step_up",
+        "color_hue_step_down",
+        "color_saturation_step_up",
+        "color_saturation_step_down",
+        "color_loop_set",
+        "color_temperature_move",
+        "color_move",
+        "hue_move",
+        "hue_stop",
+        "move_to_saturation",
+        "move_to_hue",
+        "stop_move_step"
+      ]
+    }
+  ],
+  "warnings": []
+}

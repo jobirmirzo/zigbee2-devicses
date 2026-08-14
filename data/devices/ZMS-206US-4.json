@@ -1,0 +1,447 @@
+{
+  "model": "ZMS-206US-4",
+  "file": "ZMS-206US-4.md",
+  "vendor": "Zemismart",
+  "description": "Smart screen switch 4 gang US",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZMS-206US-4.png",
+  "added_at": "2025-06-01T17:54:42",
+  "exposes_summary": "backlight_mode, switch (state), backlight_brightness, child_lock, radar_config, switch_color_on, switch_color_off, indicator_status, delay_off_schedule, name, relay_status, countdown",
+  "exposes": [
+    {
+      "name": "Backlight mode",
+      "type": "binary",
+      "property": "backlight_mode",
+      "base": "backlight_mode",
+      "endpoint": null,
+      "description": "Mode of the backlight.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l3",
+      "features": [
+        {
+          "property": "state_l3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l4",
+      "features": [
+        {
+          "property": "state_l4",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Backlight brightness",
+      "type": "numeric",
+      "property": "backlight_brightness",
+      "base": "backlight_brightness",
+      "endpoint": null,
+      "description": "Brightness of the light.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Radar config",
+      "type": "enum",
+      "property": "radar_config",
+      "base": "radar_config",
+      "endpoint": null,
+      "description": "Radar Config.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "none",
+        "10s",
+        "20s",
+        "30s",
+        "45s",
+        "60s"
+      ]
+    },
+    {
+      "name": "Switch color on",
+      "type": "enum",
+      "property": "switch_color_on",
+      "base": "switch_color_on",
+      "endpoint": null,
+      "description": "Switch lightcolor when on.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "red",
+        "blue",
+        "green",
+        "white",
+        "yellow",
+        "magenta",
+        "cyan",
+        "warm_white",
+        "warm_yellow"
+      ]
+    },
+    {
+      "name": "Switch color off",
+      "type": "enum",
+      "property": "switch_color_off",
+      "base": "switch_color_off",
+      "endpoint": null,
+      "description": "Switch lightcolor when off.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "red",
+        "blue",
+        "green",
+        "white",
+        "yellow",
+        "magenta",
+        "cyan",
+        "warm_white",
+        "warm_yellow"
+      ]
+    },
+    {
+      "name": "Indicator status",
+      "type": "enum",
+      "property": "indicator_status",
+      "base": "indicator_status",
+      "endpoint": null,
+      "description": "Indicator Light Status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on_off_status",
+        "switch_position"
+      ]
+    },
+    {
+      "name": "Delay off schedule",
+      "type": "enum",
+      "property": "delay_off_schedule",
+      "base": "delay_off_schedule",
+      "endpoint": null,
+      "description": "Switch lightcolor while delayed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "red",
+        "blue",
+        "green",
+        "white",
+        "yellow",
+        "magenta",
+        "cyan",
+        "warm_white",
+        "warm_yellow"
+      ]
+    },
+    {
+      "name": "Name",
+      "type": "text",
+      "property": "name_l1",
+      "base": "name",
+      "endpoint": "l1",
+      "description": "Name for Switch 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Name",
+      "type": "text",
+      "property": "name_l2",
+      "base": "name",
+      "endpoint": "l2",
+      "description": "Name for Switch 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Name",
+      "type": "text",
+      "property": "name_l3",
+      "base": "name",
+      "endpoint": "l3",
+      "description": "Name for Switch 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Name",
+      "type": "text",
+      "property": "name_l4",
+      "base": "name",
+      "endpoint": "l4",
+      "description": "Name for Switch 4.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Relay status",
+      "type": "enum",
+      "property": "relay_status_l1",
+      "base": "relay_status",
+      "endpoint": "l1",
+      "description": "Relay Status for Switch 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "power_on",
+        "power_off",
+        "restart_memory"
+      ]
+    },
+    {
+      "name": "Relay status",
+      "type": "enum",
+      "property": "relay_status_l2",
+      "base": "relay_status",
+      "endpoint": "l2",
+      "description": "Relay Status for Switch 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "power_on",
+        "power_off",
+        "restart_memory"
+      ]
+    },
+    {
+      "name": "Relay status",
+      "type": "enum",
+      "property": "relay_status_l3",
+      "base": "relay_status",
+      "endpoint": "l3",
+      "description": "Relay Status for Switch 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "power_on",
+        "power_off",
+        "restart_memory"
+      ]
+    },
+    {
+      "name": "Relay status",
+      "type": "enum",
+      "property": "relay_status_l4",
+      "base": "relay_status",
+      "endpoint": "l4",
+      "description": "Relay Status for Switch 4.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "power_on",
+        "power_off",
+        "restart_memory"
+      ]
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_l1",
+      "base": "countdown",
+      "endpoint": "l1",
+      "description": "Countdown for Switch 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_l2",
+      "base": "countdown",
+      "endpoint": "l2",
+      "description": "Countdown for Switch 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_l3",
+      "base": "countdown",
+      "endpoint": "l3",
+      "description": "Countdown for Switch 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown_l4",
+      "base": "countdown",
+      "endpoint": "l4",
+      "description": "Countdown for Switch 4.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

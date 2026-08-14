@@ -1,0 +1,200 @@
+{
+  "model": "FP1E",
+  "file": "FP1E.md",
+  "vendor": "Aqara",
+  "description": "Presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/FP1E.png",
+  "added_at": "2024-10-01T19:01:17",
+  "exposes_summary": "device_temperature, power_outage_count, motion_sensitivity, presence, movement, target_distance, detection_range, spatial_learning, restart_device, identify, ai_interference_source_selfidentification, ai_sensitivity_adaptive",
+  "exposes": [
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages (since last pairing).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Motion sensitivity",
+      "type": "enum",
+      "property": "motion_sensitivity",
+      "base": "motion_sensitivity",
+      "endpoint": null,
+      "description": "Select motion sensitivity to use..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Movement",
+      "type": "enum",
+      "property": "movement",
+      "base": "movement",
+      "endpoint": null,
+      "description": "Is movement detected?.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "unknown_0",
+        "unknown_1",
+        "no_presence",
+        "movement",
+        "no_movement"
+      ]
+    },
+    {
+      "name": "Target distance",
+      "type": "numeric",
+      "property": "target_distance",
+      "base": "target_distance",
+      "endpoint": null,
+      "description": "Distance to the detected target.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Detection range",
+      "type": "numeric",
+      "property": "detection_range",
+      "base": "detection_range",
+      "endpoint": null,
+      "description": "The device will monitor presence within the detection range.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 6,
+      "unit": "m"
+    },
+    {
+      "name": "Spatial learning",
+      "type": "enum",
+      "property": "spatial_learning",
+      "base": "spatial_learning",
+      "endpoint": null,
+      "description": "Initiate AI Spatial Learning..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Start Learning"
+      ]
+    },
+    {
+      "name": "Restart device",
+      "type": "enum",
+      "property": "restart_device",
+      "base": "restart_device",
+      "endpoint": null,
+      "description": "Restarts the device..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Restart Device"
+      ]
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Ai interference source selfidentification",
+      "type": "binary",
+      "property": "ai_interference_source_selfidentification",
+      "base": "ai_interference_source_selfidentification",
+      "endpoint": null,
+      "description": "AI interference source self-identification switch, when enabled can identify fans, air conditioners and other interference sources.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Ai sensitivity adaptive",
+      "type": "binary",
+      "property": "ai_sensitivity_adaptive",
+      "base": "ai_sensitivity_adaptive",
+      "endpoint": null,
+      "description": "Adaptive sensitivity switch function..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

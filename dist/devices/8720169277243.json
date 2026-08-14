@@ -1,0 +1,84 @@
+{
+  "model": "8720169277243",
+  "file": "8720169277243.md",
+  "vendor": "Philips",
+  "description": "Hue Secure siren and chime",
+  "image": "https://www.zigbee2mqtt.io/images/devices/8720169277243.png",
+  "added_at": "2025-11-30T20:06:49",
+  "exposes_summary": "switch (state), play_sound, trigger_siren, identify",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Play sound",
+      "type": "composite",
+      "property": "play_sound",
+      "base": "play_sound",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "volume",
+          "type": "numeric",
+          "description": "Volume 0-100 max value is 100"
+        }
+      ]
+    },
+    {
+      "name": "Trigger siren",
+      "type": "composite",
+      "property": "trigger_siren",
+      "base": "trigger_siren",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": []
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    }
+  ],
+  "warnings": []
+}

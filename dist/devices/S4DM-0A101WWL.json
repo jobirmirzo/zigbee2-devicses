@@ -1,0 +1,232 @@
+{
+  "model": "S4DM-0A101WWL",
+  "file": "S4DM-0A101WWL.md",
+  "vendor": "Shelly",
+  "description": "Dimmer Gen4",
+  "image": "https://www.zigbee2mqtt.io/images/devices/S4DM-0A101WWL.png",
+  "added_at": "2026-01-01T13:30:29",
+  "exposes_summary": "light (state, brightness), effect, power_on_behavior, power, voltage, current, energy, wifi_status, ip_address, dhcp_enabled, wifi_config",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Wi-Fi status",
+      "type": "text",
+      "property": "wifi_status",
+      "base": "wifi_status",
+      "endpoint": null,
+      "description": "Current connection status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "IP address",
+      "type": "text",
+      "property": "ip_address",
+      "base": "ip_address",
+      "endpoint": null,
+      "description": "IP address currently assigned to the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "DHCP enabled",
+      "type": "binary",
+      "property": "dhcp_enabled",
+      "base": "dhcp_enabled",
+      "endpoint": null,
+      "description": "Indicates whether DHCP is used to automatically assign network settings.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Wi-Fi Configuration",
+      "type": "composite",
+      "property": "wifi_config",
+      "base": "wifi_config",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "enabled",
+          "type": "binary",
+          "description": "Enable/disable Wi-Fi connectivity",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "ssid",
+          "type": "text",
+          "description": "Name (SSID) of the Wi-Fi network to connect to"
+        },
+        {
+          "property": "password",
+          "type": "text",
+          "description": "Password for the selected Wi-Fi network"
+        },
+        {
+          "property": "static_ip",
+          "type": "text",
+          "description": "Manually assigned IP address (used when DHCP is disabled)"
+        },
+        {
+          "property": "net_mask",
+          "type": "text",
+          "description": "Subnet mask for the static IP configuration"
+        },
+        {
+          "property": "gateway",
+          "type": "text",
+          "description": "Default gateway address for static IP configuration"
+        },
+        {
+          "property": "name_server",
+          "type": "text",
+          "description": "Name server address for static IP configuration"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

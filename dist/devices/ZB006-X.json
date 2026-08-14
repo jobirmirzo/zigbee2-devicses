@@ -1,0 +1,227 @@
+{
+  "model": "ZB006-X",
+  "file": "ZB006-X.md",
+  "vendor": "Fantem",
+  "description": "Smart dimmer module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZB006-X.png",
+  "added_at": "2021-05-30T19:17:03Z",
+  "exposes_summary": "control_mode, switch_type, switch_status, load_detection_mode, load_type, load_dimmable, power_supply_mode, light (state, brightness), effect, power_on_behavior, action",
+  "exposes": [
+    {
+      "name": "Control mode",
+      "type": "enum",
+      "property": "control_mode",
+      "base": "control_mode",
+      "endpoint": null,
+      "description": "Control mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "ext_switch",
+        "remote",
+        "both"
+      ]
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type",
+      "base": "switch_type",
+      "endpoint": null,
+      "description": "External switch type.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "unknown",
+        "toggle",
+        "momentary",
+        "rotary",
+        "auto_config"
+      ]
+    },
+    {
+      "name": "Switch status",
+      "type": "numeric",
+      "property": "switch_status",
+      "base": "switch_status",
+      "endpoint": null,
+      "description": "External switch status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": -10000,
+      "value_max": 10000
+    },
+    {
+      "name": "Load detection mode",
+      "type": "enum",
+      "property": "load_detection_mode",
+      "base": "load_detection_mode",
+      "endpoint": null,
+      "description": "Load detection mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "none",
+        "first_power_on",
+        "every_power_on"
+      ]
+    },
+    {
+      "name": "Load type",
+      "type": "enum",
+      "property": "load_type",
+      "base": "load_type",
+      "endpoint": null,
+      "description": "Load type.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "unknown",
+        "resistive_capacitive",
+        "unknown",
+        "detecting"
+      ]
+    },
+    {
+      "name": "Load dimmable",
+      "type": "enum",
+      "property": "load_dimmable",
+      "base": "load_dimmable",
+      "endpoint": null,
+      "description": "Load dimmable.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "unknown",
+        "dimmable",
+        "not_dimmable"
+      ]
+    },
+    {
+      "name": "Power supply mode",
+      "type": "enum",
+      "property": "power_supply_mode",
+      "base": "power_supply_mode",
+      "endpoint": null,
+      "description": "Power supply mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "unknown",
+        "no_neutral",
+        "with_neutral"
+      ]
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_move_down",
+        "brightness_move_up",
+        "brightness_stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,55 @@
+{
+  "model": "QAFZ200",
+  "file": "QAFZ200.md",
+  "vendor": "QA",
+  "description": "CCT light controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/QAFZ200.png",
+  "added_at": "2026-03-31T19:04:39",
+  "exposes_summary": "light (state, brightness, color_temp)",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 153,
+          "value_max": 500,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    }
+  ],
+  "warnings": []
+}

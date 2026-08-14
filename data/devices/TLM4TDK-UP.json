@@ -1,0 +1,225 @@
+{
+  "model": "TLM4TDK-UP",
+  "file": "TLM4TDK-UP.md",
+  "vendor": "YOKIS",
+  "description": "Wall-mounted 4-button transmitter (DK format)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TLM4TDK-UP.png",
+  "added_at": "2025-09-30T19:35:14",
+  "exposes_summary": "identify, temperature, battery_low, current_value, min_measured_value, max_measured_value, offset, samplingPeriod, samplingNumber, deltaTemp, minimalSendingPeriod, maximalSendingPeriod, action",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Current value",
+      "type": "numeric",
+      "property": "current_value",
+      "base": "current_value",
+      "endpoint": null,
+      "description": "This attribute represents the last value measured..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": -50,
+      "value_max": 120,
+      "unit": "°C"
+    },
+    {
+      "name": "Min measured value",
+      "type": "numeric",
+      "property": "min_measured_value",
+      "base": "min_measured_value",
+      "endpoint": null,
+      "description": "Represent the minimal value set since the last power-on/reset..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": -50,
+      "value_max": 120,
+      "unit": "°C"
+    },
+    {
+      "name": "Max measured value",
+      "type": "numeric",
+      "property": "max_measured_value",
+      "base": "max_measured_value",
+      "endpoint": null,
+      "description": "Represent the maximal value set since the last power-on/reset..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": -50,
+      "value_max": 120,
+      "unit": "°C"
+    },
+    {
+      "name": "Offset",
+      "type": "numeric",
+      "property": "offset",
+      "base": "offset",
+      "endpoint": null,
+      "description": "Represent the offset applicated to the temperature measured..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "SamplingPeriod",
+      "type": "numeric",
+      "property": "samplingPeriod",
+      "base": "samplingPeriod",
+      "endpoint": null,
+      "description": "Represent the sampling period used to process the temperature measurement..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 120,
+      "unit": "s"
+    },
+    {
+      "name": "SamplingNumber",
+      "type": "numeric",
+      "property": "samplingNumber",
+      "base": "samplingNumber",
+      "endpoint": null,
+      "description": "Represents the sampling number to sense per sampling period defined before..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 20
+    },
+    {
+      "name": "DeltaTemp",
+      "type": "numeric",
+      "property": "deltaTemp",
+      "base": "deltaTemp",
+      "endpoint": null,
+      "description": "Represents the temperature variation to request a new temperature sending through reports..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "°C"
+    },
+    {
+      "name": "MinimalSendingPeriod",
+      "type": "numeric",
+      "property": "minimalSendingPeriod",
+      "base": "minimalSendingPeriod",
+      "endpoint": null,
+      "description": "Represents the minimal sending period that the device must respect before sending a new value through reporting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535
+    },
+    {
+      "name": "MaximalSendingPeriod",
+      "type": "numeric",
+      "property": "maximalSendingPeriod",
+      "base": "maximalSendingPeriod",
+      "endpoint": null,
+      "description": "Represents the maximal sending period. The device must send a new value through reporting before the end of this period..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "toggle",
+        "brightness_move_to_level",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_stop",
+        "open",
+        "close",
+        "stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

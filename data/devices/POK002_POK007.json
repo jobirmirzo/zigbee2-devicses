@@ -1,0 +1,86 @@
+{
+  "model": "POK002_POK007",
+  "file": "POK002_POK007.md",
+  "vendor": "PushOk Hardware",
+  "description": "Soil moisture and temperature sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/POK002_POK007.png",
+  "added_at": "2024-08-01T18:23:41",
+  "exposes_summary": "humidity, temperature, battery, voltage, max_moisture",
+  "exposes": [
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured soil moisture.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Max moisture",
+      "type": "numeric",
+      "property": "max_moisture",
+      "base": "max_moisture",
+      "endpoint": null,
+      "description": "Upper limit of soil moisture for this location.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

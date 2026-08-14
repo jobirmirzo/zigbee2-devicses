@@ -1,0 +1,128 @@
+{
+  "model": "ZiPulses",
+  "file": "ZiPulses.md",
+  "vendor": "LiXee",
+  "description": "Lixee ZiPulses",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZiPulses.png",
+  "added_at": "2019-09-08T21:16:00Z",
+  "exposes_summary": "battery, voltage, temperature, multiplier, divisor, unitOfMeasure, energy",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Multiplier",
+      "type": "numeric",
+      "property": "multiplier",
+      "base": "multiplier",
+      "endpoint": null,
+      "description": "It is necessary to press the link button to update.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 1000
+    },
+    {
+      "name": "Divisor",
+      "type": "numeric",
+      "property": "divisor",
+      "base": "divisor",
+      "endpoint": null,
+      "description": "It is necessary to press the link button to update.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 1000
+    },
+    {
+      "name": "UnitOfMeasure",
+      "type": "enum",
+      "property": "unitOfMeasure",
+      "base": "unitOfMeasure",
+      "endpoint": null,
+      "description": "It is necessary to press the link button to update.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "kWh",
+        "m3",
+        "ft3",
+        "ccf",
+        "US gl",
+        "IMP gl",
+        "BTUs",
+        "L (litre)",
+        "kPA (jauge)",
+        "kPA (absolu)",
+        "kPA (absolu)",
+        "sans unité",
+        "MJ",
+        "kVar"
+      ]
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

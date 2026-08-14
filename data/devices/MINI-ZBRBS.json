@@ -1,0 +1,117 @@
+{
+  "model": "MINI-ZBRBS",
+  "file": "MINI-ZBRBS.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee smart roller shutter switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MINI-ZBRBS.png",
+  "added_at": "2025-09-30T19:37:28",
+  "exposes_summary": "cover (state, position), motor_travel_calibration_action, motor_travel_calibration_status, motor_run_status, external_trigger_mode",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Motor travel calibration action",
+      "type": "enum",
+      "property": "motor_travel_calibration_action",
+      "base": "motor_travel_calibration_action",
+      "endpoint": null,
+      "description": "Calibrates the motor stroke, or clears the current one..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "start_automatic",
+        "start_manual",
+        "clear",
+        "manual_2_fully_opened",
+        "manual_3_fully_closed"
+      ]
+    },
+    {
+      "name": "Motor travel calibration status",
+      "type": "enum",
+      "property": "motor_travel_calibration_status",
+      "base": "motor_travel_calibration_status",
+      "endpoint": null,
+      "description": "The calibration status of the curtain motor's stroke..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "Uncalibrated",
+        "Calibrated"
+      ]
+    },
+    {
+      "name": "Motor run status",
+      "type": "enum",
+      "property": "motor_run_status",
+      "base": "motor_run_status",
+      "endpoint": null,
+      "description": "The motor's current operating status, such as forward rotation, reverse rotation, and stop..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "Stop",
+        "Forward",
+        "Reverse"
+      ]
+    },
+    {
+      "name": "External trigger mode",
+      "type": "enum",
+      "property": "external_trigger_mode",
+      "base": "external_trigger_mode",
+      "endpoint": null,
+      "description": "External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "edge",
+        "pulse",
+        "following(off)",
+        "following(on)"
+      ]
+    }
+  ],
+  "warnings": []
+}

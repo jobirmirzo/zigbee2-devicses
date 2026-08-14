@@ -1,0 +1,269 @@
+{
+  "model": "EFEKTA_Pixel_Open_Air_II",
+  "file": "EFEKTA_Pixel_Open_Air_II.md",
+  "vendor": "EFEKTA",
+  "description": "CO2 Monitor with retro LCD Display, V2",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_Pixel_Open_Air_II.png",
+  "added_at": "2025-04-01T18:30:52",
+  "exposes_summary": "identify, co2, temperature, humidity, backlight, night_onoff_backlight, night_on_backlight, night_off_backlight, contrast, temperature_offset, humidity_offset, automatic_calibrations, co2_error_read, enable_gas, invert_logic_gas, high_gas, low_gas",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "Measured value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Backlight",
+      "type": "binary",
+      "property": "backlight",
+      "base": "backlight",
+      "endpoint": null,
+      "description": "Backlight of the Display.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Night onoff backlight",
+      "type": "binary",
+      "property": "night_onoff_backlight",
+      "base": "night_onoff_backlight",
+      "endpoint": null,
+      "description": "Enable Night Mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Night on backlight",
+      "type": "numeric",
+      "property": "night_on_backlight",
+      "base": "night_on_backlight",
+      "endpoint": null,
+      "description": "Night Mode activation time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23,
+      "unit": "Hr"
+    },
+    {
+      "name": "Night off backlight",
+      "type": "numeric",
+      "property": "night_off_backlight",
+      "base": "night_off_backlight",
+      "endpoint": null,
+      "description": "Night mode deactivation time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 23,
+      "unit": "Hr"
+    },
+    {
+      "name": "Contrast",
+      "type": "numeric",
+      "property": "contrast",
+      "base": "contrast",
+      "endpoint": null,
+      "description": "Display Contrast.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 40
+    },
+    {
+      "name": "Temperature offset",
+      "type": "numeric",
+      "property": "temperature_offset",
+      "base": "temperature_offset",
+      "endpoint": null,
+      "description": "Adjust temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity offset",
+      "type": "numeric",
+      "property": "humidity_offset",
+      "base": "humidity_offset",
+      "endpoint": null,
+      "description": "Adjust humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 50,
+      "unit": "%"
+    },
+    {
+      "name": "Automatic calibrations",
+      "type": "binary",
+      "property": "automatic_calibrations",
+      "base": "automatic_calibrations",
+      "endpoint": null,
+      "description": "Automatic calibration of the CO2 sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Co2 error read",
+      "type": "numeric",
+      "property": "co2_error_read",
+      "base": "co2_error_read",
+      "endpoint": null,
+      "description": "CO2 Error Read.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Enable gas",
+      "type": "binary",
+      "property": "enable_gas",
+      "base": "enable_gas",
+      "endpoint": null,
+      "description": "Enable CO2 Gas Control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Invert logic gas",
+      "type": "binary",
+      "property": "invert_logic_gas",
+      "base": "invert_logic_gas",
+      "endpoint": null,
+      "description": "Enable invert logic CO2 Gas Control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "High gas",
+      "type": "numeric",
+      "property": "high_gas",
+      "base": "high_gas",
+      "endpoint": null,
+      "description": "Setting High CO2 Gas Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 400,
+      "value_max": 5000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Low gas",
+      "type": "numeric",
+      "property": "low_gas",
+      "base": "low_gas",
+      "endpoint": null,
+      "description": "Setting Low CO2 Gas Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 400,
+      "value_max": 5000,
+      "unit": "ppm"
+    }
+  ],
+  "warnings": []
+}

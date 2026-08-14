@@ -1,0 +1,71 @@
+{
+  "model": "TS0601_fan_5_levels_and_light_5_levels",
+  "file": "TS0601_fan_5_levels_and_light_5_levels.md",
+  "vendor": "Tuya",
+  "description": "Fan with 5 levels and light with 5 levels",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_fan_5_levels_and_light_5_levels.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "light (state, brightness), fan_state, fan_speed",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Fan state",
+      "type": "binary",
+      "property": "fan_state",
+      "base": "fan_state",
+      "endpoint": null,
+      "description": "Fan on/off.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Fan speed",
+      "type": "numeric",
+      "property": "fan_speed",
+      "base": "fan_speed",
+      "endpoint": null,
+      "description": "Fan speed (1=slowest, 5=fastest).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 5
+    }
+  ],
+  "warnings": []
+}

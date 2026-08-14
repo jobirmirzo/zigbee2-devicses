@@ -1,0 +1,58 @@
+{
+  "model": "ZNGZDJ16LM",
+  "file": "ZNGZDJ16LM.md",
+  "vendor": "Aqara",
+  "description": "Roller shade controller T1C",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZNGZDJ16LM.png",
+  "added_at": "2023-12-26T18:38:16",
+  "exposes_summary": "cover (state, position), running",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Running",
+      "type": "binary",
+      "property": "running",
+      "base": "running",
+      "endpoint": null,
+      "description": "Whether the motor is moving or not.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

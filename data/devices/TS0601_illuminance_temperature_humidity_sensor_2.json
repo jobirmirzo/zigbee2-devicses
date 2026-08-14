@@ -1,0 +1,54 @@
+{
+  "model": "TS0601_illuminance_temperature_humidity_sensor_2",
+  "file": "TS0601_illuminance_temperature_humidity_sensor_2.md",
+  "vendor": "Tuya",
+  "description": "Illuminance sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_illuminance_temperature_humidity_sensor_2.png",
+  "added_at": "2023-09-28T10:54:36",
+  "exposes_summary": "illuminance, temperature, humidity",
+  "exposes": [
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

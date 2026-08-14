@@ -1,0 +1,289 @@
+{
+  "model": "WS90",
+  "file": "WS90.md",
+  "vendor": "Shelly",
+  "description": "Weather station",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WS90.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "battery, illuminance, temperature, pressure, humidity, wind_speed, wind_direction, gust_speed, uv_index, rain_status, precipitation, dew_point, wind_chill, humidex, apparent_temperature, heat_stress, rain_rate, pressure_trend, weather_condition",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Pressure",
+      "type": "numeric",
+      "property": "pressure",
+      "base": "pressure",
+      "endpoint": null,
+      "description": "The measured atmospheric pressure.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kPa"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Wind speed",
+      "type": "numeric",
+      "property": "wind_speed",
+      "base": "wind_speed",
+      "endpoint": null,
+      "description": "Wind speed in m/s.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 140,
+      "unit": "m/s"
+    },
+    {
+      "name": "Wind direction",
+      "type": "numeric",
+      "property": "wind_direction",
+      "base": "wind_direction",
+      "endpoint": null,
+      "description": "Wind direction in degrees.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 360,
+      "unit": "°"
+    },
+    {
+      "name": "Gust speed",
+      "type": "numeric",
+      "property": "gust_speed",
+      "base": "gust_speed",
+      "endpoint": null,
+      "description": "Gust speed in m/s.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 140,
+      "unit": "m/s"
+    },
+    {
+      "name": "Uv index",
+      "type": "numeric",
+      "property": "uv_index",
+      "base": "uv_index",
+      "endpoint": null,
+      "description": "UV index.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 11
+    },
+    {
+      "name": "Rain status",
+      "type": "binary",
+      "property": "rain_status",
+      "base": "rain_status",
+      "endpoint": null,
+      "description": "Rain status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Precipitation",
+      "type": "numeric",
+      "property": "precipitation",
+      "base": "precipitation",
+      "endpoint": null,
+      "description": "Precipitation.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100000,
+      "unit": "mm"
+    },
+    {
+      "name": "Dew point",
+      "type": "numeric",
+      "property": "dew_point",
+      "base": "dew_point",
+      "endpoint": null,
+      "description": "Calculated dew point temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Wind chill",
+      "type": "numeric",
+      "property": "wind_chill",
+      "base": "wind_chill",
+      "endpoint": null,
+      "description": "Calculated wind chill temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidex",
+      "type": "numeric",
+      "property": "humidex",
+      "base": "humidex",
+      "endpoint": null,
+      "description": "Calculated humidex (feels-like for warm conditions).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Apparent temperature",
+      "type": "numeric",
+      "property": "apparent_temperature",
+      "base": "apparent_temperature",
+      "endpoint": null,
+      "description": "Calculated apparent temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Heat stress",
+      "type": "numeric",
+      "property": "heat_stress",
+      "base": "heat_stress",
+      "endpoint": null,
+      "description": "Calculated heat stress percentage (0-100%).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Rain rate",
+      "type": "numeric",
+      "property": "rain_rate",
+      "base": "rain_rate",
+      "endpoint": null,
+      "description": "Calculated rainfall rate.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mm/h"
+    },
+    {
+      "name": "Pressure trend",
+      "type": "numeric",
+      "property": "pressure_trend",
+      "base": "pressure_trend",
+      "endpoint": null,
+      "description": "Pressure change rate (negative = falling).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "hPa/h"
+    },
+    {
+      "name": "Weather condition",
+      "type": "text",
+      "property": "weather_condition",
+      "base": "weather_condition",
+      "endpoint": null,
+      "description": "Weather condition (sunny, rainy, snowy, cloudy, etc.).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

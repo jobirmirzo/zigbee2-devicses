@@ -1,0 +1,106 @@
+{
+  "model": "3156105",
+  "file": "3156105.md",
+  "vendor": "Centralite",
+  "description": "HA thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/3156105.png",
+  "added_at": "2025-12-06T20:10:20",
+  "exposes_summary": "battery, temperature_setpoint_hold, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state, fan_mode, occupied_cooling_setpoint)",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature setpoint hold",
+      "type": "binary",
+      "property": "temperature_setpoint_hold",
+      "base": "temperature_setpoint_hold",
+      "endpoint": null,
+      "description": "Prevent changes. `false` = run normally. `true` = prevent from making changes..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 7,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "emergency_heating"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "value_min": 7,
+          "value_max": 30,
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "emergency_heating"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "occupied_cooling_setpoint",
+          "base": "occupied_cooling_setpoint",
+          "value_min": 7,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

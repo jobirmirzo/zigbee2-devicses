@@ -1,0 +1,135 @@
+{
+  "model": "07504L",
+  "file": "07504L.md",
+  "vendor": "Immax",
+  "description": "Neo outdoor smart siren (IP65)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/07504L.png",
+  "added_at": "2025-04-01T18:30:52",
+  "exposes_summary": "battery, battery_low, voltage, alarm, volume, duration, light, power_source",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Alarm",
+      "type": "binary",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Volume",
+      "type": "numeric",
+      "property": "volume",
+      "base": "volume",
+      "endpoint": null,
+      "description": "Volume of siren.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 50
+    },
+    {
+      "name": "Duration",
+      "type": "numeric",
+      "property": "duration",
+      "base": "duration",
+      "endpoint": null,
+      "description": "Duration of alarm.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Light",
+      "type": "numeric",
+      "property": "light",
+      "base": "light",
+      "endpoint": null,
+      "description": "Strobe light level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Power source",
+      "type": "enum",
+      "property": "power_source",
+      "base": "power_source",
+      "endpoint": null,
+      "description": "The current power source.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "mains",
+        "battery"
+      ]
+    }
+  ],
+  "warnings": []
+}

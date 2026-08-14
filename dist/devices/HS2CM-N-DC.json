@@ -1,0 +1,43 @@
+{
+  "model": "HS2CM-N-DC",
+  "file": "HS2CM-N-DC.md",
+  "vendor": "Heiman",
+  "description": "Gear window shade motor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS2CM-N-DC.png",
+  "added_at": "2020-09-30T20:52:56Z",
+  "exposes_summary": "cover (state, position)",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

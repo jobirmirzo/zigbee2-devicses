@@ -1,0 +1,45 @@
+{
+  "model": "T40S6Z",
+  "file": "T40S6Z.md",
+  "vendor": "ORVIBO",
+  "description": "MixSwitch 6 gangs",
+  "image": "https://www.zigbee2mqtt.io/images/devices/T40S6Z.png",
+  "added_at": "2022-03-01T09:06:16",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "button_1_click",
+        "button_1_hold",
+        "button_1_release",
+        "button_2_click",
+        "button_2_hold",
+        "button_2_release",
+        "button_3_click",
+        "button_3_hold",
+        "button_3_release",
+        "button_4_click",
+        "button_4_hold",
+        "button_4_release",
+        "button_5_click",
+        "button_5_hold",
+        "button_5_release",
+        "button_6_click",
+        "button_6_hold",
+        "button_6_release"
+      ]
+    }
+  ],
+  "warnings": []
+}

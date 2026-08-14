@@ -1,0 +1,110 @@
+{
+  "model": "ZG-204ZL",
+  "file": "ZG-204ZL.md",
+  "vendor": "Tuya",
+  "description": "Luminance motion sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-204ZL.png",
+  "added_at": "2022-05-07T18:17:42",
+  "exposes_summary": "occupancy, illuminance, battery, sensitivity, keep_time, illuminance_interval",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "PIR sensor sensitivity (refresh and update only while active).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Keep time",
+      "type": "enum",
+      "property": "keep_time",
+      "base": "keep_time",
+      "endpoint": null,
+      "description": "PIR keep time in seconds (refresh and update only while active).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "10",
+        "30",
+        "60",
+        "120"
+      ]
+    },
+    {
+      "name": "Illuminance interval",
+      "type": "numeric",
+      "property": "illuminance_interval",
+      "base": "illuminance_interval",
+      "endpoint": null,
+      "description": "Brightness acquisition interval (refresh and update only while active).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 720,
+      "unit": "minutes"
+    }
+  ],
+  "warnings": []
+}

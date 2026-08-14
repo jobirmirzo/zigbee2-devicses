@@ -1,0 +1,56 @@
+{
+  "model": "3RAP0149BZ",
+  "file": "3RAP0149BZ.md",
+  "vendor": "Third Reality",
+  "description": "Smart Filter Sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/3RAP0149BZ.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "battery, dirty_level, pressure",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Dirty level",
+      "type": "numeric",
+      "property": "dirty_level",
+      "base": "dirty_level",
+      "endpoint": null,
+      "description": "Measure dirty level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Pressure",
+      "type": "numeric",
+      "property": "pressure",
+      "base": "pressure",
+      "endpoint": null,
+      "description": "The measured atmospheric pressure.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kPa"
+    }
+  ],
+  "warnings": []
+}

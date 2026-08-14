@@ -1,0 +1,134 @@
+{
+  "model": "QASZP",
+  "file": "QASZP.md",
+  "vendor": "QA",
+  "description": "Power sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/QASZP.png",
+  "added_at": "2026-03-31T19:04:39",
+  "exposes_summary": "voltage, current, power, energy, reactive_power_threshold, max_effective_power, status_report, switch_status",
+  "exposes": [
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Reactive power threshold",
+      "type": "numeric",
+      "property": "reactive_power_threshold",
+      "base": "reactive_power_threshold",
+      "endpoint": null,
+      "description": "Reactive power threshold. Switch turns on when real power exceeds this value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 3,
+      "value_max": 30,
+      "unit": "W"
+    },
+    {
+      "name": "Max effective power",
+      "type": "numeric",
+      "property": "max_effective_power",
+      "base": "max_effective_power",
+      "endpoint": null,
+      "description": "Maximum effective power supported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 4800,
+      "unit": "W"
+    },
+    {
+      "name": "Status report",
+      "type": "enum",
+      "property": "status_report",
+      "base": "status_report",
+      "endpoint": null,
+      "description": "Enable threshold monitoring.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "ON",
+        "OFF"
+      ]
+    },
+    {
+      "name": "Switch status",
+      "type": "enum",
+      "property": "switch_status",
+      "base": "switch_status",
+      "endpoint": null,
+      "description": "Switch status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "ON",
+        "OFF"
+      ]
+    }
+  ],
+  "warnings": []
+}

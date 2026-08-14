@@ -1,0 +1,130 @@
+{
+  "model": "MULTI-ZIG-SW",
+  "file": "MULTI-ZIG-SW.md",
+  "vendor": "smarthjemmet.dk",
+  "description": "Multi switch from Smarthjemmet.dk",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MULTI-ZIG-SW.png",
+  "added_at": "2023-06-27T19:44:08",
+  "exposes_summary": "switch_type_1, switch_type_2, switch_type_3, switch_type_4, battery, action, voltage",
+  "exposes": [
+    {
+      "name": "Switch type 1",
+      "type": "enum",
+      "property": "switch_type_1_button_1",
+      "base": "switch_type_1",
+      "endpoint": "button_1",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "switch",
+        "multi-click"
+      ]
+    },
+    {
+      "name": "Switch type 2",
+      "type": "enum",
+      "property": "switch_type_2_button_2",
+      "base": "switch_type_2",
+      "endpoint": "button_2",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "switch",
+        "multi-click"
+      ]
+    },
+    {
+      "name": "Switch type 3",
+      "type": "enum",
+      "property": "switch_type_3_button_3",
+      "base": "switch_type_3",
+      "endpoint": "button_3",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "switch",
+        "multi-click"
+      ]
+    },
+    {
+      "name": "Switch type 4",
+      "type": "enum",
+      "property": "switch_type_4_button_4",
+      "base": "switch_type_4",
+      "endpoint": "button_4",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "switch",
+        "multi-click"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single",
+        "double",
+        "triple",
+        "hold",
+        "release"
+      ]
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

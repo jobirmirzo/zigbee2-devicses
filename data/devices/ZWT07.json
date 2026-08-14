@@ -1,0 +1,75 @@
+{
+  "model": "ZWT07",
+  "file": "ZWT07.md",
+  "vendor": "Tuya",
+  "description": "Wall-mount thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZWT07.png",
+  "added_at": "2023-12-26T18:38:16",
+  "exposes_summary": "climate (current_heating_setpoint, system_mode, running_state, preset, local_temperature), frost",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 60,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": false
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "manual",
+            "program"
+          ],
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Frost",
+      "type": "binary",
+      "property": "frost",
+      "base": "frost",
+      "endpoint": null,
+      "description": "Antifreeze function.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,39 @@
+{
+  "model": "CR11S8UZ",
+  "file": "CR11S8UZ.md",
+  "vendor": "ORVIBO",
+  "description": "Smart sticker switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CR11S8UZ.png",
+  "added_at": "2019-11-09T18:37:38Z",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "button_1_click",
+        "button_1_hold",
+        "button_1_release",
+        "button_2_click",
+        "button_2_hold",
+        "button_2_release",
+        "button_3_click",
+        "button_3_hold",
+        "button_3_release",
+        "button_4_click",
+        "button_4_hold",
+        "button_4_release"
+      ]
+    }
+  ],
+  "warnings": []
+}

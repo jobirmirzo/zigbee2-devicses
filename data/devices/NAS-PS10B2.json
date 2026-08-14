@@ -1,0 +1,205 @@
+{
+  "model": "NAS-PS10B2",
+  "file": "NAS-PS10B2.md",
+  "vendor": "NEO",
+  "description": "Human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/NAS-PS10B2.png",
+  "added_at": "2024-11-30T20:27:20",
+  "exposes_summary": "presence, human_motion_state, dis_current, presence_time, motion_far_detection, motion_sensitivity, motionless_sensitivity, work_mode, output_switch, output_time, led_switch, lux_value",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Human motion state",
+      "type": "enum",
+      "property": "human_motion_state",
+      "base": "human_motion_state",
+      "endpoint": null,
+      "description": "Human Motion State.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "small",
+        "large"
+      ]
+    },
+    {
+      "name": "Current distance",
+      "type": "numeric",
+      "property": "dis_current",
+      "base": "dis_current",
+      "endpoint": null,
+      "description": "Current distance of detected motion.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 600,
+      "unit": "cm"
+    },
+    {
+      "name": "Presence time",
+      "type": "numeric",
+      "property": "presence_time",
+      "base": "presence_time",
+      "endpoint": null,
+      "description": "Presence Time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 3,
+      "value_max": 600,
+      "unit": "s"
+    },
+    {
+      "name": "Motion far detection",
+      "type": "numeric",
+      "property": "motion_far_detection",
+      "base": "motion_far_detection",
+      "endpoint": null,
+      "description": "Motion Range Detection.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 150,
+      "value_max": 600,
+      "unit": "cm"
+    },
+    {
+      "name": "Motion sensitivity",
+      "type": "numeric",
+      "property": "motion_sensitivity",
+      "base": "motion_sensitivity",
+      "endpoint": null,
+      "description": "Motion Detection Sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 7
+    },
+    {
+      "name": "Motionless sensitivity",
+      "type": "numeric",
+      "property": "motionless_sensitivity",
+      "base": "motionless_sensitivity",
+      "endpoint": null,
+      "description": "Motionless Detection Sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 7
+    },
+    {
+      "name": "Work mode",
+      "type": "enum",
+      "property": "work_mode",
+      "base": "work_mode",
+      "endpoint": null,
+      "description": "Work Mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "manual",
+        "auto"
+      ]
+    },
+    {
+      "name": "Output switch",
+      "type": "binary",
+      "property": "output_switch",
+      "base": "output_switch",
+      "endpoint": null,
+      "description": "Output Switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Output time",
+      "type": "numeric",
+      "property": "output_time",
+      "base": "output_time",
+      "endpoint": null,
+      "description": "Output Times.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 1800,
+      "unit": "s"
+    },
+    {
+      "name": "Led switch",
+      "type": "binary",
+      "property": "led_switch",
+      "base": "led_switch",
+      "endpoint": null,
+      "description": "Led Switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Lux value",
+      "type": "enum",
+      "property": "lux_value",
+      "base": "lux_value",
+      "endpoint": null,
+      "description": "Lux Value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "10_lux",
+        "20_lux",
+        "50_lux",
+        "24h"
+      ]
+    }
+  ],
+  "warnings": []
+}

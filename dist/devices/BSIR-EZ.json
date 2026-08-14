@@ -1,0 +1,293 @@
+{
+  "model": "BSIR-EZ",
+  "file": "BSIR-EZ.md",
+  "vendor": "Bosch",
+  "description": "Outdoor siren",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BSIR-EZ.png",
+  "added_at": "2023-11-30T19:41:12",
+  "exposes_summary": "device_state, trigger_alarm, stop_alarm, external_trigger, tamper, power_outage, alarm_mode, siren_volume, siren_duration, light_duration, siren_delay, light_delay, primary_power_source, current_power_source, solar_panel_voltage, battery, battery_low",
+  "exposes": [
+    {
+      "name": "Device state",
+      "type": "enum",
+      "property": "device_state",
+      "base": "device_state",
+      "endpoint": null,
+      "description": "Current state of the siren and light. Please keep in mind that these activate after the specified delay time (except when using an external alarm trigger)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "siren_active_from_external_trigger",
+        "light_active_from_external_trigger",
+        "siren_and_light_active_from_external_trigger",
+        "siren_active",
+        "light_active",
+        "siren_and_light_active",
+        "idle"
+      ]
+    },
+    {
+      "name": "Trigger alarm",
+      "type": "enum",
+      "property": "trigger_alarm",
+      "base": "trigger_alarm",
+      "endpoint": null,
+      "description": "Trigger an alarm on the device.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "trigger"
+      ]
+    },
+    {
+      "name": "Stop alarm",
+      "type": "enum",
+      "property": "stop_alarm",
+      "base": "stop_alarm",
+      "endpoint": null,
+      "description": "Stop an active alarm on the device. Please keep in mind that the alarm stops automatically after the configured duration for the light and siren is expired..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "stop"
+      ]
+    },
+    {
+      "name": "External trigger state",
+      "type": "binary",
+      "property": "external_trigger",
+      "base": "external_trigger",
+      "endpoint": null,
+      "description": "Indicates whether an external alarm via the 'TRIGGER_IN' connectors on the back of the device is being received. Please keep in mind that the device automatically activates/deactivates an alarm in that case..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper state",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Power outage state",
+      "type": "binary",
+      "property": "power_outage",
+      "base": "power_outage",
+      "endpoint": null,
+      "description": "Indicates the configured primary power source experiences a power outage. This only works when using ac or dc power..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "outage_detected",
+      "value_off": "power_ok"
+    },
+    {
+      "name": "Alarm mode",
+      "type": "enum",
+      "property": "alarm_mode",
+      "base": "alarm_mode",
+      "endpoint": null,
+      "description": "Select if you only want a visual warning, an acoustic warning or both.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "only_light",
+        "only_siren",
+        "siren_and_light"
+      ]
+    },
+    {
+      "name": "Siren volume",
+      "type": "enum",
+      "property": "siren_volume",
+      "base": "siren_volume",
+      "endpoint": null,
+      "description": "Volume of the siren.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "reduced",
+        "medium",
+        "loud"
+      ]
+    },
+    {
+      "name": "Siren duration",
+      "type": "numeric",
+      "property": "siren_duration",
+      "base": "siren_duration",
+      "endpoint": null,
+      "description": "Duration of the alarm siren.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 15,
+      "unit": "min"
+    },
+    {
+      "name": "Light duration",
+      "type": "numeric",
+      "property": "light_duration",
+      "base": "light_duration",
+      "endpoint": null,
+      "description": "Duration of the alarm light.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 15,
+      "unit": "min"
+    },
+    {
+      "name": "Siren delay",
+      "type": "numeric",
+      "property": "siren_delay",
+      "base": "siren_delay",
+      "endpoint": null,
+      "description": "Delay of the siren activation after an alarm is being triggered.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 180,
+      "unit": "sec"
+    },
+    {
+      "name": "Light delay",
+      "type": "numeric",
+      "property": "light_delay",
+      "base": "light_delay",
+      "endpoint": null,
+      "description": "Delay of the light activation after an alarm is being triggered.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 180,
+      "unit": "sec"
+    },
+    {
+      "name": "Primary power source",
+      "type": "enum",
+      "property": "primary_power_source",
+      "base": "primary_power_source",
+      "endpoint": null,
+      "description": "Select which power source you want to use. Note: The battery is always being used as backup source..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "solar_panel",
+        "ac_power_supply",
+        "dc_power_supply"
+      ]
+    },
+    {
+      "name": "Current power source",
+      "type": "enum",
+      "property": "current_power_source",
+      "base": "current_power_source",
+      "endpoint": null,
+      "description": "Currently used power source for device operation.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "battery",
+        "solar_panel",
+        "ac_power",
+        "dc_power"
+      ]
+    },
+    {
+      "name": "Solar panel voltage",
+      "type": "numeric",
+      "property": "solar_panel_voltage",
+      "base": "solar_panel_voltage",
+      "endpoint": null,
+      "description": "Current voltage level received from the integrated solar panel.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "volt"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

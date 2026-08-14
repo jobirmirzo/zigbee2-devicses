@@ -1,0 +1,43 @@
+{
+  "model": "W2-Module",
+  "file": "W2-Module.md",
+  "vendor": "FireAngel",
+  "description": "Carbon monoxide sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/W2-Module.png",
+  "added_at": "2020-12-01T19:02:25Z",
+  "exposes_summary": "carbon_monoxide, battery",
+  "exposes": [
+    {
+      "name": "Carbon monoxide",
+      "type": "binary",
+      "property": "carbon_monoxide",
+      "base": "carbon_monoxide",
+      "endpoint": null,
+      "description": "Indicates if CO (carbon monoxide) is detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

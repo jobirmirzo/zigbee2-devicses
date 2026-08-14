@@ -1,0 +1,233 @@
+{
+  "model": "POK020",
+  "file": "POK020.md",
+  "vendor": "PushOk Hardware",
+  "description": "Battery powered thermostat valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/POK020.png",
+  "added_at": "2026-01-01T13:27:46",
+  "exposes_summary": "switch (state), battery, voltage, rod_zero_position, rod_length, rod_position, external_temperature, control_preset, climate (occupied_heating_setpoint, unoccupied_heating_setpoint, local_temperature, system_mode, local_temperature_calibration), sensor_source, alarm",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Rod zero position",
+      "type": "numeric",
+      "property": "rod_zero_position",
+      "base": "rod_zero_position",
+      "endpoint": null,
+      "description": "Rod zero position.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mm"
+    },
+    {
+      "name": "Rod length",
+      "type": "numeric",
+      "property": "rod_length",
+      "base": "rod_length",
+      "endpoint": null,
+      "description": "Rod length.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mm"
+    },
+    {
+      "name": "Rod position",
+      "type": "numeric",
+      "property": "rod_position",
+      "base": "rod_position",
+      "endpoint": null,
+      "description": "Rod position.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "External temperature",
+      "type": "numeric",
+      "property": "external_temperature",
+      "base": "external_temperature",
+      "endpoint": null,
+      "description": "External temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -50,
+      "value_max": 120,
+      "unit": "°C"
+    },
+    {
+      "name": "Control preset",
+      "type": "enum",
+      "property": "control_preset",
+      "base": "control_preset",
+      "endpoint": null,
+      "description": "Control steps preset.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "conservative",
+        "moderate",
+        "aggressive"
+      ]
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": -45,
+          "value_max": 60,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "unoccupied_heating_setpoint",
+          "base": "unoccupied_heating_setpoint",
+          "value_min": -45,
+          "value_max": 60,
+          "values": [
+            "off",
+            "heat"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Sensor source",
+      "type": "enum",
+      "property": "sensor_source",
+      "base": "sensor_source",
+      "endpoint": null,
+      "description": "Temperature sensor used for control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "internal",
+        "external"
+      ]
+    },
+    {
+      "name": "Alarm",
+      "type": "enum",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Calibration status alarm.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "ok",
+        "never_calibrated",
+        "calibration_error_p0",
+        "calibration_error_p1_not_found",
+        "calibration_error_p1_too_close",
+        "calibration_error_p2_too_small",
+        "calibration_error_p2_not_found",
+        "calibration_lost"
+      ]
+    }
+  ],
+  "warnings": []
+}

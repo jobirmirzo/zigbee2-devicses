@@ -1,0 +1,279 @@
+{
+  "model": "ZS-300TF",
+  "file": "ZS-300TF.md",
+  "vendor": "Excellux",
+  "description": "Soil fertility sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZS-300TF.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "water_warning, soil_fertility_warning, battery, soil_moisture, soil_fertility, temperature, humidity, illuminance, report_period, soil_calibration, humidity_calibration, illuminance_calibration, temperature_calibration, soil_warning, soil_fertility_calibration, soil_fertility_set_v0, soil_fertility_set_v1",
+  "exposes": [
+    {
+      "name": "Water warning",
+      "type": "enum",
+      "property": "water_warning",
+      "base": "water_warning",
+      "endpoint": null,
+      "description": "Water shortage warning.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "alarm"
+      ]
+    },
+    {
+      "name": "Soil fertility warning",
+      "type": "enum",
+      "property": "soil_fertility_warning",
+      "base": "soil_fertility_warning",
+      "endpoint": null,
+      "description": "Soil fertility warning.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Battery percentage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Soil moisture",
+      "type": "numeric",
+      "property": "soil_moisture",
+      "base": "soil_moisture",
+      "endpoint": null,
+      "description": "Measured soil moisture value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Soil fertility",
+      "type": "numeric",
+      "property": "soil_fertility",
+      "base": "soil_fertility",
+      "endpoint": null,
+      "description": "Soil fertility value,between 0-5000.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "μS/cm"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Report period",
+      "type": "numeric",
+      "property": "report_period",
+      "base": "report_period",
+      "endpoint": null,
+      "description": "sensor reporting period.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 1200,
+      "unit": "S"
+    },
+    {
+      "name": "Soil calibration",
+      "type": "numeric",
+      "property": "soil_calibration",
+      "base": "soil_calibration",
+      "endpoint": null,
+      "description": "Soil Humidity calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -30,
+      "value_max": 30,
+      "unit": "%"
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Humidity calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -30,
+      "value_max": 30,
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance calibration",
+      "type": "numeric",
+      "property": "illuminance_calibration",
+      "base": "illuminance_calibration",
+      "endpoint": null,
+      "description": "Illuminance calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -15,
+      "value_max": 1000,
+      "unit": "lux"
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Temperature calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -2,
+      "value_max": 2,
+      "unit": "°C"
+    },
+    {
+      "name": "Soil warning",
+      "type": "numeric",
+      "property": "soil_warning",
+      "base": "soil_warning",
+      "endpoint": null,
+      "description": "Soil water shortage humidity value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Soil fertility calibration",
+      "type": "numeric",
+      "property": "soil_fertility_calibration",
+      "base": "soil_fertility_calibration",
+      "endpoint": null,
+      "description": "Soil Fertility Calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -1000,
+      "value_max": 1000,
+      "unit": "μS/cm"
+    },
+    {
+      "name": "Soil fertility set v0",
+      "type": "numeric",
+      "property": "soil_fertility_set_v0",
+      "base": "soil_fertility_set_v0",
+      "endpoint": null,
+      "description": "When the soil fertility value is lower than what threshold should a warning be issued.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "μS/cm"
+    },
+    {
+      "name": "Soil fertility set v1",
+      "type": "numeric",
+      "property": "soil_fertility_set_v1",
+      "base": "soil_fertility_set_v1",
+      "endpoint": null,
+      "description": "When the soil fertility value is lower than what threshold should a warning be issued.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000,
+      "unit": "μS/cm"
+    }
+  ],
+  "warnings": []
+}

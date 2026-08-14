@@ -1,0 +1,11 @@
+{
+  "model": "ZG-807ZL",
+  "file": "ZG-807ZL.md",
+  "vendor": "COOLO",
+  "description": "USB signal repeater",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-807ZL.png",
+  "added_at": "2024-03-31T18:43:56",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

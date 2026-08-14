@@ -1,0 +1,77 @@
+{
+  "model": "ZS-SR-EUC",
+  "file": "ZS-SR-EUC.md",
+  "vendor": "Moes",
+  "description": "Star ring - smart curtain switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZS-SR-EUC.png",
+  "added_at": "2024-02-06T19:45:40",
+  "exposes_summary": "cover (state, position), calibration, motor_steering",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Calibration",
+      "type": "enum",
+      "property": "calibration",
+      "base": "calibration",
+      "endpoint": null,
+      "description": "Calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "START",
+        "END"
+      ]
+    },
+    {
+      "name": "Motor steering",
+      "type": "enum",
+      "property": "motor_steering",
+      "base": "motor_steering",
+      "endpoint": null,
+      "description": "Motor Steering.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "FORWARD",
+        "BACKWARD"
+      ]
+    }
+  ],
+  "warnings": []
+}

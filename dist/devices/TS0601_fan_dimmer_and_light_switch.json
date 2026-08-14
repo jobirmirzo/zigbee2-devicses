@@ -1,0 +1,110 @@
+{
+  "model": "TS0601_fan_dimmer_and_light_switch",
+  "file": "TS0601_fan_dimmer_and_light_switch.md",
+  "vendor": "Tuya",
+  "description": "Fan Dimmer and 1 Gang Light Switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_fan_dimmer_and_light_switch.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "fan_speed, power_on_behavior, light_switch, indicator, child_lock, minimum_speed",
+  "exposes": [
+    {
+      "name": "Fan speed",
+      "type": "numeric",
+      "property": "fan_speed",
+      "base": "fan_speed",
+      "endpoint": null,
+      "description": "Speed of the fan %.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "previous"
+      ]
+    },
+    {
+      "name": "Light switch",
+      "type": "binary",
+      "property": "light_switch",
+      "base": "light_switch",
+      "endpoint": null,
+      "description": "Light switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Indicator",
+      "type": "enum",
+      "property": "indicator",
+      "base": "indicator",
+      "endpoint": null,
+      "description": "LED indicator mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "off/on",
+        "on"
+      ]
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Child Lock.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Minimum speed",
+      "type": "numeric",
+      "property": "minimum_speed",
+      "base": "minimum_speed",
+      "endpoint": null,
+      "description": "Vitesse minimale du ventilateur.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

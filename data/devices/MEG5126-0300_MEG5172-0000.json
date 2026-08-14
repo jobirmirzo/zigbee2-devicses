@@ -1,0 +1,277 @@
+{
+  "model": "MEG5126-0300/MEG5172-0000",
+  "file": "MEG5126-0300_MEG5172-0000.md",
+  "vendor": "Schneider Electric",
+  "description": "Merten MEG5172 PlusLink Dimmer insert with Merten Wiser System M Push Button (2fold)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MEG5126-0300-MEG5172-0000.png",
+  "added_at": "2023-09-28T10:54:36",
+  "exposes_summary": "ballast_minimum_level, ballast_maximum_level, dimmer_mode, light (state, brightness), effect, power_on_behavior, switch_actions, indicator_mode",
+  "exposes": [
+    {
+      "name": "Ballast minimum level",
+      "type": "numeric",
+      "property": "ballast_minimum_level",
+      "base": "ballast_minimum_level",
+      "endpoint": null,
+      "description": "Specifies the minimum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Ballast maximum level",
+      "type": "numeric",
+      "property": "ballast_maximum_level",
+      "base": "ballast_maximum_level",
+      "endpoint": null,
+      "description": "Specifies the maximum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Dimmer mode",
+      "type": "enum",
+      "property": "dimmer_mode",
+      "base": "dimmer_mode",
+      "endpoint": null,
+      "description": "Sets dimming mode to autodetect or fixed RC/RL/RL_LED mode (max load is reduced in RL_LED).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "auto",
+        "rc",
+        "rl",
+        "rl_led"
+      ]
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "left",
+      "features": [
+        {
+          "property": "state_left",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_left",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "right",
+      "features": [
+        {
+          "property": "state_right",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_right",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect_left",
+      "base": "effect",
+      "endpoint": "left",
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect_right",
+      "base": "effect",
+      "endpoint": "right",
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_left",
+      "base": "power_on_behavior",
+      "endpoint": "left",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_right",
+      "base": "power_on_behavior",
+      "endpoint": "right",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions_left_btn",
+      "base": "switch_actions",
+      "endpoint": "left_btn",
+      "description": "Set Switch Action for left_btn Button..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "light",
+        "light_opposite",
+        "dimmer",
+        "dimmer_opposite",
+        "standard_shutter",
+        "standard_shutter_opposite",
+        "schneider_shutter",
+        "schneider_shutter_opposite",
+        "scene",
+        "toggle_light",
+        "toggle_dimmer",
+        "alternate_light",
+        "alternate_dimmer",
+        "not_used"
+      ]
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions_right_btn",
+      "base": "switch_actions",
+      "endpoint": "right_btn",
+      "description": "Set Switch Action for right_btn Button..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "light",
+        "light_opposite",
+        "dimmer",
+        "dimmer_opposite",
+        "standard_shutter",
+        "standard_shutter_opposite",
+        "schneider_shutter",
+        "schneider_shutter_opposite",
+        "scene",
+        "toggle_light",
+        "toggle_dimmer",
+        "alternate_light",
+        "alternate_dimmer",
+        "not_used"
+      ]
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode_left_btn",
+      "base": "indicator_mode",
+      "endpoint": "left_btn",
+      "description": "Set Indicator Mode for left_btn switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "reverse_with_load",
+        "consistent_with_load",
+        "always_off",
+        "always_on",
+        "flash_on_click"
+      ]
+    }
+  ],
+  "warnings": []
+}

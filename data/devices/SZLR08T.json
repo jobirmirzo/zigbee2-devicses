@@ -1,0 +1,167 @@
+{
+  "model": "SZLR08T",
+  "file": "SZLR08T.md",
+  "vendor": "Lincukoo",
+  "description": "24GHz millimeter wave radar",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SZLR08T.png",
+  "added_at": "2025-09-01T18:20:17",
+  "exposes_summary": "presence, illuminance, installation_height, radar_sensitivity, fading_time, radar_switch, indicator, relay_switch, relay_mode, radar_mode",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Installation height",
+      "type": "numeric",
+      "property": "installation_height",
+      "base": "installation_height",
+      "endpoint": null,
+      "description": "Maximum range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 3,
+      "value_max": 5,
+      "unit": "m"
+    },
+    {
+      "name": "Radar sensitivity",
+      "type": "numeric",
+      "property": "radar_sensitivity",
+      "base": "radar_sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity of the radar.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 9
+    },
+    {
+      "name": "Fading time",
+      "type": "numeric",
+      "property": "fading_time",
+      "base": "fading_time",
+      "endpoint": null,
+      "description": "Fading time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 300,
+      "unit": "s"
+    },
+    {
+      "name": "Radar switch",
+      "type": "binary",
+      "property": "radar_switch",
+      "base": "radar_switch",
+      "endpoint": null,
+      "description": "Radar switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Indicator",
+      "type": "binary",
+      "property": "indicator",
+      "base": "indicator",
+      "endpoint": null,
+      "description": "LED indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Relay switch",
+      "type": "binary",
+      "property": "relay_switch",
+      "base": "relay_switch",
+      "endpoint": null,
+      "description": "Relay switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Relay mode",
+      "type": "enum",
+      "property": "relay_mode",
+      "base": "relay_mode",
+      "endpoint": null,
+      "description": "control mode of the relay.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "auto",
+        "manual"
+      ]
+    },
+    {
+      "name": "Radar mode",
+      "type": "enum",
+      "property": "radar_mode",
+      "base": "radar_mode",
+      "endpoint": null,
+      "description": "radar mode for the relay controlling.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "people_on",
+        "people_off"
+      ]
+    }
+  ],
+  "warnings": []
+}

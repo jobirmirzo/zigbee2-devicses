@@ -1,0 +1,42 @@
+{
+  "model": "MOSZB-141",
+  "file": "MOSZB-141.md",
+  "vendor": "Develco",
+  "description": "Motion sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MOSZB-141.png",
+  "added_at": "2021-01-31T22:24:43Z",
+  "exposes_summary": "occupancy, battery_low",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

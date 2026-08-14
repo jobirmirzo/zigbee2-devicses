@@ -1,0 +1,39 @@
+{
+  "model": "TZSN408W-V1",
+  "file": "TZSN408W-V1.md",
+  "vendor": "Feibit",
+  "description": "Four-Gang Scene Switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TZSN408W-V1.png",
+  "added_at": "2024-09-01T12:39:25",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_1",
+        "on_2",
+        "on_3",
+        "on_4",
+        "off_1",
+        "off_2",
+        "off_3",
+        "off_4",
+        "toggle_1",
+        "toggle_2",
+        "toggle_3",
+        "toggle_4"
+      ]
+    }
+  ],
+  "warnings": []
+}

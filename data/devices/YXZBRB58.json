@@ -1,0 +1,154 @@
+{
+  "model": "YXZBRB58",
+  "file": "YXZBRB58.md",
+  "vendor": "Tuya",
+  "description": "Smart human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/YXZBRB58.png",
+  "added_at": "2023-08-01T15:13:29",
+  "exposes_summary": "illuminance, presence, target_distance, radar_sensitivity, minimum_range, maximum_range, detection_delay, fading_time, radar_scene",
+  "exposes": [
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Target distance",
+      "type": "numeric",
+      "property": "target_distance",
+      "base": "target_distance",
+      "endpoint": null,
+      "description": "Distance to target.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Radar sensitivity",
+      "type": "numeric",
+      "property": "radar_sensitivity",
+      "base": "radar_sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity of the radar.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 9
+    },
+    {
+      "name": "Minimum range",
+      "type": "numeric",
+      "property": "minimum_range",
+      "base": "minimum_range",
+      "endpoint": null,
+      "description": "Minimum range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "m"
+    },
+    {
+      "name": "Maximum range",
+      "type": "numeric",
+      "property": "maximum_range",
+      "base": "maximum_range",
+      "endpoint": null,
+      "description": "Maximum range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "m"
+    },
+    {
+      "name": "Detection delay",
+      "type": "numeric",
+      "property": "detection_delay",
+      "base": "detection_delay",
+      "endpoint": null,
+      "description": "Detection delay.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "s"
+    },
+    {
+      "name": "Fading time",
+      "type": "numeric",
+      "property": "fading_time",
+      "base": "fading_time",
+      "endpoint": null,
+      "description": "Fading time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1500,
+      "unit": "s"
+    },
+    {
+      "name": "Radar scene",
+      "type": "enum",
+      "property": "radar_scene",
+      "base": "radar_scene",
+      "endpoint": null,
+      "description": "Presets for sensitivity for presence and movement.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "default",
+        "bathroom",
+        "bedroom",
+        "sleeping",
+        "unknown"
+      ]
+    }
+  ],
+  "warnings": []
+}

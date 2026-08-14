@@ -1,0 +1,107 @@
+{
+  "model": "TS110E_1gang_1",
+  "file": "TS110E_1gang_1.md",
+  "vendor": "Tuya",
+  "description": "1 channel dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS110E_1gang_1.png",
+  "added_at": "2024-09-01T12:39:25",
+  "exposes_summary": "power_on_behavior, switch_type, min_brightness, max_brightness, light (state, brightness)",
+  "exposes": [
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "previous",
+        "on"
+      ]
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type",
+      "base": "switch_type",
+      "endpoint": null,
+      "description": "Type of the switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "toggle",
+        "state",
+        "momentary"
+      ]
+    },
+    {
+      "name": "Min brightness",
+      "type": "numeric",
+      "property": "min_brightness",
+      "base": "min_brightness",
+      "endpoint": null,
+      "description": "Minimum light brightness.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 255
+    },
+    {
+      "name": "Max brightness",
+      "type": "numeric",
+      "property": "max_brightness",
+      "base": "max_brightness",
+      "endpoint": null,
+      "description": "Maximum light brightness.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 255
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    }
+  ],
+  "warnings": []
+}

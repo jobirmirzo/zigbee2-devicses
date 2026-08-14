@@ -1,0 +1,402 @@
+{
+  "model": "HS9MS-E",
+  "file": "HS9MS-E.md",
+  "vendor": "Heiman",
+  "description": "Smart motion sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS9MS-E.png",
+  "added_at": "2026-04-30T19:57:27",
+  "exposes_summary": "occupancy, tamper, battery_low, battery, camera_test_trigger, camera_active_trigger, ambient_light, wifi_ssid, wifi_password, wifi_ssid_candidate, wifi_password_candidate, server_url, server_url_candidate, picture_quantity, picture_quality, mcu_software_version, illuminance_threshold, sensor_armed, pir_sensitivity_level, wifi_status, wifi_candidate_status, server_status, server_candidate_status, camera_ready, wifi_rssi",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Camera test trigger",
+      "type": "enum",
+      "property": "camera_test_trigger",
+      "base": "camera_test_trigger",
+      "endpoint": null,
+      "description": "Trigger camera and wifi/server connection test..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "test"
+      ]
+    },
+    {
+      "name": "Camera active trigger",
+      "type": "enum",
+      "property": "camera_active_trigger",
+      "base": "camera_active_trigger",
+      "endpoint": null,
+      "description": "Trigger the camera to take a picture..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "active"
+      ]
+    },
+    {
+      "name": "Ambient light",
+      "type": "numeric",
+      "property": "ambient_light",
+      "base": "ambient_light",
+      "endpoint": null,
+      "description": "ambient illuminance in lux.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "Lx"
+    },
+    {
+      "name": "Wifi ssid",
+      "type": "text",
+      "property": "wifi_ssid",
+      "base": "wifi_ssid",
+      "endpoint": null,
+      "description": "Current WiFi SSID.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Wifi password",
+      "type": "text",
+      "property": "wifi_password",
+      "base": "wifi_password",
+      "endpoint": null,
+      "description": "Current WiFi Password.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Wifi ssid candidate",
+      "type": "text",
+      "property": "wifi_ssid_candidate",
+      "base": "wifi_ssid_candidate",
+      "endpoint": null,
+      "description": "Candidate WiFi SSID.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Wifi password candidate",
+      "type": "text",
+      "property": "wifi_password_candidate",
+      "base": "wifi_password_candidate",
+      "endpoint": null,
+      "description": "Candidate WiFi Password.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Server url",
+      "type": "text",
+      "property": "server_url",
+      "base": "server_url",
+      "endpoint": null,
+      "description": "Current Server URL.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Server url candidate",
+      "type": "text",
+      "property": "server_url_candidate",
+      "base": "server_url_candidate",
+      "endpoint": null,
+      "description": "Candidate WiFi Server URL.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Picture quantity",
+      "type": "numeric",
+      "property": "picture_quantity",
+      "base": "picture_quantity",
+      "endpoint": null,
+      "description": "picture quantity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 20
+    },
+    {
+      "name": "Picture quality",
+      "type": "numeric",
+      "property": "picture_quality",
+      "base": "picture_quality",
+      "endpoint": null,
+      "description": "picture quality.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Mcu software version",
+      "type": "numeric",
+      "property": "mcu_software_version",
+      "base": "mcu_software_version",
+      "endpoint": null,
+      "description": "version of mcu.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "Illuminance threshold",
+      "type": "numeric",
+      "property": "illuminance_threshold",
+      "base": "illuminance_threshold",
+      "endpoint": null,
+      "description": "when the illuminance exceeds the threshold, it activates local linkages..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "Lx"
+    },
+    {
+      "name": "Sensor armed",
+      "type": "binary",
+      "property": "sensor_armed",
+      "base": "sensor_armed",
+      "endpoint": null,
+      "description": "armed.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "Armed",
+      "value_off": "Disarmed"
+    },
+    {
+      "name": "Pir sensitivity level",
+      "type": "enum",
+      "property": "pir_sensitivity_level",
+      "base": "pir_sensitivity_level",
+      "endpoint": null,
+      "description": "The sensitivity of PIR Sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "disabled",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Wifi status",
+      "type": "enum",
+      "property": "wifi_status",
+      "base": "wifi_status",
+      "endpoint": null,
+      "description": "wifi status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "unconfigurated",
+        "unconnected",
+        "connected",
+        "connection_timeout"
+      ]
+    },
+    {
+      "name": "Wifi candidate status",
+      "type": "enum",
+      "property": "wifi_candidate_status",
+      "base": "wifi_candidate_status",
+      "endpoint": null,
+      "description": "wifi candidate status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "unconfigurated",
+        "unconnected",
+        "connected",
+        "connection_timeout"
+      ]
+    },
+    {
+      "name": "Server status",
+      "type": "enum",
+      "property": "server_status",
+      "base": "server_status",
+      "endpoint": null,
+      "description": "server status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "unconfigurated",
+        "unconnected",
+        "connected",
+        "api_timeout"
+      ]
+    },
+    {
+      "name": "Server candidate status",
+      "type": "enum",
+      "property": "server_candidate_status",
+      "base": "server_candidate_status",
+      "endpoint": null,
+      "description": "server candidate status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "unconfigurated",
+        "unconnected",
+        "connected",
+        "api_timeout"
+      ]
+    },
+    {
+      "name": "Camera ready",
+      "type": "enum",
+      "property": "camera_ready",
+      "base": "camera_ready",
+      "endpoint": null,
+      "description": "wifi candidate status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "unavailable",
+        "low_power",
+        "normal",
+        "advanced"
+      ]
+    },
+    {
+      "name": "Wifi rssi",
+      "type": "numeric",
+      "property": "wifi_rssi",
+      "base": "wifi_rssi",
+      "endpoint": null,
+      "description": "wifi rssi.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -127,
+      "value_max": 127
+    }
+  ],
+  "warnings": []
+}

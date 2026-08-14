@@ -1,0 +1,48 @@
+{
+  "model": "DIYRuZ_RT",
+  "file": "DIYRuZ_RT.md",
+  "vendor": "DIYRuZ",
+  "description": "DiY CC2530 Zigbee 3.0 firmware",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DIYRuZ_RT.png",
+  "added_at": "2020-06-27T13:26:08Z",
+  "exposes_summary": "switch (state), temperature",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

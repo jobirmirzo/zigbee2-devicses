@@ -1,0 +1,291 @@
+{
+  "model": "A9MEM1570",
+  "file": "A9MEM1570.md",
+  "vendor": "Schneider Electric",
+  "description": "PowerTag power sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/A9MEM1570.png",
+  "added_at": "2022-04-30T08:00:58",
+  "exposes_summary": "power, power_apparent, power_phase_a, power_phase_b, power_phase_c, power_factor, energy, energy_phase_a, energy_phase_b, energy_phase_c, ac_frequency, voltage_phase_a, voltage_phase_b, voltage_phase_c, voltage_phase_ab, voltage_phase_bc, voltage_phase_ca, current_phase_a, current_phase_b, current_phase_c",
+  "exposes": [
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power apparent",
+      "type": "numeric",
+      "property": "power_apparent",
+      "base": "power_apparent",
+      "endpoint": null,
+      "description": "Instantaneous measured apparent power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "Power phase a",
+      "type": "numeric",
+      "property": "power_phase_a",
+      "base": "power_phase_a",
+      "endpoint": null,
+      "description": "Instantaneous measured power on phase A.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power phase b",
+      "type": "numeric",
+      "property": "power_phase_b",
+      "base": "power_phase_b",
+      "endpoint": null,
+      "description": "Instantaneous measured power on phase B.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power phase c",
+      "type": "numeric",
+      "property": "power_phase_c",
+      "base": "power_phase_c",
+      "endpoint": null,
+      "description": "Instantaneous measured power on phase C.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power factor",
+      "type": "numeric",
+      "property": "power_factor",
+      "base": "power_factor",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy phase a",
+      "type": "numeric",
+      "property": "energy_phase_a",
+      "base": "energy_phase_a",
+      "endpoint": null,
+      "description": "Sum of consumed energy on phase A.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy phase b",
+      "type": "numeric",
+      "property": "energy_phase_b",
+      "base": "energy_phase_b",
+      "endpoint": null,
+      "description": "Sum of consumed energy on phase B.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy phase c",
+      "type": "numeric",
+      "property": "energy_phase_c",
+      "base": "energy_phase_c",
+      "endpoint": null,
+      "description": "Sum of consumed energy on phase C.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "AC frequency",
+      "type": "numeric",
+      "property": "ac_frequency",
+      "base": "ac_frequency",
+      "endpoint": null,
+      "description": "Measured electrical AC frequency.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Voltage phase a",
+      "type": "numeric",
+      "property": "voltage_phase_a",
+      "base": "voltage_phase_a",
+      "endpoint": null,
+      "description": "Measured electrical potential value on phase A.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage phase b",
+      "type": "numeric",
+      "property": "voltage_phase_b",
+      "base": "voltage_phase_b",
+      "endpoint": null,
+      "description": "Measured electrical potential value on phase B.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage phase c",
+      "type": "numeric",
+      "property": "voltage_phase_c",
+      "base": "voltage_phase_c",
+      "endpoint": null,
+      "description": "Measured electrical potential value on phase C.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage phase ab",
+      "type": "numeric",
+      "property": "voltage_phase_ab",
+      "base": "voltage_phase_ab",
+      "endpoint": null,
+      "description": "Measured electrical potential value between phase A and B.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage phase bc",
+      "type": "numeric",
+      "property": "voltage_phase_bc",
+      "base": "voltage_phase_bc",
+      "endpoint": null,
+      "description": "Measured electrical potential value between phase B and C.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage phase ca",
+      "type": "numeric",
+      "property": "voltage_phase_ca",
+      "base": "voltage_phase_ca",
+      "endpoint": null,
+      "description": "Measured electrical potential value between phase C and A.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current phase a",
+      "type": "numeric",
+      "property": "current_phase_a",
+      "base": "current_phase_a",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current on phase A.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current phase b",
+      "type": "numeric",
+      "property": "current_phase_b",
+      "base": "current_phase_b",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current on phase B.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current phase c",
+      "type": "numeric",
+      "property": "current_phase_c",
+      "base": "current_phase_c",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current on phase C.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    }
+  ],
+  "warnings": []
+}

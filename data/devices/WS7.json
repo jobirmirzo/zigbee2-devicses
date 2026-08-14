@@ -1,0 +1,69 @@
+{
+  "model": "WS7",
+  "file": "WS7.md",
+  "vendor": "JetHome",
+  "description": "3-ch battery discrete input module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WS7.png",
+  "added_at": "2021-11-30T20:10:17",
+  "exposes_summary": "battery, voltage, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "release_in1",
+        "single_in1",
+        "double_in1",
+        "hold_in1",
+        "release_in2",
+        "single_in2",
+        "double_in2",
+        "hold_in2",
+        "release_in3",
+        "single_in3",
+        "double_in3",
+        "hold_in3"
+      ]
+    }
+  ],
+  "warnings": []
+}

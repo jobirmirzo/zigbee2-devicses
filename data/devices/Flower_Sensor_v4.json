@@ -1,0 +1,163 @@
+{
+  "model": "Flower_Sensor_v4",
+  "file": "Flower_Sensor_v4.md",
+  "vendor": "Bacchus",
+  "description": "Flower soil moisture sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Flower_Sensor_v4.png",
+  "added_at": "2026-03-31T19:04:19",
+  "exposes_summary": "soil_moisture, temperature, illuminance, report_delay, threshold, tx_radio_power, smart_sleep, thermal_compensation, battery, voltage",
+  "exposes": [
+    {
+      "name": "Soil moisture",
+      "type": "numeric",
+      "property": "soil_moisture",
+      "base": "soil_moisture",
+      "endpoint": null,
+      "description": "Measured soil moisture value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Report delay",
+      "type": "numeric",
+      "property": "report_delay",
+      "base": "report_delay",
+      "endpoint": null,
+      "description": "Reporting interval.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 600,
+      "unit": "min"
+    },
+    {
+      "name": "Threshold",
+      "type": "numeric",
+      "property": "threshold",
+      "base": "threshold",
+      "endpoint": null,
+      "description": "Reporting interval.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Tx radio power",
+      "type": "enum",
+      "property": "tx_radio_power",
+      "base": "tx_radio_power",
+      "endpoint": null,
+      "description": "Set TX Radio Power, dbm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "10dbm",
+        "19dbm"
+      ]
+    },
+    {
+      "name": "Smart sleep",
+      "type": "binary",
+      "property": "smart_sleep",
+      "base": "smart_sleep",
+      "endpoint": null,
+      "description": "Enable Smart Sleep, short wakeup every 6 seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Thermal compensation",
+      "type": "binary",
+      "property": "thermal_compensation",
+      "base": "thermal_compensation",
+      "endpoint": null,
+      "description": "Thermal compensation.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

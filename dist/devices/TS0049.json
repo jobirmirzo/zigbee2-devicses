@@ -1,0 +1,81 @@
+{
+  "model": "TS0049",
+  "file": "TS0049.md",
+  "vendor": "Tuya",
+  "description": "Water valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0049.png",
+  "added_at": "2023-03-01T15:36:38",
+  "exposes_summary": "error_status, switch (state), battery_state, countdown",
+  "exposes": [
+    {
+      "name": "Error status",
+      "type": "numeric",
+      "property": "error_status",
+      "base": "error_status",
+      "endpoint": null,
+      "description": "Error status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery state",
+      "type": "enum",
+      "property": "battery_state",
+      "base": "battery_state",
+      "endpoint": null,
+      "description": "State of the battery.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown",
+      "base": "countdown",
+      "endpoint": null,
+      "description": "Max on time in minutes.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255,
+      "unit": "minutes"
+    }
+  ],
+  "warnings": []
+}

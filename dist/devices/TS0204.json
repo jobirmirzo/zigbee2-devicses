@@ -1,0 +1,42 @@
+{
+  "model": "TS0204",
+  "file": "TS0204.md",
+  "vendor": "Tuya",
+  "description": "Gas sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0204.png",
+  "added_at": "2019-12-15T17:27:48Z",
+  "exposes_summary": "gas, tamper",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "binary",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,223 @@
+{
+  "model": "TS130F_dual",
+  "file": "TS130F_dual.md",
+  "vendor": "Lonsonho",
+  "description": "Dual curtain/blind module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS130F_dual.png",
+  "added_at": "2022-25-01T12:47:02Z",
+  "exposes_summary": "moving, calibration_time, cover (state, position), calibration, motor_reversal, switch_type",
+  "exposes": [
+    {
+      "name": "Moving",
+      "type": "enum",
+      "property": "moving_left",
+      "base": "moving",
+      "endpoint": "left",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "UP",
+        "STOP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Moving",
+      "type": "enum",
+      "property": "moving_right",
+      "base": "moving",
+      "endpoint": "right",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "UP",
+        "STOP",
+        "DOWN"
+      ]
+    },
+    {
+      "name": "Calibration time",
+      "type": "numeric",
+      "property": "calibration_time_left",
+      "base": "calibration_time",
+      "endpoint": "left",
+      "description": "Calibration time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 500,
+      "unit": "s"
+    },
+    {
+      "name": "Calibration time",
+      "type": "numeric",
+      "property": "calibration_time_right",
+      "base": "calibration_time",
+      "endpoint": "right",
+      "description": "Calibration time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 500,
+      "unit": "s"
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": "left",
+      "features": [
+        {
+          "property": "state_left",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_left",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_left",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Calibration",
+      "type": "binary",
+      "property": "calibration_left",
+      "base": "calibration",
+      "endpoint": "left",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Motor reversal",
+      "type": "binary",
+      "property": "motor_reversal_left",
+      "base": "motor_reversal",
+      "endpoint": "left",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": "right",
+      "features": [
+        {
+          "property": "state_right",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_right",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_right",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Calibration",
+      "type": "binary",
+      "property": "calibration_right",
+      "base": "calibration",
+      "endpoint": "right",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Motor reversal",
+      "type": "binary",
+      "property": "motor_reversal_right",
+      "base": "motor_reversal",
+      "endpoint": "right",
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type",
+      "base": "switch_type",
+      "endpoint": null,
+      "description": "Type of the installed switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "momentary",
+        "toggle"
+      ]
+    }
+  ],
+  "warnings": []
+}

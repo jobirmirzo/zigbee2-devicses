@@ -1,0 +1,102 @@
+{
+  "model": "PA-44Z",
+  "file": "PA-44Z.md",
+  "vendor": "Tuya",
+  "description": "Photoelectric smoke detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/PA-44Z.png",
+  "added_at": "2023-06-01T08:16:21",
+  "exposes_summary": "smoke, battery, silence, test, smoke_concentration, device_fault",
+  "exposes": [
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Silence",
+      "type": "binary",
+      "property": "silence",
+      "base": "silence",
+      "endpoint": null,
+      "description": "Silence the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Test",
+      "type": "binary",
+      "property": "test",
+      "base": "test",
+      "endpoint": null,
+      "description": "Indicates whether the device is being tested.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Smoke concentration",
+      "type": "numeric",
+      "property": "smoke_concentration",
+      "base": "smoke_concentration",
+      "endpoint": null,
+      "description": "Parts per million of smoke detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Device fault",
+      "type": "binary",
+      "property": "device_fault",
+      "base": "device_fault",
+      "endpoint": null,
+      "description": "Indicates a fault with the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

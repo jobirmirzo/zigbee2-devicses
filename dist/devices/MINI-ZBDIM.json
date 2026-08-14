@@ -1,0 +1,326 @@
+{
+  "model": "MINI-ZBDIM",
+  "file": "MINI-ZBDIM.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee smart mini dimmer switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MINI-ZBDIM.png",
+  "added_at": "2025-11-30T20:32:44",
+  "exposes_summary": "light (state, brightness), power_on_behavior, current, voltage, power, delayed_power_on_state, delayed_power_on_time, inching_control_set, external_trigger_mode, set_calibration_action, calibration_status, calibration_progress, min_brightness_threshold, max_brightness_threshold, level_for_calibration, dimmer_transition_time, dimming_light_rate",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Active power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Delayed power on state",
+      "type": "binary",
+      "property": "delayed_power_on_state",
+      "base": "delayed_power_on_state",
+      "endpoint": null,
+      "description": "Delayed Power-on State.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Delayed power on time",
+      "type": "numeric",
+      "property": "delayed_power_on_time",
+      "base": "delayed_power_on_time",
+      "endpoint": null,
+      "description": "Delayed Power-on time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 3599.5,
+      "unit": "seconds"
+    },
+    {
+      "name": "Inching control set",
+      "type": "composite",
+      "property": "inching_control_set",
+      "base": "inching_control_set",
+      "endpoint": null,
+      "description": "Device Inching function Settings. The device will automatically turn off (turn on) after each turn on (turn off) for a specified period of time..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "inching_control",
+          "type": "binary",
+          "description": "Enable/disable inching function.",
+          "values": [
+            "ENABLE",
+            "DISABLE"
+          ]
+        },
+        {
+          "property": "inching_time",
+          "type": "numeric",
+          "description": "Delay time for executing a inching action. min value is 0.5, max value is 86399.5, unit is seconds"
+        },
+        {
+          "property": "inching_mode",
+          "type": "binary",
+          "description": "Set inching off or inching on mode.",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "External trigger mode",
+      "type": "enum",
+      "property": "external_trigger_mode",
+      "base": "external_trigger_mode",
+      "endpoint": null,
+      "description": "External trigger mode, which can be one of edge, pulse,double pulse,triple pulse.The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "edge",
+        "pulse",
+        "double pulse",
+        "triple pulse"
+      ]
+    },
+    {
+      "name": "Set calibration action",
+      "type": "enum",
+      "property": "set_calibration_action",
+      "base": "set_calibration_action",
+      "endpoint": null,
+      "description": "After calibration, the light adjustment becomes smooth and consistent.. Takes about 2 minutes; device unavailable during calibration..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "start",
+        "stop"
+      ]
+    },
+    {
+      "name": "Calibration status",
+      "type": "enum",
+      "property": "calibration_status",
+      "base": "calibration_status",
+      "endpoint": null,
+      "description": "Calibration status..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "uncalibrate",
+        "cailbrating",
+        "calibration_failed",
+        "calibrated"
+      ]
+    },
+    {
+      "name": "Calibration progress",
+      "type": "numeric",
+      "property": "calibration_progress",
+      "base": "calibration_progress",
+      "endpoint": null,
+      "description": "Calibration progress..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Min brightness threshold",
+      "type": "numeric",
+      "property": "min_brightness_threshold",
+      "base": "min_brightness_threshold",
+      "endpoint": null,
+      "description": "Lowest brightness level mapped to 1 % on the dimmer slider..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 99,
+      "unit": "%"
+    },
+    {
+      "name": "Max brightness threshold",
+      "type": "numeric",
+      "property": "max_brightness_threshold",
+      "base": "max_brightness_threshold",
+      "endpoint": null,
+      "description": "highest brightness level mapped to 100 % on the dimmer slider..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Level for calibration",
+      "type": "numeric",
+      "property": "level_for_calibration",
+      "base": "level_for_calibration",
+      "endpoint": null,
+      "description": "Brightness Calibration ensures your dimmer works within the optimal range for your specific bulb..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Dimmer transition time",
+      "type": "numeric",
+      "property": "dimmer_transition_time",
+      "base": "dimmer_transition_time",
+      "endpoint": null,
+      "description": "Transition time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5,
+      "unit": "s"
+    },
+    {
+      "name": "Dimming light rate",
+      "type": "enum",
+      "property": "dimming_light_rate",
+      "base": "dimming_light_rate",
+      "endpoint": null,
+      "description": "Speed of brightness change via external switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "1x",
+        "2x",
+        "3x",
+        "4x",
+        "5x"
+      ]
+    }
+  ],
+  "warnings": []
+}

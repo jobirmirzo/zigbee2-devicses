@@ -1,0 +1,211 @@
+{
+  "model": "SMKG-2KNL-SD",
+  "file": "SMKG-2KNL-SD.md",
+  "vendor": "Tuya",
+  "description": "Smart leakage protector 63a with leakage monitoring",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SMKG-2KNL-SD.png",
+  "added_at": "2026-03-31T19:04:39",
+  "exposes_summary": "switch (state), voltage, current, power, energy, temperature, leakage_current, over_voltage_threshold, under_voltage_threshold, over_current_threshold, leakage_threshold, temp_threshold, faults",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Leakage current",
+      "type": "numeric",
+      "property": "leakage_current",
+      "base": "leakage_current",
+      "endpoint": null,
+      "description": "Measured current difference between live and neutral wires.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mA"
+    },
+    {
+      "name": "Over voltage threshold",
+      "type": "numeric",
+      "property": "over_voltage_threshold",
+      "base": "over_voltage_threshold",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 220,
+      "value_max": 265,
+      "unit": "V"
+    },
+    {
+      "name": "Under voltage threshold",
+      "type": "numeric",
+      "property": "under_voltage_threshold",
+      "base": "under_voltage_threshold",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 76,
+      "value_max": 240,
+      "unit": "V"
+    },
+    {
+      "name": "Over current threshold",
+      "type": "numeric",
+      "property": "over_current_threshold",
+      "base": "over_current_threshold",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 63,
+      "unit": "A"
+    },
+    {
+      "name": "Leakage threshold",
+      "type": "numeric",
+      "property": "leakage_threshold",
+      "base": "leakage_threshold",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 100,
+      "unit": "mA"
+    },
+    {
+      "name": "Temp threshold",
+      "type": "numeric",
+      "property": "temp_threshold",
+      "base": "temp_threshold",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 40,
+      "value_max": 150,
+      "unit": "°C"
+    },
+    {
+      "name": "Faults",
+      "type": "list",
+      "property": "faults",
+      "base": "faults",
+      "endpoint": null,
+      "description": "List of current faults.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    }
+  ],
+  "warnings": []
+}

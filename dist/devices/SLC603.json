@@ -1,0 +1,63 @@
+{
+  "model": "SLC603",
+  "file": "SLC603.md",
+  "vendor": "OWON",
+  "description": "Zigbee remote dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SLC603.png",
+  "added_at": "2023-11-12T16:00:00Z",
+  "exposes_summary": "battery, battery_low, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "toggle",
+        "brightness_step_up",
+        "brightness_step_down",
+        "color_temperature_step_up",
+        "color_temperature_step_down"
+      ]
+    }
+  ],
+  "warnings": []
+}

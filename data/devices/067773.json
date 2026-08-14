@@ -1,0 +1,50 @@
+{
+  "model": "067773",
+  "file": "067773.md",
+  "vendor": "Legrand",
+  "description": "Wireless remote switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/067773.png",
+  "added_at": "2020-01-14T19:34:25Z",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "identify",
+        "on",
+        "off",
+        "toggle",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,156 @@
+{
+  "model": "C-ZB-DM204",
+  "file": "C-ZB-DM204.md",
+  "vendor": "Candeo",
+  "description": "Zigbee micro smart dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/C-ZB-DM204.png",
+  "added_at": "2025-02-01T20:12:31",
+  "exposes_summary": "external_switch_type, minimum_brightness_level, light (state, brightness, level_config), power_on_behavior, power, voltage, current, energy",
+  "exposes": [
+    {
+      "name": "External switch type",
+      "type": "enum",
+      "property": "external_switch_type",
+      "base": "external_switch_type",
+      "endpoint": null,
+      "description": "Change the type of external switch connected to the device (momentary or toggle).  Power cycle the device after changing this setting to ensure it takes effect..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "momentary",
+        "toggle"
+      ]
+    },
+    {
+      "name": "Minimum brightness level",
+      "type": "numeric",
+      "property": "minimum_brightness_level",
+      "base": "minimum_brightness_level",
+      "endpoint": null,
+      "description": "Set the minimum brightness level for the device (0 - 50, 0 = do not use a minimum brightness level).  Power cycle the device after changing this setting to ensure it takes effect..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 50,
+      "unit": "%"
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "level_config",
+          "base": "level_config",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    }
+  ],
+  "warnings": []
+}

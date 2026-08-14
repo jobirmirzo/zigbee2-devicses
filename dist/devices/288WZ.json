@@ -1,0 +1,114 @@
+{
+  "model": "288WZ",
+  "file": "288WZ.md",
+  "vendor": "ONENUO",
+  "description": "Smoke detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/288WZ.png",
+  "added_at": "2023-11-30T19:41:12",
+  "exposes_summary": "smoke, battery, silence, self_test_result, smoke_state, sensitivity",
+  "exposes": [
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Silence",
+      "type": "binary",
+      "property": "silence",
+      "base": "silence",
+      "endpoint": null,
+      "description": "Silence the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Self test result",
+      "type": "enum",
+      "property": "self_test_result",
+      "base": "self_test_result",
+      "endpoint": null,
+      "description": "Result of the self-test.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "checking",
+        "success",
+        "failure",
+        "others"
+      ]
+    },
+    {
+      "name": "Smoke state",
+      "type": "enum",
+      "property": "smoke_state",
+      "base": "smoke_state",
+      "endpoint": null,
+      "description": "Possible states: alarm, normal, detecting, unknown.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "alarm",
+        "normal",
+        "detecting",
+        "unknown"
+      ]
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Smoke detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "warnings": []
+}

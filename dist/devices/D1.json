@@ -1,0 +1,350 @@
+{
+  "model": "D1",
+  "file": "D1.md",
+  "vendor": "Ubisys",
+  "description": "Universal dimmer D1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/D1.png",
+  "added_at": "2021-10-30T12:58:50",
+  "exposes_summary": "light (state, brightness), level_config, power, energy, ballast_minimum_level, ballast_maximum_level, minimum_on_level, capabilities_forward_phase_control, capabilities_reverse_phase_control, capabilities_reactance_discriminator, capabilities_configurable_curve, capabilities_overload_detection, status_forward_phase_control, status_reverse_phase_control, status_overload, status_capacitive_load, status_inductive_load, mode_phase_control, action",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Level config",
+      "type": "composite",
+      "property": "level_config",
+      "base": "level_config",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "on_off_transition_time",
+          "type": "numeric",
+          "description": "Specifies the amount of time, in units of 0.1 seconds, which will be used during a transition to either the on or off state, when an on/off/toggle command of the on/off cluster is used to turn the light on or off"
+        },
+        {
+          "property": "on_level",
+          "type": "numeric",
+          "description": "Specifies the level that shall be applied, when an on/toggle command causes the light to turn on. min value is 1, max value is 254"
+        },
+        {
+          "property": "execute_if_off",
+          "type": "binary",
+          "description": "Defines if you can send a brightness change without to turn on the light",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "current_level_startup",
+          "type": "numeric",
+          "description": "Specifies the initial level to be applied after the device is supplied with power min value is 1, max value is 254"
+        }
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Ballast minimum level",
+      "type": "numeric",
+      "property": "ballast_minimum_level",
+      "base": "ballast_minimum_level",
+      "endpoint": null,
+      "description": "Specifies the minimum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Ballast maximum level",
+      "type": "numeric",
+      "property": "ballast_maximum_level",
+      "base": "ballast_maximum_level",
+      "endpoint": null,
+      "description": "Specifies the maximum light output of the ballast.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Minimum on level",
+      "type": "numeric",
+      "property": "minimum_on_level",
+      "base": "minimum_on_level",
+      "endpoint": null,
+      "description": "Specifies the minimum level that shall be applied, when an on/toggle command causes the light to turn on. When this attribute is set to the invalid value (255) this feature is disabled and standard rules apply: The light will either return to the previously active level (before it was turned off) if the OnLevel attribute is set to the invalid value (255/previous); or to the specified value of the OnLevel attribute if this value is in the range 0…254. Otherwise, if the MinimumOnLevel is in the range 0…254, the light will be set to the the previously active level (before it was turned off), or the value specified here, whichever is the larger value. For example, if the previous level was 30 and the MinimumOnLevel was 40 then the light would turn on and move to level 40. Conversely, if the previous level was 50, and the MinimumOnLevel was 40, then the light would turn on and move to level 50..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "Capabilities forward phase control",
+      "type": "binary",
+      "property": "capabilities_forward_phase_control",
+      "base": "capabilities_forward_phase_control",
+      "endpoint": null,
+      "description": "The dimmer supports AC forward phase control..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Capabilities reverse phase control",
+      "type": "binary",
+      "property": "capabilities_reverse_phase_control",
+      "base": "capabilities_reverse_phase_control",
+      "endpoint": null,
+      "description": "The dimmer supports AC reverse phase control..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Capabilities reactance discriminator",
+      "type": "binary",
+      "property": "capabilities_reactance_discriminator",
+      "base": "capabilities_reactance_discriminator",
+      "endpoint": null,
+      "description": "The dimmer is capable of measuring the reactanceto distinguish inductive and capacitive loads..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Capabilities configurable curve",
+      "type": "binary",
+      "property": "capabilities_configurable_curve",
+      "base": "capabilities_configurable_curve",
+      "endpoint": null,
+      "description": "The dimmer is capable of replacing the built-in, default dimming curve..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Capabilities overload detection",
+      "type": "binary",
+      "property": "capabilities_overload_detection",
+      "base": "capabilities_overload_detection",
+      "endpoint": null,
+      "description": "The dimmer is capable of detecting an output overload and shutting the output off..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Status forward phase control",
+      "type": "binary",
+      "property": "status_forward_phase_control",
+      "base": "status_forward_phase_control",
+      "endpoint": null,
+      "description": "The dimmer is currently operating in AC forward phase control mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Status reverse phase control",
+      "type": "binary",
+      "property": "status_reverse_phase_control",
+      "base": "status_reverse_phase_control",
+      "endpoint": null,
+      "description": "The dimmer is currently operating in AC reverse phase control mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Status overload",
+      "type": "binary",
+      "property": "status_overload",
+      "base": "status_overload",
+      "endpoint": null,
+      "description": "The output is currently turned off, because the dimmer has detected an overload..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Status capacitive load",
+      "type": "binary",
+      "property": "status_capacitive_load",
+      "base": "status_capacitive_load",
+      "endpoint": null,
+      "description": "The dimmer's reactance discriminator had detected a capacitive load..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Status inductive load",
+      "type": "binary",
+      "property": "status_inductive_load",
+      "base": "status_inductive_load",
+      "endpoint": null,
+      "description": "The dimmer's reactance discriminator had detected an inductive load..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Mode phase control",
+      "type": "enum",
+      "property": "mode_phase_control",
+      "base": "mode_phase_control",
+      "endpoint": null,
+      "description": "Configures the dimming technique..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "automatic",
+        "forward",
+        "reverse"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "toggle_s1",
+        "toggle_s2",
+        "on_s1",
+        "on_s2",
+        "off_s1",
+        "off_s2",
+        "recall_*_s1",
+        "recal_*_s2",
+        "brightness_move_up_s1",
+        "brightness_move_up_s2",
+        "brightness_move_down_s1",
+        "brightness_move_down_s2",
+        "brightness_stop_s1",
+        "brightness_stop_s2"
+      ]
+    }
+  ],
+  "warnings": []
+}

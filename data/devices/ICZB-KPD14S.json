@@ -1,0 +1,56 @@
+{
+  "model": "ICZB-KPD14S",
+  "file": "ICZB-KPD14S.md",
+  "vendor": "iCasa",
+  "description": "Zigbee 3.0 Keypad Pulse 4S",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ICZB-KPD14S.png",
+  "added_at": "2020-02-26T17:45:15Z",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_stop",
+        "brightness_move_up",
+        "brightness_move_down",
+        "recall_1",
+        "recall_2",
+        "recall_3",
+        "recall_4",
+        "store_1",
+        "store_2",
+        "store_3",
+        "store_4"
+      ]
+    }
+  ],
+  "warnings": []
+}

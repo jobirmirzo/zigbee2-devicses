@@ -1,0 +1,54 @@
+{
+  "model": "41E2PBSWMZ/356PB2MBTZ",
+  "file": "41E2PBSWMZ_356PB2MBTZ.md",
+  "vendor": "Schneider Electric",
+  "description": "Wiser 40/300-Series module switch 2AX",
+  "image": "https://www.zigbee2mqtt.io/images/devices/41E2PBSWMZ-356PB2MBTZ.png",
+  "added_at": "2022-01-31T17:02:38",
+  "exposes_summary": "switch (state), indicator_mode",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode_smart",
+      "base": "indicator_mode",
+      "endpoint": "smart",
+      "description": "Set Indicator Mode for smart switch..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "reverse_with_load",
+        "consistent_with_load",
+        "always_off",
+        "always_on",
+        "flash_on_click"
+      ]
+    }
+  ],
+  "warnings": []
+}

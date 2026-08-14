@@ -1,0 +1,159 @@
+{
+  "model": "Presence_Sensor_v2",
+  "file": "Presence_Sensor_v2.md",
+  "vendor": "Bacchus",
+  "description": "Bacchus presence sensor with illuminance",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Presence_Sensor_v2.png",
+  "added_at": "2025-05-01T17:56:31",
+  "exposes_summary": "occupancy, illuminance, local_time, led_mode, illuminance_threshold, min_time, max_time, sensor, day_output, night_output",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy_1",
+      "base": "occupancy",
+      "endpoint": "1",
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Local time",
+      "type": "text",
+      "property": "local_time",
+      "base": "local_time",
+      "endpoint": null,
+      "description": "Local time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Led mode",
+      "type": "enum",
+      "property": "led_mode_3",
+      "base": "led_mode",
+      "endpoint": "3",
+      "description": "Led working mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Always",
+        "Never",
+        "Night"
+      ]
+    },
+    {
+      "name": "Illuminance threshold",
+      "type": "numeric",
+      "property": "illuminance_threshold",
+      "base": "illuminance_threshold",
+      "endpoint": null,
+      "description": "Illuminance threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 50000,
+      "unit": "raw"
+    },
+    {
+      "name": "Min time",
+      "type": "text",
+      "property": "min_time",
+      "base": "min_time",
+      "endpoint": null,
+      "description": "Day start.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Max time",
+      "type": "text",
+      "property": "max_time",
+      "base": "max_time",
+      "endpoint": null,
+      "description": "Day end.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Sensor",
+      "type": "binary",
+      "property": "sensor_1",
+      "base": "sensor",
+      "endpoint": "1",
+      "description": "Enable sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Day output",
+      "type": "binary",
+      "property": "day_output_2",
+      "base": "day_output",
+      "endpoint": "2",
+      "description": "Day binding output.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Night output",
+      "type": "binary",
+      "property": "night_output_3",
+      "base": "night_output",
+      "endpoint": "3",
+      "description": "Night binding output.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

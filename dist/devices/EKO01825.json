@@ -1,0 +1,165 @@
+{
+  "model": "EKO01825",
+  "file": "EKO01825.md",
+  "vendor": "Elko",
+  "description": "PowerTag power sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EKO01825.png",
+  "added_at": "2026-03-31T19:04:39",
+  "exposes_summary": "power, power_apparent, power_factor, energy, ac_frequency, voltage_phase_ab, voltage_phase_bc, voltage_phase_ca, current_phase_a, current_phase_b, current_phase_c",
+  "exposes": [
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power apparent",
+      "type": "numeric",
+      "property": "power_apparent",
+      "base": "power_apparent",
+      "endpoint": null,
+      "description": "Instantaneous measured apparent power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "VA"
+    },
+    {
+      "name": "Power factor",
+      "type": "numeric",
+      "property": "power_factor",
+      "base": "power_factor",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "AC frequency",
+      "type": "numeric",
+      "property": "ac_frequency",
+      "base": "ac_frequency",
+      "endpoint": null,
+      "description": "Measured electrical AC frequency.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Voltage phase ab",
+      "type": "numeric",
+      "property": "voltage_phase_ab",
+      "base": "voltage_phase_ab",
+      "endpoint": null,
+      "description": "Measured electrical potential value between phase L1 and L2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage phase bc",
+      "type": "numeric",
+      "property": "voltage_phase_bc",
+      "base": "voltage_phase_bc",
+      "endpoint": null,
+      "description": "Measured electrical potential value between phase L2 and L3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage phase ca",
+      "type": "numeric",
+      "property": "voltage_phase_ca",
+      "base": "voltage_phase_ca",
+      "endpoint": null,
+      "description": "Measured electrical potential value between phase L1 and L3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current phase a",
+      "type": "numeric",
+      "property": "current_phase_a",
+      "base": "current_phase_a",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current on phase L1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current phase b",
+      "type": "numeric",
+      "property": "current_phase_b",
+      "base": "current_phase_b",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current on phase L2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current phase c",
+      "type": "numeric",
+      "property": "current_phase_c",
+      "base": "current_phase_c",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current on phase L3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    }
+  ],
+  "warnings": []
+}

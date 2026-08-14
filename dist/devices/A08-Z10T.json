@@ -1,0 +1,123 @@
+{
+  "model": "A08-Z10T",
+  "file": "A08-Z10T.md",
+  "vendor": "Lincukoo",
+  "description": "Smart sound and flash siren",
+  "image": "https://www.zigbee2mqtt.io/images/devices/A08-Z10T.png",
+  "added_at": "2026-01-31T13:10:42",
+  "exposes_summary": "alarm_state, alarm_volume, alarm_time, mute, alarm_ringtone",
+  "exposes": [
+    {
+      "name": "Alarm state",
+      "type": "enum",
+      "property": "alarm_state",
+      "base": "alarm_state",
+      "endpoint": null,
+      "description": "alarm status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "alarm_sound",
+        "alarm_light",
+        "alarm_sound_light",
+        "normal"
+      ]
+    },
+    {
+      "name": "Alarm volume",
+      "type": "enum",
+      "property": "alarm_volume",
+      "base": "alarm_volume",
+      "endpoint": null,
+      "description": "alarm volume.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "middle",
+        "high",
+        "mute"
+      ]
+    },
+    {
+      "name": "Alarm time",
+      "type": "numeric",
+      "property": "alarm_time",
+      "base": "alarm_time",
+      "endpoint": null,
+      "description": "alarm times.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "times"
+    },
+    {
+      "name": "Mute",
+      "type": "binary",
+      "property": "mute",
+      "base": "mute",
+      "endpoint": null,
+      "description": "mute.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Alarm ringtone",
+      "type": "enum",
+      "property": "alarm_ringtone",
+      "base": "alarm_ringtone",
+      "endpoint": null,
+      "description": "alarm ringtone.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "ringtone_1",
+        "ringtone_2",
+        "ringtone_3",
+        "ringtone_4",
+        "ringtone_5",
+        "ringtone_6",
+        "ringtone_7",
+        "ringtone_8",
+        "ringtone_9",
+        "ringtone_10",
+        "ringtone_11",
+        "ringtone_12",
+        "ringtone_13",
+        "ringtone_14",
+        "ringtone_15",
+        "ringtone_16",
+        "ringtone_17",
+        "ringtone_18",
+        "ringtone_19",
+        "ringtone_20",
+        "ringtone_21",
+        "ringtone_22",
+        "ringtone_23",
+        "ringtone_24",
+        "ringtone_25",
+        "ringtone_26",
+        "ringtone_27"
+      ]
+    }
+  ],
+  "warnings": []
+}

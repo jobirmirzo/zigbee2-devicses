@@ -1,0 +1,42 @@
+{
+  "model": "AV2010/22A",
+  "file": "AV2010_22A.md",
+  "vendor": "SMaBiT (Bitron Video)",
+  "description": "Design motion detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/AV2010-22A.png",
+  "added_at": "2020-06-10T16:45:59Z",
+  "exposes_summary": "occupancy, battery_low",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

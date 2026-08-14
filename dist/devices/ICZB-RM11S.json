@@ -1,0 +1,62 @@
+{
+  "model": "ICZB-RM11S",
+  "file": "ICZB-RM11S.md",
+  "vendor": "iCasa",
+  "description": "Zigbee 3.0 remote control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ICZB-RM11S.png",
+  "added_at": "2020-11-01T12:47:02Z",
+  "exposes_summary": "battery, action, action_group",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "recall_*",
+        "on",
+        "off",
+        "brightness_stop",
+        "brightness_move_up",
+        "brightness_move_down"
+      ]
+    },
+    {
+      "name": "Action group",
+      "type": "numeric",
+      "property": "action_group",
+      "base": "action_group",
+      "endpoint": null,
+      "description": "Group where the action was triggered on.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

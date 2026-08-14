@@ -1,0 +1,48 @@
+{
+  "model": "ED-10011",
+  "file": "ED-10011.md",
+  "vendor": "EcoDim",
+  "description": "Zigbee 2 button wall switch - black",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ED-10011.png",
+  "added_at": "2020-09-01T19:56:51Z",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_1",
+        "off_1",
+        "brightness_move_up_1",
+        "brightness_move_down_1",
+        "brightness_stop_1"
+      ]
+    }
+  ],
+  "warnings": []
+}

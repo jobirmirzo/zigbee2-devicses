@@ -1,0 +1,152 @@
+{
+  "model": "L101Ze-SMN",
+  "file": "L101Ze-SMN.md",
+  "vendor": "LYTKO",
+  "description": "Single channel thermostat with small display",
+  "image": "https://www.zigbee2mqtt.io/images/devices/L101Ze-SMN.png",
+  "added_at": "2025-11-30T20:32:43",
+  "exposes_summary": "climate (local_temperature, local_temperature_calibration, occupied_heating_setpoint, system_mode, running_mode), identify, child_lock, occupied_setback, sensor_type, target_first",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "3",
+      "features": [
+        {
+          "property": "local_temperature_3",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration_3",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint_3",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 40,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "system_mode_3",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_mode_3",
+          "base": "running_mode",
+          "value_min": 5,
+          "value_max": 40,
+          "values": [
+            "off",
+            "heat"
+          ],
+          "unit": "°C",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "lock",
+      "value_off": "unlock"
+    },
+    {
+      "name": "Occupied setback",
+      "type": "numeric",
+      "property": "occupied_setback_3",
+      "base": "occupied_setback",
+      "endpoint": "3",
+      "description": "Hysteresis.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 2.5,
+      "unit": "°C"
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor_type_3",
+      "base": "sensor_type",
+      "endpoint": "3",
+      "description": "Sensor type.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "3.3K",
+        "5.0K",
+        "6.8K",
+        "10.0K",
+        "12.0K",
+        "14.8K",
+        "15.0K",
+        "20.0K",
+        "33.0K",
+        "47.0K"
+      ]
+    },
+    {
+      "name": "First temperature",
+      "type": "enum",
+      "property": "target_first_3",
+      "base": "target_first",
+      "endpoint": "3",
+      "description": "Display target/current temperature first.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Target",
+        "Current"
+      ]
+    }
+  ],
+  "warnings": []
+}

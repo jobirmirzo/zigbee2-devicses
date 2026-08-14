@@ -1,0 +1,72 @@
+{
+  "model": "GZCGQ11LM",
+  "file": "GZCGQ11LM.md",
+  "vendor": "Aqara",
+  "description": "Light sensor T1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GZCGQ11LM.png",
+  "added_at": "2021-09-01T18:11:17Z",
+  "exposes_summary": "battery, voltage, detection_period, illuminance",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Detection period",
+      "type": "numeric",
+      "property": "detection_period",
+      "base": "detection_period",
+      "endpoint": null,
+      "description": "Time interval in seconds to report after light changes.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 59,
+      "unit": "s"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

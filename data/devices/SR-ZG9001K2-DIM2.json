@@ -1,0 +1,55 @@
+{
+  "model": "SR-ZG9001K2-DIM2",
+  "file": "SR-ZG9001K2-DIM2.md",
+  "vendor": "Sunricher",
+  "description": "Zigbee 2 button wall switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SR-ZG9001K2-DIM2.png",
+  "added_at": "2021-01-31T22:24:43Z",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_1",
+        "off_1",
+        "stop_1",
+        "brightness_move_up_1",
+        "brightness_move_down_1",
+        "brightness_stop_1",
+        "on_2",
+        "off_2",
+        "stop_2",
+        "brightness_move_up_2",
+        "brightness_move_down_2",
+        "brightness_stop_2"
+      ]
+    }
+  ],
+  "warnings": []
+}

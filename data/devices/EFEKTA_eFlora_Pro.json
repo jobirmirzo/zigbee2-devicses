@@ -1,0 +1,225 @@
+{
+  "model": "EFEKTA_eFlora_Pro",
+  "file": "EFEKTA_eFlora_Pro.md",
+  "vendor": "EFEKTA",
+  "description": "Plant Wattering Sensor with e-ink display 2.13",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_eFlora_Pro.png",
+  "added_at": "2025-04-01T18:30:52",
+  "exposes_summary": "soil_moisture, battery, voltage, battery_low, temperature, humidity, illuminance, lux_factor, reading_interval, invert, fastmode, lower_level, upper_level, temperature_compensation",
+  "exposes": [
+    {
+      "name": "Soil moisture",
+      "type": "numeric",
+      "property": "soil_moisture",
+      "base": "soil_moisture",
+      "endpoint": null,
+      "description": "Measured soil moisture value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Lux factor",
+      "type": "numeric",
+      "property": "lux_factor",
+      "base": "lux_factor",
+      "endpoint": null,
+      "description": "Lux factor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 50
+    },
+    {
+      "name": "Reading interval",
+      "type": "numeric",
+      "property": "reading_interval",
+      "base": "reading_interval",
+      "endpoint": null,
+      "description": "Setting the time in minutes, by default 3 minutes.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 360,
+      "unit": "min"
+    },
+    {
+      "name": "Invert",
+      "type": "enum",
+      "property": "invert",
+      "base": "invert",
+      "endpoint": null,
+      "description": "Invert display color.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "BW",
+        "WB"
+      ]
+    },
+    {
+      "name": "Fastmode",
+      "type": "enum",
+      "property": "fastmode",
+      "base": "fastmode",
+      "endpoint": null,
+      "description": "Display refresh mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Fast",
+        "Ultra Fast"
+      ]
+    },
+    {
+      "name": "Lower level",
+      "type": "numeric",
+      "property": "lower_level",
+      "base": "lower_level",
+      "endpoint": null,
+      "description": "Lower level of soil moisture 0% is:.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 99,
+      "unit": "%"
+    },
+    {
+      "name": "Upper level",
+      "type": "numeric",
+      "property": "upper_level",
+      "base": "upper_level",
+      "endpoint": null,
+      "description": "Upper level of soil moisture 100% is:.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature compensation",
+      "type": "binary",
+      "property": "temperature_compensation",
+      "base": "temperature_compensation",
+      "endpoint": null,
+      "description": "Temperature compensation.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,120 @@
+{
+  "model": "SNZB-02M",
+  "file": "SNZB-02M.md",
+  "vendor": "SONOFF",
+  "description": "Temperature and humidity sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SNZB-02M.png",
+  "added_at": "2026-04-30T19:57:28",
+  "exposes_summary": "battery, temperature, humidity, pressure, temperature_calibration, humidity_calibration, pressure_calibration",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Pressure",
+      "type": "numeric",
+      "property": "pressure",
+      "base": "pressure",
+      "endpoint": null,
+      "description": "Atmospheric pressure in hPa reported via manufacturer attribute 0x0004 (manuCode 0x1286)..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "hPa"
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Calibrated temperature target value (supports 0.1°C step). Note: wake up the device by pressing the button on the back before changing this value..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -20,
+      "value_max": 60,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Calibrated relative humidity target value (supports 0.1% step). Note: wake up the device by pressing the button on the back before changing this value..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 95,
+      "unit": "%"
+    },
+    {
+      "name": "Pressure calibration",
+      "type": "numeric",
+      "property": "pressure_calibration",
+      "base": "pressure_calibration",
+      "endpoint": null,
+      "description": "Pressure compensation offset applied directly to pressure reading in hPa (positive adds, negative subtracts). Range: -400 to 400 hPa. Note: wake up the device by pressing the button on the back before changing this value..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -400,
+      "value_max": 400,
+      "unit": "hPa"
+    }
+  ],
+  "warnings": []
+}

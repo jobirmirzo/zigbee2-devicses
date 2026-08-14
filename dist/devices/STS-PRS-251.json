@@ -1,0 +1,79 @@
+{
+  "model": "STS-PRS-251",
+  "file": "STS-PRS-251.md",
+  "vendor": "SmartThings",
+  "description": "Arrival sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/STS-PRS-251.png",
+  "added_at": "2019-07-22T20:08:17Z",
+  "exposes_summary": "battery, presence, action, beep",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Beep",
+      "type": "enum",
+      "property": "beep",
+      "base": "beep",
+      "endpoint": null,
+      "description": "Trigger beep for x seconds.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "2",
+        "5",
+        "10",
+        "15",
+        "30"
+      ]
+    }
+  ],
+  "warnings": []
+}

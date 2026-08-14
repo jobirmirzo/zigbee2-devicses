@@ -1,0 +1,89 @@
+{
+  "model": "AU-A1ZBDSS",
+  "file": "AU-A1ZBDSS.md",
+  "vendor": "Aurora Lighting",
+  "description": "Double smart socket UK",
+  "image": "https://www.zigbee2mqtt.io/images/devices/AU-A1ZBDSS.png",
+  "added_at": "2021-03-30T20:29:35Z",
+  "exposes_summary": "switch (state), power, brightness",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "left",
+      "features": [
+        {
+          "property": "state_left",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "right",
+      "features": [
+        {
+          "property": "state_right",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power_left",
+      "base": "power",
+      "endpoint": "left",
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power_right",
+      "base": "power",
+      "endpoint": "right",
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Brightness",
+      "type": "numeric",
+      "property": "brightness",
+      "base": "brightness",
+      "endpoint": null,
+      "description": "Brightness of this backlight LED.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254
+    }
+  ],
+  "warnings": []
+}

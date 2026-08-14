@@ -1,0 +1,201 @@
+{
+  "model": "E2006",
+  "file": "E2006.md",
+  "vendor": "IKEA",
+  "description": "STARKVIND air purifier table",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E2006.png",
+  "added_at": "2021-09-29T21:38:40Z",
+  "exposes_summary": "fan (state, mode), fan_speed, pm25, air_quality, led_enable, child_lock, replace_filter, filter_age, device_age, identify",
+  "exposes": [
+    {
+      "name": "Fan",
+      "type": "fan",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "fan_state",
+          "base": "fan_state",
+          "values": [
+            "off",
+            "auto",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "readable": true
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "values": [
+            "off",
+            "auto",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Fan speed",
+      "type": "numeric",
+      "property": "fan_speed",
+      "base": "fan_speed",
+      "endpoint": null,
+      "description": "Current fan speed.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 9
+    },
+    {
+      "name": "PM25",
+      "type": "numeric",
+      "property": "pm25",
+      "base": "pm25",
+      "endpoint": null,
+      "description": "Measured PM2.5 (particulate matter) concentration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    },
+    {
+      "name": "Air quality",
+      "type": "enum",
+      "property": "air_quality",
+      "base": "air_quality",
+      "endpoint": null,
+      "description": "Calculated air quality.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "excellent",
+        "good",
+        "moderate",
+        "poor",
+        "unhealthy",
+        "hazardous",
+        "out_of_range",
+        "unknown"
+      ]
+    },
+    {
+      "name": "Led enable",
+      "type": "binary",
+      "property": "led_enable",
+      "base": "led_enable",
+      "endpoint": null,
+      "description": "Controls the LED.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Controls physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Replace filter",
+      "type": "binary",
+      "property": "replace_filter",
+      "base": "replace_filter",
+      "endpoint": null,
+      "description": "Indicates if the filter is older than 6 months and needs replacing.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Filter age",
+      "type": "numeric",
+      "property": "filter_age",
+      "base": "filter_age",
+      "endpoint": null,
+      "description": "Duration the filter has been used.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "minutes"
+    },
+    {
+      "name": "Device age",
+      "type": "numeric",
+      "property": "device_age",
+      "base": "device_age",
+      "endpoint": null,
+      "description": "Duration the air purifier has been used.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "minutes"
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    }
+  ],
+  "warnings": []
+}

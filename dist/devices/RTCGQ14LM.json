@@ -1,0 +1,134 @@
+{
+  "model": "RTCGQ14LM",
+  "file": "RTCGQ14LM.md",
+  "vendor": "Aqara",
+  "description": "Motion sensor P1",
+  "image": "https://www.zigbee2mqtt.io/images/devices/RTCGQ14LM.png",
+  "added_at": "2022-04-30T08:00:58",
+  "exposes_summary": "occupancy, illuminance, motion_sensitivity, detection_interval, trigger_indicator, device_temperature, battery, voltage",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Motion sensitivity",
+      "type": "enum",
+      "property": "motion_sensitivity",
+      "base": "motion_sensitivity",
+      "endpoint": null,
+      "description": "Select motion sensitivity to use. Press pairing button right before changing this otherwise it will fail..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Detection interval",
+      "type": "numeric",
+      "property": "detection_interval",
+      "base": "detection_interval",
+      "endpoint": null,
+      "description": "Time interval between action detection. Press pairing button right before changing this otherwise it will fail..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 65535,
+      "unit": "s"
+    },
+    {
+      "name": "Trigger indicator",
+      "type": "binary",
+      "property": "trigger_indicator",
+      "base": "trigger_indicator",
+      "endpoint": null,
+      "description": "When this option is enabled then blue LED will blink once when motion is detected. Press pairing button right before changing this otherwise it will fail..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

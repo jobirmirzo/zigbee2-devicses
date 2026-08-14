@@ -1,0 +1,115 @@
+{
+  "model": "NAS-AB03B3",
+  "file": "NAS-AB03B3.md",
+  "vendor": "eWeLink",
+  "description": "Indoor sound and light alarm",
+  "image": "https://www.zigbee2mqtt.io/images/devices/NAS-AB03B3.png",
+  "added_at": "2026-03-31T19:04:38",
+  "exposes_summary": "alarm, battery_low, battery, alarm_duration, volume, melody",
+  "exposes": [
+    {
+      "name": "Alarm",
+      "type": "binary",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Turn the siren alarm on or off.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Alarm duration",
+      "type": "numeric",
+      "property": "alarm_duration",
+      "base": "alarm_duration",
+      "endpoint": null,
+      "description": "Duration in seconds of the alarm.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 1800,
+      "unit": "s"
+    },
+    {
+      "name": "Volume",
+      "type": "numeric",
+      "property": "volume",
+      "base": "volume",
+      "endpoint": null,
+      "description": "Indoor siren volume level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 15
+    },
+    {
+      "name": "Melody",
+      "type": "enum",
+      "property": "melody",
+      "base": "melody",
+      "endpoint": null,
+      "description": "Alarm melody.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ]
+    }
+  ],
+  "warnings": []
+}

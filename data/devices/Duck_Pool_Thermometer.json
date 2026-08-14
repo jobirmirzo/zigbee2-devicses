@@ -1,0 +1,88 @@
+{
+  "model": "Duck Pool Thermometer",
+  "file": "Duck_Pool_Thermometer.md",
+  "vendor": "Bacchus",
+  "description": "Bacchus Duck pool thermomemeter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Duck-Pool-Thermometer.png",
+  "added_at": "2026-03-31T19:04:19",
+  "exposes_summary": "temperature, measurment_period, threshold, battery, voltage",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Measurment period",
+      "type": "numeric",
+      "property": "measurment_period",
+      "base": "measurment_period",
+      "endpoint": null,
+      "description": "Temperature measurement period.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "sec"
+    },
+    {
+      "name": "Threshold",
+      "type": "numeric",
+      "property": "threshold",
+      "base": "threshold",
+      "endpoint": null,
+      "description": "Min threshold for alarm binding.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 30,
+      "unit": "°C"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

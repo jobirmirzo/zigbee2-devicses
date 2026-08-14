@@ -1,0 +1,88 @@
+{
+  "model": "VES-ZB-PIR-21",
+  "file": "VES-ZB-PIR-21.md",
+  "vendor": "Vesternet",
+  "description": "Zigbee motion sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/VES-ZB-PIR-21.png",
+  "added_at": "2026-04-30T19:57:28",
+  "exposes_summary": "battery, occupancy_alarm_1, occupancy_alarm_2, tamper, battery_low",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Occupancy alarm 1",
+      "type": "binary",
+      "property": "occupancy_alarm_1",
+      "base": "occupancy_alarm_1",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy (alarm_1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy alarm 2",
+      "type": "binary",
+      "property": "occupancy_alarm_2",
+      "base": "occupancy_alarm_2",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy (alarm_2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates whether the battery of the device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

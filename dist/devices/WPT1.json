@@ -1,0 +1,28 @@
+{
+  "model": "WPT1",
+  "file": "WPT1.md",
+  "vendor": "Hive",
+  "description": "Heating thermostat remote control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WPT1.png",
+  "added_at": "2020-02-04T20:38:05Z",
+  "exposes_summary": "battery",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

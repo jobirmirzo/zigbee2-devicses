@@ -1,0 +1,234 @@
+{
+  "model": "MINI-ZB2GS-L",
+  "file": "MINI-ZB2GS-L.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee dual-channel smart switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MINI-ZB2GS-L.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "switch (state), power_on_behavior, external_trigger_mode, detach_relay_mode, delayed_power_on_state_channel_1, delayed_power_on_state_channel_2, delayed_power_on_time, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_l1",
+      "base": "power_on_behavior",
+      "endpoint": "l1",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_l2",
+      "base": "power_on_behavior",
+      "endpoint": "l2",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "External trigger mode",
+      "type": "enum",
+      "property": "external_trigger_mode_l1",
+      "base": "external_trigger_mode",
+      "endpoint": "l1",
+      "description": "External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "edge",
+        "pulse",
+        "following(off)",
+        "following(on)"
+      ]
+    },
+    {
+      "name": "External trigger mode",
+      "type": "enum",
+      "property": "external_trigger_mode_l2",
+      "base": "external_trigger_mode",
+      "endpoint": "l2",
+      "description": "External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "edge",
+        "pulse",
+        "following(off)",
+        "following(on)"
+      ]
+    },
+    {
+      "name": "Detach relay mode",
+      "type": "composite",
+      "property": "detach_relay_mode",
+      "base": "detach_relay_mode",
+      "endpoint": null,
+      "description": "Relay separation mode. Can be used when the load is a smart device (such as smart light), when we control the wall switch, do not want to turn off the power of the smart light, but through a scene command to control the smart light on or off, then we can enable the relay separation mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "detach_relay_outlet1",
+          "type": "binary",
+          "description": "Enable/disable detach relay.",
+          "values": [
+            "ENABLE",
+            "DISABLE"
+          ]
+        },
+        {
+          "property": "detach_relay_outlet2",
+          "type": "binary",
+          "description": "Enable/disable detach relay.",
+          "values": [
+            "ENABLE",
+            "DISABLE"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Delayed power on state channel 1",
+      "type": "binary",
+      "property": "delayed_power_on_state_channel_1_l1",
+      "base": "delayed_power_on_state_channel_1",
+      "endpoint": "l1",
+      "description": "Delayed Power-on State(Channel 1).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Delayed power on state channel 2",
+      "type": "binary",
+      "property": "delayed_power_on_state_channel_2_l2",
+      "base": "delayed_power_on_state_channel_2",
+      "endpoint": "l2",
+      "description": "Delayed Power-on State(Channel 2).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Delayed power on time",
+      "type": "numeric",
+      "property": "delayed_power_on_time_l1",
+      "base": "delayed_power_on_time",
+      "endpoint": "l1",
+      "description": "Delayed Power-on time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 3599.5,
+      "unit": "seconds"
+    },
+    {
+      "name": "Delayed power on time",
+      "type": "numeric",
+      "property": "delayed_power_on_time_l2",
+      "base": "delayed_power_on_time",
+      "endpoint": "l2",
+      "description": "Delayed Power-on time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 3599.5,
+      "unit": "seconds"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "toggle_l1",
+        "toggle_l2"
+      ]
+    }
+  ],
+  "warnings": []
+}

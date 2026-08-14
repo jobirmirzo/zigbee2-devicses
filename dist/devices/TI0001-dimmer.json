@@ -1,0 +1,41 @@
+{
+  "model": "TI0001-dimmer",
+  "file": "TI0001-dimmer.md",
+  "vendor": "Livolo",
+  "description": "Zigbee dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TI0001-dimmer.png",
+  "added_at": "2021-02-05T19:15:16Z",
+  "exposes_summary": "light (state, brightness)",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

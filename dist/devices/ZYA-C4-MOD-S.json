@@ -1,0 +1,133 @@
+{
+  "model": "ZYA-C4-MOD-S",
+  "file": "ZYA-C4-MOD-S.md",
+  "vendor": "Yale",
+  "description": "Control4 module for Yale KeyFree/Keyless/Doorman/Assure/nexTouch locks",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZYA-C4-MOD-S.png",
+  "added_at": "2022-09-17T10:00:00Z",
+  "exposes_summary": "lock (state, lock_state), battery, battery_low, auto_lock_time, volume, action",
+  "exposes": [
+    {
+      "name": "Lock",
+      "type": "lock",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "LOCK",
+            "UNLOCK"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Auto lock time",
+      "type": "enum",
+      "property": "auto_lock_time",
+      "base": "auto_lock_time",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "30seconds",
+        "60seconds",
+        "2minutes",
+        "3minutes"
+      ]
+    },
+    {
+      "name": "Volume",
+      "type": "enum",
+      "property": "volume",
+      "base": "volume",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "silent",
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "unknown",
+        "lock",
+        "unlock",
+        "lock_failure_invalid_pin_or_id",
+        "lock_failure_invalid_schedule",
+        "unlock_failure_invalid_pin_or_id",
+        "unlock_failure_invalid_schedule",
+        "one_touch_lock",
+        "key_lock",
+        "key_unlock",
+        "auto_lock",
+        "schedule_lock",
+        "schedule_unlock",
+        "manual_lock",
+        "manual_unlock",
+        "non_access_user_operational_event"
+      ]
+    }
+  ],
+  "warnings": []
+}

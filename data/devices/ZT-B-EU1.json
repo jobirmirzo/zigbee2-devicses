@@ -1,0 +1,46 @@
+{
+  "model": "ZT-B-EU1",
+  "file": "ZT-B-EU1.md",
+  "vendor": "Moes",
+  "description": "Scene remote with 1 key",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZT-B-EU1.png",
+  "added_at": "2026-01-01T13:27:46",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single",
+        "double",
+        "hold"
+      ]
+    }
+  ],
+  "warnings": []
+}

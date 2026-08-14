@@ -1,0 +1,126 @@
+{
+  "model": "ZG-226Z",
+  "file": "ZG-226Z.md",
+  "vendor": "HOBEIAN",
+  "description": "Water leak alarm",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-226Z.png",
+  "added_at": "2026-03-27T15:19:08",
+  "exposes_summary": "water_leak, alarm, muffling, alarm_time, alarm_volume, alarm_ring, battery",
+  "exposes": [
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Alarm",
+      "type": "binary",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Audible and visual alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Muffling",
+      "type": "binary",
+      "property": "muffling",
+      "base": "muffling",
+      "endpoint": null,
+      "description": "Stop alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Alarm time",
+      "type": "numeric",
+      "property": "alarm_time",
+      "base": "alarm_time",
+      "endpoint": null,
+      "description": "Alarm sounding time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1800,
+      "unit": "s"
+    },
+    {
+      "name": "Alarm volume",
+      "type": "enum",
+      "property": "alarm_volume",
+      "base": "alarm_volume",
+      "endpoint": null,
+      "description": "Alarm Volume.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "middle",
+        "high",
+        "mute"
+      ]
+    },
+    {
+      "name": "Alarm ring",
+      "type": "enum",
+      "property": "alarm_ring",
+      "base": "alarm_ring",
+      "endpoint": null,
+      "description": "Alarm Volume.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "mute",
+        "beep",
+        "music"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

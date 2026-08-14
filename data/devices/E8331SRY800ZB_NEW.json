@@ -1,0 +1,48 @@
+{
+  "model": "E8331SRY800ZB_NEW",
+  "file": "E8331SRY800ZB_NEW.md",
+  "vendor": "Schneider Electric",
+  "description": "Wiser AvatarOn 1G onoff switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E8331SRY800ZB_NEW.png",
+  "added_at": "2024-10-31T20:34:53",
+  "exposes_summary": "switch (state), indicator_mode",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode",
+      "base": "indicator_mode",
+      "endpoint": null,
+      "description": "Set indicator mode for switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "reverse_with_load",
+        "consistent_with_load",
+        "always_off",
+        "always_on"
+      ]
+    }
+  ],
+  "warnings": []
+}

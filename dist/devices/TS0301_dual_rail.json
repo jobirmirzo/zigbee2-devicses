@@ -1,0 +1,94 @@
+{
+  "model": "TS0301_dual_rail",
+  "file": "TS0301_dual_rail.md",
+  "vendor": "Tuya",
+  "description": "Top-down bottom-up dual motor shade",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0301_dual_rail.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "cover (state, position), battery",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": "bottom",
+      "features": [
+        {
+          "property": "state_bottom",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_bottom",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_bottom",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": "top",
+      "features": [
+        {
+          "property": "state_top",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_top",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        },
+        {
+          "property": "position_top",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

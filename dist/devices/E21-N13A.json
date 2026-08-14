@@ -1,0 +1,41 @@
+{
+  "model": "E21-N13A",
+  "file": "E21-N13A.md",
+  "vendor": "Sengled",
+  "description": "Smart LED (A19)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E21-N13A.png",
+  "added_at": "2021-09-01T18:11:17Z",
+  "exposes_summary": "light (state, brightness)",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    }
+  ],
+  "warnings": []
+}

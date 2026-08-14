@@ -1,0 +1,160 @@
+{
+  "model": "GX02",
+  "file": "GX02.md",
+  "vendor": "GIEX",
+  "description": "Water valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GX02.png",
+  "added_at": "2024-03-31T18:43:56",
+  "exposes_summary": "battery, state, mode, cycle_irrigation_num_times, irrigation_start_time, irrigation_end_time, last_irrigation_duration, water_consumed, irrigation_target, cycle_irrigation_interval",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "State.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Irrigation mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "duration",
+        "capacity"
+      ]
+    },
+    {
+      "name": "Cycle irrigation num times",
+      "type": "numeric",
+      "property": "cycle_irrigation_num_times",
+      "base": "cycle_irrigation_num_times",
+      "endpoint": null,
+      "description": "Number of cycle irrigation times, set to 0 for single cycle.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Irrigation start time",
+      "type": "text",
+      "property": "irrigation_start_time",
+      "base": "irrigation_start_time",
+      "endpoint": null,
+      "description": "Last irrigation start time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Irrigation end time",
+      "type": "text",
+      "property": "irrigation_end_time",
+      "base": "irrigation_end_time",
+      "endpoint": null,
+      "description": "Last irrigation end time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Last irrigation duration",
+      "type": "text",
+      "property": "last_irrigation_duration",
+      "base": "last_irrigation_duration",
+      "endpoint": null,
+      "description": "Last irrigation duration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Water consumed",
+      "type": "numeric",
+      "property": "water_consumed",
+      "base": "water_consumed",
+      "endpoint": null,
+      "description": "Last irrigation water consumption.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "L"
+    },
+    {
+      "name": "Irrigation target",
+      "type": "numeric",
+      "property": "irrigation_target",
+      "base": "irrigation_target",
+      "endpoint": null,
+      "description": "Irrigation target, duration in seconds or capacity in litres (depending on mode), set to 0 to leave the valve on indefinitely, for safety reasons the target will be forced to a minimum of 10 seconds in duration mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "seconds or litres"
+    },
+    {
+      "name": "Cycle irrigation interval",
+      "type": "numeric",
+      "property": "cycle_irrigation_interval",
+      "base": "cycle_irrigation_interval",
+      "endpoint": null,
+      "description": "Cycle irrigation interval.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "sec"
+    }
+  ],
+  "warnings": []
+}

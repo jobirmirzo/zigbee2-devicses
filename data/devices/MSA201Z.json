@@ -1,0 +1,428 @@
+{
+  "model": "MSA201Z",
+  "file": "MSA201Z.md",
+  "vendor": "Merrytek",
+  "description": "24 GHz human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MSA201Z.png",
+  "added_at": "2026-01-01T13:30:29",
+  "exposes_summary": "state, presence, current_status, illuminance, hold_delay_time, sensitivity, trigger_distance, forbidden_area, ai_self_learning, fast_setting, indicator, sensor_mode, single_mode, absence_circling_report, absence_circling_interval, find_device, enable_sensor, factory_reset, lux_mode, daylight_threshold, lux_report_mode, lux_timed_interval, lux_difference_threshold, lux_difference_value, interference_positions, home_environment",
+  "exposes": [
+    {
+      "name": "Status",
+      "type": "enum",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "absence",
+        "presence",
+        "disabled"
+      ]
+    },
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Current status",
+      "type": "enum",
+      "property": "current_status",
+      "base": "current_status",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "approaching",
+        "departing",
+        "clear"
+      ]
+    },
+    {
+      "name": "Luminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Hold delay time",
+      "type": "numeric",
+      "property": "hold_delay_time",
+      "base": "hold_delay_time",
+      "endpoint": null,
+      "description": "Delay (seconds) before switching from Presence to Absence after no motion is detected. Recommended ≥ 15s to avoid premature Absence switching..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 300,
+      "unit": "s"
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity of human presence detection: • High: suitable for environments with minimal motion interference, such as meeting rooms or cloakrooms away from windows. • Medium: suitable for most scenarios, such as living rooms or restaurants. • Low: suitable for environments with some minor motion interference, such as bedrooms. .",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Trigger distance",
+      "type": "numeric",
+      "property": "trigger_distance",
+      "base": "trigger_distance",
+      "endpoint": null,
+      "description": "Distance within which the sensor detects motion, adjustable from 0.5m to 4m, in 0.5m steps..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 4,
+      "unit": "m"
+    },
+    {
+      "name": "Forbidden area",
+      "type": "numeric",
+      "property": "forbidden_area",
+      "base": "forbidden_area",
+      "endpoint": null,
+      "description": "Distance from the sensor within which motion is ignored to prevent false detection (0-1.8m)..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1.8,
+      "unit": "m"
+    },
+    {
+      "name": "AI environment self-learning",
+      "type": "enum",
+      "property": "ai_self_learning",
+      "base": "ai_self_learning",
+      "endpoint": null,
+      "description": "AI self-learning to help the sensor ignore non-human motion in the environment. The learning process takes 1 minute, during which the sensor will blink. Ensure the area is completely empty during this time..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "AI self-learning"
+      ]
+    },
+    {
+      "name": "Fast setting",
+      "type": "enum",
+      "property": "fast_setting",
+      "base": "fast_setting",
+      "endpoint": null,
+      "description": "Fast setting based on the size of the space: • Small: area less than 16m², e.g., tea room, bathroom. • Medium: area 16–25m², e.g., private office, public toilet, kitchen. • Large: area greater than 25m², e.g., open office, large conference room, living room. .",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "small",
+        "medium",
+        "large"
+      ]
+    },
+    {
+      "name": "LED indicator",
+      "type": "binary",
+      "property": "indicator",
+      "base": "indicator",
+      "endpoint": null,
+      "description": "LED indicator providing a visual signal when motion is detected or the sensor changes state..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Sensor mode",
+      "type": "enum",
+      "property": "sensor_mode",
+      "base": "sensor_mode",
+      "endpoint": null,
+      "description": "Operating mode of the radar sensor: • Presence: detects micro-movements for continuous occupancy detection. • Motion: detects larger movements while ignoring small activity to reduce false triggers. .",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "presence",
+        "motion"
+      ]
+    },
+    {
+      "name": "Single mode",
+      "type": "binary",
+      "property": "single_mode",
+      "base": "single_mode",
+      "endpoint": null,
+      "description": "Suitable for spaces where only one person is present at a time. The sensor maintains Presence while the person is within range and automatically switches to Absence 15 seconds after they leave..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Absence circling report",
+      "type": "binary",
+      "property": "absence_circling_report",
+      "base": "absence_circling_report",
+      "endpoint": null,
+      "description": "Periodic reporting of the Absence state after the sensor switches to Absence, it will send regular status updates automatically..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Absence circling interval",
+      "type": "numeric",
+      "property": "absence_circling_interval",
+      "base": "absence_circling_interval",
+      "endpoint": null,
+      "description": "Interval (minutes) between periodic Absence reports after switching to Absence..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 30,
+      "unit": "min"
+    },
+    {
+      "name": "Find device",
+      "type": "binary",
+      "property": "find_device",
+      "base": "find_device",
+      "endpoint": null,
+      "description": "Indicator LED flashes to help locate the sensor..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Enable sensor",
+      "type": "binary",
+      "property": "enable_sensor",
+      "base": "enable_sensor",
+      "endpoint": null,
+      "description": "Enable or disable the sensor..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Factory reset",
+      "type": "enum",
+      "property": "factory_reset",
+      "base": "factory_reset",
+      "endpoint": null,
+      "description": "Restores factory defaults, removing all customized settings..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "factory reset"
+      ]
+    },
+    {
+      "name": "Lux mode",
+      "type": "enum",
+      "property": "lux_mode",
+      "base": "lux_mode",
+      "endpoint": null,
+      "description": "Lux sensor operation mode: • Threshold: triggers based on a fixed daylight level. • Report: periodically reports light levels using time-based or change-based intervals. .",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "threshold",
+        "report"
+      ]
+    },
+    {
+      "name": "Daylight threshold",
+      "type": "numeric",
+      "property": "daylight_threshold",
+      "base": "daylight_threshold",
+      "endpoint": null,
+      "description": "Lux level defining sufficient natural light (daylight), applicable only when Lux mode is set to Threshold..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 3000,
+      "unit": "lux"
+    },
+    {
+      "name": "Lux report mode",
+      "type": "enum",
+      "property": "lux_report_mode",
+      "base": "lux_report_mode",
+      "endpoint": null,
+      "description": "Reporting style when Lux mode is set to Report: • Timed: sends light level updates at fixed intervals. • Difference: (Not implemented on this device) reports only when lux changes exceed a set threshold. .",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "timed",
+        "difference"
+      ]
+    },
+    {
+      "name": "Lux timed interval",
+      "type": "numeric",
+      "property": "lux_timed_interval",
+      "base": "lux_timed_interval",
+      "endpoint": null,
+      "description": "Interval (seconds) for timed lux reports when Lux report mode is set to Timed..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Lux difference threshold",
+      "type": "numeric",
+      "property": "lux_difference_threshold",
+      "base": "lux_difference_threshold",
+      "endpoint": null,
+      "description": "Lux change required to trigger a report when Lux report mode is set to Difference. Note: This device does not support Difference reporting, so this setting has no effect. .",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 2000,
+      "unit": "lux"
+    },
+    {
+      "name": "Lux difference value",
+      "type": "numeric",
+      "property": "lux_difference_value",
+      "base": "lux_difference_value",
+      "endpoint": null,
+      "description": "Reported lux value for Difference mode. Note: This device does not support Difference reporting, so this setting has no effect. .",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Interference positions",
+      "type": "text",
+      "property": "interference_positions",
+      "base": "interference_positions",
+      "endpoint": null,
+      "description": "List of distances (m) where non-human interference was detected..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Home environment",
+      "type": "enum",
+      "property": "home_environment",
+      "base": "home_environment",
+      "endpoint": null,
+      "description": "Environmental interference level detected by the sensor..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "normal",
+        "slight",
+        "strong",
+        "severe"
+      ]
+    }
+  ],
+  "warnings": []
+}

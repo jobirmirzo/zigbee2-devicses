@@ -1,0 +1,62 @@
+{
+  "model": "ZG-101Z/D",
+  "file": "ZG-101Z_D.md",
+  "vendor": "Tuya",
+  "description": "Smart knob",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-101Z-D.png",
+  "added_at": "2025-05-01T17:56:32",
+  "exposes_summary": "operation_mode, battery, action",
+  "exposes": [
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode",
+      "base": "operation_mode",
+      "endpoint": null,
+      "description": "Operation mode: \"command\" - for group control, \"event\" - for clicks.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "command",
+        "event"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "rotate_left",
+        "rotate_right"
+      ]
+    }
+  ],
+  "warnings": []
+}

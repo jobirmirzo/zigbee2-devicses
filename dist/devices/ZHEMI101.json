@@ -1,0 +1,257 @@
+{
+  "model": "ZHEMI101",
+  "file": "ZHEMI101.md",
+  "vendor": "Develco",
+  "description": "Energy/gas/water meter interface",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZHEMI101.png",
+  "added_at": "2021-02-28T13:58:01Z",
+  "exposes_summary": "energy, produced_energy, power, gas, water_consumed, flow, battery_low, unit_of_measure, metering_device_type, summation_formatting, demand_formatting, multiplier, divisor, pulse_configuration, interface_mode, unit_summation, check_meter",
+  "exposes": [
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Normalized cumulative energy. Source units such as kWh or BTU are converted to kWh..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Produced energy",
+      "type": "numeric",
+      "property": "produced_energy",
+      "base": "produced_energy",
+      "endpoint": null,
+      "description": "Normalized produced energy, when reported by the meter..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Normalized instantaneous demand. Source units such as kW or BTU/h are converted to kW..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kW"
+    },
+    {
+      "name": "Gas",
+      "type": "numeric",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Normalized cumulative gas volume. Source units are converted to cubic meters..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m³"
+    },
+    {
+      "name": "Water consumed",
+      "type": "numeric",
+      "property": "water_consumed",
+      "base": "water_consumed",
+      "endpoint": null,
+      "description": "Normalized cumulative water volume. Source units are converted to cubic meters..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m³"
+    },
+    {
+      "name": "Flow",
+      "type": "numeric",
+      "property": "flow",
+      "base": "flow",
+      "endpoint": null,
+      "description": "Normalized volume flow rate for gas or water. Source units are converted to cubic meters per hour..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m³/h"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Unit of measure",
+      "type": "numeric",
+      "property": "unit_of_measure",
+      "base": "unit_of_measure",
+      "endpoint": null,
+      "description": "Raw ZigBee Smart Energy UnitOfMeasure attribute..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Metering device type",
+      "type": "numeric",
+      "property": "metering_device_type",
+      "base": "metering_device_type",
+      "endpoint": null,
+      "description": "Raw ZigBee Smart Energy MeteringDeviceType attribute..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Summation formatting",
+      "type": "numeric",
+      "property": "summation_formatting",
+      "base": "summation_formatting",
+      "endpoint": null,
+      "description": "Raw ZigBee Smart Energy SummationFormatting attribute..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Demand formatting",
+      "type": "numeric",
+      "property": "demand_formatting",
+      "base": "demand_formatting",
+      "endpoint": null,
+      "description": "Raw ZigBee Smart Energy DemandFormatting attribute..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Multiplier",
+      "type": "numeric",
+      "property": "multiplier",
+      "base": "multiplier",
+      "endpoint": null,
+      "description": "Raw ZigBee Smart Energy Multiplier attribute..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Divisor",
+      "type": "numeric",
+      "property": "divisor",
+      "base": "divisor",
+      "endpoint": null,
+      "description": "Raw ZigBee Smart Energy Divisor attribute..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Pulse configuration",
+      "type": "numeric",
+      "property": "pulse_configuration",
+      "base": "pulse_configuration",
+      "endpoint": null,
+      "description": "Pulses per unit. Default 1000 imp/kWh for electricity. Range 0 to 65535.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535
+    },
+    {
+      "name": "Interface mode",
+      "type": "enum",
+      "property": "interface_mode",
+      "base": "interface_mode",
+      "endpoint": null,
+      "description": "Operating mode/probe.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "electricity",
+        "gas",
+        "water",
+        "kamstrup-kmp",
+        "linky",
+        "IEC62056-21",
+        "DSMR-2.3",
+        "DSMR-4.0"
+      ]
+    },
+    {
+      "name": "Unit summation",
+      "type": "numeric",
+      "property": "unit_summation",
+      "base": "unit_summation",
+      "endpoint": null,
+      "description": "Sets the meter summation in the normalized published unit: kWh for energy meters and m³ for gas/water meters..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 9007199254740991
+    },
+    {
+      "name": "Check meter",
+      "type": "binary",
+      "property": "check_meter",
+      "base": "check_meter",
+      "endpoint": null,
+      "description": "Is true if communication problem with meter is experienced.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

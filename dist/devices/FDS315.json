@@ -1,0 +1,88 @@
+{
+  "model": "FDS315",
+  "file": "FDS315.md",
+  "vendor": "OWON",
+  "description": "Fall Detection Sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/FDS315.png",
+  "added_at": "2025-07-01T17:54:38",
+  "exposes_summary": "status, breathing_rate, location_x, location_y, fall_detection_settings",
+  "exposes": [
+    {
+      "name": "Status",
+      "type": "enum",
+      "property": "status",
+      "base": "status",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "unoccupied",
+        "occupied",
+        "sitting",
+        "on_the_bed",
+        "low_posture",
+        "falling"
+      ]
+    },
+    {
+      "name": "Breathing rate",
+      "type": "numeric",
+      "property": "breathing_rate",
+      "base": "breathing_rate",
+      "endpoint": null,
+      "description": "Breathing rate..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "breaths/min"
+    },
+    {
+      "name": "Location x",
+      "type": "numeric",
+      "property": "location_x",
+      "base": "location_x",
+      "endpoint": null,
+      "description": "X coordinate of human activity..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "cm"
+    },
+    {
+      "name": "Location y",
+      "type": "numeric",
+      "property": "location_y",
+      "base": "location_y",
+      "endpoint": null,
+      "description": "Y coordinate of human activity..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "cm"
+    },
+    {
+      "name": "Fall detection settings",
+      "type": "text",
+      "property": "fall_detection_settings",
+      "base": "fall_detection_settings",
+      "endpoint": null,
+      "description": "Comma-separated values for bed, door and fall detection settings: bedUpperLeftX, bedUpperLeftY, bedLowerRightX, bedLowerRightY, doorCenterX, doorCenterY, leftFallDetectionRange, rightFallDetectionRange, frontFallDetectionRange. Put -21931 for disabled bed and door..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    }
+  ],
+  "warnings": []
+}

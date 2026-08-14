@@ -1,0 +1,28 @@
+{
+  "model": "E1746",
+  "file": "E1746.md",
+  "vendor": "IKEA",
+  "description": "TRADFRI signal repeater",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E1746.png",
+  "added_at": "2019-07-22T20:08:17Z",
+  "exposes_summary": "identify",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,126 @@
+{
+  "model": "TS0601_smoke_co",
+  "file": "TS0601_smoke_co.md",
+  "vendor": "Tuya",
+  "description": "Dual smoke CO sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_smoke_co.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "smoke, smoke_state, alarm_volume, battery, silence, alarm_switch, carbon_monoxide",
+  "exposes": [
+    {
+      "name": "Smoke",
+      "type": "binary",
+      "property": "smoke",
+      "base": "smoke",
+      "endpoint": null,
+      "description": "Indicates whether the device detected smoke.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Smoke sensor status",
+      "type": "enum",
+      "property": "smoke_state",
+      "base": "smoke_state",
+      "endpoint": null,
+      "description": "Possible states: alarm, none, detecting, unknown.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "alarm",
+        "none",
+        "detecting",
+        "unknown"
+      ]
+    },
+    {
+      "name": "Alarm volume",
+      "type": "enum",
+      "property": "alarm_volume",
+      "base": "alarm_volume",
+      "endpoint": null,
+      "description": "Alarm volume.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "mute",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Silence",
+      "type": "binary",
+      "property": "silence",
+      "base": "silence",
+      "endpoint": null,
+      "description": "Silence the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Alarm switch",
+      "type": "binary",
+      "property": "alarm_switch",
+      "base": "alarm_switch",
+      "endpoint": null,
+      "description": "Disable the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Carbon monoxide",
+      "type": "binary",
+      "property": "carbon_monoxide",
+      "base": "carbon_monoxide",
+      "endpoint": null,
+      "description": "Indicates if CO (carbon monoxide) is detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

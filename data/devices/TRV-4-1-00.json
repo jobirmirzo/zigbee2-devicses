@@ -1,0 +1,150 @@
+{
+  "model": "TRV-4-1-00",
+  "file": "TRV-4-1-00.md",
+  "vendor": "NodOn",
+  "description": "Thermostatic Radiateur Valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TRV-4-1-00.png",
+  "added_at": "2024-10-31T20:34:53",
+  "exposes_summary": "child_lock, climate (local_temperature, pi_heating_demand, local_temperature_calibration, occupied_heating_setpoint, unoccupied_heating_setpoint, system_mode), mirror_display, battery, trv_mode, valve_position",
+  "exposes": [
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "pi_heating_demand",
+          "base": "pi_heating_demand",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 7.5,
+          "value_max": 28.5,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "unoccupied_heating_setpoint",
+          "base": "unoccupied_heating_setpoint",
+          "value_min": 7.5,
+          "value_max": 28.5,
+          "values": [
+            "off",
+            "auto",
+            "heat"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "auto",
+            "heat"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Mirror display",
+      "type": "binary",
+      "property": "mirror_display",
+      "base": "mirror_display",
+      "endpoint": null,
+      "description": "Mirror display of the thermostat. Useful when it is mounted in a way where the display is presented upside down..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Trv mode",
+      "type": "enum",
+      "property": "trv_mode",
+      "base": "trv_mode",
+      "endpoint": null,
+      "description": "Select between direct control of the TRV via the `valve_position_mode` or automatic control of the TRV based on the `current_heating_setpoint`. When switched to manual mode the display shows a value from 0 (valve closed) to 100 (valve fully open) and the buttons on the device are disabled..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "auto",
+        "valve_position_mode",
+        "manual"
+      ]
+    },
+    {
+      "name": "Valve position",
+      "type": "numeric",
+      "property": "valve_position",
+      "base": "valve_position",
+      "endpoint": null,
+      "description": "Directly control the radiator valve when `trv_mode` is set to `valve_position_mode`.The values range from 0 (valve closed) to 100 (valve fully open) in %..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

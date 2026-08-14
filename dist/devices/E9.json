@@ -1,0 +1,72 @@
+{
+  "model": "E9",
+  "file": "E9.md",
+  "vendor": "Nous",
+  "description": "Household combustible gas detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E9.png",
+  "added_at": "2025-07-01T17:54:38",
+  "exposes_summary": "gas, warming_up, fault, end_of_life",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "binary",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Indicates whether the device detected combustible gas (Methane) and the buzzer is ringing. Also triggers when the test button is pressed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Warming up",
+      "type": "binary",
+      "property": "warming_up",
+      "base": "warming_up",
+      "endpoint": null,
+      "description": "Sensor preheating status: Takes 3 mins to complete after power-on.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Fault",
+      "type": "binary",
+      "property": "fault",
+      "base": "fault",
+      "endpoint": null,
+      "description": "Sensor fault indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "End of life",
+      "type": "binary",
+      "property": "end_of_life",
+      "base": "end_of_life",
+      "endpoint": null,
+      "description": "Indicates whether the sensor is past its certified service life (5 years) and should be replaced.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

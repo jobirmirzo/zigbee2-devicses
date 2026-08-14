@@ -1,0 +1,41 @@
+{
+  "model": "70012",
+  "file": "70012.md",
+  "vendor": "SuperLED",
+  "description": "SÄVY NUPPI, Zigbee LED-dimmer, triac, 5-200W",
+  "image": "https://www.zigbee2mqtt.io/images/devices/70012.png",
+  "added_at": "2025-05-01T17:59:09",
+  "exposes_summary": "light (state, brightness)",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    }
+  ],
+  "warnings": []
+}

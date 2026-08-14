@@ -1,0 +1,145 @@
+{
+  "model": "ZM25R1",
+  "file": "ZM25R1.md",
+  "vendor": "Zemismart",
+  "description": "Tubular motor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZM25R1.png",
+  "added_at": "2024-01-31T19:37:45",
+  "exposes_summary": "cover (state, position), motor_direction, motor_working_mode, remote_pair, upper_stroke_limit, middle_stroke_limit, lower_stroke_limit",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Motor direction",
+      "type": "enum",
+      "property": "motor_direction",
+      "base": "motor_direction",
+      "endpoint": null,
+      "description": "Motor direction.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "normal",
+        "reversed"
+      ]
+    },
+    {
+      "name": "Motor working mode",
+      "type": "enum",
+      "property": "motor_working_mode",
+      "base": "motor_working_mode",
+      "endpoint": null,
+      "description": "Motor operating mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "continuous",
+        "intermittently"
+      ]
+    },
+    {
+      "name": "Remote pair",
+      "type": "enum",
+      "property": "remote_pair",
+      "base": "remote_pair",
+      "endpoint": null,
+      "description": "Remote control pairing mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off"
+      ]
+    },
+    {
+      "name": "Upper stroke limit",
+      "type": "enum",
+      "property": "upper_stroke_limit",
+      "base": "upper_stroke_limit",
+      "endpoint": null,
+      "description": "Set / Reset the upper stroke limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SET",
+        "RESET"
+      ]
+    },
+    {
+      "name": "Middle stroke limit",
+      "type": "enum",
+      "property": "middle_stroke_limit",
+      "base": "middle_stroke_limit",
+      "endpoint": null,
+      "description": "Set / Reset the middle stroke limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SET",
+        "RESET"
+      ]
+    },
+    {
+      "name": "Lower stroke limit",
+      "type": "enum",
+      "property": "lower_stroke_limit",
+      "base": "lower_stroke_limit",
+      "endpoint": null,
+      "description": "Set / Reset the lower stroke limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SET",
+        "RESET"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,98 @@
+{
+  "model": "E8331DST300ZB",
+  "file": "E8331DST300ZB.md",
+  "vendor": "Schneider Electric",
+  "description": "Wiser AvatarOn 1G dimmer switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E8331DST300ZB.png",
+  "added_at": "2024-10-31T20:34:53",
+  "exposes_summary": "light (state, brightness), indicator_luminance_level, indicator_color, indicator_mode",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Indicator luminance level",
+      "type": "enum",
+      "property": "indicator_luminance_level",
+      "base": "indicator_luminance_level",
+      "endpoint": null,
+      "description": "Set indicator luminance Level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "0",
+        "20",
+        "40",
+        "60",
+        "80",
+        "100"
+      ]
+    },
+    {
+      "name": "Indicator color",
+      "type": "enum",
+      "property": "indicator_color",
+      "base": "indicator_color",
+      "endpoint": null,
+      "description": "Set indicator color.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "white",
+        "blue"
+      ]
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode",
+      "base": "indicator_mode",
+      "endpoint": null,
+      "description": "Set indicator mode for switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "reverse_with_load",
+        "consistent_with_load",
+        "always_off",
+        "always_on"
+      ]
+    }
+  ],
+  "warnings": []
+}

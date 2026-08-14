@@ -1,0 +1,369 @@
+{
+  "model": "WS-K05E",
+  "file": "WS-K05E.md",
+  "vendor": "Aqara",
+  "description": "Dimmer Switch H2 US",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WS-K05E.png",
+  "added_at": "2026-03-31T19:04:19",
+  "exposes_summary": "light (state, brightness, level_config), power_outage_count, device_temperature, power, energy, voltage, current, led_indicator, flip_indicator_light, mode_switch, operation_mode, power_on_behavior, multi_click, phase, min_brightness, max_brightness, action",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "level_config",
+          "base": "level_config",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages (since last pairing).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Led indicator",
+      "type": "binary",
+      "property": "led_indicator",
+      "base": "led_indicator",
+      "endpoint": null,
+      "description": "LED indicator.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Flip indicator light",
+      "type": "binary",
+      "property": "flip_indicator_light",
+      "base": "flip_indicator_light",
+      "endpoint": null,
+      "description": "After turn on, the indicator light turns on while switch is off, and vice versa.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Mode switch",
+      "type": "enum",
+      "property": "mode_switch",
+      "base": "mode_switch",
+      "endpoint": null,
+      "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "quick_mode",
+        "anti_flicker_mode"
+      ]
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode_power",
+      "base": "operation_mode",
+      "endpoint": "power",
+      "description": "Decoupled mode for the load relay (decoupling power disables bright/dim buttons).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "decoupled",
+        "control_relay"
+      ]
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode_bright",
+      "base": "operation_mode",
+      "endpoint": "bright",
+      "description": "Decoupled mode for the brightness up button (disabled when power is decoupled).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "decoupled",
+        "control_relay"
+      ]
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode_dim",
+      "base": "operation_mode",
+      "endpoint": "dim",
+      "description": "Decoupled mode for the brightness down button (disabled when power is decoupled).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "decoupled",
+        "control_relay"
+      ]
+    },
+    {
+      "name": "Power on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "previous",
+        "off",
+        "inverted"
+      ]
+    },
+    {
+      "name": "Multi click",
+      "type": "binary",
+      "property": "multi_click_power",
+      "base": "multi_click",
+      "endpoint": "power",
+      "description": "Multi-click mode for power button.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Multi click",
+      "type": "binary",
+      "property": "multi_click_bright",
+      "base": "multi_click",
+      "endpoint": "bright",
+      "description": "Multi-click mode for brightness up button.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Multi click",
+      "type": "binary",
+      "property": "multi_click_dim",
+      "base": "multi_click",
+      "endpoint": "dim",
+      "description": "Multi-click mode for brightness down button.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Phase",
+      "type": "enum",
+      "property": "phase",
+      "base": "phase",
+      "endpoint": null,
+      "description": "Dimming phase.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "forward",
+        "reverse"
+      ]
+    },
+    {
+      "name": "Min brightness",
+      "type": "numeric",
+      "property": "min_brightness",
+      "base": "min_brightness",
+      "endpoint": null,
+      "description": "Minimum brightness level.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 99,
+      "unit": "%"
+    },
+    {
+      "name": "Max brightness",
+      "type": "numeric",
+      "property": "max_brightness",
+      "base": "max_brightness",
+      "endpoint": null,
+      "description": "Maximum brightness level.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "hold_power",
+        "hold_bright",
+        "hold_dim",
+        "single_power",
+        "single_bright",
+        "single_dim",
+        "double_power",
+        "double_bright",
+        "double_dim",
+        "release_power",
+        "release_bright",
+        "release_dim"
+      ]
+    }
+  ],
+  "warnings": []
+}

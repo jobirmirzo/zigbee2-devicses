@@ -1,0 +1,217 @@
+{
+  "model": "E25-230",
+  "file": "E25-230.md",
+  "vendor": "ENGO",
+  "description": "Smart thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E25-230.png",
+  "added_at": "2025-08-01T15:19:08",
+  "exposes_summary": "state, climate (system_mode, current_heating_setpoint, local_temperature, local_temperature_calibration, running_state, preset), control_algorithm, max_temperature, min_temperature, child_lock, valve_protection, relay_mode, backlight, frost_set",
+  "exposes": [
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Turn the thermostat ON/OFF.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "heat",
+            "cool"
+          ],
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "Manual",
+            "Frost"
+          ],
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Control algorithm",
+      "type": "enum",
+      "property": "control_algorithm",
+      "base": "control_algorithm",
+      "endpoint": null,
+      "description": "Sets the control algorithim of the thermostat.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "TPI_UFH",
+        "TPI_RAD",
+        "TPI_ELE",
+        "HIS_04",
+        "HIS_08",
+        "HIS_12",
+        "HIS_16",
+        "HIS_20",
+        "HIS_30",
+        "HIS_40"
+      ]
+    },
+    {
+      "name": "Max temperature",
+      "type": "numeric",
+      "property": "max_temperature",
+      "base": "max_temperature",
+      "endpoint": null,
+      "description": "Maximum temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 45,
+      "unit": "°C"
+    },
+    {
+      "name": "Min temperature",
+      "type": "numeric",
+      "property": "min_temperature",
+      "base": "min_temperature",
+      "endpoint": null,
+      "description": "Minimum temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 45,
+      "unit": "°C"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Valve Protection",
+      "type": "binary",
+      "property": "valve_protection",
+      "base": "valve_protection",
+      "endpoint": null,
+      "description": "Prevents valve blockage during long periods of inactivity..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Relay mode",
+      "type": "enum",
+      "property": "relay_mode",
+      "base": "relay_mode",
+      "endpoint": null,
+      "description": "Sets the internal relay function.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "NO",
+        "NC",
+        "OFF"
+      ]
+    },
+    {
+      "name": "Backlight",
+      "type": "numeric",
+      "property": "backlight",
+      "base": "backlight",
+      "endpoint": null,
+      "description": "Set the backlight brightness of the thermostat..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Frost set",
+      "type": "numeric",
+      "property": "frost_set",
+      "base": "frost_set",
+      "endpoint": null,
+      "description": "Set the frost protection temperature..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 17,
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

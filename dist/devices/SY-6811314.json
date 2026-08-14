@@ -1,0 +1,145 @@
+{
+  "model": "SY-6811314",
+  "file": "SY-6811314.md",
+  "vendor": "Sygonix",
+  "description": "Zigbee Smart button/switch Pusher",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SY-6811314.png",
+  "added_at": "2026-01-19T18:21:00",
+  "exposes_summary": "switch (state), switch_states, mode, button_hold_duration, auto_adjustment, arm_start_position, arm_end_position, battery",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch states",
+      "type": "enum",
+      "property": "switch_states",
+      "base": "switch_states",
+      "endpoint": null,
+      "description": "Changes the displayed state to the opposite state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "SWITCH"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Work mode of the finger robot. Button: press and release, Switch: press.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "button",
+        "switch"
+      ]
+    },
+    {
+      "name": "Button hold duration",
+      "type": "numeric",
+      "property": "button_hold_duration",
+      "base": "button_hold_duration",
+      "endpoint": null,
+      "description": "Sets the press duration for button mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.3,
+      "value_max": 10,
+      "unit": "s"
+    },
+    {
+      "name": "Auto adjustment",
+      "type": "enum",
+      "property": "auto_adjustment",
+      "base": "auto_adjustment",
+      "endpoint": null,
+      "description": "Auto select the end position. Slowly lower the arm until it fully presses the button, and save the result.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "START"
+      ]
+    },
+    {
+      "name": "Arm start position",
+      "type": "numeric",
+      "property": "arm_start_position",
+      "base": "arm_start_position",
+      "endpoint": null,
+      "description": "Sets arm position when idle.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 30
+    },
+    {
+      "name": "Arm end position",
+      "type": "numeric",
+      "property": "arm_end_position",
+      "base": "arm_end_position",
+      "endpoint": null,
+      "description": "Sets arm position when fully pressed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 30
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

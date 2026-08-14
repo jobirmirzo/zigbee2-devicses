@@ -1,0 +1,38 @@
+{
+  "model": "InstaRemote",
+  "file": "InstaRemote.md",
+  "vendor": "Insta",
+  "description": "Zigbee Light Link wall/handheld transmitter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/InstaRemote.png",
+  "added_at": "2020-04-08T17:49:06Z",
+  "exposes_summary": "action",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "select_0",
+        "select_1",
+        "select_2",
+        "select_3",
+        "select_4",
+        "select_5",
+        "on",
+        "off",
+        "down",
+        "up",
+        "stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,150 @@
+{
+  "model": "TS0203-z-Sld",
+  "file": "TS0203-z-Sld.md",
+  "vendor": "Slacky-DIY",
+  "description": "Tuya door/window sensor with custom firmware",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0203-z-Sld.png",
+  "added_at": "2026-02-28T20:17:14",
+  "exposes_summary": "model_number, contact, battery, voltage, switch_actions, delay_on, delay_off, on_command_off, off_command_off",
+  "exposes": [
+    {
+      "name": "Model number",
+      "type": "text",
+      "property": "model_number",
+      "base": "model_number",
+      "endpoint": null,
+      "description": "Door sensor model number.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates whether the device is opened or closed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions",
+      "base": "switch_actions",
+      "endpoint": null,
+      "description": "Actions switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle"
+      ]
+    },
+    {
+      "name": "Delay on",
+      "type": "numeric",
+      "property": "delay_on",
+      "base": "delay_on",
+      "endpoint": null,
+      "description": "Delay On.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 120,
+      "unit": "sec"
+    },
+    {
+      "name": "Delay off",
+      "type": "numeric",
+      "property": "delay_off",
+      "base": "delay_off",
+      "endpoint": null,
+      "description": "Delay Off.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 120,
+      "unit": "sec"
+    },
+    {
+      "name": "On command off",
+      "type": "binary",
+      "property": "on_command_off",
+      "base": "on_command_off",
+      "endpoint": null,
+      "description": "Disable command 'On'.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Off command off",
+      "type": "binary",
+      "property": "off_command_off",
+      "base": "off_command_off",
+      "endpoint": null,
+      "description": "Disable command 'Off'.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

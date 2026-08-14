@@ -1,0 +1,27 @@
+{
+  "model": "WS01",
+  "file": "WS01.md",
+  "vendor": "eWeLink",
+  "description": "Rainfall sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WS01.png",
+  "added_at": "2023-02-01T14:45:57",
+  "exposes_summary": "rain",
+  "exposes": [
+    {
+      "name": "Rain",
+      "type": "binary",
+      "property": "rain",
+      "base": "rain",
+      "endpoint": null,
+      "description": "Indicates whether the device detected rainfall.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

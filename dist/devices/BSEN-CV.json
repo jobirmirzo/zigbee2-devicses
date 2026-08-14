@@ -1,0 +1,174 @@
+{
+  "model": "BSEN-CV",
+  "file": "BSEN-CV.md",
+  "vendor": "Bosch",
+  "description": "Door/window contact II plus",
+  "image": "https://www.zigbee2mqtt.io/images/devices/BSEN-CV.png",
+  "added_at": "2023-10-03T08:44:52",
+  "exposes_summary": "contact, vibration_detection_enabled, vibration_detection_sensitivity, vibration, break_function_enabled, break_function_timeout, break_function_state, battery, battery_low, action",
+  "exposes": [
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates whether the device is opened or closed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    },
+    {
+      "name": "Vibration detection",
+      "type": "binary",
+      "property": "vibration_detection_enabled",
+      "base": "vibration_detection_enabled",
+      "endpoint": null,
+      "description": "Activate the vibration detection to detect vibrations at the window or door via the integrated sensor as well.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Vibration detection sensitivity",
+      "type": "enum",
+      "property": "vibration_detection_sensitivity",
+      "base": "vibration_detection_sensitivity",
+      "endpoint": null,
+      "description": "Set the sensitivity of the vibration detection sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "very_high",
+        "high",
+        "medium",
+        "moderate",
+        "low"
+      ]
+    },
+    {
+      "name": "Vibration",
+      "type": "binary",
+      "property": "vibration",
+      "base": "vibration",
+      "endpoint": null,
+      "description": "Indicates whether the device detected vibration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Break function",
+      "type": "binary",
+      "property": "break_function_enabled",
+      "base": "break_function_enabled",
+      "endpoint": null,
+      "description": "Activate the break function by pressing the operating button on the door/window contact twice. This means that the device temporarily stops reading the sensors..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Automatic time limit for breaks",
+      "type": "numeric",
+      "property": "break_function_timeout",
+      "base": "break_function_timeout",
+      "endpoint": null,
+      "description": "Here you can define how long the break function is activated for the door/window contact. Once the time limit has expired, the break ends automatically. The LED on the device will flash orange as long as the break is activated when this setting is being used..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 15,
+      "unit": "minutes"
+    },
+    {
+      "name": "Break function state",
+      "type": "enum",
+      "property": "break_function_state",
+      "base": "break_function_state",
+      "endpoint": null,
+      "description": "Indicates whether the device is in break mode or not.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "break_active",
+        "idle"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "long_press",
+        "single_press",
+        "none"
+      ]
+    }
+  ],
+  "warnings": []
+}

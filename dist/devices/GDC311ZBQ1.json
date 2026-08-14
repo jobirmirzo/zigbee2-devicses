@@ -1,0 +1,42 @@
+{
+  "model": "GDC311ZBQ1",
+  "file": "GDC311ZBQ1.md",
+  "vendor": "Tuya",
+  "description": "LoraTap garage door opener with wireless sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GDC311ZBQ1.png",
+  "added_at": "2022-04-03T11:58:11",
+  "exposes_summary": "trigger, garage_door_contact",
+  "exposes": [
+    {
+      "name": "Trigger",
+      "type": "binary",
+      "property": "trigger",
+      "base": "trigger",
+      "endpoint": null,
+      "description": "Trigger the door movement.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Garage door contact",
+      "type": "binary",
+      "property": "garage_door_contact",
+      "base": "garage_door_contact",
+      "endpoint": null,
+      "description": "Indicates if the garage door contact is closed (= true) or open (= false).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    }
+  ],
+  "warnings": []
+}

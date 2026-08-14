@@ -1,0 +1,141 @@
+{
+  "model": "3321-S",
+  "file": "3321-S.md",
+  "vendor": "SmartThings",
+  "description": "Multi Sensor (2015 model)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/3321-S.png",
+  "added_at": "2019-07-22T20:08:17Z",
+  "exposes_summary": "temperature, contact, battery_low, tamper, battery, moving, x_axis, y_axis, z_axis",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates if the contact is closed (= true) or open (= false).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Moving",
+      "type": "binary",
+      "property": "moving",
+      "base": "moving",
+      "endpoint": null,
+      "description": "Indicates if the device is moving.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "X axis",
+      "type": "numeric",
+      "property": "x_axis",
+      "base": "x_axis",
+      "endpoint": null,
+      "description": "Accelerometer X value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Y axis",
+      "type": "numeric",
+      "property": "y_axis",
+      "base": "y_axis",
+      "endpoint": null,
+      "description": "Accelerometer Y value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Z axis",
+      "type": "numeric",
+      "property": "z_axis",
+      "base": "z_axis",
+      "endpoint": null,
+      "description": "Accelerometer Z value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

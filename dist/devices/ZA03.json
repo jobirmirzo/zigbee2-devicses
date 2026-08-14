@@ -1,0 +1,109 @@
+{
+  "model": "ZA03",
+  "file": "ZA03.md",
+  "vendor": "Tuya",
+  "description": "Siren alarm",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZA03.png",
+  "added_at": "2024-09-07T11:16:42",
+  "exposes_summary": "alarm, volume, ringtone, duration",
+  "exposes": [
+    {
+      "name": "Alarm",
+      "type": "binary",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Sound the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Volume",
+      "type": "enum",
+      "property": "volume",
+      "base": "volume",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "mute"
+      ]
+    },
+    {
+      "name": "Ringtone",
+      "type": "enum",
+      "property": "ringtone",
+      "base": "ringtone",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "ringtone 1",
+        "ringtone 2",
+        "ringtone 3",
+        "ringtone 4",
+        "ringtone 5",
+        "ringtone 6",
+        "ringtone 7",
+        "ringtone 8",
+        "ringtone 9",
+        "ringtone 10",
+        "ringtone 11",
+        "ringtone 12",
+        "ringtone 13",
+        "ringtone 14",
+        "ringtone 15",
+        "ringtone 16",
+        "ringtone 17",
+        "ringtone 18",
+        "ringtone 19",
+        "ringtone 20",
+        "ringtone 21",
+        "ringtone 22",
+        "ringtone 23",
+        "ringtone 24",
+        "ringtone 25",
+        "ringtone 26",
+        "ringtone 27",
+        "ringtone 28",
+        "ringtone 29",
+        "ringtone 30",
+        "ringtone 31",
+        "ringtone 32"
+      ]
+    },
+    {
+      "name": "Duration",
+      "type": "numeric",
+      "property": "duration",
+      "base": "duration",
+      "endpoint": null,
+      "description": "How long the alarm sounds for when triggered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 380,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

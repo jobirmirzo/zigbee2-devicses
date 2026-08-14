@@ -1,0 +1,43 @@
+{
+  "model": "C-ZB-SEDC",
+  "file": "C-ZB-SEDC.md",
+  "vendor": "Candeo",
+  "description": "Door contact sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/C-ZB-SEDC.png",
+  "added_at": "2025-05-01T17:59:08",
+  "exposes_summary": "battery, contact",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Contact",
+      "type": "binary",
+      "property": "contact",
+      "base": "contact",
+      "endpoint": null,
+      "description": "Indicates whether the device is opened or closed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "false",
+      "value_off": "true"
+    }
+  ],
+  "warnings": []
+}

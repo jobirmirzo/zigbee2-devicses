@@ -1,0 +1,92 @@
+{
+  "model": "ZG-204ZL-z",
+  "file": "ZG-204ZL-z.md",
+  "vendor": "Custom devices (DiY)",
+  "description": "Luminance motion sensor (pvvx/ZigbeeTLc)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-204ZL-z.png",
+  "added_at": "2026-05-31T19:17:58",
+  "exposes_summary": "battery, occupancy, illuminance, power_on_behavior, pir_timeout",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Power on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Power-on behavior.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Pir timeout",
+      "type": "numeric",
+      "property": "pir_timeout",
+      "base": "pir_timeout",
+      "endpoint": null,
+      "description": "PIR timeout in seconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

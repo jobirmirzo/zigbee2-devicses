@@ -1,0 +1,291 @@
+{
+  "model": "THERM_SLACKY_DIY_R06",
+  "file": "THERM_SLACKY_DIY_R06.md",
+  "vendor": "Slacky-DIY",
+  "description": "Tuya Thermostat for Floor Heating with custom Firmware",
+  "image": "https://www.zigbee2mqtt.io/images/devices/THERM_SLACKY_DIY_R06.png",
+  "added_at": "2025-04-01T18:29:09",
+  "exposes_summary": "child_lock, sound, relay_type, brightness_level, programming_operation_mode, sensor, hysteresis_temperature, max_heat_setpoint_limit, frost_protect_on_off, heat_protect, climate (local_temperature, occupied_heating_setpoint, local_temperature_calibration, system_mode, running_state, schedule), schedule_monday, schedule_sunday, schedule_mode, settings_reset",
+  "exposes": [
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Sound",
+      "type": "binary",
+      "property": "sound",
+      "base": "sound",
+      "endpoint": null,
+      "description": "Sound On/Off.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "On",
+      "value_off": "Off"
+    },
+    {
+      "name": "Relay type",
+      "type": "binary",
+      "property": "relay_type",
+      "base": "relay_type",
+      "endpoint": null,
+      "description": "Relay type NC/NO.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "NC",
+      "value_off": "NO"
+    },
+    {
+      "name": "Brightness level",
+      "type": "enum",
+      "property": "brightness_level",
+      "base": "brightness_level",
+      "endpoint": null,
+      "description": "Screen brightness.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Off",
+        "Low",
+        "Medium",
+        "High"
+      ]
+    },
+    {
+      "name": "Programming operation mode",
+      "type": "enum",
+      "property": "programming_operation_mode",
+      "base": "programming_operation_mode",
+      "endpoint": null,
+      "description": "Setpoint or Schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "setpoint",
+        "schedule"
+      ]
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor",
+      "base": "sensor",
+      "endpoint": null,
+      "description": "Select temperature sensor to use.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Inner (IN)",
+        "All (AL)",
+        "Outer (OU)"
+      ]
+    },
+    {
+      "name": "Hysteresis temperature",
+      "type": "numeric",
+      "property": "hysteresis_temperature",
+      "base": "hysteresis_temperature",
+      "endpoint": null,
+      "description": "The delta between local_temperature and current_heating_setpoint to trigger activity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 10,
+      "unit": "°C"
+    },
+    {
+      "name": "Max heat setpoint limit",
+      "type": "numeric",
+      "property": "max_heat_setpoint_limit",
+      "base": "max_heat_setpoint_limit",
+      "endpoint": null,
+      "description": "Maximum Heating set point limit.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 15,
+      "value_max": 95,
+      "unit": "°C"
+    },
+    {
+      "name": "Frost protect on off",
+      "type": "binary",
+      "property": "frost_protect_on_off",
+      "base": "frost_protect_on_off",
+      "endpoint": null,
+      "description": "Frost protection.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "On",
+      "value_off": "Off"
+    },
+    {
+      "name": "Heat protect",
+      "type": "numeric",
+      "property": "heat_protect",
+      "base": "heat_protect",
+      "endpoint": null,
+      "description": "Protection against maximum heating temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 35,
+      "value_max": 60,
+      "unit": "°C"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 45,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": false
+        },
+        {
+          "property": "schedule",
+          "base": "schedule",
+          "value_min": 5,
+          "value_max": 45,
+          "values": [
+            "off",
+            "heat"
+          ],
+          "unit": "°C",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Schedule monday",
+      "type": "text",
+      "property": "schedule_monday",
+      "base": "schedule_monday",
+      "endpoint": null,
+      "description": "Schedule for the working week.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Schedule sunday",
+      "type": "text",
+      "property": "schedule_sunday",
+      "base": "schedule_sunday",
+      "endpoint": null,
+      "description": "Weekend schedule.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Schedule mode",
+      "type": "enum",
+      "property": "schedule_mode",
+      "base": "schedule_mode",
+      "endpoint": null,
+      "description": "Schedule mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Off",
+        "5+2",
+        "6+1",
+        "7"
+      ]
+    },
+    {
+      "name": "Settings reset",
+      "type": "enum",
+      "property": "settings_reset",
+      "base": "settings_reset",
+      "endpoint": null,
+      "description": "Default settings.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Default"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,287 @@
+{
+  "model": "S8",
+  "file": "S8.md",
+  "vendor": "SODA",
+  "description": "S8 premium window handle",
+  "image": "https://www.zigbee2mqtt.io/images/devices/S8.png",
+  "added_at": "2024-08-01T18:23:40",
+  "exposes_summary": "battery, battery_low, vacation, alarm, alarm_switch, handlesound, opening_mode, temperature, humidity, keysound, sensitivity, position, button_left, button_right, duration, update_frequency, calibrate",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Vacation",
+      "type": "binary",
+      "property": "vacation",
+      "base": "vacation",
+      "endpoint": null,
+      "description": "Vacation mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Alarm",
+      "type": "enum",
+      "property": "alarm",
+      "base": "alarm",
+      "endpoint": null,
+      "description": "Alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "ALARM",
+        "IDLE"
+      ]
+    },
+    {
+      "name": "Alarm switch",
+      "type": "binary",
+      "property": "alarm_switch",
+      "base": "alarm_switch",
+      "endpoint": null,
+      "description": "Alarm enable.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Handlesound",
+      "type": "binary",
+      "property": "handlesound",
+      "base": "handlesound",
+      "endpoint": null,
+      "description": "Handle closed sound.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Opening mode",
+      "type": "enum",
+      "property": "opening_mode",
+      "base": "opening_mode",
+      "endpoint": null,
+      "description": "Window tilt.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "closed",
+        "tilted"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Keysound",
+      "type": "binary",
+      "property": "keysound",
+      "base": "keysound",
+      "endpoint": null,
+      "description": "Key beep sound.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity of the alarm sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "name": "Position",
+      "type": "enum",
+      "property": "position",
+      "base": "position",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "up",
+        "right",
+        "down",
+        "left"
+      ]
+    },
+    {
+      "name": "Button left",
+      "type": "enum",
+      "property": "button_left",
+      "base": "button_left",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "released",
+        "pressed"
+      ]
+    },
+    {
+      "name": "Button right",
+      "type": "enum",
+      "property": "button_right",
+      "base": "button_right",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "released",
+        "pressed"
+      ]
+    },
+    {
+      "name": "Duration",
+      "type": "numeric",
+      "property": "duration",
+      "base": "duration",
+      "endpoint": null,
+      "description": "Duration of the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 300,
+      "unit": "sec"
+    },
+    {
+      "name": "Update frequency",
+      "type": "numeric",
+      "property": "update_frequency",
+      "base": "update_frequency",
+      "endpoint": null,
+      "description": "Update frequency.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 700,
+      "unit": "min"
+    },
+    {
+      "name": "Calibrate",
+      "type": "enum",
+      "property": "calibrate",
+      "base": "calibrate",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "clear",
+        "execute"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,168 @@
+{
+  "model": "CS-201Z",
+  "file": "CS-201Z.md",
+  "vendor": "COOLO",
+  "description": "Soil moisture sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CS-201Z.png",
+  "added_at": "2025-01-24T08:59:10",
+  "exposes_summary": "dry, temperature, soil_moisture, temperature_unit, temperature_calibration, soil_calibration, temperature_sampling, soil_sampling, soil_warning, battery",
+  "exposes": [
+    {
+      "name": "Dry",
+      "type": "binary",
+      "property": "dry",
+      "base": "dry",
+      "endpoint": null,
+      "description": "Water shortage warning.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Soil moisture",
+      "type": "numeric",
+      "property": "soil_moisture",
+      "base": "soil_moisture",
+      "endpoint": null,
+      "description": "Measured soil moisture value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature unit",
+      "type": "enum",
+      "property": "temperature_unit",
+      "base": "temperature_unit",
+      "endpoint": null,
+      "description": "Temperature unit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Temperature calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -2,
+      "value_max": 2,
+      "unit": "°C"
+    },
+    {
+      "name": "Soil calibration",
+      "type": "numeric",
+      "property": "soil_calibration",
+      "base": "soil_calibration",
+      "endpoint": null,
+      "description": "Soil Humidity calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -30,
+      "value_max": 30,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature sampling",
+      "type": "numeric",
+      "property": "temperature_sampling",
+      "base": "temperature_sampling",
+      "endpoint": null,
+      "description": "Air temperature and humidity sampling.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Soil sampling",
+      "type": "numeric",
+      "property": "soil_sampling",
+      "base": "soil_sampling",
+      "endpoint": null,
+      "description": "Soil humidity sampling.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Soil warning",
+      "type": "numeric",
+      "property": "soil_warning",
+      "base": "soil_warning",
+      "endpoint": null,
+      "description": "Soil water shortage humidity value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

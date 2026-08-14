@@ -1,0 +1,520 @@
+{
+  "model": "FP310",
+  "file": "FP310.md",
+  "vendor": "Aqara",
+  "description": "Presence sensor FP310",
+  "image": "https://www.zigbee2mqtt.io/images/devices/FP310.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "battery, voltage, presence, illuminance, humidity, temperature, presence_sensitivity, absence_delay_timer, spatial_learning, restart_device, ai_interference_source_selfidentification, ai_sensitivity_adaptive, temp_and_humidity_sampling, temp_and_humidity_sampling_period, temp_reporting_interval, temp_reporting_threshold, temp_reporting_mode, humidity_reporting_interval, humidity_reporting_threshold, humidity_report_mode, light_sampling, light_sampling_period, light_reporting_interval, light_reporting_threshold, light_report_mode, track_target_distance, target_distance, detection_range, led_disabled_night, schedule_start_time, schedule_end_time, identify",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Presence sensitivity",
+      "type": "enum",
+      "property": "presence_sensitivity",
+      "base": "presence_sensitivity",
+      "endpoint": null,
+      "description": "Presence Detection Sensitivity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Absence delay timer",
+      "type": "numeric",
+      "property": "absence_delay_timer",
+      "base": "absence_delay_timer",
+      "endpoint": null,
+      "description": "Value for delay before the device reports absence when no presence is detected.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 300,
+      "unit": "sec"
+    },
+    {
+      "name": "Spatial learning",
+      "type": "enum",
+      "property": "spatial_learning",
+      "base": "spatial_learning",
+      "endpoint": null,
+      "description": "Initiate AI Spatial Learning..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Start Learning"
+      ]
+    },
+    {
+      "name": "Restart device",
+      "type": "enum",
+      "property": "restart_device",
+      "base": "restart_device",
+      "endpoint": null,
+      "description": "Restarts the device..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Restart Device"
+      ]
+    },
+    {
+      "name": "Ai interference source selfidentification",
+      "type": "binary",
+      "property": "ai_interference_source_selfidentification",
+      "base": "ai_interference_source_selfidentification",
+      "endpoint": null,
+      "description": "AI interference source self-identification switch, when enabled can identify fans, air conditioners and other interference sources.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Ai sensitivity adaptive",
+      "type": "binary",
+      "property": "ai_sensitivity_adaptive",
+      "base": "ai_sensitivity_adaptive",
+      "endpoint": null,
+      "description": "Adaptive sensitivity switch function..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Temp and humidity sampling",
+      "type": "enum",
+      "property": "temp_and_humidity_sampling",
+      "base": "temp_and_humidity_sampling",
+      "endpoint": null,
+      "description": "Sampling time frequency, increasing affects battery life. Setting to custom allows specifying period, interval & threshold..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "low",
+        "medium",
+        "high",
+        "custom"
+      ]
+    },
+    {
+      "name": "Temp and humidity sampling period",
+      "type": "numeric",
+      "property": "temp_and_humidity_sampling_period",
+      "base": "temp_and_humidity_sampling_period",
+      "endpoint": null,
+      "description": "How often temp & humidity readings are taken on the device when in custom mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 3600,
+      "unit": "sec"
+    },
+    {
+      "name": "Temp reporting interval",
+      "type": "numeric",
+      "property": "temp_reporting_interval",
+      "base": "temp_reporting_interval",
+      "endpoint": null,
+      "description": "Custom time interval for temperature data reporting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 600,
+      "value_max": 3600,
+      "unit": "sec"
+    },
+    {
+      "name": "Temp reporting threshold",
+      "type": "numeric",
+      "property": "temp_reporting_threshold",
+      "base": "temp_reporting_threshold",
+      "endpoint": null,
+      "description": "Reporting will trigger as temperature change reaches this value when in custom mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.2,
+      "value_max": 3,
+      "unit": "°C"
+    },
+    {
+      "name": "Temp reporting mode",
+      "type": "enum",
+      "property": "temp_reporting_mode",
+      "base": "temp_reporting_mode",
+      "endpoint": null,
+      "description": "Temperature reporting type when in custom mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "threshold",
+        "reporting interval",
+        "threshold and interval"
+      ]
+    },
+    {
+      "name": "Humidity reporting interval",
+      "type": "numeric",
+      "property": "humidity_reporting_interval",
+      "base": "humidity_reporting_interval",
+      "endpoint": null,
+      "description": "Custom time interval for humidity data reporting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 600,
+      "value_max": 3600,
+      "unit": "sec"
+    },
+    {
+      "name": "Humidity reporting threshold",
+      "type": "numeric",
+      "property": "humidity_reporting_threshold",
+      "base": "humidity_reporting_threshold",
+      "endpoint": null,
+      "description": "Reporting will trigger as humidity change reaches this value when in custom mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 15,
+      "unit": "%"
+    },
+    {
+      "name": "Humidity report mode",
+      "type": "enum",
+      "property": "humidity_report_mode",
+      "base": "humidity_report_mode",
+      "endpoint": null,
+      "description": "Humidity reporting type when in custom mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "threshold",
+        "reporting interval",
+        "threshold and interval"
+      ]
+    },
+    {
+      "name": "Light sampling",
+      "type": "enum",
+      "property": "light_sampling",
+      "base": "light_sampling",
+      "endpoint": null,
+      "description": "Sampling time frequency, increasing affects battery life. Setting to custom allows specifying period, interval & threshold..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "low",
+        "medium",
+        "high",
+        "custom"
+      ]
+    },
+    {
+      "name": "Light sampling period",
+      "type": "numeric",
+      "property": "light_sampling_period",
+      "base": "light_sampling_period",
+      "endpoint": null,
+      "description": "How often illumination readings are taken on the device when in custom mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 3600,
+      "unit": "sec"
+    },
+    {
+      "name": "Light reporting interval",
+      "type": "numeric",
+      "property": "light_reporting_interval",
+      "base": "light_reporting_interval",
+      "endpoint": null,
+      "description": "Custom interval for illumination data reporting..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 20,
+      "value_max": 3600,
+      "unit": "sec"
+    },
+    {
+      "name": "Light reporting threshold",
+      "type": "numeric",
+      "property": "light_reporting_threshold",
+      "base": "light_reporting_threshold",
+      "endpoint": null,
+      "description": "Reporting will trigger as illumination percentage change reaches this value when in custom mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 3,
+      "value_max": 20,
+      "unit": "%"
+    },
+    {
+      "name": "Light report mode",
+      "type": "enum",
+      "property": "light_report_mode",
+      "base": "light_report_mode",
+      "endpoint": null,
+      "description": "illumination reporting type when in custom mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "threshold",
+        "reporting interval",
+        "threshold and interval"
+      ]
+    },
+    {
+      "name": "Track target distance",
+      "type": "enum",
+      "property": "track_target_distance",
+      "base": "track_target_distance",
+      "endpoint": null,
+      "description": "Initiate current target distance tracking..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "start_tracking_distance"
+      ]
+    },
+    {
+      "name": "Target distance",
+      "type": "numeric",
+      "property": "target_distance",
+      "base": "target_distance",
+      "endpoint": null,
+      "description": "Distance to the detected target.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Detection range",
+      "type": "numeric",
+      "property": "detection_range",
+      "base": "detection_range",
+      "endpoint": null,
+      "description": "Specifies the range that is being detected. Press the on-device button to wake the device up and refresh it's settings..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 6,
+      "unit": "m"
+    },
+    {
+      "name": "Led disabled night",
+      "type": "binary",
+      "property": "led_disabled_night",
+      "base": "led_disabled_night",
+      "endpoint": null,
+      "description": "Enables/disables LED indicator at night.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Schedule start time",
+      "type": "text",
+      "property": "schedule_start_time",
+      "base": "schedule_start_time",
+      "endpoint": null,
+      "description": "LED disable schedule start time (HH:MM format).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Schedule end time",
+      "type": "text",
+      "property": "schedule_end_time",
+      "base": "schedule_end_time",
+      "endpoint": null,
+      "description": "LED disable schedule end time (HH:MM format).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    }
+  ],
+  "warnings": []
+}

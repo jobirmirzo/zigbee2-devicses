@@ -1,0 +1,286 @@
+{
+  "model": "ZG-105NTH",
+  "file": "ZG-105NTH.md",
+  "vendor": "Excellux",
+  "description": "Temperature and humidity sensor with probe",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-105NTH.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "probe_temperature_warning, temperature_warning, humidity_warning, battery, probe_temperature, temperature, humidity, sampling_interval, probe_temperature_calibration, probe_temperature_v0_set, probe_temperature_v1_set, temperature_calibration, temperature_v0_set, temperature_v1_set, humidity_calibration, humidity_v0_set, humidity_v1_set",
+  "exposes": [
+    {
+      "name": "Probe temperature warning",
+      "type": "enum",
+      "property": "probe_temperature_warning",
+      "base": "probe_temperature_warning",
+      "endpoint": null,
+      "description": "Probe temperature sensor warning. Low: temperature is lower than v0 and v1. High: temperature is higher than v0 and v1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "Temperature warning",
+      "type": "enum",
+      "property": "temperature_warning",
+      "base": "temperature_warning",
+      "endpoint": null,
+      "description": "Temperature warning. Low: temperature is lower than v0 and v1. High: temperature is higher than v0 and v1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "Humidity warning",
+      "type": "enum",
+      "property": "humidity_warning",
+      "base": "humidity_warning",
+      "endpoint": null,
+      "description": "Humidity warning. Low: humidity is lower than v0 and v1. High: humidity is higher than v0 and v1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Probe temperature",
+      "type": "numeric",
+      "property": "probe_temperature",
+      "base": "probe_temperature",
+      "endpoint": null,
+      "description": "Probe temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": -40,
+      "value_max": 120,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Sampling interval",
+      "type": "numeric",
+      "property": "sampling_interval",
+      "base": "sampling_interval",
+      "endpoint": null,
+      "description": "Sampling interval.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 1200,
+      "unit": "s"
+    },
+    {
+      "name": "Probe temperature calibration",
+      "type": "numeric",
+      "property": "probe_temperature_calibration",
+      "base": "probe_temperature_calibration",
+      "endpoint": null,
+      "description": "Probe temperature sensor calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -2,
+      "value_max": 2,
+      "unit": "°C"
+    },
+    {
+      "name": "Probe temperature v0 set",
+      "type": "numeric",
+      "property": "probe_temperature_v0_set",
+      "base": "probe_temperature_v0_set",
+      "endpoint": null,
+      "description": "Probe temperature sensor v0 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -40,
+      "value_max": 125,
+      "unit": "°C"
+    },
+    {
+      "name": "Probe temperature v1 set",
+      "type": "numeric",
+      "property": "probe_temperature_v1_set",
+      "base": "probe_temperature_v1_set",
+      "endpoint": null,
+      "description": "Probe temperature sensor v1 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -40,
+      "value_max": 125,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Temperature calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -2,
+      "value_max": 2,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature v0 set",
+      "type": "numeric",
+      "property": "temperature_v0_set",
+      "base": "temperature_v0_set",
+      "endpoint": null,
+      "description": "Temperature v0 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -40,
+      "value_max": 85,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature v1 set",
+      "type": "numeric",
+      "property": "temperature_v1_set",
+      "base": "temperature_v1_set",
+      "endpoint": null,
+      "description": "Temperature v1 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -40,
+      "value_max": 85,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Humidity calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -10,
+      "value_max": 10,
+      "unit": "%"
+    },
+    {
+      "name": "Humidity v0 set",
+      "type": "numeric",
+      "property": "humidity_v0_set",
+      "base": "humidity_v0_set",
+      "endpoint": null,
+      "description": "Humidity v0 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Humidity v1 set",
+      "type": "numeric",
+      "property": "humidity_v1_set",
+      "base": "humidity_v1_set",
+      "endpoint": null,
+      "description": "Humidity v1 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,43 @@
+{
+  "model": "9028412A",
+  "file": "9028412A.md",
+  "vendor": "SOMFY",
+  "description": "Glydea Curtain motor Zigbee module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/9028412A.png",
+  "added_at": "2025-07-01T17:54:38",
+  "exposes_summary": "cover (state, position)",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

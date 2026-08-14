@@ -1,0 +1,142 @@
+{
+  "model": "E04CF-Z10T",
+  "file": "E04CF-Z10T.md",
+  "vendor": "Lincukoo",
+  "description": "Smart gas and CO sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E04CF-Z10T.png",
+  "added_at": "2026-01-31T13:10:42",
+  "exposes_summary": "gas, co, set_max_gas_alarm, set_max_co_alarm, gas_sensor_state, co_state, self_checking, checking_result",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "numeric",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Current Gas Value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 20,
+      "unit": "%LEL"
+    },
+    {
+      "name": "CO",
+      "type": "numeric",
+      "property": "co",
+      "base": "co",
+      "endpoint": null,
+      "description": "The measured CO (carbon monoxide) value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Set max gas alarm",
+      "type": "numeric",
+      "property": "set_max_gas_alarm",
+      "base": "set_max_gas_alarm",
+      "endpoint": null,
+      "description": "Gas alarm value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 20,
+      "unit": "%LEL"
+    },
+    {
+      "name": "Set max co alarm",
+      "type": "numeric",
+      "property": "set_max_co_alarm",
+      "base": "set_max_co_alarm",
+      "endpoint": null,
+      "description": "CO alarm value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 1000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Gas sensor state",
+      "type": "enum",
+      "property": "gas_sensor_state",
+      "base": "gas_sensor_state",
+      "endpoint": null,
+      "description": "Gas alarm status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "normal",
+        "alarm"
+      ]
+    },
+    {
+      "name": "Co state",
+      "type": "enum",
+      "property": "co_state",
+      "base": "co_state",
+      "endpoint": null,
+      "description": "CO alarm status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "normal",
+        "alarm"
+      ]
+    },
+    {
+      "name": "Self checking",
+      "type": "binary",
+      "property": "self_checking",
+      "base": "self_checking",
+      "endpoint": null,
+      "description": "self checking.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Checking result",
+      "type": "enum",
+      "property": "checking_result",
+      "base": "checking_result",
+      "endpoint": null,
+      "description": "checking result.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "checking",
+        "check_success",
+        "check_failure",
+        "others"
+      ]
+    }
+  ],
+  "warnings": []
+}

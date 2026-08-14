@@ -1,0 +1,449 @@
+{
+  "model": "ZG-109TDS",
+  "file": "ZG-109TDS.md",
+  "vendor": "Excellux",
+  "description": "Probe Temperature with EC && TDS && Salinity && SG && ht(humidity and temperature) Sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZG-109TDS.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "probe_temperature_warning, temperature_warning, humidity_warning, tds_warning, ec_warning, mode, battery, probe_temperature, temperature, humidity, tds, salinity, ec, sg, sampling_interval, probe_temperature_calibration, probe_temperature_v0_set, probe_temperature_v1_set, tds_warning_set, ec_v0_set, ec_v1_set, temperature_calibration, temperature_v0_set, temperature_v1_set, humidity_calibration, humidity_v0_set, humidity_v1_set",
+  "exposes": [
+    {
+      "name": "Probe temperature warning",
+      "type": "enum",
+      "property": "probe_temperature_warning",
+      "base": "probe_temperature_warning",
+      "endpoint": null,
+      "description": "Probe temperature sensor warning.low :temperature is lower than v0 and v1.high:temperature is higher than v0 and v1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "Temperature warning",
+      "type": "enum",
+      "property": "temperature_warning",
+      "base": "temperature_warning",
+      "endpoint": null,
+      "description": "Temperature warning.low :temperature is lower than v0 and v1.high:temperature is higher than v0 and v1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "Humidity warning",
+      "type": "enum",
+      "property": "humidity_warning",
+      "base": "humidity_warning",
+      "endpoint": null,
+      "description": "Humidity warning.low :humidity is lower than v0 and v1.high:humidity is higher than v0 and v1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "Tds warning",
+      "type": "enum",
+      "property": "tds_warning",
+      "base": "tds_warning",
+      "endpoint": null,
+      "description": "TDS warning.high:TDS is higher than user setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "high"
+      ]
+    },
+    {
+      "name": "Ec warning",
+      "type": "enum",
+      "property": "ec_warning",
+      "base": "ec_warning",
+      "endpoint": null,
+      "description": "ec warning.low :ec is lower than v0 and v1.high:ec is higher than v0 and v1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Freshwater or Seawater.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "freshwater",
+        "seawater"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Battery percentage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 1,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Probe temperature",
+      "type": "numeric",
+      "property": "probe_temperature",
+      "base": "probe_temperature",
+      "endpoint": null,
+      "description": "Probe temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": -40,
+      "value_max": 120,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Tds",
+      "type": "numeric",
+      "property": "tds",
+      "base": "tds",
+      "endpoint": null,
+      "description": "Total Dissolved Solids(0~13000 ppm).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 13000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Salinity",
+      "type": "numeric",
+      "property": "salinity",
+      "base": "salinity",
+      "endpoint": null,
+      "description": "Salinity value(0.1‰~50‰).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0.1,
+      "value_max": 50,
+      "unit": "‰"
+    },
+    {
+      "name": "Ec",
+      "type": "numeric",
+      "property": "ec",
+      "base": "ec",
+      "endpoint": null,
+      "description": "EC value @ 25°C Standard Temperature (0~20000us/cm).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 20000,
+      "unit": "μS/cm"
+    },
+    {
+      "name": "Sg",
+      "type": "numeric",
+      "property": "sg",
+      "base": "sg",
+      "endpoint": null,
+      "description": "specific gravity(1.000~1.100).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 1000,
+      "value_max": 1100
+    },
+    {
+      "name": "Sampling interval",
+      "type": "numeric",
+      "property": "sampling_interval",
+      "base": "sampling_interval",
+      "endpoint": null,
+      "description": "sampling interval.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 1200,
+      "unit": "s"
+    },
+    {
+      "name": "Probe temperature calibration",
+      "type": "numeric",
+      "property": "probe_temperature_calibration",
+      "base": "probe_temperature_calibration",
+      "endpoint": null,
+      "description": "Probe temperature sensor calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -2,
+      "value_max": 2,
+      "unit": "°C"
+    },
+    {
+      "name": "Probe temperature v0 set",
+      "type": "numeric",
+      "property": "probe_temperature_v0_set",
+      "base": "probe_temperature_v0_set",
+      "endpoint": null,
+      "description": "Probe temperature sensor v0 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -40,
+      "value_max": 125,
+      "unit": "°C"
+    },
+    {
+      "name": "Probe temperature v1 set",
+      "type": "numeric",
+      "property": "probe_temperature_v1_set",
+      "base": "probe_temperature_v1_set",
+      "endpoint": null,
+      "description": "Probe temperature sensor v1 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -40,
+      "value_max": 125,
+      "unit": "°C"
+    },
+    {
+      "name": "Tds warning set",
+      "type": "numeric",
+      "property": "tds_warning_set",
+      "base": "tds_warning_set",
+      "endpoint": null,
+      "description": "TDS alarm threshold settings.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 13000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Ec v0 set",
+      "type": "numeric",
+      "property": "ec_v0_set",
+      "base": "ec_v0_set",
+      "endpoint": null,
+      "description": "EC v0 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 20000,
+      "unit": "μS/cm"
+    },
+    {
+      "name": "Ec v1 set",
+      "type": "numeric",
+      "property": "ec_v1_set",
+      "base": "ec_v1_set",
+      "endpoint": null,
+      "description": "EC v1 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 20000,
+      "unit": "μS/cm"
+    },
+    {
+      "name": "Temperature calibration",
+      "type": "numeric",
+      "property": "temperature_calibration",
+      "base": "temperature_calibration",
+      "endpoint": null,
+      "description": "Temperature calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -2,
+      "value_max": 2,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature v0 set",
+      "type": "numeric",
+      "property": "temperature_v0_set",
+      "base": "temperature_v0_set",
+      "endpoint": null,
+      "description": "Temperature v0 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -40,
+      "value_max": 85,
+      "unit": "°C"
+    },
+    {
+      "name": "Temperature v1 set",
+      "type": "numeric",
+      "property": "temperature_v1_set",
+      "base": "temperature_v1_set",
+      "endpoint": null,
+      "description": "Temperature v1 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -40,
+      "value_max": 85,
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity calibration",
+      "type": "numeric",
+      "property": "humidity_calibration",
+      "base": "humidity_calibration",
+      "endpoint": null,
+      "description": "Humidity calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -10,
+      "value_max": 10,
+      "unit": "%"
+    },
+    {
+      "name": "Humidity v0 set",
+      "type": "numeric",
+      "property": "humidity_v0_set",
+      "base": "humidity_v0_set",
+      "endpoint": null,
+      "description": "Humidity v0 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Humidity v1 set",
+      "type": "numeric",
+      "property": "humidity_v1_set",
+      "base": "humidity_v1_set",
+      "endpoint": null,
+      "description": "Humidity v1 threshold setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

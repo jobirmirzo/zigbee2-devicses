@@ -1,0 +1,194 @@
+{
+  "model": "ZNDDQDQ12LM",
+  "file": "ZNDDQDQ12LM.md",
+  "vendor": "Aqara",
+  "description": "T1 light strip controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZNDDQDQ12LM.png",
+  "added_at": "2024-02-29T20:20:58",
+  "exposes_summary": "light (state, brightness, color_temp), power_outage_count, device_temperature, power_on_behavior, identify, dimming_range_minimum, dimming_range_maximum, off_on_duration, on_off_duration, transition_curve_curvature",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 154,
+          "value_max": 370,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warmest"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages (since last pairing).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Power on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "previous",
+        "off"
+      ]
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Dimming range minimum",
+      "type": "numeric",
+      "property": "dimming_range_minimum",
+      "base": "dimming_range_minimum",
+      "endpoint": null,
+      "description": "Minimum allowed dimming value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 99,
+      "unit": "%"
+    },
+    {
+      "name": "Dimming range maximum",
+      "type": "numeric",
+      "property": "dimming_range_maximum",
+      "base": "dimming_range_maximum",
+      "endpoint": null,
+      "description": "Maximum allowed dimming value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Off on duration",
+      "type": "numeric",
+      "property": "off_on_duration",
+      "base": "off_on_duration",
+      "endpoint": null,
+      "description": "Duration for light to gradually brighten when turning on.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "s"
+    },
+    {
+      "name": "On off duration",
+      "type": "numeric",
+      "property": "on_off_duration",
+      "base": "on_off_duration",
+      "endpoint": null,
+      "description": "Duration for light to gradually dim when turning off.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "s"
+    },
+    {
+      "name": "Transition curve curvature",
+      "type": "numeric",
+      "property": "transition_curve_curvature",
+      "base": "transition_curve_curvature",
+      "endpoint": null,
+      "description": "Transition curve shape: 0.2-1 (fast to slow), 1 (uniform), 1-6 (slow to fast).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.2,
+      "value_max": 6
+    }
+  ],
+  "warnings": []
+}

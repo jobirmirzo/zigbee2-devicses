@@ -1,0 +1,119 @@
+{
+  "model": "L101Z-SLN",
+  "file": "L101Z-SLN.md",
+  "vendor": "Lytko",
+  "description": "Single channel Zigbee thermostat without screen",
+  "image": "https://www.zigbee2mqtt.io/images/devices/L101Z-SLN.png",
+  "added_at": "2023-09-01T13:40:11",
+  "exposes_summary": "climate (local_temperature, occupied_heating_setpoint, system_mode, running_mode, local_temperature_calibration), min_setpoint_deadband, sensor_type, target_temp_first",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "l3",
+      "features": [
+        {
+          "property": "local_temperature_l3",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint_l3",
+          "base": "occupied_heating_setpoint",
+          "value_min": 15,
+          "value_max": 35,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "system_mode_l3",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_mode_l3",
+          "base": "running_mode",
+          "value_min": 15,
+          "value_max": 35,
+          "values": [
+            "off",
+            "heat"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration_l3",
+          "base": "local_temperature_calibration",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Min setpoint deadband",
+      "type": "numeric",
+      "property": "min_setpoint_deadband_l3",
+      "base": "min_setpoint_deadband",
+      "endpoint": "l3",
+      "description": "Hysteresis setting.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3,
+      "unit": "C"
+    },
+    {
+      "name": "Sensor type",
+      "type": "enum",
+      "property": "sensor_type_l3",
+      "base": "sensor_type",
+      "endpoint": "l3",
+      "description": "Type of sensor. Sensor resistance value (kOhm).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "3.3",
+        "5",
+        "6.8",
+        "10",
+        "12",
+        "14.8",
+        "15",
+        "20",
+        "33",
+        "47"
+      ]
+    },
+    {
+      "name": "Target temp first",
+      "type": "binary",
+      "property": "target_temp_first_l3",
+      "base": "target_temp_first",
+      "endpoint": "l3",
+      "description": "Display current temperature or target temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

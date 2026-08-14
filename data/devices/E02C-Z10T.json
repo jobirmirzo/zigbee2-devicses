@@ -1,0 +1,187 @@
+{
+  "model": "E02C-Z10T",
+  "file": "E02C-Z10T.md",
+  "vendor": "Lincukoo",
+  "description": "Smart air quality monitor (CO2)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E02C-Z10T.png",
+  "added_at": "2026-01-31T13:10:42",
+  "exposes_summary": "temperature, humidity, co2, battery, temperature_unit_convert, alarm_switch, charge_status, reset_co2, screen_sleep, co2_alarm_value, co2_alarm",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "The measured CO2 (carbon dioxide) value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature unit convert",
+      "type": "enum",
+      "property": "temperature_unit_convert",
+      "base": "temperature_unit_convert",
+      "endpoint": null,
+      "description": "Current display unit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Alarm switch",
+      "type": "binary",
+      "property": "alarm_switch",
+      "base": "alarm_switch",
+      "endpoint": null,
+      "description": "alarm switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Charge status",
+      "type": "enum",
+      "property": "charge_status",
+      "base": "charge_status",
+      "endpoint": null,
+      "description": "usb charging status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "charging"
+      ]
+    },
+    {
+      "name": "Reset co2",
+      "type": "enum",
+      "property": "reset_co2",
+      "base": "reset_co2",
+      "endpoint": null,
+      "description": "reset the CO2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "reset_co2"
+      ]
+    },
+    {
+      "name": "Screen sleep",
+      "type": "enum",
+      "property": "screen_sleep",
+      "base": "screen_sleep",
+      "endpoint": null,
+      "description": "Humidity alarm status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "after_30s",
+        "after_1minute",
+        "after_2minutes",
+        "after_5minutes",
+        "after_10minutes",
+        "never_sleep"
+      ]
+    },
+    {
+      "name": "Co2 alarm value",
+      "type": "numeric",
+      "property": "co2_alarm_value",
+      "base": "co2_alarm_value",
+      "endpoint": null,
+      "description": "CO2 alarm value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1000,
+      "value_max": 10000,
+      "unit": "ppm"
+    },
+    {
+      "name": "Co2 alarm",
+      "type": "binary",
+      "property": "co2_alarm",
+      "base": "co2_alarm",
+      "endpoint": null,
+      "description": "CO2 alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

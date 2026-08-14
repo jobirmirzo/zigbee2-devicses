@@ -1,0 +1,55 @@
+{
+  "model": "SE-20-250-1000-W2Z2",
+  "file": "SE-20-250-1000-W2Z2.md",
+  "vendor": "Ltech",
+  "description": "LED (CCT mode)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SE-20-250-1000-W2Z2.png",
+  "added_at": "2024-06-30T19:12:33",
+  "exposes_summary": "light (state, brightness, color_temp)",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 250,
+          "value_max": 454,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

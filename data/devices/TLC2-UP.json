@@ -1,0 +1,55 @@
+{
+  "model": "TLC2-UP",
+  "file": "TLC2-UP.md",
+  "vendor": "YOKIS",
+  "description": "Keyring Design series 2-button remote control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TLC2-UP.png",
+  "added_at": "2024-12-29T16:26:41",
+  "exposes_summary": "identify, action",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "toggle",
+        "brightness_move_to_level",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_step_up",
+        "brightness_step_down",
+        "brightness_stop",
+        "open",
+        "close",
+        "stop"
+      ]
+    }
+  ],
+  "warnings": []
+}

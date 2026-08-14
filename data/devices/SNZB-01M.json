@@ -1,0 +1,59 @@
+{
+  "model": "SNZB-01M",
+  "file": "SNZB-01M.md",
+  "vendor": "SONOFF",
+  "description": "Four-way wireless button",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SNZB-01M.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single_button_1",
+        "double_button_1",
+        "long_button_1",
+        "triple_button_1",
+        "single_button_2",
+        "double_button_2",
+        "long_button_2",
+        "triple_button_2",
+        "single_button_3",
+        "double_button_3",
+        "long_button_3",
+        "triple_button_3",
+        "single_button_4",
+        "double_button_4",
+        "long_button_4",
+        "triple_button_4"
+      ]
+    }
+  ],
+  "warnings": []
+}

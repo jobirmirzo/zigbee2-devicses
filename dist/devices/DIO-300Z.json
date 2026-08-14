@@ -1,0 +1,136 @@
+{
+  "model": "DIO-300Z",
+  "file": "DIO-300Z.md",
+  "vendor": "ShinaSystem",
+  "description": "SiHAS DI/DO Module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DIO-300Z.png",
+  "added_at": "2024-03-31T18:43:56",
+  "exposes_summary": "di_status, switch (state), di_type, do_type, di_do_link, do_pulse_time, action",
+  "exposes": [
+    {
+      "name": "Di status",
+      "type": "enum",
+      "property": "di_status",
+      "base": "di_status",
+      "endpoint": null,
+      "description": "Indicates whether the DI(Digital Input) is open or closed.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "Close",
+        "Open"
+      ]
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Di type",
+      "type": "enum",
+      "property": "di_type",
+      "base": "di_type",
+      "endpoint": null,
+      "description": "Set the DI(Digital Input) type to either a button or door sensor(latch) type.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Button",
+        "Door"
+      ]
+    },
+    {
+      "name": "Do type",
+      "type": "enum",
+      "property": "do_type",
+      "base": "do_type",
+      "endpoint": null,
+      "description": "Set the DO(Digital Output) type to either a pulse or latch type.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Pulse",
+        "Latch"
+      ]
+    },
+    {
+      "name": "Di do link",
+      "type": "enum",
+      "property": "di_do_link",
+      "base": "di_do_link",
+      "endpoint": null,
+      "description": "Configure DO linkage according to DI status. When set to ON, DO is output according to the DI input..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "Off",
+        "On"
+      ]
+    },
+    {
+      "name": "Do pulse time",
+      "type": "numeric",
+      "property": "do_pulse_time",
+      "base": "do_pulse_time",
+      "endpoint": null,
+      "description": "When the DO output is set to pulse type, you can set the DO pulse time. The unit is milliseconds..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 100,
+      "value_max": 3000,
+      "unit": "ms"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single",
+        "double",
+        "long"
+      ]
+    }
+  ],
+  "warnings": []
+}

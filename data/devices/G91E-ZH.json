@@ -1,0 +1,11 @@
+{
+  "model": "G91E-ZH",
+  "file": "G91E-ZH.md",
+  "vendor": "Lincukoo",
+  "description": "Zigbee Router",
+  "image": "https://www.zigbee2mqtt.io/images/devices/G91E-ZH.png",
+  "added_at": "2026-01-31T13:10:42",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

@@ -1,0 +1,156 @@
+{
+  "model": "S520619",
+  "file": "S520619.md",
+  "vendor": "Schneider Electric",
+  "description": "Wiser Odace Smart thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/S520619.png",
+  "added_at": "2025-01-03T20:11:47",
+  "exposes_summary": "keypad_lockout, temperature_display_mode, climate (occupied_heating_setpoint, occupied_cooling_setpoint, local_temperature, system_mode, running_state, pi_heating_demand, pi_cooling_demand), temperature, occupancy, schneider_pilot_mode",
+  "exposes": [
+    {
+      "name": "Keypad lockout",
+      "type": "binary",
+      "property": "keypad_lockout",
+      "base": "keypad_lockout",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "lock1",
+      "value_off": "unlock"
+    },
+    {
+      "name": "Temperature display mode",
+      "type": "enum",
+      "property": "temperature_display_mode",
+      "base": "temperature_display_mode",
+      "endpoint": null,
+      "description": "The temperature format displayed on the thermostat screen.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "celsius",
+        "fahrenheit"
+      ]
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 4,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "occupied_cooling_setpoint",
+          "base": "occupied_cooling_setpoint",
+          "value_min": 4,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "cool"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        },
+        {
+          "property": "pi_heating_demand",
+          "base": "pi_heating_demand",
+          "readable": false
+        },
+        {
+          "property": "pi_cooling_demand",
+          "base": "pi_cooling_demand",
+          "value_min": 4,
+          "value_max": 30,
+          "values": [
+            "off",
+            "heat",
+            "cool"
+          ],
+          "unit": "°C",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Schneider pilot mode",
+      "type": "enum",
+      "property": "schneider_pilot_mode",
+      "base": "schneider_pilot_mode",
+      "endpoint": null,
+      "description": "Controls piloting mode (from 'old description'). According to SE the attribute is called 'Heating output mode', and the corresponding custom cluster is heatingCoolingOutputClusterServer..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "contactor",
+        "pilot"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,196 @@
+{
+  "model": "TS0601_water_valve",
+  "file": "TS0601_water_valve.md",
+  "vendor": "Tuya",
+  "description": "Ultrasonic water meter valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_water_valve.png",
+  "added_at": "2025-08-01T15:19:08",
+  "exposes_summary": "switch (state), water_consumed, reverse_water_consumed, month_consumption, daily_consumption, flow_rate, auto_clean, temperature, voltage, meter_id, faults, report_period",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Water consumed",
+      "type": "numeric",
+      "property": "water_consumed",
+      "base": "water_consumed",
+      "endpoint": null,
+      "description": "Total water consumption.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "L"
+    },
+    {
+      "name": "Reverse water consumed",
+      "type": "numeric",
+      "property": "reverse_water_consumed",
+      "base": "reverse_water_consumed",
+      "endpoint": null,
+      "description": "Total reverse water consumption.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "L"
+    },
+    {
+      "name": "Month consumption",
+      "type": "numeric",
+      "property": "month_consumption",
+      "base": "month_consumption",
+      "endpoint": null,
+      "description": "month consumption.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "L"
+    },
+    {
+      "name": "Daily consumption",
+      "type": "numeric",
+      "property": "daily_consumption",
+      "base": "daily_consumption",
+      "endpoint": null,
+      "description": "daily consumption.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "L"
+    },
+    {
+      "name": "Flow rate",
+      "type": "numeric",
+      "property": "flow_rate",
+      "base": "flow_rate",
+      "endpoint": null,
+      "description": "Instantaneous water flow rate.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "L/h"
+    },
+    {
+      "name": "Auto clean",
+      "type": "binary",
+      "property": "auto_clean",
+      "base": "auto_clean",
+      "endpoint": null,
+      "description": "Auto clean.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Voltage of the battery in millivolts.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Meter id",
+      "type": "text",
+      "property": "meter_id",
+      "base": "meter_id",
+      "endpoint": null,
+      "description": "Meter identification number.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Faults",
+      "type": "text",
+      "property": "faults",
+      "base": "faults",
+      "endpoint": null,
+      "description": "Active fault status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Report period",
+      "type": "enum",
+      "property": "report_period",
+      "base": "report_period",
+      "endpoint": null,
+      "description": "Report period.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "1h",
+        "2h",
+        "3h",
+        "4h",
+        "6h",
+        "8h",
+        "12h",
+        "24h"
+      ]
+    }
+  ],
+  "warnings": []
+}

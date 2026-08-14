@@ -1,0 +1,124 @@
+{
+  "model": "FC600NH",
+  "file": "FC600NH.md",
+  "vendor": "Salus Controls",
+  "description": "Fan coil thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/FC600NH.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "climate (occupied_heating_setpoint, local_temperature, system_mode, running_mode, running_state, local_temperature_calibration, fan_mode), keypad_lockout, preset",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 40,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "auto"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_mode",
+          "base": "running_mode",
+          "value_min": 5,
+          "value_max": 40,
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "auto"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "value_min": 5,
+          "value_max": 40,
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "auto"
+          ],
+          "unit": "°C",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Keypad lockout",
+      "type": "enum",
+      "property": "keypad_lockout",
+      "base": "keypad_lockout",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "unlock",
+        "lock1",
+        "lock2"
+      ]
+    },
+    {
+      "name": "Preset",
+      "type": "enum",
+      "property": "preset",
+      "base": "preset",
+      "endpoint": null,
+      "description": "Operation mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "schedule",
+        "temporary_override",
+        "permanent_override",
+        "standby",
+        "eco"
+      ]
+    }
+  ],
+  "warnings": []
+}

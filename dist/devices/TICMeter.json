@@ -1,0 +1,11 @@
+{
+  "model": "TICMeter",
+  "file": "TICMeter.md",
+  "vendor": "GammaTroniques",
+  "description": "TICMeter pour Linky",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TICMeter.png",
+  "added_at": "2024-05-09T20:14:11",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

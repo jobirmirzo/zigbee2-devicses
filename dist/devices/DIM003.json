@@ -1,0 +1,151 @@
+{
+  "model": "DIM003",
+  "file": "DIM003.md",
+  "vendor": "TERNCY",
+  "description": "Color temperature dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DIM003.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "rated_max_current_ma, startup_depth_calibration, color_temperature_range_min_kelvin, color_temperature_range_max_kelvin, color_temperature_io_reversed, light_up_curve, light (state, brightness, color_temp)",
+  "exposes": [
+    {
+      "name": "Rated max current ma",
+      "type": "numeric",
+      "property": "rated_max_current_ma",
+      "base": "rated_max_current_ma",
+      "endpoint": null,
+      "description": "Rated maximum current limit; setting may apply after a short delay.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 120,
+      "value_max": 4950,
+      "unit": "mA"
+    },
+    {
+      "name": "Startup depth calibration",
+      "type": "numeric",
+      "property": "startup_depth_calibration",
+      "base": "startup_depth_calibration",
+      "endpoint": null,
+      "description": "Xiaoyan startup depth calibration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 5000
+    },
+    {
+      "name": "Color temperature range min kelvin",
+      "type": "numeric",
+      "property": "color_temperature_range_min_kelvin",
+      "base": "color_temperature_range_min_kelvin",
+      "endpoint": null,
+      "description": "Warmest color temperature limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1000,
+      "value_max": 10000,
+      "unit": "K"
+    },
+    {
+      "name": "Color temperature range max kelvin",
+      "type": "numeric",
+      "property": "color_temperature_range_max_kelvin",
+      "base": "color_temperature_range_max_kelvin",
+      "endpoint": null,
+      "description": "Coolest color temperature limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1000,
+      "value_max": 10000,
+      "unit": "K"
+    },
+    {
+      "name": "Color temperature io reversed",
+      "type": "binary",
+      "property": "color_temperature_io_reversed",
+      "base": "color_temperature_io_reversed",
+      "endpoint": null,
+      "description": "Reverse the cool and warm white output IO mapping.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Light up curve",
+      "type": "enum",
+      "property": "light_up_curve",
+      "base": "light_up_curve",
+      "endpoint": null,
+      "description": "Light-up curve.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "fast_start",
+        "uniform",
+        "slow_start"
+      ]
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        },
+        {
+          "property": "color_temp",
+          "base": "color_temp",
+          "value_min": 142,
+          "value_max": 625,
+          "presets": [
+            "coolest",
+            "cool",
+            "neutral",
+            "warm",
+            "warmest"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,11 @@
+{
+  "model": "HS2IRC",
+  "file": "HS2IRC.md",
+  "vendor": "Heiman",
+  "description": "Smart IR Control",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS2IRC.png",
+  "added_at": "2020-09-30T20:52:56Z",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

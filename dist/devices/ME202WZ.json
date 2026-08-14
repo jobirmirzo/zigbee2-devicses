@@ -1,0 +1,182 @@
+{
+  "model": "ME202WZ",
+  "file": "ME202WZ.md",
+  "vendor": "Tuya",
+  "description": "Water level sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ME202WZ.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "liquid_state, liquid_level_percent, liquid_depth, voltage, max_set, min_set, liquid_depth_max, relay_switch, pump_mode, pump_control, version",
+  "exposes": [
+    {
+      "name": "Liquid state",
+      "type": "enum",
+      "property": "liquid_state",
+      "base": "liquid_state",
+      "endpoint": null,
+      "description": "Liquid level status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "low",
+        "normal",
+        "high"
+      ]
+    },
+    {
+      "name": "Liquid level percent",
+      "type": "numeric",
+      "property": "liquid_level_percent",
+      "base": "liquid_level_percent",
+      "endpoint": null,
+      "description": "Liquid level ratio.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Liquid depth",
+      "type": "numeric",
+      "property": "liquid_depth",
+      "base": "liquid_depth",
+      "endpoint": null,
+      "description": "Liquid depth.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Power supply voltage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Max set",
+      "type": "numeric",
+      "property": "max_set",
+      "base": "max_set",
+      "endpoint": null,
+      "description": "Liquid maximum percentage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Min set",
+      "type": "numeric",
+      "property": "min_set",
+      "base": "min_set",
+      "endpoint": null,
+      "description": "Liquid minimum percentage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Liquid depth max",
+      "type": "numeric",
+      "property": "liquid_depth_max",
+      "base": "liquid_depth_max",
+      "endpoint": null,
+      "description": "Distance from sensor to liquid surface.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 10,
+      "unit": "m"
+    },
+    {
+      "name": "Relay switch",
+      "type": "binary",
+      "property": "relay_switch",
+      "base": "relay_switch",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Pump mode",
+      "type": "enum",
+      "property": "pump_mode",
+      "base": "pump_mode",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "supply",
+        "drainage"
+      ]
+    },
+    {
+      "name": "Pump control",
+      "type": "enum",
+      "property": "pump_control",
+      "base": "pump_control",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "auto",
+        "manual"
+      ]
+    },
+    {
+      "name": "Version",
+      "type": "text",
+      "property": "version",
+      "base": "version",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

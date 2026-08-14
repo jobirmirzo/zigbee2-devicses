@@ -1,0 +1,44 @@
+{
+  "model": "TS0218",
+  "file": "TS0218.md",
+  "vendor": "Tuya",
+  "description": "Button",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0218.png",
+  "added_at": "2019-12-15T17:27:48Z",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "click"
+      ]
+    }
+  ],
+  "warnings": []
+}

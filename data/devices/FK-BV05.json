@@ -1,0 +1,331 @@
+{
+  "model": "FK-BV05",
+  "file": "FK-BV05.md",
+  "vendor": "FrankEver",
+  "description": "Zigbee smart water valve with flow meter and temperature sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/FK-BV05.png",
+  "added_at": "2026-05-31T19:17:58",
+  "exposes_summary": "switch (state), threshold, position, power_off_state, weather_delay, countdown, water_temperature, water_consumed_last, water_consumed_total, water_leakage_state, single_irrigation_switch, single_irrigation_set, day_irrigation_switch, day_irrigation_set, water_volume_alarm_switch, water_volume_alarm_set, water_temp_alarm_switch, water_temp_alarm_max, water_temp_alarm_min, creep_switch",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Threshold",
+      "type": "numeric",
+      "property": "threshold",
+      "base": "threshold",
+      "endpoint": null,
+      "description": "Target valve opening percentage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Position",
+      "type": "numeric",
+      "property": "position",
+      "base": "position",
+      "endpoint": null,
+      "description": "Current valve position.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Power off state",
+      "type": "enum",
+      "property": "power_off_state",
+      "base": "power_off_state",
+      "endpoint": null,
+      "description": "Power-off status behavior.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "maintain"
+      ]
+    },
+    {
+      "name": "Weather delay",
+      "type": "enum",
+      "property": "weather_delay",
+      "base": "weather_delay",
+      "endpoint": null,
+      "description": "Weather delay.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "cancel",
+        "24h",
+        "48h",
+        "72h"
+      ]
+    },
+    {
+      "name": "Countdown",
+      "type": "numeric",
+      "property": "countdown",
+      "base": "countdown",
+      "endpoint": null,
+      "description": "Irrigation Duration (countdown in seconds).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 86400,
+      "unit": "s"
+    },
+    {
+      "name": "Water temperature",
+      "type": "numeric",
+      "property": "water_temperature",
+      "base": "water_temperature",
+      "endpoint": null,
+      "description": "Water temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Water consumed last",
+      "type": "numeric",
+      "property": "water_consumed_last",
+      "base": "water_consumed_last",
+      "endpoint": null,
+      "description": "Single water consumption (Last irrigation).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "L"
+    },
+    {
+      "name": "Water consumed total",
+      "type": "numeric",
+      "property": "water_consumed_total",
+      "base": "water_consumed_total",
+      "endpoint": null,
+      "description": "Daily water consumption total.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "L"
+    },
+    {
+      "name": "Water leakage state",
+      "type": "enum",
+      "property": "water_leakage_state",
+      "base": "water_leakage_state",
+      "endpoint": null,
+      "description": "Leak detection status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "water_leakage_yes",
+        "water_leakage_no"
+      ]
+    },
+    {
+      "name": "Single irrigation switch",
+      "type": "binary",
+      "property": "single_irrigation_switch",
+      "base": "single_irrigation_switch",
+      "endpoint": null,
+      "description": "Enable single irrigation volume limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Single irrigation set",
+      "type": "numeric",
+      "property": "single_irrigation_set",
+      "base": "single_irrigation_set",
+      "endpoint": null,
+      "description": "Single irrigation water volume setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "L"
+    },
+    {
+      "name": "Day irrigation switch",
+      "type": "binary",
+      "property": "day_irrigation_switch",
+      "base": "day_irrigation_switch",
+      "endpoint": null,
+      "description": "Enable daily irrigation volume limit.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Day irrigation set",
+      "type": "numeric",
+      "property": "day_irrigation_set",
+      "base": "day_irrigation_set",
+      "endpoint": null,
+      "description": "Daily irrigation water volume setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "L"
+    },
+    {
+      "name": "Water volume alarm switch",
+      "type": "binary",
+      "property": "water_volume_alarm_switch",
+      "base": "water_volume_alarm_switch",
+      "endpoint": null,
+      "description": "Water volume alarm switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Water volume alarm set",
+      "type": "numeric",
+      "property": "water_volume_alarm_set",
+      "base": "water_volume_alarm_set",
+      "endpoint": null,
+      "description": "Alarm water volume setting value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "L"
+    },
+    {
+      "name": "Water temp alarm switch",
+      "type": "binary",
+      "property": "water_temp_alarm_switch",
+      "base": "water_temp_alarm_switch",
+      "endpoint": null,
+      "description": "Water temperature alarm switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Water temp alarm max",
+      "type": "numeric",
+      "property": "water_temp_alarm_max",
+      "base": "water_temp_alarm_max",
+      "endpoint": null,
+      "description": "Alarm water temperature maximum setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 120,
+      "unit": "°C"
+    },
+    {
+      "name": "Water temp alarm min",
+      "type": "numeric",
+      "property": "water_temp_alarm_min",
+      "base": "water_temp_alarm_min",
+      "endpoint": null,
+      "description": "Alarm water temperature minimum setting.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 120,
+      "unit": "°C"
+    },
+    {
+      "name": "Creep switch",
+      "type": "binary",
+      "property": "creep_switch",
+      "base": "creep_switch",
+      "endpoint": null,
+      "description": "Peristaltic function switch (Auto cycle anti-calc) - KEEP OFF for normal use.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

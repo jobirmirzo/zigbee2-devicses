@@ -1,0 +1,66 @@
+{
+  "model": "DLKZMK12LM",
+  "file": "DLKZMK12LM.md",
+  "vendor": "Aqara",
+  "description": "Single switch module T1 (no neutral), CN",
+  "image": "https://www.zigbee2mqtt.io/images/devices/DLKZMK12LM.png",
+  "added_at": "2021-11-30T20:10:17",
+  "exposes_summary": "switch (state), power_outage_memory, switch_type",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power outage memory",
+      "type": "binary",
+      "property": "power_outage_memory",
+      "base": "power_outage_memory",
+      "endpoint": null,
+      "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type",
+      "base": "switch_type",
+      "endpoint": null,
+      "description": "Wall switch type.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "toggle",
+        "momentary"
+      ]
+    }
+  ],
+  "warnings": []
+}

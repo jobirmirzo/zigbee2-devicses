@@ -1,0 +1,70 @@
+{
+  "model": "ATMS1601Z",
+  "file": "ATMS1601Z.md",
+  "vendor": "Tuya",
+  "description": "Din smart relay (without power monitoring)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ATMS1601Z.png",
+  "added_at": "2022-06-01T15:08:55",
+  "exposes_summary": "switch (state), power_outage_memory, indicator_mode",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power outage memory",
+      "type": "enum",
+      "property": "power_outage_memory",
+      "base": "power_outage_memory",
+      "endpoint": null,
+      "description": "Recover state after power outage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "off",
+        "restore"
+      ]
+    },
+    {
+      "name": "Indicator mode",
+      "type": "enum",
+      "property": "indicator_mode",
+      "base": "indicator_mode",
+      "endpoint": null,
+      "description": "Relay LED indicator mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on_off",
+        "off_on"
+      ]
+    }
+  ],
+  "warnings": []
+}

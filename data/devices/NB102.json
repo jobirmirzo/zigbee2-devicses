@@ -1,0 +1,11 @@
+{
+  "model": "NB102",
+  "file": "NB102.md",
+  "vendor": "Profalux",
+  "description": "Cover remote",
+  "image": "https://www.zigbee2mqtt.io/images/devices/NB102.png",
+  "added_at": "2023-01-01T08:59:10",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

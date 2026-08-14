@@ -1,0 +1,281 @@
+{
+  "model": "SDM02V1-GT",
+  "file": "SDM02V1-GT.md",
+  "vendor": "Tuya",
+  "description": "Smart energy monitor for 2P+N system",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SDM02V1-GT.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "voltage_l1, voltage_l2, power_l1, power_l2, current_l1, current_l2, energy, produced_energy, power_factor, power, ac_frequency, device_locating, energy_l1, energy_l2, energy_produced_l1, energy_produced_l2, power_factor_l1, power_factor_l2, update_frequency",
+  "exposes": [
+    {
+      "name": "Voltage l1",
+      "type": "numeric",
+      "property": "voltage_l1",
+      "base": "voltage_l1",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase L1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Voltage l2",
+      "type": "numeric",
+      "property": "voltage_l2",
+      "base": "voltage_l2",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase L2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power l1",
+      "type": "numeric",
+      "property": "power_l1",
+      "base": "power_l1",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase L1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Power l2",
+      "type": "numeric",
+      "property": "power_l2",
+      "base": "power_l2",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase L2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current l1",
+      "type": "numeric",
+      "property": "current_l1",
+      "base": "current_l1",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase L1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Current l2",
+      "type": "numeric",
+      "property": "current_l2",
+      "base": "current_l2",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase L2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Total forward active energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Produced energy",
+      "type": "numeric",
+      "property": "produced_energy",
+      "base": "produced_energy",
+      "endpoint": null,
+      "description": "Total reverse active energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Power factor",
+      "type": "numeric",
+      "property": "power_factor",
+      "base": "power_factor",
+      "endpoint": null,
+      "description": "Total power factor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Total active power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "AC frequency",
+      "type": "numeric",
+      "property": "ac_frequency",
+      "base": "ac_frequency",
+      "endpoint": null,
+      "description": "Measured electrical AC frequency.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Device locating",
+      "type": "binary",
+      "property": "device_locating",
+      "base": "device_locating",
+      "endpoint": null,
+      "description": "Locate device.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Energy l1",
+      "type": "numeric",
+      "property": "energy_l1",
+      "base": "energy_l1",
+      "endpoint": null,
+      "description": "Sum of consumed energy (phase L1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy l2",
+      "type": "numeric",
+      "property": "energy_l2",
+      "base": "energy_l2",
+      "endpoint": null,
+      "description": "Sum of consumed energy (phase L2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy produced l1",
+      "type": "numeric",
+      "property": "energy_produced_l1",
+      "base": "energy_produced_l1",
+      "endpoint": null,
+      "description": "Sum of produced energy (phase L1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy produced l2",
+      "type": "numeric",
+      "property": "energy_produced_l2",
+      "base": "energy_produced_l2",
+      "endpoint": null,
+      "description": "Sum of produced energy (phase L2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Power factor l1",
+      "type": "numeric",
+      "property": "power_factor_l1",
+      "base": "power_factor_l1",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor (phase L1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Power factor l2",
+      "type": "numeric",
+      "property": "power_factor_l2",
+      "base": "power_factor_l2",
+      "endpoint": null,
+      "description": "Instantaneous measured power factor (phase L2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Update frequency",
+      "type": "numeric",
+      "property": "update_frequency",
+      "base": "update_frequency",
+      "endpoint": null,
+      "description": "Update frequency.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 3600,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

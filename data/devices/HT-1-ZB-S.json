@@ -1,0 +1,190 @@
+{
+  "model": "HT-1-ZB-S",
+  "file": "HT-1-ZB-S.md",
+  "vendor": "ONOKOM",
+  "description": "Adapter for household Hitachi systems",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HT-1-ZB-S.png",
+  "added_at": "2025-09-01T18:20:17",
+  "exposes_summary": "ac_connected, switch (state), current_temperature, target_temperature, system_mode, mode, zb_fan_speed, fan_speed, smart_fan_speed, status_led",
+  "exposes": [
+    {
+      "name": "Ac connected",
+      "type": "enum",
+      "property": "ac_connected",
+      "base": "ac_connected",
+      "endpoint": null,
+      "description": "AC connected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "disconnected",
+        "invalid_data_recieved",
+        "connected_with_issues",
+        "connected"
+      ]
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Current temperature",
+      "type": "numeric",
+      "property": "current_temperature",
+      "base": "current_temperature",
+      "endpoint": null,
+      "description": "Indoor air temperature.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Target temperature",
+      "type": "numeric",
+      "property": "target_temperature",
+      "base": "target_temperature",
+      "endpoint": null,
+      "description": "Target temperature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 16,
+      "value_max": 32,
+      "unit": "°C"
+    },
+    {
+      "name": "System mode",
+      "type": "enum",
+      "property": "system_mode",
+      "base": "system_mode",
+      "endpoint": null,
+      "description": "Active mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "auto",
+        "cool",
+        "heat",
+        "fan_only",
+        "dry"
+      ]
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "heat",
+        "cool",
+        "auto",
+        "dry",
+        "fan_only"
+      ]
+    },
+    {
+      "name": "Zb fan speed",
+      "type": "numeric",
+      "property": "zb_fan_speed",
+      "base": "zb_fan_speed",
+      "endpoint": null,
+      "description": "Fan speed modes: Auto(5), Low(1), Medium(2), Maximum(3).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 5
+    },
+    {
+      "name": "Fan speed",
+      "type": "numeric",
+      "property": "fan_speed",
+      "base": "fan_speed",
+      "endpoint": null,
+      "description": "Fan speed: Auto(0), First(1) - Maximum(3).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3
+    },
+    {
+      "name": "Smart fan speed",
+      "type": "numeric",
+      "property": "smart_fan_speed",
+      "base": "smart_fan_speed",
+      "endpoint": null,
+      "description": "Smart fan speed: Auto (0), Low (1) ... Maximum (3).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 4
+    },
+    {
+      "name": "Status led",
+      "type": "enum",
+      "property": "status_led",
+      "base": "status_led",
+      "endpoint": null,
+      "description": "Status LED.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "normal_mode",
+        "disabled_if_no_errors",
+        "disabled_untill_reboot",
+        "always_disabled",
+        "green_untill_reboot",
+        "red_untill_reboot"
+      ]
+    }
+  ],
+  "warnings": []
+}

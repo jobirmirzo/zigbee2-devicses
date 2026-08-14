@@ -1,0 +1,411 @@
+{
+  "model": "WB-MSW-ZIGBEE_v.4_official",
+  "file": "WB-MSW-ZIGBEE_v.4_official.md",
+  "vendor": "Wiren Board",
+  "description": "Wall-mounted multi sensor with official Wiren Board firmware",
+  "image": "https://www.zigbee2mqtt.io/images/devices/WB-MSW-ZIGBEE_v.4_official.png",
+  "added_at": "2026-06-30T19:08:32",
+  "exposes_summary": "switch (state), illuminance, temperature, humidity, occupancy, co2, noise_level, noise, noise_threshold, noise_timeout, status_led, connectivity, modbus_slave_id, serial_number, fw_version, fw_signature, boot_version, component_version, component_signature, temperature_offset, occupancy_level, occupancy_sensitivity, occupancy_timeout, voc",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "buzzer",
+      "features": [
+        {
+          "property": "state_buzzer",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "heater",
+      "features": [
+        {
+          "property": "state_heater",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "led_red",
+      "features": [
+        {
+          "property": "state_led_red",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "led_green",
+      "features": [
+        {
+          "property": "state_led_green",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "CO2",
+      "type": "numeric",
+      "property": "co2",
+      "base": "co2",
+      "endpoint": null,
+      "description": "Measured value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Noise level",
+      "type": "numeric",
+      "property": "noise_level",
+      "base": "noise_level",
+      "endpoint": null,
+      "description": "Current noise level.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "dBA"
+    },
+    {
+      "name": "Noise",
+      "type": "binary",
+      "property": "noise",
+      "base": "noise",
+      "endpoint": null,
+      "description": "Noise detected.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Noise threshold",
+      "type": "numeric",
+      "property": "noise_threshold",
+      "base": "noise_threshold",
+      "endpoint": null,
+      "description": "Noise detection threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 150,
+      "unit": "dBA"
+    },
+    {
+      "name": "Noise timeout",
+      "type": "numeric",
+      "property": "noise_timeout",
+      "base": "noise_timeout",
+      "endpoint": null,
+      "description": "Time in seconds after which noise is cleared.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 2000,
+      "unit": "s"
+    },
+    {
+      "name": "Status led",
+      "type": "binary",
+      "property": "status_led",
+      "base": "status_led",
+      "endpoint": null,
+      "description": "Status LED control.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Connectivity",
+      "type": "enum",
+      "property": "connectivity",
+      "base": "connectivity",
+      "endpoint": null,
+      "description": "Device connectivity state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "offline",
+        "online",
+        "firmware_update",
+        "component_update"
+      ]
+    },
+    {
+      "name": "Modbus slave id",
+      "type": "numeric",
+      "property": "modbus_slave_id",
+      "base": "modbus_slave_id",
+      "endpoint": null,
+      "description": "Device Modbus slave ID.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Serial number",
+      "type": "numeric",
+      "property": "serial_number",
+      "base": "serial_number",
+      "endpoint": null,
+      "description": "Device serial number.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Fw version",
+      "type": "text",
+      "property": "fw_version",
+      "base": "fw_version",
+      "endpoint": null,
+      "description": "Device firmware version.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Fw signature",
+      "type": "text",
+      "property": "fw_signature",
+      "base": "fw_signature",
+      "endpoint": null,
+      "description": "Device firmware signature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Boot version",
+      "type": "text",
+      "property": "boot_version",
+      "base": "boot_version",
+      "endpoint": null,
+      "description": "Device bootloader version.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Component version",
+      "type": "text",
+      "property": "component_version",
+      "base": "component_version",
+      "endpoint": null,
+      "description": "Device component firmware version.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Component signature",
+      "type": "text",
+      "property": "component_signature",
+      "base": "component_signature",
+      "endpoint": null,
+      "description": "Device component firmware signature.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Temperature offset",
+      "type": "numeric",
+      "property": "temperature_offset",
+      "base": "temperature_offset",
+      "endpoint": null,
+      "description": "Offset subtracted from the raw temperature reading.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -10,
+      "value_max": 10,
+      "unit": "°C"
+    },
+    {
+      "name": "Occupancy level",
+      "type": "numeric",
+      "property": "occupancy_level",
+      "base": "occupancy_level",
+      "endpoint": null,
+      "description": "Raw occupancy level reported by the sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Occupancy sensitivity",
+      "type": "numeric",
+      "property": "occupancy_sensitivity",
+      "base": "occupancy_sensitivity",
+      "endpoint": null,
+      "description": "Occupancy detection sensitivity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 2000
+    },
+    {
+      "name": "Occupancy timeout",
+      "type": "numeric",
+      "property": "occupancy_timeout",
+      "base": "occupancy_timeout",
+      "endpoint": null,
+      "description": "Time in seconds after which occupancy is cleared.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 2000,
+      "unit": "s"
+    },
+    {
+      "name": "VOC",
+      "type": "numeric",
+      "property": "voc",
+      "base": "voc",
+      "endpoint": null,
+      "description": "Measured VOC concentration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "µg/m³"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,48 @@
+{
+  "model": "8718801528334",
+  "file": "8718801528334.md",
+  "vendor": "Ynoa",
+  "description": "Remote control one button dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/8718801528334.png",
+  "added_at": "2021-12-31T16:51:16",
+  "exposes_summary": "action, battery",
+  "exposes": [
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "brightness_move_up",
+        "brightness_move_down",
+        "brightness_stop"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

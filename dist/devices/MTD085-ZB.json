@@ -1,0 +1,303 @@
+{
+  "model": "MTD085-ZB",
+  "file": "MTD085-ZB.md",
+  "vendor": "LeapMMW",
+  "description": "Human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MTD085-ZB.png",
+  "added_at": "2025-01-03T20:11:47",
+  "exposes_summary": "occupancy, illuminance, target_distance, radar_sensitivity, detection_range, shield_range, entry_sensitivity, entry_distance, entry_filter_time, departure_delay, block_time, status_indication, sensor, scene_preset, distance_report_mode, debug_mode, debug_distance, debug_countdown",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Target distance",
+      "type": "numeric",
+      "property": "target_distance",
+      "base": "target_distance",
+      "endpoint": null,
+      "description": "Distance to target.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Radar sensitivity",
+      "type": "numeric",
+      "property": "radar_sensitivity",
+      "base": "radar_sensitivity",
+      "endpoint": null,
+      "description": "Detection threshold for the strength of object energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Detection range",
+      "type": "numeric",
+      "property": "detection_range",
+      "base": "detection_range",
+      "endpoint": null,
+      "description": "Maximum distance detected by the sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 8,
+      "unit": "m"
+    },
+    {
+      "name": "Shield range",
+      "type": "numeric",
+      "property": "shield_range",
+      "base": "shield_range",
+      "endpoint": null,
+      "description": "Nearest distance detected by the sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 8,
+      "unit": "m"
+    },
+    {
+      "name": "Entry sensitivity",
+      "type": "numeric",
+      "property": "entry_sensitivity",
+      "base": "entry_sensitivity",
+      "endpoint": null,
+      "description": "Sensitivity threshold triggered for the first time when the target enters the detection range.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Entry distance",
+      "type": "numeric",
+      "property": "entry_distance",
+      "base": "entry_distance",
+      "endpoint": null,
+      "description": "Detection distance when unoccupied.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 8,
+      "unit": "m"
+    },
+    {
+      "name": "Entry filter time",
+      "type": "numeric",
+      "property": "entry_filter_time",
+      "base": "entry_filter_time",
+      "endpoint": null,
+      "description": "Sensitivity threshold triggered for the first time when the target enters the detection range .",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 0.5,
+      "unit": "s"
+    },
+    {
+      "name": "Departure delay",
+      "type": "numeric",
+      "property": "departure_delay",
+      "base": "departure_delay",
+      "endpoint": null,
+      "description": "Confirmation time after the target disappears.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 7200,
+      "unit": "s"
+    },
+    {
+      "name": "Block time",
+      "type": "numeric",
+      "property": "block_time",
+      "base": "block_time",
+      "endpoint": null,
+      "description": "Time for the target to be detected again after switching from manned(occupy) to unmanned(unoccupy) mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "s"
+    },
+    {
+      "name": "Status indication",
+      "type": "enum",
+      "property": "status_indication",
+      "base": "status_indication",
+      "endpoint": null,
+      "description": "Indicator light will turn on when human presence is detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "OFF",
+        "ON"
+      ]
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor",
+      "base": "sensor",
+      "endpoint": null,
+      "description": "The radar sensor can be set in three states: on, occupied and unoccupied. For example, if set to occupied, it will continue to maintain presence regardless of whether someone is present or not. If set to unoccupied, the unoccupied state will be maintained permanently..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "on",
+        "occupied",
+        "unoccupied"
+      ]
+    },
+    {
+      "name": "Scene preset",
+      "type": "enum",
+      "property": "scene_preset",
+      "base": "scene_preset",
+      "endpoint": null,
+      "description": "Presets.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Custom",
+        "Toilet",
+        "Kitchen",
+        "Hallway",
+        "Bedroom",
+        "Livingroom",
+        "Meetingroom",
+        "Factory default"
+      ]
+    },
+    {
+      "name": "Distance report mode",
+      "type": "enum",
+      "property": "distance_report_mode",
+      "base": "distance_report_mode",
+      "endpoint": null,
+      "description": "Indicator light will turn on when human presence is detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Normal",
+        "Occupancy detection"
+      ]
+    },
+    {
+      "name": "Debug mode",
+      "type": "enum",
+      "property": "debug_mode",
+      "base": "debug_mode",
+      "endpoint": null,
+      "description": "In debug mode, radar will report more information, can be used to identify interference.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "OFF",
+        "ON"
+      ]
+    },
+    {
+      "name": "Debug distance",
+      "type": "numeric",
+      "property": "debug_distance",
+      "base": "debug_distance",
+      "endpoint": null,
+      "description": "Real time distance to target.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Debug countdown",
+      "type": "numeric",
+      "property": "debug_countdown",
+      "base": "debug_countdown",
+      "endpoint": null,
+      "description": "Time before the target disappears.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

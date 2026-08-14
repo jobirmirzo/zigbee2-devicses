@@ -1,0 +1,130 @@
+{
+  "model": "HS8MLS-EF1-3.0",
+  "file": "HS8MLS-EF1-3.0.md",
+  "vendor": "Heiman",
+  "description": "PIR sensor with night light",
+  "image": "https://www.zigbee2mqtt.io/images/devices/HS8MLS-EF1-3.0.png",
+  "added_at": "2026-02-28T20:18:44",
+  "exposes_summary": "occupancy, switch (state), power_on_behavior, enable_indicator, ambient_light, radar_delay_time, sensitivity",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Enable indicator",
+      "type": "binary",
+      "property": "enable_indicator",
+      "base": "enable_indicator",
+      "endpoint": null,
+      "description": "active green indicator.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Ambient light",
+      "type": "numeric",
+      "property": "ambient_light",
+      "base": "ambient_light",
+      "endpoint": null,
+      "description": "ambient illuminance in lux.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "Lx"
+    },
+    {
+      "name": "Radar delay time",
+      "type": "numeric",
+      "property": "radar_delay_time",
+      "base": "radar_delay_time",
+      "endpoint": null,
+      "description": "Occupied to unoccupied delay.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 60,
+      "value_max": 3600
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": "sensitivity for PIR sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "high",
+        "medium",
+        "low"
+      ]
+    }
+  ],
+  "warnings": []
+}

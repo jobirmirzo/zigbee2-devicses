@@ -1,0 +1,141 @@
+{
+  "model": "TS0601_gas_sensor_2",
+  "file": "TS0601_gas_sensor_2.md",
+  "vendor": "Tuya",
+  "description": "Gas sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_gas_sensor_2.png",
+  "added_at": "2023-01-01T08:59:10",
+  "exposes_summary": "gas, gas_value, self_test, self_test_result, silence, alarm_ringtone, alarm_time, preheat",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "binary",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Gas value",
+      "type": "numeric",
+      "property": "gas_value",
+      "base": "gas_value",
+      "endpoint": null,
+      "description": "Measured gas concentration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "LEL"
+    },
+    {
+      "name": "Self test",
+      "type": "binary",
+      "property": "self_test",
+      "base": "self_test",
+      "endpoint": null,
+      "description": "Indicates whether the device is being self-tested.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Self test result",
+      "type": "enum",
+      "property": "self_test_result",
+      "base": "self_test_result",
+      "endpoint": null,
+      "description": "Result of the self-test.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "checking",
+        "success",
+        "failure",
+        "others"
+      ]
+    },
+    {
+      "name": "Silence",
+      "type": "binary",
+      "property": "silence",
+      "base": "silence",
+      "endpoint": null,
+      "description": "Silence the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Alarm ringtone",
+      "type": "enum",
+      "property": "alarm_ringtone",
+      "base": "alarm_ringtone",
+      "endpoint": null,
+      "description": "Ringtone of the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "melody_1",
+        "melody_2",
+        "melody_3",
+        "melody_4",
+        "melody_5"
+      ]
+    },
+    {
+      "name": "Alarm time",
+      "type": "numeric",
+      "property": "alarm_time",
+      "base": "alarm_time",
+      "endpoint": null,
+      "description": "Alarm time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 180,
+      "unit": "s"
+    },
+    {
+      "name": "Preheat",
+      "type": "binary",
+      "property": "preheat",
+      "base": "preheat",
+      "endpoint": null,
+      "description": "Indicates sensor preheat is active.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

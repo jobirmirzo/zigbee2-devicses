@@ -1,0 +1,26 @@
+{
+  "model": "CC2538.ROUTER.V2",
+  "file": "CC2538.ROUTER.V2.md",
+  "vendor": "Custom devices (DiY)",
+  "description": "MODKAM stick CC2538 router with temperature sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/CC2538.ROUTER.V2.png",
+  "added_at": "2021-03-10T22:18:54Z",
+  "exposes_summary": "device_temperature",
+  "exposes": [
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

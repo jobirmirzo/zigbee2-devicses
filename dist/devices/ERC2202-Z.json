@@ -1,0 +1,93 @@
+{
+  "model": "ERC2202-Z",
+  "file": "ERC2202-Z.md",
+  "vendor": "BOX",
+  "description": "Dual controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ERC2202-Z.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "state_l1, state_l2, record_rf, clear_rf, rf_status",
+  "exposes": [
+    {
+      "name": "State l1",
+      "type": "binary",
+      "property": "state_l1",
+      "base": "state_l1",
+      "endpoint": null,
+      "description": "On/off state of the switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "State l2",
+      "type": "binary",
+      "property": "state_l2",
+      "base": "state_l2",
+      "endpoint": null,
+      "description": "On/off state of the switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Record rf",
+      "type": "enum",
+      "property": "record_rf",
+      "base": "record_rf",
+      "endpoint": null,
+      "description": "Record RF control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "record_l1",
+        "record_l2"
+      ]
+    },
+    {
+      "name": "Clear rf",
+      "type": "enum",
+      "property": "clear_rf",
+      "base": "clear_rf",
+      "endpoint": null,
+      "description": "Clear RF control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "clear_l1",
+        "clear_l2"
+      ]
+    },
+    {
+      "name": "Rf status",
+      "type": "enum",
+      "property": "rf_status",
+      "base": "rf_status",
+      "endpoint": null,
+      "description": "RF control status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "ok",
+        "error"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,42 @@
+{
+  "model": "TS0222_solar_light",
+  "file": "TS0222_solar_light.md",
+  "vendor": "Tuya",
+  "description": "Solar light sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0222_solar_light.png",
+  "added_at": "2025-09-01T18:20:17",
+  "exposes_summary": "illuminance, battery",
+  "exposes": [
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

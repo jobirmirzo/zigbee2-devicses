@@ -1,0 +1,184 @@
+{
+  "model": "TS0601_motion_sensor",
+  "file": "TS0601_motion_sensor.md",
+  "vendor": "Tuya",
+  "description": "Human presence sensor AIR",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0601_motion_sensor.png",
+  "added_at": "2021-10-30T12:58:50",
+  "exposes_summary": "occupancy, o_sensitivity, v_sensitivity, led_status, vacancy_delay, light_on_luminance_prefer, light_off_luminance_prefer, mode, luminance_level, reference_luminance, vacant_confirm_time",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "O sensitivity",
+      "type": "enum",
+      "property": "o_sensitivity",
+      "base": "o_sensitivity",
+      "endpoint": null,
+      "description": "O-Sensitivity mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "sensitive",
+        "normal",
+        "cautious"
+      ]
+    },
+    {
+      "name": "V sensitivity",
+      "type": "enum",
+      "property": "v_sensitivity",
+      "base": "v_sensitivity",
+      "endpoint": null,
+      "description": "V-Sensitivity mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "speed_priority",
+        "normal_priority",
+        "accuracy_priority"
+      ]
+    },
+    {
+      "name": "Led status",
+      "type": "enum",
+      "property": "led_status",
+      "base": "led_status",
+      "endpoint": null,
+      "description": "Led status switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "ON",
+        "OFF"
+      ]
+    },
+    {
+      "name": "Vacancy delay",
+      "type": "numeric",
+      "property": "vacancy_delay",
+      "base": "vacancy_delay",
+      "endpoint": null,
+      "description": "Vacancy delay.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 1000,
+      "unit": "sec"
+    },
+    {
+      "name": "Light on luminance prefer",
+      "type": "numeric",
+      "property": "light_on_luminance_prefer",
+      "base": "light_on_luminance_prefer",
+      "endpoint": null,
+      "description": "Light-On luminance prefer.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10000
+    },
+    {
+      "name": "Light off luminance prefer",
+      "type": "numeric",
+      "property": "light_off_luminance_prefer",
+      "base": "light_off_luminance_prefer",
+      "endpoint": null,
+      "description": "Light-Off luminance prefer.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10000
+    },
+    {
+      "name": "Mode",
+      "type": "enum",
+      "property": "mode",
+      "base": "mode",
+      "endpoint": null,
+      "description": "Working mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "general_model",
+        "temporaty_stay",
+        "basic_detection",
+        "sensor_test"
+      ]
+    },
+    {
+      "name": "Luminance level",
+      "type": "numeric",
+      "property": "luminance_level",
+      "base": "luminance_level",
+      "endpoint": null,
+      "description": "Luminance level.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Reference luminance",
+      "type": "numeric",
+      "property": "reference_luminance",
+      "base": "reference_luminance",
+      "endpoint": null,
+      "description": "Reference luminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Vacant confirm time",
+      "type": "numeric",
+      "property": "vacant_confirm_time",
+      "base": "vacant_confirm_time",
+      "endpoint": null,
+      "description": "Vacant confirm time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

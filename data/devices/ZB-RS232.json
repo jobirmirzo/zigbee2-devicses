@@ -1,0 +1,91 @@
+{
+  "model": "ZB-RS232",
+  "file": "ZB-RS232.md",
+  "vendor": "easyiot",
+  "description": "Zigbee to RS232 controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZB-RS232.png",
+  "added_at": "2026-06-09T18:58:47",
+  "exposes_summary": "last_received_command, send_command, rs232_config",
+  "exposes": [
+    {
+      "name": "Last received command",
+      "type": "text",
+      "property": "last_received_command",
+      "base": "last_received_command",
+      "endpoint": null,
+      "description": "Received data.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Send command",
+      "type": "text",
+      "property": "send_command",
+      "base": "send_command",
+      "endpoint": null,
+      "description": "Send data.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Rs232 config",
+      "type": "composite",
+      "property": "rs232_config",
+      "base": "rs232_config",
+      "endpoint": null,
+      "description": "RS232 serial port configuration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "baud_rate",
+          "type": "enum",
+          "description": "Baud rate (bps)",
+          "values": [
+            "1200",
+            "2400",
+            "4800",
+            "9600",
+            "19200",
+            "38400",
+            "57600",
+            "115200",
+            "230400",
+            "460800",
+            "921600"
+          ]
+        },
+        {
+          "property": "parity",
+          "type": "enum",
+          "description": "Parity (none / even / odd)",
+          "values": [
+            "none",
+            "even",
+            "odd"
+          ]
+        },
+        {
+          "property": "stop_bits",
+          "type": "enum",
+          "description": "Stop bits (1 / 1.5 / 2)",
+          "values": [
+            "1",
+            "1.5",
+            "2"
+          ]
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,103 @@
+{
+  "model": "YNDX_00537",
+  "file": "YNDX_00537.md",
+  "vendor": "Yandex",
+  "description": "Single relay",
+  "image": "https://www.zigbee2mqtt.io/images/devices/YNDX_00537.png",
+  "added_at": "2024-11-30T20:27:20",
+  "exposes_summary": "switch (state), power_on_behavior, power_type, switch_type, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "1",
+      "features": [
+        {
+          "property": "state_1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior_1",
+      "base": "power_on_behavior",
+      "endpoint": "1",
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Power type",
+      "type": "enum",
+      "property": "power_type",
+      "base": "power_type",
+      "endpoint": null,
+      "description": "Power supply type.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "full",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type_1",
+      "base": "switch_type",
+      "endpoint": "1",
+      "description": "External switch type 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "rocker",
+        "button",
+        "decoupled"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on_",
+        "off_",
+        "toggle_"
+      ]
+    }
+  ],
+  "warnings": []
+}

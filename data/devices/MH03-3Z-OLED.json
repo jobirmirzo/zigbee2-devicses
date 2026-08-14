@@ -1,0 +1,333 @@
+{
+  "model": "MH03-3Z-OLED",
+  "file": "MH03-3Z-OLED.md",
+  "vendor": "Manhot",
+  "description": "OLED Screen Switch 3 Gang",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MH03-3Z-OLED.png",
+  "added_at": "2026-06-09T18:58:47",
+  "exposes_summary": "switch (state), countdown_1, countdown_2, countdown_3, child_lock, backlight_switch, backlight_lightness, displayoff_delay, relay_status, light_mode, on_color, off_color, sw1_name, sw2_name, sw3_name, press_on_fun, press_off_fun",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "l3",
+      "features": [
+        {
+          "property": "state_l3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Countdown 1",
+      "type": "numeric",
+      "property": "countdown_1",
+      "base": "countdown_1",
+      "endpoint": null,
+      "description": "Timer for switch 1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown 2",
+      "type": "numeric",
+      "property": "countdown_2",
+      "base": "countdown_2",
+      "endpoint": null,
+      "description": "Timer for switch 2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Countdown 3",
+      "type": "numeric",
+      "property": "countdown_3",
+      "base": "countdown_3",
+      "endpoint": null,
+      "description": "Timer for switch 3.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Child lock.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Backlight switch",
+      "type": "binary",
+      "property": "backlight_switch",
+      "base": "backlight_switch",
+      "endpoint": null,
+      "description": "Backlight switch.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Backlight lightness",
+      "type": "numeric",
+      "property": "backlight_lightness",
+      "base": "backlight_lightness",
+      "endpoint": null,
+      "description": "Backlight brightness %.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 100
+    },
+    {
+      "name": "Displayoff delay",
+      "type": "numeric",
+      "property": "displayoff_delay",
+      "base": "displayoff_delay",
+      "endpoint": null,
+      "description": "Screen off delay.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 180,
+      "unit": "s"
+    },
+    {
+      "name": "Relay status",
+      "type": "enum",
+      "property": "relay_status",
+      "base": "relay_status",
+      "endpoint": null,
+      "description": "Power-on state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "memory"
+      ]
+    },
+    {
+      "name": "Light mode",
+      "type": "enum",
+      "property": "light_mode",
+      "base": "light_mode",
+      "endpoint": null,
+      "description": "Indicator light state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "none",
+        "relay",
+        "pos"
+      ]
+    },
+    {
+      "name": "On color",
+      "type": "enum",
+      "property": "on_color",
+      "base": "on_color",
+      "endpoint": null,
+      "description": "Light-on color.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "red",
+        "orange",
+        "green",
+        "cyan",
+        "blue",
+        "purple",
+        "magenta",
+        "cold_white",
+        "warm_yellow"
+      ]
+    },
+    {
+      "name": "Off color",
+      "type": "enum",
+      "property": "off_color",
+      "base": "off_color",
+      "endpoint": null,
+      "description": "Light-off color.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "red",
+        "orange",
+        "green",
+        "cyan",
+        "blue",
+        "purple",
+        "magenta",
+        "cold_white",
+        "warm_yellow"
+      ]
+    },
+    {
+      "name": "Sw1 name",
+      "type": "text",
+      "property": "sw1_name",
+      "base": "sw1_name",
+      "endpoint": null,
+      "description": "Set switch 1 name.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Sw2 name",
+      "type": "text",
+      "property": "sw2_name",
+      "base": "sw2_name",
+      "endpoint": null,
+      "description": "Set switch 2 name.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Sw3 name",
+      "type": "text",
+      "property": "sw3_name",
+      "base": "sw3_name",
+      "endpoint": null,
+      "description": "Set switch 3 name.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      }
+    },
+    {
+      "name": "Press on fun",
+      "type": "enum",
+      "property": "press_on_fun",
+      "base": "press_on_fun",
+      "endpoint": null,
+      "description": "Long press all on channel.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disable",
+        "press_switch_1",
+        "press_switch_2",
+        "press_switch_3"
+      ]
+    },
+    {
+      "name": "Press off fun",
+      "type": "enum",
+      "property": "press_off_fun",
+      "base": "press_off_fun",
+      "endpoint": null,
+      "description": "Long press all off channel.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disable",
+        "press_switch_1",
+        "press_switch_2",
+        "press_switch_3"
+      ]
+    }
+  ],
+  "warnings": []
+}

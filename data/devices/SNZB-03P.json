@@ -1,0 +1,89 @@
+{
+  "model": "SNZB-03P",
+  "file": "SNZB-03P.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee PIR sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SNZB-03P.png",
+  "added_at": "2023-11-30T19:41:12",
+  "exposes_summary": "occupancy, motion_timeout, illumination, battery, voltage",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Motion timeout",
+      "type": "numeric",
+      "property": "motion_timeout",
+      "base": "motion_timeout",
+      "endpoint": null,
+      "description": "Occupied to unoccupied delay.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 60
+    },
+    {
+      "name": "Illumination",
+      "type": "enum",
+      "property": "illumination",
+      "base": "illumination",
+      "endpoint": null,
+      "description": "Only updated when occupancy is detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "dim",
+        "bright"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    }
+  ],
+  "warnings": []
+}

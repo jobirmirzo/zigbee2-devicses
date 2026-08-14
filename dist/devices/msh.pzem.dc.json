@@ -1,0 +1,78 @@
+{
+  "model": "msh.pzem.dc",
+  "file": "msh.pzem.dc.md",
+  "vendor": "MySmartHouse",
+  "description": "MSH 9-30V, 50-300A DC Power Meter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/msh.pzem.dc.png",
+  "added_at": "2026-06-30T19:08:02",
+  "exposes_summary": "val1, val2, val3, val5, l5",
+  "exposes": [
+    {
+      "name": "Val1",
+      "type": "numeric",
+      "property": "val1_l2",
+      "base": "val1",
+      "endpoint": "l2",
+      "description": "Voltage.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Val2",
+      "type": "numeric",
+      "property": "val2_l2",
+      "base": "val2",
+      "endpoint": "l2",
+      "description": "Current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Val3",
+      "type": "numeric",
+      "property": "val3_l2",
+      "base": "val3",
+      "endpoint": "l2",
+      "description": "Power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Val5",
+      "type": "numeric",
+      "property": "val5_l2",
+      "base": "val5",
+      "endpoint": "l2",
+      "description": "Energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Uptime",
+      "type": "numeric",
+      "property": "l5",
+      "base": "l5",
+      "endpoint": null,
+      "description": "Uptime (seconds).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

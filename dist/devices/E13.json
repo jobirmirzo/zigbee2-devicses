@@ -1,0 +1,94 @@
+{
+  "model": "E13",
+  "file": "E13.md",
+  "vendor": "Nous",
+  "description": "Water leakage or shortage sensor with sound alarm",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E13.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "water, water_leak, alarm_mode, ringtone, battery",
+  "exposes": [
+    {
+      "name": "Water",
+      "type": "binary",
+      "property": "water",
+      "base": "water",
+      "endpoint": null,
+      "description": "Indicates whether the device detects water.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak and the buzzer is ringing.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Alarm mode",
+      "type": "enum",
+      "property": "alarm_mode",
+      "base": "alarm_mode",
+      "endpoint": null,
+      "description": "When to consider a water leak and sound the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "water_presence",
+        "water_absence"
+      ]
+    },
+    {
+      "name": "Ringtone",
+      "type": "enum",
+      "property": "ringtone",
+      "base": "ringtone",
+      "endpoint": null,
+      "description": "Selected buzzer ringtone for the alarm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "muted",
+        "tone_1",
+        "tone_2",
+        "tone_3"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    }
+  ],
+  "warnings": []
+}

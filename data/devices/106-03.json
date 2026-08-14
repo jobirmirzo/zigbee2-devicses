@@ -1,0 +1,123 @@
+{
+  "model": "106-03",
+  "file": "106-03.md",
+  "vendor": "Plugwise",
+  "description": "Tom thermostatic radiator valve",
+  "image": "https://www.zigbee2mqtt.io/images/devices/106-03.png",
+  "added_at": "2023-05-24T20:14:06",
+  "exposes_summary": "battery, pi_heating_demand, local_temperature, valve_position, force, radio_strength, calibrate_valve",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Pi heating demand",
+      "type": "numeric",
+      "property": "pi_heating_demand",
+      "base": "pi_heating_demand",
+      "endpoint": null,
+      "description": "Position of the valve (= demanded heat) where 0% is fully closed and 100% is fully open.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Local temperature",
+      "type": "numeric",
+      "property": "local_temperature",
+      "base": "local_temperature",
+      "endpoint": null,
+      "description": "Current temperature measured on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Valve position",
+      "type": "numeric",
+      "property": "valve_position",
+      "base": "valve_position",
+      "endpoint": null,
+      "description": "Directly control the radiator valve. The values range from 0 (valve closed) to 100 (valve fully open).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100
+    },
+    {
+      "name": "Force",
+      "type": "enum",
+      "property": "force",
+      "base": "force",
+      "endpoint": null,
+      "description": "How hard the motor pushes the valve. The closer to the boiler, the higher the force needed.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "standard",
+        "high",
+        "very_high"
+      ]
+    },
+    {
+      "name": "Radio strength",
+      "type": "enum",
+      "property": "radio_strength",
+      "base": "radio_strength",
+      "endpoint": null,
+      "description": "Transmits with higher power when range is not sufficient.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "normal",
+        "high"
+      ]
+    },
+    {
+      "name": "Calibrate valve",
+      "type": "binary",
+      "property": "calibrate_valve",
+      "base": "calibrate_valve",
+      "endpoint": null,
+      "description": "Calibrates valve on next wakeup.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "calibrate",
+      "value_off": "idle"
+    }
+  ],
+  "warnings": []
+}

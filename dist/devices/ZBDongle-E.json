@@ -1,0 +1,25 @@
+{
+  "model": "ZBDongle-E",
+  "file": "ZBDongle-E.md",
+  "vendor": "SONOFF",
+  "description": "Sonoff Zigbee 3.0 USB Dongle Plus (EFR32MG21) with router firmware",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZBDongle-E.png",
+  "added_at": "2022-09-30T20:52:51",
+  "exposes_summary": "light_indicator_level",
+  "exposes": [
+    {
+      "name": "Light indicator level",
+      "type": "numeric",
+      "property": "light_indicator_level",
+      "base": "light_indicator_level",
+      "endpoint": null,
+      "description": "Brightness of the indicator light.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

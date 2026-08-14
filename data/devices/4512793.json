@@ -1,0 +1,61 @@
+{
+  "model": "4512793",
+  "file": "4512793.md",
+  "vendor": "Namron",
+  "description": "Simplify 6-button remote with battery",
+  "image": "https://www.zigbee2mqtt.io/images/devices/4512793.png",
+  "added_at": "2025-11-30T20:32:43",
+  "exposes_summary": "battery, action",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "button_1_up_press",
+        "button_1_up_hold",
+        "button_1_up_release",
+        "button_1_down_press",
+        "button_1_down_hold",
+        "button_1_down_release",
+        "button_2_up_press",
+        "button_2_up_hold",
+        "button_2_up_release",
+        "button_2_down_press",
+        "button_2_down_hold",
+        "button_2_down_release",
+        "button_3_up_press",
+        "button_3_up_hold",
+        "button_3_up_release",
+        "button_3_down_press",
+        "button_3_down_hold",
+        "button_3_down_release"
+      ]
+    }
+  ],
+  "warnings": []
+}

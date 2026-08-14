@@ -1,0 +1,58 @@
+{
+  "model": "GWA1501",
+  "file": "GWA1501.md",
+  "vendor": "Gewiss",
+  "description": "Contact interface - 2 channels",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GWA1501.png",
+  "added_at": "2025-05-01T17:56:32",
+  "exposes_summary": "battery, input",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Input",
+      "type": "binary",
+      "property": "input_1",
+      "base": "input",
+      "endpoint": "1",
+      "description": "State of input I1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Input",
+      "type": "binary",
+      "property": "input_2",
+      "base": "input",
+      "endpoint": "2",
+      "description": "State of input I2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

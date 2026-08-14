@@ -1,0 +1,62 @@
+{
+  "model": "4058075729148",
+  "file": "4058075729148.md",
+  "vendor": "LEDVANCE",
+  "description": "SMART+ Spot PAR16 50 GU10 dimmable white",
+  "image": "https://www.zigbee2mqtt.io/images/devices/4058075729148.png",
+  "added_at": "2022-09-06T11:31:00Z",
+  "exposes_summary": "light (state, brightness), effect",
+  "exposes": [
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect",
+      "base": "effect",
+      "endpoint": null,
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    }
+  ],
+  "warnings": []
+}

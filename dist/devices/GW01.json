@@ -1,0 +1,11 @@
+{
+  "model": "GW01",
+  "file": "GW01.md",
+  "vendor": "Keen Home",
+  "description": "Signal repeater",
+  "image": "https://www.zigbee2mqtt.io/images/devices/GW01.png",
+  "added_at": "2021-09-01T18:11:17Z",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

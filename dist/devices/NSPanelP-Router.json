@@ -1,0 +1,11 @@
+{
+  "model": "NSPanelP-Router",
+  "file": "NSPanelP-Router.md",
+  "vendor": "SONOFF",
+  "description": "Router",
+  "image": "https://www.zigbee2mqtt.io/images/devices/NSPanelP-Router.png",
+  "added_at": "2024-01-01T09:59:39",
+  "exposes_summary": null,
+  "exposes": [],
+  "warnings": []
+}

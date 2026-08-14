@@ -1,0 +1,278 @@
+{
+  "model": "EFEKTA_T1_POW_NTC10K",
+  "file": "EFEKTA_T1_POW_NTC10K.md",
+  "vendor": "EFEKTA",
+  "description": "Temperature smart monitor with NTC sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_T1_POW_NTC10K.png",
+  "added_at": "2026-01-31T13:10:41",
+  "exposes_summary": "identify, temperature, mains_voltage, battery, battery_low, lifetime, reading_interval, tx_radio_power, smart_sleep, config_report_enable, comparison_previous_data, ntc status, b_coefficient, enabling_temperature_control, temperature_actions, high_temperature, low_temperature",
+  "exposes": [
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Mains voltage",
+      "type": "numeric",
+      "property": "mains_voltage",
+      "base": "mains_voltage",
+      "endpoint": null,
+      "description": "Mains voltage.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Empty battery indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Lifetime",
+      "type": "numeric",
+      "property": "lifetime",
+      "base": "lifetime",
+      "endpoint": null,
+      "description": "Uptime.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "Hours"
+    },
+    {
+      "name": "Reading interval",
+      "type": "numeric",
+      "property": "reading_interval",
+      "base": "reading_interval",
+      "endpoint": null,
+      "description": "Setting the sensor reading interval in seconds, by default 15 seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 3,
+      "value_max": 300,
+      "unit": "sec"
+    },
+    {
+      "name": "Tx radio power",
+      "type": "enum",
+      "property": "tx_radio_power",
+      "base": "tx_radio_power",
+      "endpoint": null,
+      "description": "Set TX Radio Power, dbm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "4dbm",
+        "19dbm"
+      ]
+    },
+    {
+      "name": "Smart sleep",
+      "type": "binary",
+      "property": "smart_sleep",
+      "base": "smart_sleep",
+      "endpoint": null,
+      "description": "Enable Smart Sleep, short wakeup every 7 seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Config report enable",
+      "type": "binary",
+      "property": "config_report_enable",
+      "base": "config_report_enable",
+      "endpoint": null,
+      "description": "Enable reporting based on reporting configuration.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Comparison previous data",
+      "type": "binary",
+      "property": "comparison_previous_data",
+      "base": "comparison_previous_data",
+      "endpoint": null,
+      "description": "Enable сontrol of comparison with previous data.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Ntc status",
+      "type": "enum",
+      "property": null,
+      "base": null,
+      "endpoint": null,
+      "description": "NTC Status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "NTC_OK",
+        "OPEN_CIRCUIT",
+        "SHORT_CIRCUIT"
+      ]
+    },
+    {
+      "name": "B coefficient",
+      "type": "numeric",
+      "property": "b_coefficient",
+      "base": "b_coefficient",
+      "endpoint": null,
+      "description": "Setting beta coefficient .",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 2000,
+      "value_max": 5000
+    },
+    {
+      "name": "Enabling temperature control",
+      "type": "binary",
+      "property": "enabling_temperature_control",
+      "base": "enabling_temperature_control",
+      "endpoint": null,
+      "description": "Enables/disables Tempearure control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Temperature actions",
+      "type": "enum",
+      "property": "temperature_actions",
+      "base": "temperature_actions",
+      "endpoint": null,
+      "description": "Heat or cool.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "HEAT",
+        "COOL"
+      ]
+    },
+    {
+      "name": "High temperature",
+      "type": "numeric",
+      "property": "high_temperature",
+      "base": "high_temperature",
+      "endpoint": null,
+      "description": "Setting High Temperature Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -40,
+      "value_max": 90,
+      "unit": "°C"
+    },
+    {
+      "name": "Low temperature",
+      "type": "numeric",
+      "property": "low_temperature",
+      "base": "low_temperature",
+      "endpoint": null,
+      "description": "Setting Low Temperature Border.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -40,
+      "value_max": 90,
+      "unit": "°C"
+    }
+  ],
+  "warnings": [
+    "no-property:Ntc status"
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "light": {
+    "label": "Lights",
+    "icon": "lightbulb",
+    "total": 1881,
+    "sub": {
+      "dimmable": 578,
+      "color": 681,
+      "color_temp": 506,
+      "strip": 116
+    },
+    "examples": [
+      "Idinio 0140302 — Zigbee LED foot dimmer",
+      "Shada 0190015 — LED dimmer",
+      "Fischer & Honsel 020B0B — LED Tischleuchte Beta Zig",
+      "Philips 046677476816 — Hue white PAR38 outdoor",
+      "Philips 046677551780 — Hue white filament Edison ST19 LED"
+    ]
+  },
+  "switch": {
+    "label": "Switches & Plugs",
+    "icon": "toggle",
+    "total": 1156,
+    "sub": {
+      "relay": 194,
+      "plug": 407,
+      "wall_switch": 506,
+      "valve": 49
+    },
+    "examples": [
+      "Vimar 03981 — IoT connected relay module",
+      "Legrand 064882 — Cable outlet with pilot wire and consumption measurement",
+      "Legrand 064888 — Wired micromodule switch",
+      "Legrand 067766 — Centralized ventilation switch",
+      "Legrand 067772 — Double wired switch with neutral"
+    ]
+  },
+  "cover": {
+    "label": "Covers & Blinds",
+    "icon": "blinds",
+    "total": 219,
+    "sub": {
+      "blind": 80,
+      "curtain": 87,
+      "garage": 5
+    },
+    "examples": [
+      "Vimar 03982 — Roller shutter with slat orientation and change-over relay",
+      "Legrand 067776 — Netatmo wired shutter switch",
+      "Legrand 067776A — Netatmo wired shutter switch with level control (NLLV)",
+      "Legrand 067776_inverted — Netatmo wired shutter switch",
+      "SOMFY 1003296 — Sonesse2 28 WF roller shades"
+    ]
+  },
+  "lock": {
+    "label": "Locks",
+    "icon": "lock",
+    "total": 50,
+    "sub": {},
+    "examples": [
+      "Datek 0402946 — Zigbee module for ID lock",
+      "Kwikset 66492-001 — Home connect smart lock conversion kit",
+      "Kwikset 99100-006 — 910 SmartCode traditional electronic deadbolt",
+      "Kwikset 99100-045 — 910 SmartCode traditional electronic deadbolt",
+      "Kwikset 99120-021 — 912 SmartCode traditional electronic lever"
+    ]
+  },
+  "climate": {
+    "label": "Thermostats",
+    "icon": "thermostat",
+    "total": 260,
+    "sub": {
+      "thermostat": 173,
+      "trv": 87
+    },
+    "examples": [
+      "Danfoss 014G2461 — Ally thermostat",
+      "Vimar 02973.B — Vimar IoT thermostat",
+      "Immax 07703L — Radiator valve",
+      "Immax 07732L — Radiator valve with thermostat",
+      "Plugwise 106-03 — Tom thermostatic radiator valve"
+    ]
+  },
+  "fan": {
+    "label": "Fans",
+    "icon": "fan",
+    "total": 8,
+    "sub": {},
+    "examples": [
+      "Schneider Electric 41ECSFWMZ-VW — Wiser 40/300-Series Module AC Fan Controller",
+      "IKEA E2006 — STARKVIND air purifier table",
+      "IKEA E2007 — STARKVIND air purifier",
+      "Lorenz Brun FanBee — Fan with valve",
+      "Mercator Ikuü SSWF01G — AC fan controller"
+    ]
+  },
+  "safety": {
+    "label": "Safety & Alarms",
+    "icon": "shield",
+    "total": 214,
+    "sub": {
+      "siren": 51,
+      "smoke": 43,
+      "water_leak": 77,
+      "co": 12,
+      "gas": 30,
+      "sos": 1
+    },
+    "examples": [
+      "Immax 07504L — Neo outdoor smart siren (IP65)",
+      "Tuya 228WZH — Smoke detector with temperature and humidity sensor",
+      "ONENUO 288WZ — Smoke detector",
+      "SmartThings 3315-G — Water sensor",
+      "Centralite 3315-Geu — Water sensor"
+    ]
+  },
+  "motion": {
+    "label": "Motion & Presence",
+    "icon": "motion",
+    "total": 281,
+    "sub": {
+      "pir": 183,
+      "presence": 74,
+      "vibration": 24
+    },
+    "examples": [
+      "Immax 07043M — Motion sensor",
+      "Immax 07047L — Intelligent motion sensor",
+      "Immax 07502L — 4 in 1 multi sensor",
+      "Immax 07527L — NEO Smart PIR sensor 2v1 Zigbee 3.0",
+      "SOMFY 1811681 — Zigbee motion sensor"
+    ]
+  },
+  "contact": {
+    "label": "Door & Window",
+    "icon": "door",
+    "total": 141,
+    "sub": {},
+    "examples": [
+      "Immax 07045L — Magnetic contact sensor",
+      "Aubess 1005005194831629 — Contact, temperature and humidity sensor",
+      "SOMFY 1811680 — Zigbee opening sensor",
+      "Tuya 19DZT — Door sensor",
+      "Konke 2AJZ4KPDR — Contact sensor"
+    ]
+  },
+  "air_quality": {
+    "label": "Air Quality",
+    "icon": "air",
+    "total": 46,
+    "sub": {},
+    "examples": [
+      "Third Reality 3RAQ1096Z — Smart air quality sensor",
+      "Viessmann 7377019 — ViCare CO2, temperature and humidity sensor",
+      "Slacky-DIY AirQ_Monitor_S01 — Air quality monitor",
+      "Develco AQSZB-110 — Air quality sensor",
+      "DIYRuZ DIYRuZ_AirSense — Air quality sensor"
+    ]
+  },
+  "env_sensor": {
+    "label": "Climate Sensors",
+    "icon": "gauge",
+    "total": 299,
+    "sub": {
+      "plant": 42,
+      "water_level": 4
+    },
+    "examples": [
+      "Danfoss 014G2480 — Temperature and humidity sensor",
+      "Konke 2AJZ4KPFT — Temperature and humidity sensor",
+      "Centralite 3310-G — Temperature and humidity sensor",
+      "SmartThings 3310-S — Temperature and humidity sensor",
+      "Iris 3460-L — Smart button"
+    ]
+  },
+  "energy": {
+    "label": "Energy Meters",
+    "icon": "bolt",
+    "total": 48,
+    "sub": {},
+    "examples": [
+      "Tuya 2CT — Bidirectional energy meter with 80A current clamp",
+      "Legrand 412015 — DIN power consumption module",
+      "Legrand 412172 — DIN power consumption module",
+      "Legrand 412175 — DIN 3 Phases power consumption module",
+      "CTM Lyng 6254380 — 2.0 Stove guard"
+    ]
+  },
+  "remote": {
+    "label": "Buttons & Remotes",
+    "icon": "remote",
+    "total": 426,
+    "sub": {
+      "button": 364,
+      "dial": 51,
+      "ir_blaster": 11
+    },
+    "examples": [
+      "Legrand 064873 — Home & away switch / master switch",
+      "Legrand 067646 — Wireless shutter switch",
+      "Legrand 067694 — Remote toggle switch",
+      "Legrand 067755 — Wireless 4 scenes control",
+      "Legrand 067767 — Wireless Color Ambiance Switch 067767/68/69 - 077710L"
+    ]
+  },
+  "other": {
+    "label": "Other",
+    "icon": "device",
+    "total": 75,
+    "sub": {
+      "repeater": 34
+    },
+    "examples": [
+      "Xiaomi A6121 — Vima Smart Lock",
+      "Imhotep Creation BRI4P — BRI4P Bridge for underfloor heating central and local thermostats",
+      "Custom devices (DiY) CC2530.ROUTER — CC2530 router",
+      "Custom devices (DiY) CC2538.ROUTER.V1 — MODKAM stick CC2538 router",
+      "Custom devices (DiY) CC2538.ROUTER.V2 — MODKAM stick CC2538 router with temperature sensor"
+    ]
+  },
+  "alias": {
+    "label": "(redirect stubs)",
+    "icon": "device",
+    "total": 16,
+    "sub": {},
+    "examples": [
+      "null 900566 — null",
+      "null 901463 — null",
+      "null E2001 — null",
+      "null E2001_E2002 — null",
+      "null E2002 — null"
+    ]
+  }
+}

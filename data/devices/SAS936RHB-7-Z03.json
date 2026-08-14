@@ -1,0 +1,91 @@
+{
+  "model": "SAS936RHB-7-Z03",
+  "file": "SAS936RHB-7-Z03.md",
+  "vendor": "Saswell",
+  "description": "Wireless temperature sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SAS936RHB-7-Z03.png",
+  "added_at": "2025-09-30T19:37:28",
+  "exposes_summary": "climate (local_temperature, current_heating_setpoint, system_mode), heating_demand, temporary_leaving, child_lock",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "current_heating_setpoint",
+          "base": "current_heating_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Heating demand",
+      "type": "binary",
+      "property": "heating_demand",
+      "base": "heating_demand",
+      "endpoint": null,
+      "description": "Valve demand (0=off, 1=heating).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Temporary leaving",
+      "type": "binary",
+      "property": "temporary_leaving",
+      "base": "temporary_leaving",
+      "endpoint": null,
+      "description": "Temporary leaving mode (checkmark on display, disables heating).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,226 @@
+{
+  "model": "TS110E_2gang_1",
+  "file": "TS110E_2gang_1.md",
+  "vendor": "Tuya",
+  "description": "2 channel dimmer",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS110E_2gang_1.png",
+  "added_at": "2023-02-01T14:45:57",
+  "exposes_summary": "min_brightness, max_brightness, power_on_behavior, switch_type, light (state, brightness), effect",
+  "exposes": [
+    {
+      "name": "Min brightness",
+      "type": "numeric",
+      "property": "min_brightness_l1",
+      "base": "min_brightness",
+      "endpoint": "l1",
+      "description": "Minimum light brightness.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 255
+    },
+    {
+      "name": "Max brightness",
+      "type": "numeric",
+      "property": "max_brightness_l1",
+      "base": "max_brightness",
+      "endpoint": "l1",
+      "description": "Maximum light brightness.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 255
+    },
+    {
+      "name": "Min brightness",
+      "type": "numeric",
+      "property": "min_brightness_l2",
+      "base": "min_brightness",
+      "endpoint": "l2",
+      "description": "Minimum light brightness.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 255
+    },
+    {
+      "name": "Max brightness",
+      "type": "numeric",
+      "property": "max_brightness_l2",
+      "base": "max_brightness",
+      "endpoint": "l2",
+      "description": "Maximum light brightness.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 255
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "previous",
+        "on"
+      ]
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type_l1",
+      "base": "switch_type",
+      "endpoint": "l1",
+      "description": "Type of the switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "toggle",
+        "state",
+        "momentary"
+      ]
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type_l2",
+      "base": "switch_type",
+      "endpoint": "l2",
+      "description": "Type of the switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "toggle",
+        "state",
+        "momentary"
+      ]
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "l1",
+      "features": [
+        {
+          "property": "state_l1",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_l1",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Light",
+      "type": "light",
+      "endpoint": "l2",
+      "features": [
+        {
+          "property": "state_l2",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        },
+        {
+          "property": "brightness_l2",
+          "base": "brightness",
+          "value_min": 0,
+          "value_max": 254,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": true,
+        "timed_off": true,
+        "move_step": true
+      }
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect_l1",
+      "base": "effect",
+      "endpoint": "l1",
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    },
+    {
+      "name": "Effect",
+      "type": "enum",
+      "property": "effect_l2",
+      "base": "effect",
+      "endpoint": "l2",
+      "description": "Triggers an effect on the light (e.g. make light blink for a few seconds).",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "blink",
+        "breathe",
+        "okay",
+        "channel_change",
+        "finish_effect",
+        "stop_effect"
+      ]
+    }
+  ],
+  "warnings": []
+}

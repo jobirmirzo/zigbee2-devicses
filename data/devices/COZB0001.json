@@ -1,0 +1,140 @@
+{
+  "model": "COZB0001",
+  "file": "COZB0001.md",
+  "vendor": "Eurotronic",
+  "description": "Comet Zigbee wireless heater thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/COZB0001.png",
+  "added_at": "2025-02-12T12:58:50",
+  "exposes_summary": "battery, child_lock, climate (occupied_heating_setpoint, local_temperature, system_mode, running_state, local_temperature_calibration, pi_heating_demand), trv_mode, valve_position, mirror_display",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 8,
+          "value_max": 28,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "auto",
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "pi_heating_demand",
+          "base": "pi_heating_demand",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Trv mode",
+      "type": "enum",
+      "property": "trv_mode",
+      "base": "trv_mode",
+      "endpoint": null,
+      "description": "Select between direct control of the valve via the `valve_position` or automatic control of the valve based on the `current_heating_setpoint`. For manual control set the value to 1, for automatic control set the value to 2 (the default). When switched to manual mode the display shows a value from 0 (valve closed) to 100 (valve fully open) and the buttons on the device are disabled..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "Valve position",
+      "type": "numeric",
+      "property": "valve_position",
+      "base": "valve_position",
+      "endpoint": null,
+      "description": "Directly control the radiator valve when `trv_mode` is set to 1. The values range from 0 (valve closed) to 255 (valve fully open).",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 255
+    },
+    {
+      "name": "Mirror display",
+      "type": "binary",
+      "property": "mirror_display",
+      "base": "mirror_display",
+      "endpoint": null,
+      "description": "Mirror display of the thermostat. Useful when it is mounted in a way where the display is presented upside down..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

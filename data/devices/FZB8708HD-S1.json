@@ -1,0 +1,42 @@
+{
+  "model": "FZB8708HD-S1",
+  "file": "FZB8708HD-S1.md",
+  "vendor": "Brimate",
+  "description": "Smart motion sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/FZB8708HD-S1.png",
+  "added_at": "2021-02-28T13:58:01Z",
+  "exposes_summary": "occupancy, battery_low",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

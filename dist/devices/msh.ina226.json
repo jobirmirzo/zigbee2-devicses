@@ -1,0 +1,68 @@
+{
+  "model": "msh.ina226",
+  "file": "msh.ina226.md",
+  "vendor": "MySmartHouse",
+  "description": "MSH 9-26V, 5A DC Power Meter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/msh.ina226.png",
+  "added_at": "2026-06-30T19:08:02",
+  "exposes_summary": "power, voltage, current, l4",
+  "exposes": [
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power_l2",
+      "base": "power",
+      "endpoint": "l2",
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage_l2",
+      "base": "voltage",
+      "endpoint": "l2",
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current_l2",
+      "base": "current",
+      "endpoint": "l2",
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Uptime",
+      "type": "numeric",
+      "property": "l4_l4",
+      "base": "l4",
+      "endpoint": "l4",
+      "description": "Uptime (seconds).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

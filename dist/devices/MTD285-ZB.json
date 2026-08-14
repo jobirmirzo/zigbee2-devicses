@@ -1,0 +1,640 @@
+{
+  "model": "MTD285-ZB",
+  "file": "MTD285-ZB.md",
+  "vendor": "Wenzhi",
+  "description": "24GHz mmWave human presence sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MTD285-ZB.png",
+  "added_at": "2025-11-30T20:32:44",
+  "exposes_summary": "presence, state, illuminance, min_distance, max_distance, target_distance, gate_enable_01, gate_enable_02, gate_enable_03, gate_enable_04, gate_enable_05, gate_enable_06, gate_enable_07, gate_enable_08, gate_enable_09, gate_enable_10, gate_enable_11, configuration_gate, move_threshold, presence_threshold, nearest_target_gate, target_countdown, target_velocity, debug_switch, led_mode, delay_time, block_time, judge_logic, start_noise_collect, noise_collect_status, device_control, presence_sensitivity, move_sensitivity, scene_mode, illuminance_report, move_detect, distance_report, speed_report",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "State",
+      "type": "enum",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Presence state.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "none",
+        "presence",
+        "move"
+      ]
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Min distance",
+      "type": "numeric",
+      "property": "min_distance",
+      "base": "min_distance",
+      "endpoint": null,
+      "description": "Minimum detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 8.4,
+      "unit": "m"
+    },
+    {
+      "name": "Max distance",
+      "type": "numeric",
+      "property": "max_distance",
+      "base": "max_distance",
+      "endpoint": null,
+      "description": "Maximum detection distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 8.4,
+      "unit": "m"
+    },
+    {
+      "name": "Target distance",
+      "type": "numeric",
+      "property": "target_distance",
+      "base": "target_distance",
+      "endpoint": null,
+      "description": "Target distance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 9.9,
+      "unit": "m"
+    },
+    {
+      "name": "Gate enable 01",
+      "type": "enum",
+      "property": "gate_enable_01",
+      "base": "gate_enable_01",
+      "endpoint": null,
+      "description": "Distance gate 1 enable.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Gate enable 02",
+      "type": "enum",
+      "property": "gate_enable_02",
+      "base": "gate_enable_02",
+      "endpoint": null,
+      "description": "Distance gate 2 enable.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Gate enable 03",
+      "type": "enum",
+      "property": "gate_enable_03",
+      "base": "gate_enable_03",
+      "endpoint": null,
+      "description": "Distance gate 3 enable.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Gate enable 04",
+      "type": "enum",
+      "property": "gate_enable_04",
+      "base": "gate_enable_04",
+      "endpoint": null,
+      "description": "Distance gate 4 enable.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Gate enable 05",
+      "type": "enum",
+      "property": "gate_enable_05",
+      "base": "gate_enable_05",
+      "endpoint": null,
+      "description": "Distance gate 5 enable.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Gate enable 06",
+      "type": "enum",
+      "property": "gate_enable_06",
+      "base": "gate_enable_06",
+      "endpoint": null,
+      "description": "Distance gate 6 enable.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Gate enable 07",
+      "type": "enum",
+      "property": "gate_enable_07",
+      "base": "gate_enable_07",
+      "endpoint": null,
+      "description": "Distance gate 7 enable.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Gate enable 08",
+      "type": "enum",
+      "property": "gate_enable_08",
+      "base": "gate_enable_08",
+      "endpoint": null,
+      "description": "Distance gate 8 enable.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Gate enable 09",
+      "type": "enum",
+      "property": "gate_enable_09",
+      "base": "gate_enable_09",
+      "endpoint": null,
+      "description": "Distance gate 9 enable.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Gate enable 10",
+      "type": "enum",
+      "property": "gate_enable_10",
+      "base": "gate_enable_10",
+      "endpoint": null,
+      "description": "Distance gate 10 enable.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Gate enable 11",
+      "type": "enum",
+      "property": "gate_enable_11",
+      "base": "gate_enable_11",
+      "endpoint": null,
+      "description": "Distance gate 11 enable.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "disable",
+        "enable"
+      ]
+    },
+    {
+      "name": "Configuration gate",
+      "type": "numeric",
+      "property": "configuration_gate",
+      "base": "configuration_gate",
+      "endpoint": null,
+      "description": "Select gate for threshold config.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 11
+    },
+    {
+      "name": "Move threshold",
+      "type": "numeric",
+      "property": "move_threshold",
+      "base": "move_threshold",
+      "endpoint": null,
+      "description": "Configure motion detection threshold.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 99
+    },
+    {
+      "name": "Presence threshold",
+      "type": "numeric",
+      "property": "presence_threshold",
+      "base": "presence_threshold",
+      "endpoint": null,
+      "description": "Configure presence detection threshold.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 99
+    },
+    {
+      "name": "Nearest target gate",
+      "type": "numeric",
+      "property": "nearest_target_gate",
+      "base": "nearest_target_gate",
+      "endpoint": null,
+      "description": "Nearest active gate.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 11
+    },
+    {
+      "name": "Target countdown",
+      "type": "numeric",
+      "property": "target_countdown",
+      "base": "target_countdown",
+      "endpoint": null,
+      "description": "Target timeout countdown (debug only).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Target velocity",
+      "type": "numeric",
+      "property": "target_velocity",
+      "base": "target_velocity",
+      "endpoint": null,
+      "description": "Target speed with direction.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": -9.99,
+      "value_max": 9.99,
+      "unit": "m/s"
+    },
+    {
+      "name": "Debug switch",
+      "type": "binary",
+      "property": "debug_switch",
+      "base": "debug_switch",
+      "endpoint": null,
+      "description": "Debug mode toggle.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "on",
+      "value_off": "off"
+    },
+    {
+      "name": "Led mode",
+      "type": "enum",
+      "property": "led_mode",
+      "base": "led_mode",
+      "endpoint": null,
+      "description": "LED indicator mode.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "silence",
+        "status"
+      ]
+    },
+    {
+      "name": "Delay time",
+      "type": "numeric",
+      "property": "delay_time",
+      "base": "delay_time",
+      "endpoint": null,
+      "description": "Departure delay time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 3600,
+      "unit": "s"
+    },
+    {
+      "name": "Block time",
+      "type": "numeric",
+      "property": "block_time",
+      "base": "block_time",
+      "endpoint": null,
+      "description": "Block time after unoccupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10,
+      "unit": "s"
+    },
+    {
+      "name": "Judge logic",
+      "type": "enum",
+      "property": "judge_logic",
+      "base": "judge_logic",
+      "endpoint": null,
+      "description": "Presence detection algorithm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "large_move",
+        "small_move",
+        "custom_move"
+      ]
+    },
+    {
+      "name": "Start noise collect",
+      "type": "enum",
+      "property": "start_noise_collect",
+      "base": "start_noise_collect",
+      "endpoint": null,
+      "description": "Start environmental background noise collection and auto adjust thresholds.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "start"
+      ]
+    },
+    {
+      "name": "Noise collect status",
+      "type": "enum",
+      "property": "noise_collect_status",
+      "base": "noise_collect_status",
+      "endpoint": null,
+      "description": "Environmental background noise collection status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "start",
+        "ongoing",
+        "complete"
+      ]
+    },
+    {
+      "name": "Device control",
+      "type": "enum",
+      "property": "device_control",
+      "base": "device_control",
+      "endpoint": null,
+      "description": "Device control commands.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "no_action",
+        "restart",
+        "reset_param"
+      ]
+    },
+    {
+      "name": "Presence sensitivity",
+      "type": "enum",
+      "property": "presence_sensitivity",
+      "base": "presence_sensitivity",
+      "endpoint": null,
+      "description": "Presence sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "high",
+        "medium",
+        "low",
+        "custom"
+      ]
+    },
+    {
+      "name": "Move sensitivity",
+      "type": "enum",
+      "property": "move_sensitivity",
+      "base": "move_sensitivity",
+      "endpoint": null,
+      "description": "Motion sensitivity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "high",
+        "medium",
+        "low",
+        "custom"
+      ]
+    },
+    {
+      "name": "Scene mode",
+      "type": "enum",
+      "property": "scene_mode",
+      "base": "scene_mode",
+      "endpoint": null,
+      "description": "Scene mode preset.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "custom",
+        "toilet",
+        "kitchen",
+        "corridor",
+        "bedroom",
+        "living_room",
+        "meeting_room"
+      ]
+    },
+    {
+      "name": "Illuminance report",
+      "type": "binary",
+      "property": "illuminance_report",
+      "base": "illuminance_report",
+      "endpoint": null,
+      "description": "Illuminance reporting toggle.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "on",
+      "value_off": "off"
+    },
+    {
+      "name": "Move detect",
+      "type": "binary",
+      "property": "move_detect",
+      "base": "move_detect",
+      "endpoint": null,
+      "description": "Motion detection toggle.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "on",
+      "value_off": "off"
+    },
+    {
+      "name": "Distance report",
+      "type": "binary",
+      "property": "distance_report",
+      "base": "distance_report",
+      "endpoint": null,
+      "description": "Distance reporting toggle.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "on",
+      "value_off": "off"
+    },
+    {
+      "name": "Speed report",
+      "type": "binary",
+      "property": "speed_report",
+      "base": "speed_report",
+      "endpoint": null,
+      "description": "Speed reporting toggle.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "on",
+      "value_off": "off"
+    }
+  ],
+  "warnings": []
+}

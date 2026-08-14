@@ -1,0 +1,178 @@
+{
+  "model": "ZIS-01P",
+  "file": "ZIS-01P.md",
+  "vendor": "Novato",
+  "description": "Dual-tech presence sensor (PIR + radar)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZIS-01P.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "occupancy, illuminance, battery, presence_distance, presence_sensitivity, radar_switch, pir_sensitivity, delay_time, led_switch, radar_threshold, pir_threshold",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Presence distance",
+      "type": "numeric",
+      "property": "presence_distance",
+      "base": "presence_distance",
+      "endpoint": null,
+      "description": "Maximum detection distance (1=~2m, 2=~4m, 3=~6m).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 3
+    },
+    {
+      "name": "Presence sensitivity",
+      "type": "numeric",
+      "property": "presence_sensitivity",
+      "base": "presence_sensitivity",
+      "endpoint": null,
+      "description": "Radar presence detection sensitivity (1=Low, 2=Medium, 3=High).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 3
+    },
+    {
+      "name": "Radar switch",
+      "type": "binary",
+      "property": "radar_switch",
+      "base": "radar_switch",
+      "endpoint": null,
+      "description": "Enable or disable radar detection.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Pir sensitivity",
+      "type": "numeric",
+      "property": "pir_sensitivity",
+      "base": "pir_sensitivity",
+      "endpoint": null,
+      "description": "PIR motion sensor sensitivity (1=Low, 2=Medium, 3=High).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 3
+    },
+    {
+      "name": "Delay time",
+      "type": "numeric",
+      "property": "delay_time",
+      "base": "delay_time",
+      "endpoint": null,
+      "description": "Time delay before reporting no presence (factory default: 30 s).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 9600,
+      "unit": "s"
+    },
+    {
+      "name": "Led switch",
+      "type": "binary",
+      "property": "led_switch",
+      "base": "led_switch",
+      "endpoint": null,
+      "description": "Enable or disable LED indicator.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Radar threshold",
+      "type": "numeric",
+      "property": "radar_threshold",
+      "base": "radar_threshold",
+      "endpoint": null,
+      "description": "Radar detection threshold, advanced calibration (factory default: 15; manufacturer-recommended range: 10-15).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 255
+    },
+    {
+      "name": "Pir threshold",
+      "type": "numeric",
+      "property": "pir_threshold",
+      "base": "pir_threshold",
+      "endpoint": null,
+      "description": "PIR detection threshold, advanced calibration (factory default: 20).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 250
+    }
+  ],
+  "warnings": []
+}

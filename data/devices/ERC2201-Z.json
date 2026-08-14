@@ -1,0 +1,175 @@
+{
+  "model": "ERC2201-Z",
+  "file": "ERC2201-Z.md",
+  "vendor": "BOX",
+  "description": "Wireless controller",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ERC2201-Z.png",
+  "added_at": "2025-10-31T19:12:27",
+  "exposes_summary": "switch (state), record_rf, clear_rf, rf_status, record_scene, clear_scene, rf_scene_status, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Record rf",
+      "type": "enum",
+      "property": "record_rf",
+      "base": "record_rf",
+      "endpoint": null,
+      "description": "Record RF control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "record"
+      ]
+    },
+    {
+      "name": "Clear rf",
+      "type": "enum",
+      "property": "clear_rf",
+      "base": "clear_rf",
+      "endpoint": null,
+      "description": "Clear RF control.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "clear"
+      ]
+    },
+    {
+      "name": "Rf status",
+      "type": "enum",
+      "property": "rf_status",
+      "base": "rf_status",
+      "endpoint": null,
+      "description": "RF control status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "ok",
+        "error"
+      ]
+    },
+    {
+      "name": "Record scene",
+      "type": "enum",
+      "property": "record_scene",
+      "base": "record_scene",
+      "endpoint": null,
+      "description": "Record RF for scene.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "scene_1",
+        "scene_2",
+        "scene_3",
+        "scene_4",
+        "scene_5",
+        "scene_6",
+        "scene_7",
+        "scene_8",
+        "scene_9",
+        "scene_10"
+      ]
+    },
+    {
+      "name": "Clear scene",
+      "type": "enum",
+      "property": "clear_scene",
+      "base": "clear_scene",
+      "endpoint": null,
+      "description": "Clear RF for scene.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "scene_1",
+        "scene_2",
+        "scene_3",
+        "scene_4",
+        "scene_5",
+        "scene_6",
+        "scene_7",
+        "scene_8",
+        "scene_9",
+        "scene_10"
+      ]
+    },
+    {
+      "name": "Rf scene status",
+      "type": "enum",
+      "property": "rf_scene_status",
+      "base": "rf_scene_status",
+      "endpoint": null,
+      "description": "RF control command for scene status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "ok",
+        "error"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "scene_1",
+        "scene_2",
+        "scene_3",
+        "scene_4",
+        "scene_5",
+        "scene_6",
+        "scene_7",
+        "scene_8",
+        "scene_9",
+        "scene_10"
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,391 @@
+{
+  "model": "SBDV-00197",
+  "file": "SBDV-00197.md",
+  "vendor": "Sber",
+  "description": "Smart Wall Switch (optional neutral wire, single button)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SBDV-00197.png",
+  "added_at": "2026-04-30T19:55:31",
+  "exposes_summary": "allow_double_click, led_indicator_on_enable, led_indicator_on_h, led_indicator_on_s, led_indicator_on_b, led_indicator_off_enable, led_indicator_off_h, led_indicator_off_s, led_indicator_off_b, identify, switch (state), power_on_behavior, relay_mode, child_lock, serial_number, neutral_presence, power_profile, led_indication_type, resets_count, uptime, button_clicks_count_1, button_clicks_count_2, relay_switches_count_1, action",
+  "exposes": [
+    {
+      "name": "Allow double click",
+      "type": "binary",
+      "property": "allow_double_click",
+      "base": "allow_double_click",
+      "endpoint": null,
+      "description": "Allow detection of double clicks, may introduce delay in reaction when enabled.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "LED indication",
+      "type": "binary",
+      "property": "led_indicator_on_enable",
+      "base": "led_indicator_on_enable",
+      "endpoint": null,
+      "description": "Is LED indicator enabled in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Hue",
+      "type": "numeric",
+      "property": "led_indicator_on_h",
+      "base": "led_indicator_on_h",
+      "endpoint": null,
+      "description": "Hue of LED in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 359,
+      "unit": "°"
+    },
+    {
+      "name": "Saturation",
+      "type": "numeric",
+      "property": "led_indicator_on_s",
+      "base": "led_indicator_on_s",
+      "endpoint": null,
+      "description": "Saturation of LED in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "Brightness",
+      "type": "numeric",
+      "property": "led_indicator_on_b",
+      "base": "led_indicator_on_b",
+      "endpoint": null,
+      "description": "Brightness of LED in ON state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "LED indication",
+      "type": "binary",
+      "property": "led_indicator_off_enable",
+      "base": "led_indicator_off_enable",
+      "endpoint": null,
+      "description": "Is LED indicator enabled in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Hue",
+      "type": "numeric",
+      "property": "led_indicator_off_h",
+      "base": "led_indicator_off_h",
+      "endpoint": null,
+      "description": "Hue of LED in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 359,
+      "unit": "°"
+    },
+    {
+      "name": "Saturation",
+      "type": "numeric",
+      "property": "led_indicator_off_s",
+      "base": "led_indicator_off_s",
+      "endpoint": null,
+      "description": "Saturation of LED in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 254
+    },
+    {
+      "name": "Brightness",
+      "type": "numeric",
+      "property": "led_indicator_off_b",
+      "base": "led_indicator_off_b",
+      "endpoint": null,
+      "description": "Brightness of LED in OFF state.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 254
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Relay mode",
+      "type": "enum",
+      "property": "relay_mode",
+      "base": "relay_mode",
+      "endpoint": null,
+      "description": "Decoupled mode for button.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "control_relay",
+        "decoupled"
+      ]
+    },
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enable child lock to prevent manual button operation.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Serial Number",
+      "type": "text",
+      "property": "serial_number",
+      "base": "serial_number",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Neutral presence",
+      "type": "binary",
+      "property": "neutral_presence",
+      "base": "neutral_presence",
+      "endpoint": null,
+      "description": "Neutral wire presence status.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "YES",
+      "value_off": "NO"
+    },
+    {
+      "name": "Power profile",
+      "type": "enum",
+      "property": "power_profile",
+      "base": "power_profile",
+      "endpoint": null,
+      "description": "Power Profile when neutral wire is absent: quick mode is for fastest device response; anti-flicker (af) modes have different polling intervals (in ms). Anti-flicker fallback mode is the safest one: device will fall back to it automatically if unstable behavior has been detected in more responsive mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "quick",
+        "af_250",
+        "af_500",
+        "af_750",
+        "af_1000",
+        "af_1250",
+        "af_1750",
+        "af_2000",
+        "af_fallback"
+      ]
+    },
+    {
+      "name": "Led indication type",
+      "type": "enum",
+      "property": "led_indication_type",
+      "base": "led_indication_type",
+      "endpoint": null,
+      "description": "Type of LED indication (ignored in cover controller mode). Either continuous light, or short flashes.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "continuous",
+        "flashes"
+      ]
+    },
+    {
+      "name": "Resets count",
+      "type": "numeric",
+      "property": "resets_count",
+      "base": "resets_count",
+      "endpoint": null,
+      "description": "(telemetry) Number of resets.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Uptime",
+      "type": "numeric",
+      "property": "uptime",
+      "base": "uptime",
+      "endpoint": null,
+      "description": "(telemetry) Device uptime, in seconds.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "s"
+    },
+    {
+      "name": "Button clicks count 1",
+      "type": "numeric",
+      "property": "button_clicks_count_1",
+      "base": "button_clicks_count_1",
+      "endpoint": null,
+      "description": "(telemetry) Total clicks count of button 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Button clicks count 2",
+      "type": "numeric",
+      "property": "button_clicks_count_2",
+      "base": "button_clicks_count_2",
+      "endpoint": null,
+      "description": "(telemetry) Total clicks count of button 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Relay switches count 1",
+      "type": "numeric",
+      "property": "relay_switches_count_1",
+      "base": "relay_switches_count_1",
+      "endpoint": null,
+      "description": "(telemetry) Total toggle count of relay 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      }
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "hold",
+        "single",
+        "double"
+      ]
+    }
+  ],
+  "warnings": []
+}

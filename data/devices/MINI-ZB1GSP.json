@@ -1,0 +1,400 @@
+{
+  "model": "MINI-ZB1GSP",
+  "file": "MINI-ZB1GSP.md",
+  "vendor": "SONOFF",
+  "description": "Zigbee smart switch with power monitoring",
+  "image": "https://www.zigbee2mqtt.io/images/devices/MINI-ZB1GSP.png",
+  "added_at": "2026-05-31T19:17:59",
+  "exposes_summary": "switch (state), power_on_behavior, network_indicator, turbo_mode, inching_control_set, delayed_power_on_state, delayed_power_on_time, external_trigger_mode, detach_relay_mode, power, current, voltage, energy_today, output_energy_today, energy_month, output_energy_month, total_energy, total_output_energy, device_overheated, metering_communication_error, overload_protection, power_protector, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Network indicator",
+      "type": "binary",
+      "property": "network_indicator",
+      "base": "network_indicator",
+      "endpoint": null,
+      "description": "Turn the blue network status indicator on or off..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Turbo mode",
+      "type": "binary",
+      "property": "turbo_mode",
+      "base": "turbo_mode",
+      "endpoint": null,
+      "description": "Boost Zigbee radio transmit power to improve range..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Inching control set",
+      "type": "composite",
+      "property": "inching_control_set",
+      "base": "inching_control_set",
+      "endpoint": null,
+      "description": "Device Inching function Settings. The device will automatically turn off (turn on) after each turn on (turn off) for a specified period of time..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "inching_control",
+          "type": "binary",
+          "description": "Enable/disable inching function.",
+          "values": [
+            "ENABLE",
+            "DISABLE"
+          ]
+        },
+        {
+          "property": "inching_time",
+          "type": "numeric",
+          "description": "Delay time for executing a inching action. min value is 0.5, max value is 86399.5, unit is seconds"
+        },
+        {
+          "property": "inching_mode",
+          "type": "binary",
+          "description": "Set inching off or inching on mode.",
+          "values": [
+            "ON",
+            "OFF"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Delayed power on state",
+      "type": "binary",
+      "property": "delayed_power_on_state",
+      "base": "delayed_power_on_state",
+      "endpoint": null,
+      "description": "Restore the plug output after the configured power-on delay..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Delayed power on time",
+      "type": "numeric",
+      "property": "delayed_power_on_time",
+      "base": "delayed_power_on_time",
+      "endpoint": null,
+      "description": "Delay before the plug output is restored after power returns..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 3599.5,
+      "unit": "s"
+    },
+    {
+      "name": "External trigger mode",
+      "type": "enum",
+      "property": "external_trigger_mode",
+      "base": "external_trigger_mode",
+      "endpoint": null,
+      "description": "External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "edge",
+        "pulse",
+        "following(off)",
+        "following(on)"
+      ]
+    },
+    {
+      "name": "Detach relay mode",
+      "type": "composite",
+      "property": "detach_relay_mode",
+      "base": "detach_relay_mode",
+      "endpoint": null,
+      "description": "Relay separation mode. Can be used when the load is a smart device (such as smart light), when we control the wall switch, do not want to turn off the power of the smart light, but through a scene command to control the smart light on or off, then we can enable the relay separation mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "detach_relay_outlet1",
+          "type": "binary",
+          "description": "Enable/disable detach relay.",
+          "values": [
+            "ENABLE",
+            "DISABLE"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Power used by the connected load..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Current drawn by the connected load..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Supply voltage measured by the plug..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Energy today",
+      "type": "numeric",
+      "property": "energy_today",
+      "base": "energy_today",
+      "endpoint": null,
+      "description": "Energy used today by the connected load..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Export energy today",
+      "type": "numeric",
+      "property": "output_energy_today",
+      "base": "output_energy_today",
+      "endpoint": null,
+      "description": "Energy fed back today through the plug..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy this month",
+      "type": "numeric",
+      "property": "energy_month",
+      "base": "energy_month",
+      "endpoint": null,
+      "description": "Energy used this month by the connected load..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Export energy this month",
+      "type": "numeric",
+      "property": "output_energy_month",
+      "base": "output_energy_month",
+      "endpoint": null,
+      "description": "Energy fed back this month through the plug..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Total energy",
+      "type": "numeric",
+      "property": "total_energy",
+      "base": "total_energy",
+      "endpoint": null,
+      "description": "Total energy used by the connected load..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Total export energy",
+      "type": "numeric",
+      "property": "total_output_energy",
+      "base": "total_output_energy",
+      "endpoint": null,
+      "description": "Total energy fed back through the plug..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Device overheated",
+      "type": "binary",
+      "property": "device_overheated",
+      "base": "device_overheated",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Alarm Active",
+      "value_off": "Normal"
+    },
+    {
+      "name": "Metering communication error",
+      "type": "binary",
+      "property": "metering_communication_error",
+      "base": "metering_communication_error",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Alarm Active",
+      "value_off": "Normal"
+    },
+    {
+      "name": "Electrical Status",
+      "type": "binary",
+      "property": "overload_protection",
+      "base": "overload_protection",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Alarm Active",
+      "value_off": "Normal"
+    },
+    {
+      "name": "Power protector",
+      "type": "composite",
+      "property": "power_protector",
+      "base": "power_protector",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": []
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "single_click",
+        "double_click",
+        "long_press",
+        "switch_on",
+        "switch_off"
+      ]
+    }
+  ],
+  "warnings": []
+}

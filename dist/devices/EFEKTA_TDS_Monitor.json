@@ -1,0 +1,109 @@
+{
+  "model": "EFEKTA_TDS_Monitor",
+  "file": "EFEKTA_TDS_Monitor.md",
+  "vendor": "EFEKTA",
+  "description": "TDS Monitor with DS18B20 temperature sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EFEKTA_TDS_Monitor.png",
+  "added_at": "2026-04-30T19:57:27",
+  "exposes_summary": "temperature, tds, tds_coefficient, reading_interval, tds_offset, tx_radio_power",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Tds",
+      "type": "numeric",
+      "property": "tds",
+      "base": "tds",
+      "endpoint": null,
+      "description": "Measured TDS value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ppm"
+    },
+    {
+      "name": "Tds coefficient",
+      "type": "enum",
+      "property": "tds_coefficient",
+      "base": "tds_coefficient",
+      "endpoint": null,
+      "description": "TDS coefficient.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "500",
+        "550",
+        "640",
+        "700",
+        "1000"
+      ]
+    },
+    {
+      "name": "Reading interval",
+      "type": "numeric",
+      "property": "reading_interval",
+      "base": "reading_interval",
+      "endpoint": null,
+      "description": "Setting the sensor reading interval in seconds, by default 30 seconds.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 360,
+      "unit": "Seconds"
+    },
+    {
+      "name": "Tds offset",
+      "type": "numeric",
+      "property": "tds_offset",
+      "base": "tds_offset",
+      "endpoint": null,
+      "description": "Adjust TDS.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -100,
+      "value_max": 100,
+      "unit": "ppm"
+    },
+    {
+      "name": "Tx radio power",
+      "type": "enum",
+      "property": "tx_radio_power",
+      "base": "tx_radio_power",
+      "endpoint": null,
+      "description": "Set TX Radio Power, dbm.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "4dbm",
+        "19dbm"
+      ]
+    }
+  ],
+  "warnings": []
+}

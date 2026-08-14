@@ -1,0 +1,34 @@
+{
+  "model": "8718699689308",
+  "file": "8718699689308.md",
+  "vendor": "Philips",
+  "description": "Hue smart plug - UK",
+  "image": "https://www.zigbee2mqtt.io/images/devices/8718699689308.png",
+  "added_at": "2025-02-01T20:11:19",
+  "exposes_summary": "switch (state)",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

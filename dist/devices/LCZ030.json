@@ -1,0 +1,170 @@
+{
+  "model": "LCZ030",
+  "file": "LCZ030.md",
+  "vendor": "Tuya",
+  "description": "Temperature & humidity & illuminance sensor with display",
+  "image": "https://www.zigbee2mqtt.io/images/devices/LCZ030.png",
+  "added_at": "2021-10-01T17:18:02Z",
+  "exposes_summary": "temperature, humidity, battery, alarm_temperature_max, alarm_temperature_min, alarm_humidity_max, alarm_humidity_min, alarm_humidity, alarm_temperature, illuminance",
+  "exposes": [
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Alarm temperature max",
+      "type": "numeric",
+      "property": "alarm_temperature_max",
+      "base": "alarm_temperature_max",
+      "endpoint": null,
+      "description": "Alarm temperature max.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -20,
+      "value_max": 80,
+      "unit": "°C"
+    },
+    {
+      "name": "Alarm temperature min",
+      "type": "numeric",
+      "property": "alarm_temperature_min",
+      "base": "alarm_temperature_min",
+      "endpoint": null,
+      "description": "Alarm temperature min.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -20,
+      "value_max": 80,
+      "unit": "°C"
+    },
+    {
+      "name": "Alarm humidity max",
+      "type": "numeric",
+      "property": "alarm_humidity_max",
+      "base": "alarm_humidity_max",
+      "endpoint": null,
+      "description": "Alarm humidity max.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Alarm humidity min",
+      "type": "numeric",
+      "property": "alarm_humidity_min",
+      "base": "alarm_humidity_min",
+      "endpoint": null,
+      "description": "Alarm humidity min.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Alarm humidity",
+      "type": "enum",
+      "property": "alarm_humidity",
+      "base": "alarm_humidity",
+      "endpoint": null,
+      "description": "Alarm humidity status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "below_min_humdity",
+        "over_humidity",
+        "off"
+      ]
+    },
+    {
+      "name": "Alarm temperature",
+      "type": "enum",
+      "property": "alarm_temperature",
+      "base": "alarm_temperature",
+      "endpoint": null,
+      "description": "Alarm temperature status.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "below_min_temperature",
+        "over_temperature",
+        "off"
+      ]
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    }
+  ],
+  "warnings": []
+}

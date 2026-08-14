@@ -1,0 +1,153 @@
+{
+  "model": "SLR2b",
+  "file": "SLR2b.md",
+  "vendor": "Hive",
+  "description": "Dual channel heating and hot water thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/SLR2b.png",
+  "added_at": "2021-03-30T20:29:35Z",
+  "exposes_summary": "climate (occupied_heating_setpoint, local_temperature, system_mode, running_state), temperature_setpoint_hold, temperature_setpoint_hold_duration",
+  "exposes": [
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "heat",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_heat",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 32,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_heat",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_heat",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "auto",
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_heat",
+          "base": "running_state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Temperature setpoint hold",
+      "type": "binary",
+      "property": "temperature_setpoint_hold_heat",
+      "base": "temperature_setpoint_hold",
+      "endpoint": "heat",
+      "description": "Prevent changes. `false` = run normally. `true` = prevent from making changes. Must be set to `false` when system_mode = off or `true` for heat.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Temperature setpoint hold duration",
+      "type": "numeric",
+      "property": "temperature_setpoint_hold_duration_heat",
+      "base": "temperature_setpoint_hold_duration",
+      "endpoint": "heat",
+      "description": "Period in minutes for which the setpoint hold will be active. 65535 = attribute not used. 0 to 360 to match the remote display.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": "water",
+      "features": [
+        {
+          "property": "occupied_heating_setpoint_water",
+          "base": "occupied_heating_setpoint",
+          "value_min": 22,
+          "value_max": 22,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature_water",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode_water",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "auto",
+            "heat",
+            "emergency_heating"
+          ],
+          "readable": true
+        },
+        {
+          "property": "running_state_water",
+          "base": "running_state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Temperature setpoint hold",
+      "type": "binary",
+      "property": "temperature_setpoint_hold_water",
+      "base": "temperature_setpoint_hold",
+      "endpoint": "water",
+      "description": "Prevent changes. `false` = run normally. `true` = prevent from making changes. Must be set to `false` when system_mode = off or `true` for heat.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Temperature setpoint hold duration",
+      "type": "numeric",
+      "property": "temperature_setpoint_hold_duration_water",
+      "base": "temperature_setpoint_hold_duration",
+      "endpoint": "water",
+      "description": "Period in minutes for which the setpoint hold will be active. 65535 = attribute not used. 0 to 360 to match the remote display.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 65535
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,240 @@
+{
+  "model": "PJ3201A",
+  "file": "PJ3201A.md",
+  "vendor": "Dongguan Pinjia Technology Co.,LTD.",
+  "description": "Human Presence Sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/PJ3201A.png",
+  "added_at": "2025-01-03T20:04:59",
+  "exposes_summary": "presence, occupancy, closest_target_distance, movement_timeout, idle_timeout, illuminance, far_movement_sensitivity, near_movement_sensitivity, near_presence_sensitivity, far_presence_sensitivity, closest_detection_distance, largest_movement_detection_distance, largest_presence_detection_distance, restore_factory, led_indicator",
+  "exposes": [
+    {
+      "name": "Presence",
+      "type": "binary",
+      "property": "presence",
+      "base": "presence",
+      "endpoint": null,
+      "description": "Indicates whether the device detected presence. Will be true also when movement (occupancy) is detected..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected movement. Will be true when movement. Can remain true even if the target left the detection range. In this case presence will be reset to false reliably..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Closest target distance",
+      "type": "numeric",
+      "property": "closest_target_distance",
+      "base": "closest_target_distance",
+      "endpoint": null,
+      "description": "the target distance away from the sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "m"
+    },
+    {
+      "name": "Movement timeout",
+      "type": "numeric",
+      "property": "movement_timeout",
+      "base": "movement_timeout",
+      "endpoint": null,
+      "description": "Timeout until the movement (occupancy) is reset when no further movement is detected. (Occupancy -> None).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Idle timeout",
+      "type": "numeric",
+      "property": "idle_timeout",
+      "base": "idle_timeout",
+      "endpoint": null,
+      "description": "Timeout until the presence is reset when no further presence is detected (Presence -> None).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 43200,
+      "unit": "s"
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Far movement sensitivity",
+      "type": "numeric",
+      "property": "far_movement_sensitivity",
+      "base": "far_movement_sensitivity",
+      "endpoint": null,
+      "description": "the moving detecting sensitivity 1 meter away.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Near movement sensitivity",
+      "type": "numeric",
+      "property": "near_movement_sensitivity",
+      "base": "near_movement_sensitivity",
+      "endpoint": null,
+      "description": "the moving detecting sensitivity  within 1 meter.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Near presence sensitivity",
+      "type": "numeric",
+      "property": "near_presence_sensitivity",
+      "base": "near_presence_sensitivity",
+      "endpoint": null,
+      "description": "the presence detecting sensitivity  within 1 meter.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Far presence sensitivity",
+      "type": "numeric",
+      "property": "far_presence_sensitivity",
+      "base": "far_presence_sensitivity",
+      "endpoint": null,
+      "description": "the presence detecting sensitivity  1 meter away.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 10
+    },
+    {
+      "name": "Closest detection distance",
+      "type": "numeric",
+      "property": "closest_detection_distance",
+      "base": "closest_detection_distance",
+      "endpoint": null,
+      "description": "The closest distance that can be detected.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 7,
+      "unit": "m"
+    },
+    {
+      "name": "Largest movement detection distance",
+      "type": "numeric",
+      "property": "largest_movement_detection_distance",
+      "base": "largest_movement_detection_distance",
+      "endpoint": null,
+      "description": "The farthest distance that can be detected (moving).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 7,
+      "unit": "m"
+    },
+    {
+      "name": "Largest presence detection distance",
+      "type": "numeric",
+      "property": "largest_presence_detection_distance",
+      "base": "largest_presence_detection_distance",
+      "endpoint": null,
+      "description": "The farthest distance that can be detected (present).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0.1,
+      "value_max": 7,
+      "unit": "m"
+    },
+    {
+      "name": "Restore factory",
+      "type": "binary",
+      "property": "restore_factory",
+      "base": "restore_factory",
+      "endpoint": null,
+      "description": "restore_factory.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Led indicator",
+      "type": "binary",
+      "property": "led_indicator",
+      "base": "led_indicator",
+      "endpoint": null,
+      "description": "turn on or off the led .",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,120 @@
+{
+  "model": "E2134",
+  "file": "E2134.md",
+  "vendor": "IKEA",
+  "description": "VALLHORN wireless motion sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/E2134.png",
+  "added_at": "2023-11-30T19:41:12",
+  "exposes_summary": "occupancy, illuminance, identify, battery, voltage, lux_value, timer",
+  "exposes": [
+    {
+      "name": "Occupancy",
+      "type": "binary",
+      "property": "occupancy",
+      "base": "occupancy",
+      "endpoint": null,
+      "description": "Indicates whether the device detected occupancy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Illuminance",
+      "type": "numeric",
+      "property": "illuminance",
+      "base": "illuminance",
+      "endpoint": null,
+      "description": "Measured illuminance.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "lx"
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification. This device is asleep by default.You may need to wake it up first before sending the identify command..",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Reported battery voltage in millivolts.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "mV"
+    },
+    {
+      "name": "Illuminance sensor threshold",
+      "type": "enum",
+      "property": "lux_value",
+      "base": "lux_value",
+      "endpoint": null,
+      "description": "Controls whether the motion sensor triggers at all times or only when illuminance is low..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "always",
+        "only_when_dark"
+      ]
+    },
+    {
+      "name": "On duration",
+      "type": "numeric",
+      "property": "timer",
+      "base": "timer",
+      "endpoint": null,
+      "description": "How long bound devices remain on after motion is detected..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 10,
+      "value_max": 65534,
+      "unit": "s"
+    }
+  ],
+  "warnings": []
+}

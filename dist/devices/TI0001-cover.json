@@ -1,0 +1,87 @@
+{
+  "model": "TI0001-cover",
+  "file": "TI0001-cover.md",
+  "vendor": "Livolo",
+  "description": "Zigbee roller blind motor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TI0001-cover.png",
+  "added_at": "2021-03-30T20:29:35Z",
+  "exposes_summary": "cover (state, position), options, moving",
+  "exposes": [
+    {
+      "name": "Cover",
+      "type": "cover",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "value_min": 0,
+          "value_max": 100,
+          "values": [
+            "OPEN",
+            "CLOSE",
+            "STOP"
+          ],
+          "readable": true
+        },
+        {
+          "property": "position",
+          "base": "position",
+          "value_min": 0,
+          "value_max": 100,
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Options",
+      "type": "composite",
+      "property": "options",
+      "base": "options",
+      "endpoint": null,
+      "description": "Motor options.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "motor_speed",
+          "type": "numeric",
+          "description": "Motor speed min value is 20, max value is 40, unit is rpm"
+        },
+        {
+          "property": "motor_direction",
+          "type": "enum",
+          "description": "Motor direction",
+          "values": [
+            "FORWARD",
+            "REVERSE"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Moving",
+      "type": "binary",
+      "property": "moving",
+      "base": "moving",
+      "endpoint": null,
+      "description": "Motor is moving.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

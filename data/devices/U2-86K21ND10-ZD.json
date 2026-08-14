@@ -1,0 +1,46 @@
+{
+  "model": "U2-86K21ND10-ZD",
+  "file": "U2-86K21ND10-ZD.md",
+  "vendor": "Honyar",
+  "description": "2 gang switch",
+  "image": "https://www.zigbee2mqtt.io/images/devices/U2-86K21ND10-ZD.png",
+  "added_at": "2023-11-30T19:41:12",
+  "exposes_summary": "switch (state)",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "left",
+      "features": [
+        {
+          "property": "state_left",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "right",
+      "features": [
+        {
+          "property": "state_right",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

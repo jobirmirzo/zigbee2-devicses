@@ -1,0 +1,133 @@
+{
+  "model": "EER53000",
+  "file": "EER53000.md",
+  "vendor": "Schneider Electric",
+  "description": "Wiser radiator thermostat (VACT)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/EER53000.png",
+  "added_at": "2021-05-30T19:17:03Z",
+  "exposes_summary": "battery, keypad_lockout, calibrate_valve, valve_calibration_status, zone_mode, climate (occupied_heating_setpoint, local_temperature, local_temperature_calibration, pi_heating_demand)",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Keypad lockout",
+      "type": "binary",
+      "property": "keypad_lockout",
+      "base": "keypad_lockout",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "lock1",
+      "value_off": "unlock"
+    },
+    {
+      "name": "Calibrate valve",
+      "type": "binary",
+      "property": "calibrate_valve",
+      "base": "calibrate_valve",
+      "endpoint": null,
+      "description": "Calibrates valve on next wakeup.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "calibrate",
+      "value_off": "idle"
+    },
+    {
+      "name": "Valve calibration status",
+      "type": "enum",
+      "property": "valve_calibration_status",
+      "base": "valve_calibration_status",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "ongoing",
+        "successful",
+        "uncalibrated",
+        "failed_e1",
+        "failed_e2",
+        "failed_e3"
+      ]
+    },
+    {
+      "name": "Zone mode",
+      "type": "enum",
+      "property": "zone_mode",
+      "base": "zone_mode",
+      "endpoint": null,
+      "description": "Icon shown on device displays.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "manual",
+        "schedule",
+        "energy_saver",
+        "holiday"
+      ]
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 7,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": false
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": false
+        },
+        {
+          "property": "local_temperature_calibration",
+          "base": "local_temperature_calibration",
+          "readable": true
+        },
+        {
+          "property": "pi_heating_demand",
+          "base": "pi_heating_demand",
+          "readable": false
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    }
+  ],
+  "warnings": []
+}

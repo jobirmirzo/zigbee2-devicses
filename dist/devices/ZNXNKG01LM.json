@@ -1,0 +1,287 @@
+{
+  "model": "ZNXNKG01LM",
+  "file": "ZNXNKG01LM.md",
+  "vendor": "Aqara",
+  "description": "Smart rotary knob H1 (with neutral)",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZNXNKG01LM.png",
+  "added_at": "2024-04-29T19:24:38",
+  "exposes_summary": "switch (state), device_temperature, power_outage_count, power_outage_memory, operation_mode, action_rotation_angle, action_rotation_angle_speed, action_rotation_percent, action_rotation_percent_speed, action_rotation_time, action_rotation_button_state, energy, voltage, current, power, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "left",
+      "features": [
+        {
+          "property": "state_left",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "center",
+      "features": [
+        {
+          "property": "state_center",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "right",
+      "features": [
+        {
+          "property": "state_right",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Device temperature",
+      "type": "numeric",
+      "property": "device_temperature",
+      "base": "device_temperature",
+      "endpoint": null,
+      "description": "Temperature of the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Power outage count",
+      "type": "numeric",
+      "property": "power_outage_count",
+      "base": "power_outage_count",
+      "endpoint": null,
+      "description": "Number of power outages (since last pairing).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Power outage memory",
+      "type": "binary",
+      "property": "power_outage_memory",
+      "base": "power_outage_memory",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode",
+      "base": "operation_mode",
+      "endpoint": null,
+      "description": "Command mode is useful for binding. Event mode is useful for processing..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "event",
+        "command"
+      ]
+    },
+    {
+      "name": "Action rotation angle",
+      "type": "numeric",
+      "property": "action_rotation_angle",
+      "base": "action_rotation_angle",
+      "endpoint": null,
+      "description": "Rotation angle.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "*"
+    },
+    {
+      "name": "Action rotation angle speed",
+      "type": "numeric",
+      "property": "action_rotation_angle_speed",
+      "base": "action_rotation_angle_speed",
+      "endpoint": null,
+      "description": "Rotation angle speed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "*"
+    },
+    {
+      "name": "Action rotation percent",
+      "type": "numeric",
+      "property": "action_rotation_percent",
+      "base": "action_rotation_percent",
+      "endpoint": null,
+      "description": "Rotation percent.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Action rotation percent speed",
+      "type": "numeric",
+      "property": "action_rotation_percent_speed",
+      "base": "action_rotation_percent_speed",
+      "endpoint": null,
+      "description": "Rotation percent speed.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Action rotation time",
+      "type": "numeric",
+      "property": "action_rotation_time",
+      "base": "action_rotation_time",
+      "endpoint": null,
+      "description": "Rotation time.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "ms"
+    },
+    {
+      "name": "Action rotation button state",
+      "type": "enum",
+      "property": "action_rotation_button_state",
+      "base": "action_rotation_button_state",
+      "endpoint": null,
+      "description": "Button state during rotation.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "released",
+        "pressed"
+      ]
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "hold",
+        "single",
+        "double",
+        "release",
+        "start_rotating",
+        "rotation",
+        "stop_rotating"
+      ]
+    }
+  ],
+  "warnings": []
+}

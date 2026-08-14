@@ -1,0 +1,443 @@
+{
+  "model": "TH-S04D",
+  "file": "TH-S04D.md",
+  "vendor": "Aqara",
+  "description": "Climate Sensor W100",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TH-S04D.png",
+  "added_at": "2025-05-01T17:59:09",
+  "exposes_summary": "thermostat_mode, climate (system_mode, fan_mode, occupied_heating_setpoint, local_temperature), PMTSD_from_W100_Data, battery, temperature, humidity, sensor, external_temperature, external_humidity, auto_hide_middle_line, high_temperature, low_temperature, high_humidity, low_humidity, sampling, period, temp_report_mode, temp_period, temp_threshold, humi_report_mode, humi_period, humi_threshold, identify, action",
+  "exposes": [
+    {
+      "name": "Thermostat mode",
+      "type": "binary",
+      "property": "thermostat_mode",
+      "base": "thermostat_mode",
+      "endpoint": null,
+      "description": "ON: Enables thermostat mode, buttons send encrypted payloads, and the middle line is displayed. OFF: Disables thermostat mode, buttons send actions, and the middle line is hidden..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "auto"
+          ],
+          "readable": true
+        },
+        {
+          "property": "fan_mode",
+          "base": "fan_mode",
+          "value_min": 5,
+          "value_max": 30,
+          "values": [
+            "off",
+            "heat",
+            "cool",
+            "auto"
+          ],
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 30,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "PMTSD from W100 Data",
+      "type": "text",
+      "property": "PMTSD_from_W100_Data",
+      "base": "PMTSD_from_W100_Data",
+      "endpoint": null,
+      "description": "Latest PMTSD values sent by the W100 when manually changed, formatted as \"YYYY-MM-DD HH:mm:ss_Px_Mx_Tx_Sx_Dx\".",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Humidity",
+      "type": "numeric",
+      "property": "humidity",
+      "base": "humidity",
+      "endpoint": null,
+      "description": "Measured relative humidity.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Sensor",
+      "type": "enum",
+      "property": "sensor",
+      "base": "sensor",
+      "endpoint": null,
+      "description": "Select mode to display sensor: internal or both with external.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "internal",
+        "external"
+      ]
+    },
+    {
+      "name": "External temperature",
+      "type": "numeric",
+      "property": "external_temperature",
+      "base": "external_temperature",
+      "endpoint": null,
+      "description": "Value for external temperature sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": -100,
+      "value_max": 100,
+      "unit": "°C"
+    },
+    {
+      "name": "External humidity",
+      "type": "numeric",
+      "property": "external_humidity",
+      "base": "external_humidity",
+      "endpoint": null,
+      "description": "Value for external humidity sensor.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Auto hide middle line",
+      "type": "binary",
+      "property": "auto_hide_middle_line",
+      "base": "auto_hide_middle_line",
+      "endpoint": null,
+      "description": "Applies only when thermostat mode is enabled. True: Hides the middle line after 30 seconds of inactivity. False: Always displays the middle line..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "High temperature",
+      "type": "numeric",
+      "property": "high_temperature",
+      "base": "high_temperature",
+      "endpoint": null,
+      "description": "High temperature alert.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 26,
+      "value_max": 60,
+      "unit": "°C"
+    },
+    {
+      "name": "Low temperature",
+      "type": "numeric",
+      "property": "low_temperature",
+      "base": "low_temperature",
+      "endpoint": null,
+      "description": "Low temperature alert.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": -20,
+      "value_max": 20,
+      "unit": "°C"
+    },
+    {
+      "name": "High humidity",
+      "type": "numeric",
+      "property": "high_humidity",
+      "base": "high_humidity",
+      "endpoint": null,
+      "description": "High humidity alert.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 65,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Low humidity",
+      "type": "numeric",
+      "property": "low_humidity",
+      "base": "low_humidity",
+      "endpoint": null,
+      "description": "Low humidity alert.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 30,
+      "unit": "%"
+    },
+    {
+      "name": "Sampling",
+      "type": "enum",
+      "property": "sampling",
+      "base": "sampling",
+      "endpoint": null,
+      "description": "Temperature and Humidity sampling settings.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "standard",
+        "high",
+        "custom"
+      ]
+    },
+    {
+      "name": "Period",
+      "type": "numeric",
+      "property": "period",
+      "base": "period",
+      "endpoint": null,
+      "description": "Sampling period.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.5,
+      "value_max": 600,
+      "unit": "sec"
+    },
+    {
+      "name": "Temp report mode",
+      "type": "enum",
+      "property": "temp_report_mode",
+      "base": "temp_report_mode",
+      "endpoint": null,
+      "description": "Temperature reporting mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "no",
+        "threshold",
+        "period",
+        "threshold_period"
+      ]
+    },
+    {
+      "name": "Temp period",
+      "type": "numeric",
+      "property": "temp_period",
+      "base": "temp_period",
+      "endpoint": null,
+      "description": "Temperature reporting period.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 600,
+      "unit": "sec"
+    },
+    {
+      "name": "Temp threshold",
+      "type": "numeric",
+      "property": "temp_threshold",
+      "base": "temp_threshold",
+      "endpoint": null,
+      "description": "Temperature reporting threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0.2,
+      "value_max": 3,
+      "unit": "°C"
+    },
+    {
+      "name": "Humi report mode",
+      "type": "enum",
+      "property": "humi_report_mode",
+      "base": "humi_report_mode",
+      "endpoint": null,
+      "description": "Humidity reporting mode.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "no",
+        "threshold",
+        "period",
+        "threshold_period"
+      ]
+    },
+    {
+      "name": "Humi period",
+      "type": "numeric",
+      "property": "humi_period",
+      "base": "humi_period",
+      "endpoint": null,
+      "description": "Humidity reporting period.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 600,
+      "unit": "sec"
+    },
+    {
+      "name": "Humi threshold",
+      "type": "numeric",
+      "property": "humi_threshold",
+      "base": "humi_threshold",
+      "endpoint": null,
+      "description": "Humidity reporting threshold.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 2,
+      "value_max": 10,
+      "unit": "%"
+    },
+    {
+      "name": "Identify",
+      "type": "enum",
+      "property": "identify",
+      "base": "identify",
+      "endpoint": null,
+      "description": "Initiate device identification.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "identify"
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "W100_PMTSD_request",
+        "hold_plus",
+        "hold_center",
+        "hold_minus",
+        "single_plus",
+        "single_center",
+        "single_minus",
+        "double_plus",
+        "double_center",
+        "double_minus",
+        "release_plus",
+        "release_center",
+        "release_minus"
+      ]
+    }
+  ],
+  "warnings": []
+}

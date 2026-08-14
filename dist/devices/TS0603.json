@@ -1,0 +1,42 @@
+{
+  "model": "TS0603",
+  "file": "TS0603.md",
+  "vendor": "Tuya",
+  "description": "Garage door opener",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0603.png",
+  "added_at": "2024-06-01T08:47:20",
+  "exposes_summary": "state, garage_door_contact",
+  "exposes": [
+    {
+      "name": "State",
+      "type": "binary",
+      "property": "state",
+      "base": "state",
+      "endpoint": null,
+      "description": "Trigger the door movement.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Garage door contact",
+      "type": "binary",
+      "property": "garage_door_contact",
+      "base": "garage_door_contact",
+      "endpoint": null,
+      "description": "Indicates if the garage door contact is closed (= true) or open (= false).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

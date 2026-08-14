@@ -1,0 +1,326 @@
+{
+  "model": "TS0001_power-SlD",
+  "file": "TS0001_power-SlD.md",
+  "vendor": "Slacky-DIY",
+  "description": "Switch with power monitoring",
+  "image": "https://www.zigbee2mqtt.io/images/devices/TS0001_power-SlD.png",
+  "added_at": "2025-11-30T20:06:49",
+  "exposes_summary": "switch (state), power_on_behavior, switch_actions, switch_type, operation_mode, power, voltage, ac_frequency, current, energy, energy_reset, protect_control, automatic_restart, voltage_min, voltage_max, current_max, power_max, time_reload, action",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Power-on behavior",
+      "type": "enum",
+      "property": "power_on_behavior",
+      "base": "power_on_behavior",
+      "endpoint": null,
+      "description": "Controls the behavior when the device is powered on after power loss.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on",
+        "toggle",
+        "previous"
+      ]
+    },
+    {
+      "name": "Switch actions",
+      "type": "enum",
+      "property": "switch_actions",
+      "base": "switch_actions",
+      "endpoint": null,
+      "description": "Actions switch.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "off",
+        "on"
+      ]
+    },
+    {
+      "name": "Switch type",
+      "type": "enum",
+      "property": "switch_type",
+      "base": "switch_type",
+      "endpoint": null,
+      "description": "Switch 1 type.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "toggle",
+        "momentary",
+        "multifunction"
+      ]
+    },
+    {
+      "name": "Operation mode",
+      "type": "enum",
+      "property": "operation_mode",
+      "base": "operation_mode",
+      "endpoint": null,
+      "description": "Relay decoupled.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "control_relay",
+        "decoupled"
+      ]
+    },
+    {
+      "name": "Power",
+      "type": "numeric",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Instantaneous measured power.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Voltage",
+      "type": "numeric",
+      "property": "voltage",
+      "base": "voltage",
+      "endpoint": null,
+      "description": "Measured electrical potential value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "AC frequency",
+      "type": "numeric",
+      "property": "ac_frequency",
+      "base": "ac_frequency",
+      "endpoint": null,
+      "description": "Measured electrical AC frequency.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "Hz"
+    },
+    {
+      "name": "Current",
+      "type": "numeric",
+      "property": "current",
+      "base": "current",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Energy reset",
+      "type": "enum",
+      "property": "energy_reset",
+      "base": "energy_reset",
+      "endpoint": null,
+      "description": "Reset of accumulated energy.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "reset"
+      ]
+    },
+    {
+      "name": "Protect control",
+      "type": "binary",
+      "property": "protect_control",
+      "base": "protect_control",
+      "endpoint": null,
+      "description": "Protection control enable/disable.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Automatic restart",
+      "type": "binary",
+      "property": "automatic_restart",
+      "base": "automatic_restart",
+      "endpoint": null,
+      "description": "Automatic restart enable/disable for voltage only.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Voltage min",
+      "type": "numeric",
+      "property": "voltage_min",
+      "base": "voltage_min",
+      "endpoint": null,
+      "description": "Minimum voltage value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 300,
+      "unit": "V"
+    },
+    {
+      "name": "Voltage max",
+      "type": "numeric",
+      "property": "voltage_max",
+      "base": "voltage_max",
+      "endpoint": null,
+      "description": "Maximum voltage value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 300,
+      "unit": "V"
+    },
+    {
+      "name": "Current max",
+      "type": "numeric",
+      "property": "current_max",
+      "base": "current_max",
+      "endpoint": null,
+      "description": "Maximum current value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 16,
+      "unit": "A"
+    },
+    {
+      "name": "Power max",
+      "type": "numeric",
+      "property": "power_max",
+      "base": "power_max",
+      "endpoint": null,
+      "description": "Maximum power value.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "W"
+    },
+    {
+      "name": "Time reload",
+      "type": "numeric",
+      "property": "time_reload",
+      "base": "time_reload",
+      "endpoint": null,
+      "description": "Reload time.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 5,
+      "value_max": 60,
+      "unit": "sec"
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action (e.g. a button click).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "on",
+        "off",
+        "toggle",
+        "hold",
+        "single",
+        "double",
+        "triple",
+        "quadruple",
+        "quintuple",
+        "release"
+      ]
+    }
+  ],
+  "warnings": []
+}

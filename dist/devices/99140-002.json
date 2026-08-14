@@ -1,0 +1,158 @@
+{
+  "model": "99140-002",
+  "file": "99140-002.md",
+  "vendor": "Kwikset",
+  "description": "SmartCode traditional electronic deadbolt",
+  "image": "https://www.zigbee2mqtt.io/images/devices/99140-002.png",
+  "added_at": "2020-04-08T17:49:06Z",
+  "exposes_summary": "lock (state, lock_state), battery, pin_code, action, action_source_name, action_user",
+  "exposes": [
+    {
+      "name": "Lock",
+      "type": "lock",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "LOCK",
+            "UNLOCK"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Pin code",
+      "type": "composite",
+      "property": "pin_code",
+      "base": "pin_code",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "features": [
+        {
+          "property": "user",
+          "type": "numeric",
+          "description": "User ID to set or clear the pincode for"
+        },
+        {
+          "property": "user_type",
+          "type": "enum",
+          "description": "Type of user, unrestricted: owner (default), (year|week)_day_schedule: user has ability to open lock based on specific time period, master: user has ability to both program and operate the door lock, non_access: user is recognized by the lock but does not have the ability to open the lock",
+          "values": [
+            "unrestricted",
+            "year_day_schedule",
+            "week_day_schedule",
+            "master",
+            "non_access"
+          ]
+        },
+        {
+          "property": "user_enabled",
+          "type": "binary",
+          "description": "Whether the user is enabled/disabled",
+          "values": [
+            "true",
+            "false"
+          ]
+        },
+        {
+          "property": "pin_code",
+          "type": "numeric",
+          "description": "Pincode to set, set pincode to null to clear"
+        }
+      ]
+    },
+    {
+      "name": "Action",
+      "type": "enum",
+      "property": "action",
+      "base": "action",
+      "endpoint": null,
+      "description": "Triggered action on the lock.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "unknown",
+        "lock",
+        "unlock",
+        "lock_failure_invalid_pin_or_id",
+        "lock_failure_invalid_schedule",
+        "unlock_failure_invalid_pin_or_id",
+        "unlock_failure_invalid_schedule",
+        "one_touch_lock",
+        "key_lock",
+        "key_unlock",
+        "auto_lock",
+        "schedule_lock",
+        "schedule_unlock",
+        "manual_lock",
+        "manual_unlock",
+        "non_access_user_operational_event"
+      ]
+    },
+    {
+      "name": "Action source name",
+      "type": "enum",
+      "property": "action_source_name",
+      "base": "action_source_name",
+      "endpoint": null,
+      "description": "Source of the triggered action on the lock.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "keypad",
+        "rfid",
+        "manual",
+        "rf"
+      ]
+    },
+    {
+      "name": "Action user",
+      "type": "numeric",
+      "property": "action_user",
+      "base": "action_user",
+      "endpoint": null,
+      "description": "ID of user that triggered the action on the lock.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    }
+  ],
+  "warnings": []
+}

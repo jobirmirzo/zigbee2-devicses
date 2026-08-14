@@ -1,0 +1,241 @@
+{
+  "model": "RMDZB-1PNL63",
+  "file": "RMDZB-1PNL63.md",
+  "vendor": "TNCE",
+  "description": "Zigbee DIN single phase energy meter",
+  "image": "https://www.zigbee2mqtt.io/images/devices/RMDZB-1PNL63.png",
+  "added_at": "2024-10-31T20:34:53",
+  "exposes_summary": "switch (state), energy, faults, voltage_a, power_a, current_a, temperature, over_current_breaker, over_current_threshold, over_voltage_breaker, over_voltage_threshold, under_voltage_breaker, under_voltage_threshold, high_temperature_breaker, high_temperature_threshold",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "state",
+          "base": "state",
+          "values": [
+            "ON",
+            "OFF",
+            "TOGGLE"
+          ],
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Energy",
+      "type": "numeric",
+      "property": "energy",
+      "base": "energy",
+      "endpoint": null,
+      "description": "Sum of consumed energy.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Faults",
+      "type": "list",
+      "property": "faults",
+      "base": "faults",
+      "endpoint": null,
+      "description": "List of current faults.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Voltage a",
+      "type": "numeric",
+      "property": "voltage_a",
+      "base": "voltage_a",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power a",
+      "type": "numeric",
+      "property": "power_a",
+      "base": "power_a",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current a",
+      "type": "numeric",
+      "property": "current_a",
+      "base": "current_a",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase A).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Over current breaker",
+      "type": "binary",
+      "property": "over_current_breaker",
+      "base": "over_current_breaker",
+      "endpoint": null,
+      "description": "OFF - alarm only, ON - relay will turn off when threshold reached.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Over current threshold",
+      "type": "numeric",
+      "property": "over_current_threshold",
+      "base": "over_current_threshold",
+      "endpoint": null,
+      "description": "Setup the value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 63,
+      "unit": "A"
+    },
+    {
+      "name": "Over voltage breaker",
+      "type": "binary",
+      "property": "over_voltage_breaker",
+      "base": "over_voltage_breaker",
+      "endpoint": null,
+      "description": "OFF - alarm only, ON - relay will turn off when threshold reached.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Over voltage threshold",
+      "type": "numeric",
+      "property": "over_voltage_threshold",
+      "base": "over_voltage_threshold",
+      "endpoint": null,
+      "description": "Setup value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 250,
+      "value_max": 300,
+      "unit": "V"
+    },
+    {
+      "name": "Under voltage breaker",
+      "type": "binary",
+      "property": "under_voltage_breaker",
+      "base": "under_voltage_breaker",
+      "endpoint": null,
+      "description": "OFF - alarm only, ON - relay will turn off when threshold reached.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Under voltage threshold",
+      "type": "numeric",
+      "property": "under_voltage_threshold",
+      "base": "under_voltage_threshold",
+      "endpoint": null,
+      "description": "Setup value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 150,
+      "value_max": 200,
+      "unit": "V"
+    },
+    {
+      "name": "High temperature breaker",
+      "type": "binary",
+      "property": "high_temperature_breaker",
+      "base": "high_temperature_breaker",
+      "endpoint": null,
+      "description": "OFF - alarm only, ON - relay will turn off when threshold reached.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "High temperature threshold",
+      "type": "numeric",
+      "property": "high_temperature_threshold",
+      "base": "high_temperature_threshold",
+      "endpoint": null,
+      "description": "Setup value on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 40,
+      "value_max": 100,
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

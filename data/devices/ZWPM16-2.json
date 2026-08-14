@@ -1,0 +1,152 @@
+{
+  "model": "ZWPM16-2",
+  "file": "ZWPM16-2.md",
+  "vendor": "AVATTO",
+  "description": "Zigbee smart energy meter 80A/2CH",
+  "image": "https://www.zigbee2mqtt.io/images/devices/ZWPM16-2.png",
+  "added_at": "2025-02-06T19:24:12",
+  "exposes_summary": "voltage_l1, power_l1, current_l1, energy_l1, daily_energy_l1, voltage_l2, power_l2, current_l2, energy_l2, daily_energy_l2",
+  "exposes": [
+    {
+      "name": "Voltage l1",
+      "type": "numeric",
+      "property": "voltage_l1",
+      "base": "voltage_l1",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase L1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power l1",
+      "type": "numeric",
+      "property": "power_l1",
+      "base": "power_l1",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase L1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current l1",
+      "type": "numeric",
+      "property": "current_l1",
+      "base": "current_l1",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase L1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy l1",
+      "type": "numeric",
+      "property": "energy_l1",
+      "base": "energy_l1",
+      "endpoint": null,
+      "description": "Sum of consumed energy (phase L1).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Daily energy l1",
+      "type": "numeric",
+      "property": "daily_energy_l1",
+      "base": "daily_energy_l1",
+      "endpoint": null,
+      "description": "Daily energy L1.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Voltage l2",
+      "type": "numeric",
+      "property": "voltage_l2",
+      "base": "voltage_l2",
+      "endpoint": null,
+      "description": "Measured electrical potential value (phase L2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "V"
+    },
+    {
+      "name": "Power l2",
+      "type": "numeric",
+      "property": "power_l2",
+      "base": "power_l2",
+      "endpoint": null,
+      "description": "Instantaneous measured power (phase L2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Current l2",
+      "type": "numeric",
+      "property": "current_l2",
+      "base": "current_l2",
+      "endpoint": null,
+      "description": "Instantaneous measured electrical current (phase L2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "A"
+    },
+    {
+      "name": "Energy l2",
+      "type": "numeric",
+      "property": "energy_l2",
+      "base": "energy_l2",
+      "endpoint": null,
+      "description": "Sum of consumed energy (phase L2).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    },
+    {
+      "name": "Daily energy l2",
+      "type": "numeric",
+      "property": "daily_energy_l2",
+      "base": "daily_energy_l2",
+      "endpoint": null,
+      "description": "Daily energy L2.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "kWh"
+    }
+  ],
+  "warnings": []
+}

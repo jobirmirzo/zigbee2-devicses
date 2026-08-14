@@ -1,0 +1,55 @@
+{
+  "model": "_TZE204_w2vunxzm",
+  "file": "_TZE204_w2vunxzm.md",
+  "vendor": "Tuya",
+  "description": "Air pressure sensor",
+  "image": "https://www.zigbee2mqtt.io/images/devices/_TZE204_w2vunxzm.png",
+  "added_at": "2026-01-31T13:20:01",
+  "exposes_summary": "pressure, temperature, display_brightness",
+  "exposes": [
+    {
+      "name": "Pressure",
+      "type": "numeric",
+      "property": "pressure",
+      "base": "pressure",
+      "endpoint": null,
+      "description": "The measured atmospheric pressure.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "hPa"
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Display brightness",
+      "type": "numeric",
+      "property": "display_brightness",
+      "base": "display_brightness",
+      "endpoint": null,
+      "description": "Display brightness level (0 = off).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 8
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,94 @@
+{
+  "model": "mKomfy_Sensor",
+  "file": "mKomfy_Sensor.md",
+  "vendor": "CTM Lyng",
+  "description": "mKomfy, stove guard",
+  "image": "https://www.zigbee2mqtt.io/images/devices/mKomfy_Sensor.png",
+  "added_at": "2022-08-01T15:06:58",
+  "exposes_summary": "battery, battery_low, temperature, alarm_status, active",
+  "exposes": [
+    {
+      "name": "Battery",
+      "type": "numeric",
+      "property": "battery",
+      "base": "battery",
+      "endpoint": null,
+      "description": "Remaining battery in %, can take up to 24 hours before reported.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_min": 0,
+      "value_max": 100,
+      "unit": "%"
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low",
+      "base": "battery_low",
+      "endpoint": null,
+      "description": "Indicates if the battery of this device is almost empty.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Temperature",
+      "type": "numeric",
+      "property": "temperature",
+      "base": "temperature",
+      "endpoint": null,
+      "description": "Measured temperature value.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Alarm status",
+      "type": "enum",
+      "property": "alarm_status",
+      "base": "alarm_status",
+      "endpoint": null,
+      "description": "Alarm status..",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "values": [
+        "ok",
+        "tamper",
+        "high_temperatur",
+        "timer",
+        "battery_alarm",
+        "error",
+        "unknown"
+      ]
+    },
+    {
+      "name": "Active",
+      "type": "binary",
+      "property": "active",
+      "base": "active",
+      "endpoint": null,
+      "description": "Stove guard active/inactive (Stove in use).",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    }
+  ],
+  "warnings": []
+}

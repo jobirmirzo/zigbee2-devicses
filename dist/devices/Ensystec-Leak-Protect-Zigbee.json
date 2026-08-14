@@ -1,0 +1,1592 @@
+{
+  "model": "Ensystec-Leak-Protect-Zigbee",
+  "file": "Ensystec-Leak-Protect-Zigbee.md",
+  "vendor": "Ensystec",
+  "description": "Leak protect controller with Zigbee module",
+  "image": "https://www.zigbee2mqtt.io/images/devices/Ensystec-Leak-Protect-Zigbee.png",
+  "added_at": "2026-05-07T17:38:21",
+  "exposes_summary": "switch (state), water_leak, battery_low, power, alarm_reset, force_open, input_1_water_meter, input_1_divisor, input_1_multiplier, input_2_water_meter, input_2_divisor, input_2_multiplier, input_3_water_meter, input_3_divisor, input_3_multiplier, input_4_water_meter, input_4_divisor, input_4_multiplier, input_5_water_meter, input_5_divisor, input_5_multiplier, input_6_water_meter, input_6_divisor, input_6_multiplier, input_7_water_meter, input_7_divisor, input_7_multiplier, input_8_water_meter, input_8_divisor, input_8_multiplier, input_9_water_meter, input_9_divisor, input_9_multiplier, input_10_water_meter, input_10_divisor, input_10_multiplier, position_percent, electric_valve_connection_out1, electric_valve_connection_out2, input_1_config, input_2_config, input_3_config, input_4_config, input_5_config, input_6_config, input_7_config, input_8_config, input_9_config, input_10_config, input_1_leak_detect, input_2_leak_detect, input_3_leak_detect, input_4_leak_detect, input_5_leak_detect, input_6_leak_detect, input_7_leak_detect, input_8_leak_detect, input_9_leak_detect, input_10_leak_detect, input_1_wire_break_control, input_2_wire_break_control, input_3_wire_break_control, input_4_wire_break_control, input_5_wire_break_control, input_6_wire_break_control, input_7_wire_break_control, input_8_wire_break_control, input_9_wire_break_control, input_10_wire_break_control, channel_1_connection_control, channel_2_connection_control, channel_3_connection_control, channel_4_connection_control, channel_5_connection_control, channel_6_connection_control, channel_7_connection_control, channel_8_connection_control, channel_9_connection_control, channel_10_connection_control, channel_1_leak_detect, channel_2_leak_detect, channel_3_leak_detect, channel_4_leak_detect, channel_5_leak_detect, channel_6_leak_detect, channel_7_leak_detect, channel_8_leak_detect, channel_9_leak_detect, channel_10_leak_detect, channel_1_battery_low, channel_2_battery_low, channel_3_battery_low, channel_4_battery_low, channel_5_battery_low, channel_6_battery_low, channel_7_battery_low, channel_8_battery_low, channel_9_battery_low, channel_10_battery_low",
+  "exposes": [
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "1",
+      "features": [
+        {
+          "property": "state_1",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Water leak",
+      "type": "binary",
+      "property": "water_leak",
+      "base": "water_leak",
+      "endpoint": null,
+      "description": "Indicates whether the device detected a water leak.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Battery low",
+      "type": "binary",
+      "property": "battery_low_1",
+      "base": "battery_low",
+      "endpoint": "1",
+      "description": "Low battery.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Low",
+      "value_off": "Normal"
+    },
+    {
+      "name": "Power",
+      "type": "enum",
+      "property": "power",
+      "base": "power",
+      "endpoint": null,
+      "description": "Power indicator.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "values": [
+        "unknown",
+        "mains (single phase)",
+        "mains (3 phase)",
+        "battery"
+      ]
+    },
+    {
+      "name": "Alarm reset",
+      "type": "enum",
+      "property": "alarm_reset",
+      "base": "alarm_reset",
+      "endpoint": null,
+      "description": "Reset alarm.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "reset"
+      ]
+    },
+    {
+      "name": "Force open",
+      "type": "enum",
+      "property": "force_open_6",
+      "base": "force_open",
+      "endpoint": "6",
+      "description": "Force open electric valves.",
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "Force open"
+      ]
+    },
+    {
+      "name": "Input 1 water meter",
+      "type": "numeric",
+      "property": "input_1_water_meter_7",
+      "base": "input_1_water_meter",
+      "endpoint": "7",
+      "description": "Water meter on input 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 281474976710655,
+      "unit": "m3"
+    },
+    {
+      "name": "Input 1 divisor",
+      "type": "numeric",
+      "property": "input_1_divisor_7",
+      "base": "input_1_divisor",
+      "endpoint": "7",
+      "description": "Divisor of water meter 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 1 multiplier",
+      "type": "numeric",
+      "property": "input_1_multiplier_7",
+      "base": "input_1_multiplier",
+      "endpoint": "7",
+      "description": "Multiplier of water meter 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 2 water meter",
+      "type": "numeric",
+      "property": "input_2_water_meter_8",
+      "base": "input_2_water_meter",
+      "endpoint": "8",
+      "description": "Water meter on input 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 281474976710655,
+      "unit": "m3"
+    },
+    {
+      "name": "Input 2 divisor",
+      "type": "numeric",
+      "property": "input_2_divisor_8",
+      "base": "input_2_divisor",
+      "endpoint": "8",
+      "description": "Divisor of water meter 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 2 multiplier",
+      "type": "numeric",
+      "property": "input_2_multiplier_8",
+      "base": "input_2_multiplier",
+      "endpoint": "8",
+      "description": "Multiplier of water meter 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 3 water meter",
+      "type": "numeric",
+      "property": "input_3_water_meter_9",
+      "base": "input_3_water_meter",
+      "endpoint": "9",
+      "description": "Water meter on input 3.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 281474976710655,
+      "unit": "m3"
+    },
+    {
+      "name": "Input 3 divisor",
+      "type": "numeric",
+      "property": "input_3_divisor_9",
+      "base": "input_3_divisor",
+      "endpoint": "9",
+      "description": "Divisor of water meter 3.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 3 multiplier",
+      "type": "numeric",
+      "property": "input_3_multiplier_9",
+      "base": "input_3_multiplier",
+      "endpoint": "9",
+      "description": "Multiplier of water meter 3.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 4 water meter",
+      "type": "numeric",
+      "property": "input_4_water_meter_10",
+      "base": "input_4_water_meter",
+      "endpoint": "10",
+      "description": "Water meter on input 4.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 281474976710655,
+      "unit": "m3"
+    },
+    {
+      "name": "Input 4 divisor",
+      "type": "numeric",
+      "property": "input_4_divisor_10",
+      "base": "input_4_divisor",
+      "endpoint": "10",
+      "description": "Divisor of water meter 4.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 4 multiplier",
+      "type": "numeric",
+      "property": "input_4_multiplier_10",
+      "base": "input_4_multiplier",
+      "endpoint": "10",
+      "description": "Multiplier of water meter 4.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 5 water meter",
+      "type": "numeric",
+      "property": "input_5_water_meter_11",
+      "base": "input_5_water_meter",
+      "endpoint": "11",
+      "description": "Water meter on input 5.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 281474976710655,
+      "unit": "m3"
+    },
+    {
+      "name": "Input 5 divisor",
+      "type": "numeric",
+      "property": "input_5_divisor_11",
+      "base": "input_5_divisor",
+      "endpoint": "11",
+      "description": "Divisor of water meter 5.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 5 multiplier",
+      "type": "numeric",
+      "property": "input_5_multiplier_11",
+      "base": "input_5_multiplier",
+      "endpoint": "11",
+      "description": "Multiplier of water meter 5.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 6 water meter",
+      "type": "numeric",
+      "property": "input_6_water_meter_12",
+      "base": "input_6_water_meter",
+      "endpoint": "12",
+      "description": "Water meter on input 6.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 281474976710655,
+      "unit": "m3"
+    },
+    {
+      "name": "Input 6 divisor",
+      "type": "numeric",
+      "property": "input_6_divisor_12",
+      "base": "input_6_divisor",
+      "endpoint": "12",
+      "description": "Divisor of water meter 6.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 6 multiplier",
+      "type": "numeric",
+      "property": "input_6_multiplier_12",
+      "base": "input_6_multiplier",
+      "endpoint": "12",
+      "description": "Multiplier of water meter 6.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 7 water meter",
+      "type": "numeric",
+      "property": "input_7_water_meter_13",
+      "base": "input_7_water_meter",
+      "endpoint": "13",
+      "description": "Water meter on input 7.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 281474976710655,
+      "unit": "m3"
+    },
+    {
+      "name": "Input 7 divisor",
+      "type": "numeric",
+      "property": "input_7_divisor_13",
+      "base": "input_7_divisor",
+      "endpoint": "13",
+      "description": "Divisor of water meter 7.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 7 multiplier",
+      "type": "numeric",
+      "property": "input_7_multiplier_13",
+      "base": "input_7_multiplier",
+      "endpoint": "13",
+      "description": "Multiplier of water meter 7.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 8 water meter",
+      "type": "numeric",
+      "property": "input_8_water_meter_14",
+      "base": "input_8_water_meter",
+      "endpoint": "14",
+      "description": "Water meter on input 8.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 281474976710655,
+      "unit": "m3"
+    },
+    {
+      "name": "Input 8 divisor",
+      "type": "numeric",
+      "property": "input_8_divisor_14",
+      "base": "input_8_divisor",
+      "endpoint": "14",
+      "description": "Divisor of water meter 8.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 8 multiplier",
+      "type": "numeric",
+      "property": "input_8_multiplier_14",
+      "base": "input_8_multiplier",
+      "endpoint": "14",
+      "description": "Multiplier of water meter 8.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 9 water meter",
+      "type": "numeric",
+      "property": "input_9_water_meter_15",
+      "base": "input_9_water_meter",
+      "endpoint": "15",
+      "description": "Water meter on input 9.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 281474976710655,
+      "unit": "m3"
+    },
+    {
+      "name": "Input 9 divisor",
+      "type": "numeric",
+      "property": "input_9_divisor_15",
+      "base": "input_9_divisor",
+      "endpoint": "15",
+      "description": "Divisor of water meter 9.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 9 multiplier",
+      "type": "numeric",
+      "property": "input_9_multiplier_15",
+      "base": "input_9_multiplier",
+      "endpoint": "15",
+      "description": "Multiplier of water meter 9.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 10 water meter",
+      "type": "numeric",
+      "property": "input_10_water_meter_16",
+      "base": "input_10_water_meter",
+      "endpoint": "16",
+      "description": "Water meter on input 10.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 281474976710655,
+      "unit": "m3"
+    },
+    {
+      "name": "Input 10 divisor",
+      "type": "numeric",
+      "property": "input_10_divisor_16",
+      "base": "input_10_divisor",
+      "endpoint": "16",
+      "description": "Divisor of water meter 10.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Input 10 multiplier",
+      "type": "numeric",
+      "property": "input_10_multiplier_16",
+      "base": "input_10_multiplier",
+      "endpoint": "16",
+      "description": "Multiplier of water meter 10.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 16777215
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "2",
+      "features": [
+        {
+          "property": "state_2",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Position percent",
+      "type": "numeric",
+      "property": "position_percent_2",
+      "base": "position_percent",
+      "endpoint": "2",
+      "description": "Electric valve(-s) position on OUT1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Electric valve connection out1",
+      "type": "binary",
+      "property": "electric_valve_connection_out1_2",
+      "base": "electric_valve_connection_out1",
+      "endpoint": "2",
+      "description": "Electric valve(-s) connected to OUT1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Connected",
+      "value_off": "Not connected"
+    },
+    {
+      "name": "Switch",
+      "type": "switch",
+      "endpoint": "3",
+      "features": [
+        {
+          "property": "state_3",
+          "base": "state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": true,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Position percent",
+      "type": "numeric",
+      "property": "position_percent_3",
+      "base": "position_percent",
+      "endpoint": "3",
+      "description": "Electric valve(-s) position on OUT2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "%"
+    },
+    {
+      "name": "Electric valve connection out2",
+      "type": "binary",
+      "property": "electric_valve_connection_out2_3",
+      "base": "electric_valve_connection_out2",
+      "endpoint": "3",
+      "description": "Electric valve(-s) connected to OUT2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Connected",
+      "value_off": "Not connected"
+    },
+    {
+      "name": "Input 1 config",
+      "type": "enum",
+      "property": "input_1_config_7",
+      "base": "input_1_config",
+      "endpoint": "7",
+      "description": "Input 1 configuration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "deactivated",
+        "sensor",
+        "meter"
+      ]
+    },
+    {
+      "name": "Input 2 config",
+      "type": "enum",
+      "property": "input_2_config_8",
+      "base": "input_2_config",
+      "endpoint": "8",
+      "description": "Input 2 configuration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "deactivated",
+        "sensor",
+        "meter"
+      ]
+    },
+    {
+      "name": "Input 3 config",
+      "type": "enum",
+      "property": "input_3_config_9",
+      "base": "input_3_config",
+      "endpoint": "9",
+      "description": "Input 3 configuration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "deactivated",
+        "sensor",
+        "meter"
+      ]
+    },
+    {
+      "name": "Input 4 config",
+      "type": "enum",
+      "property": "input_4_config_10",
+      "base": "input_4_config",
+      "endpoint": "10",
+      "description": "Input 4 configuration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "deactivated",
+        "sensor",
+        "meter"
+      ]
+    },
+    {
+      "name": "Input 5 config",
+      "type": "enum",
+      "property": "input_5_config_11",
+      "base": "input_5_config",
+      "endpoint": "11",
+      "description": "Input 5 configuration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "deactivated",
+        "sensor",
+        "meter"
+      ]
+    },
+    {
+      "name": "Input 6 config",
+      "type": "enum",
+      "property": "input_6_config_12",
+      "base": "input_6_config",
+      "endpoint": "12",
+      "description": "Input 6 configuration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "deactivated",
+        "sensor",
+        "meter"
+      ]
+    },
+    {
+      "name": "Input 7 config",
+      "type": "enum",
+      "property": "input_7_config_13",
+      "base": "input_7_config",
+      "endpoint": "13",
+      "description": "Input 7 configuration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "deactivated",
+        "sensor",
+        "meter"
+      ]
+    },
+    {
+      "name": "Input 8 config",
+      "type": "enum",
+      "property": "input_8_config_14",
+      "base": "input_8_config",
+      "endpoint": "14",
+      "description": "Input 8 configuration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "deactivated",
+        "sensor",
+        "meter"
+      ]
+    },
+    {
+      "name": "Input 9 config",
+      "type": "enum",
+      "property": "input_9_config_15",
+      "base": "input_9_config",
+      "endpoint": "15",
+      "description": "Input 9 configuration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "deactivated",
+        "sensor",
+        "meter"
+      ]
+    },
+    {
+      "name": "Input 10 config",
+      "type": "enum",
+      "property": "input_10_config_16",
+      "base": "input_10_config",
+      "endpoint": "16",
+      "description": "Input 10 configuration.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "values": [
+        "deactivated",
+        "sensor",
+        "meter"
+      ]
+    },
+    {
+      "name": "Input 1 leak detect",
+      "type": "binary",
+      "property": "input_1_leak_detect_7",
+      "base": "input_1_leak_detect",
+      "endpoint": "7",
+      "description": "Leak detection on input 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Input 2 leak detect",
+      "type": "binary",
+      "property": "input_2_leak_detect_8",
+      "base": "input_2_leak_detect",
+      "endpoint": "8",
+      "description": "Leak detection on input 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Input 3 leak detect",
+      "type": "binary",
+      "property": "input_3_leak_detect_9",
+      "base": "input_3_leak_detect",
+      "endpoint": "9",
+      "description": "Leak detection on input 3.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Input 4 leak detect",
+      "type": "binary",
+      "property": "input_4_leak_detect_10",
+      "base": "input_4_leak_detect",
+      "endpoint": "10",
+      "description": "Leak detection on input 4.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Input 5 leak detect",
+      "type": "binary",
+      "property": "input_5_leak_detect_11",
+      "base": "input_5_leak_detect",
+      "endpoint": "11",
+      "description": "Leak detection on input 5.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Input 6 leak detect",
+      "type": "binary",
+      "property": "input_6_leak_detect_12",
+      "base": "input_6_leak_detect",
+      "endpoint": "12",
+      "description": "Leak detection on input 6.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Input 7 leak detect",
+      "type": "binary",
+      "property": "input_7_leak_detect_13",
+      "base": "input_7_leak_detect",
+      "endpoint": "13",
+      "description": "Leak detection on input 7.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Input 8 leak detect",
+      "type": "binary",
+      "property": "input_8_leak_detect_14",
+      "base": "input_8_leak_detect",
+      "endpoint": "14",
+      "description": "Leak detection on input 8.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Input 9 leak detect",
+      "type": "binary",
+      "property": "input_9_leak_detect_15",
+      "base": "input_9_leak_detect",
+      "endpoint": "15",
+      "description": "Leak detection on input 9.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Input 10 leak detect",
+      "type": "binary",
+      "property": "input_10_leak_detect_16",
+      "base": "input_10_leak_detect",
+      "endpoint": "16",
+      "description": "Leak detection on input 10.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Input 1 wire break control",
+      "type": "binary",
+      "property": "input_1_wire_break_control_7",
+      "base": "input_1_wire_break_control",
+      "endpoint": "7",
+      "description": "Wire break control on input 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Input 2 wire break control",
+      "type": "binary",
+      "property": "input_2_wire_break_control_8",
+      "base": "input_2_wire_break_control",
+      "endpoint": "8",
+      "description": "Wire break control on input 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Input 3 wire break control",
+      "type": "binary",
+      "property": "input_3_wire_break_control_9",
+      "base": "input_3_wire_break_control",
+      "endpoint": "9",
+      "description": "Wire break control on input 3.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Input 4 wire break control",
+      "type": "binary",
+      "property": "input_4_wire_break_control_10",
+      "base": "input_4_wire_break_control",
+      "endpoint": "10",
+      "description": "Wire break control on input 4.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Input 5 wire break control",
+      "type": "binary",
+      "property": "input_5_wire_break_control_11",
+      "base": "input_5_wire_break_control",
+      "endpoint": "11",
+      "description": "Wire break control on input 5.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Input 6 wire break control",
+      "type": "binary",
+      "property": "input_6_wire_break_control_12",
+      "base": "input_6_wire_break_control",
+      "endpoint": "12",
+      "description": "Wire break control on input 6.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Input 7 wire break control",
+      "type": "binary",
+      "property": "input_7_wire_break_control_13",
+      "base": "input_7_wire_break_control",
+      "endpoint": "13",
+      "description": "Wire break control on input 7.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Input 8 wire break control",
+      "type": "binary",
+      "property": "input_8_wire_break_control_14",
+      "base": "input_8_wire_break_control",
+      "endpoint": "14",
+      "description": "Wire break control on input 8.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Input 9 wire break control",
+      "type": "binary",
+      "property": "input_9_wire_break_control_15",
+      "base": "input_9_wire_break_control",
+      "endpoint": "15",
+      "description": "Wire break control on input 9.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Input 10 wire break control",
+      "type": "binary",
+      "property": "input_10_wire_break_control_16",
+      "base": "input_10_wire_break_control",
+      "endpoint": "16",
+      "description": "Wire break control on input 10.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Channel 1 connection control",
+      "type": "binary",
+      "property": "channel_1_connection_control_17",
+      "base": "channel_1_connection_control",
+      "endpoint": "17",
+      "description": "Connection control on wireless channel 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Channel 2 connection control",
+      "type": "binary",
+      "property": "channel_2_connection_control_18",
+      "base": "channel_2_connection_control",
+      "endpoint": "18",
+      "description": "Connection control on wireless channel 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Channel 3 connection control",
+      "type": "binary",
+      "property": "channel_3_connection_control_19",
+      "base": "channel_3_connection_control",
+      "endpoint": "19",
+      "description": "Connection control on wireless channel 3.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Channel 4 connection control",
+      "type": "binary",
+      "property": "channel_4_connection_control_20",
+      "base": "channel_4_connection_control",
+      "endpoint": "20",
+      "description": "Connection control on wireless channel 4.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Channel 5 connection control",
+      "type": "binary",
+      "property": "channel_5_connection_control_21",
+      "base": "channel_5_connection_control",
+      "endpoint": "21",
+      "description": "Connection control on wireless channel 5.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Channel 6 connection control",
+      "type": "binary",
+      "property": "channel_6_connection_control_22",
+      "base": "channel_6_connection_control",
+      "endpoint": "22",
+      "description": "Connection control on wireless channel 6.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Channel 7 connection control",
+      "type": "binary",
+      "property": "channel_7_connection_control_23",
+      "base": "channel_7_connection_control",
+      "endpoint": "23",
+      "description": "Connection control on wireless channel 7.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Channel 8 connection control",
+      "type": "binary",
+      "property": "channel_8_connection_control_24",
+      "base": "channel_8_connection_control",
+      "endpoint": "24",
+      "description": "Connection control on wireless channel 8.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Channel 9 connection control",
+      "type": "binary",
+      "property": "channel_9_connection_control_25",
+      "base": "channel_9_connection_control",
+      "endpoint": "25",
+      "description": "Connection control on wireless channel 9.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Channel 10 connection control",
+      "type": "binary",
+      "property": "channel_10_connection_control_26",
+      "base": "channel_10_connection_control",
+      "endpoint": "26",
+      "description": "Connection control on wireless channel 10.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "online",
+      "value_off": "offline"
+    },
+    {
+      "name": "Channel 1 leak detect",
+      "type": "binary",
+      "property": "channel_1_leak_detect_17",
+      "base": "channel_1_leak_detect",
+      "endpoint": "17",
+      "description": "Leak detection on wireless channel 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Channel 2 leak detect",
+      "type": "binary",
+      "property": "channel_2_leak_detect_18",
+      "base": "channel_2_leak_detect",
+      "endpoint": "18",
+      "description": "Leak detection on wireless channel 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Channel 3 leak detect",
+      "type": "binary",
+      "property": "channel_3_leak_detect_19",
+      "base": "channel_3_leak_detect",
+      "endpoint": "19",
+      "description": "Leak detection on wireless channel 3.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Channel 4 leak detect",
+      "type": "binary",
+      "property": "channel_4_leak_detect_20",
+      "base": "channel_4_leak_detect",
+      "endpoint": "20",
+      "description": "Leak detection on wireless channel 4.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Channel 5 leak detect",
+      "type": "binary",
+      "property": "channel_5_leak_detect_21",
+      "base": "channel_5_leak_detect",
+      "endpoint": "21",
+      "description": "Leak detection on wireless channel 5.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Channel 6 leak detect",
+      "type": "binary",
+      "property": "channel_6_leak_detect_22",
+      "base": "channel_6_leak_detect",
+      "endpoint": "22",
+      "description": "Leak detection on wireless channel 6.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Channel 7 leak detect",
+      "type": "binary",
+      "property": "channel_7_leak_detect_23",
+      "base": "channel_7_leak_detect",
+      "endpoint": "23",
+      "description": "Leak detection on wireless channel 7.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Channel 8 leak detect",
+      "type": "binary",
+      "property": "channel_8_leak_detect_24",
+      "base": "channel_8_leak_detect",
+      "endpoint": "24",
+      "description": "Leak detection on wireless channel 8.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Channel 9 leak detect",
+      "type": "binary",
+      "property": "channel_9_leak_detect_25",
+      "base": "channel_9_leak_detect",
+      "endpoint": "25",
+      "description": "Leak detection on wireless channel 9.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Channel 10 leak detect",
+      "type": "binary",
+      "property": "channel_10_leak_detect_26",
+      "base": "channel_10_leak_detect",
+      "endpoint": "26",
+      "description": "Leak detection on wireless channel 10.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Leak",
+      "value_off": "Dry"
+    },
+    {
+      "name": "Channel 1 battery low",
+      "type": "binary",
+      "property": "channel_1_battery_low_17",
+      "base": "channel_1_battery_low",
+      "endpoint": "17",
+      "description": "Battery level of wireless sensor on channel 1.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Low",
+      "value_off": "Normal"
+    },
+    {
+      "name": "Channel 2 battery low",
+      "type": "binary",
+      "property": "channel_2_battery_low_18",
+      "base": "channel_2_battery_low",
+      "endpoint": "18",
+      "description": "Battery level of wireless sensor on channel 2.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Low",
+      "value_off": "Normal"
+    },
+    {
+      "name": "Channel 3 battery low",
+      "type": "binary",
+      "property": "channel_3_battery_low_19",
+      "base": "channel_3_battery_low",
+      "endpoint": "19",
+      "description": "Battery level of wireless sensor on channel 3.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Low",
+      "value_off": "Normal"
+    },
+    {
+      "name": "Channel 4 battery low",
+      "type": "binary",
+      "property": "channel_4_battery_low_20",
+      "base": "channel_4_battery_low",
+      "endpoint": "20",
+      "description": "Battery level of wireless sensor on channel 4.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Low",
+      "value_off": "Normal"
+    },
+    {
+      "name": "Channel 5 battery low",
+      "type": "binary",
+      "property": "channel_5_battery_low_21",
+      "base": "channel_5_battery_low",
+      "endpoint": "21",
+      "description": "Battery level of wireless sensor on channel 5.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Low",
+      "value_off": "Normal"
+    },
+    {
+      "name": "Channel 6 battery low",
+      "type": "binary",
+      "property": "channel_6_battery_low_22",
+      "base": "channel_6_battery_low",
+      "endpoint": "22",
+      "description": "Battery level of wireless sensor on channel 6.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Low",
+      "value_off": "Normal"
+    },
+    {
+      "name": "Channel 7 battery low",
+      "type": "binary",
+      "property": "channel_7_battery_low_23",
+      "base": "channel_7_battery_low",
+      "endpoint": "23",
+      "description": "Battery level of wireless sensor on channel 7.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Low",
+      "value_off": "Normal"
+    },
+    {
+      "name": "Channel 8 battery low",
+      "type": "binary",
+      "property": "channel_8_battery_low_24",
+      "base": "channel_8_battery_low",
+      "endpoint": "24",
+      "description": "Battery level of wireless sensor on channel 8.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Low",
+      "value_off": "Normal"
+    },
+    {
+      "name": "Channel 9 battery low",
+      "type": "binary",
+      "property": "channel_9_battery_low_25",
+      "base": "channel_9_battery_low",
+      "endpoint": "25",
+      "description": "Battery level of wireless sensor on channel 9.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Low",
+      "value_off": "Normal"
+    },
+    {
+      "name": "Channel 10 battery low",
+      "type": "binary",
+      "property": "channel_10_battery_low_26",
+      "base": "channel_10_battery_low",
+      "endpoint": "26",
+      "description": "Battery level of wireless sensor on channel 10.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "value_on": "Low",
+      "value_off": "Normal"
+    }
+  ],
+  "warnings": []
+}

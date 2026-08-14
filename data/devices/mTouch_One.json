@@ -1,0 +1,194 @@
+{
+  "model": "mTouch_One",
+  "file": "mTouch_One.md",
+  "vendor": "CTM Lyng",
+  "description": "mTouch One OP, touch thermostat",
+  "image": "https://www.zigbee2mqtt.io/images/devices/mTouch_One.png",
+  "added_at": "2022-08-01T15:06:58",
+  "exposes_summary": "child_lock, climate (occupied_heating_setpoint, local_temperature, system_mode, preset, running_state), load, display_text, regulator_mode, mean_power, floor_temp, frost_guard, regulator_setpoint, air_temp",
+  "exposes": [
+    {
+      "name": "Child lock",
+      "type": "binary",
+      "property": "child_lock",
+      "base": "child_lock",
+      "endpoint": null,
+      "description": "Enables/disables physical input on the device.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "value_on": "LOCK",
+      "value_off": "UNLOCK"
+    },
+    {
+      "name": "Climate",
+      "type": "climate",
+      "endpoint": null,
+      "features": [
+        {
+          "property": "occupied_heating_setpoint",
+          "base": "occupied_heating_setpoint",
+          "value_min": 5,
+          "value_max": 40,
+          "unit": "°C",
+          "readable": true
+        },
+        {
+          "property": "local_temperature",
+          "base": "local_temperature",
+          "readable": true
+        },
+        {
+          "property": "system_mode",
+          "base": "system_mode",
+          "values": [
+            "off",
+            "heat"
+          ],
+          "readable": true
+        },
+        {
+          "property": "preset",
+          "base": "preset",
+          "values": [
+            "off",
+            "away",
+            "sleep",
+            "home"
+          ],
+          "readable": false
+        },
+        {
+          "property": "running_state",
+          "base": "running_state",
+          "readable": true
+        }
+      ],
+      "capabilities": {
+        "transition": false,
+        "timed_off": false,
+        "move_step": false
+      }
+    },
+    {
+      "name": "Load",
+      "type": "numeric",
+      "property": "load",
+      "base": "load",
+      "endpoint": null,
+      "description": "Load in W when heating is on (between 0-3600 W). The thermostat uses the value as input to the mean_power calculation..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 0,
+      "value_max": 3600,
+      "unit": "W"
+    },
+    {
+      "name": "Display text",
+      "type": "text",
+      "property": "display_text",
+      "base": "display_text",
+      "endpoint": null,
+      "description": "Displayed text on thermostat display (zone). Max 19 characters.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      }
+    },
+    {
+      "name": "Regulator mode",
+      "type": "binary",
+      "property": "regulator_mode",
+      "base": "regulator_mode",
+      "endpoint": null,
+      "description": "Device in regulator or thermostat mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "regulator",
+      "value_off": "thermostat"
+    },
+    {
+      "name": "Mean power",
+      "type": "numeric",
+      "property": "mean_power",
+      "base": "mean_power",
+      "endpoint": null,
+      "description": "Reports average power usage last 10 minutes.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "W"
+    },
+    {
+      "name": "Floor temp",
+      "type": "numeric",
+      "property": "floor_temp",
+      "base": "floor_temp",
+      "endpoint": null,
+      "description": "Current temperature measured from the floor sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    },
+    {
+      "name": "Frost guard",
+      "type": "binary",
+      "property": "frost_guard",
+      "base": "frost_guard",
+      "endpoint": null,
+      "description": "When frost guard is ON, it is activated when the thermostat is switched OFF with the ON/OFF button.At the same time, the display will fade and the text \"Frostsikring x °C\" appears in the display and remains until the thermostat is switched on again..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_on": "ON",
+      "value_off": "OFF"
+    },
+    {
+      "name": "Regulator setpoint",
+      "type": "numeric",
+      "property": "regulator_setpoint",
+      "base": "regulator_setpoint",
+      "endpoint": null,
+      "description": "Setpoint in %, use only when the thermostat is in regulator mode..",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": true
+      },
+      "value_min": 1,
+      "value_max": 99,
+      "unit": "%"
+    },
+    {
+      "name": "Air temp",
+      "type": "numeric",
+      "property": "air_temp",
+      "base": "air_temp",
+      "endpoint": null,
+      "description": "Current temperature measured from the air sensor.",
+      "access": {
+        "published": true,
+        "readable": true,
+        "writable": false
+      },
+      "unit": "°C"
+    }
+  ],
+  "warnings": []
+}

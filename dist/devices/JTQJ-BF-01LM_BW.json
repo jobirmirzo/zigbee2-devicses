@@ -1,0 +1,89 @@
+{
+  "model": "JTQJ-BF-01LM/BW",
+  "file": "JTQJ-BF-01LM_BW.md",
+  "vendor": "Xiaomi",
+  "description": "Mijia Honeywell gas leak detector",
+  "image": "https://www.zigbee2mqtt.io/images/devices/JTQJ-BF-01LM-BW.png",
+  "added_at": "2019-07-22T20:08:17Z",
+  "exposes_summary": "gas, tamper, sensitivity, gas_density, selftest",
+  "exposes": [
+    {
+      "name": "Gas",
+      "type": "binary",
+      "property": "gas",
+      "base": "gas",
+      "endpoint": null,
+      "description": "Indicates whether the device detected gas.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Tamper",
+      "type": "binary",
+      "property": "tamper",
+      "base": "tamper",
+      "endpoint": null,
+      "description": "Indicates whether the device is tampered.",
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      },
+      "value_on": true,
+      "value_off": false
+    },
+    {
+      "name": "Sensitivity",
+      "type": "enum",
+      "property": "sensitivity",
+      "base": "sensitivity",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "Gas density",
+      "type": "numeric",
+      "property": "gas_density",
+      "base": "gas_density",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": true,
+        "readable": false,
+        "writable": false
+      }
+    },
+    {
+      "name": "Selftest",
+      "type": "enum",
+      "property": "selftest",
+      "base": "selftest",
+      "endpoint": null,
+      "description": null,
+      "access": {
+        "published": false,
+        "readable": false,
+        "writable": true
+      },
+      "values": [
+        ""
+      ]
+    }
+  ],
+  "warnings": []
+}
