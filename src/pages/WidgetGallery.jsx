@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { WIDGETS } from "../components/widgets.jsx";
+import { LowBrightnessIcon, HighBrightnessIcon } from "../icons";
 
 // key must match a name in WIDGETS. `sample` supplies whatever that
 // component reads off its props: expose / label / opts / initial value.
@@ -10,7 +11,13 @@ const GALLERY = [
   {
     key: "Slider",
     group: "Primitives",
-    sample: { expose: { value_min: 0, value_max: 100, unit: "%" }, label: "Brightness", initial: 64 },
+    sample: {
+      expose: { value_min: 0, value_max: 100, unit: "%" },
+      label: "Brightness",
+      initial: 64,
+      startIcon: LowBrightnessIcon,
+      endIcon: HighBrightnessIcon,
+    },
   },
   {
     key: "StepperInput",
@@ -177,6 +184,47 @@ const GALLERY = [
       initial: null,
     },
   },
+  {
+    key: "AirConditionerCard",
+    group: "Hero cards",
+    sample: {
+      expose: {
+        endpoint: null,
+        features: [
+          { property: "local_temperature", base: "local_temperature" },
+          { property: "humidity", base: "humidity" },
+          { property: "occupied_cooling_setpoint", base: "occupied_cooling_setpoint", value_min: 16, value_max: 30, value_step: 0.5, unit: "°C" },
+          { property: "system_mode", base: "system_mode", values: ["cool", "heat", "dry", "fan", "auto"] },
+          { property: "fan_mode", base: "fan_mode", values: ["auto", "low", "medium", "high"] },
+        ],
+      },
+      initial: null,
+    },
+  },
+  {
+    key: "AirQualityCard",
+    group: "Hero cards",
+    sample: { expose: { endpoint: null, features: [{ property: "co2", base: "co2" }] }, initial: null },
+  },
+  {
+    key: "GasDetectorCard",
+    group: "Hero cards",
+    sample: { expose: { endpoint: null, features: [{ property: "gas", base: "gas", type: "binary" }] }, initial: null },
+  },
+  {
+    key: "IlluminanceCard",
+    group: "Hero cards",
+    sample: {
+      expose: {
+        endpoint: null,
+        features: [
+          { property: "battery", base: "battery" },
+          { property: "illuminance", base: "illuminance" },
+        ],
+      },
+      initial: null,
+    },
+  },
 ];
 
 function GalleryTile({ item }) {
@@ -196,6 +244,8 @@ function GalleryTile({ item }) {
           opts={item.sample.opts ?? {}}
           value={value}
           onChange={setValue}
+          startIcon={item.sample.startIcon}
+          endIcon={item.sample.endIcon}
         />
       </div>
     </div>

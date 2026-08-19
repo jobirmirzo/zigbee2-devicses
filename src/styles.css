@@ -51,6 +51,12 @@
   --tint-green: rgba(52, 199, 89, 0.16);
   --tint-blue: rgba(0, 122, 255, 0.12);
   --tint-yellow: rgba(246, 181, 30, 0.16);
+
+  /* warm-to-cool gradient (e.g. color-temp style bars) — the tint layer
+     rides on --label-quaternary, so it re-tints itself between themes. */
+  --gradient-color-temp:
+    linear-gradient(0deg, var(--label-quaternary, rgba(255, 255, 255, 0.16)), var(--label-quaternary, rgba(255, 255, 255, 0.16))),
+    linear-gradient(90deg, #fc8a00 0%, #fff9e1 50%, #067aff 100%);
 }
 
 :root.dark {
@@ -96,3 +102,18 @@ input, select { font: inherit; }
 :focus-visible { outline: 2px solid var(--honey); outline-offset: 2px; }
 
 @keyframes slide-in { from { transform: translateX(40px); opacity: 0; } }
+
+/* round range-thumb "grip" icon — pseudo-elements can't take React children,
+   so this lives as a plain background-image, applied via the .thumb-grip class */
+.thumb-grip::-webkit-slider-thumb {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2397a1b7' stroke-width='2.5' stroke-linecap='round'%3E%3Cline x1='9' y1='6' x2='9' y2='18'/%3E%3Cline x1='15' y1='6' x2='15' y2='18'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+.thumb-grip::-moz-range-thumb {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2397a1b7' stroke-width='2.5' stroke-linecap='round'%3E%3Cline x1='9' y1='6' x2='9' y2='18'/%3E%3Cline x1='15' y1='6' x2='15' y2='18'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
